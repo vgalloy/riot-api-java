@@ -26,30 +26,11 @@
         <findbugs-maven-plugin.version>3.0.4-SNAPSHOT</findbugs-maven-plugin.version>
         <findbugs.exception.location>conf/findbugs-exception-filter.xml</findbugs.exception.location>
 
-        <!-- Log -->
-        <slf4j-api.version>1.7.21</slf4j-api.version>
-        <logback-classic.version>1.1.7</logback-classic.version>
-
-        <!-- Test -->
-        <junit.version>4.12</junit.version>
-        <mockito.version>2.0.2-beta</mockito.version>
-
+        <!-- Jersey -->
         <jersey.version>2.22.2</jersey.version>
     </properties>
 
     <dependencies>
-        <!-- Log -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback-classic.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
@@ -64,19 +45,6 @@
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
             <version>${jersey.version}</version>
-        </dependency>
-
-
-        <!-- Test -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>${mockito.version}</version>
         </dependency>
     </dependencies>
 
