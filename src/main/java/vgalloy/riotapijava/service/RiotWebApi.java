@@ -1,4 +1,5 @@
 package vgalloy.riotapijava.service;
+
 import vgalloy.riotapijava.api.ChampionApi;
 import vgalloy.riotapijava.api.CurrentGameApi;
 import vgalloy.riotapijava.api.FeatureGameApi;
@@ -14,4 +15,5 @@ public interface RiotWebApi extends ChampionApi,
         FeatureGameApi,
         GameApi,
         SummonerApi {
+
 }

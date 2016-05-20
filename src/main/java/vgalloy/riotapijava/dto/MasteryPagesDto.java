@@ -1,4 +1,5 @@
 package vgalloy.riotapijava.dto;
+
 import java.util.Set;
 
 /**

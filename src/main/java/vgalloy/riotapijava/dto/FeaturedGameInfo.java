@@ -1,5 +1,7 @@
 package vgalloy.riotapijava.dto;
+
 import java.util.List;
+
 import vgalloy.riotapijava.dto.constant.GameMode;
 import vgalloy.riotapijava.dto.constant.GameType;
 import vgalloy.riotapijava.dto.constant.PlatformId;

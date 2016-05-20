@@ -1,8 +1,10 @@
 package vgalloy.riotapijava.dto;
+
 /**
  * Created by Vincent Galloy on 19/05/16.
  */
 public class Mastery {
+
     private int masteryId;
     private int rank;
 
