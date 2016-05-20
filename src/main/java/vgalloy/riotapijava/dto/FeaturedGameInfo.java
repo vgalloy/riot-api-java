@@ -22,7 +22,6 @@ public class FeaturedGameInfo {
     private long mapId;
     private Observer observers;
     private List<Participant> participants;
-    // TODO enum
     private PlatformId platformId;
 
     public List<BannedChampion> getBannedChampions() {

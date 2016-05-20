@@ -1,12 +1,12 @@
 package vgalloy.riotapijava.dto;
 
 import java.util.List;
-
 import vgalloy.riotapijava.dto.constant.GameMode;
 import vgalloy.riotapijava.dto.constant.PlatformId;
 
 /**
- * Created by Vincent Galloy on 19/05/16.
+ * @author Vincent Galloy
+ *         Created by Vincent Galloy on 19/05/16.
  */
 public class CurrentGameInfo {
 

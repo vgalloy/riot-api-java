@@ -1,7 +1,8 @@
 package vgalloy.riotapijava.dto;
 
 /**
- * Created by Vincent Galloy on 19/05/16.
+ * @author Vincent Galloy
+ *         Created by Vincent Galloy on 19/05/16.
  */
 public class Rune {
 
