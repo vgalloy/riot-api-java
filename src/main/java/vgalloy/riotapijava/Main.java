@@ -1,12 +1,10 @@
 package vgalloy.riotapijava;
 
-import vgalloy.riotapijava.dto.constant.Region;
+import java.io.InputStream;
+import java.util.Properties;
 import vgalloy.riotapijava.service.RiotApiFactory;
 import vgalloy.riotapijava.service.RiotApiKey;
 import vgalloy.riotapijava.service.RiotWebApi;
-
-import java.io.InputStream;
-import java.util.Properties;
 
 /**
  * @author Vincent Galloy
@@ -29,12 +27,32 @@ public class Main {
 
         RiotWebApi riotWebApi = RiotApiFactory.getRiotWebApi();
 
-        System.out.println(riotWebApi.getSummonerName(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
-//        System.out.println(riotWebApi.getRecentGame("24541689", riotApiKey.getApiKey()));
-//        System.out.println(riotWebApi.getChampionById(Region.EUW, 111L, riotApiKey.getApiKey()));
-//        System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()).getChampions().get(111));
-        System.out.println(riotWebApi.getFeaturedGame(riotApiKey.getApiKey()));
+        /** CHAMPION API **/
+        //        System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getChampionById(Region.EUW, 11L, riotApiKey.getApiKey()));
+
+        /** CHAMPION MASTERY **/
+        //        System.out.println(riotWebApi.getChampionMasteryByChampion(PlatformId.EUW1, "24541689", "111", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getChampionMastery(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getPlayerScore(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getTopChampion(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));
+
+        /** FEATURE GAME API **/
+        //        System.out.println(riotWebApi.getFeaturedGame(riotApiKey.getApiKey()));
+
+        /** GAME API **/
+        //        System.out.println(riotWebApi.getRecentGame("24541689", riotApiKey.getApiKey()));
+
+        /** SUMMONER API **/
+        //        System.out.println(riotWebApi.getSummonerByNames(Region.EUW, "Ivaranne", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getSummonerByIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getSummonerMasteries(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getSummonerName(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getSummonerRunes(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
+
+        /** TEST or doesn't work **/
         // FIXME: 19/05/16
-//        System.out.println(riotWebApi.getCurrentGame(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getCurrentGame(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));
+
     }
 }

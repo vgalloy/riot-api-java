@@ -3,7 +3,6 @@ package vgalloy.riotapijava.api;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
-
 import vgalloy.riotapijava.dto.FeaturedGames;
 
 /**
