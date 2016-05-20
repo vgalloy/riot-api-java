@@ -5,6 +5,7 @@ import vgalloy.riotapijava.api.ChampionMastery;
 import vgalloy.riotapijava.api.CurrentGameApi;
 import vgalloy.riotapijava.api.FeatureGameApi;
 import vgalloy.riotapijava.api.GameApi;
+import vgalloy.riotapijava.api.LeagueApi;
 import vgalloy.riotapijava.api.SummonerApi;
 
 /**
@@ -16,6 +17,7 @@ public interface RiotWebApi extends ChampionApi,
         CurrentGameApi,
         FeatureGameApi,
         GameApi,
+        LeagueApi,
         SummonerApi {
 
 }
