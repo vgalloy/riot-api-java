@@ -32,7 +32,7 @@ public interface StatsApi {
      * @param region     the summoners region
      * @param summonerId the summoner id
      * @param key        the api key
-     * @return the summoner Summary statistic
+     * @return the summoner summary statistic
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/api/lol/{region}/v1.3/stats/by-summoner/{summonerId}/summary")
