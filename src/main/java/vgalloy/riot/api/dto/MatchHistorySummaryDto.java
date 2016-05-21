@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -104,6 +106,29 @@ public class MatchHistorySummaryDto {
 
     public void setWin(boolean win) {
         this.win = win;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MatchHistorySummaryDto that = (MatchHistorySummaryDto) o;
+        return assists == that.assists &&
+                date == that.date &&
+                deaths == that.deaths &&
+                gameId == that.gameId &&
+                invalid == that.invalid &&
+                kills == that.kills &&
+                mapId == that.mapId &&
+                opposingTeamKills == that.opposingTeamKills &&
+                win == that.win &&
+                Objects.equals(gameMode, that.gameMode) &&
+                Objects.equals(opposingTeamName, that.opposingTeamName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(assists, date, deaths, gameId, gameMode, invalid, kills, mapId, opposingTeamKills, opposingTeamName, win);
     }
 
     @Override

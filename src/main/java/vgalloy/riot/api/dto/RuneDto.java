@@ -2,6 +2,7 @@ package vgalloy.riot.api.dto;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -206,6 +207,40 @@ public class RuneDto {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RuneDto runeDto = (RuneDto) o;
+        return consumeOnFull == runeDto.consumeOnFull &&
+                consumed == runeDto.consumed &&
+                depth == runeDto.depth &&
+                hideFromAll == runeDto.hideFromAll &&
+                id == runeDto.id &&
+                inStore == runeDto.inStore &&
+                specialRecipe == runeDto.specialRecipe &&
+                stacks == runeDto.stacks &&
+                Objects.equals(colloq, runeDto.colloq) &&
+                Objects.equals(description, runeDto.description) &&
+                Objects.equals(from, runeDto.from) &&
+                Objects.equals(group, runeDto.group) &&
+                Objects.equals(image, runeDto.image) &&
+                Objects.equals(into, runeDto.into) &&
+                Objects.equals(maps, runeDto.maps) &&
+                Objects.equals(name, runeDto.name) &&
+                Objects.equals(plaintext, runeDto.plaintext) &&
+                Objects.equals(requiredChampion, runeDto.requiredChampion) &&
+                Objects.equals(rune, runeDto.rune) &&
+                Objects.equals(sanitizedDescription, runeDto.sanitizedDescription) &&
+                Objects.equals(stats, runeDto.stats) &&
+                Objects.equals(tags, runeDto.tags);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(colloq, consumeOnFull, consumed, depth, description, from, group, hideFromAll, id, image, inStore, into, maps, name, plaintext, requiredChampion, rune, sanitizedDescription, specialRecipe, stacks, stats, tags);
     }
 
     @Override

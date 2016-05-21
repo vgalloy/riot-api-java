@@ -2,6 +2,7 @@ package vgalloy.riot.api.dto;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -35,5 +36,29 @@ public class Frame {
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Frame frame = (Frame) o;
+        return timestamp == frame.timestamp &&
+                Objects.equals(events, frame.events) &&
+                Objects.equals(participantFrames, frame.participantFrames);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(events, participantFrames, timestamp);
+    }
+
+    @Override
+    public String toString() {
+        return "Frame{" +
+                "events=" + events +
+                ", participantFrames=" + participantFrames +
+                ", timestamp=" + timestamp +
+                '}';
     }
 }

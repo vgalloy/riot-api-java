@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -61,6 +62,24 @@ public class ShardStatus {
 
     public void setSlug(String slug) {
         this.slug = slug;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ShardStatus that = (ShardStatus) o;
+        return Objects.equals(hostname, that.hostname) &&
+                Objects.equals(locales, that.locales) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(region_tag, that.region_tag) &&
+                Objects.equals(services, that.services) &&
+                Objects.equals(slug, that.slug);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(hostname, locales, name, region_tag, services, slug);
     }
 
     @Override

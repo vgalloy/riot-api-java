@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -43,6 +44,22 @@ public class MatchList {
 
     public void setTotalGames(int totalGames) {
         this.totalGames = totalGames;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MatchList matchList = (MatchList) o;
+        return endIndex == matchList.endIndex &&
+                startIndex == matchList.startIndex &&
+                totalGames == matchList.totalGames &&
+                Objects.equals(matches, matchList.matches);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(endIndex, matches, startIndex, totalGames);
     }
 
     @Override

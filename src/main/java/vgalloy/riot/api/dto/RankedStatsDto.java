@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -34,6 +35,21 @@ public class RankedStatsDto {
 
     public void setSummonerId(long summonerId) {
         this.summonerId = summonerId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RankedStatsDto that = (RankedStatsDto) o;
+        return modifyDate == that.modifyDate &&
+                summonerId == that.summonerId &&
+                Objects.equals(champions, that.champions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(champions, modifyDate, summonerId);
     }
 
     @Override

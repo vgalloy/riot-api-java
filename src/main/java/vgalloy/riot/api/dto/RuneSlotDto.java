@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
@@ -23,6 +25,20 @@ public class RuneSlotDto {
 
     public void setRuneSlotId(int runeSlotId) {
         this.runeSlotId = runeSlotId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RuneSlotDto that = (RuneSlotDto) o;
+        return runeId == that.runeId &&
+                runeSlotId == that.runeSlotId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(runeId, runeSlotId);
     }
 
     @Override

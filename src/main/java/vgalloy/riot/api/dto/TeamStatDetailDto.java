@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -41,6 +43,22 @@ public class TeamStatDetailDto {
 
     public void setWins(int wins) {
         this.wins = wins;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TeamStatDetailDto that = (TeamStatDetailDto) o;
+        return averageGamesPlayed == that.averageGamesPlayed &&
+                losses == that.losses &&
+                wins == that.wins &&
+                Objects.equals(teamStatType, that.teamStatType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(averageGamesPlayed, losses, teamStatType, wins);
     }
 
     @Override

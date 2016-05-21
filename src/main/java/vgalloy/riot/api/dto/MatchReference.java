@@ -5,6 +5,7 @@ import vgalloy.riot.api.dto.constant.QueueType;
 import vgalloy.riot.api.dto.constant.Season;
 
 import javax.management.relation.Role;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -83,6 +84,26 @@ public class MatchReference {
 
     public void setSeason(Season season) {
         this.season = season;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MatchReference that = (MatchReference) o;
+        return champion == that.champion &&
+                matchId == that.matchId &&
+                lane == that.lane &&
+                Objects.equals(platformId, that.platformId) &&
+                queue == that.queue &&
+                Objects.equals(region, that.region) &&
+                Objects.equals(role, that.role) &&
+                season == that.season;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(champion, lane, matchId, platformId, queue, region, role, season);
     }
 
     @Override

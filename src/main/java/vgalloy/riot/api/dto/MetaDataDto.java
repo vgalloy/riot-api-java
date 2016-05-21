@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -32,6 +34,21 @@ public class MetaDataDto {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MetaDataDto that = (MetaDataDto) o;
+        return isRune == that.isRune &&
+                Objects.equals(tier, that.tier) &&
+                Objects.equals(type, that.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isRune, tier, type);
     }
 
     @Override

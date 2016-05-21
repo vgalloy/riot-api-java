@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -88,6 +89,27 @@ public class RealmDto {
 
     public void setV(String v) {
         this.v = v;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RealmDto realmDto = (RealmDto) o;
+        return profileiconmax == realmDto.profileiconmax &&
+                Objects.equals(cdn, realmDto.cdn) &&
+                Objects.equals(css, realmDto.css) &&
+                Objects.equals(dd, realmDto.dd) &&
+                Objects.equals(l, realmDto.l) &&
+                Objects.equals(lg, realmDto.lg) &&
+                Objects.equals(n, realmDto.n) &&
+                Objects.equals(store, realmDto.store) &&
+                Objects.equals(v, realmDto.v);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cdn, css, dd, l, lg, n, profileiconmax, store, v);
     }
 
     @Override

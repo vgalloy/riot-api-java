@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -590,6 +592,83 @@ public class BasicDataStatsDto {
 
     public void setrPercentTimeDeadModPerLevel(double rPercentTimeDeadModPerLevel) {
         this.rPercentTimeDeadModPerLevel = rPercentTimeDeadModPerLevel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BasicDataStatsDto that = (BasicDataStatsDto) o;
+        return Double.compare(that.FlatArmorMod, FlatArmorMod) == 0 &&
+                Double.compare(that.FlatAttackSpeedMod, FlatAttackSpeedMod) == 0 &&
+                Double.compare(that.FlatBlockMod, FlatBlockMod) == 0 &&
+                Double.compare(that.FlatCritChanceMod, FlatCritChanceMod) == 0 &&
+                Double.compare(that.FlatCritDamageMod, FlatCritDamageMod) == 0 &&
+                Double.compare(that.FlatEXPBonus, FlatEXPBonus) == 0 &&
+                Double.compare(that.FlatEnergyPoolMod, FlatEnergyPoolMod) == 0 &&
+                Double.compare(that.FlatEnergyRegenMod, FlatEnergyRegenMod) == 0 &&
+                Double.compare(that.FlatHPPoolMod, FlatHPPoolMod) == 0 &&
+                Double.compare(that.FlatHPRegenMod, FlatHPRegenMod) == 0 &&
+                Double.compare(that.FlatMPPoolMod, FlatMPPoolMod) == 0 &&
+                Double.compare(that.FlatMPRegenMod, FlatMPRegenMod) == 0 &&
+                Double.compare(that.FlatMagicDamageMod, FlatMagicDamageMod) == 0 &&
+                Double.compare(that.FlatMovementSpeedMod, FlatMovementSpeedMod) == 0 &&
+                Double.compare(that.FlatPhysicalDamageMod, FlatPhysicalDamageMod) == 0 &&
+                Double.compare(that.FlatSpellBlockMod, FlatSpellBlockMod) == 0 &&
+                Double.compare(that.PercentArmorMod, PercentArmorMod) == 0 &&
+                Double.compare(that.PercentAttackSpeedMod, PercentAttackSpeedMod) == 0 &&
+                Double.compare(that.PercentBlockMod, PercentBlockMod) == 0 &&
+                Double.compare(that.PercentCritChanceMod, PercentCritChanceMod) == 0 &&
+                Double.compare(that.PercentCritDamageMod, PercentCritDamageMod) == 0 &&
+                Double.compare(that.PercentDodgeMod, PercentDodgeMod) == 0 &&
+                Double.compare(that.PercentEXPBonus, PercentEXPBonus) == 0 &&
+                Double.compare(that.PercentHPPoolMod, PercentHPPoolMod) == 0 &&
+                Double.compare(that.PercentHPRegenMod, PercentHPRegenMod) == 0 &&
+                Double.compare(that.PercentLifeStealMod, PercentLifeStealMod) == 0 &&
+                Double.compare(that.PercentMPPoolMod, PercentMPPoolMod) == 0 &&
+                Double.compare(that.PercentMPRegenMod, PercentMPRegenMod) == 0 &&
+                Double.compare(that.PercentMagicDamageMod, PercentMagicDamageMod) == 0 &&
+                Double.compare(that.PercentMovementSpeedMod, PercentMovementSpeedMod) == 0 &&
+                Double.compare(that.PercentPhysicalDamageMod, PercentPhysicalDamageMod) == 0 &&
+                Double.compare(that.PercentSpellBlockMod, PercentSpellBlockMod) == 0 &&
+                Double.compare(that.PercentSpellVampMod, PercentSpellVampMod) == 0 &&
+                Double.compare(that.rFlatArmorModPerLevel, rFlatArmorModPerLevel) == 0 &&
+                Double.compare(that.rFlatArmorPenetrationMod, rFlatArmorPenetrationMod) == 0 &&
+                Double.compare(that.rFlatArmorPenetrationModPerLevel, rFlatArmorPenetrationModPerLevel) == 0 &&
+                Double.compare(that.rFlatCritChanceModPerLevel, rFlatCritChanceModPerLevel) == 0 &&
+                Double.compare(that.rFlatCritDamageModPerLevel, rFlatCritDamageModPerLevel) == 0 &&
+                Double.compare(that.rFlatDodgeMod, rFlatDodgeMod) == 0 &&
+                Double.compare(that.rFlatDodgeModPerLevel, rFlatDodgeModPerLevel) == 0 &&
+                Double.compare(that.rFlatEnergyModPerLevel, rFlatEnergyModPerLevel) == 0 &&
+                Double.compare(that.rFlatEnergyRegenModPerLevel, rFlatEnergyRegenModPerLevel) == 0 &&
+                Double.compare(that.rFlatGoldPer10Mod, rFlatGoldPer10Mod) == 0 &&
+                Double.compare(that.rFlatHPModPerLevel, rFlatHPModPerLevel) == 0 &&
+                Double.compare(that.rFlatHPRegenModPerLevel, rFlatHPRegenModPerLevel) == 0 &&
+                Double.compare(that.rFlatMPModPerLevel, rFlatMPModPerLevel) == 0 &&
+                Double.compare(that.rFlatMPRegenModPerLevel, rFlatMPRegenModPerLevel) == 0 &&
+                Double.compare(that.rFlatMagicDamageModPerLevel, rFlatMagicDamageModPerLevel) == 0 &&
+                Double.compare(that.rFlatMagicPenetrationMod, rFlatMagicPenetrationMod) == 0 &&
+                Double.compare(that.rFlatMagicPenetrationModPerLevel, rFlatMagicPenetrationModPerLevel) == 0 &&
+                Double.compare(that.rFlatMovementSpeedModPerLevel, rFlatMovementSpeedModPerLevel) == 0 &&
+                Double.compare(that.rFlatPhysicalDamageModPerLevel, rFlatPhysicalDamageModPerLevel) == 0 &&
+                Double.compare(that.rFlatSpellBlockModPerLevel, rFlatSpellBlockModPerLevel) == 0 &&
+                Double.compare(that.rFlatTimeDeadMod, rFlatTimeDeadMod) == 0 &&
+                Double.compare(that.rFlatTimeDeadModPerLevel, rFlatTimeDeadModPerLevel) == 0 &&
+                Double.compare(that.rPercentArmorPenetrationMod, rPercentArmorPenetrationMod) == 0 &&
+                Double.compare(that.rPercentArmorPenetrationModPerLevel, rPercentArmorPenetrationModPerLevel) == 0 &&
+                Double.compare(that.rPercentAttackSpeedModPerLevel, rPercentAttackSpeedModPerLevel) == 0 &&
+                Double.compare(that.rPercentCooldownMod, rPercentCooldownMod) == 0 &&
+                Double.compare(that.rPercentCooldownModPerLevel, rPercentCooldownModPerLevel) == 0 &&
+                Double.compare(that.rPercentMagicPenetrationMod, rPercentMagicPenetrationMod) == 0 &&
+                Double.compare(that.rPercentMagicPenetrationModPerLevel, rPercentMagicPenetrationModPerLevel) == 0 &&
+                Double.compare(that.rPercentMovementSpeedModPerLevel, rPercentMovementSpeedModPerLevel) == 0 &&
+                Double.compare(that.rPercentTimeDeadMod, rPercentTimeDeadMod) == 0 &&
+                Double.compare(that.rPercentTimeDeadModPerLevel, rPercentTimeDeadModPerLevel) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(FlatArmorMod, FlatAttackSpeedMod, FlatBlockMod, FlatCritChanceMod, FlatCritDamageMod, FlatEXPBonus, FlatEnergyPoolMod, FlatEnergyRegenMod, FlatHPPoolMod, FlatHPRegenMod, FlatMPPoolMod, FlatMPRegenMod, FlatMagicDamageMod, FlatMovementSpeedMod, FlatPhysicalDamageMod, FlatSpellBlockMod, PercentArmorMod, PercentAttackSpeedMod, PercentBlockMod, PercentCritChanceMod, PercentCritDamageMod, PercentDodgeMod, PercentEXPBonus, PercentHPPoolMod, PercentHPRegenMod, PercentLifeStealMod, PercentMPPoolMod, PercentMPRegenMod, PercentMagicDamageMod, PercentMovementSpeedMod, PercentPhysicalDamageMod, PercentSpellBlockMod, PercentSpellVampMod, rFlatArmorModPerLevel, rFlatArmorPenetrationMod, rFlatArmorPenetrationModPerLevel, rFlatCritChanceModPerLevel, rFlatCritDamageModPerLevel, rFlatDodgeMod, rFlatDodgeModPerLevel, rFlatEnergyModPerLevel, rFlatEnergyRegenModPerLevel, rFlatGoldPer10Mod, rFlatHPModPerLevel, rFlatHPRegenModPerLevel, rFlatMPModPerLevel, rFlatMPRegenModPerLevel, rFlatMagicDamageModPerLevel, rFlatMagicPenetrationMod, rFlatMagicPenetrationModPerLevel, rFlatMovementSpeedModPerLevel, rFlatPhysicalDamageModPerLevel, rFlatSpellBlockModPerLevel, rFlatTimeDeadMod, rFlatTimeDeadModPerLevel, rPercentArmorPenetrationMod, rPercentArmorPenetrationModPerLevel, rPercentAttackSpeedModPerLevel, rPercentCooldownMod, rPercentCooldownModPerLevel, rPercentMagicPenetrationMod, rPercentMagicPenetrationModPerLevel, rPercentMovementSpeedModPerLevel, rPercentTimeDeadMod, rPercentTimeDeadModPerLevel);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
@@ -23,6 +25,20 @@ public class Mastery {
 
     public void setRank(int rank) {
         this.rank = rank;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mastery mastery = (Mastery) o;
+        return masteryId == mastery.masteryId &&
+                rank == mastery.rank;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(masteryId, rank);
     }
 
     @Override

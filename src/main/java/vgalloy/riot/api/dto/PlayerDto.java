@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
@@ -32,6 +34,21 @@ public class PlayerDto {
 
     public void setTeamId(int teamId) {
         this.teamId = teamId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlayerDto playerDto = (PlayerDto) o;
+        return championId == playerDto.championId &&
+                summonerId == playerDto.summonerId &&
+                teamId == playerDto.teamId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(championId, summonerId, teamId);
     }
 
     @Override

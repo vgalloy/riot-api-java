@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -34,6 +35,21 @@ public class LanguageStringsDto {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LanguageStringsDto that = (LanguageStringsDto) o;
+        return Objects.equals(data, that.data) &&
+                Objects.equals(type, that.type) &&
+                Objects.equals(version, that.version);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(data, type, version);
     }
 
     @Override

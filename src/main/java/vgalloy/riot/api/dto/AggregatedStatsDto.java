@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -509,6 +511,74 @@ public class AggregatedStatsDto {
 
     public void setTotalUnrealKills(int totalUnrealKills) {
         this.totalUnrealKills = totalUnrealKills;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AggregatedStatsDto that = (AggregatedStatsDto) o;
+        return averageAssists == that.averageAssists &&
+                averageChampionsKilled == that.averageChampionsKilled &&
+                averageCombatPlayerScore == that.averageCombatPlayerScore &&
+                averageNodeCapture == that.averageNodeCapture &&
+                averageNodeCaptureAssist == that.averageNodeCaptureAssist &&
+                averageNodeNeutralize == that.averageNodeNeutralize &&
+                averageNodeNeutralizeAssist == that.averageNodeNeutralizeAssist &&
+                averageNumDeaths == that.averageNumDeaths &&
+                averageObjectivePlayerScore == that.averageObjectivePlayerScore &&
+                averageTeamObjective == that.averageTeamObjective &&
+                averageTotalPlayerScore == that.averageTotalPlayerScore &&
+                botGamesPlayed == that.botGamesPlayed &&
+                killingSpree == that.killingSpree &&
+                maxAssists == that.maxAssists &&
+                maxChampionsKilled == that.maxChampionsKilled &&
+                maxCombatPlayerScore == that.maxCombatPlayerScore &&
+                maxLargestCriticalStrike == that.maxLargestCriticalStrike &&
+                maxLargestKillingSpree == that.maxLargestKillingSpree &&
+                maxNodeCapture == that.maxNodeCapture &&
+                maxNodeCaptureAssist == that.maxNodeCaptureAssist &&
+                maxNodeNeutralize == that.maxNodeNeutralize &&
+                maxNodeNeutralizeAssist == that.maxNodeNeutralizeAssist &&
+                maxNumDeaths == that.maxNumDeaths &&
+                maxObjectivePlayerScore == that.maxObjectivePlayerScore &&
+                maxTeamObjective == that.maxTeamObjective &&
+                maxTimePlayed == that.maxTimePlayed &&
+                maxTimeSpentLiving == that.maxTimeSpentLiving &&
+                maxTotalPlayerScore == that.maxTotalPlayerScore &&
+                mostChampionKillsPerSession == that.mostChampionKillsPerSession &&
+                mostSpellsCast == that.mostSpellsCast &&
+                normalGamesPlayed == that.normalGamesPlayed &&
+                rankedPremadeGamesPlayed == that.rankedPremadeGamesPlayed &&
+                rankedSoloGamesPlayed == that.rankedSoloGamesPlayed &&
+                totalAssists == that.totalAssists &&
+                totalChampionKills == that.totalChampionKills &&
+                totalDamageDealt == that.totalDamageDealt &&
+                totalDamageTaken == that.totalDamageTaken &&
+                totalDeathsPerSession == that.totalDeathsPerSession &&
+                totalDoubleKills == that.totalDoubleKills &&
+                totalFirstBlood == that.totalFirstBlood &&
+                totalGoldEarned == that.totalGoldEarned &&
+                totalHeal == that.totalHeal &&
+                totalMagicDamageDealt == that.totalMagicDamageDealt &&
+                totalMinionKills == that.totalMinionKills &&
+                totalNeutralMinionsKilled == that.totalNeutralMinionsKilled &&
+                totalNodeCapture == that.totalNodeCapture &&
+                totalNodeNeutralize == that.totalNodeNeutralize &&
+                totalPentaKills == that.totalPentaKills &&
+                totalPhysicalDamageDealt == that.totalPhysicalDamageDealt &&
+                totalQuadraKills == that.totalQuadraKills &&
+                totalSessionsLost == that.totalSessionsLost &&
+                totalSessionsPlayed == that.totalSessionsPlayed &&
+                totalSessionsWon == that.totalSessionsWon &&
+                totalTripleKills == that.totalTripleKills &&
+                totalTurretsKilled == that.totalTurretsKilled &&
+                totalUnrealKills == that.totalUnrealKills;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(averageAssists, averageChampionsKilled, averageCombatPlayerScore, averageNodeCapture, averageNodeCaptureAssist, averageNodeNeutralize, averageNodeNeutralizeAssist, averageNumDeaths, averageObjectivePlayerScore, averageTeamObjective, averageTotalPlayerScore, botGamesPlayed, killingSpree, maxAssists, maxChampionsKilled, maxCombatPlayerScore, maxLargestCriticalStrike, maxLargestKillingSpree, maxNodeCapture, maxNodeCaptureAssist, maxNodeNeutralize, maxNodeNeutralizeAssist, maxNumDeaths, maxObjectivePlayerScore, maxTeamObjective, maxTimePlayed, maxTimeSpentLiving, maxTotalPlayerScore, mostChampionKillsPerSession, mostSpellsCast, normalGamesPlayed, rankedPremadeGamesPlayed, rankedSoloGamesPlayed, totalAssists, totalChampionKills, totalDamageDealt, totalDamageTaken, totalDeathsPerSession, totalDoubleKills, totalFirstBlood, totalGoldEarned, totalHeal, totalMagicDamageDealt, totalMinionKills, totalNeutralMinionsKilled, totalNodeCapture, totalNodeNeutralize, totalPentaKills, totalPhysicalDamageDealt, totalQuadraKills, totalSessionsLost, totalSessionsPlayed, totalSessionsWon, totalTripleKills, totalTurretsKilled, totalUnrealKills);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -43,6 +44,22 @@ public class Service {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Service service = (Service) o;
+        return Objects.equals(ncidents, service.ncidents) &&
+                Objects.equals(name, service.name) &&
+                Objects.equals(slug, service.slug) &&
+                Objects.equals(status, service.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ncidents, name, slug, status);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -70,6 +71,25 @@ public class Message {
 
     public void setPdated_at(String pdated_at) {
         this.pdated_at = pdated_at;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Message message = (Message) o;
+        return d == message.d &&
+                Objects.equals(uthor, message.uthor) &&
+                Objects.equals(ontent, message.ontent) &&
+                Objects.equals(reated_at, message.reated_at) &&
+                Objects.equals(everity, message.everity) &&
+                Objects.equals(ranslations, message.ranslations) &&
+                Objects.equals(pdated_at, message.pdated_at);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uthor, ontent, reated_at, d, everity, ranslations, pdated_at);
     }
 
     @Override

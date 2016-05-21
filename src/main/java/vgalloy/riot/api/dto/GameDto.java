@@ -5,6 +5,7 @@ import vgalloy.riot.api.dto.constant.GameType;
 import vgalloy.riot.api.dto.constant.SupType;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -146,6 +147,33 @@ public class GameDto {
 
     public void setTeamId(int teamId) {
         this.teamId = teamId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GameDto gameDto = (GameDto) o;
+        return championId == gameDto.championId &&
+                createDate == gameDto.createDate &&
+                gameId == gameDto.gameId &&
+                invalid == gameDto.invalid &&
+                ipEarned == gameDto.ipEarned &&
+                level == gameDto.level &&
+                mapId == gameDto.mapId &&
+                spell1 == gameDto.spell1 &&
+                spell2 == gameDto.spell2 &&
+                teamId == gameDto.teamId &&
+                Objects.equals(fellowPlayers, gameDto.fellowPlayers) &&
+                gameMode == gameDto.gameMode &&
+                gameType == gameDto.gameType &&
+                Objects.equals(stats, gameDto.stats) &&
+                subType == gameDto.subType;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(championId, createDate, fellowPlayers, gameId, gameMode, gameType, invalid, ipEarned, level, mapId, spell1, spell2, stats, subType, teamId);
     }
 
     @Override

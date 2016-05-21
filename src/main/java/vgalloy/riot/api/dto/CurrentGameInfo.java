@@ -4,6 +4,7 @@ import vgalloy.riot.api.dto.constant.GameMode;
 import vgalloy.riot.api.dto.constant.PlatformId;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -109,5 +110,45 @@ public class CurrentGameInfo {
 
     public void setPlatformId(PlatformId platformId) {
         this.platformId = platformId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CurrentGameInfo that = (CurrentGameInfo) o;
+        return gameId == that.gameId &&
+                gameLength == that.gameLength &&
+                gameQueueConfigId == that.gameQueueConfigId &&
+                gameStartTime == that.gameStartTime &&
+                mapId == that.mapId &&
+                Objects.equals(bannedChampions, that.bannedChampions) &&
+                gameMode == that.gameMode &&
+                Objects.equals(gameType, that.gameType) &&
+                Objects.equals(observers, that.observers) &&
+                Objects.equals(participants, that.participants) &&
+                platformId == that.platformId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bannedChampions, gameId, gameLength, gameMode, gameQueueConfigId, gameStartTime, gameType, mapId, observers, participants, platformId);
+    }
+
+    @Override
+    public String toString() {
+        return "CurrentGameInfo{" +
+                "bannedChampions=" + bannedChampions +
+                ", gameId=" + gameId +
+                ", gameLength=" + gameLength +
+                ", gameMode=" + gameMode +
+                ", gameQueueConfigId=" + gameQueueConfigId +
+                ", gameStartTime=" + gameStartTime +
+                ", gameType='" + gameType + '\'' +
+                ", mapId=" + mapId +
+                ", observers=" + observers +
+                ", participants=" + participants +
+                ", platformId=" + platformId +
+                '}';
     }
 }

@@ -4,6 +4,7 @@ import vgalloy.riot.api.dto.constant.QueueType;
 import vgalloy.riot.api.dto.constant.Tier;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -55,5 +56,33 @@ public class LeagueDto {
 
     public void setTier(Tier tier) {
         this.tier = tier;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LeagueDto leagueDto = (LeagueDto) o;
+        return Objects.equals(entries, leagueDto.entries) &&
+                Objects.equals(name, leagueDto.name) &&
+                Objects.equals(participantId, leagueDto.participantId) &&
+                queue == leagueDto.queue &&
+                tier == leagueDto.tier;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(entries, name, participantId, queue, tier);
+    }
+
+    @Override
+    public String toString() {
+        return "LeagueDto{" +
+                "entries=" + entries +
+                ", name='" + name + '\'' +
+                ", participantId='" + participantId + '\'' +
+                ", queue=" + queue +
+                ", tier=" + tier +
+                '}';
     }
 }

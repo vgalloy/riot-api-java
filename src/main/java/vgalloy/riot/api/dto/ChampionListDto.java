@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -16,6 +17,19 @@ public class ChampionListDto {
 
     public void setChampions(List<ChampionDto> champions) {
         this.champions = champions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ChampionListDto that = (ChampionListDto) o;
+        return Objects.equals(champions, that.champions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(champions);
     }
 
     @Override

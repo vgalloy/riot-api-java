@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -25,6 +26,20 @@ public class LevelTipDto {
 
     public void setLabel(List<String> label) {
         this.label = label;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LevelTipDto that = (LevelTipDto) o;
+        return Objects.equals(effect, that.effect) &&
+                Objects.equals(label, that.label);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(effect, label);
     }
 
     @Override

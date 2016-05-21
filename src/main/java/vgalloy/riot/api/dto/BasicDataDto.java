@@ -2,6 +2,7 @@ package vgalloy.riot.api.dto;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -215,6 +216,41 @@ public class BasicDataDto {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BasicDataDto that = (BasicDataDto) o;
+        return consumeOnFull == that.consumeOnFull &&
+                consumed == that.consumed &&
+                depth == that.depth &&
+                hideFromAll == that.hideFromAll &&
+                id == that.id &&
+                inStore == that.inStore &&
+                specialRecipe == that.specialRecipe &&
+                stacks == that.stacks &&
+                Objects.equals(colloq, that.colloq) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(from, that.from) &&
+                Objects.equals(gold, that.gold) &&
+                Objects.equals(group, that.group) &&
+                Objects.equals(image, that.image) &&
+                Objects.equals(into, that.into) &&
+                Objects.equals(maps, that.maps) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(plaintext, that.plaintext) &&
+                Objects.equals(requiredChampion, that.requiredChampion) &&
+                Objects.equals(rune, that.rune) &&
+                Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
+                Objects.equals(stats, that.stats) &&
+                Objects.equals(tags, that.tags);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(colloq, consumeOnFull, consumed, depth, description, from, gold, group, hideFromAll, id, image, inStore, into, maps, name, plaintext, requiredChampion, rune, sanitizedDescription, specialRecipe, stacks, stats, tags);
     }
 
     @Override

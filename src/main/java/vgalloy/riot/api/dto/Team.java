@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -151,6 +152,34 @@ public class Team {
 
     public void setWinner(boolean winner) {
         this.winner = winner;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return baronKills == team.baronKills &&
+                dominionVictoryScore == team.dominionVictoryScore &&
+                dragonKills == team.dragonKills &&
+                firstBaron == team.firstBaron &&
+                firstBlood == team.firstBlood &&
+                firstDragon == team.firstDragon &&
+                firstInhibitor == team.firstInhibitor &&
+                firstRiftHerald == team.firstRiftHerald &&
+                firstTower == team.firstTower &&
+                inhibitorKills == team.inhibitorKills &&
+                riftHeraldKills == team.riftHeraldKills &&
+                teamId == team.teamId &&
+                towerKills == team.towerKills &&
+                vilemawKills == team.vilemawKills &&
+                winner == team.winner &&
+                Objects.equals(bans, team.bans);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bans, baronKills, dominionVictoryScore, dragonKills, firstBaron, firstBlood, firstDragon, firstInhibitor, firstRiftHerald, firstTower, inhibitorKills, riftHeraldKills, teamId, towerKills, vilemawKills, winner);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -248,6 +250,45 @@ public class ParticipantTimeline {
 
     public void setXpPerMinDeltas(ParticipantTimelineData xpPerMinDeltas) {
         this.xpPerMinDeltas = xpPerMinDeltas;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ParticipantTimeline that = (ParticipantTimeline) o;
+        return Objects.equals(ancientGolemAssistsPerMinCounts, that.ancientGolemAssistsPerMinCounts) &&
+                Objects.equals(ancientGolemKillsPerMinCounts, that.ancientGolemKillsPerMinCounts) &&
+                Objects.equals(assistedLaneDeathsPerMinDeltas, that.assistedLaneDeathsPerMinDeltas) &&
+                Objects.equals(assistedLaneKillsPerMinDeltas, that.assistedLaneKillsPerMinDeltas) &&
+                Objects.equals(baronAssistsPerMinCounts, that.baronAssistsPerMinCounts) &&
+                Objects.equals(baronKillsPerMinCounts, that.baronKillsPerMinCounts) &&
+                Objects.equals(creepsPerMinDeltas, that.creepsPerMinDeltas) &&
+                Objects.equals(csDiffPerMinDeltas, that.csDiffPerMinDeltas) &&
+                Objects.equals(damageTakenDiffPerMinDeltas, that.damageTakenDiffPerMinDeltas) &&
+                Objects.equals(damageTakenPerMinDeltas, that.damageTakenPerMinDeltas) &&
+                Objects.equals(dragonAssistsPerMinCounts, that.dragonAssistsPerMinCounts) &&
+                Objects.equals(dragonKillsPerMinCounts, that.dragonKillsPerMinCounts) &&
+                Objects.equals(elderLizardAssistsPerMinCounts, that.elderLizardAssistsPerMinCounts) &&
+                Objects.equals(elderLizardKillsPerMinCounts, that.elderLizardKillsPerMinCounts) &&
+                Objects.equals(goldPerMinDeltas, that.goldPerMinDeltas) &&
+                Objects.equals(inhibitorAssistsPerMinCounts, that.inhibitorAssistsPerMinCounts) &&
+                Objects.equals(inhibitorKillsPerMinCounts, that.inhibitorKillsPerMinCounts) &&
+                Objects.equals(lane, that.lane) &&
+                Objects.equals(role, that.role) &&
+                Objects.equals(towerAssistsPerMinCounts, that.towerAssistsPerMinCounts) &&
+                Objects.equals(towerKillsPerMinCounts, that.towerKillsPerMinCounts) &&
+                Objects.equals(towerKillsPerMinDeltas, that.towerKillsPerMinDeltas) &&
+                Objects.equals(vilemawAssistsPerMinCounts, that.vilemawAssistsPerMinCounts) &&
+                Objects.equals(vilemawKillsPerMinCounts, that.vilemawKillsPerMinCounts) &&
+                Objects.equals(wardsPerMinDeltas, that.wardsPerMinDeltas) &&
+                Objects.equals(xpDiffPerMinDeltas, that.xpDiffPerMinDeltas) &&
+                Objects.equals(xpPerMinDeltas, that.xpPerMinDeltas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ancientGolemAssistsPerMinCounts, ancientGolemKillsPerMinCounts, assistedLaneDeathsPerMinDeltas, assistedLaneKillsPerMinDeltas, baronAssistsPerMinCounts, baronKillsPerMinCounts, creepsPerMinDeltas, csDiffPerMinDeltas, damageTakenDiffPerMinDeltas, damageTakenPerMinDeltas, dragonAssistsPerMinCounts, dragonKillsPerMinCounts, elderLizardAssistsPerMinCounts, elderLizardKillsPerMinCounts, goldPerMinDeltas, inhibitorAssistsPerMinCounts, inhibitorKillsPerMinCounts, lane, role, towerAssistsPerMinCounts, towerKillsPerMinCounts, towerKillsPerMinDeltas, vilemawAssistsPerMinCounts, vilemawKillsPerMinCounts, wardsPerMinDeltas, xpDiffPerMinDeltas, xpPerMinDeltas);
     }
 
     @Override

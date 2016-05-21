@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
@@ -104,5 +106,45 @@ public class LeagueEntryDto {
 
     public void setWins(int wins) {
         this.wins = wins;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LeagueEntryDto that = (LeagueEntryDto) o;
+        return isFreshBlood == that.isFreshBlood &&
+                isHotStreak == that.isHotStreak &&
+                isInactive == that.isInactive &&
+                isVeteran == that.isVeteran &&
+                leaguePoints == that.leaguePoints &&
+                losses == that.losses &&
+                wins == that.wins &&
+                Objects.equals(division, that.division) &&
+                Objects.equals(miniSeries, that.miniSeries) &&
+                Objects.equals(playerOrTeamId, that.playerOrTeamId) &&
+                Objects.equals(playerOrTeamName, that.playerOrTeamName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(division, isFreshBlood, isHotStreak, isInactive, isVeteran, leaguePoints, losses, miniSeries, playerOrTeamId, playerOrTeamName, wins);
+    }
+
+    @Override
+    public String toString() {
+        return "LeagueEntryDto{" +
+                "division='" + division + '\'' +
+                ", isFreshBlood=" + isFreshBlood +
+                ", isHotStreak=" + isHotStreak +
+                ", isInactive=" + isInactive +
+                ", isVeteran=" + isVeteran +
+                ", leaguePoints=" + leaguePoints +
+                ", losses=" + losses +
+                ", miniSeries=" + miniSeries +
+                ", playerOrTeamId='" + playerOrTeamId + '\'' +
+                ", playerOrTeamName='" + playerOrTeamName + '\'' +
+                ", wins=" + wins +
+                '}';
     }
 }

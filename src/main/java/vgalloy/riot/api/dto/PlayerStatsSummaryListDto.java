@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -25,6 +26,20 @@ public class PlayerStatsSummaryListDto {
 
     public void setSummonerId(long summonerId) {
         this.summonerId = summonerId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlayerStatsSummaryListDto that = (PlayerStatsSummaryListDto) o;
+        return summonerId == that.summonerId &&
+                Objects.equals(playerStatSummaries, that.playerStatSummaries);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playerStatSummaries, summonerId);
     }
 
     @Override

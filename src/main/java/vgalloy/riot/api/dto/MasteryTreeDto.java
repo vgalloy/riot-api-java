@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -34,6 +35,21 @@ public class MasteryTreeDto {
 
     public void setResolve(List<MasteryTreeListDto> resolve) {
         Resolve = resolve;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MasteryTreeDto that = (MasteryTreeDto) o;
+        return Objects.equals(Cunning, that.Cunning) &&
+                Objects.equals(Ferocity, that.Ferocity) &&
+                Objects.equals(Resolve, that.Resolve);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Cunning, Ferocity, Resolve);
     }
 
     @Override

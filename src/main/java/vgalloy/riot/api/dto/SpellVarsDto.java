@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -52,6 +53,23 @@ public class SpellVarsDto {
 
     public void setRanksWith(String ranksWith) {
         this.ranksWith = ranksWith;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SpellVarsDto that = (SpellVarsDto) o;
+        return Objects.equals(coeff, that.coeff) &&
+                Objects.equals(dyn, that.dyn) &&
+                Objects.equals(key, that.key) &&
+                Objects.equals(link, that.link) &&
+                Objects.equals(ranksWith, that.ranksWith);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(coeff, dyn, key, link, ranksWith);
     }
 
     @Override

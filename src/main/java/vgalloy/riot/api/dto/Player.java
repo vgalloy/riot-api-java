@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -41,6 +43,22 @@ public class Player {
 
     public void setSummonerName(String summonerName) {
         this.summonerName = summonerName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return profileIcon == player.profileIcon &&
+                summonerId == player.summonerId &&
+                Objects.equals(matchHistoryUri, player.matchHistoryUri) &&
+                Objects.equals(summonerName, player.summonerName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(matchHistoryUri, profileIcon, summonerId, summonerName);
     }
 
     @Override

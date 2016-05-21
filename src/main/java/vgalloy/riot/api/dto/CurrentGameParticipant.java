@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -97,5 +98,43 @@ public class CurrentGameParticipant {
 
     public void setTeamId(long teamId) {
         this.teamId = teamId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CurrentGameParticipant that = (CurrentGameParticipant) o;
+        return bot == that.bot &&
+                championId == that.championId &&
+                profileIconId == that.profileIconId &&
+                spell1Id == that.spell1Id &&
+                spell2Id == that.spell2Id &&
+                summonerId == that.summonerId &&
+                teamId == that.teamId &&
+                Objects.equals(masteries, that.masteries) &&
+                Objects.equals(runes, that.runes) &&
+                Objects.equals(summonerName, that.summonerName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bot, championId, masteries, profileIconId, runes, spell1Id, spell2Id, summonerId, summonerName, teamId);
+    }
+
+    @Override
+    public String toString() {
+        return "CurrentGameParticipant{" +
+                "bot=" + bot +
+                ", championId=" + championId +
+                ", masteries=" + masteries +
+                ", profileIconId=" + profileIconId +
+                ", runes=" + runes +
+                ", spell1Id=" + spell1Id +
+                ", spell2Id=" + spell2Id +
+                ", summonerId=" + summonerId +
+                ", summonerName='" + summonerName + '\'' +
+                ", teamId=" + teamId +
+                '}';
     }
 }

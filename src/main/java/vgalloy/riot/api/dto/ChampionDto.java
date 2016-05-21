@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -61,6 +62,24 @@ public class ChampionDto implements Serializable {
 
     public void setRankedPlayEnabled(boolean rankedPlayEnabled) {
         this.rankedPlayEnabled = rankedPlayEnabled;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ChampionDto that = (ChampionDto) o;
+        return id == that.id &&
+                active == that.active &&
+                freeToPlay == that.freeToPlay &&
+                botEnabled == that.botEnabled &&
+                botMmEnabled == that.botMmEnabled &&
+                rankedPlayEnabled == that.rankedPlayEnabled;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, active, freeToPlay, botEnabled, botMmEnabled, rankedPlayEnabled);
     }
 
     @Override

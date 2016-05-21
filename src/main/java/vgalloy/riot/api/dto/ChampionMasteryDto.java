@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
@@ -95,6 +97,28 @@ public class ChampionMasteryDto {
 
     public void setTokensEarned(long tokensEarned) {
         this.tokensEarned = tokensEarned;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ChampionMasteryDto that = (ChampionMasteryDto) o;
+        return championId == that.championId &&
+                championLevel == that.championLevel &&
+                championPoints == that.championPoints &&
+                championPointsSinceLastLevel == that.championPointsSinceLastLevel &&
+                championPointsUntilNextLevel == that.championPointsUntilNextLevel &&
+                chestGranted == that.chestGranted &&
+                lastPlayTime == that.lastPlayTime &&
+                playerId == that.playerId &&
+                tokensEarned == that.tokensEarned &&
+                Objects.equals(highestGrade, that.highestGrade);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(championId, championLevel, championPoints, championPointsSinceLastLevel, championPointsUntilNextLevel, chestGranted, highestGrade, lastPlayTime, playerId, tokensEarned);
     }
 
     @Override

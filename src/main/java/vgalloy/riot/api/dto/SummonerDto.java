@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
@@ -50,6 +52,23 @@ public class SummonerDto {
 
     public void setSummonerLevel(long summonerLevel) {
         this.summonerLevel = summonerLevel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SummonerDto that = (SummonerDto) o;
+        return id == that.id &&
+                profileIconId == that.profileIconId &&
+                revisionDate == that.revisionDate &&
+                summonerLevel == that.summonerLevel &&
+                Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, profileIconId, revisionDate, summonerLevel);
     }
 
     @Override

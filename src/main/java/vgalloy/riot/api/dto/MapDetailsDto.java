@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -43,6 +44,22 @@ public class MapDetailsDto {
 
     public void setUnpurchasableItemList(List<Long> unpurchasableItemList) {
         this.unpurchasableItemList = unpurchasableItemList;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MapDetailsDto that = (MapDetailsDto) o;
+        return mapId == that.mapId &&
+                Objects.equals(image, that.image) &&
+                Objects.equals(mapName, that.mapName) &&
+                Objects.equals(unpurchasableItemList, that.unpurchasableItemList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(image, mapId, mapName, unpurchasableItemList);
     }
 
     @Override

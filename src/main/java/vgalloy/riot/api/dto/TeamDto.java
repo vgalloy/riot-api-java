@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -133,6 +134,32 @@ public class TeamDto {
 
     public void setThirdLastJoinDate(long thirdLastJoinDate) {
         this.thirdLastJoinDate = thirdLastJoinDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TeamDto teamDto = (TeamDto) o;
+        return createDate == teamDto.createDate &&
+                lastGameDate == teamDto.lastGameDate &&
+                lastJoinDate == teamDto.lastJoinDate &&
+                lastJoinedRankedTeamQueueDate == teamDto.lastJoinedRankedTeamQueueDate &&
+                modifyDate == teamDto.modifyDate &&
+                secondLastJoinDate == teamDto.secondLastJoinDate &&
+                thirdLastJoinDate == teamDto.thirdLastJoinDate &&
+                Objects.equals(fullId, teamDto.fullId) &&
+                Objects.equals(matchHistory, teamDto.matchHistory) &&
+                Objects.equals(name, teamDto.name) &&
+                Objects.equals(roster, teamDto.roster) &&
+                Objects.equals(status, teamDto.status) &&
+                Objects.equals(tag, teamDto.tag) &&
+                Objects.equals(teamStatDetails, teamDto.teamStatDetails);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(createDate, fullId, lastGameDate, lastJoinDate, lastJoinedRankedTeamQueueDate, matchHistory, modifyDate, name, roster, secondLastJoinDate, status, tag, teamStatDetails, thirdLastJoinDate);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
@@ -806,6 +808,107 @@ public class RawStatsDto {
 
     public void setWin(boolean win) {
         this.win = win;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RawStatsDto that = (RawStatsDto) o;
+        return assists == that.assists &&
+                barracksKilled == that.barracksKilled &&
+                bountyLevel == that.bountyLevel &&
+                championsKilled == that.championsKilled &&
+                combatPlayerScore == that.combatPlayerScore &&
+                consumablesPurchased == that.consumablesPurchased &&
+                damageDealtPlayer == that.damageDealtPlayer &&
+                doubleKills == that.doubleKills &&
+                firstBlood == that.firstBlood &&
+                gold == that.gold &&
+                goldEarned == that.goldEarned &&
+                goldSpent == that.goldSpent &&
+                item0 == that.item0 &&
+                item1 == that.item1 &&
+                item2 == that.item2 &&
+                item3 == that.item3 &&
+                item4 == that.item4 &&
+                item5 == that.item5 &&
+                item6 == that.item6 &&
+                itemsPurchased == that.itemsPurchased &&
+                killingSprees == that.killingSprees &&
+                largestCriticalStrike == that.largestCriticalStrike &&
+                largestKillingSpree == that.largestKillingSpree &&
+                largestMultiKill == that.largestMultiKill &&
+                legendaryItemsCreated == that.legendaryItemsCreated &&
+                level == that.level &&
+                magicDamageDealtPlayer == that.magicDamageDealtPlayer &&
+                magicDamageDealtToChampions == that.magicDamageDealtToChampions &&
+                magicDamageTaken == that.magicDamageTaken &&
+                minionsDenied == that.minionsDenied &&
+                minionsKilled == that.minionsKilled &&
+                neutralMinionsKilled == that.neutralMinionsKilled &&
+                neutralMinionsKilledEnemyJungle == that.neutralMinionsKilledEnemyJungle &&
+                neutralMinionsKilledYourJungle == that.neutralMinionsKilledYourJungle &&
+                nexusKilled == that.nexusKilled &&
+                nodeCapture == that.nodeCapture &&
+                nodeCaptureAssist == that.nodeCaptureAssist &&
+                nodeNeutralize == that.nodeNeutralize &&
+                nodeNeutralizeAssist == that.nodeNeutralizeAssist &&
+                numDeaths == that.numDeaths &&
+                numItemsBought == that.numItemsBought &&
+                objectivePlayerScore == that.objectivePlayerScore &&
+                pentaKills == that.pentaKills &&
+                physicalDamageDealtPlayer == that.physicalDamageDealtPlayer &&
+                physicalDamageDealtToChampions == that.physicalDamageDealtToChampions &&
+                physicalDamageTaken == that.physicalDamageTaken &&
+                playerPosition == that.playerPosition &&
+                playerRole == that.playerRole &&
+                playerScore0 == that.playerScore0 &&
+                playerScore1 == that.playerScore1 &&
+                playerScore2 == that.playerScore2 &&
+                playerScore3 == that.playerScore3 &&
+                playerScore4 == that.playerScore4 &&
+                playerScore5 == that.playerScore5 &&
+                playerScore6 == that.playerScore6 &&
+                playerScore7 == that.playerScore7 &&
+                playerScore8 == that.playerScore8 &&
+                playerScore9 == that.playerScore9 &&
+                quadraKills == that.quadraKills &&
+                sightWardsBought == that.sightWardsBought &&
+                spell1Cast == that.spell1Cast &&
+                spell2Cast == that.spell2Cast &&
+                spell3Cast == that.spell3Cast &&
+                spell4Cast == that.spell4Cast &&
+                summonSpell1Cast == that.summonSpell1Cast &&
+                summonSpell2Cast == that.summonSpell2Cast &&
+                superMonsterKilled == that.superMonsterKilled &&
+                team == that.team &&
+                teamObjective == that.teamObjective &&
+                timePlayed == that.timePlayed &&
+                totalDamageDealt == that.totalDamageDealt &&
+                totalDamageDealtToChampions == that.totalDamageDealtToChampions &&
+                totalDamageTaken == that.totalDamageTaken &&
+                totalHeal == that.totalHeal &&
+                totalPlayerScore == that.totalPlayerScore &&
+                totalScoreRank == that.totalScoreRank &&
+                totalTimeCrowdControlDealt == that.totalTimeCrowdControlDealt &&
+                totalUnitsHealed == that.totalUnitsHealed &&
+                tripleKills == that.tripleKills &&
+                trueDamageDealtPlayer == that.trueDamageDealtPlayer &&
+                trueDamageDealtToChampions == that.trueDamageDealtToChampions &&
+                trueDamageTaken == that.trueDamageTaken &&
+                turretsKilled == that.turretsKilled &&
+                unrealKills == that.unrealKills &&
+                victoryPointTotal == that.victoryPointTotal &&
+                visionWardsBought == that.visionWardsBought &&
+                wardKilled == that.wardKilled &&
+                wardPlaced == that.wardPlaced &&
+                win == that.win;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(assists, barracksKilled, bountyLevel, championsKilled, combatPlayerScore, consumablesPurchased, damageDealtPlayer, doubleKills, firstBlood, gold, goldEarned, goldSpent, item0, item1, item2, item3, item4, item5, item6, itemsPurchased, killingSprees, largestCriticalStrike, largestKillingSpree, largestMultiKill, legendaryItemsCreated, level, magicDamageDealtPlayer, magicDamageDealtToChampions, magicDamageTaken, minionsDenied, minionsKilled, neutralMinionsKilled, neutralMinionsKilledEnemyJungle, neutralMinionsKilledYourJungle, nexusKilled, nodeCapture, nodeCaptureAssist, nodeNeutralize, nodeNeutralizeAssist, numDeaths, numItemsBought, objectivePlayerScore, pentaKills, physicalDamageDealtPlayer, physicalDamageDealtToChampions, physicalDamageTaken, playerPosition, playerRole, playerScore0, playerScore1, playerScore2, playerScore3, playerScore4, playerScore5, playerScore6, playerScore7, playerScore8, playerScore9, quadraKills, sightWardsBought, spell1Cast, spell2Cast, spell3Cast, spell4Cast, summonSpell1Cast, summonSpell2Cast, superMonsterKilled, team, teamObjective, timePlayed, totalDamageDealt, totalDamageDealtToChampions, totalDamageTaken, totalHeal, totalPlayerScore, totalScoreRank, totalTimeCrowdControlDealt, totalUnitsHealed, tripleKills, trueDamageDealtPlayer, trueDamageDealtToChampions, trueDamageTaken, turretsKilled, unrealKills, victoryPointTotal, visionWardsBought, wardKilled, wardPlaced, win);
     }
 
     @Override

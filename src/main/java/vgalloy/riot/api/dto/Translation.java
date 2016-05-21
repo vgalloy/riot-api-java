@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -32,6 +34,21 @@ public class Translation {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Translation that = (Translation) o;
+        return Objects.equals(content, that.content) &&
+                Objects.equals(locale, that.locale) &&
+                Objects.equals(updated_at, that.updated_at);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(content, locale, updated_at);
     }
 
     @Override

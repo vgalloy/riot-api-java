@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -23,6 +25,20 @@ public class ParticipantIdentity {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ParticipantIdentity that = (ParticipantIdentity) o;
+        return participantId == that.participantId &&
+                Objects.equals(player, that.player);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(participantId, player);
     }
 
     @Override

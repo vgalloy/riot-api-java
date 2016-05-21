@@ -1,5 +1,6 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -25,6 +26,20 @@ public class MasteryPagesDto {
 
     public void setSummonerId(long summonerId) {
         this.summonerId = summonerId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MasteryPagesDto that = (MasteryPagesDto) o;
+        return summonerId == that.summonerId &&
+                Objects.equals(pages, that.pages);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(pages, summonerId);
     }
 
     @Override

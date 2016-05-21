@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -196,6 +197,39 @@ public class Event {
 
     public void setWardType(String wardType) {
         this.wardType = wardType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Event event = (Event) o;
+        return creatorId == event.creatorId &&
+                itemAfter == event.itemAfter &&
+                itemBefore == event.itemBefore &&
+                itemId == event.itemId &&
+                killerId == event.killerId &&
+                participantId == event.participantId &&
+                skillSlot == event.skillSlot &&
+                teamId == event.teamId &&
+                timestamp == event.timestamp &&
+                victimId == event.victimId &&
+                Objects.equals(ascendedType, event.ascendedType) &&
+                Objects.equals(assistingParticipantIds, event.assistingParticipantIds) &&
+                Objects.equals(buildingType, event.buildingType) &&
+                Objects.equals(eventType, event.eventType) &&
+                Objects.equals(laneType, event.laneType) &&
+                Objects.equals(levelUpType, event.levelUpType) &&
+                Objects.equals(monsterType, event.monsterType) &&
+                Objects.equals(pointCaptured, event.pointCaptured) &&
+                Objects.equals(position, event.position) &&
+                Objects.equals(towerType, event.towerType) &&
+                Objects.equals(wardType, event.wardType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ascendedType, assistingParticipantIds, buildingType, creatorId, eventType, itemAfter, itemBefore, itemId, killerId, laneType, levelUpType, monsterType, participantId, pointCaptured, position, skillSlot, teamId, timestamp, towerType, victimId, wardType);
     }
 
     @Override

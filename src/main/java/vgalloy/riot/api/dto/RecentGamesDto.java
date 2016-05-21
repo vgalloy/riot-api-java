@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -26,6 +27,20 @@ public class RecentGamesDto {
 
     public void setGames(Set<GameDto> games) {
         this.games = games;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RecentGamesDto that = (RecentGamesDto) o;
+        return summonerId == that.summonerId &&
+                Objects.equals(games, that.games);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(summonerId, games);
     }
 
     @Override

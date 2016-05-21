@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -68,6 +70,25 @@ public class ImageDto {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ImageDto imageDto = (ImageDto) o;
+        return h == imageDto.h &&
+                w == imageDto.w &&
+                x == imageDto.x &&
+                y == imageDto.y &&
+                Objects.equals(full, imageDto.full) &&
+                Objects.equals(group, imageDto.group) &&
+                Objects.equals(sprite, imageDto.sprite);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(full, group, h, sprite, w, x, y);
     }
 
     @Override

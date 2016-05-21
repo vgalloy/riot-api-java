@@ -9,7 +9,7 @@ import vgalloy.riot.service.query.impl.GetChampionListQuery;
  * @author Vincent Galloy
  *         Created by Vincent on 20/05/2016.
  */
-public class RiotApiImpl {
+public class RiotApi {
 
     private DefaultParameter defaultParameter = new DefaultParameter();
 

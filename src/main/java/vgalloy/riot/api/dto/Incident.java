@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -43,6 +44,22 @@ public class Incident {
 
     public void setUpdates(List<Message> updates) {
         this.updates = updates;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Incident incident = (Incident) o;
+        return active == incident.active &&
+                id == incident.id &&
+                Objects.equals(created_at, incident.created_at) &&
+                Objects.equals(updates, incident.updates);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(active, created_at, id, updates);
     }
 
     @Override

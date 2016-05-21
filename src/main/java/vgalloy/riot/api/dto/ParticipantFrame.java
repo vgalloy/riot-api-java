@@ -1,5 +1,7 @@
 package vgalloy.riot.api.dto;
 
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
@@ -95,6 +97,28 @@ public class ParticipantFrame {
 
     public void setXp(int xp) {
         this.xp = xp;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ParticipantFrame that = (ParticipantFrame) o;
+        return currentGold == that.currentGold &&
+                dominionScore == that.dominionScore &&
+                jungleMinionsKilled == that.jungleMinionsKilled &&
+                level == that.level &&
+                minionsKilled == that.minionsKilled &&
+                participantId == that.participantId &&
+                teamScore == that.teamScore &&
+                totalGold == that.totalGold &&
+                xp == that.xp &&
+                Objects.equals(position, that.position);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(currentGold, dominionScore, jungleMinionsKilled, level, minionsKilled, participantId, position, teamScore, totalGold, xp);
     }
 
     @Override

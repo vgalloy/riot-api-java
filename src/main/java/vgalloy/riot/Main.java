@@ -1,5 +1,6 @@
 package vgalloy.riot;
 
+import vgalloy.riot.api.dto.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.client.RiotWebApiFactory;
 import vgalloy.riot.service.RiotApiKey;
@@ -29,7 +30,7 @@ public class Main {
         RiotWebApi riotWebApi = RiotWebApiFactory.getRiotWebApi();
 
         /** CHAMPION API **/
-        //        System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()));
+                System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getChampionById(Region.EUW, 11L, riotApiKey.getApiKey()));
 
         /** CHAMPION MASTERY **/

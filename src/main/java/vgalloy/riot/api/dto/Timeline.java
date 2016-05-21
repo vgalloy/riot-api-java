@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -25,6 +26,20 @@ public class Timeline {
 
     public void setFrames(List<Frame> frames) {
         this.frames = frames;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Timeline timeline = (Timeline) o;
+        return frameInterval == timeline.frameInterval &&
+                Objects.equals(frames, timeline.frames);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(frameInterval, frames);
     }
 
     @Override

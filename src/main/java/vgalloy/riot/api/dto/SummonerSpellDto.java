@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -214,6 +215,41 @@ public class SummonerSpellDto {
 
     public void setVars(List<SpellVarsDto> vars) {
         this.vars = vars;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SummonerSpellDto that = (SummonerSpellDto) o;
+        return id == that.id &&
+                maxrank == that.maxrank &&
+                summonerLevel == that.summonerLevel &&
+                Objects.equals(cooldown, that.cooldown) &&
+                Objects.equals(cooldownBurn, that.cooldownBurn) &&
+                Objects.equals(cost, that.cost) &&
+                Objects.equals(costBurn, that.costBurn) &&
+                Objects.equals(costType, that.costType) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(effect, that.effect) &&
+                Objects.equals(effectBurn, that.effectBurn) &&
+                Objects.equals(image, that.image) &&
+                Objects.equals(key, that.key) &&
+                Objects.equals(leveltip, that.leveltip) &&
+                Objects.equals(modes, that.modes) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(range, that.range) &&
+                Objects.equals(rangeBurn, that.rangeBurn) &&
+                Objects.equals(resource, that.resource) &&
+                Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
+                Objects.equals(sanitizedTooltip, that.sanitizedTooltip) &&
+                Objects.equals(tooltip, that.tooltip) &&
+                Objects.equals(vars, that.vars);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cooldown, cooldownBurn, cost, costBurn, costType, description, effect, effectBurn, id, image, key, leveltip, maxrank, modes, name, range, rangeBurn, resource, sanitizedDescription, sanitizedTooltip, summonerLevel, tooltip, vars);
     }
 
     @Override

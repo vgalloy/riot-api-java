@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -97,6 +98,28 @@ public class ParticipantDto {
 
     public void setTimeline(ParticipantTimeline timeline) {
         this.timeline = timeline;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ParticipantDto that = (ParticipantDto) o;
+        return championId == that.championId &&
+                participantId == that.participantId &&
+                spell1Id == that.spell1Id &&
+                spell2Id == that.spell2Id &&
+                teamId == that.teamId &&
+                Objects.equals(highestAchievedSeasonTier, that.highestAchievedSeasonTier) &&
+                Objects.equals(masteries, that.masteries) &&
+                Objects.equals(runes, that.runes) &&
+                Objects.equals(stats, that.stats) &&
+                Objects.equals(timeline, that.timeline);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(championId, highestAchievedSeasonTier, masteries, participantId, runes, spell1Id, spell2Id, stats, teamId, timeline);
     }
 
     @Override

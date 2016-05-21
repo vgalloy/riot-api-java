@@ -2,6 +2,7 @@ package vgalloy.riot.api.dto;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -224,6 +225,42 @@ public class GroupDto {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupDto groupDto = (GroupDto) o;
+        return consumeOnFull == groupDto.consumeOnFull &&
+                consumed == groupDto.consumed &&
+                depth == groupDto.depth &&
+                hideFromAll == groupDto.hideFromAll &&
+                id == groupDto.id &&
+                inStore == groupDto.inStore &&
+                specialRecipe == groupDto.specialRecipe &&
+                stacks == groupDto.stacks &&
+                Objects.equals(colloq, groupDto.colloq) &&
+                Objects.equals(description, groupDto.description) &&
+                Objects.equals(effect, groupDto.effect) &&
+                Objects.equals(from, groupDto.from) &&
+                Objects.equals(gold, groupDto.gold) &&
+                Objects.equals(group, groupDto.group) &&
+                Objects.equals(image, groupDto.image) &&
+                Objects.equals(into, groupDto.into) &&
+                Objects.equals(maps, groupDto.maps) &&
+                Objects.equals(name, groupDto.name) &&
+                Objects.equals(plaintext, groupDto.plaintext) &&
+                Objects.equals(requiredChampion, groupDto.requiredChampion) &&
+                Objects.equals(rune, groupDto.rune) &&
+                Objects.equals(sanitizedDescription, groupDto.sanitizedDescription) &&
+                Objects.equals(stats, groupDto.stats) &&
+                Objects.equals(tags, groupDto.tags);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(colloq, consumeOnFull, consumed, depth, description, effect, from, gold, group, hideFromAll, id, image, inStore, into, maps, name, plaintext, requiredChampion, rune, sanitizedDescription, specialRecipe, stacks, stats, tags);
     }
 
     @Override

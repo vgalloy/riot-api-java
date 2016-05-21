@@ -1,6 +1,7 @@
 package vgalloy.riot.api.dto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -25,6 +26,20 @@ public class RosterDto {
 
     public void setOwnerId(long ownerId) {
         this.ownerId = ownerId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RosterDto rosterDto = (RosterDto) o;
+        return ownerId == rosterDto.ownerId &&
+                Objects.equals(memberList, rosterDto.memberList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(memberList, ownerId);
     }
 
     @Override
