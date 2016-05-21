@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Vincent Galloy on 21/05/16.
+ * @author Vincent Galloy
+ *         Created by Vincent Galloy on 21/05/16.
  */
 public class BasicDataDto {
 

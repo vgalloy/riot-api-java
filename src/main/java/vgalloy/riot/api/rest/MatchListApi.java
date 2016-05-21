@@ -23,5 +23,5 @@ public interface MatchListApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/api/lol/{region}/v2.2/matchlist/by-summoner/{summonerId}")
-    MatchList getMatchIdList(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
+    MatchList getMatchList(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
 }

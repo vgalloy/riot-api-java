@@ -3,22 +3,24 @@ package vgalloy.riot.api.dto;
 import java.util.List;
 
 /**
- * Created by Vincent Galloy on 21/05/16.
+ * @author Vincent Galloy
+ *         Created by Vincent Galloy on 21/05/16.
  */
 public class TeamDto {
-    private long	 createDate; 
-    private String fullId; 
-    private long	 lastGameDate; 
-    private long	 lastJoinDate; 
-    private long	 lastJoinedRankedTeamQueueDate; 
+
+    private long createDate;
+    private String fullId;
+    private long lastGameDate;
+    private long lastJoinDate;
+    private long lastJoinedRankedTeamQueueDate;
     private List<MatchHistorySummaryDto> matchHistory;
-    private long	 modifyDate; 
-    private String name; 
-    private RosterDto roster; 
-    private long	 secondLastJoinDate; 
-    private String status; 
-    private String tag; 
-    private List<TeamStatDetailDto> teamStatDetails; 
+    private long modifyDate;
+    private String name;
+    private RosterDto roster;
+    private long secondLastJoinDate;
+    private String status;
+    private String tag;
+    private List<TeamStatDetailDto> teamStatDetails;
     private long thirdLastJoinDate;
 
     public long getCreateDate() {

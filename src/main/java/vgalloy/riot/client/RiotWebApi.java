@@ -6,7 +6,13 @@ import vgalloy.riot.api.rest.CurrentGameApi;
 import vgalloy.riot.api.rest.FeatureGameApi;
 import vgalloy.riot.api.rest.GameApi;
 import vgalloy.riot.api.rest.LeagueApi;
+import vgalloy.riot.api.rest.LolStaticDataApi;
+import vgalloy.riot.api.rest.LolStatusApi;
+import vgalloy.riot.api.rest.MatchApi;
+import vgalloy.riot.api.rest.MatchListApi;
+import vgalloy.riot.api.rest.StatsApi;
 import vgalloy.riot.api.rest.SummonerApi;
+import vgalloy.riot.api.rest.TeamApi;
 
 /**
  * @author Vincent Galloy
@@ -18,6 +24,12 @@ public interface RiotWebApi extends ChampionApi,
         FeatureGameApi,
         GameApi,
         LeagueApi,
-        SummonerApi {
+        LolStaticDataApi,
+        LolStatusApi,
+        MatchApi,
+        MatchListApi,
+        StatsApi,
+        SummonerApi,
+        TeamApi {
 
 }

@@ -7,7 +7,8 @@ import vgalloy.riot.api.dto.constant.Season;
 import javax.management.relation.Role;
 
 /**
- * Created by Vincent Galloy on 21/05/16.
+ * @author Vincent Galloy
+ *         Created by Vincent Galloy on 21/05/16.
  */
 public class MatchReference {
 
