@@ -1,6 +1,5 @@
 package vgalloy.riot.service.executor;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import vgalloy.riot.service.executor.impl.ExecutorImpl;
 
@@ -14,9 +13,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class ExecutorTest {
 
-    // TODO des vrais test. JUnit ne support pas le multithreading ... :/
     @Test
-    @Ignore
     public void testSimple() {
         // GIVEN
         AtomicInteger count = new AtomicInteger();
@@ -49,7 +46,6 @@ public class ExecutorTest {
     }
 
     @Test
-    @Ignore
     public void testAddDuringRunning() throws InterruptedException {
         // GIVEN
         AtomicInteger count = new AtomicInteger();
@@ -64,29 +60,14 @@ public class ExecutorTest {
         executor.addTask(createPlusOneThread(count));
         executor.addTask(createPlusOneThread(count));
         executor.finish();
-        System.out.println("TMP .... " + count.get());
 
         // THEN
         assertEquals(6, count.get());
     }
 
-    @Test
-    @Ignore
-    public void testThread() throws Exception {
-        AtomicInteger count = new AtomicInteger();
-        Thread t = new Thread(createPlusOneThread(count));
-        System.out.println("CREATION");
-        t.start();
-        System.out.println("START");
-        t.join();
-        System.out.println("JOIN");
-    }
-
     public Runnable createPlusOneThread(AtomicInteger count) {
         return () -> {
-            System.out.println("B " + count.get());
             count.incrementAndGet();
-            System.out.println("A .... " + count.get());
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

@@ -69,6 +69,5 @@ public class Main {
 //        GetChampionListQuery getChampionListQuery = riotApi.getChampionList();
 //        ChampionListDto championDto = getChampionListQuery.execute();
 //        System.out.println(championDto);
-
     }
 }
