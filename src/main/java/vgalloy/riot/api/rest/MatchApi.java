@@ -20,7 +20,7 @@ public interface MatchApi {
      * @param region         the summoners region
      * @param tournamentCode the tournament code
      * @param key            the api key
-     * @return the match id List list
+     * @return the match id list
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/by-tournament/{tournamentCode}/ids")
