@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  * Created by Vincent on 21/05/2016.
  */
-public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest, Runnable {
+public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest {
 
     private Query<Dto> query;
     private CallBack<Dto> callback;
@@ -31,11 +31,4 @@ public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest, Runnab
         callback.onSuccess(dto);
     }
 
-    @Override
-    public synchronized void start() {
-        if (!isRunning) {
-            isRunning = true;
-            new Thread(this).start();
-        }
-    }
 }
