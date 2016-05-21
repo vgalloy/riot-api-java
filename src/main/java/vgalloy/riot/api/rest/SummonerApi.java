@@ -26,7 +26,7 @@ public interface SummonerApi {
      * @return a map with the name of the summoners and the information
      */
     @GET
-    @Path("https://{region}.api.pvp.net//api/lol/{region}/v1.4/summoner/by-name/{summonerNames}")
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.4/summoner/by-name/{summonerNames}")
     Map<String, SummonerDto> getSummonerByNames(@PathParam("region") Region region, @PathParam("summonerNames") String summonerNames, @QueryParam("api_key") String key);
 
     /**
@@ -38,7 +38,7 @@ public interface SummonerApi {
      * @return a map with the name of the summoners and the information
      */
     @GET
-    @Path("https://{region}.api.pvp.net//api/lol/{region}/v1.4/summoner/{summonerIds}")
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.4/summoner/{summonerIds}")
     Map<String, SummonerDto> getSummonerByIds(@PathParam("region") Region region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String key);
 
     /**
@@ -50,7 +50,7 @@ public interface SummonerApi {
      * @return a map with the ids of the summoners and the masteries
      */
     @GET
-    @Path("https://{region}.api.pvp.net//api/lol/{region}/v1.4/summoner/{summonerIds}/masteries")
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.4/summoner/{summonerIds}/masteries")
     Map<String, MasteryPagesDto> getSummonerMasteries(@PathParam("region") Region region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String key);
 
     /**
@@ -62,7 +62,7 @@ public interface SummonerApi {
      * @return a map with the ids of the summoners and the names
      */
     @GET
-    @Path("https://{region}.api.pvp.net//api/lol/{region}/v1.4/summoner/{summonerIds}/name")
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.4/summoner/{summonerIds}/name")
     Map<String, String> getSummonerName(@PathParam("region") Region region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String key);
 
     /**
@@ -74,6 +74,6 @@ public interface SummonerApi {
      * @return a map with the ids of the summoners and the runes
      */
     @GET
-    @Path("https://{region}.api.pvp.net//api/lol/{region}/v1.4/summoner/{summonerIds}/runes")
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.4/summoner/{summonerIds}/runes")
     Map<String, RunePagesDto> getSummonerRunes(@PathParam("region") Region region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String key);
 }

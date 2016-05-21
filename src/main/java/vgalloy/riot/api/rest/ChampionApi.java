@@ -20,7 +20,7 @@ public interface ChampionApi {
      *
      * @param region the region
      * @param key    the api key
-     * @return the champions
+     * @return the champions information
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion")

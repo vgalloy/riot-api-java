@@ -5,7 +5,7 @@ import vgalloy.riot.service.RiotApiKey;
 
 /**
  * @author Vincent Galloy
- * Created by Vincent on 21/05/2016.
+ *         Created by Vincent on 21/05/2016.
  */
 public class DefaultParameter implements Cloneable {
 
