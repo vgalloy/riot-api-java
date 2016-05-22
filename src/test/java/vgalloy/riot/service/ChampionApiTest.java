@@ -1,8 +1,8 @@
 package vgalloy.riot.service;
 
-import org.junit.Before;
 import org.junit.Test;
 import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.client.ratelimite.RateLimit;
 import vgalloy.riot.service.executor.Executor;
 import vgalloy.riot.service.executor.impl.ExecutorImpl;
 
@@ -16,12 +16,11 @@ import java.util.Properties;
  */
 public class ChampionApiTest {
 
-    private RiotApi riotApi = new RiotApi();
+    private RiotApi riotApi = new RiotApi(new RateLimit(10, 10_000));
 
     // TODO afin d'éviter les problème de limite exceded il va falloir faire les test avec l'executor.
 
-    @Before
-    public void init() throws IOException {
+    public ChampionApiTest() throws IOException {
         InputStream inputStream = ChampionApiTest.class.getClassLoader().getResourceAsStream("riot.properties");
         Properties properties = new Properties();
         properties.load(inputStream);

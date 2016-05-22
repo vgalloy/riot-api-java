@@ -1,9 +1,9 @@
-package vgalloy.riot.service.ratelimite.impl;
+package vgalloy.riot.client.ratelimite.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import vgalloy.riot.service.ratelimite.RateLimit;
-import vgalloy.riot.service.ratelimite.RateLimiter;
+import vgalloy.riot.client.ratelimite.RateLimit;
+import vgalloy.riot.client.ratelimite.RateLimiter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,6 +49,7 @@ public class RateLimiterImpl implements RateLimiter {
                 LOGGER.error("{}", e);
             }
         }
+        LOGGER.trace("Task Ok for execution");
         jobTimerExecution.add(System.currentTimeMillis());
     }
 

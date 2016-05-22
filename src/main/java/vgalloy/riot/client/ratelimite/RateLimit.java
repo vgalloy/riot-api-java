@@ -1,11 +1,15 @@
-package vgalloy.riot.service.ratelimite;
+package vgalloy.riot.client.ratelimite;
+
+import java.io.Serializable;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  *         This object represent a limit. The number of request that can be create during a period of time;
  */
-public class RateLimit implements Comparable<RateLimit> {
+public class RateLimit implements Comparable<RateLimit>, Serializable {
+
+    private static final long serialVersionUID = 905799625632401625L;
 
     private final int numberOfRequest;
     private final int timeInMillis;

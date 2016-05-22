@@ -2,6 +2,7 @@ package vgalloy.riot.service.query.impl;
 
 import vgalloy.riot.api.dto.ChampionDto;
 import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
@@ -18,11 +19,12 @@ public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
     /**
      * Constructor.
      *
+     * @param riotWebApi       the riot web api for execute query
      * @param defaultParameter the default query parameter
      * @param championId       the champion Id
      */
-    public GetChampionByIdQuery(DefaultParameter defaultParameter, Long championId) {
-        super(defaultParameter);
+    public GetChampionByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, Long championId) {
+        super(riotWebApi, defaultParameter);
         this.championId = championId;
     }
 

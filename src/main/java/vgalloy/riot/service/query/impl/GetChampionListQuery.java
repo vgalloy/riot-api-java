@@ -2,6 +2,7 @@ package vgalloy.riot.service.query.impl;
 
 import vgalloy.riot.api.dto.ChampionListDto;
 import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
@@ -17,10 +18,11 @@ public class GetChampionListQuery extends AbstractQuery<ChampionListDto> {
     /**
      * Constructor.
      *
+     * @param riotWebApi       the riot web api for execute query
      * @param defaultParameter the default query parameter
      */
-    public GetChampionListQuery(DefaultParameter defaultParameter) {
-        super(defaultParameter);
+    public GetChampionListQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
+        super(riotWebApi, defaultParameter);
     }
 
     @Override

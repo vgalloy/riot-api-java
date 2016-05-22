@@ -1,7 +1,6 @@
 package vgalloy.riot.service.query;
 
 import vgalloy.riot.client.RiotWebApi;
-import vgalloy.riot.client.RiotWebApiFactory;
 import vgalloy.riot.service.RiotApiKey;
 
 import java.util.Objects;
@@ -12,17 +11,19 @@ import java.util.Objects;
  */
 public abstract class AbstractQuery<Dto> implements Query<Dto> {
 
-    protected RiotWebApi riotWebApi = RiotWebApiFactory.getRiotWebApi();
+    protected RiotWebApi riotWebApi;
     protected DefaultParameter defaultParameter;
     protected RiotApiKey riotApiKey;
 
     /**
      * Constructor.
      *
+     * @param riotWebApi       the riot web api for execute query
      * @param defaultParameter the default query parameter
      */
-    public AbstractQuery(DefaultParameter defaultParameter) {
-        this.defaultParameter = defaultParameter.clone();
+    public AbstractQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
+        this.riotWebApi = riotWebApi;
+        this.defaultParameter = defaultParameter;
     }
 
     /**

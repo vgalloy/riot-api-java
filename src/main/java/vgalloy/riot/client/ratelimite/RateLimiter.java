@@ -1,4 +1,4 @@
-package vgalloy.riot.service.ratelimite;
+package vgalloy.riot.client.ratelimite;
 
 /**
  * @author Vincent Galloy
