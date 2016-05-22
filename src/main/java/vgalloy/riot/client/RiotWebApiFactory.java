@@ -30,6 +30,10 @@ public class RiotWebApiFactory {
 
     }
 
+    /**
+     * There is rate limit ! Do not use this API !
+     * @return the riotWebApi
+     */
     public static RiotWebApi getRiotWebApi() {
         return riotWebApi;
     }

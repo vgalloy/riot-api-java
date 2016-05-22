@@ -1,6 +1,8 @@
 package vgalloy.riot.service.ratelimite;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vgalloy.riot.service.executor.Executor;
 import vgalloy.riot.service.executor.impl.ExecutorImpl;
 import vgalloy.riot.service.ratelimite.impl.RateLimiterImpl;
@@ -12,9 +14,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by Vincent Galloy on 22/05/16.
+ * Created by Vincent Galloy on 22/05/16
+ * .
  */
 public class RateLimiterTest {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(RateLimiterTest.class);
 
     @Test
     public void testOneRequestNoTimer() {
@@ -67,10 +72,10 @@ public class RateLimiterTest {
         long end = System.currentTimeMillis();
 
         // THEN
-        System.out.println("requestPoolSize : " + requestPoolSize + " == " + count.get());
+        LOGGER.debug("requestPoolSize : " + requestPoolSize + " == " + count.get());
         assertEquals(requestPoolSize, count.get());
         for (RateLimit rateLimit : rateLimits) {
-            System.out.println("executionTime : " + (end - start) + " > " + (rateLimit.getTimeInMillis() * (requestPoolSize / rateLimit.getNumberOfRequest() - 1)));
+            LOGGER.debug("executionTime : " + (end - start) + " > " + (rateLimit.getTimeInMillis() * (requestPoolSize / rateLimit.getNumberOfRequest() - 1)));
             assertTrue(end - start >= rateLimit.getTimeInMillis() * (requestPoolSize / rateLimit.getNumberOfRequest() - 1));
         }
     }

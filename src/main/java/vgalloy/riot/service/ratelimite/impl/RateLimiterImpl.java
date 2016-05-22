@@ -43,6 +43,7 @@ public class RateLimiterImpl implements RateLimiter {
     public synchronized void delay() {
         while (!isOkForRateLimits()) {
             try {
+                LOGGER.trace("Delaying task ...");
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 LOGGER.error("{}", e);
