@@ -1,6 +1,7 @@
 package vgalloy.riot.api.rest;
 
 import vgalloy.riot.api.dto.RecentGamesDto;
+import vgalloy.riot.api.dto.constant.Region;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -16,11 +17,12 @@ public interface GameApi {
     /**
      * Get recent games by summoner ID.
      *
+     * @param region     the region
      * @param summonerId the summoner id
      * @param key        the api key
      * @return the recent games
      */
     @GET
-    @Path("https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/{summonerId}/recent")
-    RecentGamesDto getRecentGame(@PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.3/game/by-summoner/{summonerId}/recent")
+    RecentGamesDto getRecentGame(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
 }

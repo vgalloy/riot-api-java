@@ -22,6 +22,6 @@ public interface FeaturedGameApi {
      * @return the featured game
      */
     @GET
-    @Path("https://euw.api.pvp.net/observer-mode/rest/featured")
+    @Path("https://{region}.api.pvp.net/observer-mode/rest/featured")
     FeaturedGames getFeaturedGame(@PathParam("region") Region region, @QueryParam("api_key") String key);
 }
