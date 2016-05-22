@@ -13,7 +13,7 @@ import java.util.Properties;
  */
 public abstract class AbstractTest {
 
-    protected RiotApi riotApi = new RiotApi(new RateLimit(9, 10_000), new RateLimit(500, 10 * 60 * 1_000));
+    protected RiotApi riotApi = new RiotApi(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000));
 
     public AbstractTest() {
         InputStream inputStream = ChampionApiTest.class.getClassLoader().getResourceAsStream("riot.properties");

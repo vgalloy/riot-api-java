@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @author Vincent Galloy
- * Created by Vincent Galloy on 22/05/16.
+ *         Created by Vincent Galloy on 22/05/16.
  */
 public class GetTopChampion extends AbstractQuery<List<ChampionMasteryDto>> {
 
