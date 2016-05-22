@@ -16,18 +16,18 @@ public class RiotWebApiFactory {
 
     private static RiotWebApi riotWebApi;
 
+    static {
+        ClientConfig cc = new ClientConfig().register(JacksonFeature.class).register(JacksonJsonProvider.class);
+        Client client = ClientBuilder.newClient(cc);
+        riotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));
+    }
+
     /**
      * Constructor.
      * To prevent instantiation.
      */
     private RiotWebApiFactory() {
 
-    }
-
-    static {
-        ClientConfig cc = new ClientConfig().register(JacksonFeature.class).register(JacksonJsonProvider.class);
-        Client client = ClientBuilder.newClient(cc);
-        riotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));
     }
 
     public static RiotWebApi getRiotWebApi() {

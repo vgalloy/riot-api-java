@@ -30,7 +30,7 @@ public class Main {
         RiotWebApi riotWebApi = RiotWebApiFactory.getRiotWebApi();
 
         /** CHAMPION API **/
-                System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()));
+        System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getChampionById(Region.EUW, 11L, riotApiKey.getApiKey()));
 
         /** CHAMPION MASTERY **/

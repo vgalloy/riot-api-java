@@ -14,14 +14,6 @@ public class RateLimitedRiotWebApiFactory {
 
     private static RateLimitedRiotWebApi rateLimitedRiotWebApi;
 
-    /**
-     * Constructor.
-     * To prevent instantiation.
-     */
-    private RateLimitedRiotWebApiFactory() {
-
-    }
-
     static {
         RiotWebApi riotWebApi = RiotWebApiFactory.getRiotWebApi();
         RateLimitProxy rateLimitProxy = new RateLimitProxy(riotWebApi);
@@ -29,6 +21,14 @@ public class RateLimitedRiotWebApiFactory {
                 RateLimitedRiotWebApi.class.getClassLoader(),
                 new Class[]{RateLimitedRiotWebApi.class},
                 rateLimitProxy);
+    }
+
+    /**
+     * Constructor.
+     * To prevent instantiation.
+     */
+    private RateLimitedRiotWebApiFactory() {
+
     }
 
     public static RiotWebApi getRateLimitedRiotWebApi() {

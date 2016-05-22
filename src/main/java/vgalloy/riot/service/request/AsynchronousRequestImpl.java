@@ -30,5 +30,4 @@ public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest {
         Dto dto = query.execute();
         callback.onSuccess(dto);
     }
-
 }

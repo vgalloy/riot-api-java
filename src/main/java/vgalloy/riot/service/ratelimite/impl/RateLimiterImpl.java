@@ -92,6 +92,7 @@ public class RateLimiterImpl implements RateLimiter {
     /**
      * Get the longest rate limit duration. This allow us to clean the jobTimerExecution and save memory / time.
      * // TODO  une Rate limit est final, la liste ne peux/doit pas être modifée après sa création ... la valeur de retour est donc toujours la même.
+     *
      * @return the longest rate limit duration
      */
     private int getTheLongestRateLimitDuration() {
