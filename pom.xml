@@ -19,9 +19,9 @@
         <checkstyle.version>2.17</checkstyle.version>
         <checkstyle.configuration.location>conf/checkstyle.xml</checkstyle.configuration.location>
 
-        <!-- Find bugs -->
-        <findbugs-maven-plugin.version>3.0.4-SNAPSHOT</findbugs-maven-plugin.version>
-        <findbugs.exception.location>conf/findbugs-exception-filter.xml</findbugs.exception.location>
+        <!-- Log -->
+        <slf4j-api.version>1.7.19</slf4j-api.version>
+        <logback-classic.version>1.1.6</logback-classic.version>
 
         <!-- Jersey -->
         <jersey.version>2.22.2</jersey.version>
@@ -31,6 +31,19 @@
     </properties>
 
     <dependencies>
+        <!-- Log -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
+        </dependency>
+
+        <!-- Jersey -->
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>

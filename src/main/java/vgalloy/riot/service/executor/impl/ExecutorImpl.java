@@ -1,5 +1,7 @@
 package vgalloy.riot.service.executor.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vgalloy.riot.service.executor.Executor;
 
 import java.util.ArrayList;
@@ -11,7 +13,10 @@ import java.util.List;
  */
 public class ExecutorImpl implements Executor {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorImpl.class);
+
     private static List<Thread> threadList = new ArrayList<>();
+
     private boolean isRunning;
 
     @Override
@@ -38,7 +43,7 @@ public class ExecutorImpl implements Executor {
                 try {
                     e.join();
                 } catch (InterruptedException e1) {
-                    e1.printStackTrace(); // TODO Virer cette merde et faire un logging digne de ce nom
+                    LOGGER.error("{}", e1);
                 }
             });
             threadList = new ArrayList<>();
