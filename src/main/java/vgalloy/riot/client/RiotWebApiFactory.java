@@ -32,8 +32,9 @@ public class RiotWebApiFactory {
      * @return a new Riot web api
      */
     public static RiotWebApi getRiotWebApi(RateLimit... rateLimits) {
-        ClientConfig cc = new ClientConfig().register(JacksonFeature.class).register(JacksonJsonProvider.class);
-        Client client = ClientBuilder.newClient(cc);
+        ClientConfig clientConfig = new ClientConfig().register(JacksonFeature.class).register(JacksonJsonProvider.class);
+        Client client = ClientBuilder.newClient(clientConfig);
+//        client.register(new LoggingFilter());
         RiotWebApi unsecuredRiotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));
         RateLimitProxy rateLimitProxy = new RateLimitProxy(unsecuredRiotWebApi, rateLimits);
         RiotWebApi riotWebApi = (RiotWebApi) Proxy.newProxyInstance(

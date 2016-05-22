@@ -1,9 +1,8 @@
-package vgalloy.riot.service.query.impl;
+package vgalloy.riot.service.query.impl.champion;
 
 import vgalloy.riot.api.dto.ChampionDto;
 import vgalloy.riot.api.dto.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
-import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
 
@@ -13,8 +12,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
 
-    private Region region;
-    private Long championId;
+    private long championId;
 
     /**
      * Constructor.
@@ -23,17 +21,14 @@ public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
      * @param defaultParameter the default query parameter
      * @param championId       the champion Id
      */
-    public GetChampionByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, Long championId) {
+    public GetChampionByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long championId) {
         super(riotWebApi, defaultParameter);
         this.championId = championId;
     }
 
     @Override
     public ChampionDto execute() {
-        Region region = getParameter(this.region, defaultParameter.getRegion(), "Region undefined");
-        Long championId = getParameter(this.championId, "Champion Id undefined");
-        RiotApiKey riotApiKey = getParameter(this.riotApiKey, defaultParameter.getRiotApiKey(), "Riot api key undefined");
-        return riotWebApi.getChampionById(region, championId, riotApiKey.getApiKey());
+        return riotWebApi.getChampionById(getRegion(), championId, getRiotApiKeyValue());
     }
 
     /**
@@ -42,7 +37,7 @@ public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
      * @param region the riot api key
      * @return the current query
      */
-    public GetChampionByIdQuery setRegion(Region region) {
+    public GetChampionByIdQuery region(Region region) {
         this.region = region;
         return this;
     }

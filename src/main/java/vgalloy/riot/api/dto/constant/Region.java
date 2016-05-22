@@ -6,5 +6,10 @@ package vgalloy.riot.api.dto.constant;
  */
 public enum Region {
     BR, EUNE, EUW, JP, KR, LAN, LAS, NA, OCE, RU, TR;
+
+    @Override
+    public String toString() {
+        return name().toLowerCase();
+    }
 }
 

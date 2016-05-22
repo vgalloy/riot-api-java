@@ -1,7 +1,10 @@
 package vgalloy.riot.service.query;
 
+import vgalloy.riot.api.dto.constant.PlatformId;
+import vgalloy.riot.api.dto.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
+import vgalloy.riot.service.mapper.RegionMapper;
 
 import java.util.Objects;
 
@@ -14,6 +17,7 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
     protected RiotWebApi riotWebApi;
     protected DefaultParameter defaultParameter;
     protected RiotApiKey riotApiKey;
+    protected Region region;
 
     /**
      * Constructor.
@@ -32,9 +36,47 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
      * @param riotApiKey the riot api key
      * @return the current query
      */
-    public AbstractQuery<Dto> setRiotApiKey(RiotApiKey riotApiKey) {
+    public AbstractQuery<Dto> riotApiKey(RiotApiKey riotApiKey) {
         this.riotApiKey = riotApiKey;
         return this;
+    }
+
+    /**
+     * Set the region for this request.
+     *
+     * @param region the region
+     * @return the current query
+     */
+    public AbstractQuery<Dto> region(Region region) {
+        this.region = region;
+        return this;
+    }
+
+    /**
+     * Return the Riot api key value.
+     *
+     * @return the Riot api key value
+     */
+    protected String getRiotApiKeyValue() {
+        return getParameter(this.riotApiKey, defaultParameter.getRiotApiKey(), "Riot api key undefined").getApiKey();
+    }
+
+    /**
+     * Return the region.
+     *
+     * @return the region
+     */
+    protected Region getRegion() {
+        return getParameter(this.region, defaultParameter.getRegion(), "Region is undefined");
+    }
+
+    /**
+     * Return the platform id.
+     *
+     * @return the platform id
+     */
+    protected PlatformId getPlatformId() {
+        return RegionMapper.fromRegion(getRegion());
     }
 
     /**
@@ -52,17 +94,5 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
             return currentParameter;
         }
         return Objects.requireNonNull(defaultParameter, message);
-    }
-
-    /**
-     * Gets the parameter.
-     *
-     * @param currentParameter the current parameter
-     * @param message          the message if currentParameter if null;
-     * @param <T>              the return type
-     * @return the parameter
-     */
-    protected <T> T getParameter(T currentParameter, String message) {
-        return getParameter(currentParameter, null, message);
     }
 }

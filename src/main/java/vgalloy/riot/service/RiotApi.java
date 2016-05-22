@@ -5,8 +5,12 @@ import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.client.RiotWebApiFactory;
 import vgalloy.riot.client.ratelimite.RateLimit;
 import vgalloy.riot.service.query.DefaultParameter;
-import vgalloy.riot.service.query.impl.GetChampionByIdQuery;
-import vgalloy.riot.service.query.impl.GetChampionListQuery;
+import vgalloy.riot.service.query.impl.champion.GetChampionByIdQuery;
+import vgalloy.riot.service.query.impl.champion.GetChampionListQuery;
+import vgalloy.riot.service.query.impl.championmastery.GetChampionMasteryByChampionQuery;
+import vgalloy.riot.service.query.impl.championmastery.GetChampionMasteryQuery;
+import vgalloy.riot.service.query.impl.championmastery.GetPlayerScore;
+import vgalloy.riot.service.query.impl.championmastery.GetTopChampion;
 
 /**
  * @author Vincent Galloy
@@ -43,6 +47,47 @@ public class RiotApi {
      */
     public GetChampionByIdQuery getChampionById(long id) {
         return new GetChampionByIdQuery(riotWebApi, defaultParameter, id);
+    }
+
+    /**
+     * Create the query for champion mastery by champion.
+     *
+     * @param playerId   the player id
+     * @param championId the champion id
+     * @return the query
+     */
+    public GetChampionMasteryByChampionQuery getChampionMasteryByChampion(long playerId, long championId) {
+        return new GetChampionMasteryByChampionQuery(riotWebApi, defaultParameter, playerId, championId);
+    }
+
+    /**
+     * Create the query for champion mastery.
+     *
+     * @param playerId the player id
+     * @return the query
+     */
+    public GetChampionMasteryQuery getChampionMastery(long playerId) {
+        return new GetChampionMasteryQuery(riotWebApi, defaultParameter, playerId);
+    }
+
+    /**
+     * Create the query for player score.
+     *
+     * @param playerId the player id
+     * @return the query
+     */
+    public GetPlayerScore getPlayerScore(long playerId) {
+        return new GetPlayerScore(riotWebApi, defaultParameter, playerId);
+    }
+
+    /**
+     * Create the query for top champion.
+     *
+     * @param playerId the player id
+     * @return the query
+     */
+    public GetTopChampion getTopChampion(long playerId) {
+        return new GetTopChampion(riotWebApi, defaultParameter, playerId);
     }
 
     /**
