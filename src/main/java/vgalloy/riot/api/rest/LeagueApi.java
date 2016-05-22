@@ -1,6 +1,7 @@
 package vgalloy.riot.api.rest;
 
 import vgalloy.riot.api.dto.LeagueDto;
+import vgalloy.riot.api.dto.constant.QueueType;
 import vgalloy.riot.api.dto.constant.Region;
 
 import javax.ws.rs.GET;
@@ -50,7 +51,7 @@ public interface LeagueApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.5/league/by-team/{teamIds}")
-    Map<String, List<LeagueDto>> getLeaguesByTeam(@PathParam("region") Region region, @PathParam("teamIds") String teamIds, @QueryParam("api_key") String key);
+    Map<String, List<LeagueDto>> getLeaguesByTeamIds(@PathParam("region") Region region, @PathParam("teamIds") String teamIds, @QueryParam("api_key") String key);
 
     /**
      * Get league entries mapped by team ID for a given list of team IDs.
@@ -62,27 +63,29 @@ public interface LeagueApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.5/league/by-team/{teamIds}/entry")
-    Map<String, List<LeagueDto>> getLeaguesEntryByTeam(@PathParam("region") Region region, @PathParam("teamIds") String teamIds, @QueryParam("api_key") String key);
+    Map<String, List<LeagueDto>> getLeaguesEntryByTeamIds(@PathParam("region") Region region, @PathParam("teamIds") String teamIds, @QueryParam("api_key") String key);
 
     /**
      * Get challenger tier leagues.
      *
      * @param region the region
+     * @param type   queue type
      * @param key    the api key
      * @return the challenger league
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.5/league/challenger")
-    LeagueDto getChallenger(@PathParam("region") Region region, @QueryParam("api_key") String key);
+    LeagueDto getChallenger(@PathParam("region") Region region, @QueryParam("type") QueueType type, @QueryParam("api_key") String key);
 
     /**
      * Get master tier leagues.
      *
      * @param region the region
+     * @param type   queue type
      * @param key    the api key
      * @return the master league
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.5/league/master")
-    LeagueDto getMaster(@PathParam("region") Region region, @QueryParam("api_key") String key);
+    LeagueDto getMaster(@PathParam("region") Region region, @QueryParam("type") QueueType type, @QueryParam("api_key") String key);
 }

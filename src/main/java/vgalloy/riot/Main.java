@@ -58,8 +58,8 @@ public class Main {
 //        System.out.println(riotWebApi.getMaster(Region.EUW, riotApiKey.getApiKey()));
 //        System.out.println(riotWebApi.getLeaguesEntryBySummonerIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
 //        System.out.println(riotWebApi.getLeaguesBySummonerIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
-//        System.out.println(riotWebApi.getLeaguesEntryByTeam(Region.EUW, "45663", riotApiKey.getApiKey()));
-//        System.out.println(riotWebApi.getLeaguesByTeam(Region.EUW, "45663", riotApiKey.getApiKey()));
+//        System.out.println(riotWebApi.getLeaguesEntryByTeamIds(Region.EUW, "45663", riotApiKey.getApiKey()));
+//        System.out.println(riotWebApi.getLeaguesByTeamIds(Region.EUW, "45663", riotApiKey.getApiKey()));
         // FIXME: 19/05/16
 //                System.out.println(riotWebApi.getLeaguesBySummonerIds(Region.EUW, "24541689", riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getCurrentGame(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));

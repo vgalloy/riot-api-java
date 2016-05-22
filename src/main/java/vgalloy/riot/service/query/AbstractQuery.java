@@ -6,7 +6,9 @@ import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.mapper.RegionMapper;
 
+import java.util.List;
 import java.util.Objects;
+import java.util.StringJoiner;
 
 /**
  * @author Vincent Galloy
@@ -77,6 +79,20 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
      */
     protected PlatformId getPlatformId() {
         return RegionMapper.fromRegion(getRegion());
+    }
+
+    /**
+     * Convert a list of item into a String separated by comma.
+     *
+     * @param list the list of item
+     * @return a String
+     */
+    protected String convert(List list) {
+        StringJoiner stringJoiner = new StringJoiner(",");
+        for (Object object : list) {
+            stringJoiner.add(object.toString());
+        }
+        return stringJoiner.toString();
     }
 
     /**

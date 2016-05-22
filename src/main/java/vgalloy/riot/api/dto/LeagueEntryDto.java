@@ -28,35 +28,35 @@ public class LeagueEntryDto {
         this.division = division;
     }
 
-    public boolean isFreshBlood() {
+    public boolean isIsFreshBlood() {
         return isFreshBlood;
     }
 
-    public void setFreshBlood(boolean freshBlood) {
+    public void setIsFreshBlood(boolean freshBlood) {
         isFreshBlood = freshBlood;
     }
 
-    public boolean isHotStreak() {
+    public boolean isIsHotStreak() {
         return isHotStreak;
     }
 
-    public void setHotStreak(boolean hotStreak) {
+    public void setIsHotStreak(boolean hotStreak) {
         isHotStreak = hotStreak;
     }
 
-    public boolean isInactive() {
+    public boolean isIsInactive() {
         return isInactive;
     }
 
-    public void setInactive(boolean inactive) {
+    public void setIsInactive(boolean inactive) {
         isInactive = inactive;
     }
 
-    public boolean isVeteran() {
+    public boolean isIsVeteran() {
         return isVeteran;
     }
 
-    public void setVeteran(boolean veteran) {
+    public void setIsVeteran(boolean veteran) {
         isVeteran = veteran;
     }
 

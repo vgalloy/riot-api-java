@@ -16,9 +16,9 @@ public class GetRecentGameQuery extends AbstractQuery<RecentGamesDto> {
     /**
      * Constructor.
      *
-     * @param riotWebApi the riot web api for execute query
+     * @param riotWebApi       the riot web api for execute query
      * @param defaultParameter the default query parameter
-     * @param summonerId the summoner id
+     * @param summonerId       the summoner id
      */
     public GetRecentGameQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
         super(riotWebApi, defaultParameter);
