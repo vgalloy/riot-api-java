@@ -5,6 +5,7 @@ import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
 
 /**
+ * @author Vincent Galloy
  * Created by Vincent Galloy on 22/05/16.
  */
 public class GetPlayerScore extends AbstractQuery<Integer> {

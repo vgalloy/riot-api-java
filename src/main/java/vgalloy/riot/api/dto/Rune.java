@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Rune {
 
     private int count;
-    private long runId;
+    private long runeId;
 
     public int getCount() {
         return count;
@@ -19,12 +19,12 @@ public class Rune {
         this.count = count;
     }
 
-    public long getRunId() {
-        return runId;
+    public long getRuneId() {
+        return runeId;
     }
 
-    public void setRunId(long runId) {
-        this.runId = runId;
+    public void setRuneId(long runeId) {
+        this.runeId = runeId;
     }
 
     @Override
@@ -33,19 +33,19 @@ public class Rune {
         if (o == null || getClass() != o.getClass()) return false;
         Rune rune = (Rune) o;
         return count == rune.count &&
-                runId == rune.runId;
+                runeId == rune.runeId;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(count, runId);
+        return Objects.hash(count, runeId);
     }
 
     @Override
     public String toString() {
         return "Rune{" +
                 "count=" + count +
-                ", runId=" + runId +
+                ", runeId=" + runeId +
                 '}';
     }
 }

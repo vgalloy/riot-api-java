@@ -11,6 +11,7 @@ import vgalloy.riot.service.query.impl.championmastery.GetChampionMasteryByChamp
 import vgalloy.riot.service.query.impl.championmastery.GetChampionMasteryQuery;
 import vgalloy.riot.service.query.impl.championmastery.GetPlayerScore;
 import vgalloy.riot.service.query.impl.championmastery.GetTopChampion;
+import vgalloy.riot.service.query.impl.currentgame.GetCurrentGameInfoQuery;
 
 /**
  * @author Vincent Galloy
@@ -88,6 +89,16 @@ public class RiotApi {
      */
     public GetTopChampion getTopChampion(long playerId) {
         return new GetTopChampion(riotWebApi, defaultParameter, playerId);
+    }
+
+    /**
+     * Create the query for current game.
+     *
+     * @param summonerId the summoner id
+     * @return the query
+     */
+    public GetCurrentGameInfoQuery getCurrentGameInfo(long summonerId) {
+        return new GetCurrentGameInfoQuery(riotWebApi, defaultParameter, summonerId);
     }
 
     /**
