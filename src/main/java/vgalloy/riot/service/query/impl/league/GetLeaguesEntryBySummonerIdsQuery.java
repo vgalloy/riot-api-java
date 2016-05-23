@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.league;
 
-import vgalloy.riot.api.dto.LeagueDto;
+import vgalloy.riot.api.league.dto.LeagueDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

@@ -1,7 +1,7 @@
 package vgalloy.riot.service.query;
 
-import vgalloy.riot.api.dto.constant.PlatformId;
-import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.api.constant.PlatformId;
+import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.mapper.RegionMapper;

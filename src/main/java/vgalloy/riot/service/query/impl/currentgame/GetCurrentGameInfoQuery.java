@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.currentgame;
 
-import vgalloy.riot.api.dto.CurrentGameInfo;
+import vgalloy.riot.api.currentgame.dto.CurrentGameInfo;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

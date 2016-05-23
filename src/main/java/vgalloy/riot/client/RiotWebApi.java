@@ -1,18 +1,18 @@
 package vgalloy.riot.client;
 
-import vgalloy.riot.api.rest.ChampionApi;
-import vgalloy.riot.api.rest.ChampionMastery;
-import vgalloy.riot.api.rest.CurrentGameApi;
-import vgalloy.riot.api.rest.FeaturedGameApi;
-import vgalloy.riot.api.rest.GameApi;
-import vgalloy.riot.api.rest.LeagueApi;
-import vgalloy.riot.api.rest.LolStaticDataApi;
-import vgalloy.riot.api.rest.LolStatusApi;
-import vgalloy.riot.api.rest.MatchApi;
-import vgalloy.riot.api.rest.MatchListApi;
-import vgalloy.riot.api.rest.StatsApi;
-import vgalloy.riot.api.rest.SummonerApi;
-import vgalloy.riot.api.rest.TeamApi;
+import vgalloy.riot.api.champion.ChampionApi;
+import vgalloy.riot.api.championmastery.ChampionMastery;
+import vgalloy.riot.api.currentgame.CurrentGameApi;
+import vgalloy.riot.api.featuredgame.FeaturedGameApi;
+import vgalloy.riot.api.game.GameApi;
+import vgalloy.riot.api.league.LeagueApi;
+import vgalloy.riot.api.lolstaticdata.LolStaticDataApi;
+import vgalloy.riot.api.lolstatus.LolStatusApi;
+import vgalloy.riot.api.mach.MatchApi;
+import vgalloy.riot.api.matchlist.MatchListApi;
+import vgalloy.riot.api.stats.StatsApi;
+import vgalloy.riot.api.summoner.SummonerApi;
+import vgalloy.riot.api.team.TeamApi;
 
 /**
  * @author Vincent Galloy

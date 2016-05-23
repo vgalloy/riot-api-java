@@ -1,7 +1,7 @@
 package vgalloy.riot.service.mapper;
 
-import vgalloy.riot.api.dto.constant.PlatformId;
-import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.api.constant.PlatformId;
+import vgalloy.riot.api.constant.Region;
 
 /**
  * @author Vincent Galloy

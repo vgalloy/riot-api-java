@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.championmastery;
 
-import vgalloy.riot.api.dto.ChampionMasteryDto;
+import vgalloy.riot.api.championmastery.dto.ChampionMasteryDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

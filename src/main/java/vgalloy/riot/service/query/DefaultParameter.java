@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query;
 
-import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.service.RiotApiKey;
 
 /**

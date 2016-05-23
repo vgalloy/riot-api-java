@@ -75,7 +75,7 @@ public class RateLimiterTest {
         LOGGER.debug("requestPoolSize : " + requestPoolSize + " == " + count.get());
         assertEquals(requestPoolSize, count.get());
         for (RateLimit rateLimit : rateLimits) {
-            LOGGER.debug("executionTime : " + (end - start) + " > " + (rateLimit.getTimeInMillis() * (requestPoolSize / rateLimit.getNumberOfRequest() - 1)));
+            LOGGER.debug("executionTime : " + (end - start) + " > " + rateLimit.getTimeInMillis() * (requestPoolSize / rateLimit.getNumberOfRequest() - 1));
             assertTrue(end - start >= rateLimit.getTimeInMillis() * (requestPoolSize / rateLimit.getNumberOfRequest() - 1));
         }
     }

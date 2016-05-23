@@ -2,8 +2,8 @@ package vgalloy.riot.service.request;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import vgalloy.riot.api.dto.constant.QueueType;
-import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.service.AbstractTest;
 
 /**

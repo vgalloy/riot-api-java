@@ -1,6 +1,6 @@
 package vgalloy.riot;
 
-import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.client.RiotWebApiFactory;
 import vgalloy.riot.service.RiotApiKey;

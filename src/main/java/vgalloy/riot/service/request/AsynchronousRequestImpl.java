@@ -6,13 +6,14 @@ import vgalloy.riot.service.query.Query;
 import java.util.Objects;
 
 /**
- * Created by Vincent on 21/05/2016.
+ * @author Vincent Galloy
+ *         Created by Vincent on 21/05/2016..
+ *         FIXME Est-ce que cette classe est vraiment utile ?
  */
 public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest {
 
     private Query<Dto> query;
-    private CallBack<Dto> callback;
-    private boolean isRunning;
+    private CallBack<Dto> callBack;
 
     /**
      * Constructor.
@@ -22,12 +23,12 @@ public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest {
      */
     public AsynchronousRequestImpl(Query<Dto> query, CallBack<Dto> callBack) {
         this.query = Objects.requireNonNull(query, "query can not be null");
-        this.callback = Objects.requireNonNull(callBack, "callBack can not be null");
+        this.callBack = Objects.requireNonNull(callBack, "callBack can not be null");
     }
 
     @Override
     public void run() {
         Dto dto = query.execute();
-        callback.onSuccess(dto);
+        callBack.onSuccess(dto);
     }
 }

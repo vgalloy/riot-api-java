@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.featuredgame;
 
-import vgalloy.riot.api.dto.FeaturedGames;
+import vgalloy.riot.api.featuredgame.dto.FeaturedGames;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

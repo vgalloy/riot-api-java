@@ -1,7 +1,7 @@
 package vgalloy.riot.service.query.impl.champion;
 
-import vgalloy.riot.api.dto.ChampionDto;
-import vgalloy.riot.api.dto.constant.Region;
+import vgalloy.riot.api.champion.dto.ChampionDto;
+import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
