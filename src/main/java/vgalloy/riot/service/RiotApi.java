@@ -38,6 +38,9 @@ import vgalloy.riot.service.query.impl.lolstaticdata.GetSummonerSpellListQuery;
 import vgalloy.riot.service.query.impl.lolstaticdata.GetVersionListQuery;
 import vgalloy.riot.service.query.impl.lolstatus.GetShardListQuery;
 import vgalloy.riot.service.query.impl.lolstatus.GetShardStatusQuery;
+import vgalloy.riot.service.query.impl.match.GetMatchDetailByIdQuery;
+import vgalloy.riot.service.query.impl.match.GetMatchIdListQuery;
+import vgalloy.riot.service.query.impl.match.GetTournamentMatchDetailByIdQuery;
 
 /**
  * @author Vincent Galloy
@@ -384,5 +387,35 @@ public class RiotApi {
      */
     public GetShardStatusQuery getShardStatus() {
         return new GetShardStatusQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for match id list.
+     *
+     * @param tournamentCode the tournament code
+     * @return the query
+     */
+    public GetMatchIdListQuery getMatchIdList(long tournamentCode) {
+        return new GetMatchIdListQuery(riotWebApi, defaultParameter, tournamentCode);
+    }
+
+    /**
+     * Create the query for shard list.
+     *
+     * @param tournamentMatchId the tournament match id
+     * @return the query
+     */
+    public GetTournamentMatchDetailByIdQuery getTournamentMatchDetailById(long tournamentMatchId) {
+        return new GetTournamentMatchDetailByIdQuery(riotWebApi, defaultParameter, tournamentMatchId);
+    }
+
+    /**
+     * Create the query for shard status.
+     *
+     * @param matchId the matchId
+     * @return the query
+     */
+    public GetMatchDetailByIdQuery getMatchDetailById(long matchId) {
+        return new GetMatchDetailByIdQuery(riotWebApi, defaultParameter, matchId);
     }
 }
