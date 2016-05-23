@@ -37,5 +37,5 @@ public interface LolStatusApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/shared/{shardRegion}")
-    ShardStatus getShardList(@PathParam("region") Region region, @PathParam("shardRegion") String shardRegion, @QueryParam("api_key") String key);
+    ShardStatus getShardStatus(@PathParam("region") Region region, @PathParam("shardRegion") Region shardRegion, @QueryParam("api_key") String key);
 }

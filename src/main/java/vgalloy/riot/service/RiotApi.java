@@ -36,6 +36,8 @@ import vgalloy.riot.service.query.impl.lolstaticdata.GetRuneListQuery;
 import vgalloy.riot.service.query.impl.lolstaticdata.GetSummonerSpellByIdQuery;
 import vgalloy.riot.service.query.impl.lolstaticdata.GetSummonerSpellListQuery;
 import vgalloy.riot.service.query.impl.lolstaticdata.GetVersionListQuery;
+import vgalloy.riot.service.query.impl.lolstatus.GetShardListQuery;
+import vgalloy.riot.service.query.impl.lolstatus.GetShardStatusQuery;
 
 /**
  * @author Vincent Galloy
@@ -364,5 +366,23 @@ public class RiotApi {
      */
     public GetVersionListQuery getVersionList() {
         return new GetVersionListQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for shard list.
+     *
+     * @return the query
+     */
+    public GetShardListQuery getShardList() {
+        return new GetShardListQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for shard status.
+     *
+     * @return the query
+     */
+    public GetShardStatusQuery getShardStatus() {
+        return new GetShardStatusQuery(riotWebApi, defaultParameter);
     }
 }
