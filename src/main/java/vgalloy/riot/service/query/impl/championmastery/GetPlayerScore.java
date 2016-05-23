@@ -10,7 +10,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetPlayerScore extends AbstractQuery<Integer> {
 
-    private long playerId;
+    private final long playerId;
 
     /**
      * Constructor.

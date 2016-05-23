@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class GetChallengerQuery extends AbstractQuery<LeagueDto> {
 
-    private QueueType queueType;
+    private final QueueType queueType;
 
     /**
      * Constructor.

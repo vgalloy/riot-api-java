@@ -11,7 +11,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetRecentGameQuery extends AbstractQuery<RecentGamesDto> {
 
-    private long summonerId;
+    private final long summonerId;
 
     /**
      * Constructor.

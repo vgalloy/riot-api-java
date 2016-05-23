@@ -30,7 +30,7 @@ public class Main {
         RiotWebApi riotWebApi = RiotWebApiFactory.getRiotWebApi();
 
         /** CHAMPION API **/
-        System.out.println(riotWebApi.getChampionList(Region.EUW, riotApiKey.getApiKey()));
+        System.out.println(riotWebApi.getChampionDataList(Region.EUW, riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getChampionById(Region.EUW, 11L, riotApiKey.getApiKey()));
 
         /** CHAMPION MASTERY **/
@@ -46,7 +46,7 @@ public class Main {
         //        System.out.println(riotWebApi.getRecentGame("24541689", riotApiKey.getApiKey()));
 
         /** SUMMONER API **/
-        //        System.out.println(riotWebApi.getSummonerByNames(Region.EUW, "Ivaranne", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getChampionList(Region.EUW, "Ivaranne", riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getSummonerByIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getSummonerMasteries(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getSummonerName(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
@@ -65,8 +65,8 @@ public class Main {
         //        System.out.println(riotWebApi.getCurrentGame(PlatformId.EUW1, "24541689", riotApiKey.getApiKey()));
 
 //        RiotApi riotApi = new RiotApi();
-//        riotApi.setDefaultRiotApiKey(riotApiKey);
-//        riotApi.setDefaultRegion(Region.EUW);
+//        riotApi.defaultRiotApiKey(riotApiKey);
+//        riotApi.defaultRegion(Region.EUW);
 //        GetChampionListQuery getChampionListQuery = riotApi.getChampionList();
 //        ChampionListDto championDto = getChampionListQuery.execute();
 //        System.out.println(championDto);

@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class GetMasterQuery extends AbstractQuery<LeagueDto> {
 
-    private QueueType queueType;
+    private final QueueType queueType;
 
     /**
      * Constructor.

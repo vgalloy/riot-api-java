@@ -21,6 +21,21 @@ import vgalloy.riot.service.query.impl.league.GetLeaguesByTeamIdsQuery;
 import vgalloy.riot.service.query.impl.league.GetLeaguesEntryBySummonerIdsQuery;
 import vgalloy.riot.service.query.impl.league.GetLeaguesEntryByTeamIdsQuery;
 import vgalloy.riot.service.query.impl.league.GetMasterQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetChampionDataByIdQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetChampionDataListQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetItemByIdQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetItemListQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetLanguageQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetLanguageStringQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetMapQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetMasteryByIdQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetMasteryListQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetRealmQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetRuneByIdQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetRuneListQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetSummonerSpellByIdQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetSummonerSpellListQuery;
+import vgalloy.riot.service.query.impl.lolstaticdata.GetVersionListQuery;
 
 /**
  * @author Vincent Galloy
@@ -41,6 +56,28 @@ public class RiotApi {
     }
 
     /**
+     * Set the default riot api key for all request.
+     *
+     * @param defaultRiotApiKey the riot api key
+     * @return this
+     */
+    public RiotApi defaultRiotApiKey(RiotApiKey defaultRiotApiKey) {
+        defaultParameter.setRiotApiKey(defaultRiotApiKey);
+        return this;
+    }
+
+    /**
+     * Set the default region for all request.
+     *
+     * @param defaultRegion the region
+     * @return this
+     */
+    public RiotApi defaultRegion(Region defaultRegion) {
+        defaultParameter.setRegion(defaultRegion);
+        return this;
+    }
+
+    /**
      * Create the query for champion list.
      *
      * @return the query
@@ -52,11 +89,11 @@ public class RiotApi {
     /**
      * Create the query for champion by id.
      *
-     * @param id the id of the champion
+     * @param championId the champion id
      * @return the query
      */
-    public GetChampionByIdQuery getChampionById(long id) {
-        return new GetChampionByIdQuery(riotWebApi, defaultParameter, id);
+    public GetChampionByIdQuery getChampionById(long championId) {
+        return new GetChampionByIdQuery(riotWebApi, defaultParameter, championId);
     }
 
     /**
@@ -190,24 +227,142 @@ public class RiotApi {
     }
 
     /**
-     * Set the default riot api key for all request.
+     * Create the query for champion data list.
      *
-     * @param defaultRiotApiKey the riot api key
-     * @return this
+     * @return the query
      */
-    public RiotApi setDefaultRiotApiKey(RiotApiKey defaultRiotApiKey) {
-        this.defaultParameter.setRiotApiKey(defaultRiotApiKey);
-        return this;
+    public GetChampionDataListQuery getChampionDataList() {
+        return new GetChampionDataListQuery(riotWebApi, defaultParameter);
     }
 
     /**
-     * Set the default region for all request.
+     * Create the query for champion data by id.
      *
-     * @param defaultRegion the region
-     * @return this
+     * @param championId the champion id
+     * @return the query
      */
-    public RiotApi setDefaultRegion(Region defaultRegion) {
-        this.defaultParameter.setRegion(defaultRegion);
-        return this;
+    public GetChampionDataByIdQuery getChampionDataList(long championId) {
+        return new GetChampionDataByIdQuery(riotWebApi, defaultParameter, championId);
+    }
+
+    /**
+     * Create the query for item list.
+     *
+     * @return the query
+     */
+    public GetItemListQuery getItemList() {
+        return new GetItemListQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for item by id.
+     *
+     * @param itemId the item id
+     * @return the query
+     */
+    public GetItemByIdQuery getItemBId(long itemId) {
+        return new GetItemByIdQuery(riotWebApi, defaultParameter, itemId);
+    }
+
+    /**
+     * Create the query for language string.
+     *
+     * @return the query
+     */
+    public GetLanguageStringQuery getLanguageStringQuery() {
+        return new GetLanguageStringQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for language.
+     *
+     * @return the query
+     */
+    public GetLanguageQuery getLanguageQuery() {
+        return new GetLanguageQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for map.
+     *
+     * @return the query
+     */
+    public GetMapQuery getMap() {
+        return new GetMapQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for mastery list.
+     *
+     * @return the query
+     */
+    public GetMasteryListQuery getMasteryList() {
+        return new GetMasteryListQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for mastery by id.
+     *
+     * @param masteryId the mastery id
+     * @return the query
+     */
+    public GetMasteryByIdQuery getMasteryBId(long masteryId) {
+        return new GetMasteryByIdQuery(riotWebApi, defaultParameter, masteryId);
+    }
+
+    /**
+     * Create the query for realm.
+     *
+     * @return the query
+     */
+    public GetRealmQuery getRealm() {
+        return new GetRealmQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for rune list.
+     *
+     * @return the query
+     */
+    public GetRuneListQuery getRuneList() {
+        return new GetRuneListQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for rune by id.
+     *
+     * @param runeId the rune id
+     * @return the query
+     */
+    public GetRuneByIdQuery getRuneBId(long runeId) {
+        return new GetRuneByIdQuery(riotWebApi, defaultParameter, runeId);
+    }
+
+    /**
+     * Create the query for summoner spell list.
+     *
+     * @return the query
+     */
+    public GetSummonerSpellListQuery getSummonerSpellList() {
+        return new GetSummonerSpellListQuery(riotWebApi, defaultParameter);
+    }
+
+    /**
+     * Create the query for summoner spell by id.
+     *
+     * @param summonerSpellId the summoner spell id
+     * @return the query
+     */
+    public GetSummonerSpellByIdQuery getSummonerSpellBId(long summonerSpellId) {
+        return new GetSummonerSpellByIdQuery(riotWebApi, defaultParameter, summonerSpellId);
+    }
+
+    /**
+     * Create the query for version list.
+     *
+     * @return the query
+     */
+    public GetVersionListQuery getVersionList() {
+        return new GetVersionListQuery(riotWebApi, defaultParameter);
     }
 }

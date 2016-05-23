@@ -6,7 +6,7 @@ import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.mapper.RegionMapper;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Objects;
 import java.util.StringJoiner;
 
@@ -60,7 +60,7 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
      * @return the Riot api key value
      */
     protected String getRiotApiKeyValue() {
-        return getParameter(this.riotApiKey, defaultParameter.getRiotApiKey(), "Riot api key undefined").getApiKey();
+        return getParameter(riotApiKey, defaultParameter.getRiotApiKey(), "Riot api key undefined").getApiKey();
     }
 
     /**
@@ -69,7 +69,7 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
      * @return the region
      */
     protected Region getRegion() {
-        return getParameter(this.region, defaultParameter.getRegion(), "Region is undefined");
+        return getParameter(region, defaultParameter.getRegion(), "Region is undefined");
     }
 
     /**
@@ -87,11 +87,9 @@ public abstract class AbstractQuery<Dto> implements Query<Dto> {
      * @param list the list of item
      * @return a String
      */
-    protected String convert(List list) {
+    protected String convert(Collection<?> list) {
         StringJoiner stringJoiner = new StringJoiner(",");
-        for (Object object : list) {
-            stringJoiner.add(object.toString());
-        }
+        list.stream().forEach(e -> stringJoiner.add(e.toString()));
         return stringJoiner.toString();
     }
 

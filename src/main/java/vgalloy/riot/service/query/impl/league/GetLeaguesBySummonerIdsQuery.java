@@ -15,7 +15,7 @@ import java.util.Map;
  */
 public class GetLeaguesBySummonerIdsQuery extends AbstractQuery<Map<String, List<LeagueDto>>> {
 
-    private List<Long> summonerIds = new ArrayList<>();
+    private final List<Long> summonerIds = new ArrayList<>();
 
     /**
      * Constructor.

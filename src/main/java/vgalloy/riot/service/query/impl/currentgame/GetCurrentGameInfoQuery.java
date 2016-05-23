@@ -11,7 +11,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetCurrentGameInfoQuery extends AbstractQuery<CurrentGameInfo> {
 
-    private long summonerId;
+    private final long summonerId;
 
     /**
      * Constructor.

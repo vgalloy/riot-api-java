@@ -11,8 +11,8 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetChampionMasteryByChampionQuery extends AbstractQuery<ChampionMasteryDto> {
 
-    private long playerId;
-    private long championId;
+    private final long playerId;
+    private final long championId;
 
     /**
      * Constructor.

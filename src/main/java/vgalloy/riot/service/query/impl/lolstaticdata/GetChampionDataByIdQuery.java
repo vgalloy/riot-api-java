@@ -1,15 +1,15 @@
-package vgalloy.riot.service.query.impl.champion;
+package vgalloy.riot.service.query.impl.lolstaticdata;
 
-import vgalloy.riot.api.champion.dto.ChampionDto;
+import vgalloy.riot.api.lolstaticdata.dto.ChampionDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
 
 /**
  * @author Vincent Galloy
- *         Created by Vincent on 21/05/2016.
+ *         Created by Vincent on 23/05/2016.
  */
-public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
+public class GetChampionDataByIdQuery extends AbstractQuery<ChampionDto> {
 
     private final long championId;
 
@@ -20,13 +20,13 @@ public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
      * @param defaultParameter the default query parameter
      * @param championId       the champion Id
      */
-    public GetChampionByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long championId) {
+    public GetChampionDataByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long championId) {
         super(riotWebApi, defaultParameter);
         this.championId = championId;
     }
 
     @Override
     public ChampionDto execute() {
-        return riotWebApi.getChampionById(getRegion(), championId, getRiotApiKeyValue());
+        return riotWebApi.getChampionDataById(getRegion(), championId, getRiotApiKeyValue());
     }
 }

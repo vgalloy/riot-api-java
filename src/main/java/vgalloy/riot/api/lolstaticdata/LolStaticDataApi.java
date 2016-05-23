@@ -1,8 +1,8 @@
 package vgalloy.riot.api.lolstaticdata;
 
-import vgalloy.riot.api.champion.dto.ChampionDto;
-import vgalloy.riot.api.champion.dto.ChampionListDto;
 import vgalloy.riot.api.constant.Region;
+import vgalloy.riot.api.lolstaticdata.dto.ChampionDto;
+import vgalloy.riot.api.lolstaticdata.dto.ChampionListDto;
 import vgalloy.riot.api.lolstaticdata.dto.ItemDto;
 import vgalloy.riot.api.lolstaticdata.dto.ItemListDto;
 import vgalloy.riot.api.lolstaticdata.dto.LanguageStringsDto;
@@ -36,7 +36,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/static-data/{region}/v1.2/champion")
-    ChampionListDto getSummonerByNames(@PathParam("region") Region region, @QueryParam("api_key") String key);
+    ChampionListDto getChampionDataList(@PathParam("region") Region region, @QueryParam("api_key") String key);
 
     /**
      * Retrieves a champion by its id.
@@ -48,7 +48,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/static-data/{region}/v1.2/champion/{id}")
-    ChampionDto getSummonerByNames(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
+    ChampionDto getChampionDataById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
 
     /**
      * Retrieves item list.
@@ -71,7 +71,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/static-data/{region}/v1.2/item/{id}")
-    ItemDto getItem(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
+    ItemDto getItemById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
 
     /**
      * Retrieve language strings data.
@@ -127,7 +127,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/static-data/{region}/v1.2/mastery/{id}")
-    MasteryDto getMastery(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
+    MasteryDto getMasteryById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
 
     /**
      * Retrieve realm data.
@@ -161,7 +161,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/static-data/{region}/v1.2/rune/{id}")
-    RuneDto getRune(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
+    RuneDto getRuneById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
 
     /**
      * Retrieves summoner spell list.
@@ -184,7 +184,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/static-data/{region}/v1.2/summoner-spell/{id}")
-    SummonerSpellDto getSummonerSpell(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
+    SummonerSpellDto getSummonerSpellById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String key);
 
     /**
      * Retrieves version data.

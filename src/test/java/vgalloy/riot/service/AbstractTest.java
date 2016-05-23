@@ -23,6 +23,6 @@ public abstract class AbstractTest {
         } catch (IOException e) {
             throw new RuntimeException("Can not load properties");
         }
-        riotApi.setDefaultRiotApiKey(new RiotApiKey(properties));
+        riotApi.defaultRiotApiKey(new RiotApiKey(properties));
     }
 }

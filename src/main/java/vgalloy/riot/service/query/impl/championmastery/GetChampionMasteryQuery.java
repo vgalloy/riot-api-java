@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class GetChampionMasteryQuery extends AbstractQuery<List<ChampionMasteryDto>> {
 
-    private long playerId;
+    private final long playerId;
 
     /**
      * Constructor.
