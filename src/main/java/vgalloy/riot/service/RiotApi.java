@@ -41,6 +41,9 @@ import vgalloy.riot.service.query.impl.lolstatus.GetShardStatusQuery;
 import vgalloy.riot.service.query.impl.match.GetMatchDetailByIdQuery;
 import vgalloy.riot.service.query.impl.match.GetMatchIdListQuery;
 import vgalloy.riot.service.query.impl.match.GetTournamentMatchDetailByIdQuery;
+import vgalloy.riot.service.query.impl.matchlist.GetMatchListBySummonerIdQuery;
+import vgalloy.riot.service.query.impl.stats.GetPlayerStatsSummaryQuery;
+import vgalloy.riot.service.query.impl.stats.GetSummonerRankedStatsQuery;
 
 /**
  * @author Vincent Galloy
@@ -417,5 +420,35 @@ public class RiotApi {
      */
     public GetMatchDetailByIdQuery getMatchDetailById(long matchId) {
         return new GetMatchDetailByIdQuery(riotWebApi, defaultParameter, matchId);
+    }
+
+    /**
+     * Create the query for match list by summoner.
+     *
+     * @param summonerId the summoner id
+     * @return the query
+     */
+    public GetMatchListBySummonerIdQuery getMatchListBySummonerId(long summonerId) {
+        return new GetMatchListBySummonerIdQuery(riotWebApi, defaultParameter, summonerId);
+    }
+
+    /**
+     * Create the query for summoner ranked stats.
+     *
+     * @param summonerId the summoner id
+     * @return the query
+     */
+    public GetSummonerRankedStatsQuery getSummonerRankedStats(long summonerId) {
+        return new GetSummonerRankedStatsQuery(riotWebApi, defaultParameter, summonerId);
+    }
+
+    /**
+     * Create the query for player stats summary.
+     *
+     * @param playerId the player id
+     * @return the query
+     */
+    public GetPlayerStatsSummaryQuery getPlayerStatsSummary(long playerId) {
+        return new GetPlayerStatsSummaryQuery(riotWebApi, defaultParameter, playerId);
     }
 }
