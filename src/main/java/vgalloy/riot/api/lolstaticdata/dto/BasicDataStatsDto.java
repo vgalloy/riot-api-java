@@ -1,6 +1,7 @@
 package vgalloy.riot.api.lolstaticdata.dto;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -8,39 +9,72 @@ import java.util.Objects;
  */
 public class BasicDataStatsDto {
 
-    private double FlatArmorMod;
-    private double FlatAttackSpeedMod;
-    private double FlatBlockMod;
-    private double FlatCritChanceMod;
-    private double FlatCritDamageMod;
-    private double FlatEXPBonus;
-    private double FlatEnergyPoolMod;
-    private double FlatEnergyRegenMod;
-    private double FlatHPPoolMod;
-    private double FlatHPRegenMod;
-    private double FlatMPPoolMod;
-    private double FlatMPRegenMod;
-    private double FlatMagicDamageMod;
-    private double FlatMovementSpeedMod;
-    private double FlatPhysicalDamageMod;
-    private double FlatSpellBlockMod;
-    private double PercentArmorMod;
-    private double PercentAttackSpeedMod;
-    private double PercentBlockMod;
-    private double PercentCritChanceMod;
-    private double PercentCritDamageMod;
-    private double PercentDodgeMod;
-    private double PercentEXPBonus;
-    private double PercentHPPoolMod;
-    private double PercentHPRegenMod;
-    private double PercentLifeStealMod;
-    private double PercentMPPoolMod;
-    private double PercentMPRegenMod;
-    private double PercentMagicDamageMod;
-    private double PercentMovementSpeedMod;
-    private double PercentPhysicalDamageMod;
-    private double PercentSpellBlockMod;
-    private double PercentSpellVampMod;
+    @JsonProperty("FlatArmorMod")
+    private double flatArmorMod;
+    @JsonProperty("FlatAttackSpeedMod")
+    private double flatAttackSpeedMod;
+    @JsonProperty("FlatBlockMod")
+    private double flatBlockMod;
+    @JsonProperty("FlatCritChanceMod")
+    private double flatCritChanceMod;
+    @JsonProperty("FlatCritDamageMod")
+    private double flatCritDamageMod;
+    @JsonProperty("FlatEXPBonus")
+    private double flatEXPBonus;
+    @JsonProperty("FlatEnergyPoolMod")
+    private double flatEnergyPoolMod;
+    @JsonProperty("FlatEnergyRegenMod")
+    private double flatEnergyRegenMod;
+    @JsonProperty("FlatHPPoolMod")
+    private double flatHPPoolMod;
+    @JsonProperty("FlatHPRegenMod")
+    private double flatHPRegenMod;
+    @JsonProperty("FlatMPPoolMod")
+    private double flatMPPoolMod;
+    @JsonProperty("FlatMPRegenMod")
+    private double flatMPRegenMod;
+    @JsonProperty("FlatMagicDamageMod")
+    private double flatMagicDamageMod;
+    @JsonProperty("FlatMovementSpeedMod")
+    private double flatMovementSpeedMod;
+    @JsonProperty("FlatPhysicalDamageMod")
+    private double flatPhysicalDamageMod;
+    @JsonProperty("FlatSpellBlockMod")
+    private double flatSpellBlockMod;
+    @JsonProperty("PercentArmorMod")
+    private double percentArmorMod;
+    @JsonProperty("PercentAttackSpeedMod")
+    private double percentAttackSpeedMod;
+    @JsonProperty("PercentBlockMod")
+    private double percentBlockMod;
+    @JsonProperty("PercentCritChanceMod")
+    private double percentCritChanceMod;
+    @JsonProperty("PercentCritDamageMod")
+    private double percentCritDamageMod;
+    @JsonProperty("PercentDodgeMod")
+    private double percentDodgeMod;
+    @JsonProperty("PercentEXPBonus")
+    private double percentEXPBonus;
+    @JsonProperty("PercentHPPoolMod")
+    private double percentHPPoolMod;
+    @JsonProperty("PercentHPRegenMod")
+    private double percentHPRegenMod;
+    @JsonProperty("PercentLifeStealMod")
+    private double percentLifeStealMod;
+    @JsonProperty("PercentMPPoolMod")
+    private double percentMPPoolMod;
+    @JsonProperty("PercentMPRegenMod")
+    private double percentMPRegenMod;
+    @JsonProperty("PercentMagicDamageMod")
+    private double percentMagicDamageMod;
+    @JsonProperty("PercentMovementSpeedMod")
+    private double percentMovementSpeedMod;
+    @JsonProperty("PercentPhysicalDamageMod")
+    private double percentPhysicalDamageMod;
+    @JsonProperty("PercentSpellBlockMod")
+    private double percentSpellBlockMod;
+    @JsonProperty("PercentSpellVampMod")
+    private double percentSpellVampMod;
     private double rFlatArmorModPerLevel;
     private double rFlatArmorPenetrationMod;
     private double rFlatArmorPenetrationModPerLevel;
@@ -75,267 +109,267 @@ public class BasicDataStatsDto {
     private double rPercentTimeDeadModPerLevel;
 
     public double getFlatArmorMod() {
-        return FlatArmorMod;
+        return flatArmorMod;
     }
 
     public void setFlatArmorMod(double flatArmorMod) {
-        FlatArmorMod = flatArmorMod;
+        this.flatArmorMod = flatArmorMod;
     }
 
     public double getFlatAttackSpeedMod() {
-        return FlatAttackSpeedMod;
+        return flatAttackSpeedMod;
     }
 
     public void setFlatAttackSpeedMod(double flatAttackSpeedMod) {
-        FlatAttackSpeedMod = flatAttackSpeedMod;
+        this.flatAttackSpeedMod = flatAttackSpeedMod;
     }
 
     public double getFlatBlockMod() {
-        return FlatBlockMod;
+        return flatBlockMod;
     }
 
     public void setFlatBlockMod(double flatBlockMod) {
-        FlatBlockMod = flatBlockMod;
+        this.flatBlockMod = flatBlockMod;
     }
 
     public double getFlatCritChanceMod() {
-        return FlatCritChanceMod;
+        return flatCritChanceMod;
     }
 
     public void setFlatCritChanceMod(double flatCritChanceMod) {
-        FlatCritChanceMod = flatCritChanceMod;
+        this.flatCritChanceMod = flatCritChanceMod;
     }
 
     public double getFlatCritDamageMod() {
-        return FlatCritDamageMod;
+        return flatCritDamageMod;
     }
 
     public void setFlatCritDamageMod(double flatCritDamageMod) {
-        FlatCritDamageMod = flatCritDamageMod;
+        this.flatCritDamageMod = flatCritDamageMod;
     }
 
     public double getFlatEXPBonus() {
-        return FlatEXPBonus;
+        return flatEXPBonus;
     }
 
     public void setFlatEXPBonus(double flatEXPBonus) {
-        FlatEXPBonus = flatEXPBonus;
+        this.flatEXPBonus = flatEXPBonus;
     }
 
     public double getFlatEnergyPoolMod() {
-        return FlatEnergyPoolMod;
+        return flatEnergyPoolMod;
     }
 
     public void setFlatEnergyPoolMod(double flatEnergyPoolMod) {
-        FlatEnergyPoolMod = flatEnergyPoolMod;
+        this.flatEnergyPoolMod = flatEnergyPoolMod;
     }
 
     public double getFlatEnergyRegenMod() {
-        return FlatEnergyRegenMod;
+        return flatEnergyRegenMod;
     }
 
     public void setFlatEnergyRegenMod(double flatEnergyRegenMod) {
-        FlatEnergyRegenMod = flatEnergyRegenMod;
+        this.flatEnergyRegenMod = flatEnergyRegenMod;
     }
 
     public double getFlatHPPoolMod() {
-        return FlatHPPoolMod;
+        return flatHPPoolMod;
     }
 
     public void setFlatHPPoolMod(double flatHPPoolMod) {
-        FlatHPPoolMod = flatHPPoolMod;
+        this.flatHPPoolMod = flatHPPoolMod;
     }
 
     public double getFlatHPRegenMod() {
-        return FlatHPRegenMod;
+        return flatHPRegenMod;
     }
 
     public void setFlatHPRegenMod(double flatHPRegenMod) {
-        FlatHPRegenMod = flatHPRegenMod;
+        this.flatHPRegenMod = flatHPRegenMod;
     }
 
     public double getFlatMPPoolMod() {
-        return FlatMPPoolMod;
+        return flatMPPoolMod;
     }
 
     public void setFlatMPPoolMod(double flatMPPoolMod) {
-        FlatMPPoolMod = flatMPPoolMod;
+        this.flatMPPoolMod = flatMPPoolMod;
     }
 
     public double getFlatMPRegenMod() {
-        return FlatMPRegenMod;
+        return flatMPRegenMod;
     }
 
     public void setFlatMPRegenMod(double flatMPRegenMod) {
-        FlatMPRegenMod = flatMPRegenMod;
+        this.flatMPRegenMod = flatMPRegenMod;
     }
 
     public double getFlatMagicDamageMod() {
-        return FlatMagicDamageMod;
+        return flatMagicDamageMod;
     }
 
     public void setFlatMagicDamageMod(double flatMagicDamageMod) {
-        FlatMagicDamageMod = flatMagicDamageMod;
+        this.flatMagicDamageMod = flatMagicDamageMod;
     }
 
     public double getFlatMovementSpeedMod() {
-        return FlatMovementSpeedMod;
+        return flatMovementSpeedMod;
     }
 
     public void setFlatMovementSpeedMod(double flatMovementSpeedMod) {
-        FlatMovementSpeedMod = flatMovementSpeedMod;
+        this.flatMovementSpeedMod = flatMovementSpeedMod;
     }
 
     public double getFlatPhysicalDamageMod() {
-        return FlatPhysicalDamageMod;
+        return flatPhysicalDamageMod;
     }
 
     public void setFlatPhysicalDamageMod(double flatPhysicalDamageMod) {
-        FlatPhysicalDamageMod = flatPhysicalDamageMod;
+        this.flatPhysicalDamageMod = flatPhysicalDamageMod;
     }
 
     public double getFlatSpellBlockMod() {
-        return FlatSpellBlockMod;
+        return flatSpellBlockMod;
     }
 
     public void setFlatSpellBlockMod(double flatSpellBlockMod) {
-        FlatSpellBlockMod = flatSpellBlockMod;
+        this.flatSpellBlockMod = flatSpellBlockMod;
     }
 
     public double getPercentArmorMod() {
-        return PercentArmorMod;
+        return percentArmorMod;
     }
 
     public void setPercentArmorMod(double percentArmorMod) {
-        PercentArmorMod = percentArmorMod;
+        this.percentArmorMod = percentArmorMod;
     }
 
     public double getPercentAttackSpeedMod() {
-        return PercentAttackSpeedMod;
+        return percentAttackSpeedMod;
     }
 
     public void setPercentAttackSpeedMod(double percentAttackSpeedMod) {
-        PercentAttackSpeedMod = percentAttackSpeedMod;
+        this.percentAttackSpeedMod = percentAttackSpeedMod;
     }
 
     public double getPercentBlockMod() {
-        return PercentBlockMod;
+        return percentBlockMod;
     }
 
     public void setPercentBlockMod(double percentBlockMod) {
-        PercentBlockMod = percentBlockMod;
+        this.percentBlockMod = percentBlockMod;
     }
 
     public double getPercentCritChanceMod() {
-        return PercentCritChanceMod;
+        return percentCritChanceMod;
     }
 
     public void setPercentCritChanceMod(double percentCritChanceMod) {
-        PercentCritChanceMod = percentCritChanceMod;
+        this.percentCritChanceMod = percentCritChanceMod;
     }
 
     public double getPercentCritDamageMod() {
-        return PercentCritDamageMod;
+        return percentCritDamageMod;
     }
 
     public void setPercentCritDamageMod(double percentCritDamageMod) {
-        PercentCritDamageMod = percentCritDamageMod;
+        this.percentCritDamageMod = percentCritDamageMod;
     }
 
     public double getPercentDodgeMod() {
-        return PercentDodgeMod;
+        return percentDodgeMod;
     }
 
     public void setPercentDodgeMod(double percentDodgeMod) {
-        PercentDodgeMod = percentDodgeMod;
+        this.percentDodgeMod = percentDodgeMod;
     }
 
     public double getPercentEXPBonus() {
-        return PercentEXPBonus;
+        return percentEXPBonus;
     }
 
     public void setPercentEXPBonus(double percentEXPBonus) {
-        PercentEXPBonus = percentEXPBonus;
+        this.percentEXPBonus = percentEXPBonus;
     }
 
     public double getPercentHPPoolMod() {
-        return PercentHPPoolMod;
+        return percentHPPoolMod;
     }
 
     public void setPercentHPPoolMod(double percentHPPoolMod) {
-        PercentHPPoolMod = percentHPPoolMod;
+        this.percentHPPoolMod = percentHPPoolMod;
     }
 
     public double getPercentHPRegenMod() {
-        return PercentHPRegenMod;
+        return percentHPRegenMod;
     }
 
     public void setPercentHPRegenMod(double percentHPRegenMod) {
-        PercentHPRegenMod = percentHPRegenMod;
+        this.percentHPRegenMod = percentHPRegenMod;
     }
 
     public double getPercentLifeStealMod() {
-        return PercentLifeStealMod;
+        return percentLifeStealMod;
     }
 
     public void setPercentLifeStealMod(double percentLifeStealMod) {
-        PercentLifeStealMod = percentLifeStealMod;
+        this.percentLifeStealMod = percentLifeStealMod;
     }
 
     public double getPercentMPPoolMod() {
-        return PercentMPPoolMod;
+        return percentMPPoolMod;
     }
 
     public void setPercentMPPoolMod(double percentMPPoolMod) {
-        PercentMPPoolMod = percentMPPoolMod;
+        this.percentMPPoolMod = percentMPPoolMod;
     }
 
     public double getPercentMPRegenMod() {
-        return PercentMPRegenMod;
+        return percentMPRegenMod;
     }
 
     public void setPercentMPRegenMod(double percentMPRegenMod) {
-        PercentMPRegenMod = percentMPRegenMod;
+        this.percentMPRegenMod = percentMPRegenMod;
     }
 
     public double getPercentMagicDamageMod() {
-        return PercentMagicDamageMod;
+        return percentMagicDamageMod;
     }
 
     public void setPercentMagicDamageMod(double percentMagicDamageMod) {
-        PercentMagicDamageMod = percentMagicDamageMod;
+        this.percentMagicDamageMod = percentMagicDamageMod;
     }
 
     public double getPercentMovementSpeedMod() {
-        return PercentMovementSpeedMod;
+        return percentMovementSpeedMod;
     }
 
     public void setPercentMovementSpeedMod(double percentMovementSpeedMod) {
-        PercentMovementSpeedMod = percentMovementSpeedMod;
+        this.percentMovementSpeedMod = percentMovementSpeedMod;
     }
 
     public double getPercentPhysicalDamageMod() {
-        return PercentPhysicalDamageMod;
+        return percentPhysicalDamageMod;
     }
 
     public void setPercentPhysicalDamageMod(double percentPhysicalDamageMod) {
-        PercentPhysicalDamageMod = percentPhysicalDamageMod;
+        this.percentPhysicalDamageMod = percentPhysicalDamageMod;
     }
 
     public double getPercentSpellBlockMod() {
-        return PercentSpellBlockMod;
+        return percentSpellBlockMod;
     }
 
     public void setPercentSpellBlockMod(double percentSpellBlockMod) {
-        PercentSpellBlockMod = percentSpellBlockMod;
+        this.percentSpellBlockMod = percentSpellBlockMod;
     }
 
     public double getPercentSpellVampMod() {
-        return PercentSpellVampMod;
+        return percentSpellVampMod;
     }
 
     public void setPercentSpellVampMod(double percentSpellVampMod) {
-        PercentSpellVampMod = percentSpellVampMod;
+        this.percentSpellVampMod = percentSpellVampMod;
     }
 
     public double getrFlatArmorModPerLevel() {
@@ -603,39 +637,39 @@ public class BasicDataStatsDto {
             return false;
         }
         BasicDataStatsDto that = (BasicDataStatsDto) o;
-        return Double.compare(that.FlatArmorMod, FlatArmorMod) == 0 &&
-                Double.compare(that.FlatAttackSpeedMod, FlatAttackSpeedMod) == 0 &&
-                Double.compare(that.FlatBlockMod, FlatBlockMod) == 0 &&
-                Double.compare(that.FlatCritChanceMod, FlatCritChanceMod) == 0 &&
-                Double.compare(that.FlatCritDamageMod, FlatCritDamageMod) == 0 &&
-                Double.compare(that.FlatEXPBonus, FlatEXPBonus) == 0 &&
-                Double.compare(that.FlatEnergyPoolMod, FlatEnergyPoolMod) == 0 &&
-                Double.compare(that.FlatEnergyRegenMod, FlatEnergyRegenMod) == 0 &&
-                Double.compare(that.FlatHPPoolMod, FlatHPPoolMod) == 0 &&
-                Double.compare(that.FlatHPRegenMod, FlatHPRegenMod) == 0 &&
-                Double.compare(that.FlatMPPoolMod, FlatMPPoolMod) == 0 &&
-                Double.compare(that.FlatMPRegenMod, FlatMPRegenMod) == 0 &&
-                Double.compare(that.FlatMagicDamageMod, FlatMagicDamageMod) == 0 &&
-                Double.compare(that.FlatMovementSpeedMod, FlatMovementSpeedMod) == 0 &&
-                Double.compare(that.FlatPhysicalDamageMod, FlatPhysicalDamageMod) == 0 &&
-                Double.compare(that.FlatSpellBlockMod, FlatSpellBlockMod) == 0 &&
-                Double.compare(that.PercentArmorMod, PercentArmorMod) == 0 &&
-                Double.compare(that.PercentAttackSpeedMod, PercentAttackSpeedMod) == 0 &&
-                Double.compare(that.PercentBlockMod, PercentBlockMod) == 0 &&
-                Double.compare(that.PercentCritChanceMod, PercentCritChanceMod) == 0 &&
-                Double.compare(that.PercentCritDamageMod, PercentCritDamageMod) == 0 &&
-                Double.compare(that.PercentDodgeMod, PercentDodgeMod) == 0 &&
-                Double.compare(that.PercentEXPBonus, PercentEXPBonus) == 0 &&
-                Double.compare(that.PercentHPPoolMod, PercentHPPoolMod) == 0 &&
-                Double.compare(that.PercentHPRegenMod, PercentHPRegenMod) == 0 &&
-                Double.compare(that.PercentLifeStealMod, PercentLifeStealMod) == 0 &&
-                Double.compare(that.PercentMPPoolMod, PercentMPPoolMod) == 0 &&
-                Double.compare(that.PercentMPRegenMod, PercentMPRegenMod) == 0 &&
-                Double.compare(that.PercentMagicDamageMod, PercentMagicDamageMod) == 0 &&
-                Double.compare(that.PercentMovementSpeedMod, PercentMovementSpeedMod) == 0 &&
-                Double.compare(that.PercentPhysicalDamageMod, PercentPhysicalDamageMod) == 0 &&
-                Double.compare(that.PercentSpellBlockMod, PercentSpellBlockMod) == 0 &&
-                Double.compare(that.PercentSpellVampMod, PercentSpellVampMod) == 0 &&
+        return Double.compare(that.flatArmorMod, flatArmorMod) == 0 &&
+                Double.compare(that.flatAttackSpeedMod, flatAttackSpeedMod) == 0 &&
+                Double.compare(that.flatBlockMod, flatBlockMod) == 0 &&
+                Double.compare(that.flatCritChanceMod, flatCritChanceMod) == 0 &&
+                Double.compare(that.flatCritDamageMod, flatCritDamageMod) == 0 &&
+                Double.compare(that.flatEXPBonus, flatEXPBonus) == 0 &&
+                Double.compare(that.flatEnergyPoolMod, flatEnergyPoolMod) == 0 &&
+                Double.compare(that.flatEnergyRegenMod, flatEnergyRegenMod) == 0 &&
+                Double.compare(that.flatHPPoolMod, flatHPPoolMod) == 0 &&
+                Double.compare(that.flatHPRegenMod, flatHPRegenMod) == 0 &&
+                Double.compare(that.flatMPPoolMod, flatMPPoolMod) == 0 &&
+                Double.compare(that.flatMPRegenMod, flatMPRegenMod) == 0 &&
+                Double.compare(that.flatMagicDamageMod, flatMagicDamageMod) == 0 &&
+                Double.compare(that.flatMovementSpeedMod, flatMovementSpeedMod) == 0 &&
+                Double.compare(that.flatPhysicalDamageMod, flatPhysicalDamageMod) == 0 &&
+                Double.compare(that.flatSpellBlockMod, flatSpellBlockMod) == 0 &&
+                Double.compare(that.percentArmorMod, percentArmorMod) == 0 &&
+                Double.compare(that.percentAttackSpeedMod, percentAttackSpeedMod) == 0 &&
+                Double.compare(that.percentBlockMod, percentBlockMod) == 0 &&
+                Double.compare(that.percentCritChanceMod, percentCritChanceMod) == 0 &&
+                Double.compare(that.percentCritDamageMod, percentCritDamageMod) == 0 &&
+                Double.compare(that.percentDodgeMod, percentDodgeMod) == 0 &&
+                Double.compare(that.percentEXPBonus, percentEXPBonus) == 0 &&
+                Double.compare(that.percentHPPoolMod, percentHPPoolMod) == 0 &&
+                Double.compare(that.percentHPRegenMod, percentHPRegenMod) == 0 &&
+                Double.compare(that.percentLifeStealMod, percentLifeStealMod) == 0 &&
+                Double.compare(that.percentMPPoolMod, percentMPPoolMod) == 0 &&
+                Double.compare(that.percentMPRegenMod, percentMPRegenMod) == 0 &&
+                Double.compare(that.percentMagicDamageMod, percentMagicDamageMod) == 0 &&
+                Double.compare(that.percentMovementSpeedMod, percentMovementSpeedMod) == 0 &&
+                Double.compare(that.percentPhysicalDamageMod, percentPhysicalDamageMod) == 0 &&
+                Double.compare(that.percentSpellBlockMod, percentSpellBlockMod) == 0 &&
+                Double.compare(that.percentSpellVampMod, percentSpellVampMod) == 0 &&
                 Double.compare(that.rFlatArmorModPerLevel, rFlatArmorModPerLevel) == 0 &&
                 Double.compare(that.rFlatArmorPenetrationMod, rFlatArmorPenetrationMod) == 0 &&
                 Double.compare(that.rFlatArmorPenetrationModPerLevel, rFlatArmorPenetrationModPerLevel) == 0 &&
@@ -672,45 +706,45 @@ public class BasicDataStatsDto {
 
     @Override
     public int hashCode() {
-        return Objects.hash(FlatArmorMod, FlatAttackSpeedMod, FlatBlockMod, FlatCritChanceMod, FlatCritDamageMod, FlatEXPBonus, FlatEnergyPoolMod, FlatEnergyRegenMod, FlatHPPoolMod, FlatHPRegenMod, FlatMPPoolMod, FlatMPRegenMod, FlatMagicDamageMod, FlatMovementSpeedMod, FlatPhysicalDamageMod, FlatSpellBlockMod, PercentArmorMod, PercentAttackSpeedMod, PercentBlockMod, PercentCritChanceMod, PercentCritDamageMod, PercentDodgeMod, PercentEXPBonus, PercentHPPoolMod, PercentHPRegenMod, PercentLifeStealMod, PercentMPPoolMod, PercentMPRegenMod, PercentMagicDamageMod, PercentMovementSpeedMod, PercentPhysicalDamageMod, PercentSpellBlockMod, PercentSpellVampMod, rFlatArmorModPerLevel, rFlatArmorPenetrationMod, rFlatArmorPenetrationModPerLevel, rFlatCritChanceModPerLevel, rFlatCritDamageModPerLevel, rFlatDodgeMod, rFlatDodgeModPerLevel, rFlatEnergyModPerLevel, rFlatEnergyRegenModPerLevel, rFlatGoldPer10Mod, rFlatHPModPerLevel, rFlatHPRegenModPerLevel, rFlatMPModPerLevel, rFlatMPRegenModPerLevel, rFlatMagicDamageModPerLevel, rFlatMagicPenetrationMod, rFlatMagicPenetrationModPerLevel, rFlatMovementSpeedModPerLevel, rFlatPhysicalDamageModPerLevel, rFlatSpellBlockModPerLevel, rFlatTimeDeadMod, rFlatTimeDeadModPerLevel, rPercentArmorPenetrationMod, rPercentArmorPenetrationModPerLevel, rPercentAttackSpeedModPerLevel, rPercentCooldownMod, rPercentCooldownModPerLevel, rPercentMagicPenetrationMod, rPercentMagicPenetrationModPerLevel, rPercentMovementSpeedModPerLevel, rPercentTimeDeadMod, rPercentTimeDeadModPerLevel);
+        return Objects.hash(flatArmorMod, flatAttackSpeedMod, flatBlockMod, flatCritChanceMod, flatCritDamageMod, flatEXPBonus, flatEnergyPoolMod, flatEnergyRegenMod, flatHPPoolMod, flatHPRegenMod, flatMPPoolMod, flatMPRegenMod, flatMagicDamageMod, flatMovementSpeedMod, flatPhysicalDamageMod, flatSpellBlockMod, percentArmorMod, percentAttackSpeedMod, percentBlockMod, percentCritChanceMod, percentCritDamageMod, percentDodgeMod, percentEXPBonus, percentHPPoolMod, percentHPRegenMod, percentLifeStealMod, percentMPPoolMod, percentMPRegenMod, percentMagicDamageMod, percentMovementSpeedMod, percentPhysicalDamageMod, percentSpellBlockMod, percentSpellVampMod, rFlatArmorModPerLevel, rFlatArmorPenetrationMod, rFlatArmorPenetrationModPerLevel, rFlatCritChanceModPerLevel, rFlatCritDamageModPerLevel, rFlatDodgeMod, rFlatDodgeModPerLevel, rFlatEnergyModPerLevel, rFlatEnergyRegenModPerLevel, rFlatGoldPer10Mod, rFlatHPModPerLevel, rFlatHPRegenModPerLevel, rFlatMPModPerLevel, rFlatMPRegenModPerLevel, rFlatMagicDamageModPerLevel, rFlatMagicPenetrationMod, rFlatMagicPenetrationModPerLevel, rFlatMovementSpeedModPerLevel, rFlatPhysicalDamageModPerLevel, rFlatSpellBlockModPerLevel, rFlatTimeDeadMod, rFlatTimeDeadModPerLevel, rPercentArmorPenetrationMod, rPercentArmorPenetrationModPerLevel, rPercentAttackSpeedModPerLevel, rPercentCooldownMod, rPercentCooldownModPerLevel, rPercentMagicPenetrationMod, rPercentMagicPenetrationModPerLevel, rPercentMovementSpeedModPerLevel, rPercentTimeDeadMod, rPercentTimeDeadModPerLevel);
     }
 
     @Override
     public String toString() {
         return "BasicDataStatsDto{" +
-                "FlatArmorMod=" + FlatArmorMod +
-                ", FlatAttackSpeedMod=" + FlatAttackSpeedMod +
-                ", FlatBlockMod=" + FlatBlockMod +
-                ", FlatCritChanceMod=" + FlatCritChanceMod +
-                ", FlatCritDamageMod=" + FlatCritDamageMod +
-                ", FlatEXPBonus=" + FlatEXPBonus +
-                ", FlatEnergyPoolMod=" + FlatEnergyPoolMod +
-                ", FlatEnergyRegenMod=" + FlatEnergyRegenMod +
-                ", FlatHPPoolMod=" + FlatHPPoolMod +
-                ", FlatHPRegenMod=" + FlatHPRegenMod +
-                ", FlatMPPoolMod=" + FlatMPPoolMod +
-                ", FlatMPRegenMod=" + FlatMPRegenMod +
-                ", FlatMagicDamageMod=" + FlatMagicDamageMod +
-                ", FlatMovementSpeedMod=" + FlatMovementSpeedMod +
-                ", FlatPhysicalDamageMod=" + FlatPhysicalDamageMod +
-                ", FlatSpellBlockMod=" + FlatSpellBlockMod +
-                ", PercentArmorMod=" + PercentArmorMod +
-                ", PercentAttackSpeedMod=" + PercentAttackSpeedMod +
-                ", PercentBlockMod=" + PercentBlockMod +
-                ", PercentCritChanceMod=" + PercentCritChanceMod +
-                ", PercentCritDamageMod=" + PercentCritDamageMod +
-                ", PercentDodgeMod=" + PercentDodgeMod +
-                ", PercentEXPBonus=" + PercentEXPBonus +
-                ", PercentHPPoolMod=" + PercentHPPoolMod +
-                ", PercentHPRegenMod=" + PercentHPRegenMod +
-                ", PercentLifeStealMod=" + PercentLifeStealMod +
-                ", PercentMPPoolMod=" + PercentMPPoolMod +
-                ", PercentMPRegenMod=" + PercentMPRegenMod +
-                ", PercentMagicDamageMod=" + PercentMagicDamageMod +
-                ", PercentMovementSpeedMod=" + PercentMovementSpeedMod +
-                ", PercentPhysicalDamageMod=" + PercentPhysicalDamageMod +
-                ", PercentSpellBlockMod=" + PercentSpellBlockMod +
-                ", PercentSpellVampMod=" + PercentSpellVampMod +
+                "flatArmorMod=" + flatArmorMod +
+                ", flatAttackSpeedMod=" + flatAttackSpeedMod +
+                ", flatBlockMod=" + flatBlockMod +
+                ", flatCritChanceMod=" + flatCritChanceMod +
+                ", flatCritDamageMod=" + flatCritDamageMod +
+                ", flatEXPBonus=" + flatEXPBonus +
+                ", flatEnergyPoolMod=" + flatEnergyPoolMod +
+                ", flatEnergyRegenMod=" + flatEnergyRegenMod +
+                ", flatHPPoolMod=" + flatHPPoolMod +
+                ", flatHPRegenMod=" + flatHPRegenMod +
+                ", flatMPPoolMod=" + flatMPPoolMod +
+                ", flatMPRegenMod=" + flatMPRegenMod +
+                ", flatMagicDamageMod=" + flatMagicDamageMod +
+                ", flatMovementSpeedMod=" + flatMovementSpeedMod +
+                ", flatPhysicalDamageMod=" + flatPhysicalDamageMod +
+                ", flatSpellBlockMod=" + flatSpellBlockMod +
+                ", percentArmorMod=" + percentArmorMod +
+                ", percentAttackSpeedMod=" + percentAttackSpeedMod +
+                ", percentBlockMod=" + percentBlockMod +
+                ", percentCritChanceMod=" + percentCritChanceMod +
+                ", percentCritDamageMod=" + percentCritDamageMod +
+                ", percentDodgeMod=" + percentDodgeMod +
+                ", percentEXPBonus=" + percentEXPBonus +
+                ", percentHPPoolMod=" + percentHPPoolMod +
+                ", percentHPRegenMod=" + percentHPRegenMod +
+                ", percentLifeStealMod=" + percentLifeStealMod +
+                ", percentMPPoolMod=" + percentMPPoolMod +
+                ", percentMPRegenMod=" + percentMPRegenMod +
+                ", percentMagicDamageMod=" + percentMagicDamageMod +
+                ", percentMovementSpeedMod=" + percentMovementSpeedMod +
+                ", percentPhysicalDamageMod=" + percentPhysicalDamageMod +
+                ", percentSpellBlockMod=" + percentSpellBlockMod +
+                ", percentSpellVampMod=" + percentSpellVampMod +
                 ", rFlatArmorModPerLevel=" + rFlatArmorModPerLevel +
                 ", rFlatArmorPenetrationMod=" + rFlatArmorPenetrationMod +
                 ", rFlatArmorPenetrationModPerLevel=" + rFlatArmorPenetrationModPerLevel +

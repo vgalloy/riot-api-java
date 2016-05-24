@@ -24,7 +24,7 @@ public interface ChampionApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion")
-    ChampionListDto getChampionList(@PathParam("region") Region region, @QueryParam("api_key") String key);
+    ChampionListDto getChampionList(@PathParam("region") Region region, @QueryParam("api_key") String key); // TODO renomé toute les key en api_key ?
 
     /**
      * Retrieve champion by ID.

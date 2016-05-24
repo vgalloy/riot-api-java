@@ -12,11 +12,11 @@ public class MetaDataDto {
     private String tier;
     private String type;
 
-    public boolean isRune() {
+    public boolean isIsRune() {
         return isRune;
     }
 
-    public void setRune(boolean rune) {
+    public void setIsRune(boolean rune) {
         isRune = rune;
     }
 

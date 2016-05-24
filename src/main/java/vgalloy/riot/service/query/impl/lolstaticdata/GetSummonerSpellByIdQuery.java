@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.lolstaticdata;
 
-import vgalloy.riot.api.lolstaticdata.dto.RuneDto;
+import vgalloy.riot.api.lolstaticdata.dto.SummonerSpellDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
@@ -9,7 +9,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetSummonerSpellByIdQuery extends AbstractQuery<RuneDto> {
+public class GetSummonerSpellByIdQuery extends AbstractQuery<SummonerSpellDto> {
 
     private final long summonerSpellId;
 
@@ -26,7 +26,7 @@ public class GetSummonerSpellByIdQuery extends AbstractQuery<RuneDto> {
     }
 
     @Override
-    public RuneDto execute() {
-        return riotWebApi.getRuneById(getRegion(), summonerSpellId, getRiotApiKeyValue());
+    public SummonerSpellDto execute() {
+        return riotWebApi.getSummonerSpellById(getRegion(), summonerSpellId, getRiotApiKeyValue());
     }
 }

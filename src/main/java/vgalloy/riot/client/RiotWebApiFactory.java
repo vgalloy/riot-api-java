@@ -3,6 +3,7 @@ package vgalloy.riot.client;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.proxy.WebResourceFactory;
+import org.glassfish.jersey.filter.LoggingFilter;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import vgalloy.riot.client.ratelimite.RateLimit;
 import vgalloy.riot.client.ratelimite.impl.RateLimitProxy;
@@ -34,7 +35,7 @@ public class RiotWebApiFactory {
     public static RiotWebApi getRiotWebApi(RateLimit... rateLimits) {
         ClientConfig clientConfig = new ClientConfig().register(JacksonFeature.class).register(JacksonJsonProvider.class);
         Client client = ClientBuilder.newClient(clientConfig);
-//        client.register(new LoggingFilter());
+        client.register(new LoggingFilter());
         RiotWebApi unsecuredRiotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));
         RateLimitProxy rateLimitProxy = new RateLimitProxy(unsecuredRiotWebApi, rateLimits);
         RiotWebApi riotWebApi = (RiotWebApi) Proxy.newProxyInstance(

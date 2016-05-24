@@ -246,7 +246,7 @@ public class RiotApi {
      * @param championId the champion id
      * @return the query
      */
-    public GetChampionDataByIdQuery getChampionDataList(long championId) {
+    public GetChampionDataByIdQuery getChampionDataById(long championId) {
         return new GetChampionDataByIdQuery(riotWebApi, defaultParameter, championId);
     }
 
@@ -265,7 +265,7 @@ public class RiotApi {
      * @param itemId the item id
      * @return the query
      */
-    public GetItemByIdQuery getItemBId(long itemId) {
+    public GetItemByIdQuery getItemById(long itemId) {
         return new GetItemByIdQuery(riotWebApi, defaultParameter, itemId);
     }
 
@@ -274,7 +274,7 @@ public class RiotApi {
      *
      * @return the query
      */
-    public GetLanguageStringQuery getLanguageStringQuery() {
+    public GetLanguageStringQuery getLanguageString() {
         return new GetLanguageStringQuery(riotWebApi, defaultParameter);
     }
 
@@ -283,7 +283,7 @@ public class RiotApi {
      *
      * @return the query
      */
-    public GetLanguageQuery getLanguageQuery() {
+    public GetLanguageQuery getLanguage() {
         return new GetLanguageQuery(riotWebApi, defaultParameter);
     }
 
@@ -311,7 +311,7 @@ public class RiotApi {
      * @param masteryId the mastery id
      * @return the query
      */
-    public GetMasteryByIdQuery getMasteryBId(long masteryId) {
+    public GetMasteryByIdQuery getMasteryById(long masteryId) {
         return new GetMasteryByIdQuery(riotWebApi, defaultParameter, masteryId);
     }
 
@@ -339,7 +339,7 @@ public class RiotApi {
      * @param runeId the rune id
      * @return the query
      */
-    public GetRuneByIdQuery getRuneBId(long runeId) {
+    public GetRuneByIdQuery getRuneById(long runeId) {
         return new GetRuneByIdQuery(riotWebApi, defaultParameter, runeId);
     }
 
@@ -358,7 +358,7 @@ public class RiotApi {
      * @param summonerSpellId the summoner spell id
      * @return the query
      */
-    public GetSummonerSpellByIdQuery getSummonerSpellBId(long summonerSpellId) {
+    public GetSummonerSpellByIdQuery getSummonerSpellById(long summonerSpellId) {
         return new GetSummonerSpellByIdQuery(riotWebApi, defaultParameter, summonerSpellId);
     }
 

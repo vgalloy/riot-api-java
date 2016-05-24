@@ -1,15 +1,30 @@
 package vgalloy.riot.api.lolstaticdata.dto;
 
+import java.util.List;
 import java.util.Objects;
+import vgalloy.riot.api.constant.MasteryTree;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
 public class MasteryDto {
-
+    private List<String> description;
     private int id;
-    private int rank;
+    private ImageDto image;
+    private MasteryTree masteryTree;
+    private String name;
+    private String prereq;
+    private int ranks;
+    private List<String> sanitizedDescription;
+
+    public List<String> getDescription() {
+        return description;
+    }
+
+    public void setDescription(List<String> description) {
+        this.description = description;
+    }
 
     public int getId() {
         return id;
@@ -19,12 +34,52 @@ public class MasteryDto {
         this.id = id;
     }
 
-    public int getRank() {
-        return rank;
+    public ImageDto getImage() {
+        return image;
     }
 
-    public void setRank(int rank) {
-        this.rank = rank;
+    public void setImage(ImageDto image) {
+        this.image = image;
+    }
+
+    public MasteryTree getMasteryTree() {
+        return masteryTree;
+    }
+
+    public void setMasteryTree(MasteryTree masteryTree) {
+        this.masteryTree = masteryTree;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPrereq() {
+        return prereq;
+    }
+
+    public void setPrereq(String prereq) {
+        this.prereq = prereq;
+    }
+
+    public int getRanks() {
+        return ranks;
+    }
+
+    public void setRanks(int ranks) {
+        this.ranks = ranks;
+    }
+
+    public List<String> getSanitizedDescription() {
+        return sanitizedDescription;
+    }
+
+    public void setSanitizedDescription(List<String> sanitizedDescription) {
+        this.sanitizedDescription = sanitizedDescription;
     }
 
     @Override
@@ -37,19 +92,31 @@ public class MasteryDto {
         }
         MasteryDto that = (MasteryDto) o;
         return id == that.id &&
-                rank == that.rank;
+                ranks == that.ranks &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(image, that.image) &&
+                masteryTree == that.masteryTree &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(prereq, that.prereq) &&
+                Objects.equals(sanitizedDescription, that.sanitizedDescription);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, rank);
+        return Objects.hash(description, id, image, masteryTree, name, prereq, ranks, sanitizedDescription);
     }
 
     @Override
     public String toString() {
         return "MasteryDto{" +
-                "id=" + id +
-                ", rank=" + rank +
+                "description=" + description +
+                ", id=" + id +
+                ", image=" + image +
+                ", masteryTree=" + masteryTree +
+                ", name='" + name + '\'' +
+                ", prereq='" + prereq + '\'' +
+                ", ranks=" + ranks +
+                ", sanitizedDescription=" + sanitizedDescription +
                 '}';
     }
 }
