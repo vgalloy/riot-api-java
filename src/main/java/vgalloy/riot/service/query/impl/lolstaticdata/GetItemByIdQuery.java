@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.lolstaticdata;
 
-import vgalloy.riot.api.lolstaticdata.dto.ItemDto;
+import vgalloy.riot.api.request.lolstaticdata.dto.ItemDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.matchlist;
 
-import vgalloy.riot.api.matchlist.dto.MatchList;
+import vgalloy.riot.api.request.matchlist.dto.MatchList;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

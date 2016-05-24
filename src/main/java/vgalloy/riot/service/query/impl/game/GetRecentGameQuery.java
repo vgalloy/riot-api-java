@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.game;
 
-import vgalloy.riot.api.game.dto.RecentGamesDto;
+import vgalloy.riot.api.request.game.dto.RecentGamesDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

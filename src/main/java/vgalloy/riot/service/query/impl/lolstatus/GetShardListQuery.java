@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.lolstatus;
 
-import vgalloy.riot.api.lolstatus.dto.Shard;
+import vgalloy.riot.api.request.lolstatus.dto.Shard;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;

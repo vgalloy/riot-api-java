@@ -467,7 +467,6 @@ public class RiotApi {
         return new GetSummonersByNamesQuery(riotWebApi, defaultParameter, playerNames);
     }
 
-
     /**
      * Create the query for summoner by ids.
      *
@@ -477,7 +476,6 @@ public class RiotApi {
     public GetSummonersByIdsQuery getSummonersByIds(long... playerIds) {
         return new GetSummonersByIdsQuery(riotWebApi, defaultParameter, playerIds);
     }
-
 
     /**
      * Create the query for summoner masteries by ids.
@@ -489,7 +487,6 @@ public class RiotApi {
         return new GetSummonersMasteriesByIdsQuery(riotWebApi, defaultParameter, playerIds);
     }
 
-
     /**
      * Create the query for player summoner name by ids.
      *
@@ -499,7 +496,6 @@ public class RiotApi {
     public GetSummonersNameByIdsQuery getSummonersNameByIds(long... playerIds) {
         return new GetSummonersNameByIdsQuery(riotWebApi, defaultParameter, playerIds);
     }
-
 
     /**
      * Create the query for summoner runes by ids.

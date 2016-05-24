@@ -1,6 +1,6 @@
 package vgalloy.riot.service.query.impl.stats;
 
-import vgalloy.riot.api.stats.dto.PlayerStatsSummaryListDto;
+import vgalloy.riot.api.request.stats.dto.PlayerStatsSummaryListDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
