@@ -44,6 +44,11 @@ import vgalloy.riot.service.query.impl.match.GetTournamentMatchDetailByIdQuery;
 import vgalloy.riot.service.query.impl.matchlist.GetMatchListBySummonerIdQuery;
 import vgalloy.riot.service.query.impl.stats.GetPlayerStatsSummaryQuery;
 import vgalloy.riot.service.query.impl.stats.GetSummonerRankedStatsQuery;
+import vgalloy.riot.service.query.impl.summoner.GetSummonersByIdsQuery;
+import vgalloy.riot.service.query.impl.summoner.GetSummonersByNamesQuery;
+import vgalloy.riot.service.query.impl.summoner.GetSummonersMasteriesByIdsQuery;
+import vgalloy.riot.service.query.impl.summoner.GetSummonersNameByIdsQuery;
+import vgalloy.riot.service.query.impl.summoner.GetSummonersRunesByIdsQuery;
 
 /**
  * @author Vincent Galloy
@@ -450,5 +455,59 @@ public class RiotApi {
      */
     public GetPlayerStatsSummaryQuery getPlayerStatsSummary(long playerId) {
         return new GetPlayerStatsSummaryQuery(riotWebApi, defaultParameter, playerId);
+    }
+
+    /**
+     * Create the query for summoner by name.
+     *
+     * @param playerNames the player names
+     * @return the query
+     */
+    public GetSummonersByNamesQuery getSummonerByNames(String... playerNames) {
+        return new GetSummonersByNamesQuery(riotWebApi, defaultParameter, playerNames);
+    }
+
+
+    /**
+     * Create the query for summoner by ids.
+     *
+     * @param playerIds the player ids
+     * @return the query
+     */
+    public GetSummonersByIdsQuery getSummonersByIds(long... playerIds) {
+        return new GetSummonersByIdsQuery(riotWebApi, defaultParameter, playerIds);
+    }
+
+
+    /**
+     * Create the query for summoner masteries by ids.
+     *
+     * @param playerIds the player ids
+     * @return the query
+     */
+    public GetSummonersMasteriesByIdsQuery getSummonersMasteriesByIds(long... playerIds) {
+        return new GetSummonersMasteriesByIdsQuery(riotWebApi, defaultParameter, playerIds);
+    }
+
+
+    /**
+     * Create the query for player summoner name by ids.
+     *
+     * @param playerIds the player ids
+     * @return the query
+     */
+    public GetSummonersNameByIdsQuery getSummonersNameByIds(long... playerIds) {
+        return new GetSummonersNameByIdsQuery(riotWebApi, defaultParameter, playerIds);
+    }
+
+
+    /**
+     * Create the query for summoner runes by ids.
+     *
+     * @param playerIds the player ids
+     * @return the query
+     */
+    public GetSummonersRunesByIdsQuery getSummonersRunesByIds(long... playerIds) {
+        return new GetSummonersRunesByIdsQuery(riotWebApi, defaultParameter, playerIds);
     }
 }

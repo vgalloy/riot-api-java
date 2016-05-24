@@ -47,8 +47,8 @@ public class Main {
 
         /** SUMMONER API **/
         //        System.out.println(riotWebApi.getChampionList(Region.EUW, "Ivaranne", riotApiKey.getApiKey()));
-        //        System.out.println(riotWebApi.getSummonerByIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
-        //        System.out.println(riotWebApi.getSummonerMasteries(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getSummonersByIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
+        //        System.out.println(riotWebApi.getSummonersMasteriesByIds(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getSummonerName(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
         //        System.out.println(riotWebApi.getSummonerRunes(Region.EUW, "24541689,24550736", riotApiKey.getApiKey()));
 
