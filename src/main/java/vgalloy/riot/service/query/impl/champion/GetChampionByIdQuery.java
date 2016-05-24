@@ -18,7 +18,7 @@ public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
      *
      * @param riotWebApi       the riot web api for execute query
      * @param defaultParameter the default query parameter
-     * @param championId       the champion Id
+     * @param championId       the champion id
      */
     public GetChampionByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long championId) {
         super(riotWebApi, defaultParameter);

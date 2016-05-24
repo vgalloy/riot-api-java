@@ -38,5 +38,5 @@ public interface TeamApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.4/team/{teamIds}")
-    Map<String, List<TeamDto>> getTeamByTeamIds(@PathParam("region") Region region, @PathParam("teamIds") Long teamIds, @QueryParam("api_key") String apiKey);
+    Map<String, List<TeamDto>> getTeamsByTeamIds(@PathParam("region") Region region, @PathParam("teamIds") String teamIds, @QueryParam("api_key") String apiKey);
 }

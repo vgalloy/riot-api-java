@@ -12,8 +12,8 @@ import java.util.Objects;
  */
 public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest {
 
-    private Query<Dto> query;
-    private CallBack<Dto> callBack;
+    private final Query<Dto> query;
+    private final CallBack<Dto> callBack;
 
     /**
      * Constructor.

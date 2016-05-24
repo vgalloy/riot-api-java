@@ -49,6 +49,8 @@ import vgalloy.riot.service.query.impl.summoner.GetSummonersByNamesQuery;
 import vgalloy.riot.service.query.impl.summoner.GetSummonersMasteriesByIdsQuery;
 import vgalloy.riot.service.query.impl.summoner.GetSummonersNameByIdsQuery;
 import vgalloy.riot.service.query.impl.summoner.GetSummonersRunesByIdsQuery;
+import vgalloy.riot.service.query.impl.team.GetTeamsBySummonerIdsQuery;
+import vgalloy.riot.service.query.impl.team.GetTeamsByTeamIdsQuery;
 
 /**
  * @author Vincent Galloy
@@ -505,5 +507,25 @@ public class RiotApi {
      */
     public GetSummonersRunesByIdsQuery getSummonersRunesByIds(long... playerIds) {
         return new GetSummonersRunesByIdsQuery(riotWebApi, defaultParameter, playerIds);
+    }
+
+    /**
+     * Create the query for teams by summoner ids.
+     *
+     * @param playerIds the player ids
+     * @return the query
+     */
+    public GetTeamsBySummonerIdsQuery getTeamsBySummonerIds(long... playerIds) {
+        return new GetTeamsBySummonerIdsQuery(riotWebApi, defaultParameter, playerIds);
+    }
+
+    /**
+     * Create the query for teams by team ids.
+     *
+     * @param playerIds the player ids
+     * @return the query
+     */
+    public GetTeamsByTeamIdsQuery getTeamsByTeamIds(long... playerIds) {
+        return new GetTeamsByTeamIdsQuery(riotWebApi, defaultParameter, playerIds);
     }
 }
