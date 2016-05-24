@@ -15,8 +15,7 @@ public class ExecutorImpl implements Executor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorImpl.class);
 
-    private static List<Thread> threadList = new ArrayList<>();
-
+    private List<Thread> threadList = new ArrayList<>();
     private boolean isRunning;
 
     @Override

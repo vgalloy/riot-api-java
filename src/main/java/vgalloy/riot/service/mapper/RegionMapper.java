@@ -7,7 +7,14 @@ import vgalloy.riot.api.constant.Region;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class RegionMapper {
+public final class RegionMapper {
+
+    /**
+     * Constructor.
+     * To prevent instantiation
+     */
+    private RegionMapper() {
+    }
 
     /**
      * Converter.
