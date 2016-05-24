@@ -26,7 +26,7 @@ public interface TeamApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.4/team/by-summoner/{summonerIds}")
-    Map<String, List<TeamDto>> getTeamsBySummonerIds(@PathParam("region") Region region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String key);
+    Map<String, List<TeamDto>> getTeamsBySummonerIds(@PathParam("region") Region region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
      * Get teams mapped by team ID for a given list of team IDs.
@@ -38,5 +38,5 @@ public interface TeamApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.4/team/{teamIds}")
-    Map<String, List<TeamDto>> getTeamByTeamIds(@PathParam("region") Region region, @PathParam("teamIds") Long teamIds, @QueryParam("api_key") String key);
+    Map<String, List<TeamDto>> getTeamByTeamIds(@PathParam("region") Region region, @PathParam("teamIds") Long teamIds, @QueryParam("api_key") String apiKey);
 }

@@ -25,7 +25,7 @@ public interface StatsApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.3/stats/by-summoner/{summonerId}/ranked")
-    RankedStatsDto getSummonerRankedStats(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
+    RankedStatsDto getSummonerRankedStats(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String apiKey);
 
     /**
      * Get player stats summaries by summoner ID.
@@ -37,5 +37,5 @@ public interface StatsApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/api/lol/{region}/v1.3/stats/by-summoner/{summonerId}/summary")
-    PlayerStatsSummaryListDto getPlayerStatsSummary(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
+    PlayerStatsSummaryListDto getPlayerStatsSummary(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String apiKey);
 }

@@ -28,7 +28,7 @@ public interface ChampionMastery {
      */
     @GET
     @Path("https://{region}.api.pvp.net/championmastery/location/{platformId}/player/{playerId}/champion/{championId}")
-    ChampionMasteryDto getChampionMasteryByChampion(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @PathParam("championId") String championId, @QueryParam("api_key") String key);
+    ChampionMasteryDto getChampionMasteryByChampion(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @PathParam("championId") String championId, @QueryParam("api_key") String apiKey);
 
     /**
      * Get all champion mastery entries sorted by number of champion points descending.
@@ -41,7 +41,7 @@ public interface ChampionMastery {
      */
     @GET
     @Path("https://{region}.api.pvp.net/championmastery/location/{platformId}/player/{playerId}/champions")
-    List<ChampionMasteryDto> getChampionMastery(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @QueryParam("api_key") String key);
+    List<ChampionMasteryDto> getChampionMastery(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @QueryParam("api_key") String apiKey);
 
     /**
      * Get a player's total champion mastery score, which is sum of individual champion mastery levels.
@@ -54,7 +54,7 @@ public interface ChampionMastery {
      */
     @GET
     @Path("https://{region}.api.pvp.net/championmastery/location/{platformId}/player/{playerId}/score")
-    int getPlayerScore(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @QueryParam("api_key") String key);
+    int getPlayerScore(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @QueryParam("api_key") String apiKey);
 
     /**
      * Get specified number of top champion mastery entries sorted by number of champion points descending.
@@ -67,5 +67,5 @@ public interface ChampionMastery {
      */
     @GET
     @Path("https://{region}.api.pvp.net/championmastery/location/{platformId}/player/{playerId}/topchampions")
-    List<ChampionMasteryDto> getTopChampion(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @QueryParam("api_key") String key);
+    List<ChampionMasteryDto> getTopChampion(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") String playerId, @QueryParam("api_key") String apiKey);
 }

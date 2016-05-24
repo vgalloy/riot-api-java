@@ -26,5 +26,5 @@ public interface CurrentGameApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/{platformId}/{summonerId}")
-    CurrentGameInfo getCurrentGameInfo(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
+    CurrentGameInfo getCurrentGameInfo(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String apiKey);
 }

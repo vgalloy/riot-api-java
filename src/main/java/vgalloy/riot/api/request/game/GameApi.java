@@ -24,5 +24,5 @@ public interface GameApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.3/game/by-summoner/{summonerId}/recent")
-    RecentGamesDto getRecentGame(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String key);
+    RecentGamesDto getRecentGame(@PathParam("region") Region region, @PathParam("summonerId") String summonerId, @QueryParam("api_key") String apiKey);
 }

@@ -12,29 +12,37 @@ public class ChampionMasteryApiTest extends AbstractTest {
 
     @Test
     public void testChampionMasteries() {
-        System.out.println(riotApi.getChampionMasteryByChampion(24550736, 100).region(Region.EUW).execute());
-        System.out.println(riotApi.getChampionMasteryByChampion(24550736, 100).region(Region.NA).execute());
-        System.out.println(riotApi.getChampionMasteryByChampion(24550736, 100).region(Region.KR).execute());
+        new QueryTester("ChampionMasteries")
+                .test(riotApi.getChampionMasteryByChampion(24550736, 100).region(Region.EUW))
+                .test(riotApi.getChampionMasteryByChampion(24550736, 100).region(Region.NA))
+                .test(riotApi.getChampionMasteryByChampion(24550736, 100).region(Region.KR))
+                .end();
     }
 
     @Test
     public void testChampionMasteriesList() {
-        System.out.println(riotApi.getChampionMastery(24550736).region(Region.EUW).execute());
-        System.out.println(riotApi.getChampionMastery(24550736).region(Region.NA).execute());
-        System.out.println(riotApi.getChampionMastery(24550736).region(Region.KR).execute());
+        new QueryTester("ChampionMasteriesList")
+                .test(riotApi.getChampionMastery(24550736).region(Region.EUW))
+                .test(riotApi.getChampionMastery(24550736).region(Region.NA))
+                .test(riotApi.getChampionMastery(24550736).region(Region.KR))
+                .end();
     }
 
     @Test
-    public void testChampionScore() {
-        System.out.println(riotApi.getPlayerScore(24550736).region(Region.EUW).execute());
-        System.out.println(riotApi.getPlayerScore(24550736).region(Region.NA).execute());
-        System.out.println(riotApi.getPlayerScore(24550736).region(Region.KR).execute());
+    public void testGetChampionScore() {
+        new QueryTester("ChampionScore")
+                .test(riotApi.getPlayerScore(24550736).region(Region.EUW))
+                .test(riotApi.getPlayerScore(24550736).region(Region.NA))
+                .test(riotApi.getPlayerScore(24550736).region(Region.KR))
+                .end();
     }
 
     @Test
     public void testGetTopChampion() {
-        System.out.println(riotApi.getTopChampion(24550736).region(Region.EUW).execute());
-        System.out.println(riotApi.getTopChampion(24550736).region(Region.NA).execute());
-        System.out.println(riotApi.getTopChampion(24550736).region(Region.KR).execute());
+        new QueryTester("TopChampion")
+                .test(riotApi.getTopChampion(24550736).region(Region.EUW))
+                .test(riotApi.getTopChampion(24550736).region(Region.NA))
+                .test(riotApi.getTopChampion(24550736).region(Region.KR))
+                .end();
     }
 }

@@ -20,12 +20,12 @@ public interface LolStatusApi {
      * Get shard list.
      *
      * @param region the summoners region
-     * @param key    the api key
+     * @param apiKey    the api key
      * @return the shard list
      */
     @GET
     @Path("https://{region}.api.pvp.net/shared")
-    List<Shard> getShardList(@PathParam("region") Region region, @QueryParam("api_key") String key);
+    List<Shard> getShardList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
      * Get shard status. Returns the data available on the status.leagueoflegends.com website for the given region.
@@ -37,5 +37,5 @@ public interface LolStatusApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/shared/{shardRegion}")
-    ShardStatus getShardStatus(@PathParam("region") Region region, @PathParam("shardRegion") Region shardRegion, @QueryParam("api_key") String key);
+    ShardStatus getShardStatus(@PathParam("region") Region region, @PathParam("shardRegion") Region shardRegion, @QueryParam("api_key") String apiKey);
 }

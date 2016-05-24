@@ -1,6 +1,5 @@
 package vgalloy.riot.service.request;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import vgalloy.riot.api.constant.QueueType;
 import vgalloy.riot.api.constant.Region;
@@ -14,45 +13,55 @@ public class LeagueApiTest extends AbstractTest {
 
     @Test
     public void testGetLeaguesBySummonerIds() {
-        System.out.println(riotApi.getLeaguesBySummonerIds(24541689).region(Region.EUW).execute());
-        System.out.println(riotApi.getLeaguesBySummonerIds(67911140).region(Region.NA).execute());
-        System.out.println(riotApi.getLeaguesBySummonerIds(17671075).region(Region.KR).execute());
+        new QueryTester("LeaguesBySummonerIds")
+                .test(riotApi.getLeaguesBySummonerIds(24541689).region(Region.EUW))
+                .test(riotApi.getLeaguesBySummonerIds(67911140).region(Region.NA))
+                .test(riotApi.getLeaguesBySummonerIds(17671075).region(Region.KR))
+                .end();
     }
 
     @Test
     public void testGetLeaguesEntryBySummonerIds() {
-        System.out.println(riotApi.getLeaguesEntryBySummonerIds(24541689).region(Region.EUW).execute());
-        System.out.println(riotApi.getLeaguesEntryBySummonerIds(67911140).region(Region.NA).execute());
-        System.out.println(riotApi.getLeaguesEntryBySummonerIds(17671075).region(Region.KR).execute());
+        new QueryTester("LeaguesEntryBySummonerIds")
+                .test(riotApi.getLeaguesEntryBySummonerIds(24541689).region(Region.EUW))
+                .test(riotApi.getLeaguesEntryBySummonerIds(67911140).region(Region.NA))
+                .test(riotApi.getLeaguesEntryBySummonerIds(17671075).region(Region.KR))
+                .end();
     }
 
     @Test
-    @Ignore
     public void testGetLeaguesByTeamIds() {
-        System.out.println(riotApi.getLeaguesByTeamIds(24550736).region(Region.EUW).execute());
-        System.out.println(riotApi.getLeaguesByTeamIds(67911140).region(Region.NA).execute());
-        System.out.println(riotApi.getLeaguesByTeamIds(17671075).region(Region.KR).execute());
+        new QueryTester("LeaguesByTeamIds")
+                .test(riotApi.getLeaguesByTeamIds(24550736).region(Region.EUW))
+                .test(riotApi.getLeaguesByTeamIds(67911140).region(Region.NA))
+                .test(riotApi.getLeaguesByTeamIds(17671075).region(Region.KR))
+                .end();
     }
 
     @Test
-    @Ignore
     public void testGetLeaguesEntryByTeamIds() {
-        System.out.println(riotApi.getLeaguesEntryByTeamIds(24550736).region(Region.EUW).execute());
-        System.out.println(riotApi.getLeaguesEntryByTeamIds(67911140).region(Region.NA).execute());
-        System.out.println(riotApi.getLeaguesEntryByTeamIds(17671075).region(Region.KR).execute());
+        new QueryTester("LeaguesEntryByTeamIds")
+                .test(riotApi.getLeaguesEntryByTeamIds(24550736).region(Region.EUW))
+                .test(riotApi.getLeaguesEntryByTeamIds(67911140).region(Region.NA))
+                .test(riotApi.getLeaguesEntryByTeamIds(17671075).region(Region.KR))
+                .end();
     }
 
     @Test
     public void testGetChallenger() {
-        System.out.println(riotApi.getChallenger(QueueType.RANKED_SOLO_5x5).region(Region.EUW).execute());
-        System.out.println(riotApi.getChallenger(QueueType.RANKED_TEAM_3x3).region(Region.NA).execute());
-        System.out.println(riotApi.getChallenger(QueueType.RANKED_TEAM_5x5).region(Region.KR).execute());
+        new QueryTester("Challenger")
+                .test(riotApi.getChallenger(QueueType.RANKED_SOLO_5x5).region(Region.EUW))
+                .test(riotApi.getChallenger(QueueType.RANKED_TEAM_3x3).region(Region.NA))
+                .test(riotApi.getChallenger(QueueType.RANKED_TEAM_5x5).region(Region.KR))
+                .end();
     }
 
     @Test
     public void testGetMaster() {
-        System.out.println(riotApi.getMaster(QueueType.RANKED_SOLO_5x5).region(Region.EUW).execute());
-        System.out.println(riotApi.getMaster(QueueType.RANKED_TEAM_3x3).region(Region.NA).execute());
-        System.out.println(riotApi.getMaster(QueueType.RANKED_TEAM_5x5).region(Region.KR).execute());
+        new QueryTester("Master")
+                .test(riotApi.getMaster(QueueType.RANKED_SOLO_5x5).region(Region.EUW))
+                .test(riotApi.getMaster(QueueType.RANKED_TEAM_3x3).region(Region.NA))
+                .test(riotApi.getMaster(QueueType.RANKED_TEAM_5x5).region(Region.KR))
+                .end();
     }
 }

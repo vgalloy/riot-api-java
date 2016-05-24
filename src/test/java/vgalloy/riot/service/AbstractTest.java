@@ -1,10 +1,14 @@
 package vgalloy.riot.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vgalloy.riot.client.ratelimite.RateLimit;
+import vgalloy.riot.service.query.Query;
 import vgalloy.riot.service.request.ChampionApiTest;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.Properties;
 
 /**
@@ -24,5 +28,45 @@ public abstract class AbstractTest {
             throw new RuntimeException("Can not load properties");
         }
         riotApi.defaultRiotApiKey(new RiotApiKey(properties));
+    }
+
+    protected QueryTester queryTester(String queryName) {
+        return new QueryTester(queryName);
+    }
+
+    protected class QueryTester {
+
+        private final Logger logger = LoggerFactory.getLogger(QueryTester.class);
+        private final String queryName;
+        private boolean isSuccess = true;
+
+        public QueryTester(String queryName) {
+            this.queryName = Objects.requireNonNull(queryName, "queryName can not be null");
+        }
+
+        /**
+         * assert the query is correct.
+         *
+         * @return this
+         */
+        public QueryTester test(Query query) {
+            try {
+                query.execute();
+            } catch (Exception e) {
+                isSuccess = false;
+            }
+            return this;
+        }
+
+        /**
+         * End the assertion.
+         */
+        public void end() {
+            if (isSuccess) {
+                logger.info("[ OK ] ................... {}.", queryName);
+            } else {
+                logger.warn("[ KO ] ................... {}.", queryName);
+            }
+        }
     }
 }

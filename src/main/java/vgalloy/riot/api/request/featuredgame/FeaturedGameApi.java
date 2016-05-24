@@ -18,10 +18,10 @@ public interface FeaturedGameApi {
      * Get list of featured games.
      *
      * @param region the region
-     * @param key    the api key
+     * @param apiKey    the api key
      * @return the featured game
      */
     @GET
     @Path("https://{region}.api.pvp.net/observer-mode/rest/featured")
-    FeaturedGames getFeaturedGame(@PathParam("region") Region region, @QueryParam("api_key") String key);
+    FeaturedGames getFeaturedGame(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 }

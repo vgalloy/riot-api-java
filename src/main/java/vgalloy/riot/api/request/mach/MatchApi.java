@@ -25,7 +25,7 @@ public interface MatchApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/by-tournament/{tournamentCode}/ids")
-    List<Long> getMatchIdList(@PathParam("region") Region region, @PathParam("tournamentCode") String tournamentCode, @QueryParam("api_key") String key);
+    List<Long> getMatchIdList(@PathParam("region") Region region, @PathParam("tournamentCode") String tournamentCode, @QueryParam("api_key") String apiKey);
 
     /**
      * Retrieve match by match ID and tournament code.
@@ -37,7 +37,7 @@ public interface MatchApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/for-tournament/{matchId}")
-    MatchDetail getTournamentMatchDetailById(@PathParam("region") Region region, @PathParam("matchId") String matchId, @QueryParam("api_key") String key);
+    MatchDetail getTournamentMatchDetailById(@PathParam("region") Region region, @PathParam("matchId") String matchId, @QueryParam("api_key") String apiKey);
 
     /**
      * Retrieve match by match ID.
@@ -49,5 +49,5 @@ public interface MatchApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/{matchId}")
-    MatchDetail getMatchDetailById(@PathParam("region") Region region, @PathParam("matchId") String matchId, @QueryParam("api_key") String key);
+    MatchDetail getMatchDetailById(@PathParam("region") Region region, @PathParam("matchId") String matchId, @QueryParam("api_key") String apiKey);
 }

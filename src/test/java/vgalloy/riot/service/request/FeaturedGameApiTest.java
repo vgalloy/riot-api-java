@@ -12,8 +12,10 @@ public class FeaturedGameApiTest extends AbstractTest {
 
     @Test
     public void testGetFeaturedGame() {
-        System.out.println(riotApi.getFeatureGame().region(Region.EUW).execute());
-        System.out.println(riotApi.getFeatureGame().region(Region.NA).execute());
-        System.out.println(riotApi.getFeatureGame().region(Region.KR).execute());
+        new QueryTester("FeaturedGame")
+                .test(riotApi.getFeatureGame().region(Region.EUW))
+                .test(riotApi.getFeatureGame().region(Region.NA))
+                .test(riotApi.getFeatureGame().region(Region.KR))
+                .end();
     }
 }
