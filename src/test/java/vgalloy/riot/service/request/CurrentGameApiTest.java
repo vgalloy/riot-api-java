@@ -11,7 +11,6 @@ import vgalloy.riot.service.AbstractTest;
  */
 public class CurrentGameApiTest extends AbstractTest {
 
-    // TODO Ca pète une 404 le joueur n'est pas dans une partie. Il faudrait gérer ça proprement ...
     @Test
     public void testGetCurrentGameInfo() {
         new QueryTester("CurrentGameInfo")

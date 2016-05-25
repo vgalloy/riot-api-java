@@ -7,7 +7,7 @@
         </encoder>
     </appender>
 
-    <logger name="vgalloy" level="info"/>
+    <logger name="vgalloy" level="debug"/>
 
     <root level="info">
         <appender-ref ref="STDOUT"/>
