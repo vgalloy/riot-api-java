@@ -1,6 +1,7 @@
 package vgalloy.riot.service.request;
 
 import org.junit.Test;
+
 import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.service.AbstractTest;
 
@@ -45,7 +46,7 @@ public class SummonerApiTest extends AbstractTest {
                 .test(riotApi.getSummonersNameByIds(67911140).region(Region.KR))
                 .end();
     }
-    
+
     @Test
     public void testGetSummonersRunesByIds() {
         new QueryTester("SummonersRunesByIds")

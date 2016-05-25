@@ -1,8 +1,7 @@
 package vgalloy.riot.api.request.lolstaticdata.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy

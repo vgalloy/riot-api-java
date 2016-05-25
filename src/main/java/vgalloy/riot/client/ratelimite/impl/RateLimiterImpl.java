@@ -1,15 +1,15 @@
 package vgalloy.riot.client.ratelimite.impl;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import vgalloy.riot.client.ratelimite.RateLimit;
-import vgalloy.riot.client.ratelimite.RateLimiter;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import vgalloy.riot.client.ratelimite.RateLimit;
+import vgalloy.riot.client.ratelimite.RateLimiter;
 
 /**
  * @author Vincent Galloy
@@ -20,6 +20,7 @@ public class RateLimiterImpl implements RateLimiter {
     private static final Logger LOGGER = LoggerFactory.getLogger(RateLimiterImpl.class);
 
     private final List<RateLimit> rateLimitList;
+    private final long longestRateLimitDuration;
     private List<Long> jobTimerExecution = new ArrayList<>();
 
     /**
@@ -33,10 +34,10 @@ public class RateLimiterImpl implements RateLimiter {
         } else {
             this.rateLimitList = Arrays.asList(rateLimitList);
         }
-
         if (this.rateLimitList.isEmpty()) {
             LOGGER.warn("You should define a rate limit");
         }
+        longestRateLimitDuration = getTheLongestRateLimitDuration();
     }
 
     @Override
@@ -84,16 +85,14 @@ public class RateLimiterImpl implements RateLimiter {
      * Remove all entry in the jobTimerExecution which are useless.
      */
     private void cleanList() {
-        int window = getTheLongestRateLimitDuration();
         long currentTimer = System.currentTimeMillis();
         jobTimerExecution = jobTimerExecution.stream()
-                .filter(p -> currentTimer - window < p)
+                .filter(p -> currentTimer - longestRateLimitDuration < p)
                 .collect(Collectors.toList());
     }
 
     /**
      * Get the longest rate limit duration. This allow us to clean the jobTimerExecution and save memory / time.
-     * // TODO  une Rate limit est final, la liste ne peux/doit pas être modifée après sa création ... la valeur de retour est donc toujours la même.
      *
      * @return the longest rate limit duration
      */

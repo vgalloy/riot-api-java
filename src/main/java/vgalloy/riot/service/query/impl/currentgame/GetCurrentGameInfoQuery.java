@@ -27,6 +27,6 @@ public class GetCurrentGameInfoQuery extends AbstractQuery<CurrentGameInfo> {
 
     @Override
     public CurrentGameInfo execute() {
-        return riotWebApi.getCurrentGameInfo(getRegion(), getPlatformId(), String.valueOf(summonerId), getRiotApiKeyValue());
+        return riotWebApi.getCurrentGameInfo(getRegion(), getPlatformId(), summonerId, getRiotApiKeyValue());
     }
 }

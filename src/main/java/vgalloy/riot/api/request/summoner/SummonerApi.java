@@ -1,15 +1,15 @@
 package vgalloy.riot.api.request.summoner;
 
-import vgalloy.riot.api.constant.Region;
-import vgalloy.riot.api.request.summoner.dto.MasteryPagesDto;
-import vgalloy.riot.api.request.summoner.dto.RunePagesDto;
-import vgalloy.riot.api.request.summoner.dto.SummonerDto;
-
+import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
-import java.util.Map;
+
+import vgalloy.riot.api.constant.Region;
+import vgalloy.riot.api.request.summoner.dto.MasteryPagesDto;
+import vgalloy.riot.api.request.summoner.dto.RunePagesDto;
+import vgalloy.riot.api.request.summoner.dto.SummonerDto;
 
 /**
  * @author Vincent Galloy
@@ -22,7 +22,7 @@ public interface SummonerApi {
      *
      * @param region        the summoners region
      * @param summonerNames the summoners name
-     * @param key           the api key
+     * @param apiKey        the api key
      * @return a map with the name of the summoners and the information
      */
     @GET
@@ -34,7 +34,7 @@ public interface SummonerApi {
      *
      * @param region      the summoners region
      * @param summonerIds the summoners id
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return a map with the name of the summoners and the information
      */
     @GET
@@ -46,7 +46,7 @@ public interface SummonerApi {
      *
      * @param region      the summoners region
      * @param summonerIds the summoners ids
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return a map with the ids of the summoners and the masteries
      */
     @GET
@@ -58,7 +58,7 @@ public interface SummonerApi {
      *
      * @param region      the summoners region
      * @param summonerIds the summoners ids
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return a map with the ids of the summoners and the names
      */
     @GET
@@ -70,7 +70,7 @@ public interface SummonerApi {
      *
      * @param region      the summoners region
      * @param summonerIds the summoners ids
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return a map with the ids of the summoners and the runes
      */
     @GET

@@ -1,10 +1,10 @@
 package vgalloy.riot.api.request.league.dto;
 
-import vgalloy.riot.api.constant.QueueType;
-import vgalloy.riot.api.constant.Tier;
-
 import java.util.List;
 import java.util.Objects;
+
+import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.Tier;
 
 /**
  * @author Vincent Galloy

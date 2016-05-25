@@ -1,15 +1,15 @@
 package vgalloy.riot.api.request.league;
 
-import vgalloy.riot.api.constant.QueueType;
-import vgalloy.riot.api.constant.Region;
-import vgalloy.riot.api.request.league.dto.LeagueDto;
-
+import java.util.List;
+import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
-import java.util.List;
-import java.util.Map;
+
+import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.Region;
+import vgalloy.riot.api.request.league.dto.LeagueDto;
 
 /**
  * @author Vincent Galloy
@@ -22,7 +22,7 @@ public interface LeagueApi {
      *
      * @param region      the region
      * @param summonerIds the summoners id
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return the leagues
      */
     @GET
@@ -34,7 +34,7 @@ public interface LeagueApi {
      *
      * @param region      the region
      * @param summonerIds the summoners id
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return the leagues
      */
     @GET
@@ -46,7 +46,7 @@ public interface LeagueApi {
      *
      * @param region  the region
      * @param teamIds the team id
-     * @param key     the api key
+     * @param apiKey  the api key
      * @return the leagues
      */
     @GET
@@ -58,7 +58,7 @@ public interface LeagueApi {
      *
      * @param region  the region
      * @param teamIds the team id
-     * @param key     the api key
+     * @param apiKey  the api key
      * @return the leagues
      */
     @GET
@@ -70,7 +70,7 @@ public interface LeagueApi {
      *
      * @param region the region
      * @param type   queue type
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the challenger league
      */
     @GET
@@ -82,7 +82,7 @@ public interface LeagueApi {
      *
      * @param region the region
      * @param type   queue type
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the master league
      */
     @GET

@@ -1,11 +1,11 @@
 package vgalloy.riot.client.ratelimite.impl;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.client.ratelimite.RateLimit;
 import vgalloy.riot.client.ratelimite.RateLimiter;
-
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 
 /**
  * @author Vincent Galloy
@@ -13,8 +13,8 @@ import java.lang.reflect.Method;
  */
 public class RateLimitProxy implements InvocationHandler {
 
-    private RateLimiter rateLimiter;
-    private RiotWebApi riotWebApi;
+    private final RateLimiter rateLimiter;
+    private final RiotWebApi riotWebApi;
 
     /**
      * Constructor.

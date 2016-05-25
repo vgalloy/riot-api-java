@@ -1,10 +1,10 @@
 package vgalloy.riot.service.query.impl.lolstaticdata;
 
+import java.util.List;
+
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
-
-import java.util.List;
 
 /**
  * @author Vincent Galloy

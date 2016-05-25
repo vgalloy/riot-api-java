@@ -1,12 +1,12 @@
 package vgalloy.riot;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.client.ratelimite.RateLimit;
 import vgalloy.riot.service.RiotApi;
 import vgalloy.riot.service.RiotApiKey;
-
-import java.io.InputStream;
-import java.util.Properties;
 
 /**
  * @author Vincent Galloy
@@ -32,6 +32,5 @@ public class Main {
                 .defaultRegion(Region.EUW);
 
         riotApi.getChampionList();
-
     }
 }

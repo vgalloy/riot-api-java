@@ -1,14 +1,14 @@
 package vgalloy.riot.api.request.lolstatus;
 
-import vgalloy.riot.api.constant.Region;
-import vgalloy.riot.api.request.lolstatus.dto.Shard;
-import vgalloy.riot.api.request.lolstatus.dto.ShardStatus;
-
+import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
-import java.util.List;
+
+import vgalloy.riot.api.constant.Region;
+import vgalloy.riot.api.request.lolstatus.dto.Shard;
+import vgalloy.riot.api.request.lolstatus.dto.ShardStatus;
 
 /**
  * @author Vincent Galloy
@@ -20,7 +20,7 @@ public interface LolStatusApi {
      * Get shard list.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the shard list
      */
     @GET
@@ -32,7 +32,7 @@ public interface LolStatusApi {
      *
      * @param region      the summoners region
      * @param shardRegion the shard region
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return the shard
      */
     @GET

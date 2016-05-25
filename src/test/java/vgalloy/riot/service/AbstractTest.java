@@ -1,15 +1,15 @@
 package vgalloy.riot.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import vgalloy.riot.client.ratelimite.RateLimit;
-import vgalloy.riot.service.query.Query;
-import vgalloy.riot.service.request.ChampionApiTest;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import vgalloy.riot.client.ratelimite.RateLimit;
+import vgalloy.riot.service.query.Query;
+import vgalloy.riot.service.request.ChampionApiTest;
 
 /**
  * @author Vincent Galloy
@@ -17,7 +17,7 @@ import java.util.Properties;
  */
 public abstract class AbstractTest {
 
-    protected RiotApi riotApi = new RiotApi(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000));
+    protected final RiotApi riotApi = new RiotApi(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000));
 
     public AbstractTest() {
         InputStream inputStream = ChampionApiTest.class.getClassLoader().getResourceAsStream("riot.properties");

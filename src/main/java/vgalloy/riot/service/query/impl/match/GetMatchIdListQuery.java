@@ -1,10 +1,10 @@
 package vgalloy.riot.service.query.impl.match;
 
+import java.util.List;
+
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
-
-import java.util.List;
 
 /**
  * @author Vincent Galloy
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class GetMatchIdListQuery extends AbstractQuery<List<Long>> {
 
-    private final long tournamentCode;
+    private final long tournamentCode; // TODO Est ce que les tournamentCode sont des long ?????
 
     /**
      * Constructor.
@@ -28,6 +28,6 @@ public class GetMatchIdListQuery extends AbstractQuery<List<Long>> {
 
     @Override
     public List<Long> execute() {
-        return riotWebApi.getMatchIdList(getRegion(), String.valueOf(tournamentCode), getRiotApiKeyValue()); // TODO String.valueOf ... un long dans l'interface c'est pas mal aussi
+        return riotWebApi.getMatchIdList(getRegion(), String.valueOf(tournamentCode), getRiotApiKeyValue());
     }
 }

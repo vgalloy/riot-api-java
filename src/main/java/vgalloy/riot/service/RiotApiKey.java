@@ -9,7 +9,7 @@ import java.util.Properties;
  */
 public class RiotApiKey {
 
-    private String apiKey;
+    private final String apiKey;
 
     /**
      * Constructor.

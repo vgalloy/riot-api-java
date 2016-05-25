@@ -27,6 +27,6 @@ public class GetMatchDetailByIdQuery extends AbstractQuery<MatchDetail> {
 
     @Override
     public MatchDetail execute() {
-        return riotWebApi.getMatchDetailById(getRegion(), String.valueOf(matchId), getRiotApiKeyValue()); // TODO String.valueOf ... un long dans l'interface c'est pas mal aussi
+        return riotWebApi.getMatchDetailById(getRegion(), matchId, getRiotApiKeyValue());
     }
 }

@@ -1,11 +1,11 @@
 package vgalloy.riot.api.request.game.dto;
 
+import java.util.List;
+import java.util.Objects;
+
 import vgalloy.riot.api.constant.GameMode;
 import vgalloy.riot.api.constant.GameType;
 import vgalloy.riot.api.constant.SupType;
-
-import java.util.List;
-import java.util.Objects;
 
 /**
  * @author Vincent Galloy

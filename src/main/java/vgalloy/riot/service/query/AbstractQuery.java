@@ -1,14 +1,14 @@
 package vgalloy.riot.service.query;
 
+import java.util.Collection;
+import java.util.Objects;
+import java.util.StringJoiner;
+
 import vgalloy.riot.api.constant.PlatformId;
 import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.RiotApiKey;
 import vgalloy.riot.service.mapper.RegionMapper;
-
-import java.util.Collection;
-import java.util.Objects;
-import java.util.StringJoiner;
 
 /**
  * @author Vincent Galloy
@@ -16,8 +16,8 @@ import java.util.StringJoiner;
  */
 public abstract class AbstractQuery<Dto> implements Query<Dto> {
 
-    protected RiotWebApi riotWebApi;
-    protected DefaultParameter defaultParameter;
+    protected final RiotWebApi riotWebApi;
+    protected final DefaultParameter defaultParameter;
     protected RiotApiKey riotApiKey;
     protected Region region;
 

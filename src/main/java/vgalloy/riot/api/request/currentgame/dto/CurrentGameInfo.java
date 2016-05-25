@@ -1,10 +1,10 @@
 package vgalloy.riot.api.request.currentgame.dto;
 
-import vgalloy.riot.api.constant.GameMode;
-import vgalloy.riot.api.constant.PlatformId;
-
 import java.util.List;
 import java.util.Objects;
+
+import vgalloy.riot.api.constant.GameMode;
+import vgalloy.riot.api.constant.PlatformId;
 
 /**
  * @author Vincent Galloy

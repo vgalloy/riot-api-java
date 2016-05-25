@@ -1,14 +1,14 @@
 package vgalloy.riot.api.request.team;
 
-import vgalloy.riot.api.constant.Region;
-import vgalloy.riot.api.request.team.dto.TeamDto;
-
+import java.util.List;
+import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
-import java.util.List;
-import java.util.Map;
+
+import vgalloy.riot.api.constant.Region;
+import vgalloy.riot.api.request.team.dto.TeamDto;
 
 /**
  * @author Vincent Galloy
@@ -21,7 +21,7 @@ public interface TeamApi {
      *
      * @param region      the region
      * @param summonerIds the summoner ids
-     * @param key         the api key
+     * @param apiKey      the api key
      * @return the teams
      */
     @GET
@@ -33,7 +33,7 @@ public interface TeamApi {
      *
      * @param region  the region
      * @param teamIds the team ids
-     * @param key     the api key
+     * @param apiKey  the api key
      * @return the summoner
      */
     @GET

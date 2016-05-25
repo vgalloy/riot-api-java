@@ -1,5 +1,11 @@
 package vgalloy.riot.api.request.lolstaticdata;
 
+import java.util.List;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+
 import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.api.request.lolstaticdata.dto.ChampionDto;
 import vgalloy.riot.api.request.lolstaticdata.dto.ChampionListDto;
@@ -15,12 +21,6 @@ import vgalloy.riot.api.request.lolstaticdata.dto.RuneListDto;
 import vgalloy.riot.api.request.lolstaticdata.dto.SummonerSpellDto;
 import vgalloy.riot.api.request.lolstaticdata.dto.SummonerSpellListDto;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
-import java.util.List;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
@@ -31,7 +31,7 @@ public interface LolStaticDataApi {
      * Retrieves champion list.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the champions information
      */
     @GET
@@ -43,7 +43,7 @@ public interface LolStaticDataApi {
      *
      * @param region the summoners region
      * @param id     the champion id
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the champion information
      */
     @GET
@@ -54,7 +54,7 @@ public interface LolStaticDataApi {
      * Retrieves item list.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the items
      */
     @GET
@@ -66,7 +66,7 @@ public interface LolStaticDataApi {
      *
      * @param region the summoners region
      * @param id     the item id
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the item
      */
     @GET
@@ -77,7 +77,7 @@ public interface LolStaticDataApi {
      * Retrieve language strings data.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the language strings data
      */
     @GET
@@ -88,7 +88,7 @@ public interface LolStaticDataApi {
      * Retrieve supported languages data.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the language data
      */
     @GET
@@ -99,7 +99,7 @@ public interface LolStaticDataApi {
      * Retrieve map data.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the map data
      */
     @GET
@@ -110,7 +110,7 @@ public interface LolStaticDataApi {
      * Retrieves mastery list.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the masteries
      */
     @GET
@@ -122,7 +122,7 @@ public interface LolStaticDataApi {
      *
      * @param region the summoners region
      * @param id     the mastery id
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the mastery
      */
     @GET
@@ -133,7 +133,7 @@ public interface LolStaticDataApi {
      * Retrieve realm data.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the mastery
      */
     @GET
@@ -144,7 +144,7 @@ public interface LolStaticDataApi {
      * Retrieves rune list.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the rune list
      */
     @GET
@@ -156,7 +156,7 @@ public interface LolStaticDataApi {
      *
      * @param region the summoners region
      * @param id     the rune id
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the rune
      */
     @GET
@@ -167,7 +167,7 @@ public interface LolStaticDataApi {
      * Retrieves summoner spell list.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the summoner spell list
      */
     @GET
@@ -179,7 +179,7 @@ public interface LolStaticDataApi {
      *
      * @param region the summoners region
      * @param id     the summoner spell id
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the summoner spell
      */
     @GET
@@ -190,7 +190,7 @@ public interface LolStaticDataApi {
      * Retrieves version data.
      *
      * @param region the summoners region
-     * @param apiKey    the api key
+     * @param apiKey the api key
      * @return the version data
      */
     @GET

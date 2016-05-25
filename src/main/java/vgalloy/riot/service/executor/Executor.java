@@ -4,7 +4,7 @@ package vgalloy.riot.service.executor;
  * @author Vincent Galloy
  *         Created by Vincent on 21/05/2016.
  *         TODO Add a shutdown method ?
- *         FIXME Est-ce que cette classe est vraiment utile ?
+ *         TODO Est-ce que cette classe est vraiment utile ?
  */
 public interface Executor {
 

@@ -1,14 +1,14 @@
 package vgalloy.riot.service.query.impl.summoner;
 
-import vgalloy.riot.api.request.summoner.dto.SummonerDto;
-import vgalloy.riot.client.RiotWebApi;
-import vgalloy.riot.service.query.AbstractQuery;
-import vgalloy.riot.service.query.DefaultParameter;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import vgalloy.riot.api.request.summoner.dto.SummonerDto;
+import vgalloy.riot.client.RiotWebApi;
+import vgalloy.riot.service.query.AbstractQuery;
+import vgalloy.riot.service.query.DefaultParameter;
 
 /**
  * @author Vincent Galloy

@@ -1,14 +1,14 @@
 package vgalloy.riot.service.request;
 
+import java.util.Objects;
+
 import vgalloy.riot.service.callback.CallBack;
 import vgalloy.riot.service.query.Query;
-
-import java.util.Objects;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent on 21/05/2016..
- *         FIXME Est-ce que cette classe est vraiment utile ?
+ *         TODO Est-ce que cette classe est vraiment utile ?
  */
 public class AsynchronousRequestImpl<Dto> implements AsynchronousRequest {
 

@@ -1,12 +1,12 @@
 package vgalloy.riot.service.query.impl.league;
 
+import java.util.Objects;
+
 import vgalloy.riot.api.constant.QueueType;
 import vgalloy.riot.api.request.league.dto.LeagueDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
-
-import java.util.Objects;
 
 /**
  * @author Vincent Galloy

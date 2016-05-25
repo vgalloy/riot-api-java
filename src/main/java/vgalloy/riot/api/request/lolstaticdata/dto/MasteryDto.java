@@ -1,9 +1,9 @@
 package vgalloy.riot.api.request.lolstaticdata.dto;
 
-import vgalloy.riot.api.constant.MasteryTree;
-
 import java.util.List;
 import java.util.Objects;
+
+import vgalloy.riot.api.constant.MasteryTree;
 
 /**
  * @author Vincent Galloy

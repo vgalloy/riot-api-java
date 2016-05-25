@@ -1,11 +1,11 @@
 package vgalloy.riot.service.query.impl.championmastery;
 
+import java.util.List;
+
 import vgalloy.riot.api.request.championmastery.dto.ChampionMasteryDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
-
-import java.util.List;
 
 /**
  * @author Vincent Galloy
@@ -29,6 +29,6 @@ public class GetChampionMasteryQuery extends AbstractQuery<List<ChampionMasteryD
 
     @Override
     public List<ChampionMasteryDto> execute() {
-        return riotWebApi.getChampionMastery(getRegion(), getPlatformId(), String.valueOf(playerId), getRiotApiKeyValue());
+        return riotWebApi.getChampionMastery(getRegion(), getPlatformId(), playerId, getRiotApiKeyValue());
     }
 }

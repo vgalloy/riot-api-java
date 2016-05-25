@@ -1,13 +1,13 @@
 package vgalloy.riot.service.query.impl.team;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import vgalloy.riot.api.request.team.dto.TeamDto;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
 import vgalloy.riot.service.query.DefaultParameter;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author Vincent Galloy

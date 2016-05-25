@@ -27,6 +27,6 @@ public class GetSummonerRankedStatsQuery extends AbstractQuery<RankedStatsDto> {
 
     @Override
     public RankedStatsDto execute() {
-        return riotWebApi.getSummonerRankedStats(getRegion(), String.valueOf(summonerId), getRiotApiKeyValue()); // TODO String.valueOf ... un long dans l'interface c'est pas mal aussi
+        return riotWebApi.getSummonerRankedStats(getRegion(), summonerId, getRiotApiKeyValue());
     }
 }
