@@ -52,7 +52,7 @@ public abstract class AbstractTest {
         public QueryTester test(Query query) {
             try {
                 query.execute();
-            } catch (Exception e) {
+            } catch (Exception e) { // TODO on ne devrait catcher que les exceptions de type RiotException
                 isSuccess = false;
             }
             return this;
