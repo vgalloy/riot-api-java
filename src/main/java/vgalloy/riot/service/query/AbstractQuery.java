@@ -14,7 +14,7 @@ import vgalloy.riot.service.mapper.RegionMapper;
  * @author Vincent Galloy
  *         Created by Vincent on 20/05/2016.
  */
-public abstract class AbstractQuery<Dto> implements Query<Dto> {
+public abstract class AbstractQuery<Dto> extends AbstractCallbackQuery<Dto> {
 
     protected final RiotWebApi riotWebApi;
     protected final DefaultParameter defaultParameter;

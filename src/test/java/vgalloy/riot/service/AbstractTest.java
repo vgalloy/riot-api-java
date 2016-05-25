@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
+import javax.ws.rs.InternalServerErrorException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import vgalloy.riot.client.ratelimite.RateLimit;
-import vgalloy.riot.service.query.Query;
+import vgalloy.riot.service.callback.Callback;
+import vgalloy.riot.service.query.AbstractCallbackQuery;
 import vgalloy.riot.service.request.ChampionApiTest;
 
 /**
@@ -30,10 +33,6 @@ public abstract class AbstractTest {
         riotApi.defaultRiotApiKey(new RiotApiKey(properties));
     }
 
-    protected QueryTester queryTester(String queryName) {
-        return new QueryTester(queryName);
-    }
-
     protected class QueryTester {
 
         private final Logger logger = LoggerFactory.getLogger(QueryTester.class);
@@ -49,11 +48,13 @@ public abstract class AbstractTest {
          *
          * @return this
          */
-        public QueryTester test(Query query) {
-            try {
-                query.execute();
-            } catch (Exception e) {
-                logger.debug("{}", e);
+        public QueryTester test(AbstractCallbackQuery query) {
+            if (query.onInternalServerErrorException(new Callback<InternalServerErrorException>() {
+                @Override
+                public void process(InternalServerErrorException e) {
+                    throw e;
+                }
+            }).execute() == null) {
                 isSuccess = false;
             }
             return this;

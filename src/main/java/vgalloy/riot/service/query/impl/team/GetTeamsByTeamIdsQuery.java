@@ -13,9 +13,9 @@ import vgalloy.riot.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetTeamsByTeamIdsQuery extends AbstractQuery<Map<String, List<TeamDto>>> {
+public class GetTeamsByTeamIdsQuery extends AbstractQuery<Map<String, TeamDto>> {
 
-    private final List<Long> teamIds = new ArrayList<>();
+    private final List<String> teamIds = new ArrayList<>();
 
     /**
      * Constructor.
@@ -24,9 +24,9 @@ public class GetTeamsByTeamIdsQuery extends AbstractQuery<Map<String, List<TeamD
      * @param defaultParameter the default query parameter
      * @param teamIds          the team ids
      */
-    public GetTeamsByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... teamIds) {
+    public GetTeamsByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String... teamIds) {
         super(riotWebApi, defaultParameter);
-        for (long id : teamIds) {
+        for (String id : teamIds) {
             this.teamIds.add(id);
         }
     }
@@ -37,15 +37,15 @@ public class GetTeamsByTeamIdsQuery extends AbstractQuery<Map<String, List<TeamD
      * @param teamIds the team ids
      * @return this
      */
-    public GetTeamsByTeamIdsQuery addTeamIds(long... teamIds) {
-        for (long id : teamIds) {
+    public GetTeamsByTeamIdsQuery addTeamIds(String... teamIds) {
+        for (String id : teamIds) {
             this.teamIds.add(id);
         }
         return this;
     }
 
     @Override
-    public Map<String, List<TeamDto>> execute() {
+    public Map<String, TeamDto> executeWithError() {
         return riotWebApi.getTeamsByTeamIds(getRegion(), convert(teamIds), getRiotApiKeyValue());
     }
 }

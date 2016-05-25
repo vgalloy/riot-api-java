@@ -1,5 +1,6 @@
 package vgalloy.riot.service.request;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import vgalloy.riot.api.constant.Region;
@@ -14,18 +15,19 @@ public class MatchApiTest extends AbstractTest {
     @Test
     public void testGetMatchDetailById() {
         new QueryTester("MatchDetailById")
-                .test(riotApi.getMatchDetailById(25252525).region(Region.EUW))
-                .test(riotApi.getMatchDetailById(25252525).region(Region.NA))
-                .test(riotApi.getMatchDetailById(25252525).region(Region.KR))
+                .test(riotApi.getMatchDetailById(2676786126L).region(Region.EUW))
+                .test(riotApi.getMatchDetailById(2198433583L).region(Region.NA))
+                .test(riotApi.getMatchDetailById(2426412348L).region(Region.KR))
                 .end();
     }
 
     @Test
-    public void testGetMatchIdList() {
-        new QueryTester("MatchIdList")
-                .test(riotApi.getMatchIdList(5000).region(Region.EUW))
-                .test(riotApi.getMatchIdList(5000).region(Region.NA))
-                .test(riotApi.getMatchIdList(5000).region(Region.KR))
+    @Ignore
+    public void testGetMatchIdByTournamentCodeList() {
+        new QueryTester("MatchIdByTournamentCodeList")
+                .test(riotApi.getMatchIdByTournamentCodeList(5000).region(Region.EUW))
+                .test(riotApi.getMatchIdByTournamentCodeList(5000).region(Region.NA))
+                .test(riotApi.getMatchIdByTournamentCodeList(5000).region(Region.KR))
                 .end();
     }
 

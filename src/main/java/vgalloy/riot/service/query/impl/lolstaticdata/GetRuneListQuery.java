@@ -22,7 +22,7 @@ public class GetRuneListQuery extends AbstractQuery<RuneListDto> {
     }
 
     @Override
-    public RuneListDto execute() {
+    public RuneListDto executeWithError() {
         return riotWebApi.getRuneList(getRegion(), getRiotApiKeyValue());
     }
 }

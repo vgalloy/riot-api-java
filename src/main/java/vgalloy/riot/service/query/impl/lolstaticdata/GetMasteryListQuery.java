@@ -22,7 +22,7 @@ public class GetMasteryListQuery extends AbstractQuery<MasteryListDto> {
     }
 
     @Override
-    public MasteryListDto execute() {
+    public MasteryListDto executeWithError() {
         return riotWebApi.getMasteryList(getRegion(), getRiotApiKeyValue());
     }
 }

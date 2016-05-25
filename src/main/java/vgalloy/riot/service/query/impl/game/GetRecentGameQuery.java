@@ -26,7 +26,7 @@ public class GetRecentGameQuery extends AbstractQuery<RecentGamesDto> {
     }
 
     @Override
-    public RecentGamesDto execute() {
+    public RecentGamesDto executeWithError() {
         return riotWebApi.getRecentGame(getRegion(), summonerId, getRiotApiKeyValue());
     }
 }

@@ -22,7 +22,7 @@ public class GetLanguageStringQuery extends AbstractQuery<LanguageStringsDto> {
     }
 
     @Override
-    public LanguageStringsDto execute() {
+    public LanguageStringsDto executeWithError() {
         return riotWebApi.getLanguageString(getRegion(), getRiotApiKeyValue());
     }
 }

@@ -1,7 +1,5 @@
 package vgalloy.riot.service.query.impl.currentgame;
 
-import javax.ws.rs.NotFoundException;
-
 import vgalloy.riot.api.request.currentgame.dto.CurrentGameInfo;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.service.query.AbstractQuery;
@@ -28,11 +26,7 @@ public class GetCurrentGameInfoQuery extends AbstractQuery<CurrentGameInfo> {
     }
 
     @Override
-    public CurrentGameInfo execute() {
-        try {
-            return riotWebApi.getCurrentGameInfo(getRegion(), getPlatformId(), summonerId, getRiotApiKeyValue());
-        } catch (NotFoundException e) { // if the user is not in game, api throw 404 instead of null
-            return null;
-        }
+    public CurrentGameInfo executeWithError() {
+        return riotWebApi.getCurrentGameInfo(getRegion(), getPlatformId(), summonerId, getRiotApiKeyValue());
     }
 }

@@ -1,6 +1,6 @@
 package vgalloy.riot.service;
 
-import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.RankedQueueType;
 import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.client.RiotWebApi;
 import vgalloy.riot.client.RiotWebApiFactory;
@@ -39,7 +39,7 @@ import vgalloy.riot.service.query.impl.lolstaticdata.GetVersionListQuery;
 import vgalloy.riot.service.query.impl.lolstatus.GetShardListQuery;
 import vgalloy.riot.service.query.impl.lolstatus.GetShardStatusQuery;
 import vgalloy.riot.service.query.impl.match.GetMatchDetailByIdQuery;
-import vgalloy.riot.service.query.impl.match.GetMatchIdListQuery;
+import vgalloy.riot.service.query.impl.match.GetMatchIdListByTournamentCodeQuery;
 import vgalloy.riot.service.query.impl.match.GetTournamentMatchDetailByIdQuery;
 import vgalloy.riot.service.query.impl.matchlist.GetMatchListBySummonerIdQuery;
 import vgalloy.riot.service.query.impl.stats.GetPlayerStatsSummaryQuery;
@@ -207,7 +207,7 @@ public class RiotApi {
      * @param teamIds the team ids
      * @return the query
      */
-    public GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(long... teamIds) {
+    public GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds) {
         return new GetLeaguesByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
     }
 
@@ -217,28 +217,28 @@ public class RiotApi {
      * @param teamIds the team ids
      * @return the query
      */
-    public GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(long... teamIds) {
+    public GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds) {
         return new GetLeaguesEntryByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
     }
 
     /**
      * Create the query for challenger.
      *
-     * @param queueType queue type
+     * @param rankedQueueType queue type
      * @return the query
      */
-    public GetChallengerQuery getChallenger(QueueType queueType) {
-        return new GetChallengerQuery(riotWebApi, defaultParameter, queueType);
+    public GetChallengerQuery getChallenger(RankedQueueType rankedQueueType) {
+        return new GetChallengerQuery(riotWebApi, defaultParameter, rankedQueueType);
     }
 
     /**
      * Create the query for master.
      *
-     * @param queueType queue type
+     * @param rankedQueueType queue type
      * @return the query
      */
-    public GetMasterQuery getMaster(QueueType queueType) {
-        return new GetMasterQuery(riotWebApi, defaultParameter, queueType);
+    public GetMasterQuery getMaster(RankedQueueType rankedQueueType) {
+        return new GetMasterQuery(riotWebApi, defaultParameter, rankedQueueType);
     }
 
     /**
@@ -405,8 +405,8 @@ public class RiotApi {
      * @param tournamentCode the tournament code
      * @return the query
      */
-    public GetMatchIdListQuery getMatchIdList(long tournamentCode) {
-        return new GetMatchIdListQuery(riotWebApi, defaultParameter, tournamentCode);
+    public GetMatchIdListByTournamentCodeQuery getMatchIdByTournamentCodeList(long tournamentCode) {
+        return new GetMatchIdListByTournamentCodeQuery(riotWebApi, defaultParameter, tournamentCode);
     }
 
     /**
@@ -525,7 +525,7 @@ public class RiotApi {
      * @param playerIds the player ids
      * @return the query
      */
-    public GetTeamsByTeamIdsQuery getTeamsByTeamIds(long... playerIds) {
+    public GetTeamsByTeamIdsQuery getTeamsByTeamIds(String... playerIds) {
         return new GetTeamsByTeamIdsQuery(riotWebApi, defaultParameter, playerIds);
     }
 }

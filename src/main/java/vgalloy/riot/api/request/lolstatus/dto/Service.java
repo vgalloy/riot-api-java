@@ -9,17 +9,17 @@ import java.util.Objects;
  */
 public class Service {
 
-    private List<Incident> ncidents;
+    private List<Incident> incidents;
     private String name;
     private String slug;
     private String status;
 
-    public List<Incident> getNcidents() {
-        return ncidents;
+    public List<Incident> getIncidents() {
+        return incidents;
     }
 
-    public void setNcidents(List<Incident> ncidents) {
-        this.ncidents = ncidents;
+    public void setIncidents(List<Incident> ncidents) {
+        this.incidents = ncidents;
     }
 
     public String getName() {
@@ -55,7 +55,7 @@ public class Service {
             return false;
         }
         Service service = (Service) o;
-        return Objects.equals(ncidents, service.ncidents) &&
+        return Objects.equals(incidents, service.incidents) &&
                 Objects.equals(name, service.name) &&
                 Objects.equals(slug, service.slug) &&
                 Objects.equals(status, service.status);
@@ -63,13 +63,13 @@ public class Service {
 
     @Override
     public int hashCode() {
-        return Objects.hash(ncidents, name, slug, status);
+        return Objects.hash(incidents, name, slug, status);
     }
 
     @Override
     public String toString() {
         return "Service{" +
-                "ncidents=" + ncidents +
+                "incidents=" + incidents +
                 ", name='" + name + '\'' +
                 ", slug='" + slug + '\'' +
                 ", status='" + status + '\'' +

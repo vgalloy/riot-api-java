@@ -22,7 +22,7 @@ public class GetFeaturedGameQuery extends AbstractQuery<FeaturedGames> {
     }
 
     @Override
-    public FeaturedGames execute() {
+    public FeaturedGames executeWithError() {
         return riotWebApi.getFeaturedGame(getRegion(), getRiotApiKeyValue());
     }
 }

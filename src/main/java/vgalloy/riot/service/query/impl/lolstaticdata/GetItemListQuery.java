@@ -22,7 +22,7 @@ public class GetItemListQuery extends AbstractQuery<ItemListDto> {
     }
 
     @Override
-    public ItemListDto execute() {
+    public ItemListDto executeWithError() {
         return riotWebApi.getItemList(getRegion(), getRiotApiKeyValue());
     }
 }

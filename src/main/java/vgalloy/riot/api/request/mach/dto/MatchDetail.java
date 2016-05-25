@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import vgalloy.riot.api.constant.GameMode;
 import vgalloy.riot.api.constant.GameType;
-import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.NormalQueueType;
 import vgalloy.riot.api.constant.Season;
 
 /**
@@ -24,7 +24,7 @@ public class MatchDetail {
     private List<ParticipantIdentity> participantIdentities;
     private List<Participant> participants;
     private String platformId;
-    private QueueType queueType;
+    private NormalQueueType queueType;
     private String region;
     private Season season;
     private List<Team> teams;
@@ -110,11 +110,11 @@ public class MatchDetail {
         this.platformId = platformId;
     }
 
-    public QueueType getQueueType() {
+    public NormalQueueType getQueueType() {
         return queueType;
     }
 
-    public void setQueueType(QueueType queueType) {
+    public void setQueueType(NormalQueueType queueType) {
         this.queueType = queueType;
     }
 

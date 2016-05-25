@@ -24,7 +24,7 @@ public class GetShardListQuery extends AbstractQuery<List<Shard>> {
     }
 
     @Override
-    public List<Shard> execute() {
-        return riotWebApi.getShardList(getRegion(), getRiotApiKeyValue());
+    public List<Shard> executeWithError() {
+        return riotWebApi.getShardList();
     }
 }

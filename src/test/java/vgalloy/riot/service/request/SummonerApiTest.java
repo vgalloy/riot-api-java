@@ -34,7 +34,7 @@ public class SummonerApiTest extends AbstractTest {
         new QueryTester("SummonersMasteriesByIds")
                 .test(riotApi.getSummonersMasteriesByIds(24550736).addSummonerIds(24541689).region(Region.EUW))
                 .test(riotApi.getSummonersMasteriesByIds(67911140).region(Region.NA))
-                .test(riotApi.getSummonersMasteriesByIds(67911140).region(Region.KR))
+                .test(riotApi.getSummonersMasteriesByIds(17671075).region(Region.KR))
                 .end();
     }
 
@@ -43,7 +43,7 @@ public class SummonerApiTest extends AbstractTest {
         new QueryTester("SummonersNameByIds")
                 .test(riotApi.getSummonersNameByIds(24550736).addSummonerIds(24541689).region(Region.EUW))
                 .test(riotApi.getSummonersNameByIds(67911140).region(Region.NA))
-                .test(riotApi.getSummonersNameByIds(67911140).region(Region.KR))
+                .test(riotApi.getSummonersNameByIds(17671075).region(Region.KR))
                 .end();
     }
 
@@ -52,7 +52,7 @@ public class SummonerApiTest extends AbstractTest {
         new QueryTester("SummonersRunesByIds")
                 .test(riotApi.getSummonersRunesByIds(24550736).addSummonerIds(24541689).region(Region.EUW))
                 .test(riotApi.getSummonersRunesByIds(67911140).region(Region.NA))
-                .test(riotApi.getSummonersRunesByIds(67911140).region(Region.KR))
+                .test(riotApi.getSummonersRunesByIds(17671075).region(Region.KR))
                 .end();
     }
 }

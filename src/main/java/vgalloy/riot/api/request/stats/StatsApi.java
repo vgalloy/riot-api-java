@@ -36,6 +36,6 @@ public interface StatsApi {
      * @return the summoner summary statistic
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/api/lol/{region}/v1.3/stats/by-summoner/{summonerId}/summary")
+    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.3/stats/by-summoner/{summonerId}/summary")
     PlayerStatsSummaryListDto getPlayerStatsSummary(@PathParam("region") Region region, @PathParam("summonerId") long summonerId, @QueryParam("api_key") String apiKey);
 }

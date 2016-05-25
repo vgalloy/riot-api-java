@@ -28,7 +28,7 @@ public class GetTopChampion extends AbstractQuery<List<ChampionMasteryDto>> {
     }
 
     @Override
-    public List<ChampionMasteryDto> execute() {
+    public List<ChampionMasteryDto> executeWithError() {
         return riotWebApi.getTopChampion(getRegion(), getPlatformId(), playerId, getRiotApiKeyValue());
     }
 }

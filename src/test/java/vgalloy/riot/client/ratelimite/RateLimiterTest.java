@@ -2,6 +2,7 @@ package vgalloy.riot.client.ratelimite;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

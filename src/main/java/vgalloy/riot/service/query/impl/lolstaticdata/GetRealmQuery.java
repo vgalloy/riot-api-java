@@ -22,7 +22,7 @@ public class GetRealmQuery extends AbstractQuery<RealmDto> {
     }
 
     @Override
-    public RealmDto execute() {
+    public RealmDto executeWithError() {
         return riotWebApi.getRealm(getRegion(), getRiotApiKeyValue());
     }
 }

@@ -9,68 +9,68 @@ import java.util.Objects;
  */
 public class Message {
 
-    private String uthor;
-    private String ontent;
-    private String reated_at;
-    private long d;
-    private String everity;
-    private List<Translation> ranslations;
-    private String pdated_at;
+    private String author;
+    private String content;
+    private String created_at;
+    private String id;
+    private String severity;
+    private List<Translation> translations;
+    private String updated_at;
 
-    public String getUthor() {
-        return uthor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setUthor(String uthor) {
-        this.uthor = uthor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public String getOntent() {
-        return ontent;
+    public String getContent() {
+        return content;
     }
 
-    public void setOntent(String ontent) {
-        this.ontent = ontent;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getReated_at() {
-        return reated_at;
+    public String getCreated_at() {
+        return created_at;
     }
 
-    public void setReated_at(String reated_at) {
-        this.reated_at = reated_at;
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
     }
 
-    public long getD() {
-        return d;
+    public String getId() {
+        return id;
     }
 
-    public void setD(long d) {
-        this.d = d;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getEverity() {
-        return everity;
+    public String getSeverity() {
+        return severity;
     }
 
-    public void setEverity(String everity) {
-        this.everity = everity;
+    public void setSeverity(String severity) {
+        this.severity = severity;
     }
 
-    public List<Translation> getRanslations() {
-        return ranslations;
+    public List<Translation> getTranslations() {
+        return translations;
     }
 
-    public void setRanslations(List<Translation> ranslations) {
-        this.ranslations = ranslations;
+    public void setTranslations(List<Translation> translations) {
+        this.translations = translations;
     }
 
-    public String getPdated_at() {
-        return pdated_at;
+    public String getUpdated_at() {
+        return updated_at;
     }
 
-    public void setPdated_at(String pdated_at) {
-        this.pdated_at = pdated_at;
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
     }
 
     @Override
@@ -82,30 +82,30 @@ public class Message {
             return false;
         }
         Message message = (Message) o;
-        return d == message.d &&
-                Objects.equals(uthor, message.uthor) &&
-                Objects.equals(ontent, message.ontent) &&
-                Objects.equals(reated_at, message.reated_at) &&
-                Objects.equals(everity, message.everity) &&
-                Objects.equals(ranslations, message.ranslations) &&
-                Objects.equals(pdated_at, message.pdated_at);
+        return Objects.equals(id, message.id) &&
+                Objects.equals(author, message.author) &&
+                Objects.equals(content, message.content) &&
+                Objects.equals(created_at, message.created_at) &&
+                Objects.equals(severity, message.severity) &&
+                Objects.equals(translations, message.translations) &&
+                Objects.equals(updated_at, message.updated_at);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(uthor, ontent, reated_at, d, everity, ranslations, pdated_at);
+        return Objects.hash(author, content, created_at, id, severity, translations, updated_at);
     }
 
     @Override
     public String toString() {
         return "Message{" +
-                "uthor='" + uthor + '\'' +
-                ", ontent='" + ontent + '\'' +
-                ", reated_at='" + reated_at + '\'' +
-                ", d=" + d +
-                ", everity='" + everity + '\'' +
-                ", ranslations=" + ranslations +
-                ", pdated_at='" + pdated_at + '\'' +
+                "author='" + author + '\'' +
+                ", content='" + content + '\'' +
+                ", created_at='" + created_at + '\'' +
+                ", id=" + id +
+                ", severity='" + severity + '\'' +
+                ", translations=" + translations +
+                ", updated_at='" + updated_at + '\'' +
                 '}';
     }
 }

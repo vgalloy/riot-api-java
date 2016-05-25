@@ -3,7 +3,7 @@ package vgalloy.riot.api.request.league.dto;
 import java.util.List;
 import java.util.Objects;
 
-import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.RankedQueueType;
 import vgalloy.riot.api.constant.Tier;
 
 /**
@@ -15,7 +15,7 @@ public class LeagueDto {
     private List<LeagueEntryDto> entries;
     private String name;
     private String participantId;
-    private QueueType queue;
+    private RankedQueueType queue;
     private Tier tier;
 
     public List<LeagueEntryDto> getEntries() {
@@ -42,11 +42,11 @@ public class LeagueDto {
         this.participantId = participantId;
     }
 
-    public QueueType getQueue() {
+    public RankedQueueType getQueue() {
         return queue;
     }
 
-    public void setQueue(QueueType queue) {
+    public void setQueue(RankedQueueType queue) {
         this.queue = queue;
     }
 

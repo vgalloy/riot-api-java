@@ -30,6 +30,15 @@ public class RateLimitProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         rateLimiter.delay();
-        return method.invoke(riotWebApi, args);
+        try {
+            return method.invoke(riotWebApi, args);
+        } catch (Exception e) {
+            Throwable throwable = e.getCause();
+            if (throwable != null) {
+                throw throwable;
+            } else {
+                throw e;
+            }
+        }
     }
 }

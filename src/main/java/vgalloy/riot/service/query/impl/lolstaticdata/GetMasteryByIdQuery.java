@@ -26,7 +26,7 @@ public class GetMasteryByIdQuery extends AbstractQuery<MasteryDto> {
     }
 
     @Override
-    public MasteryDto execute() {
+    public MasteryDto executeWithError() {
         return riotWebApi.getMasteryById(getRegion(), masteryId, getRiotApiKeyValue());
     }
 }

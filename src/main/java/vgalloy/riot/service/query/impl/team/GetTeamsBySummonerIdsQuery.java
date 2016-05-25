@@ -45,7 +45,7 @@ public class GetTeamsBySummonerIdsQuery extends AbstractQuery<Map<String, List<T
     }
 
     @Override
-    public Map<String, List<TeamDto>> execute() {
+    public Map<String, List<TeamDto>> executeWithError() {
         return riotWebApi.getTeamsBySummonerIds(getRegion(), convert(summonerIds), getRiotApiKeyValue());
     }
 }

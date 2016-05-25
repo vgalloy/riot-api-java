@@ -23,7 +23,7 @@ public class GetLanguageQuery extends AbstractQuery<List<String>> {
     }
 
     @Override
-    public List<String> execute() {
+    public List<String> executeWithError() {
         return riotWebApi.getLanguage(getRegion(), getRiotApiKeyValue());
     }
 }

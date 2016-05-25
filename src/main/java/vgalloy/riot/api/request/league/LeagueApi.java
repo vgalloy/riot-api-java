@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.RankedQueueType;
 import vgalloy.riot.api.constant.Region;
 import vgalloy.riot.api.request.league.dto.LeagueDto;
 
@@ -75,7 +75,7 @@ public interface LeagueApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.5/league/challenger")
-    LeagueDto getChallenger(@PathParam("region") Region region, @QueryParam("type") QueueType type, @QueryParam("api_key") String apiKey);
+    LeagueDto getChallenger(@PathParam("region") Region region, @QueryParam("type") RankedQueueType type, @QueryParam("api_key") String apiKey);
 
     /**
      * Get master tier leagues.
@@ -87,5 +87,5 @@ public interface LeagueApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.5/league/master")
-    LeagueDto getMaster(@PathParam("region") Region region, @QueryParam("type") QueueType type, @QueryParam("api_key") String apiKey);
+    LeagueDto getMaster(@PathParam("region") Region region, @QueryParam("type") RankedQueueType type, @QueryParam("api_key") String apiKey);
 }

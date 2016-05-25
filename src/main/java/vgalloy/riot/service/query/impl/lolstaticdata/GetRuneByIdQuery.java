@@ -26,7 +26,7 @@ public class GetRuneByIdQuery extends AbstractQuery<RuneDto> {
     }
 
     @Override
-    public RuneDto execute() {
+    public RuneDto executeWithError() {
         return riotWebApi.getRuneById(getRegion(), runeId, getRiotApiKeyValue());
     }
 }

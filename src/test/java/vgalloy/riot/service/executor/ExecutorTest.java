@@ -1,6 +1,7 @@
 package vgalloy.riot.service.executor;
 
 import java.util.concurrent.atomic.AtomicInteger;
+
 import org.junit.Test;
 
 import vgalloy.riot.service.executor.impl.ExecutorImpl;

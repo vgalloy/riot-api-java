@@ -3,7 +3,7 @@ package vgalloy.riot.api.request.matchlist.dto;
 import java.util.Objects;
 
 import vgalloy.riot.api.constant.Lane;
-import vgalloy.riot.api.constant.QueueType;
+import vgalloy.riot.api.constant.NormalQueueType;
 import vgalloy.riot.api.constant.Role;
 import vgalloy.riot.api.constant.Season;
 
@@ -17,10 +17,11 @@ public class MatchReference {
     private Lane lane;
     private long matchId;
     private String platformId;
-    private QueueType queue;
+    private NormalQueueType queue;
     private String region;
     private Role role;
     private Season season;
+    private long timestamp;
 
     public long getChampion() {
         return champion;
@@ -54,11 +55,11 @@ public class MatchReference {
         this.platformId = platformId;
     }
 
-    public QueueType getQueue() {
+    public NormalQueueType getQueue() {
         return queue;
     }
 
-    public void setQueue(QueueType queue) {
+    public void setQueue(NormalQueueType queue) {
         this.queue = queue;
     }
 
@@ -86,6 +87,14 @@ public class MatchReference {
         this.season = season;
     }
 
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -97,17 +106,18 @@ public class MatchReference {
         MatchReference that = (MatchReference) o;
         return champion == that.champion &&
                 matchId == that.matchId &&
+                timestamp == that.timestamp &&
                 lane == that.lane &&
                 Objects.equals(platformId, that.platformId) &&
                 queue == that.queue &&
                 Objects.equals(region, that.region) &&
-                Objects.equals(role, that.role) &&
+                role == that.role &&
                 season == that.season;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(champion, lane, matchId, platformId, queue, region, role, season);
+        return Objects.hash(champion, lane, matchId, platformId, queue, region, role, season, timestamp);
     }
 
     @Override
@@ -121,6 +131,7 @@ public class MatchReference {
                 ", region='" + region + '\'' +
                 ", role=" + role +
                 ", season=" + season +
+                ", timestamp=" + timestamp +
                 '}';
     }
 }

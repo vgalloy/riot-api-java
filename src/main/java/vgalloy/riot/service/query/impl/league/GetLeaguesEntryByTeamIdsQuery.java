@@ -15,7 +15,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetLeaguesEntryByTeamIdsQuery extends AbstractQuery<Map<String, List<LeagueDto>>> {
 
-    private final List<Long> teamIds = new ArrayList<>();
+    private final List<String> teamIds = new ArrayList<>();
 
     /**
      * Constructor.
@@ -24,9 +24,9 @@ public class GetLeaguesEntryByTeamIdsQuery extends AbstractQuery<Map<String, Lis
      * @param defaultParameter the default query parameter
      * @param teamIds          the summoner id
      */
-    public GetLeaguesEntryByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... teamIds) {
+    public GetLeaguesEntryByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String... teamIds) {
         super(riotWebApi, defaultParameter);
-        for (long id : teamIds) {
+        for (String id : teamIds) {
             this.teamIds.add(id);
         }
     }
@@ -37,15 +37,15 @@ public class GetLeaguesEntryByTeamIdsQuery extends AbstractQuery<Map<String, Lis
      * @param teamIds the team ids
      * @return this
      */
-    public GetLeaguesEntryByTeamIdsQuery addTeamIds(long... teamIds) {
-        for (long id : teamIds) {
+    public GetLeaguesEntryByTeamIdsQuery addTeamIds(String... teamIds) {
+        for (String id : teamIds) {
             this.teamIds.add(id);
         }
         return this;
     }
 
     @Override
-    public Map<String, List<LeagueDto>> execute() {
+    public Map<String, List<LeagueDto>> executeWithError() {
         return riotWebApi.getLeaguesEntryByTeamIds(getRegion(), convert(teamIds), getRiotApiKeyValue());
     }
 }

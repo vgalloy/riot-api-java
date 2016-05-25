@@ -22,7 +22,7 @@ public class GetSummonerSpellListQuery extends AbstractQuery<SummonerSpellListDt
     }
 
     @Override
-    public SummonerSpellListDto execute() {
+    public SummonerSpellListDto executeWithError() {
         return riotWebApi.getSummonerSpellList(getRegion(), getRiotApiKeyValue());
     }
 }
