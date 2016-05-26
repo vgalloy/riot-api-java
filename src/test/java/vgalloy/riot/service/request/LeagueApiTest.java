@@ -2,8 +2,8 @@ package vgalloy.riot.service.request;
 
 import org.junit.Test;
 
-import vgalloy.riot.api.constant.RankedQueueType;
-import vgalloy.riot.api.constant.Region;
+import vgalloy.riot.api.rest.constant.RankedQueueType;
+import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.service.AbstractTest;
 
 /**

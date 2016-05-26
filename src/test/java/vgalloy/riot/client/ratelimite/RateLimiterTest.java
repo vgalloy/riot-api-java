@@ -7,9 +7,11 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import vgalloy.riot.client.ratelimite.impl.RateLimiterImpl;
-import vgalloy.riot.service.executor.Executor;
-import vgalloy.riot.service.executor.impl.ExecutorImpl;
+import vgalloy.riot.api.client.ratelimite.RateLimit;
+import vgalloy.riot.api.client.ratelimite.RateLimiter;
+import vgalloy.riot.api.client.ratelimite.impl.RateLimiterImpl;
+import vgalloy.riot.api.service.executor.Executor;
+import vgalloy.riot.api.service.executor.impl.ExecutorImpl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

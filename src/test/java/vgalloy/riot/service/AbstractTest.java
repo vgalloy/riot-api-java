@@ -9,9 +9,11 @@ import javax.ws.rs.InternalServerErrorException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import vgalloy.riot.client.ratelimite.RateLimit;
-import vgalloy.riot.service.callback.Callback;
-import vgalloy.riot.service.query.AbstractCallbackQuery;
+import vgalloy.riot.api.client.ratelimite.RateLimit;
+import vgalloy.riot.api.service.RiotApi;
+import vgalloy.riot.api.service.RiotApiKey;
+import vgalloy.riot.api.service.callback.Callback;
+import vgalloy.riot.api.service.query.AbstractCallbackQuery;
 import vgalloy.riot.service.request.ChampionApiTest;
 
 /**
