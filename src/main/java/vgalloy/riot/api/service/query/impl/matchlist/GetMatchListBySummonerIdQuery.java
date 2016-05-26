@@ -26,7 +26,7 @@ public class GetMatchListBySummonerIdQuery extends AbstractQuery<MatchList> {
     }
 
     @Override
-    public MatchList executeWithError() {
+    protected MatchList executeWithError() {
         return riotWebApi.getMatchListBySummonerId(getRegion(), summonerId, getRiotApiKeyValue());
     }
 }

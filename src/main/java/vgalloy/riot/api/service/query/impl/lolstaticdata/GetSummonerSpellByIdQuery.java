@@ -26,7 +26,7 @@ public class GetSummonerSpellByIdQuery extends AbstractQuery<SummonerSpellDto> {
     }
 
     @Override
-    public SummonerSpellDto executeWithError() {
+    protected SummonerSpellDto executeWithError() {
         return riotWebApi.getSummonerSpellById(getRegion(), summonerSpellId, getRiotApiKeyValue());
     }
 }

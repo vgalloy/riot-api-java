@@ -27,7 +27,7 @@ public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<List<Long
     }
 
     @Override
-    public List<Long> executeWithError() {
+    protected List<Long> executeWithError() {
         return riotWebApi.getMatchIdList(getRegion(), tournamentCode, getRiotApiKeyValue());
     }
 }

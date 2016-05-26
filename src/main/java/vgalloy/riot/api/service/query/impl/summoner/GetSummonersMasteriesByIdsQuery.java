@@ -43,7 +43,7 @@ public class GetSummonersMasteriesByIdsQuery extends AbstractQuery<Map<String, M
     }
 
     @Override
-    public Map<String, MasteryPagesDto> executeWithError() {
+    protected Map<String, MasteryPagesDto> executeWithError() {
         return riotWebApi.getSummonersMasteriesByIds(getRegion(), convert(summonerIds), getRiotApiKeyValue());
     }
 }

@@ -43,7 +43,7 @@ public class GetLeaguesEntryBySummonerIdsQuery extends AbstractQuery<Map<String,
     }
 
     @Override
-    public Map<String, List<LeagueDto>> executeWithError() {
+    protected Map<String, List<LeagueDto>> executeWithError() {
         return riotWebApi.getLeaguesEntryBySummonerIds(getRegion(), convert(summonerIds), getRiotApiKeyValue());
     }
 }

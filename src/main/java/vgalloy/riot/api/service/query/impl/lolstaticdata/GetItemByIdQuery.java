@@ -26,7 +26,7 @@ public class GetItemByIdQuery extends AbstractQuery<ItemDto> {
     }
 
     @Override
-    public ItemDto executeWithError() {
+    protected ItemDto executeWithError() {
         return riotWebApi.getItemById(getRegion(), itemId, getRiotApiKeyValue());
     }
 }

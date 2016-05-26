@@ -29,7 +29,7 @@ public class GetChampionMasteryByChampionQuery extends AbstractQuery<ChampionMas
     }
 
     @Override
-    public ChampionMasteryDto executeWithError() {
+    protected ChampionMasteryDto executeWithError() {
         return riotWebApi.getChampionMasteryByChampion(getRegion(), getPlatformId(), playerId, championId, getRiotApiKeyValue());
     }
 }

@@ -22,7 +22,7 @@ public class GetChampionDataListQuery extends AbstractQuery<ChampionListDto> {
     }
 
     @Override
-    public ChampionListDto executeWithError() {
+    protected ChampionListDto executeWithError() {
         return riotWebApi.getChampionDataList(getRegion(), getRiotApiKeyValue());
     }
 }

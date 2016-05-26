@@ -42,7 +42,7 @@ public class GetTeamsByTeamIdsQuery extends AbstractQuery<Map<String, TeamDto>> 
     }
 
     @Override
-    public Map<String, TeamDto> executeWithError() {
+    protected Map<String, TeamDto> executeWithError() {
         return riotWebApi.getTeamsByTeamIds(getRegion(), convert(teamIds), getRiotApiKeyValue());
     }
 }

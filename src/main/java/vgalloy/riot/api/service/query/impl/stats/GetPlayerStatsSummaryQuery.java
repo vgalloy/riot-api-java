@@ -26,7 +26,7 @@ public class GetPlayerStatsSummaryQuery extends AbstractQuery<PlayerStatsSummary
     }
 
     @Override
-    public PlayerStatsSummaryListDto executeWithError() {
+    protected PlayerStatsSummaryListDto executeWithError() {
         return riotWebApi.getPlayerStatsSummary(getRegion(), summonerId, getRiotApiKeyValue());
     }
 }

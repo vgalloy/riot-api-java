@@ -26,7 +26,7 @@ public class GetChampionDataByIdQuery extends AbstractQuery<ChampionDto> {
     }
 
     @Override
-    public ChampionDto executeWithError() {
+    protected ChampionDto executeWithError() {
         return riotWebApi.getChampionDataById(getRegion(), championId, getRiotApiKeyValue());
     }
 }

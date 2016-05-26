@@ -22,7 +22,7 @@ public class GetShardStatusQuery extends AbstractQuery<ShardStatus> {
     }
 
     @Override
-    public ShardStatus executeWithError() {
+    protected ShardStatus executeWithError() {
         return riotWebApi.getShardStatus(getRegion());
     }
 }

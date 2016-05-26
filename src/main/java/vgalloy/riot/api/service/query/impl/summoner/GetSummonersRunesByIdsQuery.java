@@ -43,7 +43,7 @@ public class GetSummonersRunesByIdsQuery extends AbstractQuery<Map<String, RuneP
     }
 
     @Override
-    public Map<String, RunePagesDto> executeWithError() {
+    protected Map<String, RunePagesDto> executeWithError() {
         return riotWebApi.getSummonersRunesByIds(getRegion(), convert(summonerIds), getRiotApiKeyValue());
     }
 }

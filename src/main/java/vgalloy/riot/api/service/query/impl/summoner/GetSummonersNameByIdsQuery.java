@@ -42,7 +42,7 @@ public class GetSummonersNameByIdsQuery extends AbstractQuery<Map<String, String
     }
 
     @Override
-    public Map<String, String> executeWithError() {
+    protected Map<String, String> executeWithError() {
         return riotWebApi.getSummonersNameByIds(getRegion(), convert(summonerIds), getRiotApiKeyValue());
     }
 }

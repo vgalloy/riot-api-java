@@ -29,7 +29,7 @@ public class GetMasterQuery extends AbstractQuery<LeagueDto> {
     }
 
     @Override
-    public LeagueDto executeWithError() {
+    protected LeagueDto executeWithError() {
         return riotWebApi.getMaster(getRegion(), rankedQueueType, getRiotApiKeyValue());
     }
 }

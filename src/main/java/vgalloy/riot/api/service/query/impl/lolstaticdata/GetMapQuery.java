@@ -22,7 +22,7 @@ public class GetMapQuery extends AbstractQuery<MapDataDto> {
     }
 
     @Override
-    public MapDataDto executeWithError() {
+    protected MapDataDto executeWithError() {
         return riotWebApi.getMap(getRegion(), getRiotApiKeyValue());
     }
 }

@@ -25,7 +25,7 @@ public class GetPlayerScore extends AbstractQuery<Integer> {
     }
 
     @Override
-    public Integer executeWithError() {
+    protected Integer executeWithError() {
         return riotWebApi.getPlayerScore(getRegion(), getPlatformId(), playerId, getRiotApiKeyValue());
     }
 }

@@ -29,7 +29,7 @@ public class GetChallengerQuery extends AbstractQuery<LeagueDto> {
     }
 
     @Override
-    public LeagueDto executeWithError() {
+    protected LeagueDto executeWithError() {
         return riotWebApi.getChallenger(getRegion(), rankedQueueType, getRiotApiKeyValue());
     }
 }
