@@ -26,9 +26,7 @@ public class GetLeaguesEntryByTeamIdsQuery extends AbstractQuery<Map<String, Lis
      */
     public GetLeaguesEntryByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String... teamIds) {
         super(riotWebApi, defaultParameter);
-        for (String id : teamIds) {
-            this.teamIds.add(id);
-        }
+        addTeamIds(teamIds);
     }
 
     /**

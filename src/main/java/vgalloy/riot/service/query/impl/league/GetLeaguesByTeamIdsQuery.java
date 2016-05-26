@@ -1,6 +1,7 @@
 package vgalloy.riot.service.query.impl.league;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -26,9 +27,7 @@ public class GetLeaguesByTeamIdsQuery extends AbstractQuery<Map<String, List<Lea
      */
     public GetLeaguesByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String... teamIds) {
         super(riotWebApi, defaultParameter);
-        for (String id : teamIds) {
-            this.teamIds.add(id);
-        }
+        addTeamIds(teamIds);
     }
 
     /**
@@ -38,9 +37,7 @@ public class GetLeaguesByTeamIdsQuery extends AbstractQuery<Map<String, List<Lea
      * @return this
      */
     public GetLeaguesByTeamIdsQuery addTeamIds(String... teamIds) {
-        for (String id : teamIds) {
-            this.teamIds.add(id);
-        }
+        Collections.addAll(this.teamIds, teamIds);
         return this;
     }
 

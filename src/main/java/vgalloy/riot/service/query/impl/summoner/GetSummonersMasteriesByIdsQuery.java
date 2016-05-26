@@ -26,9 +26,7 @@ public class GetSummonersMasteriesByIdsQuery extends AbstractQuery<Map<String, M
      */
     public GetSummonersMasteriesByIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
         super(riotWebApi, defaultParameter);
-        for (long id : summonerIds) {
-            this.summonerIds.add(id); // TODO Factoriser PS :  cherhcer les autres endroits dans le code ou c'est pareil !
-        }
+        addSummonerIds(summonerIds);
     }
 
     /**

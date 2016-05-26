@@ -27,7 +27,7 @@ public class GetSummonersByNamesQuery extends AbstractQuery<Map<String, Summoner
      */
     public GetSummonersByNamesQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String... summonerNames) {
         super(riotWebApi, defaultParameter);
-        Collections.addAll(this.summonerNames, summonerNames); //TODO Refacto
+        addSummonerNames(summonerNames);
     }
 
     /**
@@ -45,6 +45,4 @@ public class GetSummonersByNamesQuery extends AbstractQuery<Map<String, Summoner
     public Map<String, SummonerDto> executeWithError() {
         return riotWebApi.getSummonersByNames(getRegion(), convert(summonerNames), getRiotApiKeyValue());
     }
-
-    // TODO Ajouter un add summoner
 }

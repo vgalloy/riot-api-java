@@ -405,7 +405,7 @@ public class RiotApi {
      * @param tournamentCode the tournament code
      * @return the query
      */
-    public GetMatchIdListByTournamentCodeQuery getMatchIdByTournamentCodeList(long tournamentCode) {
+    public GetMatchIdListByTournamentCodeQuery getMatchIdByTournamentCodeList(String tournamentCode) {
         return new GetMatchIdListByTournamentCodeQuery(riotWebApi, defaultParameter, tournamentCode);
     }
 

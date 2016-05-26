@@ -25,9 +25,9 @@ public class MatchApiTest extends AbstractTest {
     @Ignore
     public void testGetMatchIdByTournamentCodeList() {
         new QueryTester("MatchIdByTournamentCodeList")
-                .test(riotApi.getMatchIdByTournamentCodeList(5000).region(Region.EUW))
-                .test(riotApi.getMatchIdByTournamentCodeList(5000).region(Region.NA))
-                .test(riotApi.getMatchIdByTournamentCodeList(5000).region(Region.KR))
+                .test(riotApi.getMatchIdByTournamentCodeList("5000").region(Region.EUW))
+                .test(riotApi.getMatchIdByTournamentCodeList("5000").region(Region.NA))
+                .test(riotApi.getMatchIdByTournamentCodeList("5000").region(Region.KR))
                 .end();
     }
 

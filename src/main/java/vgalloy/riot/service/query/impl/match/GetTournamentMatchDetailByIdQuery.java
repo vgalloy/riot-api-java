@@ -18,7 +18,7 @@ public class GetTournamentMatchDetailByIdQuery extends AbstractQuery<MatchDetail
      *
      * @param riotWebApi        the riot web api for execute query
      * @param defaultParameter  the default query parameter
-     * @param tournamentMatchId the tournament code
+     * @param tournamentMatchId the tournament match id
      */
     public GetTournamentMatchDetailByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long tournamentMatchId) {
         super(riotWebApi, defaultParameter);

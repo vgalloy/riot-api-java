@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import vgalloy.riot.service.executor.Executor;
+import vgalloy.riot.service.query.Query;
 
 /**
  * @author Vincent Galloy
@@ -26,6 +27,11 @@ public class ExecutorImpl implements Executor {
         if (isRunning) {
             thread.start();
         }
+    }
+
+    @Override
+    public void addQuery(Query query) {
+        addTask(() -> query.execute());
     }
 
     @Override

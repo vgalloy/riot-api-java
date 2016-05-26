@@ -26,9 +26,7 @@ public class GetLeaguesEntryBySummonerIdsQuery extends AbstractQuery<Map<String,
      */
     public GetLeaguesEntryBySummonerIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
         super(riotWebApi, defaultParameter);
-        for (long id : summonerIds) {
-            this.summonerIds.add(id);
-        }
+        addSummonerIds(summonerIds);
     }
 
     /**

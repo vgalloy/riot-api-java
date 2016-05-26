@@ -25,9 +25,7 @@ public class GetSummonersNameByIdsQuery extends AbstractQuery<Map<String, String
      */
     public GetSummonersNameByIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
         super(riotWebApi, defaultParameter);
-        for (long id : summonerIds) {
-            this.summonerIds.add(id);
-        }
+        addSummonerIds(summonerIds);
     }
 
     /**

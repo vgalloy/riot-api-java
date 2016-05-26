@@ -12,7 +12,7 @@ import vgalloy.riot.service.query.DefaultParameter;
  */
 public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<List<Long>> {
 
-    private final long tournamentCode; // TODO Est ce que les tournamentCode sont des long ?????
+    private final String tournamentCode;
 
     /**
      * Constructor.
@@ -21,13 +21,13 @@ public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<List<Long
      * @param defaultParameter the default query parameter
      * @param tournamentCode   the tournament code
      */
-    public GetMatchIdListByTournamentCodeQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long tournamentCode) {
+    public GetMatchIdListByTournamentCodeQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String tournamentCode) {
         super(riotWebApi, defaultParameter);
         this.tournamentCode = tournamentCode;
     }
 
     @Override
     public List<Long> executeWithError() {
-        return riotWebApi.getMatchIdList(getRegion(), String.valueOf(tournamentCode), getRiotApiKeyValue());
+        return riotWebApi.getMatchIdList(getRegion(), tournamentCode, getRiotApiKeyValue());
     }
 }

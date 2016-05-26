@@ -23,7 +23,7 @@ public class CurrentGameApiTest extends AbstractTest {
         long summonerId = riotApi.getSummonerByNames(summonerName.toLowerCase())
                 .region(Region.EUW)
                 .execute()
-                .get(summonerName.toLowerCase()).getId();
+                .get(summonerName.toLowerCase().replaceAll("\\s+", "")).getId();
 
         new QueryTester("CurrentGameInfo")
                 .test(riotApi.getCurrentGameInfo(summonerId).region(Region.EUW))

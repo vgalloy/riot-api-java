@@ -1,20 +1,28 @@
 package vgalloy.riot.service.executor;
 
+import vgalloy.riot.service.query.Query;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent on 21/05/2016.
- *         TODO Add a shutdown method ?
- *         TODO Est-ce que cette classe est vraiment utile ?
  */
 public interface Executor {
+
+    /**
+     * Add the task in the executor list.
+     * If the current executor is running the task is immediately started
+     *
+     * @param task the task to execute
+     */
+    void addTask(Runnable task);
 
     /**
      * Add the query in the executor list.
      * If the current executor is running the query is immediately started
      *
-     * @param task the task to execute
+     * @param query the query to execute
      */
-    void addTask(Runnable task);
+    void addQuery(Query query);
 
     /**
      * Start to execute all the queries. You can still add tasks.
