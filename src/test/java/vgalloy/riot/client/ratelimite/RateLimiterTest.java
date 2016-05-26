@@ -15,8 +15,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by Vincent Galloy on 22/05/16
- * .
+ * @author Vincent Galloy
+ *         Created by Vincent Galloy on 22/05/16.
  */
 public class RateLimiterTest {
 
