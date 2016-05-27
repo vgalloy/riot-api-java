@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.lolstatus.dto;
 
 import java.util.List;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -10,7 +11,8 @@ import java.util.Objects;
 public class Incident {
 
     private boolean active;
-    private String created_at;
+    @JsonProperty("created_at")
+    private String createdAt;
     private long id;
     private List<Message> updates;
 
@@ -22,12 +24,12 @@ public class Incident {
         this.active = active;
     }
 
-    public String getCreated_at() {
-        return created_at;
+    public String getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
     public long getId() {
@@ -57,20 +59,20 @@ public class Incident {
         Incident incident = (Incident) o;
         return active == incident.active &&
                 id == incident.id &&
-                Objects.equals(created_at, incident.created_at) &&
+                Objects.equals(createdAt, incident.createdAt) &&
                 Objects.equals(updates, incident.updates);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(active, created_at, id, updates);
+        return Objects.hash(active, createdAt, id, updates);
     }
 
     @Override
     public String toString() {
         return "Incident{" +
                 "active=" + active +
-                ", created_at='" + created_at + '\'' +
+                ", createdAt='" + createdAt + '\'' +
                 ", id=" + id +
                 ", updates=" + updates +
                 '}';

@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.lolstatus.dto;
 
 import java.util.List;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -12,7 +13,8 @@ public class ShardStatus {
     private String hostname;
     private List<String> locales;
     private String name;
-    private String region_tag;
+    @JsonProperty("region_tag")
+    private String regionTag;
     private List<Service> services;
     private String slug;
 
@@ -40,12 +42,12 @@ public class ShardStatus {
         this.name = name;
     }
 
-    public String getRegion_tag() {
-        return region_tag;
+    public String getRegionTag() {
+        return regionTag;
     }
 
-    public void setRegion_tag(String region_tag) {
-        this.region_tag = region_tag;
+    public void setRegionTag(String regionTag) {
+        this.regionTag = regionTag;
     }
 
     public List<Service> getServices() {
@@ -76,14 +78,14 @@ public class ShardStatus {
         return Objects.equals(hostname, that.hostname) &&
                 Objects.equals(locales, that.locales) &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(region_tag, that.region_tag) &&
+                Objects.equals(regionTag, that.regionTag) &&
                 Objects.equals(services, that.services) &&
                 Objects.equals(slug, that.slug);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(hostname, locales, name, region_tag, services, slug);
+        return Objects.hash(hostname, locales, name, regionTag, services, slug);
     }
 
     @Override
@@ -92,7 +94,7 @@ public class ShardStatus {
                 "hostname='" + hostname + '\'' +
                 ", locales=" + locales +
                 ", name='" + name + '\'' +
-                ", region_tag='" + region_tag + '\'' +
+                ", regionTag='" + regionTag + '\'' +
                 ", services=" + services +
                 ", slug='" + slug + '\'' +
                 '}';

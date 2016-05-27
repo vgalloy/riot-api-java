@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
 import java.util.List;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -9,32 +10,35 @@ import java.util.Objects;
  */
 public class MasteryTreeDto {
 
-    private List<MasteryTreeListDto> Cunning;
-    private List<MasteryTreeListDto> Ferocity;
-    private List<MasteryTreeListDto> Resolve;
+    @JsonProperty("Cunning")
+    private List<MasteryTreeListDto> cunning;
+    @JsonProperty("Ferocity")
+    private List<MasteryTreeListDto> ferocity;
+    @JsonProperty("Resolve")
+    private List<MasteryTreeListDto> resolve;
 
     public List<MasteryTreeListDto> getCunning() {
-        return Cunning;
+        return cunning;
     }
 
     public void setCunning(List<MasteryTreeListDto> cunning) {
-        Cunning = cunning;
+        this.cunning = cunning;
     }
 
     public List<MasteryTreeListDto> getFerocity() {
-        return Ferocity;
+        return ferocity;
     }
 
     public void setFerocity(List<MasteryTreeListDto> ferocity) {
-        Ferocity = ferocity;
+        this.ferocity = ferocity;
     }
 
     public List<MasteryTreeListDto> getResolve() {
-        return Resolve;
+        return resolve;
     }
 
     public void setResolve(List<MasteryTreeListDto> resolve) {
-        Resolve = resolve;
+        this.resolve = resolve;
     }
 
     @Override
@@ -46,22 +50,22 @@ public class MasteryTreeDto {
             return false;
         }
         MasteryTreeDto that = (MasteryTreeDto) o;
-        return Objects.equals(Cunning, that.Cunning) &&
-                Objects.equals(Ferocity, that.Ferocity) &&
-                Objects.equals(Resolve, that.Resolve);
+        return Objects.equals(cunning, that.cunning) &&
+                Objects.equals(ferocity, that.ferocity) &&
+                Objects.equals(resolve, that.resolve);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Cunning, Ferocity, Resolve);
+        return Objects.hash(cunning, ferocity, resolve);
     }
 
     @Override
     public String toString() {
         return "MasteryTreeDto{" +
-                "Cunning=" + Cunning +
-                ", Ferocity=" + Ferocity +
-                ", Resolve=" + Resolve +
+                "cunning=" + cunning +
+                ", ferocity=" + ferocity +
+                ", resolve=" + resolve +
                 '}';
     }
 }

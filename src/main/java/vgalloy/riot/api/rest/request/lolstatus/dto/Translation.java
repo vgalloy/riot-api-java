@@ -1,6 +1,7 @@
 package vgalloy.riot.api.rest.request.lolstatus.dto;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -10,7 +11,8 @@ public class Translation {
 
     private String content;
     private String locale;
-    private String updated_at;
+    @JsonProperty("updated_at")
+    private String updatedAt;
 
     public String getContent() {
         return content;
@@ -28,12 +30,12 @@ public class Translation {
         this.locale = locale;
     }
 
-    public String getUpdated_at() {
-        return updated_at;
+    public String getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(String updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -47,12 +49,12 @@ public class Translation {
         Translation that = (Translation) o;
         return Objects.equals(content, that.content) &&
                 Objects.equals(locale, that.locale) &&
-                Objects.equals(updated_at, that.updated_at);
+                Objects.equals(updatedAt, that.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(content, locale, updated_at);
+        return Objects.hash(content, locale, updatedAt);
     }
 
     @Override
@@ -60,7 +62,7 @@ public class Translation {
         return "Translation{" +
                 "content='" + content + '\'' +
                 ", locale='" + locale + '\'' +
-                ", updated_at='" + updated_at + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
                 '}';
     }
 }

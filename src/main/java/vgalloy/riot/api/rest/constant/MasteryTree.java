@@ -5,5 +5,10 @@ package vgalloy.riot.api.rest.constant;
  *         Created by Vincent Galloy on 24/05/16.
  */
 public enum MasteryTree {
-    Cunning, Ferocity, Resolve
+    CUNNING, FEROCITY, RESOLVE;
+
+    @Override
+    public String toString() {
+        return name().substring(0, 1).toUpperCase() + name().substring(1).toLowerCase();
+    }
 }

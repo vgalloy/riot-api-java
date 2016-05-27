@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
+import java.util.stream.IntStream;
 import javax.ws.rs.InternalServerErrorException;
 
 import org.slf4j.Logger;
@@ -40,6 +41,7 @@ public abstract class AbstractTest {
         private final Logger logger = LoggerFactory.getLogger(QueryTester.class);
         private final String queryName;
         private boolean isSuccess = true;
+        private String code = "200";
 
         public QueryTester(String queryName) {
             this.queryName = Objects.requireNonNull(queryName, "queryName can not be null");
@@ -54,10 +56,11 @@ public abstract class AbstractTest {
             if (query.onInternalServerErrorException(new Callback<InternalServerErrorException>() {
                 @Override
                 public void process(InternalServerErrorException e) {
-                    throw e;
+                    code = "500";
                 }
             }).execute() == null) {
                 isSuccess = false;
+                code = "404";
             }
             return this;
         }
@@ -66,10 +69,13 @@ public abstract class AbstractTest {
          * End the assertion.
          */
         public void end() {
+            StringBuilder stringBuilder = new StringBuilder(queryName + " ");
+            IntStream.range(queryName.length(), 30).asLongStream().forEach(e -> stringBuilder.append("."));
+            String message = stringBuilder.append(" [ " + code + " ]").toString();
             if (isSuccess) {
-                logger.info("[ OK ] ................... {}.", queryName);
+                logger.info("{}", message);
             } else {
-                logger.warn("[ KO ] ................... {}.", queryName);
+                logger.warn("{}", message);
             }
         }
     }

@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
 import java.util.Map;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -12,12 +13,16 @@ public class RealmDto {
     private String cdn;
     private String css;
     private String dd;
-    private String l;
+    @JsonProperty("l")
+    private String realmL;
     private String lg;
-    private Map<String, String> n;
-    private int profileiconmax;
+    @JsonProperty("n")
+    private Map<String, String> realmN;
+    @JsonProperty("profileiconmax")
+    private int profileIconMax;
     private String store;
-    private String v;
+    @JsonProperty("v")
+    private String realmV;
 
     public String getCdn() {
         return cdn;
@@ -43,12 +48,12 @@ public class RealmDto {
         this.dd = dd;
     }
 
-    public String getL() {
-        return l;
+    public String getRealmL() {
+        return realmL;
     }
 
-    public void setL(String l) {
-        this.l = l;
+    public void setRealmL(String realmL) {
+        this.realmL = realmL;
     }
 
     public String getLg() {
@@ -59,20 +64,20 @@ public class RealmDto {
         this.lg = lg;
     }
 
-    public Map<String, String> getN() {
-        return n;
+    public Map<String, String> getRealmN() {
+        return realmN;
     }
 
-    public void setN(Map<String, String> n) {
-        this.n = n;
+    public void setRealmN(Map<String, String> realmN) {
+        this.realmN = realmN;
     }
 
-    public int getProfileiconmax() {
-        return profileiconmax;
+    public int getProfileIconMax() {
+        return profileIconMax;
     }
 
-    public void setProfileiconmax(int profileiconmax) {
-        this.profileiconmax = profileiconmax;
+    public void setProfileIconMax(int profileIconMax) {
+        this.profileIconMax = profileIconMax;
     }
 
     public String getStore() {
@@ -83,12 +88,12 @@ public class RealmDto {
         this.store = store;
     }
 
-    public String getV() {
-        return v;
+    public String getRealmV() {
+        return realmV;
     }
 
-    public void setV(String v) {
-        this.v = v;
+    public void setRealmV(String realmV) {
+        this.realmV = realmV;
     }
 
     @Override
@@ -100,20 +105,20 @@ public class RealmDto {
             return false;
         }
         RealmDto realmDto = (RealmDto) o;
-        return profileiconmax == realmDto.profileiconmax &&
+        return profileIconMax == realmDto.profileIconMax &&
                 Objects.equals(cdn, realmDto.cdn) &&
                 Objects.equals(css, realmDto.css) &&
                 Objects.equals(dd, realmDto.dd) &&
-                Objects.equals(l, realmDto.l) &&
+                Objects.equals(realmL, realmDto.realmL) &&
                 Objects.equals(lg, realmDto.lg) &&
-                Objects.equals(n, realmDto.n) &&
+                Objects.equals(realmN, realmDto.realmN) &&
                 Objects.equals(store, realmDto.store) &&
-                Objects.equals(v, realmDto.v);
+                Objects.equals(realmV, realmDto.realmV);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cdn, css, dd, l, lg, n, profileiconmax, store, v);
+        return Objects.hash(cdn, css, dd, realmL, lg, realmN, profileIconMax, store, realmV);
     }
 
     @Override
@@ -122,12 +127,12 @@ public class RealmDto {
                 "cdn='" + cdn + '\'' +
                 ", css='" + css + '\'' +
                 ", dd='" + dd + '\'' +
-                ", l='" + l + '\'' +
+                ", realmL='" + realmL + '\'' +
                 ", lg='" + lg + '\'' +
-                ", n=" + n +
-                ", profileiconmax=" + profileiconmax +
+                ", realmN=" + realmN +
+                ", profileIconMax=" + profileIconMax +
                 ", store='" + store + '\'' +
-                ", v='" + v + '\'' +
+                ", realmV='" + realmV + '\'' +
                 '}';
     }
 }

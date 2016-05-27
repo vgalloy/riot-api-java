@@ -1,6 +1,7 @@
 package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -10,11 +11,15 @@ public class ImageDto {
 
     private String full;
     private String group;
-    private int h;
+    @JsonProperty("h")
+    private int imageH;
     private String sprite;
-    private int w;
-    private int x;
-    private int y;
+    @JsonProperty("w")
+    private int imageW;
+    @JsonProperty("x")
+    private int imageX;
+    @JsonProperty("y")
+    private int imageY;
 
     public String getFull() {
         return full;
@@ -32,12 +37,12 @@ public class ImageDto {
         this.group = group;
     }
 
-    public int getH() {
-        return h;
+    public int getImageH() {
+        return imageH;
     }
 
-    public void setH(int h) {
-        this.h = h;
+    public void setImageH(int imageH) {
+        this.imageH = imageH;
     }
 
     public String getSprite() {
@@ -48,28 +53,28 @@ public class ImageDto {
         this.sprite = sprite;
     }
 
-    public int getW() {
-        return w;
+    public int getImageW() {
+        return imageW;
     }
 
-    public void setW(int w) {
-        this.w = w;
+    public void setImageW(int imageW) {
+        this.imageW = imageW;
     }
 
-    public int getX() {
-        return x;
+    public int getImageX() {
+        return imageX;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setImageX(int imageX) {
+        this.imageX = imageX;
     }
 
-    public int getY() {
-        return y;
+    public int getImageY() {
+        return imageY;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setImageY(int imageY) {
+        this.imageY = imageY;
     }
 
     @Override
@@ -81,10 +86,10 @@ public class ImageDto {
             return false;
         }
         ImageDto imageDto = (ImageDto) o;
-        return h == imageDto.h &&
-                w == imageDto.w &&
-                x == imageDto.x &&
-                y == imageDto.y &&
+        return imageH == imageDto.imageH &&
+                imageW == imageDto.imageW &&
+                imageX == imageDto.imageX &&
+                imageY == imageDto.imageY &&
                 Objects.equals(full, imageDto.full) &&
                 Objects.equals(group, imageDto.group) &&
                 Objects.equals(sprite, imageDto.sprite);
@@ -92,7 +97,7 @@ public class ImageDto {
 
     @Override
     public int hashCode() {
-        return Objects.hash(full, group, h, sprite, w, x, y);
+        return Objects.hash(full, group, imageH, sprite, imageW, imageX, imageY);
     }
 
     @Override
@@ -100,11 +105,11 @@ public class ImageDto {
         return "ImageDto{" +
                 "full='" + full + '\'' +
                 ", group='" + group + '\'' +
-                ", h=" + h +
+                ", imageH=" + imageH +
                 ", sprite='" + sprite + '\'' +
-                ", w=" + w +
-                ", x=" + x +
-                ", y=" + y +
+                ", imageW=" + imageW +
+                ", imageX=" + imageX +
+                ", imageY=" + imageY +
                 '}';
     }
 }

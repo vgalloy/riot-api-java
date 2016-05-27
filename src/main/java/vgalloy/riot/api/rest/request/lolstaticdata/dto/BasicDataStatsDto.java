@@ -76,38 +76,70 @@ public class BasicDataStatsDto {
     private double percentSpellBlockMod;
     @JsonProperty("PercentSpellVampMod")
     private double percentSpellVampMod;
-    private double rFlatArmorModPerLevel;
-    private double rFlatArmorPenetrationMod;
-    private double rFlatArmorPenetrationModPerLevel;
-    private double rFlatCritChanceModPerLevel;
-    private double rFlatCritDamageModPerLevel;
-    private double rFlatDodgeMod;
-    private double rFlatDodgeModPerLevel;
-    private double rFlatEnergyModPerLevel;
-    private double rFlatEnergyRegenModPerLevel;
-    private double rFlatGoldPer10Mod;
-    private double rFlatHPModPerLevel;
-    private double rFlatHPRegenModPerLevel;
-    private double rFlatMPModPerLevel;
-    private double rFlatMPRegenModPerLevel;
-    private double rFlatMagicDamageModPerLevel;
-    private double rFlatMagicPenetrationMod;
-    private double rFlatMagicPenetrationModPerLevel;
-    private double rFlatMovementSpeedModPerLevel;
-    private double rFlatPhysicalDamageModPerLevel;
-    private double rFlatSpellBlockModPerLevel;
-    private double rFlatTimeDeadMod;
-    private double rFlatTimeDeadModPerLevel;
-    private double rPercentArmorPenetrationMod;
-    private double rPercentArmorPenetrationModPerLevel;
-    private double rPercentAttackSpeedModPerLevel;
-    private double rPercentCooldownMod;
-    private double rPercentCooldownModPerLevel;
-    private double rPercentMagicPenetrationMod;
-    private double rPercentMagicPenetrationModPerLevel;
-    private double rPercentMovementSpeedModPerLevel;
-    private double rPercentTimeDeadMod;
-    private double rPercentTimeDeadModPerLevel;
+    @JsonProperty("rFlatArmorModPerLevel")
+    private double flatArmorModPerLevel;
+    @JsonProperty("rFlatArmorPenetrationMod")
+    private double flatArmorPenetrationMod;
+    @JsonProperty("rFlatArmorPenetrationModPerLevel")
+    private double flatArmorPenetrationModPerLevel;
+    @JsonProperty("rFlatCritChanceModPerLevel")
+    private double flatCritChanceModPerLevel;
+    @JsonProperty("rFlatCritDamageModPerLevel")
+    private double flatCritDamageModPerLevel;
+    @JsonProperty("rFlatDodgeMod")
+    private double flatDodgeMod;
+    @JsonProperty("rFlatDodgeModPerLevel")
+    private double flatDodgeModPerLevel;
+    @JsonProperty("rFlatEnergyModPerLevel")
+    private double flatEnergyModPerLevel;
+    @JsonProperty("rFlatEnergyRegenModPerLevel")
+    private double flatEnergyRegenModPerLevel;
+    @JsonProperty("rFlatGoldPer10Mod")
+    private double flatGoldPer10Mod;
+    @JsonProperty("rFlatHPModPerLevel")
+    private double flatHPModPerLevel;
+    @JsonProperty("rFlatHPRegenModPerLevel")
+    private double flatHPRegenModPerLevel;
+    @JsonProperty("rFlatMPModPerLevel")
+    private double flatMPModPerLevel;
+    @JsonProperty("rFlatMPRegenModPerLevel")
+    private double flatMPRegenModPerLevel;
+    @JsonProperty("rFlatMagicDamageModPerLevel")
+    private double flatMagicDamageModPerLevel;
+    @JsonProperty("rFlatMagicPenetrationMod")
+    private double flatMagicPenetrationMod;
+    @JsonProperty("rFlatMagicPenetrationModPerLevel")
+    private double flatMagicPenetrationModPerLevel;
+    @JsonProperty("rFlatMovementSpeedModPerLevel")
+    private double flatMovementSpeedModPerLevel;
+    @JsonProperty("rFlatPhysicalDamageModPerLevel")
+    private double flatPhysicalDamageModPerLevel;
+    @JsonProperty("rFlatSpellBlockModPerLevel")
+    private double flatSpellBlockModPerLevel;
+    @JsonProperty("rFlatTimeDeadMod")
+    private double flatTimeDeadMod;
+    @JsonProperty("rFlatTimeDeadModPerLevel")
+    private double flatTimeDeadModPerLevel;
+    @JsonProperty("rPercentArmorPenetrationMod")
+    private double percentArmorPenetrationMod;
+    @JsonProperty("rPercentArmorPenetrationModPerLevel")
+    private double percentArmorPenetrationModPerLevel;
+    @JsonProperty("rPercentAttackSpeedModPerLevel")
+    private double percentAttackSpeedModPerLevel;
+    @JsonProperty("rPercentCooldownMod")
+    private double percentCooldownMod;
+    @JsonProperty("rPercentCooldownModPerLevel")
+    private double percentCooldownModPerLevel;
+    @JsonProperty("rPercentMagicPenetrationMod")
+    private double percentMagicPenetrationMod;
+    @JsonProperty("rPercentMagicPenetrationModPerLevel")
+    private double percentMagicPenetrationModPerLevel;
+    @JsonProperty("rPercentMovementSpeedModPerLevel")
+    private double percentMovementSpeedModPerLevel;
+    @JsonProperty("rPercentTimeDeadMod")
+    private double percentTimeDeadMod;
+    @JsonProperty("rPercentTimeDeadModPerLevel")
+    private double percentTimeDeadModPerLevel;
 
     public double getFlatArmorMod() {
         return flatArmorMod;
@@ -373,260 +405,260 @@ public class BasicDataStatsDto {
         this.percentSpellVampMod = percentSpellVampMod;
     }
 
-    public double getrFlatArmorModPerLevel() {
-        return rFlatArmorModPerLevel;
+    public double getFlatArmorModPerLevel() {
+        return flatArmorModPerLevel;
     }
 
-    public void setrFlatArmorModPerLevel(double rFlatArmorModPerLevel) {
-        this.rFlatArmorModPerLevel = rFlatArmorModPerLevel;
+    public void setFlatArmorModPerLevel(double flatArmorModPerLevel) {
+        this.flatArmorModPerLevel = flatArmorModPerLevel;
     }
 
-    public double getrFlatArmorPenetrationMod() {
-        return rFlatArmorPenetrationMod;
+    public double getFlatArmorPenetrationMod() {
+        return flatArmorPenetrationMod;
     }
 
-    public void setrFlatArmorPenetrationMod(double rFlatArmorPenetrationMod) {
-        this.rFlatArmorPenetrationMod = rFlatArmorPenetrationMod;
+    public void setFlatArmorPenetrationMod(double flatArmorPenetrationMod) {
+        this.flatArmorPenetrationMod = flatArmorPenetrationMod;
     }
 
-    public double getrFlatArmorPenetrationModPerLevel() {
-        return rFlatArmorPenetrationModPerLevel;
+    public double getFlatArmorPenetrationModPerLevel() {
+        return flatArmorPenetrationModPerLevel;
     }
 
-    public void setrFlatArmorPenetrationModPerLevel(double rFlatArmorPenetrationModPerLevel) {
-        this.rFlatArmorPenetrationModPerLevel = rFlatArmorPenetrationModPerLevel;
+    public void setFlatArmorPenetrationModPerLevel(double flatArmorPenetrationModPerLevel) {
+        this.flatArmorPenetrationModPerLevel = flatArmorPenetrationModPerLevel;
     }
 
-    public double getrFlatCritChanceModPerLevel() {
-        return rFlatCritChanceModPerLevel;
+    public double getFlatCritChanceModPerLevel() {
+        return flatCritChanceModPerLevel;
     }
 
-    public void setrFlatCritChanceModPerLevel(double rFlatCritChanceModPerLevel) {
-        this.rFlatCritChanceModPerLevel = rFlatCritChanceModPerLevel;
+    public void setFlatCritChanceModPerLevel(double flatCritChanceModPerLevel) {
+        this.flatCritChanceModPerLevel = flatCritChanceModPerLevel;
     }
 
-    public double getrFlatCritDamageModPerLevel() {
-        return rFlatCritDamageModPerLevel;
+    public double getFlatCritDamageModPerLevel() {
+        return flatCritDamageModPerLevel;
     }
 
-    public void setrFlatCritDamageModPerLevel(double rFlatCritDamageModPerLevel) {
-        this.rFlatCritDamageModPerLevel = rFlatCritDamageModPerLevel;
+    public void setFlatCritDamageModPerLevel(double flatCritDamageModPerLevel) {
+        this.flatCritDamageModPerLevel = flatCritDamageModPerLevel;
     }
 
-    public double getrFlatDodgeMod() {
-        return rFlatDodgeMod;
+    public double getFlatDodgeMod() {
+        return flatDodgeMod;
     }
 
-    public void setrFlatDodgeMod(double rFlatDodgeMod) {
-        this.rFlatDodgeMod = rFlatDodgeMod;
+    public void setFlatDodgeMod(double flatDodgeMod) {
+        this.flatDodgeMod = flatDodgeMod;
     }
 
-    public double getrFlatDodgeModPerLevel() {
-        return rFlatDodgeModPerLevel;
+    public double getFlatDodgeModPerLevel() {
+        return flatDodgeModPerLevel;
     }
 
-    public void setrFlatDodgeModPerLevel(double rFlatDodgeModPerLevel) {
-        this.rFlatDodgeModPerLevel = rFlatDodgeModPerLevel;
+    public void setFlatDodgeModPerLevel(double flatDodgeModPerLevel) {
+        this.flatDodgeModPerLevel = flatDodgeModPerLevel;
     }
 
-    public double getrFlatEnergyModPerLevel() {
-        return rFlatEnergyModPerLevel;
+    public double getFlatEnergyModPerLevel() {
+        return flatEnergyModPerLevel;
     }
 
-    public void setrFlatEnergyModPerLevel(double rFlatEnergyModPerLevel) {
-        this.rFlatEnergyModPerLevel = rFlatEnergyModPerLevel;
+    public void setFlatEnergyModPerLevel(double flatEnergyModPerLevel) {
+        this.flatEnergyModPerLevel = flatEnergyModPerLevel;
     }
 
-    public double getrFlatEnergyRegenModPerLevel() {
-        return rFlatEnergyRegenModPerLevel;
+    public double getFlatEnergyRegenModPerLevel() {
+        return flatEnergyRegenModPerLevel;
     }
 
-    public void setrFlatEnergyRegenModPerLevel(double rFlatEnergyRegenModPerLevel) {
-        this.rFlatEnergyRegenModPerLevel = rFlatEnergyRegenModPerLevel;
+    public void setFlatEnergyRegenModPerLevel(double flatEnergyRegenModPerLevel) {
+        this.flatEnergyRegenModPerLevel = flatEnergyRegenModPerLevel;
     }
 
-    public double getrFlatGoldPer10Mod() {
-        return rFlatGoldPer10Mod;
+    public double getFlatGoldPer10Mod() {
+        return flatGoldPer10Mod;
     }
 
-    public void setrFlatGoldPer10Mod(double rFlatGoldPer10Mod) {
-        this.rFlatGoldPer10Mod = rFlatGoldPer10Mod;
+    public void setFlatGoldPer10Mod(double flatGoldPer10Mod) {
+        this.flatGoldPer10Mod = flatGoldPer10Mod;
     }
 
-    public double getrFlatHPModPerLevel() {
-        return rFlatHPModPerLevel;
+    public double getFlatHPModPerLevel() {
+        return flatHPModPerLevel;
     }
 
-    public void setrFlatHPModPerLevel(double rFlatHPModPerLevel) {
-        this.rFlatHPModPerLevel = rFlatHPModPerLevel;
+    public void setFlatHPModPerLevel(double flatHPModPerLevel) {
+        this.flatHPModPerLevel = flatHPModPerLevel;
     }
 
-    public double getrFlatHPRegenModPerLevel() {
-        return rFlatHPRegenModPerLevel;
+    public double getFlatHPRegenModPerLevel() {
+        return flatHPRegenModPerLevel;
     }
 
-    public void setrFlatHPRegenModPerLevel(double rFlatHPRegenModPerLevel) {
-        this.rFlatHPRegenModPerLevel = rFlatHPRegenModPerLevel;
+    public void setFlatHPRegenModPerLevel(double flatHPRegenModPerLevel) {
+        this.flatHPRegenModPerLevel = flatHPRegenModPerLevel;
     }
 
-    public double getrFlatMPModPerLevel() {
-        return rFlatMPModPerLevel;
+    public double getFlatMPModPerLevel() {
+        return flatMPModPerLevel;
     }
 
-    public void setrFlatMPModPerLevel(double rFlatMPModPerLevel) {
-        this.rFlatMPModPerLevel = rFlatMPModPerLevel;
+    public void setFlatMPModPerLevel(double flatMPModPerLevel) {
+        this.flatMPModPerLevel = flatMPModPerLevel;
     }
 
-    public double getrFlatMPRegenModPerLevel() {
-        return rFlatMPRegenModPerLevel;
+    public double getFlatMPRegenModPerLevel() {
+        return flatMPRegenModPerLevel;
     }
 
-    public void setrFlatMPRegenModPerLevel(double rFlatMPRegenModPerLevel) {
-        this.rFlatMPRegenModPerLevel = rFlatMPRegenModPerLevel;
+    public void setFlatMPRegenModPerLevel(double flatMPRegenModPerLevel) {
+        this.flatMPRegenModPerLevel = flatMPRegenModPerLevel;
     }
 
-    public double getrFlatMagicDamageModPerLevel() {
-        return rFlatMagicDamageModPerLevel;
+    public double getFlatMagicDamageModPerLevel() {
+        return flatMagicDamageModPerLevel;
     }
 
-    public void setrFlatMagicDamageModPerLevel(double rFlatMagicDamageModPerLevel) {
-        this.rFlatMagicDamageModPerLevel = rFlatMagicDamageModPerLevel;
+    public void setFlatMagicDamageModPerLevel(double flatMagicDamageModPerLevel) {
+        this.flatMagicDamageModPerLevel = flatMagicDamageModPerLevel;
     }
 
-    public double getrFlatMagicPenetrationMod() {
-        return rFlatMagicPenetrationMod;
+    public double getFlatMagicPenetrationMod() {
+        return flatMagicPenetrationMod;
     }
 
-    public void setrFlatMagicPenetrationMod(double rFlatMagicPenetrationMod) {
-        this.rFlatMagicPenetrationMod = rFlatMagicPenetrationMod;
+    public void setFlatMagicPenetrationMod(double flatMagicPenetrationMod) {
+        this.flatMagicPenetrationMod = flatMagicPenetrationMod;
     }
 
-    public double getrFlatMagicPenetrationModPerLevel() {
-        return rFlatMagicPenetrationModPerLevel;
+    public double getFlatMagicPenetrationModPerLevel() {
+        return flatMagicPenetrationModPerLevel;
     }
 
-    public void setrFlatMagicPenetrationModPerLevel(double rFlatMagicPenetrationModPerLevel) {
-        this.rFlatMagicPenetrationModPerLevel = rFlatMagicPenetrationModPerLevel;
+    public void setFlatMagicPenetrationModPerLevel(double flatMagicPenetrationModPerLevel) {
+        this.flatMagicPenetrationModPerLevel = flatMagicPenetrationModPerLevel;
     }
 
-    public double getrFlatMovementSpeedModPerLevel() {
-        return rFlatMovementSpeedModPerLevel;
+    public double getFlatMovementSpeedModPerLevel() {
+        return flatMovementSpeedModPerLevel;
     }
 
-    public void setrFlatMovementSpeedModPerLevel(double rFlatMovementSpeedModPerLevel) {
-        this.rFlatMovementSpeedModPerLevel = rFlatMovementSpeedModPerLevel;
+    public void setFlatMovementSpeedModPerLevel(double flatMovementSpeedModPerLevel) {
+        this.flatMovementSpeedModPerLevel = flatMovementSpeedModPerLevel;
     }
 
-    public double getrFlatPhysicalDamageModPerLevel() {
-        return rFlatPhysicalDamageModPerLevel;
+    public double getFlatPhysicalDamageModPerLevel() {
+        return flatPhysicalDamageModPerLevel;
     }
 
-    public void setrFlatPhysicalDamageModPerLevel(double rFlatPhysicalDamageModPerLevel) {
-        this.rFlatPhysicalDamageModPerLevel = rFlatPhysicalDamageModPerLevel;
+    public void setFlatPhysicalDamageModPerLevel(double flatPhysicalDamageModPerLevel) {
+        this.flatPhysicalDamageModPerLevel = flatPhysicalDamageModPerLevel;
     }
 
-    public double getrFlatSpellBlockModPerLevel() {
-        return rFlatSpellBlockModPerLevel;
+    public double getFlatSpellBlockModPerLevel() {
+        return flatSpellBlockModPerLevel;
     }
 
-    public void setrFlatSpellBlockModPerLevel(double rFlatSpellBlockModPerLevel) {
-        this.rFlatSpellBlockModPerLevel = rFlatSpellBlockModPerLevel;
+    public void setFlatSpellBlockModPerLevel(double flatSpellBlockModPerLevel) {
+        this.flatSpellBlockModPerLevel = flatSpellBlockModPerLevel;
     }
 
-    public double getrFlatTimeDeadMod() {
-        return rFlatTimeDeadMod;
+    public double getFlatTimeDeadMod() {
+        return flatTimeDeadMod;
     }
 
-    public void setrFlatTimeDeadMod(double rFlatTimeDeadMod) {
-        this.rFlatTimeDeadMod = rFlatTimeDeadMod;
+    public void setFlatTimeDeadMod(double flatTimeDeadMod) {
+        this.flatTimeDeadMod = flatTimeDeadMod;
     }
 
-    public double getrFlatTimeDeadModPerLevel() {
-        return rFlatTimeDeadModPerLevel;
+    public double getFlatTimeDeadModPerLevel() {
+        return flatTimeDeadModPerLevel;
     }
 
-    public void setrFlatTimeDeadModPerLevel(double rFlatTimeDeadModPerLevel) {
-        this.rFlatTimeDeadModPerLevel = rFlatTimeDeadModPerLevel;
+    public void setFlatTimeDeadModPerLevel(double flatTimeDeadModPerLevel) {
+        this.flatTimeDeadModPerLevel = flatTimeDeadModPerLevel;
     }
 
-    public double getrPercentArmorPenetrationMod() {
-        return rPercentArmorPenetrationMod;
+    public double getPercentArmorPenetrationMod() {
+        return percentArmorPenetrationMod;
     }
 
-    public void setrPercentArmorPenetrationMod(double rPercentArmorPenetrationMod) {
-        this.rPercentArmorPenetrationMod = rPercentArmorPenetrationMod;
+    public void setPercentArmorPenetrationMod(double percentArmorPenetrationMod) {
+        this.percentArmorPenetrationMod = percentArmorPenetrationMod;
     }
 
-    public double getrPercentArmorPenetrationModPerLevel() {
-        return rPercentArmorPenetrationModPerLevel;
+    public double getPercentArmorPenetrationModPerLevel() {
+        return percentArmorPenetrationModPerLevel;
     }
 
-    public void setrPercentArmorPenetrationModPerLevel(double rPercentArmorPenetrationModPerLevel) {
-        this.rPercentArmorPenetrationModPerLevel = rPercentArmorPenetrationModPerLevel;
+    public void setPercentArmorPenetrationModPerLevel(double percentArmorPenetrationModPerLevel) {
+        this.percentArmorPenetrationModPerLevel = percentArmorPenetrationModPerLevel;
     }
 
-    public double getrPercentAttackSpeedModPerLevel() {
-        return rPercentAttackSpeedModPerLevel;
+    public double getPercentAttackSpeedModPerLevel() {
+        return percentAttackSpeedModPerLevel;
     }
 
-    public void setrPercentAttackSpeedModPerLevel(double rPercentAttackSpeedModPerLevel) {
-        this.rPercentAttackSpeedModPerLevel = rPercentAttackSpeedModPerLevel;
+    public void setPercentAttackSpeedModPerLevel(double percentAttackSpeedModPerLevel) {
+        this.percentAttackSpeedModPerLevel = percentAttackSpeedModPerLevel;
     }
 
-    public double getrPercentCooldownMod() {
-        return rPercentCooldownMod;
+    public double getPercentCooldownMod() {
+        return percentCooldownMod;
     }
 
-    public void setrPercentCooldownMod(double rPercentCooldownMod) {
-        this.rPercentCooldownMod = rPercentCooldownMod;
+    public void setPercentCooldownMod(double percentCooldownMod) {
+        this.percentCooldownMod = percentCooldownMod;
     }
 
-    public double getrPercentCooldownModPerLevel() {
-        return rPercentCooldownModPerLevel;
+    public double getPercentCooldownModPerLevel() {
+        return percentCooldownModPerLevel;
     }
 
-    public void setrPercentCooldownModPerLevel(double rPercentCooldownModPerLevel) {
-        this.rPercentCooldownModPerLevel = rPercentCooldownModPerLevel;
+    public void setPercentCooldownModPerLevel(double percentCooldownModPerLevel) {
+        this.percentCooldownModPerLevel = percentCooldownModPerLevel;
     }
 
-    public double getrPercentMagicPenetrationMod() {
-        return rPercentMagicPenetrationMod;
+    public double getPercentMagicPenetrationMod() {
+        return percentMagicPenetrationMod;
     }
 
-    public void setrPercentMagicPenetrationMod(double rPercentMagicPenetrationMod) {
-        this.rPercentMagicPenetrationMod = rPercentMagicPenetrationMod;
+    public void setPercentMagicPenetrationMod(double percentMagicPenetrationMod) {
+        this.percentMagicPenetrationMod = percentMagicPenetrationMod;
     }
 
-    public double getrPercentMagicPenetrationModPerLevel() {
-        return rPercentMagicPenetrationModPerLevel;
+    public double getPercentMagicPenetrationModPerLevel() {
+        return percentMagicPenetrationModPerLevel;
     }
 
-    public void setrPercentMagicPenetrationModPerLevel(double rPercentMagicPenetrationModPerLevel) {
-        this.rPercentMagicPenetrationModPerLevel = rPercentMagicPenetrationModPerLevel;
+    public void setPercentMagicPenetrationModPerLevel(double percentMagicPenetrationModPerLevel) {
+        this.percentMagicPenetrationModPerLevel = percentMagicPenetrationModPerLevel;
     }
 
-    public double getrPercentMovementSpeedModPerLevel() {
-        return rPercentMovementSpeedModPerLevel;
+    public double getPercentMovementSpeedModPerLevel() {
+        return percentMovementSpeedModPerLevel;
     }
 
-    public void setrPercentMovementSpeedModPerLevel(double rPercentMovementSpeedModPerLevel) {
-        this.rPercentMovementSpeedModPerLevel = rPercentMovementSpeedModPerLevel;
+    public void setPercentMovementSpeedModPerLevel(double percentMovementSpeedModPerLevel) {
+        this.percentMovementSpeedModPerLevel = percentMovementSpeedModPerLevel;
     }
 
-    public double getrPercentTimeDeadMod() {
-        return rPercentTimeDeadMod;
+    public double getPercentTimeDeadMod() {
+        return percentTimeDeadMod;
     }
 
-    public void setrPercentTimeDeadMod(double rPercentTimeDeadMod) {
-        this.rPercentTimeDeadMod = rPercentTimeDeadMod;
+    public void setPercentTimeDeadMod(double percentTimeDeadMod) {
+        this.percentTimeDeadMod = percentTimeDeadMod;
     }
 
-    public double getrPercentTimeDeadModPerLevel() {
-        return rPercentTimeDeadModPerLevel;
+    public double getPercentTimeDeadModPerLevel() {
+        return percentTimeDeadModPerLevel;
     }
 
-    public void setrPercentTimeDeadModPerLevel(double rPercentTimeDeadModPerLevel) {
-        this.rPercentTimeDeadModPerLevel = rPercentTimeDeadModPerLevel;
+    public void setPercentTimeDeadModPerLevel(double percentTimeDeadModPerLevel) {
+        this.percentTimeDeadModPerLevel = percentTimeDeadModPerLevel;
     }
 
     @Override
@@ -671,43 +703,43 @@ public class BasicDataStatsDto {
                 Double.compare(that.percentPhysicalDamageMod, percentPhysicalDamageMod) == 0 &&
                 Double.compare(that.percentSpellBlockMod, percentSpellBlockMod) == 0 &&
                 Double.compare(that.percentSpellVampMod, percentSpellVampMod) == 0 &&
-                Double.compare(that.rFlatArmorModPerLevel, rFlatArmorModPerLevel) == 0 &&
-                Double.compare(that.rFlatArmorPenetrationMod, rFlatArmorPenetrationMod) == 0 &&
-                Double.compare(that.rFlatArmorPenetrationModPerLevel, rFlatArmorPenetrationModPerLevel) == 0 &&
-                Double.compare(that.rFlatCritChanceModPerLevel, rFlatCritChanceModPerLevel) == 0 &&
-                Double.compare(that.rFlatCritDamageModPerLevel, rFlatCritDamageModPerLevel) == 0 &&
-                Double.compare(that.rFlatDodgeMod, rFlatDodgeMod) == 0 &&
-                Double.compare(that.rFlatDodgeModPerLevel, rFlatDodgeModPerLevel) == 0 &&
-                Double.compare(that.rFlatEnergyModPerLevel, rFlatEnergyModPerLevel) == 0 &&
-                Double.compare(that.rFlatEnergyRegenModPerLevel, rFlatEnergyRegenModPerLevel) == 0 &&
-                Double.compare(that.rFlatGoldPer10Mod, rFlatGoldPer10Mod) == 0 &&
-                Double.compare(that.rFlatHPModPerLevel, rFlatHPModPerLevel) == 0 &&
-                Double.compare(that.rFlatHPRegenModPerLevel, rFlatHPRegenModPerLevel) == 0 &&
-                Double.compare(that.rFlatMPModPerLevel, rFlatMPModPerLevel) == 0 &&
-                Double.compare(that.rFlatMPRegenModPerLevel, rFlatMPRegenModPerLevel) == 0 &&
-                Double.compare(that.rFlatMagicDamageModPerLevel, rFlatMagicDamageModPerLevel) == 0 &&
-                Double.compare(that.rFlatMagicPenetrationMod, rFlatMagicPenetrationMod) == 0 &&
-                Double.compare(that.rFlatMagicPenetrationModPerLevel, rFlatMagicPenetrationModPerLevel) == 0 &&
-                Double.compare(that.rFlatMovementSpeedModPerLevel, rFlatMovementSpeedModPerLevel) == 0 &&
-                Double.compare(that.rFlatPhysicalDamageModPerLevel, rFlatPhysicalDamageModPerLevel) == 0 &&
-                Double.compare(that.rFlatSpellBlockModPerLevel, rFlatSpellBlockModPerLevel) == 0 &&
-                Double.compare(that.rFlatTimeDeadMod, rFlatTimeDeadMod) == 0 &&
-                Double.compare(that.rFlatTimeDeadModPerLevel, rFlatTimeDeadModPerLevel) == 0 &&
-                Double.compare(that.rPercentArmorPenetrationMod, rPercentArmorPenetrationMod) == 0 &&
-                Double.compare(that.rPercentArmorPenetrationModPerLevel, rPercentArmorPenetrationModPerLevel) == 0 &&
-                Double.compare(that.rPercentAttackSpeedModPerLevel, rPercentAttackSpeedModPerLevel) == 0 &&
-                Double.compare(that.rPercentCooldownMod, rPercentCooldownMod) == 0 &&
-                Double.compare(that.rPercentCooldownModPerLevel, rPercentCooldownModPerLevel) == 0 &&
-                Double.compare(that.rPercentMagicPenetrationMod, rPercentMagicPenetrationMod) == 0 &&
-                Double.compare(that.rPercentMagicPenetrationModPerLevel, rPercentMagicPenetrationModPerLevel) == 0 &&
-                Double.compare(that.rPercentMovementSpeedModPerLevel, rPercentMovementSpeedModPerLevel) == 0 &&
-                Double.compare(that.rPercentTimeDeadMod, rPercentTimeDeadMod) == 0 &&
-                Double.compare(that.rPercentTimeDeadModPerLevel, rPercentTimeDeadModPerLevel) == 0;
+                Double.compare(that.flatArmorModPerLevel, flatArmorModPerLevel) == 0 &&
+                Double.compare(that.flatArmorPenetrationMod, flatArmorPenetrationMod) == 0 &&
+                Double.compare(that.flatArmorPenetrationModPerLevel, flatArmorPenetrationModPerLevel) == 0 &&
+                Double.compare(that.flatCritChanceModPerLevel, flatCritChanceModPerLevel) == 0 &&
+                Double.compare(that.flatCritDamageModPerLevel, flatCritDamageModPerLevel) == 0 &&
+                Double.compare(that.flatDodgeMod, flatDodgeMod) == 0 &&
+                Double.compare(that.flatDodgeModPerLevel, flatDodgeModPerLevel) == 0 &&
+                Double.compare(that.flatEnergyModPerLevel, flatEnergyModPerLevel) == 0 &&
+                Double.compare(that.flatEnergyRegenModPerLevel, flatEnergyRegenModPerLevel) == 0 &&
+                Double.compare(that.flatGoldPer10Mod, flatGoldPer10Mod) == 0 &&
+                Double.compare(that.flatHPModPerLevel, flatHPModPerLevel) == 0 &&
+                Double.compare(that.flatHPRegenModPerLevel, flatHPRegenModPerLevel) == 0 &&
+                Double.compare(that.flatMPModPerLevel, flatMPModPerLevel) == 0 &&
+                Double.compare(that.flatMPRegenModPerLevel, flatMPRegenModPerLevel) == 0 &&
+                Double.compare(that.flatMagicDamageModPerLevel, flatMagicDamageModPerLevel) == 0 &&
+                Double.compare(that.flatMagicPenetrationMod, flatMagicPenetrationMod) == 0 &&
+                Double.compare(that.flatMagicPenetrationModPerLevel, flatMagicPenetrationModPerLevel) == 0 &&
+                Double.compare(that.flatMovementSpeedModPerLevel, flatMovementSpeedModPerLevel) == 0 &&
+                Double.compare(that.flatPhysicalDamageModPerLevel, flatPhysicalDamageModPerLevel) == 0 &&
+                Double.compare(that.flatSpellBlockModPerLevel, flatSpellBlockModPerLevel) == 0 &&
+                Double.compare(that.flatTimeDeadMod, flatTimeDeadMod) == 0 &&
+                Double.compare(that.flatTimeDeadModPerLevel, flatTimeDeadModPerLevel) == 0 &&
+                Double.compare(that.percentArmorPenetrationMod, percentArmorPenetrationMod) == 0 &&
+                Double.compare(that.percentArmorPenetrationModPerLevel, percentArmorPenetrationModPerLevel) == 0 &&
+                Double.compare(that.percentAttackSpeedModPerLevel, percentAttackSpeedModPerLevel) == 0 &&
+                Double.compare(that.percentCooldownMod, percentCooldownMod) == 0 &&
+                Double.compare(that.percentCooldownModPerLevel, percentCooldownModPerLevel) == 0 &&
+                Double.compare(that.percentMagicPenetrationMod, percentMagicPenetrationMod) == 0 &&
+                Double.compare(that.percentMagicPenetrationModPerLevel, percentMagicPenetrationModPerLevel) == 0 &&
+                Double.compare(that.percentMovementSpeedModPerLevel, percentMovementSpeedModPerLevel) == 0 &&
+                Double.compare(that.percentTimeDeadMod, percentTimeDeadMod) == 0 &&
+                Double.compare(that.percentTimeDeadModPerLevel, percentTimeDeadModPerLevel) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(flatArmorMod, flatAttackSpeedMod, flatBlockMod, flatCritChanceMod, flatCritDamageMod, flatEXPBonus, flatEnergyPoolMod, flatEnergyRegenMod, flatHPPoolMod, flatHPRegenMod, flatMPPoolMod, flatMPRegenMod, flatMagicDamageMod, flatMovementSpeedMod, flatPhysicalDamageMod, flatSpellBlockMod, percentArmorMod, percentAttackSpeedMod, percentBlockMod, percentCritChanceMod, percentCritDamageMod, percentDodgeMod, percentEXPBonus, percentHPPoolMod, percentHPRegenMod, percentLifeStealMod, percentMPPoolMod, percentMPRegenMod, percentMagicDamageMod, percentMovementSpeedMod, percentPhysicalDamageMod, percentSpellBlockMod, percentSpellVampMod, rFlatArmorModPerLevel, rFlatArmorPenetrationMod, rFlatArmorPenetrationModPerLevel, rFlatCritChanceModPerLevel, rFlatCritDamageModPerLevel, rFlatDodgeMod, rFlatDodgeModPerLevel, rFlatEnergyModPerLevel, rFlatEnergyRegenModPerLevel, rFlatGoldPer10Mod, rFlatHPModPerLevel, rFlatHPRegenModPerLevel, rFlatMPModPerLevel, rFlatMPRegenModPerLevel, rFlatMagicDamageModPerLevel, rFlatMagicPenetrationMod, rFlatMagicPenetrationModPerLevel, rFlatMovementSpeedModPerLevel, rFlatPhysicalDamageModPerLevel, rFlatSpellBlockModPerLevel, rFlatTimeDeadMod, rFlatTimeDeadModPerLevel, rPercentArmorPenetrationMod, rPercentArmorPenetrationModPerLevel, rPercentAttackSpeedModPerLevel, rPercentCooldownMod, rPercentCooldownModPerLevel, rPercentMagicPenetrationMod, rPercentMagicPenetrationModPerLevel, rPercentMovementSpeedModPerLevel, rPercentTimeDeadMod, rPercentTimeDeadModPerLevel);
+        return Objects.hash(flatArmorMod, flatAttackSpeedMod, flatBlockMod, flatCritChanceMod, flatCritDamageMod, flatEXPBonus, flatEnergyPoolMod, flatEnergyRegenMod, flatHPPoolMod, flatHPRegenMod, flatMPPoolMod, flatMPRegenMod, flatMagicDamageMod, flatMovementSpeedMod, flatPhysicalDamageMod, flatSpellBlockMod, percentArmorMod, percentAttackSpeedMod, percentBlockMod, percentCritChanceMod, percentCritDamageMod, percentDodgeMod, percentEXPBonus, percentHPPoolMod, percentHPRegenMod, percentLifeStealMod, percentMPPoolMod, percentMPRegenMod, percentMagicDamageMod, percentMovementSpeedMod, percentPhysicalDamageMod, percentSpellBlockMod, percentSpellVampMod, flatArmorModPerLevel, flatArmorPenetrationMod, flatArmorPenetrationModPerLevel, flatCritChanceModPerLevel, flatCritDamageModPerLevel, flatDodgeMod, flatDodgeModPerLevel, flatEnergyModPerLevel, flatEnergyRegenModPerLevel, flatGoldPer10Mod, flatHPModPerLevel, flatHPRegenModPerLevel, flatMPModPerLevel, flatMPRegenModPerLevel, flatMagicDamageModPerLevel, flatMagicPenetrationMod, flatMagicPenetrationModPerLevel, flatMovementSpeedModPerLevel, flatPhysicalDamageModPerLevel, flatSpellBlockModPerLevel, flatTimeDeadMod, flatTimeDeadModPerLevel, percentArmorPenetrationMod, percentArmorPenetrationModPerLevel, percentAttackSpeedModPerLevel, percentCooldownMod, percentCooldownModPerLevel, percentMagicPenetrationMod, percentMagicPenetrationModPerLevel, percentMovementSpeedModPerLevel, percentTimeDeadMod, percentTimeDeadModPerLevel);
     }
 
     @Override
@@ -746,38 +778,38 @@ public class BasicDataStatsDto {
                 ", percentPhysicalDamageMod=" + percentPhysicalDamageMod +
                 ", percentSpellBlockMod=" + percentSpellBlockMod +
                 ", percentSpellVampMod=" + percentSpellVampMod +
-                ", rFlatArmorModPerLevel=" + rFlatArmorModPerLevel +
-                ", rFlatArmorPenetrationMod=" + rFlatArmorPenetrationMod +
-                ", rFlatArmorPenetrationModPerLevel=" + rFlatArmorPenetrationModPerLevel +
-                ", rFlatCritChanceModPerLevel=" + rFlatCritChanceModPerLevel +
-                ", rFlatCritDamageModPerLevel=" + rFlatCritDamageModPerLevel +
-                ", rFlatDodgeMod=" + rFlatDodgeMod +
-                ", rFlatDodgeModPerLevel=" + rFlatDodgeModPerLevel +
-                ", rFlatEnergyModPerLevel=" + rFlatEnergyModPerLevel +
-                ", rFlatEnergyRegenModPerLevel=" + rFlatEnergyRegenModPerLevel +
-                ", rFlatGoldPer10Mod=" + rFlatGoldPer10Mod +
-                ", rFlatHPModPerLevel=" + rFlatHPModPerLevel +
-                ", rFlatHPRegenModPerLevel=" + rFlatHPRegenModPerLevel +
-                ", rFlatMPModPerLevel=" + rFlatMPModPerLevel +
-                ", rFlatMPRegenModPerLevel=" + rFlatMPRegenModPerLevel +
-                ", rFlatMagicDamageModPerLevel=" + rFlatMagicDamageModPerLevel +
-                ", rFlatMagicPenetrationMod=" + rFlatMagicPenetrationMod +
-                ", rFlatMagicPenetrationModPerLevel=" + rFlatMagicPenetrationModPerLevel +
-                ", rFlatMovementSpeedModPerLevel=" + rFlatMovementSpeedModPerLevel +
-                ", rFlatPhysicalDamageModPerLevel=" + rFlatPhysicalDamageModPerLevel +
-                ", rFlatSpellBlockModPerLevel=" + rFlatSpellBlockModPerLevel +
-                ", rFlatTimeDeadMod=" + rFlatTimeDeadMod +
-                ", rFlatTimeDeadModPerLevel=" + rFlatTimeDeadModPerLevel +
-                ", rPercentArmorPenetrationMod=" + rPercentArmorPenetrationMod +
-                ", rPercentArmorPenetrationModPerLevel=" + rPercentArmorPenetrationModPerLevel +
-                ", rPercentAttackSpeedModPerLevel=" + rPercentAttackSpeedModPerLevel +
-                ", rPercentCooldownMod=" + rPercentCooldownMod +
-                ", rPercentCooldownModPerLevel=" + rPercentCooldownModPerLevel +
-                ", rPercentMagicPenetrationMod=" + rPercentMagicPenetrationMod +
-                ", rPercentMagicPenetrationModPerLevel=" + rPercentMagicPenetrationModPerLevel +
-                ", rPercentMovementSpeedModPerLevel=" + rPercentMovementSpeedModPerLevel +
-                ", rPercentTimeDeadMod=" + rPercentTimeDeadMod +
-                ", rPercentTimeDeadModPerLevel=" + rPercentTimeDeadModPerLevel +
+                ", flatArmorModPerLevel=" + flatArmorModPerLevel +
+                ", flatArmorPenetrationMod=" + flatArmorPenetrationMod +
+                ", flatArmorPenetrationModPerLevel=" + flatArmorPenetrationModPerLevel +
+                ", flatCritChanceModPerLevel=" + flatCritChanceModPerLevel +
+                ", flatCritDamageModPerLevel=" + flatCritDamageModPerLevel +
+                ", flatDodgeMod=" + flatDodgeMod +
+                ", flatDodgeModPerLevel=" + flatDodgeModPerLevel +
+                ", flatEnergyModPerLevel=" + flatEnergyModPerLevel +
+                ", flatEnergyRegenModPerLevel=" + flatEnergyRegenModPerLevel +
+                ", flatGoldPer10Mod=" + flatGoldPer10Mod +
+                ", flatHPModPerLevel=" + flatHPModPerLevel +
+                ", flatHPRegenModPerLevel=" + flatHPRegenModPerLevel +
+                ", flatMPModPerLevel=" + flatMPModPerLevel +
+                ", flatMPRegenModPerLevel=" + flatMPRegenModPerLevel +
+                ", flatMagicDamageModPerLevel=" + flatMagicDamageModPerLevel +
+                ", flatMagicPenetrationMod=" + flatMagicPenetrationMod +
+                ", flatMagicPenetrationModPerLevel=" + flatMagicPenetrationModPerLevel +
+                ", flatMovementSpeedModPerLevel=" + flatMovementSpeedModPerLevel +
+                ", flatPhysicalDamageModPerLevel=" + flatPhysicalDamageModPerLevel +
+                ", flatSpellBlockModPerLevel=" + flatSpellBlockModPerLevel +
+                ", flatTimeDeadMod=" + flatTimeDeadMod +
+                ", flatTimeDeadModPerLevel=" + flatTimeDeadModPerLevel +
+                ", percentArmorPenetrationMod=" + percentArmorPenetrationMod +
+                ", percentArmorPenetrationModPerLevel=" + percentArmorPenetrationModPerLevel +
+                ", percentAttackSpeedModPerLevel=" + percentAttackSpeedModPerLevel +
+                ", percentCooldownMod=" + percentCooldownMod +
+                ", percentCooldownModPerLevel=" + percentCooldownModPerLevel +
+                ", percentMagicPenetrationMod=" + percentMagicPenetrationMod +
+                ", percentMagicPenetrationModPerLevel=" + percentMagicPenetrationModPerLevel +
+                ", percentMovementSpeedModPerLevel=" + percentMovementSpeedModPerLevel +
+                ", percentTimeDeadMod=" + percentTimeDeadMod +
+                ", percentTimeDeadModPerLevel=" + percentTimeDeadModPerLevel +
                 '}';
     }
 }

@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.lolstatus.dto;
 
 import java.util.List;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
@@ -11,11 +12,13 @@ public class Message {
 
     private String author;
     private String content;
-    private String created_at;
+    @JsonProperty("created_at")
+    private String createdAt;
     private String id;
     private String severity;
     private List<Translation> translations;
-    private String updated_at;
+    @JsonProperty("updated_at")
+    private String updatedAt;
 
     public String getAuthor() {
         return author;
@@ -33,12 +36,12 @@ public class Message {
         this.content = content;
     }
 
-    public String getCreated_at() {
-        return created_at;
+    public String getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
     public String getId() {
@@ -65,12 +68,12 @@ public class Message {
         this.translations = translations;
     }
 
-    public String getUpdated_at() {
-        return updated_at;
+    public String getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(String updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -85,15 +88,15 @@ public class Message {
         return Objects.equals(id, message.id) &&
                 Objects.equals(author, message.author) &&
                 Objects.equals(content, message.content) &&
-                Objects.equals(created_at, message.created_at) &&
+                Objects.equals(createdAt, message.createdAt) &&
                 Objects.equals(severity, message.severity) &&
                 Objects.equals(translations, message.translations) &&
-                Objects.equals(updated_at, message.updated_at);
+                Objects.equals(updatedAt, message.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(author, content, created_at, id, severity, translations, updated_at);
+        return Objects.hash(author, content, createdAt, id, severity, translations, updatedAt);
     }
 
     @Override
@@ -101,11 +104,11 @@ public class Message {
         return "Message{" +
                 "author='" + author + '\'' +
                 ", content='" + content + '\'' +
-                ", created_at='" + created_at + '\'' +
+                ", createdAt='" + createdAt + '\'' +
                 ", id=" + id +
                 ", severity='" + severity + '\'' +
                 ", translations=" + translations +
-                ", updated_at='" + updated_at + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
                 '}';
     }
 }
