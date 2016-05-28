@@ -40,11 +40,16 @@ public abstract class AbstractTest {
         private final String queryName;
         private String code = "200";
 
+        /**
+         * Constructor.
+         *
+         * @param queryName the query name
+         */
         public QueryTester(String queryName) {
             this.queryName = Objects.requireNonNull(queryName, "queryName can not be null");
         }
 
-        /*
+        /**
          * assert the query is correct.
          *
          * @return this
@@ -63,11 +68,10 @@ public abstract class AbstractTest {
         /**
          * End the assertion.
          */
-
         public void end() {
             StringBuilder stringBuilder = new StringBuilder(queryName + " ");
             IntStream.range(queryName.length(), 30).asLongStream().forEach(e -> stringBuilder.append("."));
-            String message = stringBuilder.append(" [ " + code + " ]").toString();
+            String message = stringBuilder.append(" [ ").append(code).append(" ]").toString();
             if ("200".equals(code)) {
                 logger.info("{}", message);
             } else {
