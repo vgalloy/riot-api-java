@@ -1,12 +1,14 @@
 package vgalloy.riot.api.service.query.impl.league;
 
+import java.util.Collections;
 import java.util.Objects;
 
+import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.constant.RankedQueueType;
 import vgalloy.riot.api.rest.request.league.dto.LeagueDto;
-import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
+import vgalloy.riot.api.service.query.impl.league.helper.LeagueEntryDtoComparator;
 
 /**
  * @author Vincent Galloy
@@ -15,6 +17,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
 public class GetChallengerQuery extends AbstractQuery<LeagueDto> {
 
     private final RankedQueueType rankedQueueType;
+    private boolean sorted;
 
     /**
      * Constructor.
@@ -28,8 +31,23 @@ public class GetChallengerQuery extends AbstractQuery<LeagueDto> {
         this.rankedQueueType = Objects.requireNonNull(rankedQueueType, "rankedQueueType can not be null");
     }
 
+    /**
+     * Have the list to be sorted  ?. If yes the last summoner of the list will be the best
+     *
+     * @param sorted true if the list have to be sorted
+     * @return this
+     */
+    public GetChallengerQuery sorted(boolean sorted) {
+        this.sorted = sorted;
+        return this;
+    }
+
     @Override
     protected LeagueDto executeWithError() {
-        return riotWebApi.getChallenger(getRegion(), rankedQueueType, getRiotApiKeyValue());
+        LeagueDto leagueDto = riotWebApi.getChallenger(getRegion(), rankedQueueType, getRiotApiKeyValue());
+        if (sorted) {
+            Collections.sort(leagueDto.getEntries(), new LeagueEntryDtoComparator());
+        }
+        return leagueDto;
     }
 }
