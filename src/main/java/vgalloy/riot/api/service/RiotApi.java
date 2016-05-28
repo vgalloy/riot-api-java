@@ -43,7 +43,7 @@ import vgalloy.riot.api.service.query.impl.match.GetMatchDetailByIdQuery;
 import vgalloy.riot.api.service.query.impl.match.GetTournamentMatchDetailByIdQuery;
 import vgalloy.riot.api.service.query.impl.matchlist.GetMatchListBySummonerIdQuery;
 import vgalloy.riot.api.service.query.impl.stats.GetPlayerStatsSummaryQuery;
-import vgalloy.riot.api.service.query.impl.stats.GetSummonerRankedStatsQuery;
+import vgalloy.riot.api.service.query.impl.stats.GetRankedStatsQuery;
 import vgalloy.riot.api.service.query.impl.summoner.GetSummonersByIdsQuery;
 import vgalloy.riot.api.service.query.impl.summoner.GetSummonersByNamesQuery;
 import vgalloy.riot.api.service.query.impl.summoner.GetSummonersMasteriesByIdsQuery;
@@ -445,8 +445,8 @@ public class RiotApi {
      * @param summonerId the summoner id
      * @return the query
      */
-    public GetSummonerRankedStatsQuery getSummonerRankedStats(long summonerId) {
-        return new GetSummonerRankedStatsQuery(riotWebApi, defaultParameter, summonerId);
+    public GetRankedStatsQuery getRankedStats(long summonerId) {
+        return new GetRankedStatsQuery(riotWebApi, defaultParameter, summonerId);
     }
 
     /**

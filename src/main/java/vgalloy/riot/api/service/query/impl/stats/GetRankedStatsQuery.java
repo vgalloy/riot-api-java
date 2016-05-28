@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetSummonerRankedStatsQuery extends AbstractQuery<RankedStatsDto> {
+public class GetRankedStatsQuery extends AbstractQuery<RankedStatsDto> {
 
     private final long summonerId;
 
@@ -20,13 +20,13 @@ public class GetSummonerRankedStatsQuery extends AbstractQuery<RankedStatsDto> {
      * @param defaultParameter the default query parameter
      * @param summonerId       the summoner id
      */
-    public GetSummonerRankedStatsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
+    public GetRankedStatsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
         super(riotWebApi, defaultParameter);
         this.summonerId = summonerId;
     }
 
     @Override
     protected RankedStatsDto executeWithError() {
-        return riotWebApi.getSummonerRankedStats(getRegion(), summonerId, getRiotApiKeyValue());
+        return riotWebApi.getRankedStats(getRegion(), summonerId, getRiotApiKeyValue());
     }
 }

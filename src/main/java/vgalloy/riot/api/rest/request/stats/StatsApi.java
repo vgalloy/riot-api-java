@@ -25,7 +25,7 @@ public interface StatsApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.3/stats/by-summoner/{summonerId}/ranked")
-    RankedStatsDto getSummonerRankedStats(@PathParam("region") Region region, @PathParam("summonerId") long summonerId, @QueryParam("api_key") String apiKey);
+    RankedStatsDto getRankedStats(@PathParam("region") Region region, @PathParam("summonerId") long summonerId, @QueryParam("api_key") String apiKey);
 
     /**
      * Get player stats summaries by summoner ID.

@@ -21,11 +21,11 @@ public class StatsApiTest extends AbstractTest {
     }
 
     @Test
-    public void testGetSummonerRankedStats() {
-        new QueryTester("SummonerRankedStats")
-                .test(riotApi.getSummonerRankedStats(24550736).region(Region.EUW))
-                .test(riotApi.getSummonerRankedStats(67911140).region(Region.NA))
-                .test(riotApi.getSummonerRankedStats(17671075).region(Region.KR))
+    public void testGetRankedStats() {
+        new QueryTester("RankedStats")
+                .test(riotApi.getRankedStats(24550736).region(Region.EUW))
+                .test(riotApi.getRankedStats(67911140).region(Region.NA))
+                .test(riotApi.getRankedStats(17671075).region(Region.KR))
                 .end();
     }
 }
