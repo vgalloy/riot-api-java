@@ -2,10 +2,10 @@ package vgalloy.riot.api.rest.request.matchlist.dto;
 
 import java.util.Objects;
 
-import vgalloy.riot.api.rest.constant.Season;
 import vgalloy.riot.api.rest.constant.Lane;
 import vgalloy.riot.api.rest.constant.NormalQueueType;
 import vgalloy.riot.api.rest.constant.Role;
+import vgalloy.riot.api.rest.constant.Season;
 
 /**
  * @author Vincent Galloy

@@ -4,9 +4,9 @@ import java.util.Collection;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.constant.PlatformId;
 import vgalloy.riot.api.rest.constant.Region;
-import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.service.RiotApiKey;
 import vgalloy.riot.api.service.mapper.RegionMapper;
 

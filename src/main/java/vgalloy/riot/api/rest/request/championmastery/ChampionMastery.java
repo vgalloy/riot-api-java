@@ -6,9 +6,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import vgalloy.riot.api.rest.request.championmastery.dto.ChampionMasteryDto;
 import vgalloy.riot.api.rest.constant.PlatformId;
 import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.rest.request.championmastery.dto.ChampionMasteryDto;
 
 /**
  * @author Vincent Galloy

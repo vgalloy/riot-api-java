@@ -3,9 +3,9 @@ package vgalloy.riot.api.rest.request.game.dto;
 import java.util.List;
 import java.util.Objects;
 
-import vgalloy.riot.api.rest.constant.SupType;
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.GameType;
+import vgalloy.riot.api.rest.constant.SupType;
 
 /**
  * @author Vincent Galloy

@@ -5,8 +5,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-import vgalloy.riot.api.rest.request.lolstatus.dto.Shard;
 import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.rest.request.lolstatus.dto.Shard;
 import vgalloy.riot.api.rest.request.lolstatus.dto.ShardStatus;
 
 /**

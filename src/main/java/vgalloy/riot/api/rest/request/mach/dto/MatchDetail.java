@@ -3,10 +3,10 @@ package vgalloy.riot.api.rest.request.mach.dto;
 import java.util.List;
 import java.util.Objects;
 
-import vgalloy.riot.api.rest.constant.Season;
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.GameType;
 import vgalloy.riot.api.rest.constant.NormalQueueType;
+import vgalloy.riot.api.rest.constant.Season;
 
 /**
  * @author Vincent Galloy

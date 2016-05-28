@@ -7,20 +7,20 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
 import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
+import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.ChampionDto;
+import vgalloy.riot.api.rest.request.lolstaticdata.dto.ChampionListDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.ItemDto;
+import vgalloy.riot.api.rest.request.lolstaticdata.dto.ItemListDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.LanguageStringsDto;
+import vgalloy.riot.api.rest.request.lolstaticdata.dto.MapDataDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.MasteryDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.MasteryListDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.RealmDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.RuneDto;
+import vgalloy.riot.api.rest.request.lolstaticdata.dto.RuneListDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.SummonerSpellDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.SummonerSpellListDto;
-import vgalloy.riot.api.rest.constant.Region;
-import vgalloy.riot.api.rest.request.lolstaticdata.dto.ChampionListDto;
-import vgalloy.riot.api.rest.request.lolstaticdata.dto.ItemListDto;
-import vgalloy.riot.api.rest.request.lolstaticdata.dto.MapDataDto;
-import vgalloy.riot.api.rest.request.lolstaticdata.dto.RuneListDto;
 
 /**
  * @author Vincent Galloy

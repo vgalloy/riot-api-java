@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
 import java.util.Map;
 import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**

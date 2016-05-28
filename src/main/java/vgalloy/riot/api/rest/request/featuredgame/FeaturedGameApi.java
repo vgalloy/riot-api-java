@@ -5,8 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import vgalloy.riot.api.rest.request.featuredgame.dto.FeaturedGames;
 import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.rest.request.featuredgame.dto.FeaturedGames;
 
 /**
  * @author Vincent Galloy

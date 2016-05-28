@@ -1,7 +1,7 @@
 package vgalloy.riot.api.service.query.impl.champion;
 
-import vgalloy.riot.api.rest.request.champion.dto.ChampionListDto;
 import vgalloy.riot.api.client.RiotWebApi;
+import vgalloy.riot.api.rest.request.champion.dto.ChampionListDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 

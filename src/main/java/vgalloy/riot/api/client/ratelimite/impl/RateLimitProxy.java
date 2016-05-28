@@ -3,8 +3,8 @@ package vgalloy.riot.api.client.ratelimite.impl;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import vgalloy.riot.api.client.ratelimite.RateLimit;
 import vgalloy.riot.api.client.RiotWebApi;
+import vgalloy.riot.api.client.ratelimite.RateLimit;
 import vgalloy.riot.api.client.ratelimite.RateLimiter;
 
 /**

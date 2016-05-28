@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import vgalloy.riot.api.rest.request.league.dto.LeagueDto;
 import vgalloy.riot.api.client.RiotWebApi;
+import vgalloy.riot.api.rest.request.league.dto.LeagueDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 

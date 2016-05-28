@@ -1,7 +1,7 @@
 package vgalloy.riot.api.service.query;
 
-import vgalloy.riot.api.service.RiotApiKey;
 import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.service.RiotApiKey;
 
 /**
  * @author Vincent Galloy

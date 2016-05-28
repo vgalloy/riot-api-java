@@ -1,9 +1,9 @@
 package vgalloy.riot.api.service.query.impl.game;
 
-import vgalloy.riot.api.rest.request.game.dto.RecentGamesDto;
 import vgalloy.riot.api.client.RiotWebApi;
-import vgalloy.riot.api.service.query.DefaultParameter;
+import vgalloy.riot.api.rest.request.game.dto.RecentGamesDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
+import vgalloy.riot.api.service.query.DefaultParameter;
 
 /**
  * @author Vincent Galloy

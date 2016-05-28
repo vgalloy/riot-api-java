@@ -1,6 +1,7 @@
 package vgalloy.riot.api.rest.request.lolstatus.dto;
 
 import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
