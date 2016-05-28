@@ -203,20 +203,24 @@ public class RiotApi {
 
     /**
      * Create the query for team leagues.
+     * Riot seems not support this api any longer.
      *
      * @param teamIds the team ids
      * @return the query
      */
+    @Deprecated
     public GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds) {
         return new GetLeaguesByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
     }
 
     /**
      * Create the query for team league entries.
+     * Riot seems not support this api any longer.
      *
      * @param teamIds the team ids
      * @return the query
      */
+    @Deprecated
     public GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds) {
         return new GetLeaguesEntryByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
     }
