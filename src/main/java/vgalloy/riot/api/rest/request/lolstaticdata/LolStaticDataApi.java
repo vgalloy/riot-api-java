@@ -6,6 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
+import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.ChampionDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.ItemDto;
 import vgalloy.riot.api.rest.request.lolstaticdata.dto.LanguageStringsDto;
@@ -36,6 +37,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/champion")
+    @RiotNoLimitRate
     ChampionListDto getChampionDataList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -48,6 +50,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/champion/{id}")
+    @RiotNoLimitRate
     ChampionDto getChampionDataById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 
     /**
@@ -59,6 +62,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/item")
+    @RiotNoLimitRate
     ItemListDto getItemList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -71,6 +75,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/item/{id}")
+    @RiotNoLimitRate
     ItemDto getItemById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 
     /**
@@ -82,6 +87,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/language-strings")
+    @RiotNoLimitRate
     LanguageStringsDto getLanguageString(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -93,6 +99,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/languages")
+    @RiotNoLimitRate
     List<String> getLanguage(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -104,6 +111,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/map")
+    @RiotNoLimitRate
     MapDataDto getMap(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -115,6 +123,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/mastery")
+    @RiotNoLimitRate
     MasteryListDto getMasteryList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -127,6 +136,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/mastery/{id}")
+    @RiotNoLimitRate
     MasteryDto getMasteryById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 
     /**
@@ -138,6 +148,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/realm")
+    @RiotNoLimitRate
     RealmDto getRealm(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -149,6 +160,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/rune")
+    @RiotNoLimitRate
     RuneListDto getRuneList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -161,6 +173,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/rune/{id}")
+    @RiotNoLimitRate
     RuneDto getRuneById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 
     /**
@@ -172,6 +185,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/summoner-spell")
+    @RiotNoLimitRate
     SummonerSpellListDto getSummonerSpellList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 
     /**
@@ -184,6 +198,7 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/summoner-spell/{id}")
+    @RiotNoLimitRate
     SummonerSpellDto getSummonerSpellById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 
     /**
@@ -195,5 +210,6 @@ public interface LolStaticDataApi {
      */
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/versions")
+    @RiotNoLimitRate
     List<String> getVersionList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
 }
