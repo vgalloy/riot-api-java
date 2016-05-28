@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.stream.IntStream;
-import javax.ws.rs.InternalServerErrorException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import vgalloy.riot.api.client.ratelimite.RateLimit;
 import vgalloy.riot.api.service.RiotApi;
 import vgalloy.riot.api.service.RiotApiKey;
-import vgalloy.riot.api.service.callback.Callback;
 import vgalloy.riot.api.service.query.AbstractCallbackQuery;
 import vgalloy.riot.service.request.ChampionApiTest;
 
@@ -47,18 +45,15 @@ public abstract class AbstractTest {
             this.queryName = Objects.requireNonNull(queryName, "queryName can not be null");
         }
 
-        /**
+        /*
          * assert the query is correct.
          *
          * @return this
          */
         public QueryTester test(AbstractCallbackQuery query) {
-            if (query.onInternalServerErrorException(new Callback<InternalServerErrorException>() {
-                @Override
-                public void process(InternalServerErrorException e) {
-                    code = "500";
-                }
-            }).execute() == null) {
+            if (query.onInternalServerErrorException(e -> code = "500")
+                    .onServiceUnavailableException(e -> code = "503")
+                    .execute() == null) {
                 isSuccess = false;
                 code = "404";
             }

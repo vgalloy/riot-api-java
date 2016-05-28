@@ -3,6 +3,7 @@ package vgalloy.riot.api.service.query;
 import java.util.Objects;
 import javax.ws.rs.InternalServerErrorException;
 import javax.ws.rs.NotFoundException;
+import javax.ws.rs.ServiceUnavailableException;
 
 import vgalloy.riot.api.service.callback.Callback;
 import vgalloy.riot.api.service.callback.DefaultCallBack;
@@ -16,6 +17,7 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
     private Callback<Dto> successCallback = new DefaultCallBack<>();
     private Callback<NotFoundException> notFoundExceptionCallback = new DefaultCallBack<>();
     private Callback<InternalServerErrorException> internalServerErrorExceptionCallback = new DefaultCallBack<>();
+    private Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback = new DefaultCallBack<>();
 
     @Override
     public Dto execute() {
@@ -27,6 +29,8 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
             notFoundExceptionCallback.process(e);
         } catch (InternalServerErrorException e) {
             internalServerErrorExceptionCallback.process(e);
+        } catch (ServiceUnavailableException e) {
+            serviceUnavailableExceptionCallback.process(e);
         }
         return result;
     }
@@ -61,13 +65,24 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
     }
 
     /**
+     * Define the on ServiceUnavailableException callback.
+     *
+     * @param serviceUnavailableExceptionCallback the callback
+     * @return this
+     */
+    public AbstractCallbackQuery<Dto> onServiceUnavailableException(Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback) {
+        this.serviceUnavailableExceptionCallback = Objects.requireNonNull(serviceUnavailableExceptionCallback, "serviceUnavailableExceptionCallback can not be null");
+        return this;
+    }
+
+    /**
      * Define the on InternalServerErrorException callback.
      *
      * @param internalServerErrorExceptionCallback the callback
      * @return this
      */
     public AbstractCallbackQuery<Dto> onInternalServerErrorException(Callback<InternalServerErrorException> internalServerErrorExceptionCallback) {
-        this.notFoundExceptionCallback = Objects.requireNonNull(notFoundExceptionCallback, "internalServerErrorExceptionCallback can not be null");
+        this.internalServerErrorExceptionCallback = Objects.requireNonNull(internalServerErrorExceptionCallback, "internalServerErrorExceptionCallback can not be null");
         return this;
     }
 }

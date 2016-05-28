@@ -203,7 +203,7 @@ public class RiotApi {
 
     /**
      * Create the query for team leagues.
-     * Riot seems not support this api any longer.
+     * @deprecated Riot seems not support this api any longer.
      *
      * @param teamIds the team ids
      * @return the query
@@ -215,7 +215,7 @@ public class RiotApi {
 
     /**
      * Create the query for team league entries.
-     * Riot seems not support this api any longer.
+     * @deprecated Riot seems not support this api any longer.
      *
      * @param teamIds the team ids
      * @return the query
