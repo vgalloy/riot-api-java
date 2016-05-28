@@ -38,7 +38,6 @@ public abstract class AbstractTest {
 
         private final Logger logger = LoggerFactory.getLogger(QueryTester.class);
         private final String queryName;
-        private boolean isSuccess = true;
         private String code = "200";
 
         public QueryTester(String queryName) {
@@ -51,23 +50,25 @@ public abstract class AbstractTest {
          * @return this
          */
         public QueryTester test(AbstractCallbackQuery query) {
-            if (query.onInternalServerErrorException(e -> code = "500")
+            query.onBadRequestExceptionCallback(e -> code = "400")
+                    .onNotAuthorizedException(e -> code = "401")
+                    .onForbiddenException(e -> code = "403")
+                    .onNotFoundException(e -> code = "404")
+                    .onInternalServerErrorException(e -> code = "500")
                     .onServiceUnavailableException(e -> code = "503")
-                    .execute() == null) {
-                isSuccess = false;
-                code = "404";
-            }
+                    .execute();
             return this;
         }
 
         /**
          * End the assertion.
          */
+
         public void end() {
             StringBuilder stringBuilder = new StringBuilder(queryName + " ");
             IntStream.range(queryName.length(), 30).asLongStream().forEach(e -> stringBuilder.append("."));
             String message = stringBuilder.append(" [ " + code + " ]").toString();
-            if (isSuccess) {
+            if ("200".equals(code)) {
                 logger.info("{}", message);
             } else {
                 logger.warn("{}", message);
