@@ -31,20 +31,62 @@ public class Main {
 ## Create RiotApi
 
 ### Simple Riot api
-
-You can create a simple riotApi like this :
+You can create a simple RiotApi like this :
 ```java
-    RiotApi riotApi = new RiotApi();
+RiotApi riotApi = new RiotApi();
 ```
 But maybe you should define some rate limit :
 ```java
-    RiotApi riotApi = new RiotApi(new RateLimit(10, 10_000), new RateLimit(500, 10 * 60 * 1000));
+RiotApi riotApi = new RiotApi(new RateLimit(10, 10_000), new RateLimit(500, 10 * 60 * 1000));
 ```
 
-## Request
-wip
+### Create RiotApiKey
+The easy way to create a riot api is :
+```java
+RiotApiKey riotApiKey = new RiotApiKey("MY-API-KEY");
+```
+But the prefer use the properties constructor :
+```java
+Properties properties = new Properties();
+InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("riot.properties");
+properties.load(inputStream);
+RiotApiKey riotApiKey = new RiotApiKey(properties);
+```
 
+### Global parameter
+If you don't want to repeat the api key and the region for all request you set these parameters in the riotApi.
+```java
+RiotApi riotApi = new RiotApi()
+                .defaultRiotApiKey(new RiotApiKey("MY-API-KEY"))
+                .defaultRegion(Region.EUW)
+```
 
-## WIP
+## Synchronous Request
+```java
+riotApi.getSummonerByNames("Ivaranne").execute();
+```
+Do not forget to execute the query
+
+## Asynchronous Request
+The following request wil print the same result as the first query;
+```java
+Query query = riotApi
+                .getChallenger(RankedQueueType.RANKED_SOLO_5x5)
+                .sorted(true)
+                .onSuccess(new Callback<LeagueDto>() {
+                    @Override
+                    public void process(LeagueDto leagueDto) {
+                        System.out.println("The best euw player is " + leagueDto.getEntries().get(leagueDto.getEntries().size() - 1).getPlayerOrTeamName());
+                    }
+                });
+
+Executor executor = new ExecutorImpl();
+executor.addQuery(query);
+executor.start();
+executor.finish();
+```
+You can also add different behaviour with onInternalServerErrorException()
+
+## Other
 You want to improve this code ? Feel free to open request
 
