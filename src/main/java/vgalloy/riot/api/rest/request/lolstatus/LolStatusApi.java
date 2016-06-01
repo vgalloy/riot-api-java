@@ -5,6 +5,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
+import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.rest.request.lolstatus.dto.Shard;
 import vgalloy.riot.api.rest.request.lolstatus.dto.ShardStatus;
@@ -22,6 +23,7 @@ public interface LolStatusApi {
      */
     @GET
     @Path("http://status.leagueoflegends.com/shards")
+    @RiotNoLimitRate
     List<Shard> getShardList();
 
     /**
@@ -32,5 +34,6 @@ public interface LolStatusApi {
      */
     @GET
     @Path("http://status.leagueoflegends.com/shards/{shardRegion}")
+    @RiotNoLimitRate
     ShardStatus getShardStatus(@PathParam("shardRegion") Region shardRegion);
 }

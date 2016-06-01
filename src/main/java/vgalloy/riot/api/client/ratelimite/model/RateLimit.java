@@ -1,4 +1,4 @@
-package vgalloy.riot.api.client.ratelimite;
+package vgalloy.riot.api.client.ratelimite.model;
 
 import java.io.Serializable;
 

@@ -5,12 +5,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import vgalloy.riot.api.client.ratelimite.RateLimit;
 import vgalloy.riot.api.client.ratelimite.RateLimiter;
+import vgalloy.riot.api.client.ratelimite.model.RateLimit;
 
 /**
  * @author Vincent Galloy
@@ -20,8 +19,7 @@ public class RateLimiterImpl implements RateLimiter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RateLimiterImpl.class);
 
-    private final List<RateLimit> rateLimitList;
-    private final long longestRateLimitDuration;
+    private final List<RateLimit> rateLimitList = new ArrayList<>();
     private List<Long> jobTimerExecution = new ArrayList<>();
 
     /**
@@ -30,15 +28,7 @@ public class RateLimiterImpl implements RateLimiter {
      * @param rateLimitList the list of limit rate to respect
      */
     public RateLimiterImpl(RateLimit... rateLimitList) {
-        if (rateLimitList == null) {
-            this.rateLimitList = new ArrayList<>();
-        } else {
-            this.rateLimitList = Arrays.asList(rateLimitList);
-        }
-        if (this.rateLimitList.isEmpty()) {
-            LOGGER.warn("You should define a rate limit");
-        }
-        longestRateLimitDuration = getTheLongestRateLimitDuration();
+        addRateLimit(rateLimitList);
     }
 
     @Override
@@ -53,6 +43,21 @@ public class RateLimiterImpl implements RateLimiter {
         }
         LOGGER.trace("Task Ok for execution");
         jobTimerExecution.add(System.currentTimeMillis());
+    }
+
+    /**
+     * Add rate limit.
+     *
+     * @param rateLimit the rate limit
+     */
+    public synchronized void addRateLimit(RateLimit... rateLimit) {
+        List<RateLimit> rateLimits;
+        if (rateLimit == null) {
+            rateLimits = new ArrayList<>();
+        } else {
+            rateLimits = Arrays.asList(rateLimit);
+        }
+        rateLimitList.addAll(rateLimits);
     }
 
     /**
@@ -88,7 +93,7 @@ public class RateLimiterImpl implements RateLimiter {
     private void cleanList() {
         long currentTimer = System.currentTimeMillis();
         jobTimerExecution = jobTimerExecution.stream()
-                .filter(p -> currentTimer - longestRateLimitDuration < p)
+                .filter(p -> currentTimer - getTheLongestRateLimitDuration() < p)
                 .collect(Collectors.toList());
     }
 

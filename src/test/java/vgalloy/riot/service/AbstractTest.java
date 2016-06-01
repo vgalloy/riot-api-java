@@ -9,7 +9,9 @@ import java.util.stream.IntStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import vgalloy.riot.api.client.ratelimite.RateLimit;
+import vgalloy.riot.api.client.ratelimite.RateLimitManager;
+import vgalloy.riot.api.client.ratelimite.impl.RateLimitManagerImpl;
+import vgalloy.riot.api.client.ratelimite.model.RateLimit;
 import vgalloy.riot.api.service.RiotApi;
 import vgalloy.riot.api.service.RiotApiKey;
 import vgalloy.riot.api.service.query.AbstractCallbackQuery;
@@ -21,7 +23,7 @@ import vgalloy.riot.service.request.ChampionApiTest;
  */
 public abstract class AbstractTest {
 
-    protected final RiotApi riotApi = new RiotApi(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000));
+    protected final RiotApi riotApi;
 
     public AbstractTest() {
         InputStream inputStream = ChampionApiTest.class.getClassLoader().getResourceAsStream("riot.properties");
@@ -31,7 +33,12 @@ public abstract class AbstractTest {
         } catch (IOException e) {
             throw new RuntimeException("Can not load properties");
         }
-        riotApi.defaultRiotApiKey(new RiotApiKey(properties));
+        RateLimitManager rateLimitManager = new RateLimitManagerImpl();
+        rateLimitManager.addRateLimit(new RateLimit(9, 10_000));
+        rateLimitManager.addRateLimit(new RateLimit(400, 10 * 60 * 1_000));
+        riotApi = new RiotApi()
+                .addGlobalRateLimit(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000))
+                .defaultRiotApiKey(new RiotApiKey(properties));
     }
 
     protected class QueryTester {

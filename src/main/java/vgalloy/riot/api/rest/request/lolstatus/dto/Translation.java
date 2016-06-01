@@ -14,6 +14,7 @@ public class Translation {
     private String locale;
     @JsonProperty("updated_at")
     private String updatedAt;
+    private String heading;
 
     public String getContent() {
         return content;
@@ -39,6 +40,14 @@ public class Translation {
         this.updatedAt = updatedAt;
     }
 
+    public String getHeading() {
+        return heading;
+    }
+
+    public void setHeading(String heading) {
+        this.heading = heading;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -50,12 +59,13 @@ public class Translation {
         Translation that = (Translation) o;
         return Objects.equals(content, that.content) &&
                 Objects.equals(locale, that.locale) &&
-                Objects.equals(updatedAt, that.updatedAt);
+                Objects.equals(updatedAt, that.updatedAt) &&
+                Objects.equals(heading, that.heading);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(content, locale, updatedAt);
+        return Objects.hash(content, locale, updatedAt, heading);
     }
 
     @Override
@@ -64,6 +74,7 @@ public class Translation {
                 "content='" + content + '\'' +
                 ", locale='" + locale + '\'' +
                 ", updatedAt='" + updatedAt + '\'' +
+                ", heading='" + heading + '\'' +
                 '}';
     }
 }

@@ -5,6 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
+import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.rest.request.champion.dto.ChampionDto;
 import vgalloy.riot.api.rest.request.champion.dto.ChampionListDto;
@@ -36,5 +37,6 @@ public interface ChampionApi {
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion/{id}")
+    @RiotNoLimitRate
     ChampionDto getChampionById(@PathParam("region") Region region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 }

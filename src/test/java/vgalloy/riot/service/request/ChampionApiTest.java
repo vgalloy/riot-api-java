@@ -30,4 +30,9 @@ public class ChampionApiTest extends AbstractTest {
                 .test(riotApi.getChampionById(1).region(Region.EUNE))
                 .end();
     }
+
+    @Test
+    public void test() {
+        riotApi.getChampionById(1).region(Region.EUW).execute();
+    }
 }

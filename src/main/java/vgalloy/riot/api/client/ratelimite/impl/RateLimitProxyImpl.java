@@ -1,35 +1,35 @@
 package vgalloy.riot.api.client.ratelimite.impl;
 
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 import vgalloy.riot.api.client.RiotWebApi;
-import vgalloy.riot.api.client.ratelimite.RateLimit;
-import vgalloy.riot.api.client.ratelimite.RateLimiter;
+import vgalloy.riot.api.client.ratelimite.GlobalRateLimiter;
+import vgalloy.riot.api.client.ratelimite.RateLimitManager;
+import vgalloy.riot.api.client.ratelimite.RateLimitProxy;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class RateLimitProxy implements InvocationHandler {
+public class RateLimitProxyImpl implements RateLimitProxy {
 
-    private final RateLimiter rateLimiter;
+    private final GlobalRateLimiterImpl globalRateLimiterImpl;
     private final RiotWebApi riotWebApi;
 
     /**
      * Constructor.
      *
-     * @param riotWebApi the riotWebApi to proxy
-     * @param rateLimits the rate limits to respect
+     * @param riotWebApi       the riotWebApi to proxy
+     * @param rateLimitManager the rate limit manager
      */
-    public RateLimitProxy(RiotWebApi riotWebApi, RateLimit... rateLimits) {
+    public RateLimitProxyImpl(RiotWebApi riotWebApi, RateLimitManager rateLimitManager) {
         this.riotWebApi = riotWebApi;
-        rateLimiter = new RateLimiterImpl(rateLimits);
+        globalRateLimiterImpl = new GlobalRateLimiterImpl(rateLimitManager);
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        rateLimiter.delay();
+        globalRateLimiterImpl.delay(method, args);
         try {
             return method.invoke(riotWebApi, args);
         } catch (Exception e) {
@@ -40,5 +40,9 @@ public class RateLimitProxy implements InvocationHandler {
                 throw e;
             }
         }
+    }
+
+    public GlobalRateLimiter getGlobalRateLimiter() {
+        return globalRateLimiterImpl;
     }
 }

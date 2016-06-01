@@ -30,8 +30,8 @@ public class ExecutorImpl implements Executor {
     }
 
     @Override
-    public void addQuery(Query query) {
-        addTask(() -> query.execute());
+    public synchronized void addQuery(Query query) {
+        addTask(query::execute);
     }
 
     @Override

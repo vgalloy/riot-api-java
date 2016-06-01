@@ -2,7 +2,9 @@ package vgalloy.riot.api.service;
 
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.client.RiotWebApiFactory;
-import vgalloy.riot.api.client.ratelimite.RateLimit;
+import vgalloy.riot.api.client.ratelimite.RateLimitManager;
+import vgalloy.riot.api.client.ratelimite.impl.RateLimitManagerImpl;
+import vgalloy.riot.api.client.ratelimite.model.RateLimit;
 import vgalloy.riot.api.rest.constant.RankedQueueType;
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.service.query.DefaultParameter;
@@ -60,14 +62,38 @@ public class RiotApi {
 
     private final DefaultParameter defaultParameter = new DefaultParameter();
     private final RiotWebApi riotWebApi;
+    private final RateLimitManager rateLimitManager;
 
     /**
      * Constructor.
-     *
-     * @param rateLimits the rate limits to respect
      */
-    public RiotApi(RateLimit... rateLimits) {
-        riotWebApi = RiotWebApiFactory.getRiotWebApi(rateLimits);
+    public RiotApi() {
+        rateLimitManager = new RateLimitManagerImpl();
+        riotWebApi = RiotWebApiFactory.getRiotWebApi(rateLimitManager);
+    }
+
+    /**
+     * Add a rate limit for all region.
+     * If you create a new RateLimit(10, 1_000), each region will be able to do 10 request / sec at the same time.
+     *
+     * @param rateLimit the rate limit
+     * @return this
+     */
+    public RiotApi addGlobalRateLimit(RateLimit... rateLimit) {
+        rateLimitManager.addRateLimit(rateLimit);
+        return this;
+    }
+
+    /**
+     * Add a rate limit for one region.
+     *
+     * @param region    the region
+     * @param rateLimit the rate limit
+     * @return this
+     */
+    public RiotApi addRegionRateLimit(Region region, RateLimit... rateLimit) {
+        rateLimitManager.addRateLimit(region, rateLimit);
+        return this;
     }
 
     /**
@@ -203,10 +229,10 @@ public class RiotApi {
 
     /**
      * Create the query for team leagues.
-     * @deprecated Riot seems not support this api any longer.
      *
      * @param teamIds the team ids
      * @return the query
+     * @deprecated Riot seems not support this api any longer.
      */
     @Deprecated
     public GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds) {
@@ -215,10 +241,10 @@ public class RiotApi {
 
     /**
      * Create the query for team league entries.
-     * @deprecated Riot seems not support this api any longer.
      *
      * @param teamIds the team ids
      * @return the query
+     * @deprecated Riot seems not support this api any longer.
      */
     @Deprecated
     public GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds) {
