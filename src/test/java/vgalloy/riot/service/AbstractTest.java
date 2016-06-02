@@ -33,9 +33,6 @@ public abstract class AbstractTest {
         } catch (IOException e) {
             throw new RuntimeException("Can not load properties");
         }
-        RateLimitManager rateLimitManager = new RateLimitManagerImpl();
-        rateLimitManager.addRateLimit(new RateLimit(9, 10_000));
-        rateLimitManager.addRateLimit(new RateLimit(400, 10 * 60 * 1_000));
         riotApi = new RiotApi()
                 .addGlobalRateLimit(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000))
                 .defaultRiotApiKey(new RiotApiKey(properties));

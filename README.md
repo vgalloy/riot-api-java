@@ -37,7 +37,7 @@ RiotApi riotApi = new RiotApi();
 ```
 But maybe you should define some rate limit :
 ```java
-RiotApi riotApi = new RiotApi(new RateLimit(10, 10_000), new RateLimit(500, 10 * 60 * 1000));
+RiotApi riotApi = new RiotApi().addGlobalRateLimit(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000))
 ```
 
 ### Create RiotApiKey
