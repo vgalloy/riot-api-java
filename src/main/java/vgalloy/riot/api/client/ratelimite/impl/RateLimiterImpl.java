@@ -20,7 +20,7 @@ public class RateLimiterImpl implements RateLimiter {
     private static final Logger LOGGER = LoggerFactory.getLogger(RateLimiterImpl.class);
 
     private final List<RateLimit> rateLimitList = new ArrayList<>();
-    private List<Long> jobTimerExecution = new ArrayList<>();
+    private List<Long> jobExecutionTimer = new ArrayList<>();
 
     /**
      * Constructor.
@@ -33,16 +33,48 @@ public class RateLimiterImpl implements RateLimiter {
 
     @Override
     public synchronized void delay() {
-        while (!isOkForRateLimits()) {
+        long sleepingTime = getSleepingTime();
+        if (sleepingTime != 0) {
             try {
                 LOGGER.trace("Delaying task ...");
-                Thread.sleep(100);
+                Thread.sleep(sleepingTime);
             } catch (InterruptedException e) {
                 LOGGER.error("{}", e);
             }
         }
         LOGGER.trace("Task Ok for execution");
-        jobTimerExecution.add(System.currentTimeMillis());
+        jobExecutionTimer.add(System.currentTimeMillis());
+    }
+
+    /**
+     * Get the time to wait for the next request.
+     *
+     * @return the sleeping time
+     */
+    private long getSleepingTime() {
+        cleanList();
+        return rateLimitList.stream()
+                .map(this::getSleepingTime)
+                .max(Long::compareTo)
+                .get();
+    }
+
+    /**
+     * Get the sleeping time for one rate limit.
+     *
+     * @param rateLimit the rate limit
+     * @return the sleeping time
+     */
+    private long getSleepingTime(RateLimit rateLimit) {
+        long currentTimer = System.currentTimeMillis();
+        List<Long> listJobTimer = jobExecutionTimer.stream()
+                .filter(p -> currentTimer - rateLimit.getTimeInMillis() < p)
+                .collect(Collectors.toList());
+        if (listJobTimer.size() < rateLimit.getNumberOfRequest()) {
+            return 0;
+        } else {
+            return rateLimit.getTimeInMillis() - (currentTimer - listJobTimer.get(0));
+        }
     }
 
     /**
@@ -61,44 +93,17 @@ public class RateLimiterImpl implements RateLimiter {
     }
 
     /**
-     * Are all rate limit ok for sending a new request ?
-     *
-     * @return true if a new request can be send
-     */
-    private boolean isOkForRateLimits() {
-        cleanList();
-        return rateLimitList.stream()
-                .map(this::isOkForRateLimit)
-                .filter(e -> !e)
-                .count() == 0;
-    }
-
-    /**
-     * Is that rate limit ok for send a new request ?
-     *
-     * @param rateLimit the rate limit
-     * @return true if a new request can be according to this rate limit
-     */
-    private boolean isOkForRateLimit(RateLimit rateLimit) {
-        long currentTimer = System.currentTimeMillis();
-        long result = jobTimerExecution.stream()
-                .filter(p -> currentTimer - rateLimit.getTimeInMillis() < p)
-                .count();
-        return result < rateLimit.getNumberOfRequest();
-    }
-
-    /**
-     * Remove all entry in the jobTimerExecution which are useless.
+     * Remove all entry in the jobExecutionTimer which are useless.
      */
     private void cleanList() {
         long currentTimer = System.currentTimeMillis();
-        jobTimerExecution = jobTimerExecution.stream()
+        jobExecutionTimer = jobExecutionTimer.stream()
                 .filter(p -> currentTimer - getTheLongestRateLimitDuration() < p)
                 .collect(Collectors.toList());
     }
 
     /**
-     * Get the longest rate limit duration. This allow us to clean the jobTimerExecution and save memory / time.
+     * Get the longest rate limit duration. This allow us to clean the jobExecutionTimer and save memory / time.
      *
      * @return the longest rate limit duration
      */
@@ -114,7 +119,7 @@ public class RateLimiterImpl implements RateLimiter {
     @Override
     public String toString() {
         return "RateLimiterImpl{" +
-                "jobTimerExecution=" + jobTimerExecution +
+                "jobExecutionTimer=" + jobExecutionTimer +
                 ", rateLimitList=" + rateLimitList +
                 '}';
     }

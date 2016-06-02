@@ -89,7 +89,9 @@ public abstract class AbstractQuery<Dto> extends AbstractCallbackQuery<Dto> {
      */
     protected String convert(Collection<?> list) {
         StringJoiner stringJoiner = new StringJoiner(",");
-        list.stream().forEach(e -> stringJoiner.add(e.toString()));
+        list.stream()
+                .map(Object::toString)
+                .forEach(stringJoiner::add);
         return stringJoiner.toString();
     }
 

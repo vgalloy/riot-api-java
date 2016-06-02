@@ -25,6 +25,11 @@ public class RateLimiterTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(RateLimiterTest.class);
 
     @Test
+    public void testMassDelay() {
+        genericRateLimiterTest(11, new RateLimit(10, 2000), new RateLimit(5, 1000));
+    }
+
+    @Test
     public void testOneRequestNoTimer() {
         genericRateLimiterTest(1, new RateLimit(1, 0));
     }
