@@ -1,8 +1,6 @@
 package vgalloy.riot.service.request;
 
-import org.junit.Ignore;
 import org.junit.Test;
-
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.service.AbstractTest;
 
@@ -22,7 +20,6 @@ public class MatchApiTest extends AbstractTest {
     }
 
     @Test
-    @Ignore
     public void testGetMatchIdByTournamentCodeList() {
         new QueryTester("MatchIdByTournamentCodeList")
                 .test(riotApi.getMatchIdByTournamentCodeList("5000").region(Region.EUW))
