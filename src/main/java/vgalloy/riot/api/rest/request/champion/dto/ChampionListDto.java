@@ -1,5 +1,7 @@
 package vgalloy.riot.api.rest.request.champion.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -7,6 +9,7 @@ import java.util.Objects;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ChampionListDto {
 
     private List<ChampionDto> champions;

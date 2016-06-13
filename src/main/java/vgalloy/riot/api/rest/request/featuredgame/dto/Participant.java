@@ -1,11 +1,14 @@
 package vgalloy.riot.api.rest.request.featuredgame.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Objects;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Participant {
 
     private boolean bot;

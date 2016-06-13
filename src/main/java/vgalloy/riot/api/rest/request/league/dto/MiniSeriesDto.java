@@ -1,11 +1,14 @@
 package vgalloy.riot.api.rest.request.league.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Objects;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MiniSeriesDto {
 
     private int losses;

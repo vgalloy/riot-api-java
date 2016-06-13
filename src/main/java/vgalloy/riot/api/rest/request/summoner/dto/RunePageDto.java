@@ -1,5 +1,7 @@
 package vgalloy.riot.api.rest.request.summoner.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Objects;
 import java.util.Set;
 
@@ -7,6 +9,7 @@ import java.util.Set;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RunePageDto {
 
     private boolean current;

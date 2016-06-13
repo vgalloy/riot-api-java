@@ -3,6 +3,7 @@ package vgalloy.riot.api.rest.request.currentgame.dto;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.PlatformId;
 
@@ -10,6 +11,7 @@ import vgalloy.riot.api.rest.constant.PlatformId;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentGameInfo {
 
     private List<BannedChampion> bannedChampions;

@@ -1,5 +1,7 @@
 package vgalloy.riot.api.rest.request.game.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -8,6 +10,7 @@ import java.util.Set;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RecentGamesDto {
 
     private long summonerId;

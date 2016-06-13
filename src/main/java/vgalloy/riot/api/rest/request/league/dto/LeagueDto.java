@@ -3,6 +3,7 @@ package vgalloy.riot.api.rest.request.league.dto;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import vgalloy.riot.api.rest.constant.RankedQueueType;
 import vgalloy.riot.api.rest.constant.Tier;
 
@@ -10,6 +11,7 @@ import vgalloy.riot.api.rest.constant.Tier;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LeagueDto {
 
     private List<LeagueEntryDto> entries;

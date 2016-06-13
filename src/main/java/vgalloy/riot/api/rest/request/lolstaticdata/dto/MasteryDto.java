@@ -3,12 +3,14 @@ package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import vgalloy.riot.api.rest.constant.MasteryTree;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MasteryDto {
 
     private List<String> description;

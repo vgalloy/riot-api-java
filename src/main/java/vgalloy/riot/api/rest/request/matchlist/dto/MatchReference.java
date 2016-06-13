@@ -2,6 +2,7 @@ package vgalloy.riot.api.rest.request.matchlist.dto;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import vgalloy.riot.api.rest.constant.Lane;
 import vgalloy.riot.api.rest.constant.NormalQueueType;
 import vgalloy.riot.api.rest.constant.Role;
@@ -11,6 +12,7 @@ import vgalloy.riot.api.rest.constant.Season;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MatchReference {
 
     private long champion;

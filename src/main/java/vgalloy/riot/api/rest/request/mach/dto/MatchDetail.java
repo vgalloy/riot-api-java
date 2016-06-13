@@ -3,6 +3,7 @@ package vgalloy.riot.api.rest.request.mach.dto;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.GameType;
 import vgalloy.riot.api.rest.constant.NormalQueueType;
@@ -12,6 +13,7 @@ import vgalloy.riot.api.rest.constant.Season;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MatchDetail {
 
     private int mapId;
