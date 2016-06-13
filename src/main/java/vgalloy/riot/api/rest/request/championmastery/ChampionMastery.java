@@ -1,14 +1,14 @@
 package vgalloy.riot.api.rest.request.championmastery;
 
-import java.util.List;
+import vgalloy.riot.api.rest.constant.PlatformId;
+import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.rest.request.championmastery.dto.ChampionMasteryDto;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
-
-import vgalloy.riot.api.rest.constant.PlatformId;
-import vgalloy.riot.api.rest.constant.Region;
-import vgalloy.riot.api.rest.request.championmastery.dto.ChampionMasteryDto;
+import java.util.List;
 
 /**
  * @author Vincent Galloy
@@ -62,10 +62,11 @@ public interface ChampionMastery {
      * @param region     the region
      * @param platformId platform id
      * @param playerId   the player id
+     * @param count      the number of entries to retrieve, defaults to 3
      * @param apiKey     the rest key
      * @return the player score
      */
     @GET
     @Path("https://{region}.api.pvp.net/championmastery/location/{platformId}/player/{playerId}/topchampions")
-    List<ChampionMasteryDto> getTopChampion(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") long playerId, @QueryParam("api_key") String apiKey);
+    List<ChampionMasteryDto> getTopChampion(@PathParam("region") Region region, @PathParam("platformId") PlatformId platformId, @PathParam("playerId") long playerId, @QueryParam("count") int count, @QueryParam("api_key") String apiKey);
 }

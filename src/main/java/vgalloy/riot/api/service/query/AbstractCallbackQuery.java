@@ -49,7 +49,7 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
     }
 
     /**
-     * Child execute method.
+     * Child execute method. This method is allow to throw some exception {@link this#execute}
      *
      * @return the dto
      */

@@ -27,6 +27,6 @@ public class GetTournamentMatchDetailByIdQuery extends AbstractQuery<MatchDetail
 
     @Override
     protected MatchDetail executeWithError() {
-        return riotWebApi.getMatchDetailById(getRegion(), tournamentMatchId, getRiotApiKeyValue());
+        return riotWebApi.getTournamentMatchDetailById(getRegion(), tournamentMatchId, getRiotApiKeyValue());
     }
 }

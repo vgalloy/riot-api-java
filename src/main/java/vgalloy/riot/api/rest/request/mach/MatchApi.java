@@ -1,13 +1,13 @@
 package vgalloy.riot.api.rest.request.mach;
 
-import java.util.List;
+import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.rest.request.mach.dto.MatchDetail;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
-
-import vgalloy.riot.api.rest.constant.Region;
-import vgalloy.riot.api.rest.request.mach.dto.MatchDetail;
+import java.util.List;
 
 /**
  * @author Vincent Galloy
@@ -42,12 +42,13 @@ public interface MatchApi {
     /**
      * Retrieve match by match ID.
      *
-     * @param region  the summoners region
-     * @param matchId the match id
-     * @param apiKey  the rest key
+     * @param region          the summoners region
+     * @param matchId         the match id
+     * @param includeTimeline the flag indicating whether or not to include match timeline data
+     * @param apiKey          the rest key
      * @return the match detail
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/{matchId}")
-    MatchDetail getMatchDetailById(@PathParam("region") Region region, @PathParam("matchId") long matchId, @QueryParam("api_key") String apiKey);
+    MatchDetail getMatchDetailById(@PathParam("region") Region region, @PathParam("matchId") long matchId, @QueryParam("includeTimeline") boolean includeTimeline, @QueryParam("api_key") String apiKey);
 }

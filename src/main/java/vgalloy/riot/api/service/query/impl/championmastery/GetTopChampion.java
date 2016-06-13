@@ -14,6 +14,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
 public class GetTopChampion extends AbstractQuery<List<ChampionMasteryDto>> {
 
     private final long playerId;
+    private int count;
 
     /**
      * Constructor.
@@ -25,10 +26,21 @@ public class GetTopChampion extends AbstractQuery<List<ChampionMasteryDto>> {
     public GetTopChampion(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long playerId) {
         super(riotWebApi, defaultParameter);
         this.playerId = playerId;
+        count = 3;
     }
 
     @Override
     protected List<ChampionMasteryDto> executeWithError() {
-        return riotWebApi.getTopChampion(getRegion(), getPlatformId(), playerId, getRiotApiKeyValue());
+        return riotWebApi.getTopChampion(getRegion(), getPlatformId(), playerId, count, getRiotApiKeyValue());
+    }
+
+    /**
+     * Set the number of entries to retrieve, defaults to 3.
+     * @param count count
+     * @return this
+     */
+    public GetTopChampion count(int count) {
+        this.count = count;
+        return this;
     }
 }

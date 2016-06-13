@@ -11,6 +11,8 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  */
 public class GetChampionListQuery extends AbstractQuery<ChampionListDto> {
 
+    private boolean freeToPlay;
+
     /**
      * Constructor.
      *
@@ -23,6 +25,17 @@ public class GetChampionListQuery extends AbstractQuery<ChampionListDto> {
 
     @Override
     protected ChampionListDto executeWithError() {
-        return riotWebApi.getChampionList(getRegion(), getRiotApiKeyValue());
+        return riotWebApi.getChampionList(getRegion(), freeToPlay, getRiotApiKeyValue());
+    }
+
+    /**
+     * Only display free to play champions.
+     *
+     * @param freeToPlay free to play
+     * @return this
+     */
+    public GetChampionListQuery freeToPlay(boolean freeToPlay) {
+        this.freeToPlay = freeToPlay;
+        return this;
     }
 }

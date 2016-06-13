@@ -12,6 +12,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
 public class GetMatchDetailByIdQuery extends AbstractQuery<MatchDetail> {
 
     private final long matchId;
+    private boolean includeTimeline;
 
     /**
      * Constructor.
@@ -27,6 +28,17 @@ public class GetMatchDetailByIdQuery extends AbstractQuery<MatchDetail> {
 
     @Override
     protected MatchDetail executeWithError() {
-        return riotWebApi.getMatchDetailById(getRegion(), matchId, getRiotApiKeyValue());
+        return riotWebApi.getMatchDetailById(getRegion(), matchId, includeTimeline, getRiotApiKeyValue());
+    }
+
+    /**
+     * Set the flag indicating whether or not to include match timeline data.
+     *
+     * @param includeTimeline include Timeline
+     * @return this
+     */
+    public GetMatchDetailByIdQuery includeTimeline(boolean includeTimeline) {
+        this.includeTimeline = includeTimeline;
+        return this;
     }
 }

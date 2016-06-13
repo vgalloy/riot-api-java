@@ -1,14 +1,14 @@
 package vgalloy.riot.api.rest.request.champion;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
-
 import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.rest.request.champion.dto.ChampionDto;
 import vgalloy.riot.api.rest.request.champion.dto.ChampionListDto;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 
 /**
  * @author Vincent Galloy
@@ -19,13 +19,14 @@ public interface ChampionApi {
     /**
      * Retrieve all champions.
      *
-     * @param region the region
-     * @param apiKey the rest key
+     * @param region     the region
+     * @param freeToPlay the optional filter param to retrieve only free to play champions
+     * @param apiKey     the rest key
      * @return the champions information
      */
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion")
-    ChampionListDto getChampionList(@PathParam("region") Region region, @QueryParam("api_key") String apiKey);
+    ChampionListDto getChampionList(@PathParam("region") Region region, @QueryParam("freeToPlay") boolean freeToPlay, @QueryParam("api_key") String apiKey);
 
     /**
      * Retrieve champion by ID.

@@ -32,7 +32,7 @@ public class GetMasterQuery extends AbstractQuery<LeagueDto> {
     }
 
     /**
-     * Have the list to be sorted  ?. If yes the last summoner of the list will be the best
+     * Have the list to be sorted  ? If yes the last summoner of the list will be the best
      *
      * @param sorted true if the list have to be sorted
      * @return this
