@@ -1,16 +1,16 @@
 package vgalloy.riot.api.service.query.impl.match;
 
-import java.util.List;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
+
+import java.util.List;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<List<Long>> {
+public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<GetMatchDetailByIdQuery, List<Long>> {
 
     private final String tournamentCode;
 

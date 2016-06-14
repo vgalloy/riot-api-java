@@ -1,8 +1,8 @@
 package vgalloy.riot.api.service.query.impl.league.helper;
 
-import java.util.Comparator;
-
 import vgalloy.riot.api.rest.request.league.dto.LeagueEntryDto;
+
+import java.util.Comparator;
 
 /**
  * @author Vincent Galloy

@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetSummonerSpellByIdQuery extends AbstractQuery<SummonerSpellDto> {
+public class GetSummonerSpellByIdQuery extends AbstractQuery<GetSummonerSpellByIdQuery, SummonerSpellDto> {
 
     private final long summonerSpellId;
 

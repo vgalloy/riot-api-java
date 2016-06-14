@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetRecentGameQuery extends AbstractQuery<RecentGamesDto> {
+public class GetRecentGameQuery extends AbstractQuery<GetRecentGameQuery, RecentGamesDto> {
 
     private final long summonerId;
 

@@ -1,20 +1,20 @@
 package vgalloy.riot.api.service.query.impl.summoner;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.request.summoner.dto.SummonerDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetSummonersByNamesQuery extends AbstractQuery<Map<String, SummonerDto>> {
+public class GetSummonersByNamesQuery extends AbstractQuery<GetSummonersByNamesQuery, Map<String, SummonerDto>> {
 
     private final List<String> summonerNames = new ArrayList<>();
 

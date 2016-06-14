@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetChampionMasteryByChampionQuery extends AbstractQuery<ChampionMasteryDto> {
+public class GetChampionMasteryByChampionQuery extends AbstractQuery<GetChampionMasteryByChampionQuery, ChampionMasteryDto> {
 
     private final long playerId;
     private final long championId;

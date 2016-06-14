@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetRuneByIdQuery extends AbstractQuery<RuneDto> {
+public class GetRuneByIdQuery extends AbstractQuery<GetRuneByIdQuery, RuneDto> {
 
     private final long runeId;
 

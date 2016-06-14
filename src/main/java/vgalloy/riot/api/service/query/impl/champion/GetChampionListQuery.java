@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 20/05/2016.
  */
-public class GetChampionListQuery extends AbstractQuery<ChampionListDto> {
+public class GetChampionListQuery extends AbstractQuery<GetChampionListQuery, ChampionListDto> {
 
     private boolean freeToPlay;
 

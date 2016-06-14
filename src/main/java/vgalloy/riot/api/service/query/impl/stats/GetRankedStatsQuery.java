@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetRankedStatsQuery extends AbstractQuery<RankedStatsDto> {
+public class GetRankedStatsQuery extends AbstractQuery<GetRankedStatsQuery, RankedStatsDto> {
 
     private final long summonerId;
 

@@ -1,20 +1,20 @@
 package vgalloy.riot.api.service.query.impl.team;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.request.team.dto.TeamDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetTeamsByTeamIdsQuery extends AbstractQuery<Map<String, TeamDto>> {
+public class GetTeamsByTeamIdsQuery extends AbstractQuery<GetTeamsByTeamIdsQuery, Map<String, TeamDto>> {
 
     private final List<String> teamIds = new ArrayList<>();
 

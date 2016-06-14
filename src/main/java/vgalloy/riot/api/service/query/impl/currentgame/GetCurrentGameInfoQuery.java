@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetCurrentGameInfoQuery extends AbstractQuery<CurrentGameInfo> {
+public class GetCurrentGameInfoQuery extends AbstractQuery<GetCurrentGameInfoQuery, CurrentGameInfo> {
 
     private final long summonerId;
 

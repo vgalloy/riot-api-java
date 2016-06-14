@@ -1,25 +1,27 @@
 package vgalloy.riot.api.service.query;
 
-import java.util.Collection;
-import java.util.Objects;
-import java.util.StringJoiner;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.constant.PlatformId;
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.service.RiotApiKey;
 import vgalloy.riot.api.service.mapper.RegionMapper;
 
+import java.util.Collection;
+import java.util.Objects;
+import java.util.StringJoiner;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent on 20/05/2016.
  */
-public abstract class AbstractQuery<Dto> extends AbstractCallbackQuery<Dto> {
+public abstract class AbstractQuery<QUERY, DTO> extends AbstractCallbackQuery<DTO> {
 
     protected final RiotWebApi riotWebApi;
-    protected final DefaultParameter defaultParameter;
-    protected RiotApiKey riotApiKey;
-    protected Region region;
+
+    private final DefaultParameter defaultParameter;
+
+    private RiotApiKey riotApiKey;
+    private Region region;
 
     /**
      * Constructor.
@@ -38,9 +40,9 @@ public abstract class AbstractQuery<Dto> extends AbstractCallbackQuery<Dto> {
      * @param riotApiKey the riot rest key
      * @return the current query
      */
-    public AbstractQuery<Dto> riotApiKey(RiotApiKey riotApiKey) {
+    public QUERY riotApiKey(RiotApiKey riotApiKey) {
         this.riotApiKey = riotApiKey;
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -49,9 +51,9 @@ public abstract class AbstractQuery<Dto> extends AbstractCallbackQuery<Dto> {
      * @param region the region
      * @return the current query
      */
-    public AbstractQuery<Dto> region(Region region) {
+    public QUERY region(Region region) {
         this.region = region;
-        return this;
+        return (QUERY) this;
     }
 
     /**

@@ -1,21 +1,21 @@
 package vgalloy.riot.api.service.query.impl.summoner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.request.summoner.dto.MasteryPagesDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetSummonersMasteriesByIdsQuery extends AbstractQuery<Map<String, MasteryPagesDto>> {
+public class GetSummonersMasteriesByIdsQuery extends AbstractQuery<GetSummonersMasteriesByIdsQuery, Map<String, MasteryPagesDto>> {
 
-    private final List<Long> summonerIds = new ArrayList<>();
+    private final Collection<Long> summonerIds = new ArrayList<>();
 
     /**
      * Constructor.

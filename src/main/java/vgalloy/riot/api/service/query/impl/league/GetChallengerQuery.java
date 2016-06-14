@@ -1,8 +1,5 @@
 package vgalloy.riot.api.service.query.impl.league;
 
-import java.util.Collections;
-import java.util.Objects;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.constant.RankedQueueType;
 import vgalloy.riot.api.rest.request.league.dto.LeagueDto;
@@ -10,11 +7,14 @@ import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 import vgalloy.riot.api.service.query.impl.league.helper.LeagueEntryDtoComparator;
 
+import java.util.Collections;
+import java.util.Objects;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetChallengerQuery extends AbstractQuery<LeagueDto> {
+public class GetChallengerQuery extends AbstractQuery<GetChallengerQuery, LeagueDto> {
 
     private final RankedQueueType rankedQueueType;
     private boolean sorted;

@@ -1,17 +1,17 @@
 package vgalloy.riot.api.service.query.impl.championmastery;
 
-import java.util.List;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.request.championmastery.dto.ChampionMasteryDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 
+import java.util.List;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetTopChampion extends AbstractQuery<List<ChampionMasteryDto>> {
+public class GetTopChampion extends AbstractQuery<GetTopChampion, List<ChampionMasteryDto>> {
 
     private final long playerId;
     private int count;
@@ -36,6 +36,7 @@ public class GetTopChampion extends AbstractQuery<List<ChampionMasteryDto>> {
 
     /**
      * Set the number of entries to retrieve, defaults to 3.
+     *
      * @param count count
      * @return this
      */

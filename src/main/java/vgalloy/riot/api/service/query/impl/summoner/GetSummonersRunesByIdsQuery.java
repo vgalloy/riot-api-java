@@ -1,21 +1,21 @@
 package vgalloy.riot.api.service.query.impl.summoner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.request.summoner.dto.RunePagesDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetSummonersRunesByIdsQuery extends AbstractQuery<Map<String, RunePagesDto>> {
+public class GetSummonersRunesByIdsQuery extends AbstractQuery<GetSummonersRunesByIdsQuery, Map<String, RunePagesDto>> {
 
-    private final List<Long> summonerIds = new ArrayList<>();
+    private final Collection<Long> summonerIds = new ArrayList<>();
 
     /**
      * Constructor.

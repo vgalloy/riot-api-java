@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetMasteryListQuery extends AbstractQuery<MasteryListDto> {
+public class GetMasteryListQuery extends AbstractQuery<GetMasteryListQuery, MasteryListDto> {
 
     /**
      * Constructor.

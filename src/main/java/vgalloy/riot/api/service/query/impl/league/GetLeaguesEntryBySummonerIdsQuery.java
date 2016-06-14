@@ -1,21 +1,22 @@
 package vgalloy.riot.api.service.query.impl.league;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import vgalloy.riot.api.client.RiotWebApi;
 import vgalloy.riot.api.rest.request.league.dto.LeagueDto;
 import vgalloy.riot.api.service.query.AbstractQuery;
 import vgalloy.riot.api.service.query.DefaultParameter;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetLeaguesEntryBySummonerIdsQuery extends AbstractQuery<Map<String, List<LeagueDto>>> {
+public class GetLeaguesEntryBySummonerIdsQuery extends AbstractQuery<GetLeaguesEntryBySummonerIdsQuery, Map<String, List<LeagueDto>>> {
 
-    private final List<Long> summonerIds = new ArrayList<>();
+    private final Collection<Long> summonerIds = new ArrayList<>();
 
     /**
      * Constructor.

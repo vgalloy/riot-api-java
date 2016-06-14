@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetMatchListBySummonerIdQuery extends AbstractQuery<MatchList> {
+public class GetMatchListBySummonerIdQuery extends AbstractQuery<GetMatchListBySummonerIdQuery, MatchList> {
 
     private final long summonerId;
 

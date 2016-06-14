@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 22/05/16.
  */
-public class GetFeaturedGameQuery extends AbstractQuery<FeaturedGames> {
+public class GetFeaturedGameQuery extends AbstractQuery<GetFeaturedGameQuery, FeaturedGames> {
 
     /**
      * Constructor.

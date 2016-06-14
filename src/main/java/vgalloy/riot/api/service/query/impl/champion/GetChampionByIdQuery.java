@@ -9,7 +9,7 @@ import vgalloy.riot.api.service.query.DefaultParameter;
  * @author Vincent Galloy
  *         Created by Vincent on 21/05/2016.
  */
-public class GetChampionByIdQuery extends AbstractQuery<ChampionDto> {
+public class GetChampionByIdQuery extends AbstractQuery<GetChampionByIdQuery, ChampionDto> {
 
     private final long championId;
 
