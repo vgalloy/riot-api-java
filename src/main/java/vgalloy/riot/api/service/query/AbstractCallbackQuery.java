@@ -15,9 +15,9 @@ import vgalloy.riot.api.service.callback.DefaultCallBack;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 26/05/16.
  */
-public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
+public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO> implements Query<DTO> {
 
-    private Callback<Dto> successCallback = new DefaultCallBack<>();
+    private Callback<DTO> successCallback = new DefaultCallBack<>();
 
     private Callback<BadRequestException> badRequestExceptionCallback = new DefaultCallBack<>();
     private Callback<NotAuthorizedException> notAuthorizedExceptionCallback = new DefaultCallBack<>();
@@ -27,8 +27,8 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
     private Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback = new DefaultCallBack<>();
 
     @Override
-    public Dto execute() {
-        Dto result = null;
+    public DTO execute() {
+        DTO result = null;
         try {
             result = executeWithError();
             successCallback.process(result);
@@ -53,7 +53,7 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      *
      * @return the dto
      */
-    protected abstract Dto executeWithError();
+    protected abstract DTO executeWithError();
 
     /**
      * Define the on success callback.
@@ -61,9 +61,9 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param successCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onSuccess(Callback<Dto> successCallback) {
+    public QUERY onSuccess(Callback<DTO> successCallback) {
         this.successCallback = Objects.requireNonNull(successCallback, "successCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -72,9 +72,9 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param badRequestExceptionCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onBadRequestExceptionCallback(Callback<BadRequestException> badRequestExceptionCallback) {
+    public QUERY onBadRequestExceptionCallback(Callback<BadRequestException> badRequestExceptionCallback) {
         this.badRequestExceptionCallback = Objects.requireNonNull(badRequestExceptionCallback, "badRequestExceptionCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -83,9 +83,9 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param notAuthorizedExceptionCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onNotAuthorizedException(Callback<NotAuthorizedException> notAuthorizedExceptionCallback) {
+    public QUERY onNotAuthorizedException(Callback<NotAuthorizedException> notAuthorizedExceptionCallback) {
         this.notAuthorizedExceptionCallback = Objects.requireNonNull(notAuthorizedExceptionCallback, "notAuthorizedExceptionCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -94,9 +94,9 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param forbiddenExceptionCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onForbiddenException(Callback<ForbiddenException> forbiddenExceptionCallback) {
+    public QUERY onForbiddenException(Callback<ForbiddenException> forbiddenExceptionCallback) {
         this.forbiddenExceptionCallback = Objects.requireNonNull(forbiddenExceptionCallback, "forbiddenExceptionCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -105,9 +105,9 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param notFoundExceptionCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onNotFoundException(Callback<NotFoundException> notFoundExceptionCallback) {
+    public QUERY onNotFoundException(Callback<NotFoundException> notFoundExceptionCallback) {
         this.notFoundExceptionCallback = Objects.requireNonNull(notFoundExceptionCallback, "notFoundExceptionCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -116,9 +116,9 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param serviceUnavailableExceptionCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onServiceUnavailableException(Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback) {
+    public QUERY onServiceUnavailableException(Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback) {
         this.serviceUnavailableExceptionCallback = Objects.requireNonNull(serviceUnavailableExceptionCallback, "serviceUnavailableExceptionCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 
     /**
@@ -127,8 +127,8 @@ public abstract class AbstractCallbackQuery<Dto> implements Query<Dto> {
      * @param internalServerErrorExceptionCallback the callback
      * @return this
      */
-    public AbstractCallbackQuery<Dto> onInternalServerErrorException(Callback<InternalServerErrorException> internalServerErrorExceptionCallback) {
+    public QUERY onInternalServerErrorException(Callback<InternalServerErrorException> internalServerErrorExceptionCallback) {
         this.internalServerErrorExceptionCallback = Objects.requireNonNull(internalServerErrorExceptionCallback, "internalServerErrorExceptionCallback can not be null");
-        return this;
+        return (QUERY) this;
     }
 }

@@ -14,7 +14,7 @@ import java.util.StringJoiner;
  * @author Vincent Galloy
  *         Created by Vincent on 20/05/2016.
  */
-public abstract class AbstractQuery<QUERY, DTO> extends AbstractCallbackQuery<DTO> {
+public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO> extends AbstractCallbackQuery<QUERY, DTO> {
 
     protected final RiotWebApi riotWebApi;
 

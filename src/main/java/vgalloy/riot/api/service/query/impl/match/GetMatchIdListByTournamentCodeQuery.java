@@ -10,7 +10,7 @@ import java.util.List;
  * @author Vincent Galloy
  *         Created by Vincent on 23/05/2016.
  */
-public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<GetMatchDetailByIdQuery, List<Long>> {
+public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<GetMatchIdListByTournamentCodeQuery, List<Long>> {
 
     private final String tournamentCode;
 
