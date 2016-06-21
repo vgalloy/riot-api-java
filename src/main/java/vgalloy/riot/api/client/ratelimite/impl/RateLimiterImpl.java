@@ -56,7 +56,7 @@ public class RateLimiterImpl implements RateLimiter {
         return rateLimitList.stream()
                 .map(this::getSleepingTime)
                 .max(Long::compareTo)
-                .get();
+                .orElse(0L);
     }
 
     /**

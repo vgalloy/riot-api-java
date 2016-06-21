@@ -1,11 +1,10 @@
 package vgalloy.riot.api.client.ratelimite.impl;
 
-import java.lang.reflect.Method;
-
 import vgalloy.riot.api.client.RiotWebApi;
-import vgalloy.riot.api.client.ratelimite.GlobalRateLimiter;
 import vgalloy.riot.api.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.client.ratelimite.RateLimitProxy;
+
+import java.lang.reflect.Method;
 
 /**
  * @author Vincent Galloy
@@ -40,9 +39,5 @@ public class RateLimitProxyImpl implements RateLimitProxy {
                 throw e;
             }
         }
-    }
-
-    public GlobalRateLimiter getGlobalRateLimiter() {
-        return globalRateLimiterImpl;
     }
 }

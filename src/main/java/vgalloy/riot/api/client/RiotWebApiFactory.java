@@ -1,16 +1,15 @@
 package vgalloy.riot.api.client;
 
-import java.lang.reflect.Proxy;
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import org.glassfish.jersey.client.proxy.WebResourceFactory;
+import vgalloy.riot.api.client.filter.RateLimitFilter;
+import vgalloy.riot.api.client.ratelimite.RateLimitManager;
+import vgalloy.riot.api.client.ratelimite.RateLimitProxy;
+import vgalloy.riot.api.client.ratelimite.impl.RateLimitProxyImpl;
+
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import org.glassfish.jersey.client.ClientConfig;
-import org.glassfish.jersey.client.proxy.WebResourceFactory;
-import org.glassfish.jersey.jackson.JacksonFeature;
-import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
-
-import vgalloy.riot.api.client.ratelimite.RateLimitProxy;
-import vgalloy.riot.api.client.ratelimite.RateLimitManager;
-import vgalloy.riot.api.client.ratelimite.impl.RateLimitProxyImpl;
+import java.lang.reflect.Proxy;
 
 /**
  * @author Vincent Galloy
@@ -33,14 +32,12 @@ public final class RiotWebApiFactory {
      * @return a new Riot web rest
      */
     public static RiotWebApi getRiotWebApi(RateLimitManager rateLimitManager) {
-        ClientConfig clientConfig = new ClientConfig().register(JacksonFeature.class).register(JacksonJsonProvider.class);
-        Client client = ClientBuilder.newClient(clientConfig);
-        //client.register(new LoggingFilter());
+        Client client = ClientBuilder.newClient()
+//                .register(new LoggingFilter())
+                .register(RateLimitFilter.class)
+                .register(JacksonJsonProvider.class);
         RiotWebApi unsecuredRiotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));
         RateLimitProxy rateLimitProxy = new RateLimitProxyImpl(unsecuredRiotWebApi, rateLimitManager);
-        return (RiotWebApi) Proxy.newProxyInstance(
-                RiotWebApi.class.getClassLoader(),
-                new Class[]{RiotWebApi.class},
-                rateLimitProxy);
+        return (RiotWebApi) Proxy.newProxyInstance(RiotWebApi.class.getClassLoader(), new Class[]{RiotWebApi.class}, rateLimitProxy);
     }
 }

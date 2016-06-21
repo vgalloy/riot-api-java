@@ -34,9 +34,10 @@ public class RateLimitManagerImpl implements RateLimitManager {
 
     @Override
     public RateLimitManager addRateLimit(RateLimit... rateLimit) {
-        for (Entry<Region, RateLimiter> entry : rateLimiterMap.entrySet()) {
-            addRateLimit(entry.getKey(), rateLimit);
-        }
+        rateLimiterMap.entrySet().stream()
+                .map(Entry::getValue)
+                .map(RateLimiterImpl.class::cast)
+                .forEach(e -> e.addRateLimit(rateLimit));
         return this;
     }
 

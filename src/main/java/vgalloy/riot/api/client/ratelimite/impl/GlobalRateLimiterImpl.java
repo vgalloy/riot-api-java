@@ -1,12 +1,12 @@
 package vgalloy.riot.api.client.ratelimite.impl;
 
-import java.lang.reflect.Method;
-import java.util.Objects;
-
 import vgalloy.riot.api.client.ratelimite.GlobalRateLimiter;
 import vgalloy.riot.api.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.rest.constant.Region;
+
+import java.lang.reflect.Method;
+import java.util.Objects;
 
 /**
  * @author Vincent Galloy
@@ -31,10 +31,6 @@ public class GlobalRateLimiterImpl implements GlobalRateLimiter {
             Region region = getRegion(method, args);
             rateLimitManager.get(region).delay();
         }
-    }
-
-    public RateLimitManager getRateLimitManager() {
-        return rateLimitManager;
     }
 
     /**
