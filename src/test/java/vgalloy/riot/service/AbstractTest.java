@@ -54,7 +54,7 @@ public abstract class AbstractTest {
         }
 
         /**
-         * assert the query is correct.
+         * Assert the query is correct.
          *
          * @return this
          */
@@ -78,6 +78,8 @@ public abstract class AbstractTest {
             String message = stringBuilder.append(" [ ").append(code).append(" ]").toString();
             if ("200".equals(code)) {
                 logger.info("{}", message);
+            } else if ( "403".equals(code) ) {
+                logger.error("{}", message);
             } else {
                 logger.warn("{}", message);
             }
