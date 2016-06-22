@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -83,12 +84,7 @@ public class RateLimiterImpl implements RateLimiter {
      * @param rateLimit the rate limit
      */
     public synchronized void addRateLimit(RateLimit... rateLimit) {
-        List<RateLimit> rateLimits;
-        if (rateLimit == null) {
-            rateLimits = new ArrayList<>();
-        } else {
-            rateLimits = Arrays.asList(rateLimit);
-        }
+        List<RateLimit> rateLimits = Arrays.asList(Optional.ofNullable(rateLimit).orElse(new RateLimit[0]));
         rateLimitList.addAll(rateLimits);
     }
 

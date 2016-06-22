@@ -1,7 +1,7 @@
 package vgalloy.riot.api.service.executor.impl;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,7 @@ public class ExecutorImpl implements Executor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorImpl.class);
 
-    private List<Thread> threadList = new ArrayList<>();
+    private Collection<Thread> threadList = new ArrayList<>();
     private boolean isRunning;
 
     @Override

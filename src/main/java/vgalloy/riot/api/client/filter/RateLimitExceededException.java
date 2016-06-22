@@ -1,5 +1,7 @@
 package vgalloy.riot.api.client.filter;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -8,33 +10,15 @@ import java.util.Objects;
  */
 public class RateLimitExceededException extends RuntimeException {
 
-    private final String retryAfter;
-    private final String xRateLimitType;
-    private final String xRateLimitCount;
+    private final Map<String, List<String>> headers;
 
     /**
      * Constructor.
      *
-     * @param retryAfter      The remaining number of seconds before the rate limit resets
-     * @param xRateLimitType  The rate limit type, either "user" or "service"
-     * @param xRateLimitCount The rate limit count
+     * @param headers the response header of the wrong request
      */
-    public RateLimitExceededException(String retryAfter, String xRateLimitType, String xRateLimitCount) {
-        this.retryAfter = retryAfter;
-        this.xRateLimitType = xRateLimitType;
-        this.xRateLimitCount = xRateLimitCount;
-    }
-
-    public String getRetryAfter() {
-        return retryAfter;
-    }
-
-    public String getXRateLimitType() {
-        return xRateLimitType;
-    }
-
-    public String getXRateLimitCount() {
-        return xRateLimitCount;
+    public RateLimitExceededException(Map<String, List<String>> headers) {
+        this.headers = headers;
     }
 
     @Override
@@ -46,22 +30,18 @@ public class RateLimitExceededException extends RuntimeException {
             return false;
         }
         RateLimitExceededException that = (RateLimitExceededException) o;
-        return Objects.equals(retryAfter, that.retryAfter) &&
-                Objects.equals(xRateLimitType, that.xRateLimitType) &&
-                Objects.equals(xRateLimitCount, that.xRateLimitCount);
+        return Objects.equals(headers, that.headers);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(retryAfter, xRateLimitType, xRateLimitCount);
+        return Objects.hash(headers);
     }
 
     @Override
     public String toString() {
         return "RateLimitExceededException{" +
-                "retryAfter='" + retryAfter + '\'' +
-                ", xRateLimitType='" + xRateLimitType + '\'' +
-                ", xRateLimitCount='" + xRateLimitCount + '\'' +
+                "headers=" + headers +
                 '}';
     }
 }

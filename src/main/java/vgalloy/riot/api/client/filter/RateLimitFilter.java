@@ -7,7 +7,6 @@ import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientResponseContext;
 import javax.ws.rs.client.ClientResponseFilter;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * @author Vincent Galloy
@@ -21,25 +20,7 @@ public class RateLimitFilter implements ClientResponseFilter {
     public void filter(ClientRequestContext clientRequestContext, ClientResponseContext clientResponseContext) throws IOException {
         LOGGER.debug("Rate limit : " + clientResponseContext.getHeaders().get("X-Rate-Limit-Count"));
         if (clientResponseContext.getStatus() == 429) {
-            //clientResponseContext.getHeaders().entrySet().forEach(e -> LOGGER.warn("{} : {}", e.getKey(), e.getValue()));
-
-            List<String> retryAfter = clientResponseContext.getHeaders().get("Retry-After");
-            List<String> xRateLimitType = clientResponseContext.getHeaders().get("X-Rate-Limit-Type");
-            List<String> xRateLimitCount = clientResponseContext.getHeaders().get("X-Rate-Limit-Count");
-            throw new RateLimitExceededException(toString(retryAfter), toString(xRateLimitType), toString(xRateLimitCount));
+            throw new RateLimitExceededException(clientResponseContext.getHeaders());
         }
-    }
-
-    /**
-     * Convert a list of String into one string.
-     *
-     * @param header the list of string, can be null
-     * @return a string can br null
-     */
-    private String toString(List<String> header) {
-        if (header == null) {
-            return null;
-        }
-        return header.toString();
     }
 }
