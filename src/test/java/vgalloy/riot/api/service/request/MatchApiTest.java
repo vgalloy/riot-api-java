@@ -1,8 +1,8 @@
-package vgalloy.riot.service.request;
+package vgalloy.riot.api.service.request;
 
 import org.junit.Test;
 import vgalloy.riot.api.rest.constant.Region;
-import vgalloy.riot.service.AbstractTest;
+import vgalloy.riot.api.service.AbstractTest;
 
 /**
  * @author Vincent Galloy

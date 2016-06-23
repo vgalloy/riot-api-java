@@ -1,4 +1,4 @@
-package vgalloy.riot.service;
+package vgalloy.riot.api.service;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,13 +9,9 @@ import java.util.stream.IntStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import vgalloy.riot.api.client.ratelimite.RateLimitManager;
-import vgalloy.riot.api.client.ratelimite.impl.RateLimitManagerImpl;
 import vgalloy.riot.api.client.ratelimite.model.RateLimit;
-import vgalloy.riot.api.service.RiotApi;
-import vgalloy.riot.api.service.RiotApiKey;
 import vgalloy.riot.api.service.query.AbstractCallbackQuery;
-import vgalloy.riot.service.request.ChampionApiTest;
+import vgalloy.riot.api.service.request.ChampionApiTest;
 
 /**
  * @author Vincent Galloy

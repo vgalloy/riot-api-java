@@ -1,4 +1,4 @@
-package vgalloy.riot.client.ratelimite;
+package vgalloy.riot.api.client.ratelimite;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import vgalloy.riot.api.client.ratelimite.model.RateLimit;
-import vgalloy.riot.api.client.ratelimite.RateLimiter;
 import vgalloy.riot.api.client.ratelimite.impl.RateLimiterImpl;
 import vgalloy.riot.api.service.executor.Executor;
 import vgalloy.riot.api.service.executor.impl.ExecutorImpl;

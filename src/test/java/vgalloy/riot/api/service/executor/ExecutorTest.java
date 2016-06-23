@@ -1,10 +1,8 @@
-package vgalloy.riot.service.executor;
+package vgalloy.riot.api.service.executor;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
-
-import vgalloy.riot.api.service.executor.Executor;
 import vgalloy.riot.api.service.executor.impl.ExecutorImpl;
 
 import static org.junit.Assert.assertEquals;
