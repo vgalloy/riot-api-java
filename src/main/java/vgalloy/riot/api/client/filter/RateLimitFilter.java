@@ -20,7 +20,7 @@ public class RateLimitFilter implements ClientResponseFilter {
     public void filter(ClientRequestContext clientRequestContext, ClientResponseContext clientResponseContext) throws IOException {
         LOGGER.debug("Rate limit : " + clientResponseContext.getHeaders().get("X-Rate-Limit-Count"));
         if (clientResponseContext.getStatus() == 429) {
-            throw new RateLimitExceededException(clientResponseContext.getHeaders());
+            throw new RiotRateLimitExceededException(clientResponseContext.getHeaders());
         }
     }
 }

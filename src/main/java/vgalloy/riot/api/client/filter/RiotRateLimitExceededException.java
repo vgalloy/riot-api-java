@@ -8,7 +8,7 @@ import java.util.Objects;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/06/16.
  */
-public class RateLimitExceededException extends RuntimeException {
+public class RiotRateLimitExceededException extends RuntimeException {
 
     private final Map<String, List<String>> headers;
 
@@ -17,7 +17,7 @@ public class RateLimitExceededException extends RuntimeException {
      *
      * @param headers the response header of the wrong request
      */
-    public RateLimitExceededException(Map<String, List<String>> headers) {
+    public RiotRateLimitExceededException(Map<String, List<String>> headers) {
         this.headers = headers;
     }
 
@@ -26,10 +26,10 @@ public class RateLimitExceededException extends RuntimeException {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof RateLimitExceededException)) {
+        if (!(o instanceof RiotRateLimitExceededException)) {
             return false;
         }
-        RateLimitExceededException that = (RateLimitExceededException) o;
+        RiotRateLimitExceededException that = (RiotRateLimitExceededException) o;
         return Objects.equals(headers, that.headers);
     }
 

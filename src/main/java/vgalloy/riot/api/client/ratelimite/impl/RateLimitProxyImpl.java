@@ -1,7 +1,7 @@
 package vgalloy.riot.api.client.ratelimite.impl;
 
 import vgalloy.riot.api.client.RiotWebApi;
-import vgalloy.riot.api.client.filter.RateLimitExceededException;
+import vgalloy.riot.api.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.client.ratelimite.RateLimitProxy;
 
@@ -34,7 +34,7 @@ public class RateLimitProxyImpl implements RateLimitProxy {
             return method.invoke(riotWebApi, args);
         } catch (Exception e) {
             Throwable throwable = e.getCause();
-            if (throwable.getCause() instanceof RateLimitExceededException) {
+            if (throwable.getCause() instanceof RiotRateLimitExceededException) {
                 throw throwable.getCause();
             }
             throw throwable;
