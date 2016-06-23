@@ -1,6 +1,5 @@
 package vgalloy.riot.api.service;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
@@ -19,15 +18,17 @@ import vgalloy.riot.api.service.request.ChampionApiTest;
  */
 public abstract class AbstractTest {
 
-    protected final RiotApi riotApi;
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractTest.class);
 
-    public AbstractTest() {
+    protected static final RiotApi riotApi;
+
+    static {
         InputStream inputStream = ChampionApiTest.class.getClassLoader().getResourceAsStream("riot.properties");
         Properties properties = new Properties();
         try {
             properties.load(inputStream);
-        } catch (IOException e) {
-            throw new RuntimeException("Can not load properties");
+        } catch (Exception e) {
+            LOGGER.error("Can not load properties");
         }
         riotApi = new RiotApi()
                 .addGlobalRateLimit(new RateLimit(9, 10_000), new RateLimit(400, 10 * 60 * 1_000))
@@ -36,7 +37,6 @@ public abstract class AbstractTest {
 
     protected class QueryTester {
 
-        private final Logger logger = LoggerFactory.getLogger(QueryTester.class);
         private final String queryName;
         private String code = "200";
 
@@ -73,11 +73,11 @@ public abstract class AbstractTest {
             IntStream.range(queryName.length(), 30).asLongStream().forEach(e -> stringBuilder.append("."));
             String message = stringBuilder.append(" [ ").append(code).append(" ]").toString();
             if ("200".equals(code)) {
-                logger.info("{}", message);
+                LOGGER.info("{}", message);
             } else if ( "403".equals(code) ) {
-                logger.error("{}", message);
+                LOGGER.error("{}", message);
             } else {
-                logger.warn("{}", message);
+                LOGGER.warn("{}", message);
             }
         }
     }
