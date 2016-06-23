@@ -4,12 +4,12 @@ package vgalloy.riot.api.service.callback;
  * @author Vincent Galloy
  *         Created by Vincent on 21/05/2016.
  */
-public interface Callback<Dto> {
+public interface Callback<RESPONSE> {
 
     /**
-     * Action to proceed after request success.
+     * Action to proceed after request execute.
      *
-     * @param dto the dto
+     * @param response the response. It can be a Dto or an exception.
      */
-    void process(Dto dto);
+    void process(RESPONSE response);
 }

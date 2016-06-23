@@ -10,7 +10,8 @@ import javax.ws.rs.ServiceUnavailableException;
 
 import vgalloy.riot.api.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.service.callback.Callback;
-import vgalloy.riot.api.service.callback.DefaultCallBack;
+import vgalloy.riot.api.service.callback.impl.DefaultCallBack;
+import vgalloy.riot.api.service.callback.impl.ThrowingCallBack;
 
 /**
  * @author Vincent Galloy
@@ -26,7 +27,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
     private Callback<NotFoundException> notFoundExceptionCallback = new DefaultCallBack<>();
     private Callback<InternalServerErrorException> internalServerErrorExceptionCallback = new DefaultCallBack<>();
     private Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback = new DefaultCallBack<>();
-    private Callback<RiotRateLimitExceededException> riotRateLimitExceededExceptionCallback = new DefaultCallBack<>();
+    private Callback<RiotRateLimitExceededException> riotRateLimitExceededExceptionCallback = new ThrowingCallBack<>();
 
     @Override
     public DTO execute() {
@@ -34,9 +35,9 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
         try {
             result = executeWithError();
             successCallback.process(result);
-        }  catch (BadRequestException e) {
+        } catch (BadRequestException e) {
             badRequestExceptionCallback.process(e);
-        }  catch (NotAuthorizedException e) {
+        } catch (NotAuthorizedException e) {
             notAuthorizedExceptionCallback.process(e);
         } catch (ForbiddenException e) {
             forbiddenExceptionCallback.process(e);
