@@ -18,7 +18,8 @@
 
         <!-- Checkstyle -->
         <checkstyle.version>2.17</checkstyle.version>
-        <checkstyle.configuration.location>conf/checkstyle.xml</checkstyle.configuration.location>
+        <checkstyle.checkstyle.location>conf/checkstyle.xml</checkstyle.checkstyle.location>
+        <checkstyle.suppressions.location>conf/suppressions.xml</checkstyle.suppressions.location>
 
         <!-- Log -->
         <slf4j-api.version>1.7.19</slf4j-api.version>
@@ -89,8 +90,9 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${checkstyle.version}</version>
                 <configuration>
-                    <configLocation>${checkstyle.configuration.location}</configLocation>
+                    <configLocation>${checkstyle.checkstyle.location}</configLocation>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                    <suppressionsLocation>${checkstyle.suppressions.location}</suppressionsLocation>
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
                 </configuration>
