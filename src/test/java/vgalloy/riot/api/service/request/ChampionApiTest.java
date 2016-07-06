@@ -1,7 +1,6 @@
 package vgalloy.riot.api.service.request;
 
 import org.junit.Test;
-
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.service.AbstractTest;
 
@@ -29,10 +28,5 @@ public class ChampionApiTest extends AbstractTest {
                 .test(riotApi.getChampionById(1).region(Region.KR))
                 .test(riotApi.getChampionById(1).region(Region.EUNE))
                 .end();
-    }
-
-    @Test
-    public void test() {
-        riotApi.getChampionById(1).region(Region.EUW).execute();
     }
 }

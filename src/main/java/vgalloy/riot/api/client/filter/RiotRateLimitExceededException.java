@@ -3,6 +3,7 @@ package vgalloy.riot.api.client.filter;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * @author Vincent Galloy
@@ -19,6 +20,40 @@ public class RiotRateLimitExceededException extends RuntimeException {
      */
     public RiotRateLimitExceededException(Map<String, List<String>> headers) {
         this.headers = headers;
+    }
+
+    /**
+     * Get the rate limit type.
+     *
+     * @return the rate limit type
+     */
+    public Optional<List<String>> getRateLimitType() {
+        return Optional.ofNullable(headers.get("X-Rate-Limit-Type"));
+    }
+
+    /**
+     * Get the sleeping time.
+     *
+     * @return the time before the next request
+     */
+    public Optional<Long> getRetryAfter() {
+        if (headers.get("Retry-After") == null) {
+            return Optional.empty();
+        }
+        String value = headers.get("Retry-After").get(0);
+        if (value != null) {
+            return Optional.of(Long.valueOf(value));
+        }
+        return Optional.empty();
+    }
+
+    /**
+     * Get the headers.
+     *
+     * @return the headers
+     */
+    public Map<String, List<String>> getHeaders() {
+        return headers;
     }
 
     @Override

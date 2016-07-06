@@ -23,7 +23,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
 
     private Callback<BadRequestException> badRequestExceptionCallback = new DefaultCallBack<>();
     private Callback<NotAuthorizedException> notAuthorizedExceptionCallback = new DefaultCallBack<>();
-    private Callback<ForbiddenException> forbiddenExceptionCallback = new DefaultCallBack<>();
+    private Callback<ForbiddenException> forbiddenExceptionCallback = new ThrowingCallBack<>();
     private Callback<NotFoundException> notFoundExceptionCallback = new DefaultCallBack<>();
     private Callback<InternalServerErrorException> internalServerErrorExceptionCallback = new DefaultCallBack<>();
     private Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback = new DefaultCallBack<>();

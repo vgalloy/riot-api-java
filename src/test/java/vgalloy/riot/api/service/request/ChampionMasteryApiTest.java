@@ -2,6 +2,7 @@ package vgalloy.riot.api.service.request;
 
 import org.junit.Test;
 
+import vgalloy.riot.api.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.service.AbstractTest;
 
