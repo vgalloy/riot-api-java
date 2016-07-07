@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         LeagueDto leagueDto = new RiotApi()
                 .defaultRiotApiKey(new RiotApiKey("MY-API-KEY"))
-                .defaultRegion(Region.EUW)
+                .defaultRegion(Region.euw)
                 .getChallenger(RankedQueueType.RANKED_SOLO_5x5)
                 .sorted(true)
                 .execute();
@@ -58,7 +58,7 @@ If you don't want to repeat the api key and the region for all request you set t
 ```java
 RiotApi riotApi = new RiotApi()
                 .defaultRiotApiKey(new RiotApiKey("MY-API-KEY"))
-                .defaultRegion(Region.EUW)
+                .defaultRegion(Region.euw)
 ```
 
 ## Synchronous Request
@@ -68,7 +68,7 @@ riotApi.getSummonerByNames("Ivaranne").execute();
 Do not forget to execute the query
 
 ## Asynchronous Request
-The following request wil print the same result as the first query;
+The following request will print the same result as the first query;
 ```java
 Query query = riotApi
                 .getChallenger(RankedQueueType.RANKED_SOLO_5x5)

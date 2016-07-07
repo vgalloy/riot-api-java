@@ -14,9 +14,9 @@ public class GameApiTest extends AbstractTest {
     @Test
     public void testGetRecentGame() {
         new QueryTester("RecentGame")
-                .test(riotApi.getRecentGame(24550736).region(Region.EUW))
-                .test(riotApi.getRecentGame(67911140).region(Region.NA))
-                .test(riotApi.getRecentGame(17671075).region(Region.KR))
+                .test(riotApi.getRecentGame(24550736).region(Region.euw))
+                .test(riotApi.getRecentGame(67911140).region(Region.na))
+                .test(riotApi.getRecentGame(17671075).region(Region.kr))
                 .end();
     }
 }

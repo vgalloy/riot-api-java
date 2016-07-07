@@ -13,20 +13,20 @@ public class ChampionApiTest extends AbstractTest {
     @Test
     public void testChampionList() {
         new QueryTester("ChampionList")
-                .test(riotApi.getChampionList().region(Region.EUW))
-                .test(riotApi.getChampionList().region(Region.NA))
-                .test(riotApi.getChampionList().region(Region.KR))
-                .test(riotApi.getChampionList().region(Region.EUNE))
+                .test(riotApi.getChampionList().region(Region.euw))
+                .test(riotApi.getChampionList().region(Region.na))
+                .test(riotApi.getChampionList().region(Region.kr))
+                .test(riotApi.getChampionList().region(Region.eune))
                 .end();
     }
 
     @Test
     public void testChampionById() {
         new QueryTester("ChampionById")
-                .test(riotApi.getChampionById(1).region(Region.EUW))
-                .test(riotApi.getChampionById(1).region(Region.NA))
-                .test(riotApi.getChampionById(1).region(Region.KR))
-                .test(riotApi.getChampionById(1).region(Region.EUNE))
+                .test(riotApi.getChampionById(1).region(Region.euw))
+                .test(riotApi.getChampionById(1).region(Region.na))
+                .test(riotApi.getChampionById(1).region(Region.kr))
+                .test(riotApi.getChampionById(1).region(Region.eune))
                 .end();
     }
 }

@@ -23,9 +23,9 @@ public class LolStatusApiTest extends AbstractTest {
     @Test
     public void testGetShardStatus() {
         new QueryTester("ShardStatus")
-                .test(riotApi.getShardStatus().region(Region.EUW))
-                .test(riotApi.getShardStatus().region(Region.NA))
-                .test(riotApi.getShardStatus().region(Region.KR))
+                .test(riotApi.getShardStatus().region(Region.euw))
+                .test(riotApi.getShardStatus().region(Region.na))
+                .test(riotApi.getShardStatus().region(Region.kr))
                 .end();
     }
 }

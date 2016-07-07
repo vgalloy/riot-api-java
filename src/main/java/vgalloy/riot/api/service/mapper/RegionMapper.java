@@ -25,27 +25,27 @@ public final class RegionMapper {
     public static Region toRegion(PlatformId platformId) {
         switch (platformId) {
             case BR1:
-                return Region.BR;
+                return Region.br;
             case EUN1:
-                return Region.EUNE;
+                return Region.eune;
             case EUW1:
-                return Region.EUW;
+                return Region.euw;
             case JP1:
-                return Region.JP;
+                return Region.jp;
             case KR:
-                return Region.KR;
+                return Region.kr;
             case LA1:
-                return Region.LAN;
+                return Region.lan;
             case LA2:
-                return Region.LAS;
+                return Region.las;
             case NA1:
-                return Region.NA;
+                return Region.na;
             case OC1:
-                return Region.OCE;
+                return Region.oce;
             case RU:
-                return Region.RU;
+                return Region.ru;
             case TR1:
-                return Region.TR;
+                return Region.tr;
             default:
                 throw new IllegalStateException("platformId can not be converted");
         }
@@ -59,27 +59,27 @@ public final class RegionMapper {
      */
     public static PlatformId fromRegion(Region region) {
         switch (region) {
-            case BR:
+            case br:
                 return PlatformId.BR1;
-            case EUNE:
+            case eune:
                 return PlatformId.EUN1;
-            case EUW:
+            case euw:
                 return PlatformId.EUW1;
-            case JP:
+            case jp:
                 return PlatformId.JP1;
-            case KR:
+            case kr:
                 return PlatformId.KR;
-            case LAN:
+            case lan:
                 return PlatformId.LA1;
-            case LAS:
+            case las:
                 return PlatformId.LA2;
-            case NA:
+            case na:
                 return PlatformId.NA1;
-            case OCE:
+            case oce:
                 return PlatformId.OC1;
-            case RU:
+            case ru:
                 return PlatformId.RU;
-            case TR:
+            case tr:
                 return PlatformId.TR1;
             default:
                 throw new IllegalStateException("region can not be converted");

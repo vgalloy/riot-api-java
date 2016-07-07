@@ -52,7 +52,7 @@ public class GlobalRateLimiterImpl implements GlobalRateLimiter {
         if (index == -1) {
             throw new IllegalStateException("No region provided");
         } else {
-            return Region.fromString(args[index].toString());
+            return Region.valueOf(args[index].toString());
         }
     }
 }

@@ -14,9 +14,9 @@ public class MatchListApiTest extends AbstractTest {
     @Test
     public void testGetMatchListBySummonerId() {
         new QueryTester("MatchListBySummonerId")
-                .test(riotApi.getMatchListBySummonerId(24550736).region(Region.EUW))
-                .test(riotApi.getMatchListBySummonerId(67911140).region(Region.NA))
-                .test(riotApi.getMatchListBySummonerId(17671075).region(Region.KR))
+                .test(riotApi.getMatchListBySummonerId(24550736).region(Region.euw))
+                .test(riotApi.getMatchListBySummonerId(67911140).region(Region.na))
+                .test(riotApi.getMatchListBySummonerId(17671075).region(Region.kr))
                 .end();
     }
 }
