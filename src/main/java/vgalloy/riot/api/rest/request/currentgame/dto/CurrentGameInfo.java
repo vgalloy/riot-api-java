@@ -1,9 +1,11 @@
 package vgalloy.riot.api.rest.request.currentgame.dto;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.PlatformId;
 
@@ -12,7 +14,9 @@ import vgalloy.riot.api.rest.constant.PlatformId;
  *         Created by Vincent Galloy on 19/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CurrentGameInfo {
+public class CurrentGameInfo implements Serializable {
+
+    private static final long serialVersionUID = -7522865568651909560L;
 
     private List<BannedChampion> bannedChampions;
     private long gameId;

@@ -1,17 +1,20 @@
 package vgalloy.riot.api.rest.request.mach.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Frame {
+public class Frame implements Serializable {
+
+    private static final long serialVersionUID = 4733395422242449808L;
 
     private List<Event> events;
     private Map<String, ParticipantFrame> participantFrames;

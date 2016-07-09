@@ -1,16 +1,19 @@
 package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SummonerSpellListDto {
+public class SummonerSpellListDto implements Serializable {
+
+    private static final long serialVersionUID = 5707888959574058589L;
 
     private Map<String, SummonerSpellDto> data;
     private String type;

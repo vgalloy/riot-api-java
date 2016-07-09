@@ -1,15 +1,18 @@
 package vgalloy.riot.api.rest.request.championmastery.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ChampionMasteryDto {
+public class ChampionMasteryDto implements Serializable {
+
+    private static final long serialVersionUID = 5151106851729825952L;
 
     private long championId;
     private int championLevel;

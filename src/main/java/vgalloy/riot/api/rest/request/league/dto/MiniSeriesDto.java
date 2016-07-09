@@ -1,15 +1,18 @@
 package vgalloy.riot.api.rest.request.league.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MiniSeriesDto {
+public class MiniSeriesDto implements Serializable {
+
+    private static final long serialVersionUID = 2009851907129552556L;
 
     private int losses;
     private String progress;

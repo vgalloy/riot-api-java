@@ -1,15 +1,18 @@
 package vgalloy.riot.api.rest.request.mach.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ParticipantStats {
+public class ParticipantStats implements Serializable {
+
+    private static final long serialVersionUID = 4247865376360704912L;
 
     private long assists;
     private long champLevel;

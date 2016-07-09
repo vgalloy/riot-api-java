@@ -1,9 +1,11 @@
 package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import vgalloy.riot.api.rest.constant.MasteryTree;
 
 /**
@@ -11,7 +13,9 @@ import vgalloy.riot.api.rest.constant.MasteryTree;
  *         Created by Vincent Galloy on 19/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MasteryDto {
+public class MasteryDto implements Serializable {
+
+    private static final long serialVersionUID = 5897727835074046665L;
 
     private List<String> description;
     private int id;

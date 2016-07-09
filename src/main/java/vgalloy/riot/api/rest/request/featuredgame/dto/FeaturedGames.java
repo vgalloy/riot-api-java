@@ -1,16 +1,19 @@
 package vgalloy.riot.api.rest.request.featuredgame.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FeaturedGames {
+public class FeaturedGames implements Serializable {
+
+    private static final long serialVersionUID = 6320892582685715424L;
 
     private long clientRefreshInterval;
     private List<FeaturedGameInfo> gameList;

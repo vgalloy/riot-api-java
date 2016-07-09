@@ -1,15 +1,18 @@
 package vgalloy.riot.api.rest.request.summoner.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RuneSlotDto {
+public class RuneSlotDto implements Serializable {
+
+    private static final long serialVersionUID = -1044294048574538243L;
 
     private int runeId;
     private int runeSlotId;

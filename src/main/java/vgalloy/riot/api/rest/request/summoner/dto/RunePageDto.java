@@ -1,16 +1,19 @@
 package vgalloy.riot.api.rest.request.summoner.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RunePageDto {
+public class RunePageDto implements Serializable {
+
+    private static final long serialVersionUID = -3837915945185089573L;
 
     private boolean current;
     private long id;

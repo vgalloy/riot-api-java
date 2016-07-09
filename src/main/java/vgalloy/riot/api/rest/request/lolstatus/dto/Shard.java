@@ -1,5 +1,6 @@
 package vgalloy.riot.api.rest.request.lolstatus.dto;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,7 +12,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Shard {
+public class Shard implements Serializable {
+
+    private static final long serialVersionUID = 1897851851401049259L;
 
     private String hostname;
     private List<String> locales;

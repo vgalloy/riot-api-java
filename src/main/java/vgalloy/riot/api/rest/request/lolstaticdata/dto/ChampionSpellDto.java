@@ -1,16 +1,19 @@
 package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 23/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ChampionSpellDto {
+public class ChampionSpellDto implements Serializable {
+
+    private static final long serialVersionUID = 6545547053430860603L;
 
     private List<ImageDto> altimages;
     private List<Double> cooldown;

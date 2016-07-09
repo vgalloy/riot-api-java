@@ -1,15 +1,18 @@
 package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MasteryTreeListDto {
+public class MasteryTreeListDto implements Serializable {
+
+    private static final long serialVersionUID = -8103610009865545855L;
 
     private int masteryId;
     private String prereq;

@@ -1,5 +1,6 @@
 package vgalloy.riot.api.rest.request.lolstaticdata.dto;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
 
@@ -11,7 +12,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RealmDto {
+public class RealmDto implements Serializable {
+
+    private static final long serialVersionUID = 2135359382020837721L;
 
     private String cdn;
     private String css;

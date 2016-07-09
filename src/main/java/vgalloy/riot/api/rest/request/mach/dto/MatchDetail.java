@@ -1,9 +1,11 @@
 package vgalloy.riot.api.rest.request.mach.dto;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.GameType;
 import vgalloy.riot.api.rest.constant.NormalQueueType;
@@ -14,7 +16,9 @@ import vgalloy.riot.api.rest.constant.Season;
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MatchDetail {
+public class MatchDetail implements Serializable {
+
+    private static final long serialVersionUID = 6184418107833110266L;
 
     private int mapId;
     private long matchCreation;

@@ -1,9 +1,11 @@
 package vgalloy.riot.api.rest.request.game.dto;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.GameType;
 import vgalloy.riot.api.rest.constant.SupType;
@@ -13,7 +15,9 @@ import vgalloy.riot.api.rest.constant.SupType;
  *         Created by Vincent Galloy on 18/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class GameDto {
+public class GameDto implements Serializable {
+
+    private static final long serialVersionUID = -4090528226769958180L;
 
     private int championId;
     private long createDate;

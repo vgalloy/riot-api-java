@@ -1,16 +1,19 @@
 package vgalloy.riot.api.rest.request.matchlist.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MatchList {
+public class MatchList implements Serializable {
+
+    private static final long serialVersionUID = 907811536739611091L;
 
     private int endIndex;
     private List<MatchReference> matches;

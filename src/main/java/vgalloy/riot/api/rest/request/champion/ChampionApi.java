@@ -1,14 +1,14 @@
 package vgalloy.riot.api.rest.request.champion;
 
-import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
-import vgalloy.riot.api.rest.constant.Region;
-import vgalloy.riot.api.rest.request.champion.dto.ChampionDto;
-import vgalloy.riot.api.rest.request.champion.dto.ChampionListDto;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
+
+import vgalloy.riot.api.rest.annotation.RiotNoLimitRate;
+import vgalloy.riot.api.rest.constant.Region;
+import vgalloy.riot.api.rest.request.champion.dto.ChampionDto;
+import vgalloy.riot.api.rest.request.champion.dto.ChampionListDto;
 
 /**
  * @author Vincent Galloy

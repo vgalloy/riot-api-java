@@ -1,15 +1,18 @@
 package vgalloy.riot.api.rest.request.currentgame.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Observer {
+public class Observer implements Serializable {
+
+    private static final long serialVersionUID = -2400596391738345098L;
 
     private String encryptionKey;
 
