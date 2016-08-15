@@ -6,8 +6,6 @@ min=$(echo $version | cut -d '.' -f2)
 new_version=$maj.$min.0
 echo "new_version : "$new_version
 
-set -x
-
 sed -i "s/$version/$new_version/g" ../pom.xml
 
 mv Jenkinsfile Jenkinsfile.snapshot
