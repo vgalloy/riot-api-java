@@ -69,6 +69,18 @@ public abstract class AbstractTest {
          * End the assertion.
          */
         public void end() {
+            print(code);
+        }
+
+        public void end(int code) {
+            print(String.valueOf(code));
+        }
+
+        /**
+         * Print the result as a formatted String.
+         * @param code the code
+         */
+        private void print(String code) {
             StringBuilder stringBuilder = new StringBuilder(queryName + " ");
             IntStream.range(queryName.length(), 30).asLongStream().forEach(e -> stringBuilder.append("."));
             String message = stringBuilder.append(" [ ").append(code).append(" ]").toString();
