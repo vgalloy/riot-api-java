@@ -1,5 +1,6 @@
 package vgalloy.riot.api.client.filter;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -11,6 +12,8 @@ import java.util.Optional;
  */
 public class RiotRateLimitExceededException extends RuntimeException {
 
+    private static final long serialVersionUID = 5227065410577259768L;
+
     private final Map<String, List<String>> headers;
 
     /**
@@ -19,7 +22,8 @@ public class RiotRateLimitExceededException extends RuntimeException {
      * @param headers the response header of the wrong request
      */
     public RiotRateLimitExceededException(Map<String, List<String>> headers) {
-        this.headers = headers;
+        super("Riot api rate limit exceeded");
+        this.headers = Optional.ofNullable(headers).orElse(new HashMap<>());
     }
 
     /**
@@ -37,12 +41,11 @@ public class RiotRateLimitExceededException extends RuntimeException {
      * @return the time before the next request
      */
     public Optional<Long> getRetryAfter() {
-        if (headers.get("Retry-After") == null) {
-            return Optional.empty();
-        }
-        String value = headers.get("Retry-After").get(0);
-        if (value != null) {
-            return Optional.of(Long.valueOf(value));
+        if (headers.get("Retry-After") != null) {
+            String value = headers.get("Retry-After").get(0);
+            if (value != null) {
+                return Optional.of(Long.valueOf(value));
+            }
         }
         return Optional.empty();
     }
@@ -75,7 +78,7 @@ public class RiotRateLimitExceededException extends RuntimeException {
 
     @Override
     public String toString() {
-        return "RateLimitExceededException{" +
+        return "RiotRateLimitExceededException{" +
                 "headers=" + headers +
                 '}';
     }

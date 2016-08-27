@@ -22,11 +22,11 @@
         <checkstyle.suppressions.location>conf/suppressions.xml</checkstyle.suppressions.location>
 
         <!-- Log -->
-        <slf4j-api.version>1.7.19</slf4j-api.version>
-        <logback-classic.version>1.1.6</logback-classic.version>
+        <slf4j-api.version>1.7.21</slf4j-api.version>
+        <logback-classic.version>1.1.7</logback-classic.version>
 
         <!-- Jersey -->
-        <jersey.version>2.22.2</jersey.version>
+        <jersey.version>2.23.2</jersey.version>
 
         <!-- Test -->
         <junit.version>4.12</junit.version>
