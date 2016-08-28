@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import vgalloy.riot.api.rest.constant.GameMode;
 import vgalloy.riot.api.rest.constant.GameType;
 import vgalloy.riot.api.rest.constant.NormalQueueType;
+import vgalloy.riot.api.rest.constant.Region;
 import vgalloy.riot.api.rest.constant.Season;
 
 /**
@@ -31,7 +32,7 @@ public class MatchDetail implements Serializable {
     private List<Participant> participants;
     private String platformId;
     private NormalQueueType queueType;
-    private String region;
+    private Region region;
     private Season season;
     private List<Team> teams;
     private Timeline timeline;
@@ -124,11 +125,11 @@ public class MatchDetail implements Serializable {
         this.queueType = queueType;
     }
 
-    public String getRegion() {
+    public Region getRegion() {
         return region;
     }
 
-    public void setRegion(String region) {
+    public void setRegion(Region region) {
         this.region = region;
     }
 
