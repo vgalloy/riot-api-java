@@ -1,12 +1,13 @@
 package vgalloy.riot.api.api.dto.league;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import vgalloy.riot.api.api.constant.RankedQueueType;
-import vgalloy.riot.api.api.constant.Tier;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.LeagueQueueType;
+import vgalloy.riot.api.api.constant.Tier;
 
 /**
  * @author Vincent Galloy
@@ -20,7 +21,7 @@ public class LeagueDto implements Serializable {
     private List<LeagueEntryDto> entries;
     private String name;
     private String participantId;
-    private RankedQueueType queue;
+    private LeagueQueueType queue;
     private Tier tier;
 
     public List<LeagueEntryDto> getEntries() {
@@ -47,11 +48,11 @@ public class LeagueDto implements Serializable {
         this.participantId = participantId;
     }
 
-    public RankedQueueType getQueue() {
+    public LeagueQueueType getQueue() {
         return queue;
     }
 
-    public void setQueue(RankedQueueType queue) {
+    public void setQueue(LeagueQueueType queue) {
         this.queue = queue;
     }
 

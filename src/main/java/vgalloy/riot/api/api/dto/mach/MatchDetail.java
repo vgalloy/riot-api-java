@@ -1,15 +1,16 @@
 package vgalloy.riot.api.api.dto.mach;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import vgalloy.riot.api.api.constant.GameMode;
-import vgalloy.riot.api.api.constant.GameType;
-import vgalloy.riot.api.api.constant.NormalQueueType;
-import vgalloy.riot.api.api.constant.Region;
-import vgalloy.riot.api.api.constant.Season;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.GameMode;
+import vgalloy.riot.api.api.constant.GameType;
+import vgalloy.riot.api.api.constant.QueueType;
+import vgalloy.riot.api.api.constant.Region;
+import vgalloy.riot.api.api.constant.Season;
 
 /**
  * @author Vincent Galloy
@@ -30,7 +31,7 @@ public class MatchDetail implements Serializable {
     private List<ParticipantIdentity> participantIdentities;
     private List<Participant> participants;
     private String platformId;
-    private NormalQueueType queueType;
+    private QueueType queueType;
     private Region region;
     private Season season;
     private List<Team> teams;
@@ -116,11 +117,11 @@ public class MatchDetail implements Serializable {
         this.platformId = platformId;
     }
 
-    public NormalQueueType getQueueType() {
+    public QueueType getQueueType() {
         return queueType;
     }
 
-    public void setQueueType(NormalQueueType queueType) {
+    public void setQueueType(QueueType queueType) {
         this.queueType = queueType;
     }
 

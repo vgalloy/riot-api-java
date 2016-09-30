@@ -1,6 +1,6 @@
 package vgalloy.riot.api.api.model;
 
-import vgalloy.riot.api.api.constant.RankedQueueType;
+import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.api.query.impl.champion.GetChampionByIdQuery;
 import vgalloy.riot.api.api.query.impl.champion.GetChampionListQuery;
@@ -201,7 +201,7 @@ public interface RiotApi {
      * @param rankedQueueType queue type
      * @return the query
      */
-    GetChallengerQuery getChallenger(RankedQueueType rankedQueueType);
+    GetChallengerQuery getChallenger(LeagueQueueType rankedQueueType);
 
     /**
      * Create the query for master.
@@ -209,7 +209,7 @@ public interface RiotApi {
      * @param rankedQueueType queue type
      * @return the query
      */
-    GetMasterQuery getMaster(RankedQueueType rankedQueueType);
+    GetMasterQuery getMaster(LeagueQueueType rankedQueueType);
 
     /**
      * Create the query for champion data list.

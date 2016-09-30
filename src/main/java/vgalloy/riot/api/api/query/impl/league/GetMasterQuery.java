@@ -5,7 +5,7 @@ import vgalloy.riot.api.api.query.AbstractQuery;
 import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.api.query.impl.league.helper.LeagueEntryDtoComparator;
 import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.api.constant.RankedQueueType;
+import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 import java.util.Collections;
@@ -17,7 +17,7 @@ import java.util.Objects;
  */
 public class GetMasterQuery extends AbstractQuery<GetMasterQuery, LeagueDto> {
 
-    private final RankedQueueType rankedQueueType;
+    private final LeagueQueueType rankedQueueType;
     private boolean sorted;
 
     /**
@@ -27,7 +27,7 @@ public class GetMasterQuery extends AbstractQuery<GetMasterQuery, LeagueDto> {
      * @param defaultParameter the default query parameter
      * @param rankedQueueType  the queue type
      */
-    public GetMasterQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, RankedQueueType rankedQueueType) {
+    public GetMasterQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, LeagueQueueType rankedQueueType) {
         super(riotWebApi, defaultParameter);
         this.rankedQueueType = Objects.requireNonNull(rankedQueueType, "rankedQueueType can not be null");
     }

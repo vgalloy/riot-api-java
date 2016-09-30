@@ -2,7 +2,7 @@ package vgalloy.riot.api.internal.service.request;
 
 import org.junit.Test;
 
-import vgalloy.riot.api.api.constant.RankedQueueType;
+import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.internal.service.AbstractTest;
 
@@ -45,18 +45,18 @@ public class LeagueApiTest extends AbstractTest {
     @Test
     public void testGetChallenger() {
         new QueryTester("Challenger")
-                .test(RIOT_API.getChallenger(RankedQueueType.RANKED_SOLO_5x5).region(Region.EUW))
-                .test(RIOT_API.getChallenger(RankedQueueType.RANKED_TEAM_3x3).region(Region.NA))
-                .test(RIOT_API.getChallenger(RankedQueueType.RANKED_TEAM_5x5).region(Region.KR))
+                .test(RIOT_API.getChallenger(LeagueQueueType.RANKED_SOLO_5x5).region(Region.EUW))
+                .test(RIOT_API.getChallenger(LeagueQueueType.RANKED_TEAM_3x3).region(Region.NA))
+                .test(RIOT_API.getChallenger(LeagueQueueType.RANKED_TEAM_5x5).region(Region.KR))
                 .end();
     }
 
     @Test
     public void testGetMaster() {
         new QueryTester("Master")
-                .test(RIOT_API.getMaster(RankedQueueType.RANKED_SOLO_5x5).region(Region.EUW))
-                .test(RIOT_API.getMaster(RankedQueueType.RANKED_TEAM_3x3).region(Region.NA))
-                .test(RIOT_API.getMaster(RankedQueueType.RANKED_TEAM_5x5).region(Region.KR))
+                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_SOLO_5x5).region(Region.EUW))
+                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_TEAM_3x3).region(Region.NA))
+                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_TEAM_5x5).region(Region.KR))
                 .end();
     }
 }

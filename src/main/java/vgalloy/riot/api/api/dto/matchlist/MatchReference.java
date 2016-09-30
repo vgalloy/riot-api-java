@@ -1,13 +1,14 @@
 package vgalloy.riot.api.api.dto.matchlist;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import vgalloy.riot.api.api.constant.Lane;
-import vgalloy.riot.api.api.constant.NormalQueueType;
-import vgalloy.riot.api.api.constant.Role;
-import vgalloy.riot.api.api.constant.Season;
-
 import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.Lane;
+import vgalloy.riot.api.api.constant.SimpleQueueType;
+import vgalloy.riot.api.api.constant.Role;
+import vgalloy.riot.api.api.constant.Season;
 
 /**
  * @author Vincent Galloy
@@ -22,7 +23,7 @@ public class MatchReference implements Serializable {
     private Lane lane;
     private long matchId;
     private String platformId;
-    private NormalQueueType queue;
+    private SimpleQueueType queue;
     private String region;
     private Role role;
     private Season season;
@@ -60,11 +61,11 @@ public class MatchReference implements Serializable {
         this.platformId = platformId;
     }
 
-    public NormalQueueType getQueue() {
+    public SimpleQueueType getQueue() {
         return queue;
     }
 
-    public void setQueue(NormalQueueType queue) {
+    public void setQueue(SimpleQueueType queue) {
         this.queue = queue;
     }
 

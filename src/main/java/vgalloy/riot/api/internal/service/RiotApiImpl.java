@@ -1,6 +1,6 @@
 package vgalloy.riot.api.internal.service;
 
-import vgalloy.riot.api.api.constant.RankedQueueType;
+import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.api.model.RateLimit;
 import vgalloy.riot.api.api.model.RiotApi;
@@ -165,12 +165,12 @@ public class RiotApiImpl implements RiotApi {
     }
 
     @Override
-    public GetChallengerQuery getChallenger(RankedQueueType rankedQueueType) {
+    public GetChallengerQuery getChallenger(LeagueQueueType rankedQueueType) {
         return new GetChallengerQuery(riotWebApi, defaultParameter, rankedQueueType);
     }
 
     @Override
-    public GetMasterQuery getMaster(RankedQueueType rankedQueueType) {
+    public GetMasterQuery getMaster(LeagueQueueType rankedQueueType) {
         return new GetMasterQuery(riotWebApi, defaultParameter, rankedQueueType);
     }
 

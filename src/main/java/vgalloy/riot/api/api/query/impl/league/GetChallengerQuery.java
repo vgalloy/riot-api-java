@@ -1,15 +1,15 @@
 package vgalloy.riot.api.api.query.impl.league;
 
-import vgalloy.riot.api.api.dto.league.LeagueDto;
-import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.api.constant.RankedQueueType;
-import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-import vgalloy.riot.api.internal.query.DefaultParameter;
-import vgalloy.riot.api.api.query.impl.league.helper.LeagueEntryDtoComparator;
-import vgalloy.riot.api.api.query.AbstractQuery;
-
 import java.util.Collections;
 import java.util.Objects;
+
+import vgalloy.riot.api.api.constant.LeagueQueueType;
+import vgalloy.riot.api.api.dto.league.LeagueDto;
+import vgalloy.riot.api.api.query.AbstractQuery;
+import vgalloy.riot.api.api.query.impl.league.helper.LeagueEntryDtoComparator;
+import vgalloy.riot.api.internal.client.RiotWebApi;
+import vgalloy.riot.api.internal.query.DefaultParameter;
+import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
  * @author Vincent Galloy
@@ -17,7 +17,7 @@ import java.util.Objects;
  */
 public class GetChallengerQuery extends AbstractQuery<GetChallengerQuery, LeagueDto> {
 
-    private final RankedQueueType rankedQueueType;
+    private final LeagueQueueType leagueQueueType;
     private boolean sorted;
 
     /**
@@ -25,11 +25,11 @@ public class GetChallengerQuery extends AbstractQuery<GetChallengerQuery, League
      *
      * @param riotWebApi       the riot web rest for execute query
      * @param defaultParameter the default query parameter
-     * @param rankedQueueType  the queue type
+     * @param leagueQueueType  the queue type
      */
-    public GetChallengerQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, RankedQueueType rankedQueueType) {
+    public GetChallengerQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, LeagueQueueType leagueQueueType) {
         super(riotWebApi, defaultParameter);
-        this.rankedQueueType = Objects.requireNonNull(rankedQueueType, "rankedQueueType can not be null");
+        this.leagueQueueType = Objects.requireNonNull(leagueQueueType, "leagueQueueType can not be null");
     }
 
     /**
@@ -45,7 +45,7 @@ public class GetChallengerQuery extends AbstractQuery<GetChallengerQuery, League
 
     @Override
     protected LeagueDto executeWithError() {
-        LeagueDto leagueDto = riotWebApi.getChallenger(SmallCaseRegion.of(getRegion()), rankedQueueType, getRiotApiKeyValue());
+        LeagueDto leagueDto = riotWebApi.getChallenger(SmallCaseRegion.of(getRegion()), leagueQueueType, getRiotApiKeyValue());
         if (sorted) {
             Collections.sort(leagueDto.getEntries(), new LeagueEntryDtoComparator());
         }
