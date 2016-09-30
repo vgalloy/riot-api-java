@@ -1,10 +1,20 @@
 package vgalloy.riot.api.api.dto.mach;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.AscendedType;
+import vgalloy.riot.api.api.constant.BuildingType;
+import vgalloy.riot.api.api.constant.EventType;
+import vgalloy.riot.api.api.constant.LaneType;
+import vgalloy.riot.api.api.constant.LevelUpType;
+import vgalloy.riot.api.api.constant.MonsterType;
+import vgalloy.riot.api.api.constant.PointCaptured;
+import vgalloy.riot.api.api.constant.TowerType;
+import vgalloy.riot.api.api.constant.WardType;
 
 /**
  * @author Vincent Galloy
@@ -15,33 +25,33 @@ public class Event implements Serializable {
 
     private static final long serialVersionUID = -7630804759806344004L;
 
-    private String ascendedType;
+    private AscendedType ascendedType;
     private List<Integer> assistingParticipantIds;
-    private String buildingType;
+    private BuildingType buildingType;
     private int creatorId;
-    private String eventType;
+    private EventType eventType;
     private int itemAfter;
     private int itemBefore;
     private int itemId;
     private int killerId;
-    private String laneType;
-    private String levelUpType;
-    private String monsterType;
+    private LaneType laneType;
+    private LevelUpType levelUpType;
+    private MonsterType monsterType;
     private int participantId;
-    private String pointCaptured;
+    private PointCaptured pointCaptured;
     private Position position;
     private int skillSlot;
     private int teamId;
     private long timestamp;
-    private String towerType;
+    private TowerType towerType;
     private int victimId;
-    private String wardType;
+    private WardType wardType;
 
-    public String getAscendedType() {
+    public AscendedType getAscendedType() {
         return ascendedType;
     }
 
-    public void setAscendedType(String ascendedType) {
+    public void setAscendedType(AscendedType ascendedType) {
         this.ascendedType = ascendedType;
     }
 
@@ -53,11 +63,11 @@ public class Event implements Serializable {
         this.assistingParticipantIds = assistingParticipantIds;
     }
 
-    public String getBuildingType() {
+    public BuildingType getBuildingType() {
         return buildingType;
     }
 
-    public void setBuildingType(String buildingType) {
+    public void setBuildingType(BuildingType buildingType) {
         this.buildingType = buildingType;
     }
 
@@ -69,11 +79,11 @@ public class Event implements Serializable {
         this.creatorId = creatorId;
     }
 
-    public String getEventType() {
+    public EventType getEventType() {
         return eventType;
     }
 
-    public void setEventType(String eventType) {
+    public void setEventType(EventType eventType) {
         this.eventType = eventType;
     }
 
@@ -109,27 +119,27 @@ public class Event implements Serializable {
         this.killerId = killerId;
     }
 
-    public String getLaneType() {
+    public LaneType getLaneType() {
         return laneType;
     }
 
-    public void setLaneType(String laneType) {
+    public void setLaneType(LaneType laneType) {
         this.laneType = laneType;
     }
 
-    public String getLevelUpType() {
+    public LevelUpType getLevelUpType() {
         return levelUpType;
     }
 
-    public void setLevelUpType(String levelUpType) {
+    public void setLevelUpType(LevelUpType levelUpType) {
         this.levelUpType = levelUpType;
     }
 
-    public String getMonsterType() {
+    public MonsterType getMonsterType() {
         return monsterType;
     }
 
-    public void setMonsterType(String monsterType) {
+    public void setMonsterType(MonsterType monsterType) {
         this.monsterType = monsterType;
     }
 
@@ -141,11 +151,11 @@ public class Event implements Serializable {
         this.participantId = participantId;
     }
 
-    public String getPointCaptured() {
+    public PointCaptured getPointCaptured() {
         return pointCaptured;
     }
 
-    public void setPointCaptured(String pointCaptured) {
+    public void setPointCaptured(PointCaptured pointCaptured) {
         this.pointCaptured = pointCaptured;
     }
 
@@ -181,11 +191,11 @@ public class Event implements Serializable {
         this.timestamp = timestamp;
     }
 
-    public String getTowerType() {
+    public TowerType getTowerType() {
         return towerType;
     }
 
-    public void setTowerType(String towerType) {
+    public void setTowerType(TowerType towerType) {
         this.towerType = towerType;
     }
 
@@ -197,11 +207,11 @@ public class Event implements Serializable {
         this.victimId = victimId;
     }
 
-    public String getWardType() {
+    public WardType getWardType() {
         return wardType;
     }
 
-    public void setWardType(String wardType) {
+    public void setWardType(WardType wardType) {
         this.wardType = wardType;
     }
 

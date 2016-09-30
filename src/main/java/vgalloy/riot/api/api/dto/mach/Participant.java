@@ -1,10 +1,12 @@
 package vgalloy.riot.api.api.dto.mach;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.Tier;
 
 /**
  * @author Vincent Galloy
@@ -16,7 +18,7 @@ public class Participant implements Serializable {
     private static final long serialVersionUID = -1799062856872707886L;
 
     private int championId;
-    private String highestAchievedSeasonTier;
+    private Tier highestAchievedSeasonTier;
     private List<Mastery> masteries;
     private int participantId;
     private List<Rune> runes;
@@ -34,11 +36,11 @@ public class Participant implements Serializable {
         this.championId = championId;
     }
 
-    public String getHighestAchievedSeasonTier() {
+    public Tier getHighestAchievedSeasonTier() {
         return highestAchievedSeasonTier;
     }
 
-    public void setHighestAchievedSeasonTier(String highestAchievedSeasonTier) {
+    public void setHighestAchievedSeasonTier(Tier highestAchievedSeasonTier) {
         this.highestAchievedSeasonTier = highestAchievedSeasonTier;
     }
 
