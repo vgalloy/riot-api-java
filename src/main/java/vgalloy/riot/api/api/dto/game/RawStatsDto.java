@@ -1,9 +1,9 @@
 package vgalloy.riot.api.api.dto.game;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy
@@ -85,6 +85,7 @@ public class RawStatsDto implements Serializable {
     private int teamObjective;
     private int timePlayed;
     private int totalDamageDealt;
+    private int totalDamageDealtToBuildings;
     private int totalDamageDealtToChampions;
     private int totalDamageTaken;
     private int totalHeal;
@@ -672,6 +673,14 @@ public class RawStatsDto implements Serializable {
         this.totalDamageDealt = totalDamageDealt;
     }
 
+    public int getTotalDamageDealtToBuildings() {
+        return totalDamageDealtToBuildings;
+    }
+
+    public void setTotalDamageDealtToBuildings(int totalDamageDealtToBuildings) {
+        this.totalDamageDealtToBuildings = totalDamageDealtToBuildings;
+    }
+
     public int getTotalDamageDealtToChampions() {
         return totalDamageDealtToChampions;
     }
@@ -896,6 +905,7 @@ public class RawStatsDto implements Serializable {
                 teamObjective == that.teamObjective &&
                 timePlayed == that.timePlayed &&
                 totalDamageDealt == that.totalDamageDealt &&
+                totalDamageDealtToBuildings == that.totalDamageDealtToBuildings &&
                 totalDamageDealtToChampions == that.totalDamageDealtToChampions &&
                 totalDamageTaken == that.totalDamageTaken &&
                 totalHeal == that.totalHeal &&
@@ -918,7 +928,7 @@ public class RawStatsDto implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(assists, barracksKilled, bountyLevel, championsKilled, combatPlayerScore, consumablesPurchased, damageDealtPlayer, doubleKills, firstBlood, gold, goldEarned, goldSpent, item0, item1, item2, item3, item4, item5, item6, itemsPurchased, killingSprees, largestCriticalStrike, largestKillingSpree, largestMultiKill, legendaryItemsCreated, level, magicDamageDealtPlayer, magicDamageDealtToChampions, magicDamageTaken, minionsDenied, minionsKilled, neutralMinionsKilled, neutralMinionsKilledEnemyJungle, neutralMinionsKilledYourJungle, nexusKilled, nodeCapture, nodeCaptureAssist, nodeNeutralize, nodeNeutralizeAssist, numDeaths, numItemsBought, objectivePlayerScore, pentaKills, physicalDamageDealtPlayer, physicalDamageDealtToChampions, physicalDamageTaken, playerPosition, playerRole, playerScore0, playerScore1, playerScore2, playerScore3, playerScore4, playerScore5, playerScore6, playerScore7, playerScore8, playerScore9, quadraKills, sightWardsBought, spell1Cast, spell2Cast, spell3Cast, spell4Cast, summonSpell1Cast, summonSpell2Cast, superMonsterKilled, team, teamObjective, timePlayed, totalDamageDealt, totalDamageDealtToChampions, totalDamageTaken, totalHeal, totalPlayerScore, totalScoreRank, totalTimeCrowdControlDealt, totalUnitsHealed, tripleKills, trueDamageDealtPlayer, trueDamageDealtToChampions, trueDamageTaken, turretsKilled, unrealKills, victoryPointTotal, visionWardsBought, wardKilled, wardPlaced, win);
+        return Objects.hash(assists, barracksKilled, bountyLevel, championsKilled, combatPlayerScore, consumablesPurchased, damageDealtPlayer, doubleKills, firstBlood, gold, goldEarned, goldSpent, item0, item1, item2, item3, item4, item5, item6, itemsPurchased, killingSprees, largestCriticalStrike, largestKillingSpree, largestMultiKill, legendaryItemsCreated, level, magicDamageDealtPlayer, magicDamageDealtToChampions, magicDamageTaken, minionsDenied, minionsKilled, neutralMinionsKilled, neutralMinionsKilledEnemyJungle, neutralMinionsKilledYourJungle, nexusKilled, nodeCapture, nodeCaptureAssist, nodeNeutralize, nodeNeutralizeAssist, numDeaths, numItemsBought, objectivePlayerScore, pentaKills, physicalDamageDealtPlayer, physicalDamageDealtToChampions, physicalDamageTaken, playerPosition, playerRole, playerScore0, playerScore1, playerScore2, playerScore3, playerScore4, playerScore5, playerScore6, playerScore7, playerScore8, playerScore9, quadraKills, sightWardsBought, spell1Cast, spell2Cast, spell3Cast, spell4Cast, summonSpell1Cast, summonSpell2Cast, superMonsterKilled, team, teamObjective, timePlayed, totalDamageDealt, totalDamageDealtToBuildings, totalDamageDealtToChampions, totalDamageTaken, totalHeal, totalPlayerScore, totalScoreRank, totalTimeCrowdControlDealt, totalUnitsHealed, tripleKills, trueDamageDealtPlayer, trueDamageDealtToChampions, trueDamageTaken, turretsKilled, unrealKills, victoryPointTotal, visionWardsBought, wardKilled, wardPlaced, win);
     }
 
     @Override
@@ -995,6 +1005,7 @@ public class RawStatsDto implements Serializable {
                 ", teamObjective=" + teamObjective +
                 ", timePlayed=" + timePlayed +
                 ", totalDamageDealt=" + totalDamageDealt +
+                ", totalDamageDealtToBuildings=" + totalDamageDealtToBuildings +
                 ", totalDamageDealtToChampions=" + totalDamageDealtToChampions +
                 ", totalDamageTaken=" + totalDamageTaken +
                 ", totalHeal=" + totalHeal +

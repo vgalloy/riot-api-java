@@ -1,9 +1,11 @@
 package vgalloy.riot.api.api.dto.league;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.PlayStyle;
 
 /**
  * @author Vincent Galloy
@@ -24,6 +26,7 @@ public class LeagueEntryDto implements Serializable {
     private MiniSeriesDto miniSeries;
     private String playerOrTeamId;
     private String playerOrTeamName;
+    private PlayStyle playstyle;
     private int wins;
 
     public String getDivision() {
@@ -106,6 +109,14 @@ public class LeagueEntryDto implements Serializable {
         this.playerOrTeamName = playerOrTeamName;
     }
 
+    public PlayStyle getPlaystyle() {
+        return playstyle;
+    }
+
+    public void setPlaystyle(PlayStyle playstyle) {
+        this.playstyle = playstyle;
+    }
+
     public int getWins() {
         return wins;
     }
@@ -133,12 +144,13 @@ public class LeagueEntryDto implements Serializable {
                 Objects.equals(division, that.division) &&
                 Objects.equals(miniSeries, that.miniSeries) &&
                 Objects.equals(playerOrTeamId, that.playerOrTeamId) &&
-                Objects.equals(playerOrTeamName, that.playerOrTeamName);
+                Objects.equals(playerOrTeamName, that.playerOrTeamName) &&
+                playstyle == that.playstyle;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(division, isFreshBlood, isHotStreak, isInactive, isVeteran, leaguePoints, losses, miniSeries, playerOrTeamId, playerOrTeamName, wins);
+        return Objects.hash(division, isFreshBlood, isHotStreak, isInactive, isVeteran, leaguePoints, losses, miniSeries, playerOrTeamId, playerOrTeamName, playstyle, wins);
     }
 
     @Override
@@ -154,6 +166,7 @@ public class LeagueEntryDto implements Serializable {
                 ", miniSeries=" + miniSeries +
                 ", playerOrTeamId='" + playerOrTeamId + '\'' +
                 ", playerOrTeamName='" + playerOrTeamName + '\'' +
+                ", playstyle=" + playstyle +
                 ", wins=" + wins +
                 '}';
     }
