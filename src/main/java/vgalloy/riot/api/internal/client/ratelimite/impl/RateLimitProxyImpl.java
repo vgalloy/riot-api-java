@@ -1,11 +1,11 @@
 package vgalloy.riot.api.internal.client.ratelimite.impl;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.internal.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitProxy;
-
-import java.lang.reflect.Method;
 
 /**
  * @author Vincent Galloy
@@ -32,12 +32,8 @@ public class RateLimitProxyImpl implements RateLimitProxy {
         globalRateLimiterImpl.delay(method, args);
         try {
             return method.invoke(riotWebApi, args);
-        } catch (Exception e) {
-            Throwable throwable = e.getCause();
-            if (throwable.getCause() instanceof RiotRateLimitExceededException) {
-                throw throwable.getCause();
-            }
-            throw throwable;
+        } catch (InvocationTargetException e) {
+            throw e.getCause();
         }
     }
 }
