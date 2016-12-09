@@ -6,7 +6,7 @@
 
     <groupId>vgalloy</groupId>
     <artifactId>riot-api-java</artifactId>
-    <version>3.10.0</version>
+    <version>3.11.0-SNAPSHOT</version>
 
     <properties>
         <!-- Project -->
