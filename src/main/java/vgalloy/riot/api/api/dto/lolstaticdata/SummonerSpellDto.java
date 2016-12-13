@@ -23,11 +23,11 @@ public class SummonerSpellDto implements Serializable {
     private String description;
     private List<Object> effect;
     private List<String> effectBurn;
-    private int id;
+    private Integer id;
     private ImageDto image;
     private String key;
     private LevelTipDto leveltip;
-    private int maxrank;
+    private Integer maxrank;
     private List<String> modes;
     private String name;
     private Object range;
@@ -35,7 +35,7 @@ public class SummonerSpellDto implements Serializable {
     private String resource;
     private String sanitizedDescription;
     private String sanitizedTooltip;
-    private int summonerLevel;
+    private Integer summonerLevel;
     private String tooltip;
     private List<SpellVarsDto> vars;
 
@@ -103,11 +103,11 @@ public class SummonerSpellDto implements Serializable {
         this.effectBurn = effectBurn;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -135,11 +135,11 @@ public class SummonerSpellDto implements Serializable {
         this.leveltip = leveltip;
     }
 
-    public int getMaxrank() {
+    public Integer getMaxrank() {
         return maxrank;
     }
 
-    public void setMaxrank(int maxrank) {
+    public void setMaxrank(Integer maxrank) {
         this.maxrank = maxrank;
     }
 
@@ -199,11 +199,11 @@ public class SummonerSpellDto implements Serializable {
         this.sanitizedTooltip = sanitizedTooltip;
     }
 
-    public int getSummonerLevel() {
+    public Integer getSummonerLevel() {
         return summonerLevel;
     }
 
-    public void setSummonerLevel(int summonerLevel) {
+    public void setSummonerLevel(Integer summonerLevel) {
         this.summonerLevel = summonerLevel;
     }
 
@@ -228,14 +228,11 @@ public class SummonerSpellDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof SummonerSpellDto)) {
             return false;
         }
         SummonerSpellDto that = (SummonerSpellDto) o;
-        return id == that.id &&
-                maxrank == that.maxrank &&
-                summonerLevel == that.summonerLevel &&
-                Objects.equals(cooldown, that.cooldown) &&
+        return Objects.equals(cooldown, that.cooldown) &&
                 Objects.equals(cooldownBurn, that.cooldownBurn) &&
                 Objects.equals(cost, that.cost) &&
                 Objects.equals(costBurn, that.costBurn) &&
@@ -243,9 +240,11 @@ public class SummonerSpellDto implements Serializable {
                 Objects.equals(description, that.description) &&
                 Objects.equals(effect, that.effect) &&
                 Objects.equals(effectBurn, that.effectBurn) &&
+                Objects.equals(id, that.id) &&
                 Objects.equals(image, that.image) &&
                 Objects.equals(key, that.key) &&
                 Objects.equals(leveltip, that.leveltip) &&
+                Objects.equals(maxrank, that.maxrank) &&
                 Objects.equals(modes, that.modes) &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(range, that.range) &&
@@ -253,6 +252,7 @@ public class SummonerSpellDto implements Serializable {
                 Objects.equals(resource, that.resource) &&
                 Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
                 Objects.equals(sanitizedTooltip, that.sanitizedTooltip) &&
+                Objects.equals(summonerLevel, that.summonerLevel) &&
                 Objects.equals(tooltip, that.tooltip) &&
                 Objects.equals(vars, that.vars);
     }

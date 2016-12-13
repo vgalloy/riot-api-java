@@ -14,22 +14,22 @@ public class Rune implements Serializable {
 
     private static final long serialVersionUID = 5117948495212294137L;
 
-    private int count;
-    private long runeId;
+    private Integer count;
+    private Long runeId;
 
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(Integer count) {
         this.count = count;
     }
 
-    public long getRuneId() {
+    public Long getRuneId() {
         return runeId;
     }
 
-    public void setRuneId(long runeId) {
+    public void setRuneId(Long runeId) {
         this.runeId = runeId;
     }
 
@@ -38,12 +38,12 @@ public class Rune implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Rune)) {
             return false;
         }
         Rune rune = (Rune) o;
-        return count == rune.count &&
-                runeId == rune.runeId;
+        return Objects.equals(count, rune.count) &&
+                Objects.equals(runeId, rune.runeId);
     }
 
     @Override

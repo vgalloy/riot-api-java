@@ -17,17 +17,17 @@ public class LeagueEntryDto implements Serializable {
     private static final long serialVersionUID = 2353617061845514375L;
 
     private String division;
-    private boolean isFreshBlood;
-    private boolean isHotStreak;
-    private boolean isInactive;
-    private boolean isVeteran;
-    private int leaguePoints;
-    private int losses;
+    private Boolean isFreshBlood;
+    private Boolean isHotStreak;
+    private Boolean isInactive;
+    private Boolean isVeteran;
+    private Integer leaguePoints;
+    private Integer losses;
     private MiniSeriesDto miniSeries;
     private String playerOrTeamId;
     private String playerOrTeamName;
     private PlayStyle playstyle;
-    private int wins;
+    private Integer wins;
 
     public String getDivision() {
         return division;
@@ -37,51 +37,51 @@ public class LeagueEntryDto implements Serializable {
         this.division = division;
     }
 
-    public boolean isIsFreshBlood() {
+    public Boolean isIsFreshBlood() {
         return isFreshBlood;
     }
 
-    public void setIsFreshBlood(boolean freshBlood) {
+    public void setIsFreshBlood(Boolean freshBlood) {
         isFreshBlood = freshBlood;
     }
 
-    public boolean isIsHotStreak() {
+    public Boolean isIsHotStreak() {
         return isHotStreak;
     }
 
-    public void setIsHotStreak(boolean hotStreak) {
+    public void setIsHotStreak(Boolean hotStreak) {
         isHotStreak = hotStreak;
     }
 
-    public boolean isIsInactive() {
+    public Boolean isIsInactive() {
         return isInactive;
     }
 
-    public void setIsInactive(boolean inactive) {
+    public void setIsInactive(Boolean inactive) {
         isInactive = inactive;
     }
 
-    public boolean isIsVeteran() {
+    public Boolean isIsVeteran() {
         return isVeteran;
     }
 
-    public void setIsVeteran(boolean veteran) {
+    public void setIsVeteran(Boolean veteran) {
         isVeteran = veteran;
     }
 
-    public int getLeaguePoints() {
+    public Integer getLeaguePoints() {
         return leaguePoints;
     }
 
-    public void setLeaguePoints(int leaguePoints) {
+    public void setLeaguePoints(Integer leaguePoints) {
         this.leaguePoints = leaguePoints;
     }
 
-    public int getLosses() {
+    public Integer getLosses() {
         return losses;
     }
 
-    public void setLosses(int losses) {
+    public void setLosses(Integer losses) {
         this.losses = losses;
     }
 
@@ -117,11 +117,11 @@ public class LeagueEntryDto implements Serializable {
         this.playstyle = playstyle;
     }
 
-    public int getWins() {
+    public Integer getWins() {
         return wins;
     }
 
-    public void setWins(int wins) {
+    public void setWins(Integer wins) {
         this.wins = wins;
     }
 
@@ -130,22 +130,22 @@ public class LeagueEntryDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof LeagueEntryDto)) {
             return false;
         }
         LeagueEntryDto that = (LeagueEntryDto) o;
-        return isFreshBlood == that.isFreshBlood &&
-                isHotStreak == that.isHotStreak &&
-                isInactive == that.isInactive &&
-                isVeteran == that.isVeteran &&
-                leaguePoints == that.leaguePoints &&
-                losses == that.losses &&
-                wins == that.wins &&
-                Objects.equals(division, that.division) &&
+        return Objects.equals(division, that.division) &&
+                Objects.equals(isFreshBlood, that.isFreshBlood) &&
+                Objects.equals(isHotStreak, that.isHotStreak) &&
+                Objects.equals(isInactive, that.isInactive) &&
+                Objects.equals(isVeteran, that.isVeteran) &&
+                Objects.equals(leaguePoints, that.leaguePoints) &&
+                Objects.equals(losses, that.losses) &&
                 Objects.equals(miniSeries, that.miniSeries) &&
                 Objects.equals(playerOrTeamId, that.playerOrTeamId) &&
                 Objects.equals(playerOrTeamName, that.playerOrTeamName) &&
-                playstyle == that.playstyle;
+                playstyle == that.playstyle &&
+                Objects.equals(wins, that.wins);
     }
 
     @Override

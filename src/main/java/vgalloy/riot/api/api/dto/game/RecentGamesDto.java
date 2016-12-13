@@ -16,14 +16,14 @@ public class RecentGamesDto implements Serializable {
 
     private static final long serialVersionUID = -5758492301146884093L;
 
-    private long summonerId;
+    private Long summonerId;
     private Set<GameDto> games = new HashSet<>();
 
-    public long getSummonerId() {
+    public Long getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(long summonerId) {
+    public void setSummonerId(Long summonerId) {
         this.summonerId = summonerId;
     }
 
@@ -40,11 +40,11 @@ public class RecentGamesDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RecentGamesDto)) {
             return false;
         }
         RecentGamesDto that = (RecentGamesDto) o;
-        return summonerId == that.summonerId &&
+        return Objects.equals(summonerId, that.summonerId) &&
                 Objects.equals(games, that.games);
     }
 

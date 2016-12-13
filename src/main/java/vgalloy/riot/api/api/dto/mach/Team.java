@@ -16,21 +16,21 @@ public class Team implements Serializable {
     private static final long serialVersionUID = -8469359789874264284L;
 
     private List<BannedChampion> bans;
-    private int baronKills;
-    private long dominionVictoryScore;
-    private int dragonKills;
-    private boolean firstBaron;
-    private boolean firstBlood;
-    private boolean firstDragon;
-    private boolean firstInhibitor;
-    private boolean firstRiftHerald;
-    private boolean firstTower;
-    private int inhibitorKills;
-    private int riftHeraldKills;
-    private int teamId;
-    private int towerKills;
-    private int vilemawKills;
-    private boolean winner;
+    private Integer baronKills;
+    private Long dominionVictoryScore;
+    private Integer dragonKills;
+    private Boolean firstBaron;
+    private Boolean firstBlood;
+    private Boolean firstDragon;
+    private Boolean firstInhibitor;
+    private Boolean firstRiftHerald;
+    private Boolean firstTower;
+    private Integer inhibitorKills;
+    private Integer riftHeraldKills;
+    private Integer teamId;
+    private Integer towerKills;
+    private Integer vilemawKills;
+    private Boolean winner;
 
     public List<BannedChampion> getBans() {
         return bans;
@@ -40,123 +40,123 @@ public class Team implements Serializable {
         this.bans = bans;
     }
 
-    public int getBaronKills() {
+    public Integer getBaronKills() {
         return baronKills;
     }
 
-    public void setBaronKills(int baronKills) {
+    public void setBaronKills(Integer baronKills) {
         this.baronKills = baronKills;
     }
 
-    public long getDominionVictoryScore() {
+    public Long getDominionVictoryScore() {
         return dominionVictoryScore;
     }
 
-    public void setDominionVictoryScore(long dominionVictoryScore) {
+    public void setDominionVictoryScore(Long dominionVictoryScore) {
         this.dominionVictoryScore = dominionVictoryScore;
     }
 
-    public int getDragonKills() {
+    public Integer getDragonKills() {
         return dragonKills;
     }
 
-    public void setDragonKills(int dragonKills) {
+    public void setDragonKills(Integer dragonKills) {
         this.dragonKills = dragonKills;
     }
 
-    public boolean isFirstBaron() {
+    public Boolean isFirstBaron() {
         return firstBaron;
     }
 
-    public void setFirstBaron(boolean firstBaron) {
+    public void setFirstBaron(Boolean firstBaron) {
         this.firstBaron = firstBaron;
     }
 
-    public boolean isFirstBlood() {
+    public Boolean isFirstBlood() {
         return firstBlood;
     }
 
-    public void setFirstBlood(boolean firstBlood) {
+    public void setFirstBlood(Boolean firstBlood) {
         this.firstBlood = firstBlood;
     }
 
-    public boolean isFirstDragon() {
+    public Boolean isFirstDragon() {
         return firstDragon;
     }
 
-    public void setFirstDragon(boolean firstDragon) {
+    public void setFirstDragon(Boolean firstDragon) {
         this.firstDragon = firstDragon;
     }
 
-    public boolean isFirstInhibitor() {
+    public Boolean isFirstInhibitor() {
         return firstInhibitor;
     }
 
-    public void setFirstInhibitor(boolean firstInhibitor) {
+    public void setFirstInhibitor(Boolean firstInhibitor) {
         this.firstInhibitor = firstInhibitor;
     }
 
-    public boolean isFirstRiftHerald() {
+    public Boolean isFirstRiftHerald() {
         return firstRiftHerald;
     }
 
-    public void setFirstRiftHerald(boolean firstRiftHerald) {
+    public void setFirstRiftHerald(Boolean firstRiftHerald) {
         this.firstRiftHerald = firstRiftHerald;
     }
 
-    public boolean isFirstTower() {
+    public Boolean isFirstTower() {
         return firstTower;
     }
 
-    public void setFirstTower(boolean firstTower) {
+    public void setFirstTower(Boolean firstTower) {
         this.firstTower = firstTower;
     }
 
-    public int getInhibitorKills() {
+    public Integer getInhibitorKills() {
         return inhibitorKills;
     }
 
-    public void setInhibitorKills(int inhibitorKills) {
+    public void setInhibitorKills(Integer inhibitorKills) {
         this.inhibitorKills = inhibitorKills;
     }
 
-    public int getRiftHeraldKills() {
+    public Integer getRiftHeraldKills() {
         return riftHeraldKills;
     }
 
-    public void setRiftHeraldKills(int riftHeraldKills) {
+    public void setRiftHeraldKills(Integer riftHeraldKills) {
         this.riftHeraldKills = riftHeraldKills;
     }
 
-    public int getTeamId() {
+    public Integer getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(int teamId) {
+    public void setTeamId(Integer teamId) {
         this.teamId = teamId;
     }
 
-    public int getTowerKills() {
+    public Integer getTowerKills() {
         return towerKills;
     }
 
-    public void setTowerKills(int towerKills) {
+    public void setTowerKills(Integer towerKills) {
         this.towerKills = towerKills;
     }
 
-    public int getVilemawKills() {
+    public Integer getVilemawKills() {
         return vilemawKills;
     }
 
-    public void setVilemawKills(int vilemawKills) {
+    public void setVilemawKills(Integer vilemawKills) {
         this.vilemawKills = vilemawKills;
     }
 
-    public boolean isWinner() {
+    public Boolean isWinner() {
         return winner;
     }
 
-    public void setWinner(boolean winner) {
+    public void setWinner(Boolean winner) {
         this.winner = winner;
     }
 
@@ -165,26 +165,26 @@ public class Team implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Team)) {
             return false;
         }
         Team team = (Team) o;
-        return baronKills == team.baronKills &&
-                dominionVictoryScore == team.dominionVictoryScore &&
-                dragonKills == team.dragonKills &&
-                firstBaron == team.firstBaron &&
-                firstBlood == team.firstBlood &&
-                firstDragon == team.firstDragon &&
-                firstInhibitor == team.firstInhibitor &&
-                firstRiftHerald == team.firstRiftHerald &&
-                firstTower == team.firstTower &&
-                inhibitorKills == team.inhibitorKills &&
-                riftHeraldKills == team.riftHeraldKills &&
-                teamId == team.teamId &&
-                towerKills == team.towerKills &&
-                vilemawKills == team.vilemawKills &&
-                winner == team.winner &&
-                Objects.equals(bans, team.bans);
+        return Objects.equals(bans, team.bans) &&
+                Objects.equals(baronKills, team.baronKills) &&
+                Objects.equals(dominionVictoryScore, team.dominionVictoryScore) &&
+                Objects.equals(dragonKills, team.dragonKills) &&
+                Objects.equals(firstBaron, team.firstBaron) &&
+                Objects.equals(firstBlood, team.firstBlood) &&
+                Objects.equals(firstDragon, team.firstDragon) &&
+                Objects.equals(firstInhibitor, team.firstInhibitor) &&
+                Objects.equals(firstRiftHerald, team.firstRiftHerald) &&
+                Objects.equals(firstTower, team.firstTower) &&
+                Objects.equals(inhibitorKills, team.inhibitorKills) &&
+                Objects.equals(riftHeraldKills, team.riftHeraldKills) &&
+                Objects.equals(teamId, team.teamId) &&
+                Objects.equals(towerKills, team.towerKills) &&
+                Objects.equals(vilemawKills, team.vilemawKills) &&
+                Objects.equals(winner, team.winner);
     }
 
     @Override

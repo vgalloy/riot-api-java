@@ -14,62 +14,62 @@ public class ParticipantFrame implements Serializable {
 
     private static final long serialVersionUID = 8304241931372436426L;
 
-    private int currentGold;
-    private int dominionScore;
-    private int jungleMinionsKilled;
-    private int level;
-    private int minionsKilled;
-    private int participantId;
+    private Integer currentGold;
+    private Integer dominionScore;
+    private Integer jungleMinionsKilled;
+    private Integer level;
+    private Integer minionsKilled;
+    private Integer participantId;
     private Position position;
-    private int teamScore;
-    private int totalGold;
-    private int xp;
+    private Integer teamScore;
+    private Integer totalGold;
+    private Integer xp;
 
-    public int getCurrentGold() {
+    public Integer getCurrentGold() {
         return currentGold;
     }
 
-    public void setCurrentGold(int currentGold) {
+    public void setCurrentGold(Integer currentGold) {
         this.currentGold = currentGold;
     }
 
-    public int getDominionScore() {
+    public Integer getDominionScore() {
         return dominionScore;
     }
 
-    public void setDominionScore(int dominionScore) {
+    public void setDominionScore(Integer dominionScore) {
         this.dominionScore = dominionScore;
     }
 
-    public int getJungleMinionsKilled() {
+    public Integer getJungleMinionsKilled() {
         return jungleMinionsKilled;
     }
 
-    public void setJungleMinionsKilled(int jungleMinionsKilled) {
+    public void setJungleMinionsKilled(Integer jungleMinionsKilled) {
         this.jungleMinionsKilled = jungleMinionsKilled;
     }
 
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public int getMinionsKilled() {
+    public Integer getMinionsKilled() {
         return minionsKilled;
     }
 
-    public void setMinionsKilled(int minionsKilled) {
+    public void setMinionsKilled(Integer minionsKilled) {
         this.minionsKilled = minionsKilled;
     }
 
-    public int getParticipantId() {
+    public Integer getParticipantId() {
         return participantId;
     }
 
-    public void setParticipantId(int participantId) {
+    public void setParticipantId(Integer participantId) {
         this.participantId = participantId;
     }
 
@@ -81,27 +81,27 @@ public class ParticipantFrame implements Serializable {
         this.position = position;
     }
 
-    public int getTeamScore() {
+    public Integer getTeamScore() {
         return teamScore;
     }
 
-    public void setTeamScore(int teamScore) {
+    public void setTeamScore(Integer teamScore) {
         this.teamScore = teamScore;
     }
 
-    public int getTotalGold() {
+    public Integer getTotalGold() {
         return totalGold;
     }
 
-    public void setTotalGold(int totalGold) {
+    public void setTotalGold(Integer totalGold) {
         this.totalGold = totalGold;
     }
 
-    public int getXp() {
+    public Integer getXp() {
         return xp;
     }
 
-    public void setXp(int xp) {
+    public void setXp(Integer xp) {
         this.xp = xp;
     }
 
@@ -110,20 +110,20 @@ public class ParticipantFrame implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ParticipantFrame)) {
             return false;
         }
         ParticipantFrame that = (ParticipantFrame) o;
-        return currentGold == that.currentGold &&
-                dominionScore == that.dominionScore &&
-                jungleMinionsKilled == that.jungleMinionsKilled &&
-                level == that.level &&
-                minionsKilled == that.minionsKilled &&
-                participantId == that.participantId &&
-                teamScore == that.teamScore &&
-                totalGold == that.totalGold &&
-                xp == that.xp &&
-                Objects.equals(position, that.position);
+        return Objects.equals(currentGold, that.currentGold) &&
+                Objects.equals(dominionScore, that.dominionScore) &&
+                Objects.equals(jungleMinionsKilled, that.jungleMinionsKilled) &&
+                Objects.equals(level, that.level) &&
+                Objects.equals(minionsKilled, that.minionsKilled) &&
+                Objects.equals(participantId, that.participantId) &&
+                Objects.equals(position, that.position) &&
+                Objects.equals(teamScore, that.teamScore) &&
+                Objects.equals(totalGold, that.totalGold) &&
+                Objects.equals(xp, that.xp);
     }
 
     @Override

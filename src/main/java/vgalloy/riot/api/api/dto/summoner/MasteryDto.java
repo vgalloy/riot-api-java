@@ -14,22 +14,22 @@ public class MasteryDto implements Serializable {
 
     private static final long serialVersionUID = -165546307563290660L;
 
-    private int id;
-    private int rank;
+    private Integer id;
+    private Integer rank;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getRank() {
+    public Integer getRank() {
         return rank;
     }
 
-    public void setRank(int rank) {
+    public void setRank(Integer rank) {
         this.rank = rank;
     }
 
@@ -38,12 +38,12 @@ public class MasteryDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MasteryDto)) {
             return false;
         }
         MasteryDto that = (MasteryDto) o;
-        return id == that.id &&
-                rank == that.rank;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(rank, that.rank);
     }
 
     @Override

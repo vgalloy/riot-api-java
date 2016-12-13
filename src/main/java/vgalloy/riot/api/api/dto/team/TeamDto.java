@@ -15,26 +15,26 @@ public class TeamDto implements Serializable {
 
     private static final long serialVersionUID = -5589018373507908238L;
 
-    private long createDate;
+    private Long createDate;
     private String fullId;
-    private long lastGameDate;
-    private long lastJoinDate;
-    private long lastJoinedRankedTeamQueueDate;
+    private Long lastGameDate;
+    private Long lastJoinDate;
+    private Long lastJoinedRankedTeamQueueDate;
     private List<MatchHistorySummaryDto> matchHistory;
-    private long modifyDate;
+    private Long modifyDate;
     private String name;
     private RosterDto roster;
-    private long secondLastJoinDate;
+    private Long secondLastJoinDate;
     private String status;
     private String tag;
     private List<TeamStatDetailDto> teamStatDetails;
-    private long thirdLastJoinDate;
+    private Long thirdLastJoinDate;
 
-    public long getCreateDate() {
+    public Long getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(long createDate) {
+    public void setCreateDate(Long createDate) {
         this.createDate = createDate;
     }
 
@@ -46,27 +46,27 @@ public class TeamDto implements Serializable {
         this.fullId = fullId;
     }
 
-    public long getLastGameDate() {
+    public Long getLastGameDate() {
         return lastGameDate;
     }
 
-    public void setLastGameDate(long lastGameDate) {
+    public void setLastGameDate(Long lastGameDate) {
         this.lastGameDate = lastGameDate;
     }
 
-    public long getLastJoinDate() {
+    public Long getLastJoinDate() {
         return lastJoinDate;
     }
 
-    public void setLastJoinDate(long lastJoinDate) {
+    public void setLastJoinDate(Long lastJoinDate) {
         this.lastJoinDate = lastJoinDate;
     }
 
-    public long getLastJoinedRankedTeamQueueDate() {
+    public Long getLastJoinedRankedTeamQueueDate() {
         return lastJoinedRankedTeamQueueDate;
     }
 
-    public void setLastJoinedRankedTeamQueueDate(long lastJoinedRankedTeamQueueDate) {
+    public void setLastJoinedRankedTeamQueueDate(Long lastJoinedRankedTeamQueueDate) {
         this.lastJoinedRankedTeamQueueDate = lastJoinedRankedTeamQueueDate;
     }
 
@@ -78,11 +78,11 @@ public class TeamDto implements Serializable {
         this.matchHistory = matchHistory;
     }
 
-    public long getModifyDate() {
+    public Long getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(long modifyDate) {
+    public void setModifyDate(Long modifyDate) {
         this.modifyDate = modifyDate;
     }
 
@@ -102,11 +102,11 @@ public class TeamDto implements Serializable {
         this.roster = roster;
     }
 
-    public long getSecondLastJoinDate() {
+    public Long getSecondLastJoinDate() {
         return secondLastJoinDate;
     }
 
-    public void setSecondLastJoinDate(long secondLastJoinDate) {
+    public void setSecondLastJoinDate(Long secondLastJoinDate) {
         this.secondLastJoinDate = secondLastJoinDate;
     }
 
@@ -134,11 +134,11 @@ public class TeamDto implements Serializable {
         this.teamStatDetails = teamStatDetails;
     }
 
-    public long getThirdLastJoinDate() {
+    public Long getThirdLastJoinDate() {
         return thirdLastJoinDate;
     }
 
-    public void setThirdLastJoinDate(long thirdLastJoinDate) {
+    public void setThirdLastJoinDate(Long thirdLastJoinDate) {
         this.thirdLastJoinDate = thirdLastJoinDate;
     }
 
@@ -147,24 +147,24 @@ public class TeamDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof TeamDto)) {
             return false;
         }
         TeamDto teamDto = (TeamDto) o;
-        return createDate == teamDto.createDate &&
-                lastGameDate == teamDto.lastGameDate &&
-                lastJoinDate == teamDto.lastJoinDate &&
-                lastJoinedRankedTeamQueueDate == teamDto.lastJoinedRankedTeamQueueDate &&
-                modifyDate == teamDto.modifyDate &&
-                secondLastJoinDate == teamDto.secondLastJoinDate &&
-                thirdLastJoinDate == teamDto.thirdLastJoinDate &&
+        return Objects.equals(createDate, teamDto.createDate) &&
                 Objects.equals(fullId, teamDto.fullId) &&
+                Objects.equals(lastGameDate, teamDto.lastGameDate) &&
+                Objects.equals(lastJoinDate, teamDto.lastJoinDate) &&
+                Objects.equals(lastJoinedRankedTeamQueueDate, teamDto.lastJoinedRankedTeamQueueDate) &&
                 Objects.equals(matchHistory, teamDto.matchHistory) &&
+                Objects.equals(modifyDate, teamDto.modifyDate) &&
                 Objects.equals(name, teamDto.name) &&
                 Objects.equals(roster, teamDto.roster) &&
+                Objects.equals(secondLastJoinDate, teamDto.secondLastJoinDate) &&
                 Objects.equals(status, teamDto.status) &&
                 Objects.equals(tag, teamDto.tag) &&
-                Objects.equals(teamStatDetails, teamDto.teamStatDetails);
+                Objects.equals(teamStatDetails, teamDto.teamStatDetails) &&
+                Objects.equals(thirdLastJoinDate, teamDto.thirdLastJoinDate);
     }
 
     @Override

@@ -14,58 +14,58 @@ public class ChampionDto implements Serializable {
 
     private static final long serialVersionUID = -8332035146067802177L;
 
-    private long id;
-    private boolean active;
-    private boolean freeToPlay;
-    private boolean botEnabled;
-    private boolean botMmEnabled;
-    private boolean rankedPlayEnabled;
+    private Long id;
+    private Boolean active;
+    private Boolean freeToPlay;
+    private Boolean botEnabled;
+    private Boolean botMmEnabled;
+    private Boolean rankedPlayEnabled;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public boolean isActive() {
+    public Boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Boolean active) {
         this.active = active;
     }
 
-    public boolean isFreeToPlay() {
+    public Boolean isFreeToPlay() {
         return freeToPlay;
     }
 
-    public void setFreeToPlay(boolean freeToPlay) {
+    public void setFreeToPlay(Boolean freeToPlay) {
         this.freeToPlay = freeToPlay;
     }
 
-    public boolean isBotEnabled() {
+    public Boolean isBotEnabled() {
         return botEnabled;
     }
 
-    public void setBotEnabled(boolean botEnabled) {
+    public void setBotEnabled(Boolean botEnabled) {
         this.botEnabled = botEnabled;
     }
 
-    public boolean isBotMmEnabled() {
+    public Boolean isBotMmEnabled() {
         return botMmEnabled;
     }
 
-    public void setBotMmEnabled(boolean botMmEnabled) {
+    public void setBotMmEnabled(Boolean botMmEnabled) {
         this.botMmEnabled = botMmEnabled;
     }
 
-    public boolean isRankedPlayEnabled() {
+    public Boolean isRankedPlayEnabled() {
         return rankedPlayEnabled;
     }
 
-    public void setRankedPlayEnabled(boolean rankedPlayEnabled) {
+    public void setRankedPlayEnabled(Boolean rankedPlayEnabled) {
         this.rankedPlayEnabled = rankedPlayEnabled;
     }
 
@@ -74,16 +74,16 @@ public class ChampionDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ChampionDto)) {
             return false;
         }
         ChampionDto that = (ChampionDto) o;
-        return id == that.id &&
-                active == that.active &&
-                freeToPlay == that.freeToPlay &&
-                botEnabled == that.botEnabled &&
-                botMmEnabled == that.botMmEnabled &&
-                rankedPlayEnabled == that.rankedPlayEnabled;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(active, that.active) &&
+                Objects.equals(freeToPlay, that.freeToPlay) &&
+                Objects.equals(botEnabled, that.botEnabled) &&
+                Objects.equals(botMmEnabled, that.botMmEnabled) &&
+                Objects.equals(rankedPlayEnabled, that.rankedPlayEnabled);
     }
 
     @Override

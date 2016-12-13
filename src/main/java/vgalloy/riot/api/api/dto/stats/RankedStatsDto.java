@@ -16,8 +16,8 @@ public class RankedStatsDto implements Serializable {
     private static final long serialVersionUID = 4974185442595469870L;
 
     private List<ChampionStatsDto> champions;
-    private long modifyDate;
-    private long summonerId;
+    private Long modifyDate;
+    private Long summonerId;
 
     public List<ChampionStatsDto> getChampions() {
         return champions;
@@ -27,19 +27,19 @@ public class RankedStatsDto implements Serializable {
         this.champions = champions;
     }
 
-    public long getModifyDate() {
+    public Long getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(long modifyDate) {
+    public void setModifyDate(Long modifyDate) {
         this.modifyDate = modifyDate;
     }
 
-    public long getSummonerId() {
+    public Long getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(long summonerId) {
+    public void setSummonerId(Long summonerId) {
         this.summonerId = summonerId;
     }
 
@@ -48,13 +48,13 @@ public class RankedStatsDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RankedStatsDto)) {
             return false;
         }
         RankedStatsDto that = (RankedStatsDto) o;
-        return modifyDate == that.modifyDate &&
-                summonerId == that.summonerId &&
-                Objects.equals(champions, that.champions);
+        return Objects.equals(champions, that.champions) &&
+                Objects.equals(modifyDate, that.modifyDate) &&
+                Objects.equals(summonerId, that.summonerId);
     }
 
     @Override

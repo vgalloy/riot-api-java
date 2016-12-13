@@ -14,571 +14,571 @@ public class ParticipantStats implements Serializable {
 
     private static final long serialVersionUID = 4247865376360704912L;
 
-    private long assists;
-    private long champLevel;
-    private long combatPlayerScore;
-    private long deaths;
-    private long doubleKills;
-    private boolean firstBloodAssist;
-    private boolean firstBloodKill;
-    private boolean firstInhibitorAssist;
-    private boolean firstInhibitorKill;
-    private boolean firstTowerAssist;
-    private boolean firstTowerKill;
-    private long goldEarned;
-    private long goldSpent;
-    private long inhibitorKills;
-    private long item0;
-    private long item1;
-    private long item2;
-    private long item3;
-    private long item4;
-    private long item5;
-    private long item6;
-    private long killingSprees;
-    private long kills;
-    private long largestCriticalStrike;
-    private long largestKillingSpree;
-    private long largestMultiKill;
-    private long magicDamageDealt;
-    private long magicDamageDealtToChampions;
-    private long magicDamageTaken;
-    private long minionsKilled;
-    private long neutralMinionsKilled;
-    private long neutralMinionsKilledEnemyJungle;
-    private long neutralMinionsKilledTeamJungle;
-    private long nodeCapture;
-    private long nodeCaptureAssist;
-    private long nodeNeutralize;
-    private long nodeNeutralizeAssist;
-    private long objectivePlayerScore;
-    private long pentaKills;
-    private long physicalDamageDealt;
-    private long physicalDamageDealtToChampions;
-    private long physicalDamageTaken;
-    private long quadraKills;
-    private long sightWardsBoughtInGame;
-    private long teamObjective;
-    private long totalDamageDealt;
-    private long totalDamageDealtToChampions;
-    private long totalDamageTaken;
-    private long totalHeal;
-    private long totalPlayerScore;
-    private long totalScoreRank;
-    private long totalTimeCrowdControlDealt;
-    private long totalUnitsHealed;
-    private long towerKills;
-    private long tripleKills;
-    private long trueDamageDealt;
-    private long trueDamageDealtToChampions;
-    private long trueDamageTaken;
-    private long unrealKills;
-    private long visionWardsBoughtInGame;
-    private long wardsKilled;
-    private long wardsPlaced;
-    private boolean winner;
+    private Long assists;
+    private Long champLevel;
+    private Long combatPlayerScore;
+    private Long deaths;
+    private Long doubleKills;
+    private Boolean firstBloodAssist;
+    private Boolean firstBloodKill;
+    private Boolean firstInhibitorAssist;
+    private Boolean firstInhibitorKill;
+    private Boolean firstTowerAssist;
+    private Boolean firstTowerKill;
+    private Long goldEarned;
+    private Long goldSpent;
+    private Long inhibitorKills;
+    private Long item0;
+    private Long item1;
+    private Long item2;
+    private Long item3;
+    private Long item4;
+    private Long item5;
+    private Long item6;
+    private Long killingSprees;
+    private Long kills;
+    private Long largestCriticalStrike;
+    private Long largestKillingSpree;
+    private Long largestMultiKill;
+    private Long magicDamageDealt;
+    private Long magicDamageDealtToChampions;
+    private Long magicDamageTaken;
+    private Long minionsKilled;
+    private Long neutralMinionsKilled;
+    private Long neutralMinionsKilledEnemyJungle;
+    private Long neutralMinionsKilledTeamJungle;
+    private Long nodeCapture;
+    private Long nodeCaptureAssist;
+    private Long nodeNeutralize;
+    private Long nodeNeutralizeAssist;
+    private Long objectivePlayerScore;
+    private Long pentaKills;
+    private Long physicalDamageDealt;
+    private Long physicalDamageDealtToChampions;
+    private Long physicalDamageTaken;
+    private Long quadraKills;
+    private Long sightWardsBoughtInGame;
+    private Long teamObjective;
+    private Long totalDamageDealt;
+    private Long totalDamageDealtToChampions;
+    private Long totalDamageTaken;
+    private Long totalHeal;
+    private Long totalPlayerScore;
+    private Long totalScoreRank;
+    private Long totalTimeCrowdControlDealt;
+    private Long totalUnitsHealed;
+    private Long towerKills;
+    private Long tripleKills;
+    private Long trueDamageDealt;
+    private Long trueDamageDealtToChampions;
+    private Long trueDamageTaken;
+    private Long unrealKills;
+    private Long visionWardsBoughtInGame;
+    private Long wardsKilled;
+    private Long wardsPlaced;
+    private Boolean winner;
 
-    public long getAssists() {
+    public Long getAssists() {
         return assists;
     }
 
-    public void setAssists(long assists) {
+    public void setAssists(Long assists) {
         this.assists = assists;
     }
 
-    public long getChampLevel() {
+    public Long getChampLevel() {
         return champLevel;
     }
 
-    public void setChampLevel(long champLevel) {
+    public void setChampLevel(Long champLevel) {
         this.champLevel = champLevel;
     }
 
-    public long getCombatPlayerScore() {
+    public Long getCombatPlayerScore() {
         return combatPlayerScore;
     }
 
-    public void setCombatPlayerScore(long combatPlayerScore) {
+    public void setCombatPlayerScore(Long combatPlayerScore) {
         this.combatPlayerScore = combatPlayerScore;
     }
 
-    public long getDeaths() {
+    public Long getDeaths() {
         return deaths;
     }
 
-    public void setDeaths(long deaths) {
+    public void setDeaths(Long deaths) {
         this.deaths = deaths;
     }
 
-    public long getDoubleKills() {
+    public Long getDoubleKills() {
         return doubleKills;
     }
 
-    public void setDoubleKills(long doubleKills) {
+    public void setDoubleKills(Long doubleKills) {
         this.doubleKills = doubleKills;
     }
 
-    public boolean isFirstBloodAssist() {
+    public Boolean isFirstBloodAssist() {
         return firstBloodAssist;
     }
 
-    public void setFirstBloodAssist(boolean firstBloodAssist) {
+    public void setFirstBloodAssist(Boolean firstBloodAssist) {
         this.firstBloodAssist = firstBloodAssist;
     }
 
-    public boolean isFirstBloodKill() {
+    public Boolean isFirstBloodKill() {
         return firstBloodKill;
     }
 
-    public void setFirstBloodKill(boolean firstBloodKill) {
+    public void setFirstBloodKill(Boolean firstBloodKill) {
         this.firstBloodKill = firstBloodKill;
     }
 
-    public boolean isFirstInhibitorAssist() {
+    public Boolean isFirstInhibitorAssist() {
         return firstInhibitorAssist;
     }
 
-    public void setFirstInhibitorAssist(boolean firstInhibitorAssist) {
+    public void setFirstInhibitorAssist(Boolean firstInhibitorAssist) {
         this.firstInhibitorAssist = firstInhibitorAssist;
     }
 
-    public boolean isFirstInhibitorKill() {
+    public Boolean isFirstInhibitorKill() {
         return firstInhibitorKill;
     }
 
-    public void setFirstInhibitorKill(boolean firstInhibitorKill) {
+    public void setFirstInhibitorKill(Boolean firstInhibitorKill) {
         this.firstInhibitorKill = firstInhibitorKill;
     }
 
-    public boolean isFirstTowerAssist() {
+    public Boolean isFirstTowerAssist() {
         return firstTowerAssist;
     }
 
-    public void setFirstTowerAssist(boolean firstTowerAssist) {
+    public void setFirstTowerAssist(Boolean firstTowerAssist) {
         this.firstTowerAssist = firstTowerAssist;
     }
 
-    public boolean isFirstTowerKill() {
+    public Boolean isFirstTowerKill() {
         return firstTowerKill;
     }
 
-    public void setFirstTowerKill(boolean firstTowerKill) {
+    public void setFirstTowerKill(Boolean firstTowerKill) {
         this.firstTowerKill = firstTowerKill;
     }
 
-    public long getGoldEarned() {
+    public Long getGoldEarned() {
         return goldEarned;
     }
 
-    public void setGoldEarned(long goldEarned) {
+    public void setGoldEarned(Long goldEarned) {
         this.goldEarned = goldEarned;
     }
 
-    public long getGoldSpent() {
+    public Long getGoldSpent() {
         return goldSpent;
     }
 
-    public void setGoldSpent(long goldSpent) {
+    public void setGoldSpent(Long goldSpent) {
         this.goldSpent = goldSpent;
     }
 
-    public long getInhibitorKills() {
+    public Long getInhibitorKills() {
         return inhibitorKills;
     }
 
-    public void setInhibitorKills(long inhibitorKills) {
+    public void setInhibitorKills(Long inhibitorKills) {
         this.inhibitorKills = inhibitorKills;
     }
 
-    public long getItem0() {
+    public Long getItem0() {
         return item0;
     }
 
-    public void setItem0(long item0) {
+    public void setItem0(Long item0) {
         this.item0 = item0;
     }
 
-    public long getItem1() {
+    public Long getItem1() {
         return item1;
     }
 
-    public void setItem1(long item1) {
+    public void setItem1(Long item1) {
         this.item1 = item1;
     }
 
-    public long getItem2() {
+    public Long getItem2() {
         return item2;
     }
 
-    public void setItem2(long item2) {
+    public void setItem2(Long item2) {
         this.item2 = item2;
     }
 
-    public long getItem3() {
+    public Long getItem3() {
         return item3;
     }
 
-    public void setItem3(long item3) {
+    public void setItem3(Long item3) {
         this.item3 = item3;
     }
 
-    public long getItem4() {
+    public Long getItem4() {
         return item4;
     }
 
-    public void setItem4(long item4) {
+    public void setItem4(Long item4) {
         this.item4 = item4;
     }
 
-    public long getItem5() {
+    public Long getItem5() {
         return item5;
     }
 
-    public void setItem5(long item5) {
+    public void setItem5(Long item5) {
         this.item5 = item5;
     }
 
-    public long getItem6() {
+    public Long getItem6() {
         return item6;
     }
 
-    public void setItem6(long item6) {
+    public void setItem6(Long item6) {
         this.item6 = item6;
     }
 
-    public long getKillingSprees() {
+    public Long getKillingSprees() {
         return killingSprees;
     }
 
-    public void setKillingSprees(long killingSprees) {
+    public void setKillingSprees(Long killingSprees) {
         this.killingSprees = killingSprees;
     }
 
-    public long getKills() {
+    public Long getKills() {
         return kills;
     }
 
-    public void setKills(long kills) {
+    public void setKills(Long kills) {
         this.kills = kills;
     }
 
-    public long getLargestCriticalStrike() {
+    public Long getLargestCriticalStrike() {
         return largestCriticalStrike;
     }
 
-    public void setLargestCriticalStrike(long largestCriticalStrike) {
+    public void setLargestCriticalStrike(Long largestCriticalStrike) {
         this.largestCriticalStrike = largestCriticalStrike;
     }
 
-    public long getLargestKillingSpree() {
+    public Long getLargestKillingSpree() {
         return largestKillingSpree;
     }
 
-    public void setLargestKillingSpree(long largestKillingSpree) {
+    public void setLargestKillingSpree(Long largestKillingSpree) {
         this.largestKillingSpree = largestKillingSpree;
     }
 
-    public long getLargestMultiKill() {
+    public Long getLargestMultiKill() {
         return largestMultiKill;
     }
 
-    public void setLargestMultiKill(long largestMultiKill) {
+    public void setLargestMultiKill(Long largestMultiKill) {
         this.largestMultiKill = largestMultiKill;
     }
 
-    public long getMagicDamageDealt() {
+    public Long getMagicDamageDealt() {
         return magicDamageDealt;
     }
 
-    public void setMagicDamageDealt(long magicDamageDealt) {
+    public void setMagicDamageDealt(Long magicDamageDealt) {
         this.magicDamageDealt = magicDamageDealt;
     }
 
-    public long getMagicDamageDealtToChampions() {
+    public Long getMagicDamageDealtToChampions() {
         return magicDamageDealtToChampions;
     }
 
-    public void setMagicDamageDealtToChampions(long magicDamageDealtToChampions) {
+    public void setMagicDamageDealtToChampions(Long magicDamageDealtToChampions) {
         this.magicDamageDealtToChampions = magicDamageDealtToChampions;
     }
 
-    public long getMagicDamageTaken() {
+    public Long getMagicDamageTaken() {
         return magicDamageTaken;
     }
 
-    public void setMagicDamageTaken(long magicDamageTaken) {
+    public void setMagicDamageTaken(Long magicDamageTaken) {
         this.magicDamageTaken = magicDamageTaken;
     }
 
-    public long getMinionsKilled() {
+    public Long getMinionsKilled() {
         return minionsKilled;
     }
 
-    public void setMinionsKilled(long minionsKilled) {
+    public void setMinionsKilled(Long minionsKilled) {
         this.minionsKilled = minionsKilled;
     }
 
-    public long getNeutralMinionsKilled() {
+    public Long getNeutralMinionsKilled() {
         return neutralMinionsKilled;
     }
 
-    public void setNeutralMinionsKilled(long neutralMinionsKilled) {
+    public void setNeutralMinionsKilled(Long neutralMinionsKilled) {
         this.neutralMinionsKilled = neutralMinionsKilled;
     }
 
-    public long getNeutralMinionsKilledEnemyJungle() {
+    public Long getNeutralMinionsKilledEnemyJungle() {
         return neutralMinionsKilledEnemyJungle;
     }
 
-    public void setNeutralMinionsKilledEnemyJungle(long neutralMinionsKilledEnemyJungle) {
+    public void setNeutralMinionsKilledEnemyJungle(Long neutralMinionsKilledEnemyJungle) {
         this.neutralMinionsKilledEnemyJungle = neutralMinionsKilledEnemyJungle;
     }
 
-    public long getNeutralMinionsKilledTeamJungle() {
+    public Long getNeutralMinionsKilledTeamJungle() {
         return neutralMinionsKilledTeamJungle;
     }
 
-    public void setNeutralMinionsKilledTeamJungle(long neutralMinionsKilledTeamJungle) {
+    public void setNeutralMinionsKilledTeamJungle(Long neutralMinionsKilledTeamJungle) {
         this.neutralMinionsKilledTeamJungle = neutralMinionsKilledTeamJungle;
     }
 
-    public long getNodeCapture() {
+    public Long getNodeCapture() {
         return nodeCapture;
     }
 
-    public void setNodeCapture(long nodeCapture) {
+    public void setNodeCapture(Long nodeCapture) {
         this.nodeCapture = nodeCapture;
     }
 
-    public long getNodeCaptureAssist() {
+    public Long getNodeCaptureAssist() {
         return nodeCaptureAssist;
     }
 
-    public void setNodeCaptureAssist(long nodeCaptureAssist) {
+    public void setNodeCaptureAssist(Long nodeCaptureAssist) {
         this.nodeCaptureAssist = nodeCaptureAssist;
     }
 
-    public long getNodeNeutralize() {
+    public Long getNodeNeutralize() {
         return nodeNeutralize;
     }
 
-    public void setNodeNeutralize(long nodeNeutralize) {
+    public void setNodeNeutralize(Long nodeNeutralize) {
         this.nodeNeutralize = nodeNeutralize;
     }
 
-    public long getNodeNeutralizeAssist() {
+    public Long getNodeNeutralizeAssist() {
         return nodeNeutralizeAssist;
     }
 
-    public void setNodeNeutralizeAssist(long nodeNeutralizeAssist) {
+    public void setNodeNeutralizeAssist(Long nodeNeutralizeAssist) {
         this.nodeNeutralizeAssist = nodeNeutralizeAssist;
     }
 
-    public long getObjectivePlayerScore() {
+    public Long getObjectivePlayerScore() {
         return objectivePlayerScore;
     }
 
-    public void setObjectivePlayerScore(long objectivePlayerScore) {
+    public void setObjectivePlayerScore(Long objectivePlayerScore) {
         this.objectivePlayerScore = objectivePlayerScore;
     }
 
-    public long getPentaKills() {
+    public Long getPentaKills() {
         return pentaKills;
     }
 
-    public void setPentaKills(long pentaKills) {
+    public void setPentaKills(Long pentaKills) {
         this.pentaKills = pentaKills;
     }
 
-    public long getPhysicalDamageDealt() {
+    public Long getPhysicalDamageDealt() {
         return physicalDamageDealt;
     }
 
-    public void setPhysicalDamageDealt(long physicalDamageDealt) {
+    public void setPhysicalDamageDealt(Long physicalDamageDealt) {
         this.physicalDamageDealt = physicalDamageDealt;
     }
 
-    public long getPhysicalDamageDealtToChampions() {
+    public Long getPhysicalDamageDealtToChampions() {
         return physicalDamageDealtToChampions;
     }
 
-    public void setPhysicalDamageDealtToChampions(long physicalDamageDealtToChampions) {
+    public void setPhysicalDamageDealtToChampions(Long physicalDamageDealtToChampions) {
         this.physicalDamageDealtToChampions = physicalDamageDealtToChampions;
     }
 
-    public long getPhysicalDamageTaken() {
+    public Long getPhysicalDamageTaken() {
         return physicalDamageTaken;
     }
 
-    public void setPhysicalDamageTaken(long physicalDamageTaken) {
+    public void setPhysicalDamageTaken(Long physicalDamageTaken) {
         this.physicalDamageTaken = physicalDamageTaken;
     }
 
-    public long getQuadraKills() {
+    public Long getQuadraKills() {
         return quadraKills;
     }
 
-    public void setQuadraKills(long quadraKills) {
+    public void setQuadraKills(Long quadraKills) {
         this.quadraKills = quadraKills;
     }
 
-    public long getSightWardsBoughtInGame() {
+    public Long getSightWardsBoughtInGame() {
         return sightWardsBoughtInGame;
     }
 
-    public void setSightWardsBoughtInGame(long sightWardsBoughtInGame) {
+    public void setSightWardsBoughtInGame(Long sightWardsBoughtInGame) {
         this.sightWardsBoughtInGame = sightWardsBoughtInGame;
     }
 
-    public long getTeamObjective() {
+    public Long getTeamObjective() {
         return teamObjective;
     }
 
-    public void setTeamObjective(long teamObjective) {
+    public void setTeamObjective(Long teamObjective) {
         this.teamObjective = teamObjective;
     }
 
-    public long getTotalDamageDealt() {
+    public Long getTotalDamageDealt() {
         return totalDamageDealt;
     }
 
-    public void setTotalDamageDealt(long totalDamageDealt) {
+    public void setTotalDamageDealt(Long totalDamageDealt) {
         this.totalDamageDealt = totalDamageDealt;
     }
 
-    public long getTotalDamageDealtToChampions() {
+    public Long getTotalDamageDealtToChampions() {
         return totalDamageDealtToChampions;
     }
 
-    public void setTotalDamageDealtToChampions(long totalDamageDealtToChampions) {
+    public void setTotalDamageDealtToChampions(Long totalDamageDealtToChampions) {
         this.totalDamageDealtToChampions = totalDamageDealtToChampions;
     }
 
-    public long getTotalDamageTaken() {
+    public Long getTotalDamageTaken() {
         return totalDamageTaken;
     }
 
-    public void setTotalDamageTaken(long totalDamageTaken) {
+    public void setTotalDamageTaken(Long totalDamageTaken) {
         this.totalDamageTaken = totalDamageTaken;
     }
 
-    public long getTotalHeal() {
+    public Long getTotalHeal() {
         return totalHeal;
     }
 
-    public void setTotalHeal(long totalHeal) {
+    public void setTotalHeal(Long totalHeal) {
         this.totalHeal = totalHeal;
     }
 
-    public long getTotalPlayerScore() {
+    public Long getTotalPlayerScore() {
         return totalPlayerScore;
     }
 
-    public void setTotalPlayerScore(long totalPlayerScore) {
+    public void setTotalPlayerScore(Long totalPlayerScore) {
         this.totalPlayerScore = totalPlayerScore;
     }
 
-    public long getTotalScoreRank() {
+    public Long getTotalScoreRank() {
         return totalScoreRank;
     }
 
-    public void setTotalScoreRank(long totalScoreRank) {
+    public void setTotalScoreRank(Long totalScoreRank) {
         this.totalScoreRank = totalScoreRank;
     }
 
-    public long getTotalTimeCrowdControlDealt() {
+    public Long getTotalTimeCrowdControlDealt() {
         return totalTimeCrowdControlDealt;
     }
 
-    public void setTotalTimeCrowdControlDealt(long totalTimeCrowdControlDealt) {
+    public void setTotalTimeCrowdControlDealt(Long totalTimeCrowdControlDealt) {
         this.totalTimeCrowdControlDealt = totalTimeCrowdControlDealt;
     }
 
-    public long getTotalUnitsHealed() {
+    public Long getTotalUnitsHealed() {
         return totalUnitsHealed;
     }
 
-    public void setTotalUnitsHealed(long totalUnitsHealed) {
+    public void setTotalUnitsHealed(Long totalUnitsHealed) {
         this.totalUnitsHealed = totalUnitsHealed;
     }
 
-    public long getTowerKills() {
+    public Long getTowerKills() {
         return towerKills;
     }
 
-    public void setTowerKills(long towerKills) {
+    public void setTowerKills(Long towerKills) {
         this.towerKills = towerKills;
     }
 
-    public long getTripleKills() {
+    public Long getTripleKills() {
         return tripleKills;
     }
 
-    public void setTripleKills(long tripleKills) {
+    public void setTripleKills(Long tripleKills) {
         this.tripleKills = tripleKills;
     }
 
-    public long getTrueDamageDealt() {
+    public Long getTrueDamageDealt() {
         return trueDamageDealt;
     }
 
-    public void setTrueDamageDealt(long trueDamageDealt) {
+    public void setTrueDamageDealt(Long trueDamageDealt) {
         this.trueDamageDealt = trueDamageDealt;
     }
 
-    public long getTrueDamageDealtToChampions() {
+    public Long getTrueDamageDealtToChampions() {
         return trueDamageDealtToChampions;
     }
 
-    public void setTrueDamageDealtToChampions(long trueDamageDealtToChampions) {
+    public void setTrueDamageDealtToChampions(Long trueDamageDealtToChampions) {
         this.trueDamageDealtToChampions = trueDamageDealtToChampions;
     }
 
-    public long getTrueDamageTaken() {
+    public Long getTrueDamageTaken() {
         return trueDamageTaken;
     }
 
-    public void setTrueDamageTaken(long trueDamageTaken) {
+    public void setTrueDamageTaken(Long trueDamageTaken) {
         this.trueDamageTaken = trueDamageTaken;
     }
 
-    public long getUnrealKills() {
+    public Long getUnrealKills() {
         return unrealKills;
     }
 
-    public void setUnrealKills(long unrealKills) {
+    public void setUnrealKills(Long unrealKills) {
         this.unrealKills = unrealKills;
     }
 
-    public long getVisionWardsBoughtInGame() {
+    public Long getVisionWardsBoughtInGame() {
         return visionWardsBoughtInGame;
     }
 
-    public void setVisionWardsBoughtInGame(long visionWardsBoughtInGame) {
+    public void setVisionWardsBoughtInGame(Long visionWardsBoughtInGame) {
         this.visionWardsBoughtInGame = visionWardsBoughtInGame;
     }
 
-    public long getWardsKilled() {
+    public Long getWardsKilled() {
         return wardsKilled;
     }
 
-    public void setWardsKilled(long wardsKilled) {
+    public void setWardsKilled(Long wardsKilled) {
         this.wardsKilled = wardsKilled;
     }
 
-    public long getWardsPlaced() {
+    public Long getWardsPlaced() {
         return wardsPlaced;
     }
 
-    public void setWardsPlaced(long wardsPlaced) {
+    public void setWardsPlaced(Long wardsPlaced) {
         this.wardsPlaced = wardsPlaced;
     }
 
-    public boolean isWinner() {
+    public Boolean isWinner() {
         return winner;
     }
 
-    public void setWinner(boolean winner) {
+    public void setWinner(Boolean winner) {
         this.winner = winner;
     }
 
@@ -587,73 +587,73 @@ public class ParticipantStats implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ParticipantStats)) {
             return false;
         }
         ParticipantStats that = (ParticipantStats) o;
-        return assists == that.assists &&
-                champLevel == that.champLevel &&
-                combatPlayerScore == that.combatPlayerScore &&
-                deaths == that.deaths &&
-                doubleKills == that.doubleKills &&
-                firstBloodAssist == that.firstBloodAssist &&
-                firstBloodKill == that.firstBloodKill &&
-                firstInhibitorAssist == that.firstInhibitorAssist &&
-                firstInhibitorKill == that.firstInhibitorKill &&
-                firstTowerAssist == that.firstTowerAssist &&
-                firstTowerKill == that.firstTowerKill &&
-                goldEarned == that.goldEarned &&
-                goldSpent == that.goldSpent &&
-                inhibitorKills == that.inhibitorKills &&
-                item0 == that.item0 &&
-                item1 == that.item1 &&
-                item2 == that.item2 &&
-                item3 == that.item3 &&
-                item4 == that.item4 &&
-                item5 == that.item5 &&
-                item6 == that.item6 &&
-                killingSprees == that.killingSprees &&
-                kills == that.kills &&
-                largestCriticalStrike == that.largestCriticalStrike &&
-                largestKillingSpree == that.largestKillingSpree &&
-                largestMultiKill == that.largestMultiKill &&
-                magicDamageDealt == that.magicDamageDealt &&
-                magicDamageDealtToChampions == that.magicDamageDealtToChampions &&
-                magicDamageTaken == that.magicDamageTaken &&
-                minionsKilled == that.minionsKilled &&
-                neutralMinionsKilled == that.neutralMinionsKilled &&
-                neutralMinionsKilledEnemyJungle == that.neutralMinionsKilledEnemyJungle &&
-                neutralMinionsKilledTeamJungle == that.neutralMinionsKilledTeamJungle &&
-                nodeCapture == that.nodeCapture &&
-                nodeCaptureAssist == that.nodeCaptureAssist &&
-                nodeNeutralize == that.nodeNeutralize &&
-                nodeNeutralizeAssist == that.nodeNeutralizeAssist &&
-                objectivePlayerScore == that.objectivePlayerScore &&
-                pentaKills == that.pentaKills &&
-                physicalDamageDealt == that.physicalDamageDealt &&
-                physicalDamageDealtToChampions == that.physicalDamageDealtToChampions &&
-                physicalDamageTaken == that.physicalDamageTaken &&
-                quadraKills == that.quadraKills &&
-                sightWardsBoughtInGame == that.sightWardsBoughtInGame &&
-                teamObjective == that.teamObjective &&
-                totalDamageDealt == that.totalDamageDealt &&
-                totalDamageDealtToChampions == that.totalDamageDealtToChampions &&
-                totalDamageTaken == that.totalDamageTaken &&
-                totalHeal == that.totalHeal &&
-                totalPlayerScore == that.totalPlayerScore &&
-                totalScoreRank == that.totalScoreRank &&
-                totalTimeCrowdControlDealt == that.totalTimeCrowdControlDealt &&
-                totalUnitsHealed == that.totalUnitsHealed &&
-                towerKills == that.towerKills &&
-                tripleKills == that.tripleKills &&
-                trueDamageDealt == that.trueDamageDealt &&
-                trueDamageDealtToChampions == that.trueDamageDealtToChampions &&
-                trueDamageTaken == that.trueDamageTaken &&
-                unrealKills == that.unrealKills &&
-                visionWardsBoughtInGame == that.visionWardsBoughtInGame &&
-                wardsKilled == that.wardsKilled &&
-                wardsPlaced == that.wardsPlaced &&
-                winner == that.winner;
+        return Objects.equals(assists, that.assists) &&
+                Objects.equals(champLevel, that.champLevel) &&
+                Objects.equals(combatPlayerScore, that.combatPlayerScore) &&
+                Objects.equals(deaths, that.deaths) &&
+                Objects.equals(doubleKills, that.doubleKills) &&
+                Objects.equals(firstBloodAssist, that.firstBloodAssist) &&
+                Objects.equals(firstBloodKill, that.firstBloodKill) &&
+                Objects.equals(firstInhibitorAssist, that.firstInhibitorAssist) &&
+                Objects.equals(firstInhibitorKill, that.firstInhibitorKill) &&
+                Objects.equals(firstTowerAssist, that.firstTowerAssist) &&
+                Objects.equals(firstTowerKill, that.firstTowerKill) &&
+                Objects.equals(goldEarned, that.goldEarned) &&
+                Objects.equals(goldSpent, that.goldSpent) &&
+                Objects.equals(inhibitorKills, that.inhibitorKills) &&
+                Objects.equals(item0, that.item0) &&
+                Objects.equals(item1, that.item1) &&
+                Objects.equals(item2, that.item2) &&
+                Objects.equals(item3, that.item3) &&
+                Objects.equals(item4, that.item4) &&
+                Objects.equals(item5, that.item5) &&
+                Objects.equals(item6, that.item6) &&
+                Objects.equals(killingSprees, that.killingSprees) &&
+                Objects.equals(kills, that.kills) &&
+                Objects.equals(largestCriticalStrike, that.largestCriticalStrike) &&
+                Objects.equals(largestKillingSpree, that.largestKillingSpree) &&
+                Objects.equals(largestMultiKill, that.largestMultiKill) &&
+                Objects.equals(magicDamageDealt, that.magicDamageDealt) &&
+                Objects.equals(magicDamageDealtToChampions, that.magicDamageDealtToChampions) &&
+                Objects.equals(magicDamageTaken, that.magicDamageTaken) &&
+                Objects.equals(minionsKilled, that.minionsKilled) &&
+                Objects.equals(neutralMinionsKilled, that.neutralMinionsKilled) &&
+                Objects.equals(neutralMinionsKilledEnemyJungle, that.neutralMinionsKilledEnemyJungle) &&
+                Objects.equals(neutralMinionsKilledTeamJungle, that.neutralMinionsKilledTeamJungle) &&
+                Objects.equals(nodeCapture, that.nodeCapture) &&
+                Objects.equals(nodeCaptureAssist, that.nodeCaptureAssist) &&
+                Objects.equals(nodeNeutralize, that.nodeNeutralize) &&
+                Objects.equals(nodeNeutralizeAssist, that.nodeNeutralizeAssist) &&
+                Objects.equals(objectivePlayerScore, that.objectivePlayerScore) &&
+                Objects.equals(pentaKills, that.pentaKills) &&
+                Objects.equals(physicalDamageDealt, that.physicalDamageDealt) &&
+                Objects.equals(physicalDamageDealtToChampions, that.physicalDamageDealtToChampions) &&
+                Objects.equals(physicalDamageTaken, that.physicalDamageTaken) &&
+                Objects.equals(quadraKills, that.quadraKills) &&
+                Objects.equals(sightWardsBoughtInGame, that.sightWardsBoughtInGame) &&
+                Objects.equals(teamObjective, that.teamObjective) &&
+                Objects.equals(totalDamageDealt, that.totalDamageDealt) &&
+                Objects.equals(totalDamageDealtToChampions, that.totalDamageDealtToChampions) &&
+                Objects.equals(totalDamageTaken, that.totalDamageTaken) &&
+                Objects.equals(totalHeal, that.totalHeal) &&
+                Objects.equals(totalPlayerScore, that.totalPlayerScore) &&
+                Objects.equals(totalScoreRank, that.totalScoreRank) &&
+                Objects.equals(totalTimeCrowdControlDealt, that.totalTimeCrowdControlDealt) &&
+                Objects.equals(totalUnitsHealed, that.totalUnitsHealed) &&
+                Objects.equals(towerKills, that.towerKills) &&
+                Objects.equals(tripleKills, that.tripleKills) &&
+                Objects.equals(trueDamageDealt, that.trueDamageDealt) &&
+                Objects.equals(trueDamageDealtToChampions, that.trueDamageDealtToChampions) &&
+                Objects.equals(trueDamageTaken, that.trueDamageTaken) &&
+                Objects.equals(unrealKills, that.unrealKills) &&
+                Objects.equals(visionWardsBoughtInGame, that.visionWardsBoughtInGame) &&
+                Objects.equals(wardsKilled, that.wardsKilled) &&
+                Objects.equals(wardsPlaced, that.wardsPlaced) &&
+                Objects.equals(winner, that.winner);
     }
 
     @Override

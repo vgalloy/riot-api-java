@@ -14,40 +14,40 @@ public class InfoDto implements Serializable {
 
     private static final long serialVersionUID = -241128866110684850L;
 
-    private int attack;
-    private int defense;
-    private int difficulty;
-    private int magic;
+    private Integer attack;
+    private Integer defense;
+    private Integer difficulty;
+    private Integer magic;
 
-    public int getAttack() {
+    public Integer getAttack() {
         return attack;
     }
 
-    public void setAttack(int attack) {
+    public void setAttack(Integer attack) {
         this.attack = attack;
     }
 
-    public int getDefense() {
+    public Integer getDefense() {
         return defense;
     }
 
-    public void setDefense(int defense) {
+    public void setDefense(Integer defense) {
         this.defense = defense;
     }
 
-    public int getDifficulty() {
+    public Integer getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(int difficulty) {
+    public void setDifficulty(Integer difficulty) {
         this.difficulty = difficulty;
     }
 
-    public int getMagic() {
+    public Integer getMagic() {
         return magic;
     }
 
-    public void setMagic(int magic) {
+    public void setMagic(Integer magic) {
         this.magic = magic;
     }
 
@@ -56,14 +56,14 @@ public class InfoDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof InfoDto)) {
             return false;
         }
         InfoDto infoDto = (InfoDto) o;
-        return attack == infoDto.attack &&
-                defense == infoDto.defense &&
-                difficulty == infoDto.difficulty &&
-                magic == infoDto.magic;
+        return Objects.equals(attack, infoDto.attack) &&
+                Objects.equals(defense, infoDto.defense) &&
+                Objects.equals(difficulty, infoDto.difficulty) &&
+                Objects.equals(magic, infoDto.magic);
     }
 
     @Override

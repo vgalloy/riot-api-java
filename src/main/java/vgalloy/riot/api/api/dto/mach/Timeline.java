@@ -15,14 +15,14 @@ public class Timeline implements Serializable {
 
     private static final long serialVersionUID = 1421796048475887198L;
 
-    private long frameInterval;
+    private Long frameInterval;
     private List<Frame> frames;
 
-    public long getFrameInterval() {
+    public Long getFrameInterval() {
         return frameInterval;
     }
 
-    public void setFrameInterval(long frameInterval) {
+    public void setFrameInterval(Long frameInterval) {
         this.frameInterval = frameInterval;
     }
 
@@ -39,11 +39,11 @@ public class Timeline implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Timeline)) {
             return false;
         }
         Timeline timeline = (Timeline) o;
-        return frameInterval == timeline.frameInterval &&
+        return Objects.equals(frameInterval, timeline.frameInterval) &&
                 Objects.equals(frames, timeline.frames);
     }
 

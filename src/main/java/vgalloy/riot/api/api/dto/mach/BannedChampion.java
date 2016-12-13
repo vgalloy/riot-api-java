@@ -14,22 +14,22 @@ public class BannedChampion implements Serializable {
 
     private static final long serialVersionUID = -5892311044776388605L;
 
-    private int championId;
-    private int pickTurn;
+    private Integer championId;
+    private Integer pickTurn;
 
-    public int getChampionId() {
+    public Integer getChampionId() {
         return championId;
     }
 
-    public void setChampionId(int championId) {
+    public void setChampionId(Integer championId) {
         this.championId = championId;
     }
 
-    public int getPickTurn() {
+    public Integer getPickTurn() {
         return pickTurn;
     }
 
-    public void setPickTurn(int pickTurn) {
+    public void setPickTurn(Integer pickTurn) {
         this.pickTurn = pickTurn;
     }
 
@@ -38,12 +38,12 @@ public class BannedChampion implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof BannedChampion)) {
             return false;
         }
         BannedChampion that = (BannedChampion) o;
-        return championId == that.championId &&
-                pickTurn == that.pickTurn;
+        return Objects.equals(championId, that.championId) &&
+                Objects.equals(pickTurn, that.pickTurn);
     }
 
     @Override

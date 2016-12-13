@@ -14,32 +14,32 @@ public class TeamMemberInfoDto implements Serializable {
 
     private static final long serialVersionUID = -4653851060481456728L;
 
-    private long inviteDate;
-    private long joinDate;
-    private long playerId;
+    private Long inviteDate;
+    private Long joinDate;
+    private Long playerId;
     private String status;
 
-    public long getInviteDate() {
+    public Long getInviteDate() {
         return inviteDate;
     }
 
-    public void setInviteDate(long inviteDate) {
+    public void setInviteDate(Long inviteDate) {
         this.inviteDate = inviteDate;
     }
 
-    public long getJoinDate() {
+    public Long getJoinDate() {
         return joinDate;
     }
 
-    public void setJoinDate(long joinDate) {
+    public void setJoinDate(Long joinDate) {
         this.joinDate = joinDate;
     }
 
-    public long getPlayerId() {
+    public Long getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(long playerId) {
+    public void setPlayerId(Long playerId) {
         this.playerId = playerId;
     }
 
@@ -56,13 +56,13 @@ public class TeamMemberInfoDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof TeamMemberInfoDto)) {
             return false;
         }
         TeamMemberInfoDto that = (TeamMemberInfoDto) o;
-        return inviteDate == that.inviteDate &&
-                joinDate == that.joinDate &&
-                playerId == that.playerId &&
+        return Objects.equals(inviteDate, that.inviteDate) &&
+                Objects.equals(joinDate, that.joinDate) &&
+                Objects.equals(playerId, that.playerId) &&
                 Objects.equals(status, that.status);
     }
 

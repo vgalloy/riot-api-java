@@ -28,24 +28,24 @@ public class Event implements Serializable {
     private AscendedType ascendedType;
     private List<Integer> assistingParticipantIds;
     private BuildingType buildingType;
-    private int creatorId;
+    private Integer creatorId;
     private EventType eventType;
-    private int itemAfter;
-    private int itemBefore;
-    private int itemId;
-    private int killerId;
+    private Integer itemAfter;
+    private Integer itemBefore;
+    private Integer itemId;
+    private Integer killerId;
     private LaneType laneType;
     private LevelUpType levelUpType;
     private MonsterType monsterType;
     private String monsterSubType;
-    private int participantId;
+    private Integer participantId;
     private PointCaptured pointCaptured;
     private Position position;
-    private int skillSlot;
-    private int teamId;
-    private long timestamp;
+    private Integer skillSlot;
+    private Integer teamId;
+    private Long timestamp;
     private TowerType towerType;
-    private int victimId;
+    private Integer victimId;
     private WardType wardType;
 
     public AscendedType getAscendedType() {
@@ -72,11 +72,11 @@ public class Event implements Serializable {
         this.buildingType = buildingType;
     }
 
-    public int getCreatorId() {
+    public Integer getCreatorId() {
         return creatorId;
     }
 
-    public void setCreatorId(int creatorId) {
+    public void setCreatorId(Integer creatorId) {
         this.creatorId = creatorId;
     }
 
@@ -88,35 +88,35 @@ public class Event implements Serializable {
         this.eventType = eventType;
     }
 
-    public int getItemAfter() {
+    public Integer getItemAfter() {
         return itemAfter;
     }
 
-    public void setItemAfter(int itemAfter) {
+    public void setItemAfter(Integer itemAfter) {
         this.itemAfter = itemAfter;
     }
 
-    public int getItemBefore() {
+    public Integer getItemBefore() {
         return itemBefore;
     }
 
-    public void setItemBefore(int itemBefore) {
+    public void setItemBefore(Integer itemBefore) {
         this.itemBefore = itemBefore;
     }
 
-    public int getItemId() {
+    public Integer getItemId() {
         return itemId;
     }
 
-    public void setItemId(int itemId) {
+    public void setItemId(Integer itemId) {
         this.itemId = itemId;
     }
 
-    public int getKillerId() {
+    public Integer getKillerId() {
         return killerId;
     }
 
-    public void setKillerId(int killerId) {
+    public void setKillerId(Integer killerId) {
         this.killerId = killerId;
     }
 
@@ -152,11 +152,11 @@ public class Event implements Serializable {
         this.monsterSubType = monsterSubType;
     }
 
-    public int getParticipantId() {
+    public Integer getParticipantId() {
         return participantId;
     }
 
-    public void setParticipantId(int participantId) {
+    public void setParticipantId(Integer participantId) {
         this.participantId = participantId;
     }
 
@@ -176,27 +176,27 @@ public class Event implements Serializable {
         this.position = position;
     }
 
-    public int getSkillSlot() {
+    public Integer getSkillSlot() {
         return skillSlot;
     }
 
-    public void setSkillSlot(int skillSlot) {
+    public void setSkillSlot(Integer skillSlot) {
         this.skillSlot = skillSlot;
     }
 
-    public int getTeamId() {
+    public Integer getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(int teamId) {
+    public void setTeamId(Integer teamId) {
         this.teamId = teamId;
     }
 
-    public long getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -208,11 +208,11 @@ public class Event implements Serializable {
         this.towerType = towerType;
     }
 
-    public int getVictimId() {
+    public Integer getVictimId() {
         return victimId;
     }
 
-    public void setVictimId(int victimId) {
+    public void setVictimId(Integer victimId) {
         this.victimId = victimId;
     }
 
@@ -233,27 +233,27 @@ public class Event implements Serializable {
             return false;
         }
         Event event = (Event) o;
-        return creatorId == event.creatorId &&
-                itemAfter == event.itemAfter &&
-                itemBefore == event.itemBefore &&
-                itemId == event.itemId &&
-                killerId == event.killerId &&
-                participantId == event.participantId &&
-                skillSlot == event.skillSlot &&
-                teamId == event.teamId &&
-                timestamp == event.timestamp &&
-                victimId == event.victimId &&
-                ascendedType == event.ascendedType &&
+        return ascendedType == event.ascendedType &&
                 Objects.equals(assistingParticipantIds, event.assistingParticipantIds) &&
                 buildingType == event.buildingType &&
+                Objects.equals(creatorId, event.creatorId) &&
                 eventType == event.eventType &&
+                Objects.equals(itemAfter, event.itemAfter) &&
+                Objects.equals(itemBefore, event.itemBefore) &&
+                Objects.equals(itemId, event.itemId) &&
+                Objects.equals(killerId, event.killerId) &&
                 laneType == event.laneType &&
                 levelUpType == event.levelUpType &&
                 monsterType == event.monsterType &&
                 Objects.equals(monsterSubType, event.monsterSubType) &&
+                Objects.equals(participantId, event.participantId) &&
                 pointCaptured == event.pointCaptured &&
                 Objects.equals(position, event.position) &&
+                Objects.equals(skillSlot, event.skillSlot) &&
+                Objects.equals(teamId, event.teamId) &&
+                Objects.equals(timestamp, event.timestamp) &&
                 towerType == event.towerType &&
+                Objects.equals(victimId, event.victimId) &&
                 wardType == event.wardType;
     }
 

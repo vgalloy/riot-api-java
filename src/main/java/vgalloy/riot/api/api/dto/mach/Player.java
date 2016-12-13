@@ -15,8 +15,8 @@ public class Player implements Serializable {
     private static final long serialVersionUID = 2769261555091917691L;
 
     private String matchHistoryUri;
-    private int profileIcon;
-    private long summonerId;
+    private Integer profileIcon;
+    private Long summonerId;
     private String summonerName;
 
     public String getMatchHistoryUri() {
@@ -27,19 +27,19 @@ public class Player implements Serializable {
         this.matchHistoryUri = matchHistoryUri;
     }
 
-    public int getProfileIcon() {
+    public Integer getProfileIcon() {
         return profileIcon;
     }
 
-    public void setProfileIcon(int profileIcon) {
+    public void setProfileIcon(Integer profileIcon) {
         this.profileIcon = profileIcon;
     }
 
-    public long getSummonerId() {
+    public Long getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(long summonerId) {
+    public void setSummonerId(Long summonerId) {
         this.summonerId = summonerId;
     }
 
@@ -56,13 +56,13 @@ public class Player implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Player)) {
             return false;
         }
         Player player = (Player) o;
-        return profileIcon == player.profileIcon &&
-                summonerId == player.summonerId &&
-                Objects.equals(matchHistoryUri, player.matchHistoryUri) &&
+        return Objects.equals(matchHistoryUri, player.matchHistoryUri) &&
+                Objects.equals(profileIcon, player.profileIcon) &&
+                Objects.equals(summonerId, player.summonerId) &&
                 Objects.equals(summonerName, player.summonerName);
     }
 

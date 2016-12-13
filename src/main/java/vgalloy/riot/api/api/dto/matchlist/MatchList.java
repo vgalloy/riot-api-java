@@ -15,16 +15,16 @@ public class MatchList implements Serializable {
 
     private static final long serialVersionUID = 907811536739611091L;
 
-    private int endIndex;
+    private Integer endIndex;
     private List<MatchReference> matches;
-    private int startIndex;
-    private int totalGames;
+    private Integer startIndex;
+    private Integer totalGames;
 
-    public int getEndIndex() {
+    public Integer getEndIndex() {
         return endIndex;
     }
 
-    public void setEndIndex(int endIndex) {
+    public void setEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
     }
 
@@ -36,19 +36,19 @@ public class MatchList implements Serializable {
         this.matches = matches;
     }
 
-    public int getStartIndex() {
+    public Integer getStartIndex() {
         return startIndex;
     }
 
-    public void setStartIndex(int startIndex) {
+    public void setStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
     }
 
-    public int getTotalGames() {
+    public Integer getTotalGames() {
         return totalGames;
     }
 
-    public void setTotalGames(int totalGames) {
+    public void setTotalGames(Integer totalGames) {
         this.totalGames = totalGames;
     }
 
@@ -57,14 +57,14 @@ public class MatchList implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MatchList)) {
             return false;
         }
         MatchList matchList = (MatchList) o;
-        return endIndex == matchList.endIndex &&
-                startIndex == matchList.startIndex &&
-                totalGames == matchList.totalGames &&
-                Objects.equals(matches, matchList.matches);
+        return Objects.equals(endIndex, matchList.endIndex) &&
+                Objects.equals(matches, matchList.matches) &&
+                Objects.equals(startIndex, matchList.startIndex) &&
+                Objects.equals(totalGames, matchList.totalGames);
     }
 
     @Override

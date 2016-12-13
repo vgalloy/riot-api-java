@@ -16,7 +16,7 @@ public class MapDetailsDto implements Serializable {
     private static final long serialVersionUID = 6137329570558590577L;
 
     private ImageDto image;
-    private long mapId;
+    private Long mapId;
     private String mapName;
     private List<Long> unpurchasableItemList;
 
@@ -28,11 +28,11 @@ public class MapDetailsDto implements Serializable {
         this.image = image;
     }
 
-    public long getMapId() {
+    public Long getMapId() {
         return mapId;
     }
 
-    public void setMapId(long mapId) {
+    public void setMapId(Long mapId) {
         this.mapId = mapId;
     }
 
@@ -57,12 +57,12 @@ public class MapDetailsDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MapDetailsDto)) {
             return false;
         }
         MapDetailsDto that = (MapDetailsDto) o;
-        return mapId == that.mapId &&
-                Objects.equals(image, that.image) &&
+        return Objects.equals(image, that.image) &&
+                Objects.equals(mapId, that.mapId) &&
                 Objects.equals(mapName, that.mapName) &&
                 Objects.equals(unpurchasableItemList, that.unpurchasableItemList);
     }

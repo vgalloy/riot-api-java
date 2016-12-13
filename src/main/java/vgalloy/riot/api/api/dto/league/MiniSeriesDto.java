@@ -14,16 +14,16 @@ public class MiniSeriesDto implements Serializable {
 
     private static final long serialVersionUID = 2009851907129552556L;
 
-    private int losses;
+    private Integer losses;
     private String progress;
-    private int target;
-    private int wins;
+    private Integer target;
+    private Integer wins;
 
-    public int getLosses() {
+    public Integer getLosses() {
         return losses;
     }
 
-    public void setLosses(int losses) {
+    public void setLosses(Integer losses) {
         this.losses = losses;
     }
 
@@ -35,19 +35,19 @@ public class MiniSeriesDto implements Serializable {
         this.progress = progress;
     }
 
-    public int getTarget() {
+    public Integer getTarget() {
         return target;
     }
 
-    public void setTarget(int target) {
+    public void setTarget(Integer target) {
         this.target = target;
     }
 
-    public int getWins() {
+    public Integer getWins() {
         return wins;
     }
 
-    public void setWins(int wins) {
+    public void setWins(Integer wins) {
         this.wins = wins;
     }
 
@@ -56,14 +56,14 @@ public class MiniSeriesDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MiniSeriesDto)) {
             return false;
         }
         MiniSeriesDto that = (MiniSeriesDto) o;
-        return losses == that.losses &&
-                target == that.target &&
-                wins == that.wins &&
-                Objects.equals(progress, that.progress);
+        return Objects.equals(losses, that.losses) &&
+                Objects.equals(progress, that.progress) &&
+                Objects.equals(target, that.target) &&
+                Objects.equals(wins, that.wins);
     }
 
     @Override

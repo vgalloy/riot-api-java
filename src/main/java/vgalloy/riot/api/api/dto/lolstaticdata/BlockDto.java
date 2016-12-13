@@ -16,7 +16,7 @@ public class BlockDto implements Serializable {
     private static final long serialVersionUID = -4377326597195325231L;
 
     private List<BlockItemDto> items;
-    private boolean recMath;
+    private Boolean recMath;
     private String type;
 
     public List<BlockItemDto> getItems() {
@@ -32,12 +32,12 @@ public class BlockDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof BlockDto)) {
             return false;
         }
         BlockDto blockDto = (BlockDto) o;
-        return recMath == blockDto.recMath &&
-                Objects.equals(items, blockDto.items) &&
+        return Objects.equals(items, blockDto.items) &&
+                Objects.equals(recMath, blockDto.recMath) &&
                 Objects.equals(type, blockDto.type);
     }
 

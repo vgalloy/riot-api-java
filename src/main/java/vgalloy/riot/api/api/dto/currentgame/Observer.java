@@ -29,7 +29,7 @@ public class Observer implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Observer)) {
             return false;
         }
         Observer observer = (Observer) o;

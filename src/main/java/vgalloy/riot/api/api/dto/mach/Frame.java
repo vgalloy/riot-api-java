@@ -18,7 +18,7 @@ public class Frame implements Serializable {
 
     private List<Event> events;
     private Map<String, ParticipantFrame> participantFrames;
-    private long timestamp;
+    private Long timestamp;
 
     public List<Event> getEvents() {
         return events;
@@ -36,11 +36,11 @@ public class Frame implements Serializable {
         this.participantFrames = participantFrames;
     }
 
-    public long getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -49,13 +49,13 @@ public class Frame implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Frame)) {
             return false;
         }
         Frame frame = (Frame) o;
-        return timestamp == frame.timestamp &&
-                Objects.equals(events, frame.events) &&
-                Objects.equals(participantFrames, frame.participantFrames);
+        return Objects.equals(events, frame.events) &&
+                Objects.equals(participantFrames, frame.participantFrames) &&
+                Objects.equals(timestamp, frame.timestamp);
     }
 
     @Override

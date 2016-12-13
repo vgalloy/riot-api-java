@@ -18,14 +18,14 @@ public class ImageDto implements Serializable {
     private String full;
     private String group;
     @JsonProperty("h")
-    private int imageH;
+    private Integer imageH;
     private String sprite;
     @JsonProperty("w")
-    private int imageW;
+    private Integer imageW;
     @JsonProperty("x")
-    private int imageX;
+    private Integer imageX;
     @JsonProperty("y")
-    private int imageY;
+    private Integer imageY;
 
     public String getFull() {
         return full;
@@ -43,11 +43,11 @@ public class ImageDto implements Serializable {
         this.group = group;
     }
 
-    public int getImageH() {
+    public Integer getImageH() {
         return imageH;
     }
 
-    public void setImageH(int imageH) {
+    public void setImageH(Integer imageH) {
         this.imageH = imageH;
     }
 
@@ -59,27 +59,27 @@ public class ImageDto implements Serializable {
         this.sprite = sprite;
     }
 
-    public int getImageW() {
+    public Integer getImageW() {
         return imageW;
     }
 
-    public void setImageW(int imageW) {
+    public void setImageW(Integer imageW) {
         this.imageW = imageW;
     }
 
-    public int getImageX() {
+    public Integer getImageX() {
         return imageX;
     }
 
-    public void setImageX(int imageX) {
+    public void setImageX(Integer imageX) {
         this.imageX = imageX;
     }
 
-    public int getImageY() {
+    public Integer getImageY() {
         return imageY;
     }
 
-    public void setImageY(int imageY) {
+    public void setImageY(Integer imageY) {
         this.imageY = imageY;
     }
 
@@ -88,17 +88,17 @@ public class ImageDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ImageDto)) {
             return false;
         }
         ImageDto imageDto = (ImageDto) o;
-        return imageH == imageDto.imageH &&
-                imageW == imageDto.imageW &&
-                imageX == imageDto.imageX &&
-                imageY == imageDto.imageY &&
-                Objects.equals(full, imageDto.full) &&
+        return Objects.equals(full, imageDto.full) &&
                 Objects.equals(group, imageDto.group) &&
-                Objects.equals(sprite, imageDto.sprite);
+                Objects.equals(imageH, imageDto.imageH) &&
+                Objects.equals(sprite, imageDto.sprite) &&
+                Objects.equals(imageW, imageDto.imageW) &&
+                Objects.equals(imageX, imageDto.imageX) &&
+                Objects.equals(imageY, imageDto.imageY);
     }
 
     @Override

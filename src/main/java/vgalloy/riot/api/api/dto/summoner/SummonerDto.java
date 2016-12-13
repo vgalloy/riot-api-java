@@ -14,17 +14,17 @@ public class SummonerDto implements Serializable {
 
     private static final long serialVersionUID = -2147808052642266730L;
 
-    private long id;
+    private Long id;
     private String name;
-    private int profileIconId;
-    private long revisionDate;
-    private long summonerLevel;
+    private Integer profileIconId;
+    private Long revisionDate;
+    private Long summonerLevel;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -36,27 +36,27 @@ public class SummonerDto implements Serializable {
         this.name = name;
     }
 
-    public int getProfileIconId() {
+    public Integer getProfileIconId() {
         return profileIconId;
     }
 
-    public void setProfileIconId(int profileIconId) {
+    public void setProfileIconId(Integer profileIconId) {
         this.profileIconId = profileIconId;
     }
 
-    public long getRevisionDate() {
+    public Long getRevisionDate() {
         return revisionDate;
     }
 
-    public void setRevisionDate(long revisionDate) {
+    public void setRevisionDate(Long revisionDate) {
         this.revisionDate = revisionDate;
     }
 
-    public long getSummonerLevel() {
+    public Long getSummonerLevel() {
         return summonerLevel;
     }
 
-    public void setSummonerLevel(long summonerLevel) {
+    public void setSummonerLevel(Long summonerLevel) {
         this.summonerLevel = summonerLevel;
     }
 
@@ -65,15 +65,15 @@ public class SummonerDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof SummonerDto)) {
             return false;
         }
         SummonerDto that = (SummonerDto) o;
-        return id == that.id &&
-                profileIconId == that.profileIconId &&
-                revisionDate == that.revisionDate &&
-                summonerLevel == that.summonerLevel &&
-                Objects.equals(name, that.name);
+        return Objects.equals(id, that.id) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(profileIconId, that.profileIconId) &&
+                Objects.equals(revisionDate, that.revisionDate) &&
+                Objects.equals(summonerLevel, that.summonerLevel);
     }
 
     @Override

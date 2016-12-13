@@ -14,22 +14,22 @@ public class BlockItemDto implements Serializable {
 
     private static final long serialVersionUID = -5412979537105122217L;
 
-    private int count;
-    private int id;
+    private Integer count;
+    private Integer id;
 
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(Integer count) {
         this.count = count;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,12 +38,12 @@ public class BlockItemDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof BlockItemDto)) {
             return false;
         }
         BlockItemDto that = (BlockItemDto) o;
-        return count == that.count &&
-                id == that.id;
+        return Objects.equals(count, that.count) &&
+                Objects.equals(id, that.id);
     }
 
     @Override

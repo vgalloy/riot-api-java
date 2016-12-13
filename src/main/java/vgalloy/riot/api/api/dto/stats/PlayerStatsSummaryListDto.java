@@ -16,7 +16,7 @@ public class PlayerStatsSummaryListDto implements Serializable {
     private static final long serialVersionUID = 5256410875181703878L;
 
     private List<PlayerStatsSummaryDto> playerStatSummaries;
-    private long summonerId;
+    private Long summonerId;
 
     public List<PlayerStatsSummaryDto> getPlayerStatSummaries() {
         return playerStatSummaries;
@@ -26,11 +26,11 @@ public class PlayerStatsSummaryListDto implements Serializable {
         this.playerStatSummaries = playerStatSummaries;
     }
 
-    public long getSummonerId() {
+    public Long getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(long summonerId) {
+    public void setSummonerId(Long summonerId) {
         this.summonerId = summonerId;
     }
 
@@ -39,12 +39,12 @@ public class PlayerStatsSummaryListDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof PlayerStatsSummaryListDto)) {
             return false;
         }
         PlayerStatsSummaryListDto that = (PlayerStatsSummaryListDto) o;
-        return summonerId == that.summonerId &&
-                Objects.equals(playerStatSummaries, that.playerStatSummaries);
+        return Objects.equals(playerStatSummaries, that.playerStatSummaries) &&
+                Objects.equals(summonerId, that.summonerId);
     }
 
     @Override

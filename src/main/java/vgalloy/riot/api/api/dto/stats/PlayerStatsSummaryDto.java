@@ -15,10 +15,10 @@ public class PlayerStatsSummaryDto implements Serializable {
     private static final long serialVersionUID = 7189157654789836157L;
 
     private AggregatedStatsDto aggregatedStats;
-    private int losses;
-    private long modifyDate;
+    private Integer losses;
+    private Long modifyDate;
     private String playerStatSummaryType;
-    private int wins;
+    private Integer wins;
 
     public AggregatedStatsDto getAggregatedStats() {
         return aggregatedStats;
@@ -28,19 +28,19 @@ public class PlayerStatsSummaryDto implements Serializable {
         this.aggregatedStats = aggregatedStats;
     }
 
-    public int getLosses() {
+    public Integer getLosses() {
         return losses;
     }
 
-    public void setLosses(int losses) {
+    public void setLosses(Integer losses) {
         this.losses = losses;
     }
 
-    public long getModifyDate() {
+    public Long getModifyDate() {
         return modifyDate;
     }
 
-    public void setModifyDate(long modifyDate) {
+    public void setModifyDate(Long modifyDate) {
         this.modifyDate = modifyDate;
     }
 
@@ -52,11 +52,11 @@ public class PlayerStatsSummaryDto implements Serializable {
         this.playerStatSummaryType = playerStatSummaryType;
     }
 
-    public int getWins() {
+    public Integer getWins() {
         return wins;
     }
 
-    public void setWins(int wins) {
+    public void setWins(Integer wins) {
         this.wins = wins;
     }
 
@@ -65,15 +65,15 @@ public class PlayerStatsSummaryDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof PlayerStatsSummaryDto)) {
             return false;
         }
         PlayerStatsSummaryDto that = (PlayerStatsSummaryDto) o;
-        return losses == that.losses &&
-                modifyDate == that.modifyDate &&
-                wins == that.wins &&
-                Objects.equals(aggregatedStats, that.aggregatedStats) &&
-                Objects.equals(playerStatSummaryType, that.playerStatSummaryType);
+        return Objects.equals(aggregatedStats, that.aggregatedStats) &&
+                Objects.equals(losses, that.losses) &&
+                Objects.equals(modifyDate, that.modifyDate) &&
+                Objects.equals(playerStatSummaryType, that.playerStatSummaryType) &&
+                Objects.equals(wins, that.wins);
     }
 
     @Override

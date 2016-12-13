@@ -14,62 +14,62 @@ public class ChampionMasteryDto implements Serializable {
 
     private static final long serialVersionUID = 5151106851729825952L;
 
-    private long championId;
-    private int championLevel;
-    private int championPoints;
-    private long championPointsSinceLastLevel;
-    private long championPointsUntilNextLevel;
-    private boolean chestGranted;
+    private Long championId;
+    private Integer championLevel;
+    private Integer championPoints;
+    private Long championPointsSinceLastLevel;
+    private Long championPointsUntilNextLevel;
+    private Boolean chestGranted;
     private String highestGrade;
-    private long lastPlayTime;
-    private long playerId;
-    private long tokensEarned;
+    private Long lastPlayTime;
+    private Long playerId;
+    private Long tokensEarned;
 
-    public long getChampionId() {
+    public Long getChampionId() {
         return championId;
     }
 
-    public void setChampionId(long championId) {
+    public void setChampionId(Long championId) {
         this.championId = championId;
     }
 
-    public int getChampionLevel() {
+    public Integer getChampionLevel() {
         return championLevel;
     }
 
-    public void setChampionLevel(int championLevel) {
+    public void setChampionLevel(Integer championLevel) {
         this.championLevel = championLevel;
     }
 
-    public int getChampionPoints() {
+    public Integer getChampionPoints() {
         return championPoints;
     }
 
-    public void setChampionPoints(int championPoints) {
+    public void setChampionPoints(Integer championPoints) {
         this.championPoints = championPoints;
     }
 
-    public long getChampionPointsSinceLastLevel() {
+    public Long getChampionPointsSinceLastLevel() {
         return championPointsSinceLastLevel;
     }
 
-    public void setChampionPointsSinceLastLevel(long championPointsSinceLastLevel) {
+    public void setChampionPointsSinceLastLevel(Long championPointsSinceLastLevel) {
         this.championPointsSinceLastLevel = championPointsSinceLastLevel;
     }
 
-    public long getChampionPointsUntilNextLevel() {
+    public Long getChampionPointsUntilNextLevel() {
         return championPointsUntilNextLevel;
     }
 
-    public void setChampionPointsUntilNextLevel(long championPointsUntilNextLevel) {
+    public void setChampionPointsUntilNextLevel(Long championPointsUntilNextLevel) {
         this.championPointsUntilNextLevel = championPointsUntilNextLevel;
     }
 
-    public boolean isChestGranted() {
+    public Boolean isChestGranted() {
         return chestGranted;
     }
 
-    public void setChestGranted(boolean chestGranted) {
+    public void setChestGranted(Boolean chestGranted) {
         this.chestGranted = chestGranted;
     }
 
@@ -81,27 +81,27 @@ public class ChampionMasteryDto implements Serializable {
         this.highestGrade = highestGrade;
     }
 
-    public long getLastPlayTime() {
+    public Long getLastPlayTime() {
         return lastPlayTime;
     }
 
-    public void setLastPlayTime(long lastPlayTime) {
+    public void setLastPlayTime(Long lastPlayTime) {
         this.lastPlayTime = lastPlayTime;
     }
 
-    public long getPlayerId() {
+    public Long getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(long playerId) {
+    public void setPlayerId(Long playerId) {
         this.playerId = playerId;
     }
 
-    public long getTokensEarned() {
+    public Long getTokensEarned() {
         return tokensEarned;
     }
 
-    public void setTokensEarned(long tokensEarned) {
+    public void setTokensEarned(Long tokensEarned) {
         this.tokensEarned = tokensEarned;
     }
 
@@ -110,20 +110,20 @@ public class ChampionMasteryDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ChampionMasteryDto)) {
             return false;
         }
         ChampionMasteryDto that = (ChampionMasteryDto) o;
-        return championId == that.championId &&
-                championLevel == that.championLevel &&
-                championPoints == that.championPoints &&
-                championPointsSinceLastLevel == that.championPointsSinceLastLevel &&
-                championPointsUntilNextLevel == that.championPointsUntilNextLevel &&
-                chestGranted == that.chestGranted &&
-                lastPlayTime == that.lastPlayTime &&
-                playerId == that.playerId &&
-                tokensEarned == that.tokensEarned &&
-                Objects.equals(highestGrade, that.highestGrade);
+        return Objects.equals(championId, that.championId) &&
+                Objects.equals(championLevel, that.championLevel) &&
+                Objects.equals(championPoints, that.championPoints) &&
+                Objects.equals(championPointsSinceLastLevel, that.championPointsSinceLastLevel) &&
+                Objects.equals(championPointsUntilNextLevel, that.championPointsUntilNextLevel) &&
+                Objects.equals(chestGranted, that.chestGranted) &&
+                Objects.equals(highestGrade, that.highestGrade) &&
+                Objects.equals(lastPlayTime, that.lastPlayTime) &&
+                Objects.equals(playerId, that.playerId) &&
+                Objects.equals(tokensEarned, that.tokensEarned);
     }
 
     @Override

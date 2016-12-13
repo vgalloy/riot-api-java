@@ -17,16 +17,16 @@ public class RuneDto implements Serializable {
     private static final long serialVersionUID = 3723979313975729794L;
 
     private String colloq;
-    private boolean consumeOnFull;
-    private boolean consumed;
-    private int depth;
+    private Boolean consumeOnFull;
+    private Boolean consumed;
+    private Integer depth;
     private String description;
     private List<String> from;
     private String group;
-    private boolean hideFromAll;
-    private int id;
+    private Boolean hideFromAll;
+    private Integer id;
     private ImageDto image;
-    private boolean inStore;
+    private Boolean inStore;
     private List<String> into;
     private Map<String, Boolean> maps;
     private String name;
@@ -34,8 +34,8 @@ public class RuneDto implements Serializable {
     private String requiredChampion;
     private MetaDataDto rune;
     private String sanitizedDescription;
-    private int specialRecipe;
-    private int stacks;
+    private Integer specialRecipe;
+    private Integer stacks;
     private BasicDataStatsDto stats;
     private List<String> tags;
 
@@ -47,27 +47,27 @@ public class RuneDto implements Serializable {
         this.colloq = colloq;
     }
 
-    public boolean isConsumeOnFull() {
+    public Boolean isConsumeOnFull() {
         return consumeOnFull;
     }
 
-    public void setConsumeOnFull(boolean consumeOnFull) {
+    public void setConsumeOnFull(Boolean consumeOnFull) {
         this.consumeOnFull = consumeOnFull;
     }
 
-    public boolean isConsumed() {
+    public Boolean isConsumed() {
         return consumed;
     }
 
-    public void setConsumed(boolean consumed) {
+    public void setConsumed(Boolean consumed) {
         this.consumed = consumed;
     }
 
-    public int getDepth() {
+    public Integer getDepth() {
         return depth;
     }
 
-    public void setDepth(int depth) {
+    public void setDepth(Integer depth) {
         this.depth = depth;
     }
 
@@ -95,19 +95,19 @@ public class RuneDto implements Serializable {
         this.group = group;
     }
 
-    public boolean isHideFromAll() {
+    public Boolean isHideFromAll() {
         return hideFromAll;
     }
 
-    public void setHideFromAll(boolean hideFromAll) {
+    public void setHideFromAll(Boolean hideFromAll) {
         this.hideFromAll = hideFromAll;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -119,11 +119,11 @@ public class RuneDto implements Serializable {
         this.image = image;
     }
 
-    public boolean isInStore() {
+    public Boolean isInStore() {
         return inStore;
     }
 
-    public void setInStore(boolean inStore) {
+    public void setInStore(Boolean inStore) {
         this.inStore = inStore;
     }
 
@@ -183,19 +183,19 @@ public class RuneDto implements Serializable {
         this.sanitizedDescription = sanitizedDescription;
     }
 
-    public int getSpecialRecipe() {
+    public Integer getSpecialRecipe() {
         return specialRecipe;
     }
 
-    public void setSpecialRecipe(int specialRecipe) {
+    public void setSpecialRecipe(Integer specialRecipe) {
         this.specialRecipe = specialRecipe;
     }
 
-    public int getStacks() {
+    public Integer getStacks() {
         return stacks;
     }
 
-    public void setStacks(int stacks) {
+    public void setStacks(Integer stacks) {
         this.stacks = stacks;
     }
 
@@ -220,23 +220,21 @@ public class RuneDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RuneDto)) {
             return false;
         }
         RuneDto runeDto = (RuneDto) o;
-        return consumeOnFull == runeDto.consumeOnFull &&
-                consumed == runeDto.consumed &&
-                depth == runeDto.depth &&
-                hideFromAll == runeDto.hideFromAll &&
-                id == runeDto.id &&
-                inStore == runeDto.inStore &&
-                specialRecipe == runeDto.specialRecipe &&
-                stacks == runeDto.stacks &&
-                Objects.equals(colloq, runeDto.colloq) &&
+        return Objects.equals(colloq, runeDto.colloq) &&
+                Objects.equals(consumeOnFull, runeDto.consumeOnFull) &&
+                Objects.equals(consumed, runeDto.consumed) &&
+                Objects.equals(depth, runeDto.depth) &&
                 Objects.equals(description, runeDto.description) &&
                 Objects.equals(from, runeDto.from) &&
                 Objects.equals(group, runeDto.group) &&
+                Objects.equals(hideFromAll, runeDto.hideFromAll) &&
+                Objects.equals(id, runeDto.id) &&
                 Objects.equals(image, runeDto.image) &&
+                Objects.equals(inStore, runeDto.inStore) &&
                 Objects.equals(into, runeDto.into) &&
                 Objects.equals(maps, runeDto.maps) &&
                 Objects.equals(name, runeDto.name) &&
@@ -244,6 +242,8 @@ public class RuneDto implements Serializable {
                 Objects.equals(requiredChampion, runeDto.requiredChampion) &&
                 Objects.equals(rune, runeDto.rune) &&
                 Objects.equals(sanitizedDescription, runeDto.sanitizedDescription) &&
+                Objects.equals(specialRecipe, runeDto.specialRecipe) &&
+                Objects.equals(stacks, runeDto.stacks) &&
                 Objects.equals(stats, runeDto.stats) &&
                 Objects.equals(tags, runeDto.tags);
     }

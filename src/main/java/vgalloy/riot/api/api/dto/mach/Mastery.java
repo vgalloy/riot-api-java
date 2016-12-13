@@ -14,22 +14,22 @@ public class Mastery implements Serializable {
 
     private static final long serialVersionUID = -7463303892950862952L;
 
-    private int masteryId;
-    private int rank;
+    private Integer masteryId;
+    private Integer rank;
 
-    public int getMasteryId() {
+    public Integer getMasteryId() {
         return masteryId;
     }
 
-    public void setMasteryId(int masteryId) {
+    public void setMasteryId(Integer masteryId) {
         this.masteryId = masteryId;
     }
 
-    public int getRank() {
+    public Integer getRank() {
         return rank;
     }
 
-    public void setRank(int rank) {
+    public void setRank(Integer rank) {
         this.rank = rank;
     }
 
@@ -38,12 +38,12 @@ public class Mastery implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Mastery)) {
             return false;
         }
         Mastery mastery = (Mastery) o;
-        return masteryId == mastery.masteryId &&
-                rank == mastery.rank;
+        return Objects.equals(masteryId, mastery.masteryId) &&
+                Objects.equals(rank, mastery.rank);
     }
 
     @Override

@@ -14,22 +14,22 @@ public class RuneSlotDto implements Serializable {
 
     private static final long serialVersionUID = -1044294048574538243L;
 
-    private int runeId;
-    private int runeSlotId;
+    private Integer runeId;
+    private Integer runeSlotId;
 
-    public int getRuneId() {
+    public Integer getRuneId() {
         return runeId;
     }
 
-    public void setRuneId(int runeId) {
+    public void setRuneId(Integer runeId) {
         this.runeId = runeId;
     }
 
-    public int getRuneSlotId() {
+    public Integer getRuneSlotId() {
         return runeSlotId;
     }
 
-    public void setRuneSlotId(int runeSlotId) {
+    public void setRuneSlotId(Integer runeSlotId) {
         this.runeSlotId = runeSlotId;
     }
 
@@ -38,12 +38,12 @@ public class RuneSlotDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RuneSlotDto)) {
             return false;
         }
         RuneSlotDto that = (RuneSlotDto) o;
-        return runeId == that.runeId &&
-                runeSlotId == that.runeSlotId;
+        return Objects.equals(runeId, that.runeId) &&
+                Objects.equals(runeSlotId, that.runeSlotId);
     }
 
     @Override

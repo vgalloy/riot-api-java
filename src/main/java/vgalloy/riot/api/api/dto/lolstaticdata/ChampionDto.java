@@ -18,7 +18,7 @@ public class ChampionDto implements Serializable {
     private List<String> allytips;
     private String blurb;
     private List<String> enemytips;
-    private int id;
+    private Integer id;
     private ImageDto image;
     private InfoDto info;
     private String key;
@@ -57,11 +57,11 @@ public class ChampionDto implements Serializable {
         this.enemytips = enemytips;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -174,14 +174,14 @@ public class ChampionDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ChampionDto)) {
             return false;
         }
         ChampionDto that = (ChampionDto) o;
-        return id == that.id &&
-                Objects.equals(allytips, that.allytips) &&
+        return Objects.equals(allytips, that.allytips) &&
                 Objects.equals(blurb, that.blurb) &&
                 Objects.equals(enemytips, that.enemytips) &&
+                Objects.equals(id, that.id) &&
                 Objects.equals(image, that.image) &&
                 Objects.equals(info, that.info) &&
                 Objects.equals(key, that.key) &&

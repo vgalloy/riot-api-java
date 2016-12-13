@@ -19,21 +19,21 @@ public class MatchReference implements Serializable {
 
     private static final long serialVersionUID = -2517076929253866341L;
 
-    private long champion;
+    private Long champion;
     private Lane lane;
-    private long matchId;
+    private Long matchId;
     private String platformId;
     private SimpleQueueType queue;
     private String region;
     private Role role;
     private Season season;
-    private long timestamp;
+    private Long timestamp;
 
-    public long getChampion() {
+    public Long getChampion() {
         return champion;
     }
 
-    public void setChampion(long champion) {
+    public void setChampion(Long champion) {
         this.champion = champion;
     }
 
@@ -45,11 +45,11 @@ public class MatchReference implements Serializable {
         this.lane = lane;
     }
 
-    public long getMatchId() {
+    public Long getMatchId() {
         return matchId;
     }
 
-    public void setMatchId(long matchId) {
+    public void setMatchId(Long matchId) {
         this.matchId = matchId;
     }
 
@@ -93,11 +93,11 @@ public class MatchReference implements Serializable {
         this.season = season;
     }
 
-    public long getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -106,19 +106,19 @@ public class MatchReference implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MatchReference)) {
             return false;
         }
         MatchReference that = (MatchReference) o;
-        return champion == that.champion &&
-                matchId == that.matchId &&
-                timestamp == that.timestamp &&
+        return Objects.equals(champion, that.champion) &&
                 lane == that.lane &&
+                Objects.equals(matchId, that.matchId) &&
                 Objects.equals(platformId, that.platformId) &&
                 queue == that.queue &&
                 Objects.equals(region, that.region) &&
                 role == that.role &&
-                season == that.season;
+                season == that.season &&
+                Objects.equals(timestamp, that.timestamp);
     }
 
     @Override

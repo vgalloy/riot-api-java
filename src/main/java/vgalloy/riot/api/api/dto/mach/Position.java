@@ -15,23 +15,23 @@ public class Position implements Serializable {
 
     private static final long serialVersionUID = 1430689349348718279L;
     @JsonProperty("x")
-    private int positionX;
+    private Integer positionX;
     @JsonProperty("y")
-    private int positionY;
+    private Integer positionY;
 
-    public int getPositionX() {
+    public Integer getPositionX() {
         return positionX;
     }
 
-    public void setPositionX(int positionX) {
+    public void setPositionX(Integer positionX) {
         this.positionX = positionX;
     }
 
-    public int getPositionY() {
+    public Integer getPositionY() {
         return positionY;
     }
 
-    public void setPositionY(int positionY) {
+    public void setPositionY(Integer positionY) {
         this.positionY = positionY;
     }
 
@@ -40,12 +40,12 @@ public class Position implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Position)) {
             return false;
         }
         Position position = (Position) o;
-        return positionX == position.positionX &&
-                positionY == position.positionY;
+        return Objects.equals(positionX, position.positionX) &&
+                Objects.equals(positionY, position.positionY);
     }
 
     @Override

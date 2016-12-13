@@ -14,14 +14,14 @@ public class MasteryTreeListDto implements Serializable {
 
     private static final long serialVersionUID = -8103610009865545855L;
 
-    private int masteryId;
+    private Integer masteryId;
     private String prereq;
 
-    public int getMasteryId() {
+    public Integer getMasteryId() {
         return masteryId;
     }
 
-    public void setMasteryId(int masteryId) {
+    public void setMasteryId(Integer masteryId) {
         this.masteryId = masteryId;
     }
 
@@ -38,11 +38,11 @@ public class MasteryTreeListDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MasteryTreeListDto)) {
             return false;
         }
         MasteryTreeListDto that = (MasteryTreeListDto) o;
-        return masteryId == that.masteryId &&
+        return Objects.equals(masteryId, that.masteryId) &&
                 Objects.equals(prereq, that.prereq);
     }
 

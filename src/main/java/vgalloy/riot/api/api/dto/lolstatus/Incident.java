@@ -16,17 +16,17 @@ public class Incident implements Serializable {
 
     private static final long serialVersionUID = -5257840714083484515L;
 
-    private boolean active;
+    private Boolean active;
     @JsonProperty("created_at")
     private String createdAt;
-    private long id;
+    private Long id;
     private List<Message> updates;
 
-    public boolean isActive() {
+    public Boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Boolean active) {
         this.active = active;
     }
 
@@ -38,11 +38,11 @@ public class Incident implements Serializable {
         this.createdAt = createdAt;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -59,13 +59,13 @@ public class Incident implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Incident)) {
             return false;
         }
         Incident incident = (Incident) o;
-        return active == incident.active &&
-                id == incident.id &&
+        return Objects.equals(active, incident.active) &&
                 Objects.equals(createdAt, incident.createdAt) &&
+                Objects.equals(id, incident.id) &&
                 Objects.equals(updates, incident.updates);
     }
 

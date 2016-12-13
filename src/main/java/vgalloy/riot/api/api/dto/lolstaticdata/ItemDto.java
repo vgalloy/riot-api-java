@@ -17,18 +17,18 @@ public class ItemDto implements Serializable {
     private static final long serialVersionUID = -3253163759273195276L;
 
     private String colloq;
-    private boolean consumeOnFull;
-    private boolean consumed;
-    private int depth;
+    private Boolean consumeOnFull;
+    private Boolean consumed;
+    private Integer depth;
     private String description;
     private Map<String, String> effect;
     private List<String> from;
     private GoldDto gold;
     private String group;
-    private boolean hideFromAll;
-    private int id;
+    private Boolean hideFromAll;
+    private Integer id;
     private ImageDto image;
-    private boolean inStore;
+    private Boolean inStore;
     private List<String> into;
     private Map<String, Boolean> maps;
     private String name;
@@ -36,8 +36,8 @@ public class ItemDto implements Serializable {
     private String requiredChampion;
     private MetaDataDto rune;
     private String sanitizedDescription;
-    private int specialRecipe;
-    private int stacks;
+    private Integer specialRecipe;
+    private Integer stacks;
     private BasicDataStatsDto stats;
     private List<String> tags;
 
@@ -49,27 +49,27 @@ public class ItemDto implements Serializable {
         this.colloq = colloq;
     }
 
-    public boolean isConsumeOnFull() {
+    public Boolean isConsumeOnFull() {
         return consumeOnFull;
     }
 
-    public void setConsumeOnFull(boolean consumeOnFull) {
+    public void setConsumeOnFull(Boolean consumeOnFull) {
         this.consumeOnFull = consumeOnFull;
     }
 
-    public boolean isConsumed() {
+    public Boolean isConsumed() {
         return consumed;
     }
 
-    public void setConsumed(boolean consumed) {
+    public void setConsumed(Boolean consumed) {
         this.consumed = consumed;
     }
 
-    public int getDepth() {
+    public Integer getDepth() {
         return depth;
     }
 
-    public void setDepth(int depth) {
+    public void setDepth(Integer depth) {
         this.depth = depth;
     }
 
@@ -113,19 +113,19 @@ public class ItemDto implements Serializable {
         this.group = group;
     }
 
-    public boolean isHideFromAll() {
+    public Boolean isHideFromAll() {
         return hideFromAll;
     }
 
-    public void setHideFromAll(boolean hideFromAll) {
+    public void setHideFromAll(Boolean hideFromAll) {
         this.hideFromAll = hideFromAll;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -137,11 +137,11 @@ public class ItemDto implements Serializable {
         this.image = image;
     }
 
-    public boolean isInStore() {
+    public Boolean isInStore() {
         return inStore;
     }
 
-    public void setInStore(boolean inStore) {
+    public void setInStore(Boolean inStore) {
         this.inStore = inStore;
     }
 
@@ -201,19 +201,19 @@ public class ItemDto implements Serializable {
         this.sanitizedDescription = sanitizedDescription;
     }
 
-    public int getSpecialRecipe() {
+    public Integer getSpecialRecipe() {
         return specialRecipe;
     }
 
-    public void setSpecialRecipe(int specialRecipe) {
+    public void setSpecialRecipe(Integer specialRecipe) {
         this.specialRecipe = specialRecipe;
     }
 
-    public int getStacks() {
+    public Integer getStacks() {
         return stacks;
     }
 
-    public void setStacks(int stacks) {
+    public void setStacks(Integer stacks) {
         this.stacks = stacks;
     }
 
@@ -238,25 +238,23 @@ public class ItemDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ItemDto)) {
             return false;
         }
         ItemDto itemDto = (ItemDto) o;
-        return consumeOnFull == itemDto.consumeOnFull &&
-                consumed == itemDto.consumed &&
-                depth == itemDto.depth &&
-                hideFromAll == itemDto.hideFromAll &&
-                id == itemDto.id &&
-                inStore == itemDto.inStore &&
-                specialRecipe == itemDto.specialRecipe &&
-                stacks == itemDto.stacks &&
-                Objects.equals(colloq, itemDto.colloq) &&
+        return Objects.equals(colloq, itemDto.colloq) &&
+                Objects.equals(consumeOnFull, itemDto.consumeOnFull) &&
+                Objects.equals(consumed, itemDto.consumed) &&
+                Objects.equals(depth, itemDto.depth) &&
                 Objects.equals(description, itemDto.description) &&
                 Objects.equals(effect, itemDto.effect) &&
                 Objects.equals(from, itemDto.from) &&
                 Objects.equals(gold, itemDto.gold) &&
                 Objects.equals(group, itemDto.group) &&
+                Objects.equals(hideFromAll, itemDto.hideFromAll) &&
+                Objects.equals(id, itemDto.id) &&
                 Objects.equals(image, itemDto.image) &&
+                Objects.equals(inStore, itemDto.inStore) &&
                 Objects.equals(into, itemDto.into) &&
                 Objects.equals(maps, itemDto.maps) &&
                 Objects.equals(name, itemDto.name) &&
@@ -264,6 +262,8 @@ public class ItemDto implements Serializable {
                 Objects.equals(requiredChampion, itemDto.requiredChampion) &&
                 Objects.equals(rune, itemDto.rune) &&
                 Objects.equals(sanitizedDescription, itemDto.sanitizedDescription) &&
+                Objects.equals(specialRecipe, itemDto.specialRecipe) &&
+                Objects.equals(stacks, itemDto.stacks) &&
                 Objects.equals(stats, itemDto.stats) &&
                 Objects.equals(tags, itemDto.tags);
     }

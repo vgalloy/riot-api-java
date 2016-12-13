@@ -16,7 +16,7 @@ public class RosterDto implements Serializable {
     private static final long serialVersionUID = 2222431218414997237L;
 
     private List<TeamMemberInfoDto> memberList;
-    private long ownerId;
+    private Long ownerId;
 
     public List<TeamMemberInfoDto> getMemberList() {
         return memberList;
@@ -26,11 +26,11 @@ public class RosterDto implements Serializable {
         this.memberList = memberList;
     }
 
-    public long getOwnerId() {
+    public Long getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(long ownerId) {
+    public void setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
     }
 
@@ -39,12 +39,12 @@ public class RosterDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RosterDto)) {
             return false;
         }
         RosterDto rosterDto = (RosterDto) o;
-        return ownerId == rosterDto.ownerId &&
-                Objects.equals(memberList, rosterDto.memberList);
+        return Objects.equals(memberList, rosterDto.memberList) &&
+                Objects.equals(ownerId, rosterDto.ownerId);
     }
 
     @Override

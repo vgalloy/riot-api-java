@@ -17,22 +17,22 @@ public class Participant implements Serializable {
 
     private static final long serialVersionUID = -1799062856872707886L;
 
-    private int championId;
+    private Integer championId;
     private Tier highestAchievedSeasonTier;
     private List<Mastery> masteries;
-    private int participantId;
+    private Integer participantId;
     private List<Rune> runes;
-    private int spell1Id;
-    private int spell2Id;
+    private Integer spell1Id;
+    private Integer spell2Id;
     private ParticipantStats stats;
-    private int teamId;
+    private Integer teamId;
     private ParticipantTimeline timeline;
 
-    public int getChampionId() {
+    public Integer getChampionId() {
         return championId;
     }
 
-    public void setChampionId(int championId) {
+    public void setChampionId(Integer championId) {
         this.championId = championId;
     }
 
@@ -52,11 +52,11 @@ public class Participant implements Serializable {
         this.masteries = masteries;
     }
 
-    public int getParticipantId() {
+    public Integer getParticipantId() {
         return participantId;
     }
 
-    public void setParticipantId(int participantId) {
+    public void setParticipantId(Integer participantId) {
         this.participantId = participantId;
     }
 
@@ -68,19 +68,19 @@ public class Participant implements Serializable {
         this.runes = runes;
     }
 
-    public int getSpell1Id() {
+    public Integer getSpell1Id() {
         return spell1Id;
     }
 
-    public void setSpell1Id(int spell1Id) {
+    public void setSpell1Id(Integer spell1Id) {
         this.spell1Id = spell1Id;
     }
 
-    public int getSpell2Id() {
+    public Integer getSpell2Id() {
         return spell2Id;
     }
 
-    public void setSpell2Id(int spell2Id) {
+    public void setSpell2Id(Integer spell2Id) {
         this.spell2Id = spell2Id;
     }
 
@@ -92,11 +92,11 @@ public class Participant implements Serializable {
         this.stats = stats;
     }
 
-    public int getTeamId() {
+    public Integer getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(int teamId) {
+    public void setTeamId(Integer teamId) {
         this.teamId = teamId;
     }
 
@@ -113,19 +113,19 @@ public class Participant implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof Participant)) {
             return false;
         }
         Participant that = (Participant) o;
-        return championId == that.championId &&
-                participantId == that.participantId &&
-                spell1Id == that.spell1Id &&
-                spell2Id == that.spell2Id &&
-                teamId == that.teamId &&
-                Objects.equals(highestAchievedSeasonTier, that.highestAchievedSeasonTier) &&
+        return Objects.equals(championId, that.championId) &&
+                highestAchievedSeasonTier == that.highestAchievedSeasonTier &&
                 Objects.equals(masteries, that.masteries) &&
+                Objects.equals(participantId, that.participantId) &&
                 Objects.equals(runes, that.runes) &&
+                Objects.equals(spell1Id, that.spell1Id) &&
+                Objects.equals(spell2Id, that.spell2Id) &&
                 Objects.equals(stats, that.stats) &&
+                Objects.equals(teamId, that.teamId) &&
                 Objects.equals(timeline, that.timeline);
     }
 

@@ -21,10 +21,10 @@ public class MatchDetail implements Serializable {
 
     private static final long serialVersionUID = 6184418107833110266L;
 
-    private int mapId;
-    private long matchCreation;
-    private long matchDuration;
-    private long matchId;
+    private Integer mapId;
+    private Long matchCreation;
+    private Long matchDuration;
+    private Long matchId;
     private GameMode matchMode;
     private GameType matchType;
     private String matchVersion;
@@ -37,35 +37,35 @@ public class MatchDetail implements Serializable {
     private List<Team> teams;
     private Timeline timeline;
 
-    public int getMapId() {
+    public Integer getMapId() {
         return mapId;
     }
 
-    public void setMapId(int mapId) {
+    public void setMapId(Integer mapId) {
         this.mapId = mapId;
     }
 
-    public long getMatchCreation() {
+    public Long getMatchCreation() {
         return matchCreation;
     }
 
-    public void setMatchCreation(long matchCreation) {
+    public void setMatchCreation(Long matchCreation) {
         this.matchCreation = matchCreation;
     }
 
-    public long getMatchDuration() {
+    public Long getMatchDuration() {
         return matchDuration;
     }
 
-    public void setMatchDuration(long matchDuration) {
+    public void setMatchDuration(Long matchDuration) {
         this.matchDuration = matchDuration;
     }
 
-    public long getMatchId() {
+    public Long getMatchId() {
         return matchId;
     }
 
-    public void setMatchId(long matchId) {
+    public void setMatchId(Long matchId) {
         this.matchId = matchId;
     }
 
@@ -162,14 +162,14 @@ public class MatchDetail implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MatchDetail)) {
             return false;
         }
         MatchDetail that = (MatchDetail) o;
-        return mapId == that.mapId &&
-                matchCreation == that.matchCreation &&
-                matchDuration == that.matchDuration &&
-                matchId == that.matchId &&
+        return Objects.equals(mapId, that.mapId) &&
+                Objects.equals(matchCreation, that.matchCreation) &&
+                Objects.equals(matchDuration, that.matchDuration) &&
+                Objects.equals(matchId, that.matchId) &&
                 matchMode == that.matchMode &&
                 matchType == that.matchType &&
                 Objects.equals(matchVersion, that.matchVersion) &&
@@ -177,7 +177,7 @@ public class MatchDetail implements Serializable {
                 Objects.equals(participants, that.participants) &&
                 Objects.equals(platformId, that.platformId) &&
                 queueType == that.queueType &&
-                Objects.equals(region, that.region) &&
+                region == that.region &&
                 season == that.season &&
                 Objects.equals(teams, that.teams) &&
                 Objects.equals(timeline, that.timeline);

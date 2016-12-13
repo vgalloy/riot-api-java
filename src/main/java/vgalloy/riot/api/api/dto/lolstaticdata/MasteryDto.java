@@ -17,12 +17,12 @@ public class MasteryDto implements Serializable {
     private static final long serialVersionUID = 5897727835074046665L;
 
     private List<String> description;
-    private int id;
+    private Integer id;
     private ImageDto image;
     private MasteryTree masteryTree;
     private String name;
     private String prereq;
-    private int ranks;
+    private Integer ranks;
     private List<String> sanitizedDescription;
 
     public List<String> getDescription() {
@@ -33,11 +33,11 @@ public class MasteryDto implements Serializable {
         this.description = description;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -73,11 +73,11 @@ public class MasteryDto implements Serializable {
         this.prereq = prereq;
     }
 
-    public int getRanks() {
+    public Integer getRanks() {
         return ranks;
     }
 
-    public void setRanks(int ranks) {
+    public void setRanks(Integer ranks) {
         this.ranks = ranks;
     }
 
@@ -94,17 +94,17 @@ public class MasteryDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MasteryDto)) {
             return false;
         }
         MasteryDto that = (MasteryDto) o;
-        return id == that.id &&
-                ranks == that.ranks &&
-                Objects.equals(description, that.description) &&
+        return Objects.equals(description, that.description) &&
+                Objects.equals(id, that.id) &&
                 Objects.equals(image, that.image) &&
                 masteryTree == that.masteryTree &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(prereq, that.prereq) &&
+                Objects.equals(ranks, that.ranks) &&
                 Objects.equals(sanitizedDescription, that.sanitizedDescription);
     }
 

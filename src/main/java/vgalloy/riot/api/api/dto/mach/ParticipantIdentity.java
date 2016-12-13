@@ -14,14 +14,14 @@ public class ParticipantIdentity implements Serializable {
 
     private static final long serialVersionUID = 6506843361223907817L;
 
-    private int participantId;
+    private Integer participantId;
     private Player player;
 
-    public int getParticipantId() {
+    public Integer getParticipantId() {
         return participantId;
     }
 
-    public void setParticipantId(int participantId) {
+    public void setParticipantId(Integer participantId) {
         this.participantId = participantId;
     }
 
@@ -38,11 +38,11 @@ public class ParticipantIdentity implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ParticipantIdentity)) {
             return false;
         }
         ParticipantIdentity that = (ParticipantIdentity) o;
-        return participantId == that.participantId &&
+        return Objects.equals(participantId, that.participantId) &&
                 Objects.equals(player, that.player);
     }
 

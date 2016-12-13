@@ -14,40 +14,40 @@ public class GoldDto implements Serializable {
 
     private static final long serialVersionUID = -3635199494799414487L;
 
-    private int base;
-    private boolean purchasable;
-    private int sell;
-    private int total;
+    private Integer base;
+    private Boolean purchasable;
+    private Integer sell;
+    private Integer total;
 
-    public int getBase() {
+    public Integer getBase() {
         return base;
     }
 
-    public void setBase(int base) {
+    public void setBase(Integer base) {
         this.base = base;
     }
 
-    public boolean isPurchasable() {
+    public Boolean isPurchasable() {
         return purchasable;
     }
 
-    public void setPurchasable(boolean purchasable) {
+    public void setPurchasable(Boolean purchasable) {
         this.purchasable = purchasable;
     }
 
-    public int getSell() {
+    public Integer getSell() {
         return sell;
     }
 
-    public void setSell(int sell) {
+    public void setSell(Integer sell) {
         this.sell = sell;
     }
 
-    public int getTotal() {
+    public Integer getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(Integer total) {
         this.total = total;
     }
 
@@ -56,14 +56,14 @@ public class GoldDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof GoldDto)) {
             return false;
         }
         GoldDto goldDto = (GoldDto) o;
-        return base == goldDto.base &&
-                purchasable == goldDto.purchasable &&
-                sell == goldDto.sell &&
-                total == goldDto.total;
+        return Objects.equals(base, goldDto.base) &&
+                Objects.equals(purchasable, goldDto.purchasable) &&
+                Objects.equals(sell, goldDto.sell) &&
+                Objects.equals(total, goldDto.total);
     }
 
     @Override

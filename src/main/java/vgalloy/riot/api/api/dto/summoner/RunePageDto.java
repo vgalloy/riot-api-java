@@ -15,24 +15,24 @@ public class RunePageDto implements Serializable {
 
     private static final long serialVersionUID = -3837915945185089573L;
 
-    private boolean current;
-    private long id;
+    private Boolean current;
+    private Long id;
     private String name;
     private Set<RuneSlotDto> slots;
 
-    public boolean isCurrent() {
+    public Boolean isCurrent() {
         return current;
     }
 
-    public void setCurrent(boolean current) {
+    public void setCurrent(Boolean current) {
         this.current = current;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -57,12 +57,12 @@ public class RunePageDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RunePageDto)) {
             return false;
         }
         RunePageDto that = (RunePageDto) o;
-        return current == that.current &&
-                id == that.id &&
+        return Objects.equals(current, that.current) &&
+                Objects.equals(id, that.id) &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(slots, that.slots);
     }

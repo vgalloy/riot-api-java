@@ -15,14 +15,14 @@ public class FeaturedGames implements Serializable {
 
     private static final long serialVersionUID = 6320892582685715424L;
 
-    private long clientRefreshInterval;
+    private Long clientRefreshInterval;
     private List<FeaturedGameInfo> gameList;
 
-    public long getClientRefreshInterval() {
+    public Long getClientRefreshInterval() {
         return clientRefreshInterval;
     }
 
-    public void setClientRefreshInterval(long clientRefreshInterval) {
+    public void setClientRefreshInterval(Long clientRefreshInterval) {
         this.clientRefreshInterval = clientRefreshInterval;
     }
 
@@ -39,11 +39,11 @@ public class FeaturedGames implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof FeaturedGames)) {
             return false;
         }
         FeaturedGames that = (FeaturedGames) o;
-        return clientRefreshInterval == that.clientRefreshInterval &&
+        return Objects.equals(clientRefreshInterval, that.clientRefreshInterval) &&
                 Objects.equals(gameList, that.gameList);
     }
 

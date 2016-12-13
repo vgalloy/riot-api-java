@@ -30,7 +30,7 @@ public class ChampionListDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ChampionListDto)) {
             return false;
         }
         ChampionListDto that = (ChampionListDto) o;

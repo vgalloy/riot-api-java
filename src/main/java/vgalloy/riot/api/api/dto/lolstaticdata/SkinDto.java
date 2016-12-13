@@ -14,15 +14,15 @@ public class SkinDto implements Serializable {
 
     private static final long serialVersionUID = -351060026162787759L;
 
-    private int id;
+    private Integer id;
     private String name;
-    private int num;
+    private Integer num;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -34,11 +34,11 @@ public class SkinDto implements Serializable {
         this.name = name;
     }
 
-    public int getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 
@@ -47,13 +47,13 @@ public class SkinDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof SkinDto)) {
             return false;
         }
         SkinDto skinDto = (SkinDto) o;
-        return id == skinDto.id &&
-                num == skinDto.num &&
-                Objects.equals(name, skinDto.name);
+        return Objects.equals(id, skinDto.id) &&
+                Objects.equals(name, skinDto.name) &&
+                Objects.equals(num, skinDto.num);
     }
 
     @Override

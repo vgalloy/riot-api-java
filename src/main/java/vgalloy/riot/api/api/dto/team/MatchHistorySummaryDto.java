@@ -14,47 +14,47 @@ public class MatchHistorySummaryDto implements Serializable {
 
     private static final long serialVersionUID = -8899875706150618435L;
 
-    private int assists;
-    private long date;
-    private int deaths;
-    private long gameId;
+    private Integer assists;
+    private Long date;
+    private Integer deaths;
+    private Long gameId;
     private String gameMode;
-    private boolean invalid;
-    private int kills;
-    private int mapId;
-    private int opposingTeamKills;
+    private Boolean invalid;
+    private Integer kills;
+    private Integer mapId;
+    private Integer opposingTeamKills;
     private String opposingTeamName;
-    private boolean win;
+    private Boolean win;
 
-    public int getAssists() {
+    public Integer getAssists() {
         return assists;
     }
 
-    public void setAssists(int assists) {
+    public void setAssists(Integer assists) {
         this.assists = assists;
     }
 
-    public long getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(long date) {
+    public void setDate(Long date) {
         this.date = date;
     }
 
-    public int getDeaths() {
+    public Integer getDeaths() {
         return deaths;
     }
 
-    public void setDeaths(int deaths) {
+    public void setDeaths(Integer deaths) {
         this.deaths = deaths;
     }
 
-    public long getGameId() {
+    public Long getGameId() {
         return gameId;
     }
 
-    public void setGameId(long gameId) {
+    public void setGameId(Long gameId) {
         this.gameId = gameId;
     }
 
@@ -66,35 +66,35 @@ public class MatchHistorySummaryDto implements Serializable {
         this.gameMode = gameMode;
     }
 
-    public boolean isInvalid() {
+    public Boolean isInvalid() {
         return invalid;
     }
 
-    public void setInvalid(boolean invalid) {
+    public void setInvalid(Boolean invalid) {
         this.invalid = invalid;
     }
 
-    public int getKills() {
+    public Integer getKills() {
         return kills;
     }
 
-    public void setKills(int kills) {
+    public void setKills(Integer kills) {
         this.kills = kills;
     }
 
-    public int getMapId() {
+    public Integer getMapId() {
         return mapId;
     }
 
-    public void setMapId(int mapId) {
+    public void setMapId(Integer mapId) {
         this.mapId = mapId;
     }
 
-    public int getOpposingTeamKills() {
+    public Integer getOpposingTeamKills() {
         return opposingTeamKills;
     }
 
-    public void setOpposingTeamKills(int opposingTeamKills) {
+    public void setOpposingTeamKills(Integer opposingTeamKills) {
         this.opposingTeamKills = opposingTeamKills;
     }
 
@@ -106,11 +106,11 @@ public class MatchHistorySummaryDto implements Serializable {
         this.opposingTeamName = opposingTeamName;
     }
 
-    public boolean isWin() {
+    public Boolean isWin() {
         return win;
     }
 
-    public void setWin(boolean win) {
+    public void setWin(Boolean win) {
         this.win = win;
     }
 
@@ -119,21 +119,21 @@ public class MatchHistorySummaryDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MatchHistorySummaryDto)) {
             return false;
         }
         MatchHistorySummaryDto that = (MatchHistorySummaryDto) o;
-        return assists == that.assists &&
-                date == that.date &&
-                deaths == that.deaths &&
-                gameId == that.gameId &&
-                invalid == that.invalid &&
-                kills == that.kills &&
-                mapId == that.mapId &&
-                opposingTeamKills == that.opposingTeamKills &&
-                win == that.win &&
+        return Objects.equals(assists, that.assists) &&
+                Objects.equals(date, that.date) &&
+                Objects.equals(deaths, that.deaths) &&
+                Objects.equals(gameId, that.gameId) &&
                 Objects.equals(gameMode, that.gameMode) &&
-                Objects.equals(opposingTeamName, that.opposingTeamName);
+                Objects.equals(invalid, that.invalid) &&
+                Objects.equals(kills, that.kills) &&
+                Objects.equals(mapId, that.mapId) &&
+                Objects.equals(opposingTeamKills, that.opposingTeamKills) &&
+                Objects.equals(opposingTeamName, that.opposingTeamName) &&
+                Objects.equals(win, that.win);
     }
 
     @Override

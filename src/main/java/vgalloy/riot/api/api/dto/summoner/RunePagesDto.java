@@ -16,7 +16,7 @@ public class RunePagesDto implements Serializable {
     private static final long serialVersionUID = 2722680848747544996L;
 
     private Set<RunePageDto> pages;
-    private long summonerId;
+    private Long summonerId;
 
     public Set<RunePageDto> getPages() {
         return pages;
@@ -26,11 +26,11 @@ public class RunePagesDto implements Serializable {
         this.pages = pages;
     }
 
-    public long getSummonerId() {
+    public Long getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(long summonerId) {
+    public void setSummonerId(Long summonerId) {
         this.summonerId = summonerId;
     }
 
@@ -39,12 +39,12 @@ public class RunePagesDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RunePagesDto)) {
             return false;
         }
         RunePagesDto that = (RunePagesDto) o;
-        return summonerId == that.summonerId &&
-                Objects.equals(pages, that.pages);
+        return Objects.equals(pages, that.pages) &&
+                Objects.equals(summonerId, that.summonerId);
     }
 
     @Override

@@ -20,13 +20,13 @@ public class FeaturedGameInfo implements Serializable {
     private static final long serialVersionUID = 4807872817019555988L;
 
     private List<BannedChampion> bannedChampions;
-    private long gameId;
-    private long gameLength;
+    private Long gameId;
+    private Long gameLength;
     private GameMode gameMode;
-    private long gameQueueConfigId;
-    private long gameStartTime;
+    private Long gameQueueConfigId;
+    private Long gameStartTime;
     private GameType gameType;
-    private long mapId;
+    private Long mapId;
     private Observer observers;
     private List<Participant> participants;
     private PlatformId platformId;
@@ -39,19 +39,19 @@ public class FeaturedGameInfo implements Serializable {
         this.bannedChampions = bannedChampions;
     }
 
-    public long getGameId() {
+    public Long getGameId() {
         return gameId;
     }
 
-    public void setGameId(long gameId) {
+    public void setGameId(Long gameId) {
         this.gameId = gameId;
     }
 
-    public long getGameLength() {
+    public Long getGameLength() {
         return gameLength;
     }
 
-    public void setGameLength(long gameLength) {
+    public void setGameLength(Long gameLength) {
         this.gameLength = gameLength;
     }
 
@@ -63,19 +63,19 @@ public class FeaturedGameInfo implements Serializable {
         this.gameMode = gameMode;
     }
 
-    public long getGameQueueConfigId() {
+    public Long getGameQueueConfigId() {
         return gameQueueConfigId;
     }
 
-    public void setGameQueueConfigId(long gameQueueConfigId) {
+    public void setGameQueueConfigId(Long gameQueueConfigId) {
         this.gameQueueConfigId = gameQueueConfigId;
     }
 
-    public long getGameStartTime() {
+    public Long getGameStartTime() {
         return gameStartTime;
     }
 
-    public void setGameStartTime(long gameStartTime) {
+    public void setGameStartTime(Long gameStartTime) {
         this.gameStartTime = gameStartTime;
     }
 
@@ -87,11 +87,11 @@ public class FeaturedGameInfo implements Serializable {
         this.gameType = gameType;
     }
 
-    public long getMapId() {
+    public Long getMapId() {
         return mapId;
     }
 
-    public void setMapId(long mapId) {
+    public void setMapId(Long mapId) {
         this.mapId = mapId;
     }
 
@@ -124,18 +124,18 @@ public class FeaturedGameInfo implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof FeaturedGameInfo)) {
             return false;
         }
         FeaturedGameInfo that = (FeaturedGameInfo) o;
-        return gameId == that.gameId &&
-                gameLength == that.gameLength &&
-                gameQueueConfigId == that.gameQueueConfigId &&
-                gameStartTime == that.gameStartTime &&
-                mapId == that.mapId &&
-                Objects.equals(bannedChampions, that.bannedChampions) &&
+        return Objects.equals(bannedChampions, that.bannedChampions) &&
+                Objects.equals(gameId, that.gameId) &&
+                Objects.equals(gameLength, that.gameLength) &&
                 gameMode == that.gameMode &&
+                Objects.equals(gameQueueConfigId, that.gameQueueConfigId) &&
+                Objects.equals(gameStartTime, that.gameStartTime) &&
                 gameType == that.gameType &&
+                Objects.equals(mapId, that.mapId) &&
                 Objects.equals(observers, that.observers) &&
                 Objects.equals(participants, that.participants) &&
                 platformId == that.platformId;

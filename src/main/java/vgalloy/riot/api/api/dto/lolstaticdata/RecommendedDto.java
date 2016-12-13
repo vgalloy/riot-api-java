@@ -19,7 +19,7 @@ public class RecommendedDto implements Serializable {
     private String champion;
     private String map;
     private String mode;
-    private boolean priority;
+    private Boolean priority;
     private String title;
     private String type;
 
@@ -55,11 +55,11 @@ public class RecommendedDto implements Serializable {
         this.mode = mode;
     }
 
-    public boolean isPriority() {
+    public Boolean isPriority() {
         return priority;
     }
 
-    public void setPriority(boolean priority) {
+    public void setPriority(Boolean priority) {
         this.priority = priority;
     }
 
@@ -84,15 +84,15 @@ public class RecommendedDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RecommendedDto)) {
             return false;
         }
         RecommendedDto that = (RecommendedDto) o;
-        return priority == that.priority &&
-                Objects.equals(blocks, that.blocks) &&
+        return Objects.equals(blocks, that.blocks) &&
                 Objects.equals(champion, that.champion) &&
                 Objects.equals(map, that.map) &&
                 Objects.equals(mode, that.mode) &&
+                Objects.equals(priority, that.priority) &&
                 Objects.equals(title, that.title) &&
                 Objects.equals(type, that.type);
     }

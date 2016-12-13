@@ -27,7 +27,7 @@ public class ChampionSpellDto implements Serializable {
     private ImageDto image;
     private String key;
     private LevelTipDto leveltip;
-    private int maxrank;
+    private Integer maxrank;
     private String name;
     private Object range;
     private String rangeBurn;
@@ -133,11 +133,11 @@ public class ChampionSpellDto implements Serializable {
         this.leveltip = leveltip;
     }
 
-    public int getMaxrank() {
+    public Integer getMaxrank() {
         return maxrank;
     }
 
-    public void setMaxrank(int maxrank) {
+    public void setMaxrank(Integer maxrank) {
         this.maxrank = maxrank;
     }
 
@@ -210,12 +210,11 @@ public class ChampionSpellDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ChampionSpellDto)) {
             return false;
         }
         ChampionSpellDto that = (ChampionSpellDto) o;
-        return maxrank == that.maxrank &&
-                Objects.equals(altimages, that.altimages) &&
+        return Objects.equals(altimages, that.altimages) &&
                 Objects.equals(cooldown, that.cooldown) &&
                 Objects.equals(cooldownBurn, that.cooldownBurn) &&
                 Objects.equals(cost, that.cost) &&
@@ -227,6 +226,7 @@ public class ChampionSpellDto implements Serializable {
                 Objects.equals(image, that.image) &&
                 Objects.equals(key, that.key) &&
                 Objects.equals(leveltip, that.leveltip) &&
+                Objects.equals(maxrank, that.maxrank) &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(range, that.range) &&
                 Objects.equals(rangeBurn, that.rangeBurn) &&

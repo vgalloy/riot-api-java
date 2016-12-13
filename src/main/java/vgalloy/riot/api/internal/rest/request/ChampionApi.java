@@ -39,5 +39,5 @@ public interface ChampionApi {
     @GET
     @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion/{id}")
     @RiotNoLimitRate
-    ChampionDto getChampionById(@PathParam("region") SmallCaseRegion region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
+    ChampionDto getChampionById(@PathParam("region") SmallCaseRegion region, @PathParam("id") long id, @QueryParam("api_key") String apiKey);
 }

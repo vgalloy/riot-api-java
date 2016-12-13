@@ -18,35 +18,35 @@ public class GameDto implements Serializable {
 
     private static final long serialVersionUID = -4090528226769958180L;
 
-    private int championId;
-    private long createDate;
+    private Integer championId;
+    private Long createDate;
     private List<PlayerDto> fellowPlayers;
-    private long gameId;
+    private Long gameId;
     private GameMode gameMode;
     private GameType gameType;
-    private boolean invalid;
-    private int ipEarned;
-    private int level;
-    private int mapId;
-    private int spell1;
-    private int spell2;
+    private Boolean invalid;
+    private Integer ipEarned;
+    private Integer level;
+    private Integer mapId;
+    private Integer spell1;
+    private Integer spell2;
     private RawStatsDto stats;
     private SupType subType;
-    private int teamId;
+    private Integer teamId;
 
-    public int getChampionId() {
+    public Integer getChampionId() {
         return championId;
     }
 
-    public void setChampionId(int championId) {
+    public void setChampionId(Integer championId) {
         this.championId = championId;
     }
 
-    public long getCreateDate() {
+    public Long getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(long createDate) {
+    public void setCreateDate(Long createDate) {
         this.createDate = createDate;
     }
 
@@ -58,11 +58,11 @@ public class GameDto implements Serializable {
         this.fellowPlayers = fellowPlayers;
     }
 
-    public long getGameId() {
+    public Long getGameId() {
         return gameId;
     }
 
-    public void setGameId(long gameId) {
+    public void setGameId(Long gameId) {
         this.gameId = gameId;
     }
 
@@ -82,51 +82,51 @@ public class GameDto implements Serializable {
         this.gameType = gameType;
     }
 
-    public boolean isInvalid() {
+    public Boolean isInvalid() {
         return invalid;
     }
 
-    public void setInvalid(boolean invalid) {
+    public void setInvalid(Boolean invalid) {
         this.invalid = invalid;
     }
 
-    public int getIpEarned() {
+    public Integer getIpEarned() {
         return ipEarned;
     }
 
-    public void setIpEarned(int ipEarned) {
+    public void setIpEarned(Integer ipEarned) {
         this.ipEarned = ipEarned;
     }
 
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public int getMapId() {
+    public Integer getMapId() {
         return mapId;
     }
 
-    public void setMapId(int mapId) {
+    public void setMapId(Integer mapId) {
         this.mapId = mapId;
     }
 
-    public int getSpell1() {
+    public Integer getSpell1() {
         return spell1;
     }
 
-    public void setSpell1(int spell1) {
+    public void setSpell1(Integer spell1) {
         this.spell1 = spell1;
     }
 
-    public int getSpell2() {
+    public Integer getSpell2() {
         return spell2;
     }
 
-    public void setSpell2(int spell2) {
+    public void setSpell2(Integer spell2) {
         this.spell2 = spell2;
     }
 
@@ -146,11 +146,11 @@ public class GameDto implements Serializable {
         this.subType = subType;
     }
 
-    public int getTeamId() {
+    public Integer getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(int teamId) {
+    public void setTeamId(Integer teamId) {
         this.teamId = teamId;
     }
 
@@ -159,25 +159,25 @@ public class GameDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof GameDto)) {
             return false;
         }
         GameDto gameDto = (GameDto) o;
-        return championId == gameDto.championId &&
-                createDate == gameDto.createDate &&
-                gameId == gameDto.gameId &&
-                invalid == gameDto.invalid &&
-                ipEarned == gameDto.ipEarned &&
-                level == gameDto.level &&
-                mapId == gameDto.mapId &&
-                spell1 == gameDto.spell1 &&
-                spell2 == gameDto.spell2 &&
-                teamId == gameDto.teamId &&
+        return Objects.equals(championId, gameDto.championId) &&
+                Objects.equals(createDate, gameDto.createDate) &&
                 Objects.equals(fellowPlayers, gameDto.fellowPlayers) &&
+                Objects.equals(gameId, gameDto.gameId) &&
                 gameMode == gameDto.gameMode &&
                 gameType == gameDto.gameType &&
+                Objects.equals(invalid, gameDto.invalid) &&
+                Objects.equals(ipEarned, gameDto.ipEarned) &&
+                Objects.equals(level, gameDto.level) &&
+                Objects.equals(mapId, gameDto.mapId) &&
+                Objects.equals(spell1, gameDto.spell1) &&
+                Objects.equals(spell2, gameDto.spell2) &&
                 Objects.equals(stats, gameDto.stats) &&
-                subType == gameDto.subType;
+                subType == gameDto.subType &&
+                Objects.equals(teamId, gameDto.teamId);
     }
 
     @Override

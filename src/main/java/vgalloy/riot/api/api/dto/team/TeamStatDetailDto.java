@@ -14,24 +14,24 @@ public class TeamStatDetailDto implements Serializable {
 
     private static final long serialVersionUID = -3049063318319195252L;
 
-    private int averageGamesPlayed;
-    private int losses;
+    private Integer averageGamesPlayed;
+    private Integer losses;
     private String teamStatType;
-    private int wins;
+    private Integer wins;
 
-    public int getAverageGamesPlayed() {
+    public Integer getAverageGamesPlayed() {
         return averageGamesPlayed;
     }
 
-    public void setAverageGamesPlayed(int averageGamesPlayed) {
+    public void setAverageGamesPlayed(Integer averageGamesPlayed) {
         this.averageGamesPlayed = averageGamesPlayed;
     }
 
-    public int getLosses() {
+    public Integer getLosses() {
         return losses;
     }
 
-    public void setLosses(int losses) {
+    public void setLosses(Integer losses) {
         this.losses = losses;
     }
 
@@ -43,11 +43,11 @@ public class TeamStatDetailDto implements Serializable {
         this.teamStatType = teamStatType;
     }
 
-    public int getWins() {
+    public Integer getWins() {
         return wins;
     }
 
-    public void setWins(int wins) {
+    public void setWins(Integer wins) {
         this.wins = wins;
     }
 
@@ -56,14 +56,14 @@ public class TeamStatDetailDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof TeamStatDetailDto)) {
             return false;
         }
         TeamStatDetailDto that = (TeamStatDetailDto) o;
-        return averageGamesPlayed == that.averageGamesPlayed &&
-                losses == that.losses &&
-                wins == that.wins &&
-                Objects.equals(teamStatType, that.teamStatType);
+        return Objects.equals(averageGamesPlayed, that.averageGamesPlayed) &&
+                Objects.equals(losses, that.losses) &&
+                Objects.equals(teamStatType, that.teamStatType) &&
+                Objects.equals(wins, that.wins);
     }
 
     @Override

@@ -15,30 +15,30 @@ public class CurrentGameParticipant implements Serializable {
 
     private static final long serialVersionUID = 6861376740687555579L;
 
-    private boolean bot;
-    private long championId;
+    private Boolean bot;
+    private Long championId;
     private List<Mastery> masteries;
-    private long profileIconId;
+    private Long profileIconId;
     private List<Rune> runes;
-    private long spell1Id;
-    private long spell2Id;
-    private long summonerId;
+    private Long spell1Id;
+    private Long spell2Id;
+    private Long summonerId;
     private String summonerName;
-    private long teamId;
+    private Long teamId;
 
-    public boolean isBot() {
+    public Boolean isBot() {
         return bot;
     }
 
-    public void setBot(boolean bot) {
+    public void setBot(Boolean bot) {
         this.bot = bot;
     }
 
-    public long getChampionId() {
+    public Long getChampionId() {
         return championId;
     }
 
-    public void setChampionId(long championId) {
+    public void setChampionId(Long championId) {
         this.championId = championId;
     }
 
@@ -50,11 +50,11 @@ public class CurrentGameParticipant implements Serializable {
         this.masteries = masteries;
     }
 
-    public long getProfileIconId() {
+    public Long getProfileIconId() {
         return profileIconId;
     }
 
-    public void setProfileIconId(long profileIconId) {
+    public void setProfileIconId(Long profileIconId) {
         this.profileIconId = profileIconId;
     }
 
@@ -66,27 +66,27 @@ public class CurrentGameParticipant implements Serializable {
         this.runes = runes;
     }
 
-    public long getSpell1Id() {
+    public Long getSpell1Id() {
         return spell1Id;
     }
 
-    public void setSpell1Id(long spell1Id) {
+    public void setSpell1Id(Long spell1Id) {
         this.spell1Id = spell1Id;
     }
 
-    public long getSpell2Id() {
+    public Long getSpell2Id() {
         return spell2Id;
     }
 
-    public void setSpell2Id(long spell2Id) {
+    public void setSpell2Id(Long spell2Id) {
         this.spell2Id = spell2Id;
     }
 
-    public long getSummonerId() {
+    public Long getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(long summonerId) {
+    public void setSummonerId(Long summonerId) {
         this.summonerId = summonerId;
     }
 
@@ -98,11 +98,11 @@ public class CurrentGameParticipant implements Serializable {
         this.summonerName = summonerName;
     }
 
-    public long getTeamId() {
+    public Long getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(long teamId) {
+    public void setTeamId(Long teamId) {
         this.teamId = teamId;
     }
 
@@ -111,20 +111,20 @@ public class CurrentGameParticipant implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof CurrentGameParticipant)) {
             return false;
         }
         CurrentGameParticipant that = (CurrentGameParticipant) o;
-        return bot == that.bot &&
-                championId == that.championId &&
-                profileIconId == that.profileIconId &&
-                spell1Id == that.spell1Id &&
-                spell2Id == that.spell2Id &&
-                summonerId == that.summonerId &&
-                teamId == that.teamId &&
+        return Objects.equals(bot, that.bot) &&
+                Objects.equals(championId, that.championId) &&
                 Objects.equals(masteries, that.masteries) &&
+                Objects.equals(profileIconId, that.profileIconId) &&
                 Objects.equals(runes, that.runes) &&
-                Objects.equals(summonerName, that.summonerName);
+                Objects.equals(spell1Id, that.spell1Id) &&
+                Objects.equals(spell2Id, that.spell2Id) &&
+                Objects.equals(summonerId, that.summonerId) &&
+                Objects.equals(summonerName, that.summonerName) &&
+                Objects.equals(teamId, that.teamId);
     }
 
     @Override

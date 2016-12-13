@@ -14,14 +14,14 @@ public class ChampionStatsDto implements Serializable {
 
     private static final long serialVersionUID = 1980178965101442467L;
 
-    private int id;
+    private Integer id;
     private AggregatedStatsDto stats;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,11 +38,11 @@ public class ChampionStatsDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof ChampionStatsDto)) {
             return false;
         }
         ChampionStatsDto that = (ChampionStatsDto) o;
-        return id == that.id &&
+        return Objects.equals(id, that.id) &&
                 Objects.equals(stats, that.stats);
     }
 

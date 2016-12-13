@@ -14,31 +14,31 @@ public class PlayerDto implements Serializable {
 
     private static final long serialVersionUID = 419411897723170076L;
 
-    private int championId;
-    private int summonerId;
-    private int teamId;
+    private Integer championId;
+    private Integer summonerId;
+    private Integer teamId;
 
-    public int getChampionId() {
+    public Integer getChampionId() {
         return championId;
     }
 
-    public void setChampionId(int championId) {
+    public void setChampionId(Integer championId) {
         this.championId = championId;
     }
 
-    public int getSummonerId() {
+    public Integer getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(int summonerId) {
+    public void setSummonerId(Integer summonerId) {
         this.summonerId = summonerId;
     }
 
-    public int getTeamId() {
+    public Integer getTeamId() {
         return teamId;
     }
 
-    public void setTeamId(int teamId) {
+    public void setTeamId(Integer teamId) {
         this.teamId = teamId;
     }
 
@@ -47,13 +47,13 @@ public class PlayerDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof PlayerDto)) {
             return false;
         }
         PlayerDto playerDto = (PlayerDto) o;
-        return championId == playerDto.championId &&
-                summonerId == playerDto.summonerId &&
-                teamId == playerDto.teamId;
+        return Objects.equals(championId, playerDto.championId) &&
+                Objects.equals(summonerId, playerDto.summonerId) &&
+                Objects.equals(teamId, playerDto.teamId);
     }
 
     @Override

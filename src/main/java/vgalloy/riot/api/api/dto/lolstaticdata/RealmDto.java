@@ -25,7 +25,7 @@ public class RealmDto implements Serializable {
     @JsonProperty("n")
     private Map<String, String> realmN;
     @JsonProperty("profileiconmax")
-    private int profileIconMax;
+    private Integer profileIconMax;
     private String store;
     @JsonProperty("v")
     private String realmV;
@@ -78,11 +78,11 @@ public class RealmDto implements Serializable {
         this.realmN = realmN;
     }
 
-    public int getProfileIconMax() {
+    public Integer getProfileIconMax() {
         return profileIconMax;
     }
 
-    public void setProfileIconMax(int profileIconMax) {
+    public void setProfileIconMax(Integer profileIconMax) {
         this.profileIconMax = profileIconMax;
     }
 
@@ -107,17 +107,17 @@ public class RealmDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof RealmDto)) {
             return false;
         }
         RealmDto realmDto = (RealmDto) o;
-        return profileIconMax == realmDto.profileIconMax &&
-                Objects.equals(cdn, realmDto.cdn) &&
+        return Objects.equals(cdn, realmDto.cdn) &&
                 Objects.equals(css, realmDto.css) &&
                 Objects.equals(dd, realmDto.dd) &&
                 Objects.equals(realmL, realmDto.realmL) &&
                 Objects.equals(lg, realmDto.lg) &&
                 Objects.equals(realmN, realmDto.realmN) &&
+                Objects.equals(profileIconMax, realmDto.profileIconMax) &&
                 Objects.equals(store, realmDto.store) &&
                 Objects.equals(realmV, realmDto.realmV);
     }

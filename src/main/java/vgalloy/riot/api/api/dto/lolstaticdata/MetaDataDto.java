@@ -14,15 +14,15 @@ public class MetaDataDto implements Serializable {
 
     private static final long serialVersionUID = 829114388248476761L;
 
-    private boolean isRune;
+    private Boolean isRune;
     private String tier;
     private String type;
 
-    public boolean isIsRune() {
+    public Boolean isIsRune() {
         return isRune;
     }
 
-    public void setIsRune(boolean rune) {
+    public void setIsRune(Boolean rune) {
         isRune = rune;
     }
 
@@ -47,11 +47,11 @@ public class MetaDataDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (!(o instanceof MetaDataDto)) {
             return false;
         }
         MetaDataDto that = (MetaDataDto) o;
-        return isRune == that.isRune &&
+        return Objects.equals(isRune, that.isRune) &&
                 Objects.equals(tier, that.tier) &&
                 Objects.equals(type, that.type);
     }
