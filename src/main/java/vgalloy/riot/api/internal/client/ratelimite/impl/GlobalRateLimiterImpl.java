@@ -1,12 +1,12 @@
 package vgalloy.riot.api.internal.client.ratelimite.impl;
 
+import java.lang.reflect.Method;
+import java.util.Objects;
+
 import vgalloy.riot.api.internal.client.ratelimite.GlobalRateLimiter;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-
-import java.lang.reflect.Method;
-import java.util.Objects;
 
 /**
  * @author Vincent Galloy

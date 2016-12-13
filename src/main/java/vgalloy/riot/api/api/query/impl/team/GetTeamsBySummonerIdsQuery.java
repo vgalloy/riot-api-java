@@ -1,15 +1,15 @@
 package vgalloy.riot.api.api.query.impl.team;
 
-import vgalloy.riot.api.api.dto.team.TeamDto;
-import vgalloy.riot.api.internal.query.DefaultParameter;
-import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-import vgalloy.riot.api.api.query.AbstractQuery;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
+import vgalloy.riot.api.api.dto.team.TeamDto;
+import vgalloy.riot.api.api.query.AbstractQuery;
+import vgalloy.riot.api.internal.client.RiotWebApi;
+import vgalloy.riot.api.internal.query.DefaultParameter;
+import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
  * @author Vincent Galloy

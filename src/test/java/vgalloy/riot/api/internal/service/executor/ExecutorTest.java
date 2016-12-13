@@ -3,6 +3,7 @@ package vgalloy.riot.api.internal.service.executor;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
+
 import vgalloy.riot.api.internal.service.executor.impl.ExecutorImpl;
 
 import static org.junit.Assert.assertEquals;

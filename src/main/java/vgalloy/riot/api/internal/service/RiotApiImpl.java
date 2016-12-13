@@ -5,7 +5,6 @@ import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.api.model.RateLimit;
 import vgalloy.riot.api.api.model.RiotApi;
 import vgalloy.riot.api.api.model.RiotApiKey;
-import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.api.query.impl.champion.GetChampionByIdQuery;
 import vgalloy.riot.api.api.query.impl.champion.GetChampionListQuery;
 import vgalloy.riot.api.api.query.impl.championmastery.GetChampionMasteryByChampionQuery;
@@ -55,6 +54,7 @@ import vgalloy.riot.api.internal.client.RiotWebApi;
 import vgalloy.riot.api.internal.client.RiotWebApiFactory;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.client.ratelimite.impl.RateLimitManagerImpl;
+import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

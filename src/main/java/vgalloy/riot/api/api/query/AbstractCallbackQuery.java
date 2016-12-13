@@ -1,6 +1,7 @@
 package vgalloy.riot.api.api.query;
 
 import java.util.Objects;
+
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.ForbiddenException;
 import javax.ws.rs.InternalServerErrorException;
@@ -8,8 +9,8 @@ import javax.ws.rs.NotAuthorizedException;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.ServiceUnavailableException;
 
-import vgalloy.riot.api.internal.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.api.query.callback.Callback;
+import vgalloy.riot.api.internal.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.internal.query.impl.DefaultCallBack;
 import vgalloy.riot.api.internal.query.impl.ThrowingCallBack;
 

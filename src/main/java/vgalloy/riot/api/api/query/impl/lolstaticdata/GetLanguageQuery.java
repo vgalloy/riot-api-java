@@ -1,11 +1,11 @@
 package vgalloy.riot.api.api.query.impl.lolstaticdata;
 
+import java.util.List;
+
+import vgalloy.riot.api.api.query.AbstractQuery;
 import vgalloy.riot.api.internal.client.RiotWebApi;
 import vgalloy.riot.api.internal.query.DefaultParameter;
-import vgalloy.riot.api.api.query.AbstractQuery;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-
-import java.util.List;
 
 /**
  * @author Vincent Galloy

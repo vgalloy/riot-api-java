@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import vgalloy.riot.api.api.model.RateLimit;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimiter;
-import vgalloy.riot.api.api.model.RateLimit;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

@@ -6,11 +6,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import vgalloy.riot.api.internal.client.ratelimite.RateLimiter;
 import vgalloy.riot.api.api.model.RateLimit;
+import vgalloy.riot.api.internal.client.ratelimite.RateLimiter;
 
 /**
  * @author Vincent Galloy

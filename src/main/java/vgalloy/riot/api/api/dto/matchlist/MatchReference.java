@@ -6,9 +6,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import vgalloy.riot.api.api.constant.Lane;
-import vgalloy.riot.api.api.constant.SimpleQueueType;
 import vgalloy.riot.api.api.constant.Role;
 import vgalloy.riot.api.api.constant.Season;
+import vgalloy.riot.api.api.constant.SimpleQueueType;
 
 /**
  * @author Vincent Galloy

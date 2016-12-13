@@ -1,15 +1,15 @@
 package vgalloy.riot.api.api.query.impl.league;
 
-import vgalloy.riot.api.api.dto.league.LeagueDto;
-import vgalloy.riot.api.api.query.AbstractQuery;
-import vgalloy.riot.api.internal.query.DefaultParameter;
-import vgalloy.riot.api.api.query.impl.league.helper.LeagueEntryDtoComparator;
-import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.api.constant.LeagueQueueType;
-import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-
 import java.util.Collections;
 import java.util.Objects;
+
+import vgalloy.riot.api.api.constant.LeagueQueueType;
+import vgalloy.riot.api.api.dto.league.LeagueDto;
+import vgalloy.riot.api.api.query.AbstractQuery;
+import vgalloy.riot.api.api.query.impl.league.helper.LeagueEntryDtoComparator;
+import vgalloy.riot.api.internal.client.RiotWebApi;
+import vgalloy.riot.api.internal.query.DefaultParameter;
+import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
  * @author Vincent Galloy

@@ -1,15 +1,15 @@
 package vgalloy.riot.api.api.query;
 
-import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.api.constant.PlatformId;
-import vgalloy.riot.api.api.constant.Region;
-import vgalloy.riot.api.api.model.RiotApiKey;
-import vgalloy.riot.api.internal.query.DefaultParameter;
-import vgalloy.riot.api.internal.service.mapper.RegionMapper;
-
 import java.util.Collection;
 import java.util.Objects;
 import java.util.StringJoiner;
+
+import vgalloy.riot.api.api.constant.PlatformId;
+import vgalloy.riot.api.api.constant.Region;
+import vgalloy.riot.api.api.model.RiotApiKey;
+import vgalloy.riot.api.internal.client.RiotWebApi;
+import vgalloy.riot.api.internal.query.DefaultParameter;
+import vgalloy.riot.api.internal.service.mapper.RegionMapper;
 
 /**
  * @author Vincent Galloy

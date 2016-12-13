@@ -1,11 +1,12 @@
 package vgalloy.riot.api.api.dto.lolstaticdata;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import vgalloy.riot.api.api.constant.MasteryTree;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.MasteryTree;
 
 /**
  * @author Vincent Galloy

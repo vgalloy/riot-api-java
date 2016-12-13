@@ -1,6 +1,7 @@
 package vgalloy.riot.api.internal.service.request;
 
 import org.junit.Test;
+
 import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.internal.service.AbstractTest;
 

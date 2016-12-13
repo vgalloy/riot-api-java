@@ -1,13 +1,14 @@
 package vgalloy.riot.api.api.dto.game;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import vgalloy.riot.api.api.constant.GameMode;
-import vgalloy.riot.api.api.constant.GameType;
-import vgalloy.riot.api.api.constant.SupType;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.GameMode;
+import vgalloy.riot.api.api.constant.GameType;
+import vgalloy.riot.api.api.constant.SupType;
 
 /**
  * @author Vincent Galloy

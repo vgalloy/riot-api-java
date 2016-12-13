@@ -2,14 +2,15 @@ package vgalloy.riot.api.internal.rest.request;
 
 import java.util.List;
 import java.util.Map;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
+import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.dto.league.LeagueDto;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-import vgalloy.riot.api.api.constant.LeagueQueueType;
 
 /**
  * @author Vincent Galloy

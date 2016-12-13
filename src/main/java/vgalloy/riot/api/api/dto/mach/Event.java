@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import vgalloy.riot.api.api.constant.AscendedType;
 import vgalloy.riot.api.api.constant.BuildingType;
 import vgalloy.riot.api.api.constant.EventType;
@@ -13,8 +15,6 @@ import vgalloy.riot.api.api.constant.MonsterType;
 import vgalloy.riot.api.api.constant.PointCaptured;
 import vgalloy.riot.api.api.constant.TowerType;
 import vgalloy.riot.api.api.constant.WardType;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @author Vincent Galloy

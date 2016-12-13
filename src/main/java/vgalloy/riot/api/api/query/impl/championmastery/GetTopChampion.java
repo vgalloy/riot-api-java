@@ -1,12 +1,12 @@
 package vgalloy.riot.api.api.query.impl.championmastery;
 
-import vgalloy.riot.api.api.dto.championmastery.ChampionMasteryDto;
-import vgalloy.riot.api.internal.query.DefaultParameter;
-import vgalloy.riot.api.internal.client.RiotWebApi;
-import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-import vgalloy.riot.api.api.query.AbstractQuery;
-
 import java.util.List;
+
+import vgalloy.riot.api.api.dto.championmastery.ChampionMasteryDto;
+import vgalloy.riot.api.api.query.AbstractQuery;
+import vgalloy.riot.api.internal.client.RiotWebApi;
+import vgalloy.riot.api.internal.query.DefaultParameter;
+import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
  * @author Vincent Galloy

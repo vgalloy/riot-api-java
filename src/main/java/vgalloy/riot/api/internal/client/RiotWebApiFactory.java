@@ -1,15 +1,16 @@
 package vgalloy.riot.api.internal.client;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
+
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 import org.glassfish.jersey.client.proxy.WebResourceFactory;
+
 import vgalloy.riot.api.internal.client.filter.RateLimitFilter;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.client.ratelimite.impl.RateLimitProxyImpl;
-
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Proxy;
 
 /**
  * @author Vincent Galloy
@@ -33,7 +34,7 @@ public final class RiotWebApiFactory {
      */
     public static RiotWebApi getRiotWebApi(RateLimitManager rateLimitManager) {
         Client client = ClientBuilder.newClient()
-//                .register(new LoggingFilter())
+                //                .register(new LoggingFilter())
                 .register(RateLimitFilter.class)
                 .register(JacksonJsonProvider.class);
         RiotWebApi unsecuredRiotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));

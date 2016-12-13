@@ -1,11 +1,11 @@
 package vgalloy.riot.api.api.query.impl.lolstatus;
 
+import java.util.List;
+
 import vgalloy.riot.api.api.dto.lolstatus.Shard;
 import vgalloy.riot.api.api.query.AbstractQuery;
-import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.client.RiotWebApi;
-
-import java.util.List;
+import vgalloy.riot.api.internal.query.DefaultParameter;
 
 /**
  * @author Vincent Galloy

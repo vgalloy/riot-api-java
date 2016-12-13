@@ -1,14 +1,15 @@
 package vgalloy.riot.api.api.dto.featuredgame;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import vgalloy.riot.api.api.dto.currentgame.Observer;
-import vgalloy.riot.api.api.constant.GameMode;
-import vgalloy.riot.api.api.constant.GameType;
-import vgalloy.riot.api.api.constant.PlatformId;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import vgalloy.riot.api.api.constant.GameMode;
+import vgalloy.riot.api.api.constant.GameType;
+import vgalloy.riot.api.api.constant.PlatformId;
+import vgalloy.riot.api.api.dto.currentgame.Observer;
 
 /**
  * @author Vincent Galloy

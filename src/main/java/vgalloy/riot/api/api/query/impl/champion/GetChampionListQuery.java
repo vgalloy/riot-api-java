@@ -2,8 +2,8 @@ package vgalloy.riot.api.api.query.impl.champion;
 
 import vgalloy.riot.api.api.dto.champion.ChampionListDto;
 import vgalloy.riot.api.api.query.AbstractQuery;
-import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.client.RiotWebApi;
+import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

@@ -5,5 +5,12 @@ package vgalloy.riot.api.api.constant;
  *         Created by Vincent Galloy on 19/05/16.
  */
 public enum GameMode {
-    CLASSIC, ODIN, ARAM, TUTORIAL, ONEFORALL, ASCENSION, FIRSTBLOOD, KINGPORO
+    CLASSIC,
+    ODIN,
+    ARAM,
+    TUTORIAL,
+    ONEFORALL,
+    ASCENSION,
+    FIRSTBLOOD,
+    KINGPORO
 }

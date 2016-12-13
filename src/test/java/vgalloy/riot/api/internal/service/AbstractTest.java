@@ -22,9 +22,8 @@ import vgalloy.riot.api.internal.service.request.ChampionApiTest;
  */
 public abstract class AbstractTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractTest.class);
-
     protected static final RiotApi RIOT_API;
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractTest.class);
 
     static {
         InputStream inputStream = ChampionApiTest.class.getClassLoader().getResourceAsStream("riot.properties");
@@ -58,7 +57,7 @@ public abstract class AbstractTest {
          *
          * @return this
          */
-        public QueryTester test(AbstractCallbackQuery<? extends Query<?>, ? > query) {
+        public QueryTester test(AbstractCallbackQuery<? extends Query<?>, ?> query) {
             query.onBadRequestExceptionCallback(e -> code = "400")
                     .onNotAuthorizedException(e -> code = "401")
                     .onForbiddenException(e -> code = "403")
@@ -82,6 +81,7 @@ public abstract class AbstractTest {
 
         /**
          * Print the result as a formatted String.
+         *
          * @param code the code
          */
         private void print(String code) {
@@ -90,7 +90,7 @@ public abstract class AbstractTest {
             String message = stringBuilder.append(" [ ").append(code).append(" ]").toString();
             if ("200".equals(code)) {
                 LOGGER.info("{}", message);
-            } else if ( "403".equals(code) ) {
+            } else if ("403".equals(code)) {
                 LOGGER.error("{}", message);
             } else {
                 LOGGER.warn("{}", message);
