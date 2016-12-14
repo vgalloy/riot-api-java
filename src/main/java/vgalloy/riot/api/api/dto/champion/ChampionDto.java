@@ -3,13 +3,10 @@ package vgalloy.riot.api.api.dto.champion;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class ChampionDto implements Serializable {
 
     private static final long serialVersionUID = -8332035146067802177L;

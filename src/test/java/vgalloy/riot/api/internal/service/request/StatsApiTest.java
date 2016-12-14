@@ -25,7 +25,6 @@ public class StatsApiTest extends AbstractTest {
         new QueryTester("RankedStats")
                 .test(RIOT_API.getRankedStats(24550736).region(Region.EUW))
                 .test(RIOT_API.getRankedStats(67911140).region(Region.NA))
-                .test(RIOT_API.getRankedStats(17671075).region(Region.KR))
                 .end();
     }
 }

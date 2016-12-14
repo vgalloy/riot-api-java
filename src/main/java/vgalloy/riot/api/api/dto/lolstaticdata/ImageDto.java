@@ -3,14 +3,12 @@ package vgalloy.riot.api.api.dto.lolstaticdata;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class ImageDto implements Serializable {
 
     private static final long serialVersionUID = -4237476324791257314L;

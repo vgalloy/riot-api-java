@@ -8,6 +8,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import org.glassfish.jersey.client.proxy.WebResourceFactory;
 
+import vgalloy.riot.api.internal.client.filter.CustomJacksonFilter;
 import vgalloy.riot.api.internal.client.filter.RateLimitFilter;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.client.ratelimite.impl.RateLimitProxyImpl;
@@ -36,7 +37,8 @@ public final class RiotWebApiFactory {
         Client client = ClientBuilder.newClient()
                 //                .register(new LoggingFilter())
                 .register(RateLimitFilter.class)
-                .register(JacksonJsonProvider.class);
+                .register(JacksonJsonProvider.class)
+                .register(CustomJacksonFilter.class);
         RiotWebApi unsecuredRiotWebApi = WebResourceFactory.newResource(RiotWebApi.class, client.target(""));
         InvocationHandler rateLimitProxy = new RateLimitProxyImpl(unsecuredRiotWebApi, rateLimitManager);
         return (RiotWebApi) Proxy.newProxyInstance(RiotWebApi.class.getClassLoader(), new Class[]{RiotWebApi.class}, rateLimitProxy);

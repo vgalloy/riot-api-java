@@ -5,13 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class BasicDataDto implements Serializable {
 
     private static final long serialVersionUID = -2364330840093235732L;

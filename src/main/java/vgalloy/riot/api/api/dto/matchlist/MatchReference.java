@@ -3,8 +3,6 @@ package vgalloy.riot.api.api.dto.matchlist;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import vgalloy.riot.api.api.constant.Lane;
 import vgalloy.riot.api.api.constant.Role;
 import vgalloy.riot.api.api.constant.Season;
@@ -14,7 +12,6 @@ import vgalloy.riot.api.api.constant.SimpleQueueType;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class MatchReference implements Serializable {
 
     private static final long serialVersionUID = -2517076929253866341L;

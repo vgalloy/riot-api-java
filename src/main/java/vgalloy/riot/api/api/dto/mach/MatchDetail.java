@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import vgalloy.riot.api.api.constant.GameMode;
 import vgalloy.riot.api.api.constant.GameType;
 import vgalloy.riot.api.api.constant.QueueType;
@@ -16,7 +14,6 @@ import vgalloy.riot.api.api.constant.Season;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class MatchDetail implements Serializable {
 
     private static final long serialVersionUID = 6184418107833110266L;

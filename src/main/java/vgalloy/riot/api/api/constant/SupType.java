@@ -30,5 +30,6 @@ public enum SupType {
     KING_PORO,
     COUNTER_PICK,
     BILGEWATER,
-    RANKED_FLEX_SR
+    RANKED_FLEX_SR,
+    SIEGE;
 }

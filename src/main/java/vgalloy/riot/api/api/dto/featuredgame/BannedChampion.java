@@ -3,13 +3,10 @@ package vgalloy.riot.api.api.dto.featuredgame;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class BannedChampion implements Serializable {
 
     private static final long serialVersionUID = -8270451990585285187L;

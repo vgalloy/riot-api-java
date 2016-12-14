@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.constant.Tier;
 
@@ -13,7 +11,6 @@ import vgalloy.riot.api.api.constant.Tier;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class LeagueDto implements Serializable {
 
     private static final long serialVersionUID = -5890977182579337979L;

@@ -4,13 +4,10 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class RunePagesDto implements Serializable {
 
     private static final long serialVersionUID = 2722680848747544996L;

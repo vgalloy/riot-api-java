@@ -12,5 +12,6 @@ public enum GameMode {
     ONEFORALL,
     ASCENSION,
     FIRSTBLOOD,
-    KINGPORO
+    KINGPORO,
+    SIEGE
 }

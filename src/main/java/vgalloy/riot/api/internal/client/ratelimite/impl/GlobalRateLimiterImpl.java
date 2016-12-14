@@ -26,7 +26,7 @@ public class GlobalRateLimiterImpl implements GlobalRateLimiter {
     }
 
     @Override
-    public void delay(Method method, Object[] args) {
+    public void delay(Method method, Object... args) {
         if (method.getDeclaredAnnotation(RiotNoLimitRate.class) == null) {
             SmallCaseRegion region = getRegion(method, args);
             rateLimitManager.get(region).delay();
@@ -40,7 +40,7 @@ public class GlobalRateLimiterImpl implements GlobalRateLimiter {
      * @param args   the args
      * @return the region of the request
      */
-    private SmallCaseRegion getRegion(Method method, Object[] args) {
+    private SmallCaseRegion getRegion(Method method, Object... args) {
         int index = -1;
         for (int i = 0; i < method.getParameterTypes().length; i++) {
             Class<?> clazz = method.getParameterTypes()[i];

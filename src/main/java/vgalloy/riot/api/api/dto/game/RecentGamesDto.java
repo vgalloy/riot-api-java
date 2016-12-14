@@ -5,13 +5,10 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 18/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class RecentGamesDto implements Serializable {
 
     private static final long serialVersionUID = -5758492301146884093L;

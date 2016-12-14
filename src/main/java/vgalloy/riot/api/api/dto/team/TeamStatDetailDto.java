@@ -3,13 +3,10 @@ package vgalloy.riot.api.api.dto.team;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class TeamStatDetailDto implements Serializable {
 
     private static final long serialVersionUID = -3049063318319195252L;

@@ -4,13 +4,10 @@ import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class MasteryListDto implements Serializable {
 
     private static final long serialVersionUID = 3638148151266958638L;

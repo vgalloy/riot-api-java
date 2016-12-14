@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import vgalloy.riot.api.api.constant.GameMode;
 import vgalloy.riot.api.api.constant.GameType;
 import vgalloy.riot.api.api.constant.PlatformId;
@@ -15,7 +13,6 @@ import vgalloy.riot.api.api.dto.currentgame.Observer;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class FeaturedGameInfo implements Serializable {
 
     private static final long serialVersionUID = 4807872817019555988L;

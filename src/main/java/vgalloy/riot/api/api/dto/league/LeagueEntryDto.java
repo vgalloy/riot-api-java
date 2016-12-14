@@ -3,15 +3,12 @@ package vgalloy.riot.api.api.dto.league;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import vgalloy.riot.api.api.constant.PlayStyle;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 20/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class LeagueEntryDto implements Serializable {
 
     private static final long serialVersionUID = 2353617061845514375L;

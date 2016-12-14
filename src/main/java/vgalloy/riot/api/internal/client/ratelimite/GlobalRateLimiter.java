@@ -14,5 +14,5 @@ public interface GlobalRateLimiter {
      * @param method the method
      * @param args   the args
      */
-    void delay(Method method, Object[] args);
+    void delay(Method method, Object... args);
 }

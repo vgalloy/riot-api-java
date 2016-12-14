@@ -4,13 +4,10 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 23/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class BlockDto implements Serializable {
 
     private static final long serialVersionUID = -4377326597195325231L;

@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import vgalloy.riot.api.api.constant.AscendedType;
 import vgalloy.riot.api.api.constant.BuildingType;
 import vgalloy.riot.api.api.constant.EventType;
@@ -20,7 +18,6 @@ import vgalloy.riot.api.api.constant.WardType;
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Event implements Serializable {
 
     private static final long serialVersionUID = -7630804759806344004L;

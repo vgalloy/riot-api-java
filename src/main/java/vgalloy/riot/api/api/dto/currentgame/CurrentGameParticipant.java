@@ -4,13 +4,10 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 19/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentGameParticipant implements Serializable {
 
     private static final long serialVersionUID = 6861376740687555579L;

@@ -3,14 +3,12 @@ package vgalloy.riot.api.api.dto.lolstatus;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Vincent Galloy
  *         Created by Vincent Galloy on 21/05/16.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Translation implements Serializable {
 
     private static final long serialVersionUID = -5175574601062082762L;
