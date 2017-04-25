@@ -24,8 +24,8 @@ public class SummonerApiTest extends AbstractTest {
     public void testGetSummonersByNames() {
         new QueryTester("SummonersByNames")
                 .test(RIOT_API.getSummonerByNames("Ivaranne").addSummonerNames("Miir").region(Region.EUW))
-                .test(RIOT_API.getSummonerByNames("Azerty").region(Region.NA))
-                .test(RIOT_API.getSummonerByNames("Azerty").region(Region.KR))
+                .test(RIOT_API.getSummonerByNames("Miir").region(Region.NA))
+                .test(RIOT_API.getSummonerByNames("Faker").region(Region.KR))
                 .end();
     }
 

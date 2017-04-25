@@ -18,8 +18,8 @@
 
         <!-- Checkstyle -->
         <checkstyle.version>2.17</checkstyle.version>
-        <checkstyle.checkstyle.location>conf/checkstyle.xml</checkstyle.checkstyle.location>
-        <checkstyle.suppressions.location>conf/suppressions.xml</checkstyle.suppressions.location>
+        <checkstyle.checkstyle.location>config/checkstyle/checkstyle.xml</checkstyle.checkstyle.location>
+        <checkstyle.suppressions.location>config/checkstyle/suppressions.xml</checkstyle.suppressions.location>
 
         <!-- Log -->
         <slf4j-api.version>1.7.25</slf4j-api.version>

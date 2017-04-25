@@ -1,6 +1,5 @@
 package vgalloy.riot.api.api.query.impl.league;
 
-import java.util.Collections;
 import java.util.Objects;
 
 import vgalloy.riot.api.api.constant.LeagueQueueType;
@@ -47,7 +46,7 @@ public class GetMasterQuery extends AbstractQuery<GetMasterQuery, LeagueDto> {
     protected LeagueDto executeWithError() {
         LeagueDto leagueDto = riotWebApi.getMaster(SmallCaseRegion.of(getRegion()), rankedQueueType, getRiotApiKeyValue());
         if (sorted) {
-            Collections.sort(leagueDto.getEntries(), new LeagueEntryDtoComparator());
+            leagueDto.getEntries().sort(new LeagueEntryDtoComparator());
         }
         return leagueDto;
     }

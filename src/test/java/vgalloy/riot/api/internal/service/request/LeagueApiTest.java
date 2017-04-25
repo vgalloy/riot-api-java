@@ -55,8 +55,8 @@ public class LeagueApiTest extends AbstractTest {
     public void testGetMaster() {
         new QueryTester("Master")
                 .test(RIOT_API.getMaster(LeagueQueueType.RANKED_SOLO_5x5).region(Region.EUW))
-                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_TEAM_3x3).region(Region.NA))
-                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_TEAM_5x5).region(Region.KR))
+                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_SOLO_5x5).region(Region.NA))
+                .test(RIOT_API.getMaster(LeagueQueueType.RANKED_FLEX_SR).region(Region.KR))
                 .end();
     }
 }
