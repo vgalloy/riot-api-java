@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class GoldDto implements Serializable {
 
@@ -58,9 +59,9 @@ public class GoldDto implements Serializable {
         }
         GoldDto goldDto = (GoldDto) o;
         return Objects.equals(base, goldDto.base) &&
-                Objects.equals(purchasable, goldDto.purchasable) &&
-                Objects.equals(sell, goldDto.sell) &&
-                Objects.equals(total, goldDto.total);
+            Objects.equals(purchasable, goldDto.purchasable) &&
+            Objects.equals(sell, goldDto.sell) &&
+            Objects.equals(total, goldDto.total);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class GoldDto implements Serializable {
     @Override
     public String toString() {
         return "GoldDto{" +
-                "base=" + base +
-                ", purchasable=" + purchasable +
-                ", sell=" + sell +
-                ", total=" + total +
-                '}';
+            "base=" + base +
+            ", purchasable=" + purchasable +
+            ", sell=" + sell +
+            ", total=" + total +
+            '}';
     }
 }

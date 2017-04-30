@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class TeamDto implements Serializable {
 
@@ -149,19 +150,19 @@ public class TeamDto implements Serializable {
         }
         TeamDto teamDto = (TeamDto) o;
         return Objects.equals(createDate, teamDto.createDate) &&
-                Objects.equals(fullId, teamDto.fullId) &&
-                Objects.equals(lastGameDate, teamDto.lastGameDate) &&
-                Objects.equals(lastJoinDate, teamDto.lastJoinDate) &&
-                Objects.equals(lastJoinedRankedTeamQueueDate, teamDto.lastJoinedRankedTeamQueueDate) &&
-                Objects.equals(matchHistory, teamDto.matchHistory) &&
-                Objects.equals(modifyDate, teamDto.modifyDate) &&
-                Objects.equals(name, teamDto.name) &&
-                Objects.equals(roster, teamDto.roster) &&
-                Objects.equals(secondLastJoinDate, teamDto.secondLastJoinDate) &&
-                Objects.equals(status, teamDto.status) &&
-                Objects.equals(tag, teamDto.tag) &&
-                Objects.equals(teamStatDetails, teamDto.teamStatDetails) &&
-                Objects.equals(thirdLastJoinDate, teamDto.thirdLastJoinDate);
+            Objects.equals(fullId, teamDto.fullId) &&
+            Objects.equals(lastGameDate, teamDto.lastGameDate) &&
+            Objects.equals(lastJoinDate, teamDto.lastJoinDate) &&
+            Objects.equals(lastJoinedRankedTeamQueueDate, teamDto.lastJoinedRankedTeamQueueDate) &&
+            Objects.equals(matchHistory, teamDto.matchHistory) &&
+            Objects.equals(modifyDate, teamDto.modifyDate) &&
+            Objects.equals(name, teamDto.name) &&
+            Objects.equals(roster, teamDto.roster) &&
+            Objects.equals(secondLastJoinDate, teamDto.secondLastJoinDate) &&
+            Objects.equals(status, teamDto.status) &&
+            Objects.equals(tag, teamDto.tag) &&
+            Objects.equals(teamStatDetails, teamDto.teamStatDetails) &&
+            Objects.equals(thirdLastJoinDate, teamDto.thirdLastJoinDate);
     }
 
     @Override
@@ -172,20 +173,20 @@ public class TeamDto implements Serializable {
     @Override
     public String toString() {
         return "TeamDto{" +
-                "createDate=" + createDate +
-                ", fullId='" + fullId + '\'' +
-                ", lastGameDate=" + lastGameDate +
-                ", lastJoinDate=" + lastJoinDate +
-                ", lastJoinedRankedTeamQueueDate=" + lastJoinedRankedTeamQueueDate +
-                ", matchHistory=" + matchHistory +
-                ", modifyDate=" + modifyDate +
-                ", name='" + name + '\'' +
-                ", roster=" + roster +
-                ", secondLastJoinDate=" + secondLastJoinDate +
-                ", status='" + status + '\'' +
-                ", tag='" + tag + '\'' +
-                ", teamStatDetails=" + teamStatDetails +
-                ", thirdLastJoinDate=" + thirdLastJoinDate +
-                '}';
+            "createDate=" + createDate +
+            ", fullId='" + fullId + '\'' +
+            ", lastGameDate=" + lastGameDate +
+            ", lastJoinDate=" + lastJoinDate +
+            ", lastJoinedRankedTeamQueueDate=" + lastJoinedRankedTeamQueueDate +
+            ", matchHistory=" + matchHistory +
+            ", modifyDate=" + modifyDate +
+            ", name='" + name + '\'' +
+            ", roster=" + roster +
+            ", secondLastJoinDate=" + secondLastJoinDate +
+            ", status='" + status + '\'' +
+            ", tag='" + tag + '\'' +
+            ", teamStatDetails=" + teamStatDetails +
+            ", thirdLastJoinDate=" + thirdLastJoinDate +
+            '}';
     }
 }

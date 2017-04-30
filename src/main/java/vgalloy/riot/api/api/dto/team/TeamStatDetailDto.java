@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class TeamStatDetailDto implements Serializable {
 
@@ -58,9 +59,9 @@ public class TeamStatDetailDto implements Serializable {
         }
         TeamStatDetailDto that = (TeamStatDetailDto) o;
         return Objects.equals(averageGamesPlayed, that.averageGamesPlayed) &&
-                Objects.equals(losses, that.losses) &&
-                Objects.equals(teamStatType, that.teamStatType) &&
-                Objects.equals(wins, that.wins);
+            Objects.equals(losses, that.losses) &&
+            Objects.equals(teamStatType, that.teamStatType) &&
+            Objects.equals(wins, that.wins);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class TeamStatDetailDto implements Serializable {
     @Override
     public String toString() {
         return "TeamStatDetailDto{" +
-                "averageGamesPlayed=" + averageGamesPlayed +
-                ", losses=" + losses +
-                ", teamStatType='" + teamStatType + '\'' +
-                ", wins=" + wins +
-                '}';
+            "averageGamesPlayed=" + averageGamesPlayed +
+            ", losses=" + losses +
+            ", teamStatType='" + teamStatType + '\'' +
+            ", wins=" + wins +
+            '}';
     }
 }

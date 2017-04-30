@@ -7,8 +7,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Message implements Serializable {
 
@@ -90,12 +91,12 @@ public class Message implements Serializable {
         }
         Message message = (Message) o;
         return Objects.equals(id, message.id) &&
-                Objects.equals(author, message.author) &&
-                Objects.equals(content, message.content) &&
-                Objects.equals(createdAt, message.createdAt) &&
-                Objects.equals(severity, message.severity) &&
-                Objects.equals(translations, message.translations) &&
-                Objects.equals(updatedAt, message.updatedAt);
+            Objects.equals(author, message.author) &&
+            Objects.equals(content, message.content) &&
+            Objects.equals(createdAt, message.createdAt) &&
+            Objects.equals(severity, message.severity) &&
+            Objects.equals(translations, message.translations) &&
+            Objects.equals(updatedAt, message.updatedAt);
     }
 
     @Override
@@ -106,13 +107,13 @@ public class Message implements Serializable {
     @Override
     public String toString() {
         return "Message{" +
-                "author='" + author + '\'' +
-                ", content='" + content + '\'' +
-                ", createdAt='" + createdAt + '\'' +
-                ", id=" + id +
-                ", severity='" + severity + '\'' +
-                ", translations=" + translations +
-                ", updatedAt='" + updatedAt + '\'' +
-                '}';
+            "author='" + author + '\'' +
+            ", content='" + content + '\'' +
+            ", createdAt='" + createdAt + '\'' +
+            ", id=" + id +
+            ", severity='" + severity + '\'' +
+            ", translations=" + translations +
+            ", updatedAt='" + updatedAt + '\'' +
+            '}';
     }
 }

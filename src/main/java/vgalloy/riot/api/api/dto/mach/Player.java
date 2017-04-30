@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Player implements Serializable {
 
@@ -58,9 +59,9 @@ public class Player implements Serializable {
         }
         Player player = (Player) o;
         return Objects.equals(matchHistoryUri, player.matchHistoryUri) &&
-                Objects.equals(profileIcon, player.profileIcon) &&
-                Objects.equals(summonerId, player.summonerId) &&
-                Objects.equals(summonerName, player.summonerName);
+            Objects.equals(profileIcon, player.profileIcon) &&
+            Objects.equals(summonerId, player.summonerId) &&
+            Objects.equals(summonerName, player.summonerName);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class Player implements Serializable {
     @Override
     public String toString() {
         return "Player{" +
-                "matchHistoryUri='" + matchHistoryUri + '\'' +
-                ", profileIcon=" + profileIcon +
-                ", summonerId=" + summonerId +
-                ", summonerName='" + summonerName + '\'' +
-                '}';
+            "matchHistoryUri='" + matchHistoryUri + '\'' +
+            ", profileIcon=" + profileIcon +
+            ", summonerId=" + summonerId +
+            ", summonerName='" + summonerName + '\'' +
+            '}';
     }
 }

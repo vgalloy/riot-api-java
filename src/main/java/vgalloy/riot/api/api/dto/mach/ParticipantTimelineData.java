@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ParticipantTimelineData implements Serializable {
 
@@ -42,9 +43,9 @@ public class ParticipantTimelineData implements Serializable {
         }
         ParticipantTimelineData that = (ParticipantTimelineData) o;
         return Double.compare(that.tenToTwenty, tenToTwenty) == 0 &&
-                Double.compare(that.thirtyToEnd, thirtyToEnd) == 0 &&
-                Double.compare(that.twentyToThirty, twentyToThirty) == 0 &&
-                Double.compare(that.zeroToTen, zeroToTen) == 0;
+            Double.compare(that.thirtyToEnd, thirtyToEnd) == 0 &&
+            Double.compare(that.twentyToThirty, twentyToThirty) == 0 &&
+            Double.compare(that.zeroToTen, zeroToTen) == 0;
     }
 
     @Override
@@ -55,10 +56,10 @@ public class ParticipantTimelineData implements Serializable {
     @Override
     public String toString() {
         return "ParticipantTimelineData{" +
-                "tenToTwenty=" + tenToTwenty +
-                ", thirtyToEnd=" + thirtyToEnd +
-                ", twentyToThirty=" + twentyToThirty +
-                ", zeroToTen=" + zeroToTen +
-                '}';
+            "tenToTwenty=" + tenToTwenty +
+            ", thirtyToEnd=" + thirtyToEnd +
+            ", twentyToThirty=" + twentyToThirty +
+            ", zeroToTen=" + zeroToTen +
+            '}';
     }
 }

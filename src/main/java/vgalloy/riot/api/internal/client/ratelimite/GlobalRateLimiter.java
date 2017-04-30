@@ -3,8 +3,9 @@ package vgalloy.riot.api.internal.client.ratelimite;
 import java.lang.reflect.Method;
 
 /**
+ * Created by Vincent Galloy on 01/06/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 01/06/16.
  */
 public interface GlobalRateLimiter {
 

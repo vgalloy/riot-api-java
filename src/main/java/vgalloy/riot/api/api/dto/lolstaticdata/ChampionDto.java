@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class ChampionDto implements Serializable {
 
@@ -176,22 +177,22 @@ public class ChampionDto implements Serializable {
         }
         ChampionDto that = (ChampionDto) o;
         return Objects.equals(allytips, that.allytips) &&
-                Objects.equals(blurb, that.blurb) &&
-                Objects.equals(enemytips, that.enemytips) &&
-                Objects.equals(id, that.id) &&
-                Objects.equals(image, that.image) &&
-                Objects.equals(info, that.info) &&
-                Objects.equals(key, that.key) &&
-                Objects.equals(lore, that.lore) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(partype, that.partype) &&
-                Objects.equals(passive, that.passive) &&
-                Objects.equals(recommended, that.recommended) &&
-                Objects.equals(skins, that.skins) &&
-                Objects.equals(spells, that.spells) &&
-                Objects.equals(stats, that.stats) &&
-                Objects.equals(tags, that.tags) &&
-                Objects.equals(title, that.title);
+            Objects.equals(blurb, that.blurb) &&
+            Objects.equals(enemytips, that.enemytips) &&
+            Objects.equals(id, that.id) &&
+            Objects.equals(image, that.image) &&
+            Objects.equals(info, that.info) &&
+            Objects.equals(key, that.key) &&
+            Objects.equals(lore, that.lore) &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(partype, that.partype) &&
+            Objects.equals(passive, that.passive) &&
+            Objects.equals(recommended, that.recommended) &&
+            Objects.equals(skins, that.skins) &&
+            Objects.equals(spells, that.spells) &&
+            Objects.equals(stats, that.stats) &&
+            Objects.equals(tags, that.tags) &&
+            Objects.equals(title, that.title);
     }
 
     @Override
@@ -202,23 +203,23 @@ public class ChampionDto implements Serializable {
     @Override
     public String toString() {
         return "ChampionDto{" +
-                "allytips=" + allytips +
-                ", blurb='" + blurb + '\'' +
-                ", enemytips=" + enemytips +
-                ", id=" + id +
-                ", image=" + image +
-                ", info=" + info +
-                ", key='" + key + '\'' +
-                ", lore='" + lore + '\'' +
-                ", name='" + name + '\'' +
-                ", partype='" + partype + '\'' +
-                ", passive=" + passive +
-                ", recommended=" + recommended +
-                ", skins=" + skins +
-                ", spells=" + spells +
-                ", stats=" + stats +
-                ", tags=" + tags +
-                ", title='" + title + '\'' +
-                '}';
+            "allytips=" + allytips +
+            ", blurb='" + blurb + '\'' +
+            ", enemytips=" + enemytips +
+            ", id=" + id +
+            ", image=" + image +
+            ", info=" + info +
+            ", key='" + key + '\'' +
+            ", lore='" + lore + '\'' +
+            ", name='" + name + '\'' +
+            ", partype='" + partype + '\'' +
+            ", passive=" + passive +
+            ", recommended=" + recommended +
+            ", skins=" + skins +
+            ", spells=" + spells +
+            ", stats=" + stats +
+            ", tags=" + tags +
+            ", title='" + title + '\'' +
+            '}';
     }
 }

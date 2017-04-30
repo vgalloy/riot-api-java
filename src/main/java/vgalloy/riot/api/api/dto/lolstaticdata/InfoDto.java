@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class InfoDto implements Serializable {
 
@@ -58,9 +59,9 @@ public class InfoDto implements Serializable {
         }
         InfoDto infoDto = (InfoDto) o;
         return Objects.equals(attack, infoDto.attack) &&
-                Objects.equals(defense, infoDto.defense) &&
-                Objects.equals(difficulty, infoDto.difficulty) &&
-                Objects.equals(magic, infoDto.magic);
+            Objects.equals(defense, infoDto.defense) &&
+            Objects.equals(difficulty, infoDto.difficulty) &&
+            Objects.equals(magic, infoDto.magic);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class InfoDto implements Serializable {
     @Override
     public String toString() {
         return "InfoDto{" +
-                "attack=" + attack +
-                ", defense=" + defense +
-                ", difficulty=" + difficulty +
-                ", magic=" + magic +
-                '}';
+            "attack=" + attack +
+            ", defense=" + defense +
+            ", difficulty=" + difficulty +
+            ", magic=" + magic +
+            '}';
     }
 }

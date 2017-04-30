@@ -6,8 +6,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class GroupDto implements Serializable {
 
@@ -240,29 +241,29 @@ public class GroupDto implements Serializable {
         }
         GroupDto groupDto = (GroupDto) o;
         return Objects.equals(colloq, groupDto.colloq) &&
-                Objects.equals(consumeOnFull, groupDto.consumeOnFull) &&
-                Objects.equals(consumed, groupDto.consumed) &&
-                Objects.equals(depth, groupDto.depth) &&
-                Objects.equals(description, groupDto.description) &&
-                Objects.equals(effect, groupDto.effect) &&
-                Objects.equals(from, groupDto.from) &&
-                Objects.equals(gold, groupDto.gold) &&
-                Objects.equals(group, groupDto.group) &&
-                Objects.equals(hideFromAll, groupDto.hideFromAll) &&
-                Objects.equals(id, groupDto.id) &&
-                Objects.equals(image, groupDto.image) &&
-                Objects.equals(inStore, groupDto.inStore) &&
-                Objects.equals(into, groupDto.into) &&
-                Objects.equals(maps, groupDto.maps) &&
-                Objects.equals(name, groupDto.name) &&
-                Objects.equals(plaintext, groupDto.plaintext) &&
-                Objects.equals(requiredChampion, groupDto.requiredChampion) &&
-                Objects.equals(rune, groupDto.rune) &&
-                Objects.equals(sanitizedDescription, groupDto.sanitizedDescription) &&
-                Objects.equals(specialRecipe, groupDto.specialRecipe) &&
-                Objects.equals(stacks, groupDto.stacks) &&
-                Objects.equals(stats, groupDto.stats) &&
-                Objects.equals(tags, groupDto.tags);
+            Objects.equals(consumeOnFull, groupDto.consumeOnFull) &&
+            Objects.equals(consumed, groupDto.consumed) &&
+            Objects.equals(depth, groupDto.depth) &&
+            Objects.equals(description, groupDto.description) &&
+            Objects.equals(effect, groupDto.effect) &&
+            Objects.equals(from, groupDto.from) &&
+            Objects.equals(gold, groupDto.gold) &&
+            Objects.equals(group, groupDto.group) &&
+            Objects.equals(hideFromAll, groupDto.hideFromAll) &&
+            Objects.equals(id, groupDto.id) &&
+            Objects.equals(image, groupDto.image) &&
+            Objects.equals(inStore, groupDto.inStore) &&
+            Objects.equals(into, groupDto.into) &&
+            Objects.equals(maps, groupDto.maps) &&
+            Objects.equals(name, groupDto.name) &&
+            Objects.equals(plaintext, groupDto.plaintext) &&
+            Objects.equals(requiredChampion, groupDto.requiredChampion) &&
+            Objects.equals(rune, groupDto.rune) &&
+            Objects.equals(sanitizedDescription, groupDto.sanitizedDescription) &&
+            Objects.equals(specialRecipe, groupDto.specialRecipe) &&
+            Objects.equals(stacks, groupDto.stacks) &&
+            Objects.equals(stats, groupDto.stats) &&
+            Objects.equals(tags, groupDto.tags);
     }
 
     @Override
@@ -273,30 +274,30 @@ public class GroupDto implements Serializable {
     @Override
     public String toString() {
         return "GroupDto{" +
-                "colloq='" + colloq + '\'' +
-                ", consumeOnFull=" + consumeOnFull +
-                ", consumed=" + consumed +
-                ", depth=" + depth +
-                ", description='" + description + '\'' +
-                ", effect=" + effect +
-                ", from=" + from +
-                ", gold=" + gold +
-                ", group='" + group + '\'' +
-                ", hideFromAll=" + hideFromAll +
-                ", id=" + id +
-                ", image=" + image +
-                ", inStore=" + inStore +
-                ", into=" + into +
-                ", maps=" + maps +
-                ", name='" + name + '\'' +
-                ", plaintext='" + plaintext + '\'' +
-                ", requiredChampion='" + requiredChampion + '\'' +
-                ", rune=" + rune +
-                ", sanitizedDescription='" + sanitizedDescription + '\'' +
-                ", specialRecipe=" + specialRecipe +
-                ", stacks=" + stacks +
-                ", stats=" + stats +
-                ", tags=" + tags +
-                '}';
+            "colloq='" + colloq + '\'' +
+            ", consumeOnFull=" + consumeOnFull +
+            ", consumed=" + consumed +
+            ", depth=" + depth +
+            ", description='" + description + '\'' +
+            ", effect=" + effect +
+            ", from=" + from +
+            ", gold=" + gold +
+            ", group='" + group + '\'' +
+            ", hideFromAll=" + hideFromAll +
+            ", id=" + id +
+            ", image=" + image +
+            ", inStore=" + inStore +
+            ", into=" + into +
+            ", maps=" + maps +
+            ", name='" + name + '\'' +
+            ", plaintext='" + plaintext + '\'' +
+            ", requiredChampion='" + requiredChampion + '\'' +
+            ", rune=" + rune +
+            ", sanitizedDescription='" + sanitizedDescription + '\'' +
+            ", specialRecipe=" + specialRecipe +
+            ", stacks=" + stacks +
+            ", stats=" + stats +
+            ", tags=" + tags +
+            '}';
     }
 }

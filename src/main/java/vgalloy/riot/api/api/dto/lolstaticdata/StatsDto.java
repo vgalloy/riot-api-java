@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class StatsDto implements Serializable {
 
@@ -202,25 +203,25 @@ public class StatsDto implements Serializable {
         }
         StatsDto statsDto = (StatsDto) o;
         return Double.compare(statsDto.armor, armor) == 0 &&
-                Double.compare(statsDto.armorperlevel, armorperlevel) == 0 &&
-                Double.compare(statsDto.attackdamage, attackdamage) == 0 &&
-                Double.compare(statsDto.attackdamageperlevel, attackdamageperlevel) == 0 &&
-                Double.compare(statsDto.attackrange, attackrange) == 0 &&
-                Double.compare(statsDto.attackspeedoffset, attackspeedoffset) == 0 &&
-                Double.compare(statsDto.attackspeedperlevel, attackspeedperlevel) == 0 &&
-                Double.compare(statsDto.crit, crit) == 0 &&
-                Double.compare(statsDto.critperlevel, critperlevel) == 0 &&
-                Double.compare(statsDto.hp, hp) == 0 &&
-                Double.compare(statsDto.hpperlevel, hpperlevel) == 0 &&
-                Double.compare(statsDto.hpregen, hpregen) == 0 &&
-                Double.compare(statsDto.hpregenperlevel, hpregenperlevel) == 0 &&
-                Double.compare(statsDto.movespeed, movespeed) == 0 &&
-                Double.compare(statsDto.mp, mp) == 0 &&
-                Double.compare(statsDto.mpperlevel, mpperlevel) == 0 &&
-                Double.compare(statsDto.mpregen, mpregen) == 0 &&
-                Double.compare(statsDto.mpregenperlevel, mpregenperlevel) == 0 &&
-                Double.compare(statsDto.spellblock, spellblock) == 0 &&
-                Double.compare(statsDto.spellblockperlevel, spellblockperlevel) == 0;
+            Double.compare(statsDto.armorperlevel, armorperlevel) == 0 &&
+            Double.compare(statsDto.attackdamage, attackdamage) == 0 &&
+            Double.compare(statsDto.attackdamageperlevel, attackdamageperlevel) == 0 &&
+            Double.compare(statsDto.attackrange, attackrange) == 0 &&
+            Double.compare(statsDto.attackspeedoffset, attackspeedoffset) == 0 &&
+            Double.compare(statsDto.attackspeedperlevel, attackspeedperlevel) == 0 &&
+            Double.compare(statsDto.crit, crit) == 0 &&
+            Double.compare(statsDto.critperlevel, critperlevel) == 0 &&
+            Double.compare(statsDto.hp, hp) == 0 &&
+            Double.compare(statsDto.hpperlevel, hpperlevel) == 0 &&
+            Double.compare(statsDto.hpregen, hpregen) == 0 &&
+            Double.compare(statsDto.hpregenperlevel, hpregenperlevel) == 0 &&
+            Double.compare(statsDto.movespeed, movespeed) == 0 &&
+            Double.compare(statsDto.mp, mp) == 0 &&
+            Double.compare(statsDto.mpperlevel, mpperlevel) == 0 &&
+            Double.compare(statsDto.mpregen, mpregen) == 0 &&
+            Double.compare(statsDto.mpregenperlevel, mpregenperlevel) == 0 &&
+            Double.compare(statsDto.spellblock, spellblock) == 0 &&
+            Double.compare(statsDto.spellblockperlevel, spellblockperlevel) == 0;
     }
 
     @Override
@@ -231,26 +232,26 @@ public class StatsDto implements Serializable {
     @Override
     public String toString() {
         return "StatsDto{" +
-                "armor=" + armor +
-                ", armorperlevel=" + armorperlevel +
-                ", attackdamage=" + attackdamage +
-                ", attackdamageperlevel=" + attackdamageperlevel +
-                ", attackrange=" + attackrange +
-                ", attackspeedoffset=" + attackspeedoffset +
-                ", attackspeedperlevel=" + attackspeedperlevel +
-                ", crit=" + crit +
-                ", critperlevel=" + critperlevel +
-                ", hp=" + hp +
-                ", hpperlevel=" + hpperlevel +
-                ", hpregen=" + hpregen +
-                ", hpregenperlevel=" + hpregenperlevel +
-                ", movespeed=" + movespeed +
-                ", mp=" + mp +
-                ", mpperlevel=" + mpperlevel +
-                ", mpregen=" + mpregen +
-                ", mpregenperlevel=" + mpregenperlevel +
-                ", spellblock=" + spellblock +
-                ", spellblockperlevel=" + spellblockperlevel +
-                '}';
+            "armor=" + armor +
+            ", armorperlevel=" + armorperlevel +
+            ", attackdamage=" + attackdamage +
+            ", attackdamageperlevel=" + attackdamageperlevel +
+            ", attackrange=" + attackrange +
+            ", attackspeedoffset=" + attackspeedoffset +
+            ", attackspeedperlevel=" + attackspeedperlevel +
+            ", crit=" + crit +
+            ", critperlevel=" + critperlevel +
+            ", hp=" + hp +
+            ", hpperlevel=" + hpperlevel +
+            ", hpregen=" + hpregen +
+            ", hpregenperlevel=" + hpregenperlevel +
+            ", movespeed=" + movespeed +
+            ", mp=" + mp +
+            ", mpperlevel=" + mpperlevel +
+            ", mpregen=" + mpregen +
+            ", mpregenperlevel=" + mpregenperlevel +
+            ", spellblock=" + spellblock +
+            ", spellblockperlevel=" + spellblockperlevel +
+            '}';
     }
 }

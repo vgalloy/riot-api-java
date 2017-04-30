@@ -15,21 +15,22 @@ import vgalloy.riot.api.internal.rest.request.SummonerApi;
 import vgalloy.riot.api.internal.rest.request.TeamApi;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public interface RiotWebApi extends ChampionApi,
-        ChampionMastery,
-        CurrentGameApi,
-        FeaturedGameApi,
-        GameApi,
-        LeagueApi,
-        LolStaticDataApi,
-        LolStatusApi,
-        MatchApi,
-        MatchListApi,
-        StatsApi,
-        SummonerApi,
-        TeamApi {
+    ChampionMastery,
+    CurrentGameApi,
+    FeaturedGameApi,
+    GameApi,
+    LeagueApi,
+    LolStaticDataApi,
+    LolStatusApi,
+    MatchApi,
+    MatchListApi,
+    StatsApi,
+    SummonerApi,
+    TeamApi {
 
 }

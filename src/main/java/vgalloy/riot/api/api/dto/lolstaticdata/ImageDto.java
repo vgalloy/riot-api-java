@@ -6,8 +6,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ImageDto implements Serializable {
 
@@ -91,12 +92,12 @@ public class ImageDto implements Serializable {
         }
         ImageDto imageDto = (ImageDto) o;
         return Objects.equals(full, imageDto.full) &&
-                Objects.equals(group, imageDto.group) &&
-                Objects.equals(imageH, imageDto.imageH) &&
-                Objects.equals(sprite, imageDto.sprite) &&
-                Objects.equals(imageW, imageDto.imageW) &&
-                Objects.equals(imageX, imageDto.imageX) &&
-                Objects.equals(imageY, imageDto.imageY);
+            Objects.equals(group, imageDto.group) &&
+            Objects.equals(imageH, imageDto.imageH) &&
+            Objects.equals(sprite, imageDto.sprite) &&
+            Objects.equals(imageW, imageDto.imageW) &&
+            Objects.equals(imageX, imageDto.imageX) &&
+            Objects.equals(imageY, imageDto.imageY);
     }
 
     @Override
@@ -107,13 +108,13 @@ public class ImageDto implements Serializable {
     @Override
     public String toString() {
         return "ImageDto{" +
-                "full='" + full + '\'' +
-                ", group='" + group + '\'' +
-                ", imageH=" + imageH +
-                ", sprite='" + sprite + '\'' +
-                ", imageW=" + imageW +
-                ", imageX=" + imageX +
-                ", imageY=" + imageY +
-                '}';
+            "full='" + full + '\'' +
+            ", group='" + group + '\'' +
+            ", imageH=" + imageH +
+            ", sprite='" + sprite + '\'' +
+            ", imageW=" + imageW +
+            ", imageX=" + imageX +
+            ", imageY=" + imageY +
+            '}';
     }
 }

@@ -1,8 +1,9 @@
 package vgalloy.riot.api.api.query;
 
 /**
+ * Created by Vincent on 20/05/2016.
+ *
  * @author Vincent Galloy
- *         Created by Vincent on 20/05/2016
  */
 public interface Query<T> {
 

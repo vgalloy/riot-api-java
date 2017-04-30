@@ -6,8 +6,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Translation implements Serializable {
 
@@ -61,9 +62,9 @@ public class Translation implements Serializable {
         }
         Translation that = (Translation) o;
         return Objects.equals(content, that.content) &&
-                Objects.equals(locale, that.locale) &&
-                Objects.equals(updatedAt, that.updatedAt) &&
-                Objects.equals(heading, that.heading);
+            Objects.equals(locale, that.locale) &&
+            Objects.equals(updatedAt, that.updatedAt) &&
+            Objects.equals(heading, that.heading);
     }
 
     @Override
@@ -74,10 +75,10 @@ public class Translation implements Serializable {
     @Override
     public String toString() {
         return "Translation{" +
-                "content='" + content + '\'' +
-                ", locale='" + locale + '\'' +
-                ", updatedAt='" + updatedAt + '\'' +
-                ", heading='" + heading + '\'' +
-                '}';
+            "content='" + content + '\'' +
+            ", locale='" + locale + '\'' +
+            ", updatedAt='" + updatedAt + '\'' +
+            ", heading='" + heading + '\'' +
+            '}';
     }
 }

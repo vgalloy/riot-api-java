@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class BlockDto implements Serializable {
 
@@ -34,8 +35,8 @@ public class BlockDto implements Serializable {
         }
         BlockDto blockDto = (BlockDto) o;
         return Objects.equals(items, blockDto.items) &&
-                Objects.equals(recMath, blockDto.recMath) &&
-                Objects.equals(type, blockDto.type);
+            Objects.equals(recMath, blockDto.recMath) &&
+            Objects.equals(type, blockDto.type);
     }
 
     @Override
@@ -46,9 +47,9 @@ public class BlockDto implements Serializable {
     @Override
     public String toString() {
         return "BlockDto{" +
-                "items=" + items +
-                ", recMath=" + recMath +
-                ", type='" + type + '\'' +
-                '}';
+            "items=" + items +
+            ", recMath=" + recMath +
+            ", type='" + type + '\'' +
+            '}';
     }
 }

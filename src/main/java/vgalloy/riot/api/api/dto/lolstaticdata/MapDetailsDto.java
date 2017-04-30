@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MapDetailsDto implements Serializable {
 
@@ -59,9 +60,9 @@ public class MapDetailsDto implements Serializable {
         }
         MapDetailsDto that = (MapDetailsDto) o;
         return Objects.equals(image, that.image) &&
-                Objects.equals(mapId, that.mapId) &&
-                Objects.equals(mapName, that.mapName) &&
-                Objects.equals(unpurchasableItemList, that.unpurchasableItemList);
+            Objects.equals(mapId, that.mapId) &&
+            Objects.equals(mapName, that.mapName) &&
+            Objects.equals(unpurchasableItemList, that.unpurchasableItemList);
     }
 
     @Override
@@ -72,10 +73,10 @@ public class MapDetailsDto implements Serializable {
     @Override
     public String toString() {
         return "MapDetailsDto{" +
-                "image=" + image +
-                ", mapId=" + mapId +
-                ", mapName='" + mapName + '\'' +
-                ", unpurchasableItemList=" + unpurchasableItemList +
-                '}';
+            "image=" + image +
+            ", mapId=" + mapId +
+            ", mapName='" + mapName + '\'' +
+            ", unpurchasableItemList=" + unpurchasableItemList +
+            '}';
     }
 }

@@ -12,13 +12,14 @@ import vgalloy.riot.api.api.dto.team.TeamDto;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public interface TeamApi {
 
     /**
-     * Get teams mapped by summoner ID for a given list of summoner IDs.
+     * Get teams mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the region
      * @param summonerIds the summoner ids
@@ -30,7 +31,7 @@ public interface TeamApi {
     Map<String, List<TeamDto>> getTeamsBySummonerIds(@PathParam("region") SmallCaseRegion region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get teams mapped by team ID for a given list of team IDs.
+     * Get teams mapped by team id for a given list of team ids.
      *
      * @param region  the region
      * @param teamIds the team ids

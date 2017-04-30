@@ -8,8 +8,9 @@ import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.constant.Tier;
 
 /**
+ * Created by Vincent Galloy on 20/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 20/05/16.
  */
 public class LeagueDto implements Serializable {
 
@@ -71,10 +72,10 @@ public class LeagueDto implements Serializable {
         }
         LeagueDto leagueDto = (LeagueDto) o;
         return Objects.equals(entries, leagueDto.entries) &&
-                Objects.equals(name, leagueDto.name) &&
-                Objects.equals(participantId, leagueDto.participantId) &&
-                queue == leagueDto.queue &&
-                tier == leagueDto.tier;
+            Objects.equals(name, leagueDto.name) &&
+            Objects.equals(participantId, leagueDto.participantId) &&
+            queue == leagueDto.queue &&
+            tier == leagueDto.tier;
     }
 
     @Override
@@ -85,11 +86,11 @@ public class LeagueDto implements Serializable {
     @Override
     public String toString() {
         return "LeagueDto{" +
-                "entries=" + entries +
-                ", name='" + name + '\'' +
-                ", participantId='" + participantId + '\'' +
-                ", queue=" + queue +
-                ", tier=" + tier +
-                '}';
+            "entries=" + entries +
+            ", name='" + name + '\'' +
+            ", participantId='" + participantId + '\'' +
+            ", queue=" + queue +
+            ", tier=" + tier +
+            '}';
     }
 }

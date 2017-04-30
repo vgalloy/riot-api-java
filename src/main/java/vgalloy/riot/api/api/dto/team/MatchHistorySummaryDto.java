@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MatchHistorySummaryDto implements Serializable {
 
@@ -121,16 +122,16 @@ public class MatchHistorySummaryDto implements Serializable {
         }
         MatchHistorySummaryDto that = (MatchHistorySummaryDto) o;
         return Objects.equals(assists, that.assists) &&
-                Objects.equals(date, that.date) &&
-                Objects.equals(deaths, that.deaths) &&
-                Objects.equals(gameId, that.gameId) &&
-                Objects.equals(gameMode, that.gameMode) &&
-                Objects.equals(invalid, that.invalid) &&
-                Objects.equals(kills, that.kills) &&
-                Objects.equals(mapId, that.mapId) &&
-                Objects.equals(opposingTeamKills, that.opposingTeamKills) &&
-                Objects.equals(opposingTeamName, that.opposingTeamName) &&
-                Objects.equals(win, that.win);
+            Objects.equals(date, that.date) &&
+            Objects.equals(deaths, that.deaths) &&
+            Objects.equals(gameId, that.gameId) &&
+            Objects.equals(gameMode, that.gameMode) &&
+            Objects.equals(invalid, that.invalid) &&
+            Objects.equals(kills, that.kills) &&
+            Objects.equals(mapId, that.mapId) &&
+            Objects.equals(opposingTeamKills, that.opposingTeamKills) &&
+            Objects.equals(opposingTeamName, that.opposingTeamName) &&
+            Objects.equals(win, that.win);
     }
 
     @Override
@@ -141,17 +142,17 @@ public class MatchHistorySummaryDto implements Serializable {
     @Override
     public String toString() {
         return "MatchHistorySummaryDto{" +
-                "assists=" + assists +
-                ", date=" + date +
-                ", deaths=" + deaths +
-                ", gameId=" + gameId +
-                ", gameMode='" + gameMode + '\'' +
-                ", invalid=" + invalid +
-                ", kills=" + kills +
-                ", mapId=" + mapId +
-                ", opposingTeamKills=" + opposingTeamKills +
-                ", opposingTeamName='" + opposingTeamName + '\'' +
-                ", win=" + win +
-                '}';
+            "assists=" + assists +
+            ", date=" + date +
+            ", deaths=" + deaths +
+            ", gameId=" + gameId +
+            ", gameMode='" + gameMode + '\'' +
+            ", invalid=" + invalid +
+            ", kills=" + kills +
+            ", mapId=" + mapId +
+            ", opposingTeamKills=" + opposingTeamKills +
+            ", opposingTeamName='" + opposingTeamName + '\'' +
+            ", win=" + win +
+            '}';
     }
 }

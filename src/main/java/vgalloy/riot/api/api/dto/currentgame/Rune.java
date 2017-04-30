@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class Rune implements Serializable {
 
@@ -40,7 +41,7 @@ public class Rune implements Serializable {
         }
         Rune rune = (Rune) o;
         return Objects.equals(count, rune.count) &&
-                Objects.equals(runeId, rune.runeId);
+            Objects.equals(runeId, rune.runeId);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class Rune implements Serializable {
     @Override
     public String toString() {
         return "Rune{" +
-                "count=" + count +
-                ", runeId=" + runeId +
-                '}';
+            "count=" + count +
+            ", runeId=" + runeId +
+            '}';
     }
 }

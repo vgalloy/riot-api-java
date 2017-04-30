@@ -3,9 +3,10 @@ package vgalloy.riot.api.api.model;
 import java.io.Serializable;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ * This object represent a limit. The number of request that can be create during a period of time;
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
- *         This object represent a limit. The number of request that can be create during a period of time;
  */
 public class RateLimit implements Comparable<RateLimit>, Serializable {
 
@@ -41,8 +42,8 @@ public class RateLimit implements Comparable<RateLimit>, Serializable {
     @Override
     public String toString() {
         return "RateLimit{" +
-                "numberOfRequest=" + numberOfRequest +
-                ", timeInMillis=" + timeInMillis +
-                '}';
+            "numberOfRequest=" + numberOfRequest +
+            ", timeInMillis=" + timeInMillis +
+            '}';
     }
 }

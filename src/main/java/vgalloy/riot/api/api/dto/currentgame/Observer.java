@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class Observer implements Serializable {
 
@@ -41,7 +42,7 @@ public class Observer implements Serializable {
     @Override
     public String toString() {
         return "Observer{" +
-                "encryptionKey='" + encryptionKey + '\'' +
-                '}';
+            "encryptionKey='" + encryptionKey + '\'' +
+            '}';
     }
 }

@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 20/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 20/05/16.
  */
 public class MiniSeriesDto implements Serializable {
 
@@ -58,9 +59,9 @@ public class MiniSeriesDto implements Serializable {
         }
         MiniSeriesDto that = (MiniSeriesDto) o;
         return Objects.equals(losses, that.losses) &&
-                Objects.equals(progress, that.progress) &&
-                Objects.equals(target, that.target) &&
-                Objects.equals(wins, that.wins);
+            Objects.equals(progress, that.progress) &&
+            Objects.equals(target, that.target) &&
+            Objects.equals(wins, that.wins);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class MiniSeriesDto implements Serializable {
     @Override
     public String toString() {
         return "MiniSeriesDto{" +
-                "losses=" + losses +
-                ", progress='" + progress + '\'' +
-                ", target=" + target +
-                ", wins=" + wins +
-                '}';
+            "losses=" + losses +
+            ", progress='" + progress + '\'' +
+            ", target=" + target +
+            ", wins=" + wins +
+            '}';
     }
 }

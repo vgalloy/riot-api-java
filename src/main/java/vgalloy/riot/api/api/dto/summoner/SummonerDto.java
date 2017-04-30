@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class SummonerDto implements Serializable {
 
@@ -67,10 +68,10 @@ public class SummonerDto implements Serializable {
         }
         SummonerDto that = (SummonerDto) o;
         return Objects.equals(id, that.id) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(profileIconId, that.profileIconId) &&
-                Objects.equals(revisionDate, that.revisionDate) &&
-                Objects.equals(summonerLevel, that.summonerLevel);
+            Objects.equals(name, that.name) &&
+            Objects.equals(profileIconId, that.profileIconId) &&
+            Objects.equals(revisionDate, that.revisionDate) &&
+            Objects.equals(summonerLevel, that.summonerLevel);
     }
 
     @Override
@@ -81,11 +82,11 @@ public class SummonerDto implements Serializable {
     @Override
     public String toString() {
         return "SummonerDto{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", profileIconId=" + profileIconId +
-                ", revisionDate=" + revisionDate +
-                ", summonerLevel=" + summonerLevel +
-                '}';
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", profileIconId=" + profileIconId +
+            ", revisionDate=" + revisionDate +
+            ", summonerLevel=" + summonerLevel +
+            '}';
     }
 }

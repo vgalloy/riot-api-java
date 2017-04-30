@@ -9,8 +9,9 @@ import vgalloy.riot.api.api.constant.GameType;
 import vgalloy.riot.api.api.constant.SupType;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class GameDto implements Serializable {
 
@@ -162,20 +163,20 @@ public class GameDto implements Serializable {
         }
         GameDto gameDto = (GameDto) o;
         return Objects.equals(championId, gameDto.championId) &&
-                Objects.equals(createDate, gameDto.createDate) &&
-                Objects.equals(fellowPlayers, gameDto.fellowPlayers) &&
-                Objects.equals(gameId, gameDto.gameId) &&
-                gameMode == gameDto.gameMode &&
-                gameType == gameDto.gameType &&
-                Objects.equals(invalid, gameDto.invalid) &&
-                Objects.equals(ipEarned, gameDto.ipEarned) &&
-                Objects.equals(level, gameDto.level) &&
-                Objects.equals(mapId, gameDto.mapId) &&
-                Objects.equals(spell1, gameDto.spell1) &&
-                Objects.equals(spell2, gameDto.spell2) &&
-                Objects.equals(stats, gameDto.stats) &&
-                subType == gameDto.subType &&
-                Objects.equals(teamId, gameDto.teamId);
+            Objects.equals(createDate, gameDto.createDate) &&
+            Objects.equals(fellowPlayers, gameDto.fellowPlayers) &&
+            Objects.equals(gameId, gameDto.gameId) &&
+            gameMode == gameDto.gameMode &&
+            gameType == gameDto.gameType &&
+            Objects.equals(invalid, gameDto.invalid) &&
+            Objects.equals(ipEarned, gameDto.ipEarned) &&
+            Objects.equals(level, gameDto.level) &&
+            Objects.equals(mapId, gameDto.mapId) &&
+            Objects.equals(spell1, gameDto.spell1) &&
+            Objects.equals(spell2, gameDto.spell2) &&
+            Objects.equals(stats, gameDto.stats) &&
+            subType == gameDto.subType &&
+            Objects.equals(teamId, gameDto.teamId);
     }
 
     @Override
@@ -186,21 +187,21 @@ public class GameDto implements Serializable {
     @Override
     public String toString() {
         return "GameDto{" +
-                "championId=" + championId +
-                ", createDate=" + createDate +
-                ", fellowPlayers=" + fellowPlayers +
-                ", gameId=" + gameId +
-                ", gameMode='" + gameMode + '\'' +
-                ", gameType='" + gameType + '\'' +
-                ", invalid=" + invalid +
-                ", ipEarned=" + ipEarned +
-                ", level=" + level +
-                ", mapId=" + mapId +
-                ", spell1=" + spell1 +
-                ", spell2=" + spell2 +
-                ", stats=" + stats +
-                ", subType='" + subType + '\'' +
-                ", teamId=" + teamId +
-                '}';
+            "championId=" + championId +
+            ", createDate=" + createDate +
+            ", fellowPlayers=" + fellowPlayers +
+            ", gameId=" + gameId +
+            ", gameMode='" + gameMode + '\'' +
+            ", gameType='" + gameType + '\'' +
+            ", invalid=" + invalid +
+            ", ipEarned=" + ipEarned +
+            ", level=" + level +
+            ", mapId=" + mapId +
+            ", spell1=" + spell1 +
+            ", spell2=" + spell2 +
+            ", stats=" + stats +
+            ", subType='" + subType + '\'' +
+            ", teamId=" + teamId +
+            '}';
     }
 }

@@ -9,10 +9,11 @@ import vgalloy.riot.api.internal.service.executor.impl.ExecutorImpl;
 import static org.junit.Assert.assertEquals;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
-public class ExecutorTest {
+public final class ExecutorTest {
 
     @Test
     public void testSimple() {

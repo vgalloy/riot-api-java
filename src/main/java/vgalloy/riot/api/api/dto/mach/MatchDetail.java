@@ -11,8 +11,9 @@ import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.api.constant.Season;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MatchDetail implements Serializable {
 
@@ -164,20 +165,20 @@ public class MatchDetail implements Serializable {
         }
         MatchDetail that = (MatchDetail) o;
         return Objects.equals(mapId, that.mapId) &&
-                Objects.equals(matchCreation, that.matchCreation) &&
-                Objects.equals(matchDuration, that.matchDuration) &&
-                Objects.equals(matchId, that.matchId) &&
-                matchMode == that.matchMode &&
-                matchType == that.matchType &&
-                Objects.equals(matchVersion, that.matchVersion) &&
-                Objects.equals(participantIdentities, that.participantIdentities) &&
-                Objects.equals(participants, that.participants) &&
-                Objects.equals(platformId, that.platformId) &&
-                queueType == that.queueType &&
-                region == that.region &&
-                season == that.season &&
-                Objects.equals(teams, that.teams) &&
-                Objects.equals(timeline, that.timeline);
+            Objects.equals(matchCreation, that.matchCreation) &&
+            Objects.equals(matchDuration, that.matchDuration) &&
+            Objects.equals(matchId, that.matchId) &&
+            matchMode == that.matchMode &&
+            matchType == that.matchType &&
+            Objects.equals(matchVersion, that.matchVersion) &&
+            Objects.equals(participantIdentities, that.participantIdentities) &&
+            Objects.equals(participants, that.participants) &&
+            Objects.equals(platformId, that.platformId) &&
+            queueType == that.queueType &&
+            region == that.region &&
+            season == that.season &&
+            Objects.equals(teams, that.teams) &&
+            Objects.equals(timeline, that.timeline);
     }
 
     @Override
@@ -188,21 +189,21 @@ public class MatchDetail implements Serializable {
     @Override
     public String toString() {
         return "MatchDetail{" +
-                "mapId=" + mapId +
-                ", matchCreation=" + matchCreation +
-                ", matchDuration=" + matchDuration +
-                ", matchId=" + matchId +
-                ", matchMode=" + matchMode +
-                ", matchType=" + matchType +
-                ", matchVersion='" + matchVersion + '\'' +
-                ", participantIdentities=" + participantIdentities +
-                ", participants=" + participants +
-                ", platformId='" + platformId + '\'' +
-                ", queueType=" + queueType +
-                ", region='" + region + '\'' +
-                ", season=" + season +
-                ", teams=" + teams +
-                ", timeline=" + timeline +
-                '}';
+            "mapId=" + mapId +
+            ", matchCreation=" + matchCreation +
+            ", matchDuration=" + matchDuration +
+            ", matchId=" + matchId +
+            ", matchMode=" + matchMode +
+            ", matchType=" + matchType +
+            ", matchVersion='" + matchVersion + '\'' +
+            ", participantIdentities=" + participantIdentities +
+            ", participants=" + participants +
+            ", platformId='" + platformId + '\'' +
+            ", queueType=" + queueType +
+            ", region='" + region + '\'' +
+            ", season=" + season +
+            ", teams=" + teams +
+            ", timeline=" + timeline +
+            '}';
     }
 }

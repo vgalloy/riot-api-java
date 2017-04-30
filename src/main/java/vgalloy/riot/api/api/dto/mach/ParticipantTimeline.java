@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ParticipantTimeline implements Serializable {
 
@@ -265,32 +266,32 @@ public class ParticipantTimeline implements Serializable {
         }
         ParticipantTimeline that = (ParticipantTimeline) o;
         return Objects.equals(ancientGolemAssistsPerMinCounts, that.ancientGolemAssistsPerMinCounts) &&
-                Objects.equals(ancientGolemKillsPerMinCounts, that.ancientGolemKillsPerMinCounts) &&
-                Objects.equals(assistedLaneDeathsPerMinDeltas, that.assistedLaneDeathsPerMinDeltas) &&
-                Objects.equals(assistedLaneKillsPerMinDeltas, that.assistedLaneKillsPerMinDeltas) &&
-                Objects.equals(baronAssistsPerMinCounts, that.baronAssistsPerMinCounts) &&
-                Objects.equals(baronKillsPerMinCounts, that.baronKillsPerMinCounts) &&
-                Objects.equals(creepsPerMinDeltas, that.creepsPerMinDeltas) &&
-                Objects.equals(csDiffPerMinDeltas, that.csDiffPerMinDeltas) &&
-                Objects.equals(damageTakenDiffPerMinDeltas, that.damageTakenDiffPerMinDeltas) &&
-                Objects.equals(damageTakenPerMinDeltas, that.damageTakenPerMinDeltas) &&
-                Objects.equals(dragonAssistsPerMinCounts, that.dragonAssistsPerMinCounts) &&
-                Objects.equals(dragonKillsPerMinCounts, that.dragonKillsPerMinCounts) &&
-                Objects.equals(elderLizardAssistsPerMinCounts, that.elderLizardAssistsPerMinCounts) &&
-                Objects.equals(elderLizardKillsPerMinCounts, that.elderLizardKillsPerMinCounts) &&
-                Objects.equals(goldPerMinDeltas, that.goldPerMinDeltas) &&
-                Objects.equals(inhibitorAssistsPerMinCounts, that.inhibitorAssistsPerMinCounts) &&
-                Objects.equals(inhibitorKillsPerMinCounts, that.inhibitorKillsPerMinCounts) &&
-                Objects.equals(lane, that.lane) &&
-                Objects.equals(role, that.role) &&
-                Objects.equals(towerAssistsPerMinCounts, that.towerAssistsPerMinCounts) &&
-                Objects.equals(towerKillsPerMinCounts, that.towerKillsPerMinCounts) &&
-                Objects.equals(towerKillsPerMinDeltas, that.towerKillsPerMinDeltas) &&
-                Objects.equals(vilemawAssistsPerMinCounts, that.vilemawAssistsPerMinCounts) &&
-                Objects.equals(vilemawKillsPerMinCounts, that.vilemawKillsPerMinCounts) &&
-                Objects.equals(wardsPerMinDeltas, that.wardsPerMinDeltas) &&
-                Objects.equals(xpDiffPerMinDeltas, that.xpDiffPerMinDeltas) &&
-                Objects.equals(xpPerMinDeltas, that.xpPerMinDeltas);
+            Objects.equals(ancientGolemKillsPerMinCounts, that.ancientGolemKillsPerMinCounts) &&
+            Objects.equals(assistedLaneDeathsPerMinDeltas, that.assistedLaneDeathsPerMinDeltas) &&
+            Objects.equals(assistedLaneKillsPerMinDeltas, that.assistedLaneKillsPerMinDeltas) &&
+            Objects.equals(baronAssistsPerMinCounts, that.baronAssistsPerMinCounts) &&
+            Objects.equals(baronKillsPerMinCounts, that.baronKillsPerMinCounts) &&
+            Objects.equals(creepsPerMinDeltas, that.creepsPerMinDeltas) &&
+            Objects.equals(csDiffPerMinDeltas, that.csDiffPerMinDeltas) &&
+            Objects.equals(damageTakenDiffPerMinDeltas, that.damageTakenDiffPerMinDeltas) &&
+            Objects.equals(damageTakenPerMinDeltas, that.damageTakenPerMinDeltas) &&
+            Objects.equals(dragonAssistsPerMinCounts, that.dragonAssistsPerMinCounts) &&
+            Objects.equals(dragonKillsPerMinCounts, that.dragonKillsPerMinCounts) &&
+            Objects.equals(elderLizardAssistsPerMinCounts, that.elderLizardAssistsPerMinCounts) &&
+            Objects.equals(elderLizardKillsPerMinCounts, that.elderLizardKillsPerMinCounts) &&
+            Objects.equals(goldPerMinDeltas, that.goldPerMinDeltas) &&
+            Objects.equals(inhibitorAssistsPerMinCounts, that.inhibitorAssistsPerMinCounts) &&
+            Objects.equals(inhibitorKillsPerMinCounts, that.inhibitorKillsPerMinCounts) &&
+            Objects.equals(lane, that.lane) &&
+            Objects.equals(role, that.role) &&
+            Objects.equals(towerAssistsPerMinCounts, that.towerAssistsPerMinCounts) &&
+            Objects.equals(towerKillsPerMinCounts, that.towerKillsPerMinCounts) &&
+            Objects.equals(towerKillsPerMinDeltas, that.towerKillsPerMinDeltas) &&
+            Objects.equals(vilemawAssistsPerMinCounts, that.vilemawAssistsPerMinCounts) &&
+            Objects.equals(vilemawKillsPerMinCounts, that.vilemawKillsPerMinCounts) &&
+            Objects.equals(wardsPerMinDeltas, that.wardsPerMinDeltas) &&
+            Objects.equals(xpDiffPerMinDeltas, that.xpDiffPerMinDeltas) &&
+            Objects.equals(xpPerMinDeltas, that.xpPerMinDeltas);
     }
 
     @Override
@@ -301,33 +302,33 @@ public class ParticipantTimeline implements Serializable {
     @Override
     public String toString() {
         return "ParticipantTimeline{" +
-                "ancientGolemAssistsPerMinCounts=" + ancientGolemAssistsPerMinCounts +
-                ", ancientGolemKillsPerMinCounts=" + ancientGolemKillsPerMinCounts +
-                ", assistedLaneDeathsPerMinDeltas=" + assistedLaneDeathsPerMinDeltas +
-                ", assistedLaneKillsPerMinDeltas=" + assistedLaneKillsPerMinDeltas +
-                ", baronAssistsPerMinCounts=" + baronAssistsPerMinCounts +
-                ", baronKillsPerMinCounts=" + baronKillsPerMinCounts +
-                ", creepsPerMinDeltas=" + creepsPerMinDeltas +
-                ", csDiffPerMinDeltas=" + csDiffPerMinDeltas +
-                ", damageTakenDiffPerMinDeltas=" + damageTakenDiffPerMinDeltas +
-                ", damageTakenPerMinDeltas=" + damageTakenPerMinDeltas +
-                ", dragonAssistsPerMinCounts=" + dragonAssistsPerMinCounts +
-                ", dragonKillsPerMinCounts=" + dragonKillsPerMinCounts +
-                ", elderLizardAssistsPerMinCounts=" + elderLizardAssistsPerMinCounts +
-                ", elderLizardKillsPerMinCounts=" + elderLizardKillsPerMinCounts +
-                ", goldPerMinDeltas=" + goldPerMinDeltas +
-                ", inhibitorAssistsPerMinCounts=" + inhibitorAssistsPerMinCounts +
-                ", inhibitorKillsPerMinCounts=" + inhibitorKillsPerMinCounts +
-                ", lane='" + lane + '\'' +
-                ", role='" + role + '\'' +
-                ", towerAssistsPerMinCounts=" + towerAssistsPerMinCounts +
-                ", towerKillsPerMinCounts=" + towerKillsPerMinCounts +
-                ", towerKillsPerMinDeltas=" + towerKillsPerMinDeltas +
-                ", vilemawAssistsPerMinCounts=" + vilemawAssistsPerMinCounts +
-                ", vilemawKillsPerMinCounts=" + vilemawKillsPerMinCounts +
-                ", wardsPerMinDeltas=" + wardsPerMinDeltas +
-                ", xpDiffPerMinDeltas=" + xpDiffPerMinDeltas +
-                ", xpPerMinDeltas=" + xpPerMinDeltas +
-                '}';
+            "ancientGolemAssistsPerMinCounts=" + ancientGolemAssistsPerMinCounts +
+            ", ancientGolemKillsPerMinCounts=" + ancientGolemKillsPerMinCounts +
+            ", assistedLaneDeathsPerMinDeltas=" + assistedLaneDeathsPerMinDeltas +
+            ", assistedLaneKillsPerMinDeltas=" + assistedLaneKillsPerMinDeltas +
+            ", baronAssistsPerMinCounts=" + baronAssistsPerMinCounts +
+            ", baronKillsPerMinCounts=" + baronKillsPerMinCounts +
+            ", creepsPerMinDeltas=" + creepsPerMinDeltas +
+            ", csDiffPerMinDeltas=" + csDiffPerMinDeltas +
+            ", damageTakenDiffPerMinDeltas=" + damageTakenDiffPerMinDeltas +
+            ", damageTakenPerMinDeltas=" + damageTakenPerMinDeltas +
+            ", dragonAssistsPerMinCounts=" + dragonAssistsPerMinCounts +
+            ", dragonKillsPerMinCounts=" + dragonKillsPerMinCounts +
+            ", elderLizardAssistsPerMinCounts=" + elderLizardAssistsPerMinCounts +
+            ", elderLizardKillsPerMinCounts=" + elderLizardKillsPerMinCounts +
+            ", goldPerMinDeltas=" + goldPerMinDeltas +
+            ", inhibitorAssistsPerMinCounts=" + inhibitorAssistsPerMinCounts +
+            ", inhibitorKillsPerMinCounts=" + inhibitorKillsPerMinCounts +
+            ", lane='" + lane + '\'' +
+            ", role='" + role + '\'' +
+            ", towerAssistsPerMinCounts=" + towerAssistsPerMinCounts +
+            ", towerKillsPerMinCounts=" + towerKillsPerMinCounts +
+            ", towerKillsPerMinDeltas=" + towerKillsPerMinDeltas +
+            ", vilemawAssistsPerMinCounts=" + vilemawAssistsPerMinCounts +
+            ", vilemawKillsPerMinCounts=" + vilemawKillsPerMinCounts +
+            ", wardsPerMinDeltas=" + wardsPerMinDeltas +
+            ", xpDiffPerMinDeltas=" + xpDiffPerMinDeltas +
+            ", xpPerMinDeltas=" + xpPerMinDeltas +
+            '}';
     }
 }

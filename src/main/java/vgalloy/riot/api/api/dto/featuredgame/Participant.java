@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class Participant implements Serializable {
 
@@ -85,12 +86,12 @@ public class Participant implements Serializable {
         }
         Participant that = (Participant) o;
         return Objects.equals(bot, that.bot) &&
-                Objects.equals(championId, that.championId) &&
-                Objects.equals(profileIconId, that.profileIconId) &&
-                Objects.equals(spell1Id, that.spell1Id) &&
-                Objects.equals(spell2Id, that.spell2Id) &&
-                Objects.equals(summonerName, that.summonerName) &&
-                Objects.equals(teamId, that.teamId);
+            Objects.equals(championId, that.championId) &&
+            Objects.equals(profileIconId, that.profileIconId) &&
+            Objects.equals(spell1Id, that.spell1Id) &&
+            Objects.equals(spell2Id, that.spell2Id) &&
+            Objects.equals(summonerName, that.summonerName) &&
+            Objects.equals(teamId, that.teamId);
     }
 
     @Override
@@ -101,13 +102,13 @@ public class Participant implements Serializable {
     @Override
     public String toString() {
         return "Participant{" +
-                "bot=" + bot +
-                ", championId=" + championId +
-                ", profileIconId=" + profileIconId +
-                ", spell1Id=" + spell1Id +
-                ", spell2Id=" + spell2Id +
-                ", summonerName='" + summonerName + '\'' +
-                ", teamId=" + teamId +
-                '}';
+            "bot=" + bot +
+            ", championId=" + championId +
+            ", profileIconId=" + profileIconId +
+            ", spell1Id=" + spell1Id +
+            ", spell2Id=" + spell2Id +
+            ", summonerName='" + summonerName + '\'' +
+            ", teamId=" + teamId +
+            '}';
     }
 }

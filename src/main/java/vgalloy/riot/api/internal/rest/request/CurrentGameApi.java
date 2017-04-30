@@ -10,13 +10,14 @@ import vgalloy.riot.api.api.dto.currentgame.CurrentGameInfo;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public interface CurrentGameApi {
 
     /**
-     * Get current game information for the given summoner ID.
+     * Get current game information for the given summoner id.
      *
      * @param region     the region
      * @param platformId the platform id

@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class PassiveDto implements Serializable {
 
@@ -58,9 +59,9 @@ public class PassiveDto implements Serializable {
         }
         PassiveDto that = (PassiveDto) o;
         return Objects.equals(description, that.description) &&
-                Objects.equals(image, that.image) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(sanitizedDescription, that.sanitizedDescription);
+            Objects.equals(image, that.image) &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(sanitizedDescription, that.sanitizedDescription);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class PassiveDto implements Serializable {
     @Override
     public String toString() {
         return "PassiveDto{" +
-                "description='" + description + '\'' +
-                ", image=" + image +
-                ", name='" + name + '\'' +
-                ", sanitizedDescription='" + sanitizedDescription + '\'' +
-                '}';
+            "description='" + description + '\'' +
+            ", image=" + image +
+            ", name='" + name + '\'' +
+            ", sanitizedDescription='" + sanitizedDescription + '\'' +
+            '}';
     }
 }

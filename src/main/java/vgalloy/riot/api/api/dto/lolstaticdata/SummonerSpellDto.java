@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class SummonerSpellDto implements Serializable {
 
@@ -230,28 +231,28 @@ public class SummonerSpellDto implements Serializable {
         }
         SummonerSpellDto that = (SummonerSpellDto) o;
         return Objects.equals(cooldown, that.cooldown) &&
-                Objects.equals(cooldownBurn, that.cooldownBurn) &&
-                Objects.equals(cost, that.cost) &&
-                Objects.equals(costBurn, that.costBurn) &&
-                Objects.equals(costType, that.costType) &&
-                Objects.equals(description, that.description) &&
-                Objects.equals(effect, that.effect) &&
-                Objects.equals(effectBurn, that.effectBurn) &&
-                Objects.equals(id, that.id) &&
-                Objects.equals(image, that.image) &&
-                Objects.equals(key, that.key) &&
-                Objects.equals(leveltip, that.leveltip) &&
-                Objects.equals(maxrank, that.maxrank) &&
-                Objects.equals(modes, that.modes) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(range, that.range) &&
-                Objects.equals(rangeBurn, that.rangeBurn) &&
-                Objects.equals(resource, that.resource) &&
-                Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
-                Objects.equals(sanitizedTooltip, that.sanitizedTooltip) &&
-                Objects.equals(summonerLevel, that.summonerLevel) &&
-                Objects.equals(tooltip, that.tooltip) &&
-                Objects.equals(vars, that.vars);
+            Objects.equals(cooldownBurn, that.cooldownBurn) &&
+            Objects.equals(cost, that.cost) &&
+            Objects.equals(costBurn, that.costBurn) &&
+            Objects.equals(costType, that.costType) &&
+            Objects.equals(description, that.description) &&
+            Objects.equals(effect, that.effect) &&
+            Objects.equals(effectBurn, that.effectBurn) &&
+            Objects.equals(id, that.id) &&
+            Objects.equals(image, that.image) &&
+            Objects.equals(key, that.key) &&
+            Objects.equals(leveltip, that.leveltip) &&
+            Objects.equals(maxrank, that.maxrank) &&
+            Objects.equals(modes, that.modes) &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(range, that.range) &&
+            Objects.equals(rangeBurn, that.rangeBurn) &&
+            Objects.equals(resource, that.resource) &&
+            Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
+            Objects.equals(sanitizedTooltip, that.sanitizedTooltip) &&
+            Objects.equals(summonerLevel, that.summonerLevel) &&
+            Objects.equals(tooltip, that.tooltip) &&
+            Objects.equals(vars, that.vars);
     }
 
     @Override
@@ -262,30 +263,30 @@ public class SummonerSpellDto implements Serializable {
     @Override
     public String toString() {
         return "SummonerSpellDto{" +
-                "cooldown=" + cooldown +
-                ", cooldownBurn='" + cooldownBurn + '\'' +
-                ", cost=" + cost +
-                ", costBurn='" + costBurn + '\'' +
-                ", costType='" + costType + '\'' +
-                ", description='" + description + '\'' +
-                ", effect=" + effect +
-                ", effectBurn=" + effectBurn +
-                ", id=" + id +
-                ", image=" + image +
-                ", key='" + key + '\'' +
-                ", leveltip=" + leveltip +
-                ", maxrank=" + maxrank +
-                ", modes=" + modes +
-                ", name='" + name + '\'' +
-                ", range=" + range +
-                ", rangeBurn='" + rangeBurn + '\'' +
-                ", resource='" + resource + '\'' +
-                ", sanitizedDescription='" + sanitizedDescription + '\'' +
-                ", sanitizedTooltip='" + sanitizedTooltip + '\'' +
-                ", summonerLevel=" + summonerLevel +
-                ", tooltip='" + tooltip + '\'' +
-                ", vars=" + vars +
-                '}';
+            "cooldown=" + cooldown +
+            ", cooldownBurn='" + cooldownBurn + '\'' +
+            ", cost=" + cost +
+            ", costBurn='" + costBurn + '\'' +
+            ", costType='" + costType + '\'' +
+            ", description='" + description + '\'' +
+            ", effect=" + effect +
+            ", effectBurn=" + effectBurn +
+            ", id=" + id +
+            ", image=" + image +
+            ", key='" + key + '\'' +
+            ", leveltip=" + leveltip +
+            ", maxrank=" + maxrank +
+            ", modes=" + modes +
+            ", name='" + name + '\'' +
+            ", range=" + range +
+            ", rangeBurn='" + rangeBurn + '\'' +
+            ", resource='" + resource + '\'' +
+            ", sanitizedDescription='" + sanitizedDescription + '\'' +
+            ", sanitizedTooltip='" + sanitizedTooltip + '\'' +
+            ", summonerLevel=" + summonerLevel +
+            ", tooltip='" + tooltip + '\'' +
+            ", vars=" + vars +
+            '}';
     }
 }
 

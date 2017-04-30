@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class FeaturedGames implements Serializable {
 
@@ -41,7 +42,7 @@ public class FeaturedGames implements Serializable {
         }
         FeaturedGames that = (FeaturedGames) o;
         return Objects.equals(clientRefreshInterval, that.clientRefreshInterval) &&
-                Objects.equals(gameList, that.gameList);
+            Objects.equals(gameList, that.gameList);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class FeaturedGames implements Serializable {
     @Override
     public String toString() {
         return "FeaturedGames{" +
-                "clientRefreshInterval=" + clientRefreshInterval +
-                ", gameList=" + gameList +
-                '}';
+            "clientRefreshInterval=" + clientRefreshInterval +
+            ", gameList=" + gameList +
+            '}';
     }
 }

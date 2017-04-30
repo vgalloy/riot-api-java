@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class SkinDto implements Serializable {
 
@@ -49,8 +50,8 @@ public class SkinDto implements Serializable {
         }
         SkinDto skinDto = (SkinDto) o;
         return Objects.equals(id, skinDto.id) &&
-                Objects.equals(name, skinDto.name) &&
-                Objects.equals(num, skinDto.num);
+            Objects.equals(name, skinDto.name) &&
+            Objects.equals(num, skinDto.num);
     }
 
     @Override
@@ -61,9 +62,9 @@ public class SkinDto implements Serializable {
     @Override
     public String toString() {
         return "SkinDto{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", num=" + num +
-                '}';
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", num=" + num +
+            '}';
     }
 }

@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class RuneSlotDto implements Serializable {
 
@@ -40,7 +41,7 @@ public class RuneSlotDto implements Serializable {
         }
         RuneSlotDto that = (RuneSlotDto) o;
         return Objects.equals(runeId, that.runeId) &&
-                Objects.equals(runeSlotId, that.runeSlotId);
+            Objects.equals(runeSlotId, that.runeSlotId);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class RuneSlotDto implements Serializable {
     @Override
     public String toString() {
         return "RuneSlotDto{" +
-                "runeId=" + runeId +
-                ", runeSlotId=" + runeSlotId +
-                '}';
+            "runeId=" + runeId +
+            ", runeSlotId=" + runeSlotId +
+            '}';
     }
 }

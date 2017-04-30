@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class ChampionSpellDto implements Serializable {
 
@@ -212,26 +213,26 @@ public class ChampionSpellDto implements Serializable {
         }
         ChampionSpellDto that = (ChampionSpellDto) o;
         return Objects.equals(altimages, that.altimages) &&
-                Objects.equals(cooldown, that.cooldown) &&
-                Objects.equals(cooldownBurn, that.cooldownBurn) &&
-                Objects.equals(cost, that.cost) &&
-                Objects.equals(costBurn, that.costBurn) &&
-                Objects.equals(costType, that.costType) &&
-                Objects.equals(description, that.description) &&
-                Objects.equals(effect, that.effect) &&
-                Objects.equals(effectBurn, that.effectBurn) &&
-                Objects.equals(image, that.image) &&
-                Objects.equals(key, that.key) &&
-                Objects.equals(leveltip, that.leveltip) &&
-                Objects.equals(maxrank, that.maxrank) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(range, that.range) &&
-                Objects.equals(rangeBurn, that.rangeBurn) &&
-                Objects.equals(resource, that.resource) &&
-                Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
-                Objects.equals(sanitizedTooltip, that.sanitizedTooltip) &&
-                Objects.equals(tooltip, that.tooltip) &&
-                Objects.equals(vars, that.vars);
+            Objects.equals(cooldown, that.cooldown) &&
+            Objects.equals(cooldownBurn, that.cooldownBurn) &&
+            Objects.equals(cost, that.cost) &&
+            Objects.equals(costBurn, that.costBurn) &&
+            Objects.equals(costType, that.costType) &&
+            Objects.equals(description, that.description) &&
+            Objects.equals(effect, that.effect) &&
+            Objects.equals(effectBurn, that.effectBurn) &&
+            Objects.equals(image, that.image) &&
+            Objects.equals(key, that.key) &&
+            Objects.equals(leveltip, that.leveltip) &&
+            Objects.equals(maxrank, that.maxrank) &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(range, that.range) &&
+            Objects.equals(rangeBurn, that.rangeBurn) &&
+            Objects.equals(resource, that.resource) &&
+            Objects.equals(sanitizedDescription, that.sanitizedDescription) &&
+            Objects.equals(sanitizedTooltip, that.sanitizedTooltip) &&
+            Objects.equals(tooltip, that.tooltip) &&
+            Objects.equals(vars, that.vars);
     }
 
     @Override
@@ -242,27 +243,27 @@ public class ChampionSpellDto implements Serializable {
     @Override
     public String toString() {
         return "ChampionSpellDto{" +
-                "altimages=" + altimages +
-                ", cooldown=" + cooldown +
-                ", cooldownBurn='" + cooldownBurn + '\'' +
-                ", cost=" + cost +
-                ", costBurn='" + costBurn + '\'' +
-                ", costType='" + costType + '\'' +
-                ", description='" + description + '\'' +
-                ", effect=" + effect +
-                ", effectBurn=" + effectBurn +
-                ", image=" + image +
-                ", key='" + key + '\'' +
-                ", leveltip=" + leveltip +
-                ", maxrank=" + maxrank +
-                ", name='" + name + '\'' +
-                ", range=" + range +
-                ", rangeBurn='" + rangeBurn + '\'' +
-                ", resource='" + resource + '\'' +
-                ", sanitizedDescription='" + sanitizedDescription + '\'' +
-                ", sanitizedTooltip='" + sanitizedTooltip + '\'' +
-                ", tooltip='" + tooltip + '\'' +
-                ", vars=" + vars +
-                '}';
+            "altimages=" + altimages +
+            ", cooldown=" + cooldown +
+            ", cooldownBurn='" + cooldownBurn + '\'' +
+            ", cost=" + cost +
+            ", costBurn='" + costBurn + '\'' +
+            ", costType='" + costType + '\'' +
+            ", description='" + description + '\'' +
+            ", effect=" + effect +
+            ", effectBurn=" + effectBurn +
+            ", image=" + image +
+            ", key='" + key + '\'' +
+            ", leveltip=" + leveltip +
+            ", maxrank=" + maxrank +
+            ", name='" + name + '\'' +
+            ", range=" + range +
+            ", rangeBurn='" + rangeBurn + '\'' +
+            ", resource='" + resource + '\'' +
+            ", sanitizedDescription='" + sanitizedDescription + '\'' +
+            ", sanitizedTooltip='" + sanitizedTooltip + '\'' +
+            ", tooltip='" + tooltip + '\'' +
+            ", vars=" + vars +
+            '}';
     }
 }

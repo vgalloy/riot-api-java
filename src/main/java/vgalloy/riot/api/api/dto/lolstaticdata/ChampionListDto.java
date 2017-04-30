@@ -5,8 +5,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class ChampionListDto implements Serializable {
 
@@ -68,10 +69,10 @@ public class ChampionListDto implements Serializable {
         }
         ChampionListDto that = (ChampionListDto) o;
         return Objects.equals(data, that.data) &&
-                Objects.equals(format, that.format) &&
-                Objects.equals(keys, that.keys) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(version, that.version);
+            Objects.equals(format, that.format) &&
+            Objects.equals(keys, that.keys) &&
+            Objects.equals(type, that.type) &&
+            Objects.equals(version, that.version);
     }
 
     @Override
@@ -82,11 +83,11 @@ public class ChampionListDto implements Serializable {
     @Override
     public String toString() {
         return "ChampionListDto{" +
-                "data=" + data +
-                ", format='" + format + '\'' +
-                ", keys=" + keys +
-                ", type='" + type + '\'' +
-                ", version='" + version + '\'' +
-                '}';
+            "data=" + data +
+            ", format='" + format + '\'' +
+            ", keys=" + keys +
+            ", type='" + type + '\'' +
+            ", version='" + version + '\'' +
+            '}';
     }
 }

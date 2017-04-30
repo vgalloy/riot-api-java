@@ -10,8 +10,9 @@ import vgalloy.riot.api.api.constant.PlatformId;
 import vgalloy.riot.api.api.dto.currentgame.Observer;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class FeaturedGameInfo implements Serializable {
 
@@ -127,16 +128,16 @@ public class FeaturedGameInfo implements Serializable {
         }
         FeaturedGameInfo that = (FeaturedGameInfo) o;
         return Objects.equals(bannedChampions, that.bannedChampions) &&
-                Objects.equals(gameId, that.gameId) &&
-                Objects.equals(gameLength, that.gameLength) &&
-                gameMode == that.gameMode &&
-                Objects.equals(gameQueueConfigId, that.gameQueueConfigId) &&
-                Objects.equals(gameStartTime, that.gameStartTime) &&
-                gameType == that.gameType &&
-                Objects.equals(mapId, that.mapId) &&
-                Objects.equals(observers, that.observers) &&
-                Objects.equals(participants, that.participants) &&
-                platformId == that.platformId;
+            Objects.equals(gameId, that.gameId) &&
+            Objects.equals(gameLength, that.gameLength) &&
+            gameMode == that.gameMode &&
+            Objects.equals(gameQueueConfigId, that.gameQueueConfigId) &&
+            Objects.equals(gameStartTime, that.gameStartTime) &&
+            gameType == that.gameType &&
+            Objects.equals(mapId, that.mapId) &&
+            Objects.equals(observers, that.observers) &&
+            Objects.equals(participants, that.participants) &&
+            platformId == that.platformId;
     }
 
     @Override
@@ -147,17 +148,17 @@ public class FeaturedGameInfo implements Serializable {
     @Override
     public String toString() {
         return "FeaturedGameInfo{" +
-                "bannedChampions=" + bannedChampions +
-                ", gameId=" + gameId +
-                ", gameLength=" + gameLength +
-                ", gameMode=" + gameMode +
-                ", gameQueueConfigId=" + gameQueueConfigId +
-                ", gameStartTime=" + gameStartTime +
-                ", gameType=" + gameType +
-                ", mapId=" + mapId +
-                ", observers=" + observers +
-                ", participants=" + participants +
-                ", platformId='" + platformId + '\'' +
-                '}';
+            "bannedChampions=" + bannedChampions +
+            ", gameId=" + gameId +
+            ", gameLength=" + gameLength +
+            ", gameMode=" + gameMode +
+            ", gameQueueConfigId=" + gameQueueConfigId +
+            ", gameStartTime=" + gameStartTime +
+            ", gameType=" + gameType +
+            ", mapId=" + mapId +
+            ", observers=" + observers +
+            ", participants=" + participants +
+            ", platformId='" + platformId + '\'' +
+            '}';
     }
 }

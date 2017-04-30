@@ -8,8 +8,9 @@ import vgalloy.riot.api.internal.client.RiotWebApi;
 import vgalloy.riot.api.internal.query.DefaultParameter;
 
 /**
+ * Created by Vincent on 23/05/2016.
+ *
  * @author Vincent Galloy
- *         Created by Vincent on 23/05/2016.
  */
 public class GetShardListQuery extends AbstractQuery<GetShardListQuery, List<Shard>> {
 

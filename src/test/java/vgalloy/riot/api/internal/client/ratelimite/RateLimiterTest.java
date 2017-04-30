@@ -16,10 +16,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
  */
-public class RateLimiterTest {
+public final class RateLimiterTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RateLimiterTest.class);
 
@@ -69,8 +70,8 @@ public class RateLimiterTest {
         Executor executor = new ExecutorImpl();
         AtomicInteger count = new AtomicInteger();
         IntStream.range(0, requestPoolSize)
-                .asLongStream()
-                .forEach(e -> executor.addTask(createPlusOneThread(rateLimiter, count)));
+            .asLongStream()
+            .forEach(e -> executor.addTask(createPlusOneThread(rateLimiter, count)));
 
         // WHEN
         long start = System.currentTimeMillis();

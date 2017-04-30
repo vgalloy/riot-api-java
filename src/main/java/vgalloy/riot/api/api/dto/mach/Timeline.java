@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Timeline implements Serializable {
 
@@ -41,7 +42,7 @@ public class Timeline implements Serializable {
         }
         Timeline timeline = (Timeline) o;
         return Objects.equals(frameInterval, timeline.frameInterval) &&
-                Objects.equals(frames, timeline.frames);
+            Objects.equals(frames, timeline.frames);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class Timeline implements Serializable {
     @Override
     public String toString() {
         return "Timeline{" +
-                "frameInterval=" + frameInterval +
-                ", frames=" + frames +
-                '}';
+            "frameInterval=" + frameInterval +
+            ", frames=" + frames +
+            '}';
     }
 }

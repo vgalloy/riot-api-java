@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class RankedStatsDto implements Serializable {
 
@@ -50,8 +51,8 @@ public class RankedStatsDto implements Serializable {
         }
         RankedStatsDto that = (RankedStatsDto) o;
         return Objects.equals(champions, that.champions) &&
-                Objects.equals(modifyDate, that.modifyDate) &&
-                Objects.equals(summonerId, that.summonerId);
+            Objects.equals(modifyDate, that.modifyDate) &&
+            Objects.equals(summonerId, that.summonerId);
     }
 
     @Override
@@ -62,9 +63,9 @@ public class RankedStatsDto implements Serializable {
     @Override
     public String toString() {
         return "RankedStatsDto{" +
-                "champions=" + champions +
-                ", modifyDate=" + modifyDate +
-                ", summonerId=" + summonerId +
-                '}';
+            "champions=" + champions +
+            ", modifyDate=" + modifyDate +
+            ", summonerId=" + summonerId +
+            '}';
     }
 }

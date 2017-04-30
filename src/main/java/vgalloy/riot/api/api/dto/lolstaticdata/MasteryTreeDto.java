@@ -7,8 +7,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MasteryTreeDto implements Serializable {
 
@@ -55,8 +56,8 @@ public class MasteryTreeDto implements Serializable {
         }
         MasteryTreeDto that = (MasteryTreeDto) o;
         return Objects.equals(cunning, that.cunning) &&
-                Objects.equals(ferocity, that.ferocity) &&
-                Objects.equals(resolve, that.resolve);
+            Objects.equals(ferocity, that.ferocity) &&
+            Objects.equals(resolve, that.resolve);
     }
 
     @Override
@@ -67,9 +68,9 @@ public class MasteryTreeDto implements Serializable {
     @Override
     public String toString() {
         return "MasteryTreeDto{" +
-                "cunning=" + cunning +
-                ", ferocity=" + ferocity +
-                ", resolve=" + resolve +
-                '}';
+            "cunning=" + cunning +
+            ", ferocity=" + ferocity +
+            ", resolve=" + resolve +
+            '}';
     }
 }

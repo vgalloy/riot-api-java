@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class PlayerStatsSummaryDto implements Serializable {
 
@@ -67,10 +68,10 @@ public class PlayerStatsSummaryDto implements Serializable {
         }
         PlayerStatsSummaryDto that = (PlayerStatsSummaryDto) o;
         return Objects.equals(aggregatedStats, that.aggregatedStats) &&
-                Objects.equals(losses, that.losses) &&
-                Objects.equals(modifyDate, that.modifyDate) &&
-                Objects.equals(playerStatSummaryType, that.playerStatSummaryType) &&
-                Objects.equals(wins, that.wins);
+            Objects.equals(losses, that.losses) &&
+            Objects.equals(modifyDate, that.modifyDate) &&
+            Objects.equals(playerStatSummaryType, that.playerStatSummaryType) &&
+            Objects.equals(wins, that.wins);
     }
 
     @Override
@@ -81,11 +82,11 @@ public class PlayerStatsSummaryDto implements Serializable {
     @Override
     public String toString() {
         return "PlayerStatsSummaryDto{" +
-                "aggregatedStats=" + aggregatedStats +
-                ", losses=" + losses +
-                ", modifyDate=" + modifyDate +
-                ", playerStatSummaryType='" + playerStatSummaryType + '\'' +
-                ", wins=" + wins +
-                '}';
+            "aggregatedStats=" + aggregatedStats +
+            ", losses=" + losses +
+            ", modifyDate=" + modifyDate +
+            ", playerStatSummaryType='" + playerStatSummaryType + '\'' +
+            ", wins=" + wins +
+            '}';
     }
 }

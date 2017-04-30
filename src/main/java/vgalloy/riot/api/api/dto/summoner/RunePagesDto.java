@@ -5,8 +5,9 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class RunePagesDto implements Serializable {
 
@@ -41,7 +42,7 @@ public class RunePagesDto implements Serializable {
         }
         RunePagesDto that = (RunePagesDto) o;
         return Objects.equals(pages, that.pages) &&
-                Objects.equals(summonerId, that.summonerId);
+            Objects.equals(summonerId, that.summonerId);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class RunePagesDto implements Serializable {
     @Override
     public String toString() {
         return "RunePagesDto{" +
-                "pages=" + pages +
-                ", summonerId=" + summonerId +
-                '}';
+            "pages=" + pages +
+            ", summonerId=" + summonerId +
+            '}';
     }
 }

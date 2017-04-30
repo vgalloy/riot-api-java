@@ -7,8 +7,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Incident implements Serializable {
 
@@ -62,9 +63,9 @@ public class Incident implements Serializable {
         }
         Incident incident = (Incident) o;
         return Objects.equals(active, incident.active) &&
-                Objects.equals(createdAt, incident.createdAt) &&
-                Objects.equals(id, incident.id) &&
-                Objects.equals(updates, incident.updates);
+            Objects.equals(createdAt, incident.createdAt) &&
+            Objects.equals(id, incident.id) &&
+            Objects.equals(updates, incident.updates);
     }
 
     @Override
@@ -75,10 +76,10 @@ public class Incident implements Serializable {
     @Override
     public String toString() {
         return "Incident{" +
-                "active=" + active +
-                ", createdAt='" + createdAt + '\'' +
-                ", id=" + id +
-                ", updates=" + updates +
-                '}';
+            "active=" + active +
+            ", createdAt='" + createdAt + '\'' +
+            ", id=" + id +
+            ", updates=" + updates +
+            '}';
     }
 }

@@ -17,8 +17,9 @@ import vgalloy.riot.api.api.query.Query;
 import vgalloy.riot.api.internal.service.request.ChampionApiTest;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
  */
 public abstract class AbstractTest {
 
@@ -34,8 +35,8 @@ public abstract class AbstractTest {
             LOGGER.error("Can not load properties");
         }
         RIOT_API = RiotApiFactory.newRiotApi()
-                .addGlobalRateLimit(new RateLimit(4, 10_000), new RateLimit(400, 10 * 60 * 1_000))
-                .defaultRiotApiKey(new RiotApiKey(properties));
+            .addGlobalRateLimit(new RateLimit(4, 10_000), new RateLimit(400, 10 * 60 * 1_000))
+            .defaultRiotApiKey(new RiotApiKey(properties));
     }
 
     protected class QueryTester {
@@ -59,12 +60,12 @@ public abstract class AbstractTest {
          */
         public QueryTester test(AbstractCallbackQuery<? extends Query<?>, ?> query) {
             query.onBadRequestExceptionCallback(e -> code = "400")
-                    .onNotAuthorizedException(e -> code = "401")
-                    .onForbiddenException(e -> code = "403")
-                    .onNotFoundException(e -> code = "404")
-                    .onInternalServerErrorException(e -> code = "500")
-                    .onServiceUnavailableException(e -> code = "503")
-                    .execute();
+                .onNotAuthorizedException(e -> code = "401")
+                .onForbiddenException(e -> code = "403")
+                .onNotFoundException(e -> code = "404")
+                .onInternalServerErrorException(e -> code = "500")
+                .onServiceUnavailableException(e -> code = "503")
+                .execute();
             return this;
         }
 

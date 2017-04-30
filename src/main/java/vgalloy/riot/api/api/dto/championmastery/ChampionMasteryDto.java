@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 20/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 20/05/16.
  */
 public class ChampionMasteryDto implements Serializable {
 
@@ -112,15 +113,15 @@ public class ChampionMasteryDto implements Serializable {
         }
         ChampionMasteryDto that = (ChampionMasteryDto) o;
         return Objects.equals(championId, that.championId) &&
-                Objects.equals(championLevel, that.championLevel) &&
-                Objects.equals(championPoints, that.championPoints) &&
-                Objects.equals(championPointsSinceLastLevel, that.championPointsSinceLastLevel) &&
-                Objects.equals(championPointsUntilNextLevel, that.championPointsUntilNextLevel) &&
-                Objects.equals(chestGranted, that.chestGranted) &&
-                Objects.equals(highestGrade, that.highestGrade) &&
-                Objects.equals(lastPlayTime, that.lastPlayTime) &&
-                Objects.equals(playerId, that.playerId) &&
-                Objects.equals(tokensEarned, that.tokensEarned);
+            Objects.equals(championLevel, that.championLevel) &&
+            Objects.equals(championPoints, that.championPoints) &&
+            Objects.equals(championPointsSinceLastLevel, that.championPointsSinceLastLevel) &&
+            Objects.equals(championPointsUntilNextLevel, that.championPointsUntilNextLevel) &&
+            Objects.equals(chestGranted, that.chestGranted) &&
+            Objects.equals(highestGrade, that.highestGrade) &&
+            Objects.equals(lastPlayTime, that.lastPlayTime) &&
+            Objects.equals(playerId, that.playerId) &&
+            Objects.equals(tokensEarned, that.tokensEarned);
     }
 
     @Override
@@ -131,16 +132,16 @@ public class ChampionMasteryDto implements Serializable {
     @Override
     public String toString() {
         return "ChampionMasteryDTO{" +
-                "championId=" + championId +
-                ", championLevel=" + championLevel +
-                ", championPoints=" + championPoints +
-                ", championPointsSinceLastLevel=" + championPointsSinceLastLevel +
-                ", championPointsUntilNextLevel=" + championPointsUntilNextLevel +
-                ", chestGranted=" + chestGranted +
-                ", highestGrade='" + highestGrade + '\'' +
-                ", lastPlayTime=" + lastPlayTime +
-                ", playerId=" + playerId +
-                ", tokensEarned=" + tokensEarned +
-                '}';
+            "championId=" + championId +
+            ", championLevel=" + championLevel +
+            ", championPoints=" + championPoints +
+            ", championPointsSinceLastLevel=" + championPointsSinceLastLevel +
+            ", championPointsUntilNextLevel=" + championPointsUntilNextLevel +
+            ", chestGranted=" + chestGranted +
+            ", highestGrade='" + highestGrade + '\'' +
+            ", lastPlayTime=" + lastPlayTime +
+            ", playerId=" + playerId +
+            ", tokensEarned=" + tokensEarned +
+            '}';
     }
 }

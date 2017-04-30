@@ -4,8 +4,9 @@ import vgalloy.riot.api.api.model.RiotApi;
 import vgalloy.riot.api.internal.service.RiotApiImpl;
 
 /**
+ * Created by Vincent Galloy on 29/08/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 29/08/16.
  */
 public final class RiotApiFactory {
 

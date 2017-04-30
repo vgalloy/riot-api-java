@@ -6,8 +6,9 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class RecentGamesDto implements Serializable {
 
@@ -42,7 +43,7 @@ public class RecentGamesDto implements Serializable {
         }
         RecentGamesDto that = (RecentGamesDto) o;
         return Objects.equals(summonerId, that.summonerId) &&
-                Objects.equals(games, that.games);
+            Objects.equals(games, that.games);
     }
 
     @Override
@@ -53,8 +54,8 @@ public class RecentGamesDto implements Serializable {
     @Override
     public String toString() {
         return "RecentGamesDto{" +
-                "summonerId=" + summonerId +
-                ", games=" + games +
-                '}';
+            "summonerId=" + summonerId +
+            ", games=" + games +
+            '}';
     }
 }

@@ -10,8 +10,9 @@ import vgalloy.riot.api.internal.client.ratelimite.RateLimiter;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 01/06/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 01/06/16.
  */
 public class RateLimitManagerImpl implements RateLimitManager {
 
@@ -35,9 +36,9 @@ public class RateLimitManagerImpl implements RateLimitManager {
     @Override
     public RateLimitManager addRateLimit(RateLimit... rateLimit) {
         rateLimiterMap.entrySet().stream()
-                .map(Entry::getValue)
-                .map(RateLimiterImpl.class::cast)
-                .forEach(e -> e.addRateLimit(rateLimit));
+            .map(Entry::getValue)
+            .map(RateLimiterImpl.class::cast)
+            .forEach(e -> e.addRateLimit(rateLimit));
         return this;
     }
 

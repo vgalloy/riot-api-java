@@ -9,8 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Created by Vincent Galloy on 21/06/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/06/16.
  */
 public class RateLimitFilter implements ClientResponseFilter {
 

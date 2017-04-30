@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class AggregatedStatsDto implements Serializable {
 
@@ -526,61 +527,61 @@ public class AggregatedStatsDto implements Serializable {
         }
         AggregatedStatsDto that = (AggregatedStatsDto) o;
         return Objects.equals(averageAssists, that.averageAssists) &&
-                Objects.equals(averageChampionsKilled, that.averageChampionsKilled) &&
-                Objects.equals(averageCombatPlayerScore, that.averageCombatPlayerScore) &&
-                Objects.equals(averageNodeCapture, that.averageNodeCapture) &&
-                Objects.equals(averageNodeCaptureAssist, that.averageNodeCaptureAssist) &&
-                Objects.equals(averageNodeNeutralize, that.averageNodeNeutralize) &&
-                Objects.equals(averageNodeNeutralizeAssist, that.averageNodeNeutralizeAssist) &&
-                Objects.equals(averageNumDeaths, that.averageNumDeaths) &&
-                Objects.equals(averageObjectivePlayerScore, that.averageObjectivePlayerScore) &&
-                Objects.equals(averageTeamObjective, that.averageTeamObjective) &&
-                Objects.equals(averageTotalPlayerScore, that.averageTotalPlayerScore) &&
-                Objects.equals(botGamesPlayed, that.botGamesPlayed) &&
-                Objects.equals(killingSpree, that.killingSpree) &&
-                Objects.equals(maxAssists, that.maxAssists) &&
-                Objects.equals(maxChampionsKilled, that.maxChampionsKilled) &&
-                Objects.equals(maxCombatPlayerScore, that.maxCombatPlayerScore) &&
-                Objects.equals(maxLargestCriticalStrike, that.maxLargestCriticalStrike) &&
-                Objects.equals(maxLargestKillingSpree, that.maxLargestKillingSpree) &&
-                Objects.equals(maxNodeCapture, that.maxNodeCapture) &&
-                Objects.equals(maxNodeCaptureAssist, that.maxNodeCaptureAssist) &&
-                Objects.equals(maxNodeNeutralize, that.maxNodeNeutralize) &&
-                Objects.equals(maxNodeNeutralizeAssist, that.maxNodeNeutralizeAssist) &&
-                Objects.equals(maxNumDeaths, that.maxNumDeaths) &&
-                Objects.equals(maxObjectivePlayerScore, that.maxObjectivePlayerScore) &&
-                Objects.equals(maxTeamObjective, that.maxTeamObjective) &&
-                Objects.equals(maxTimePlayed, that.maxTimePlayed) &&
-                Objects.equals(maxTimeSpentLiving, that.maxTimeSpentLiving) &&
-                Objects.equals(maxTotalPlayerScore, that.maxTotalPlayerScore) &&
-                Objects.equals(mostChampionKillsPerSession, that.mostChampionKillsPerSession) &&
-                Objects.equals(mostSpellsCast, that.mostSpellsCast) &&
-                Objects.equals(normalGamesPlayed, that.normalGamesPlayed) &&
-                Objects.equals(rankedPremadeGamesPlayed, that.rankedPremadeGamesPlayed) &&
-                Objects.equals(rankedSoloGamesPlayed, that.rankedSoloGamesPlayed) &&
-                Objects.equals(totalAssists, that.totalAssists) &&
-                Objects.equals(totalChampionKills, that.totalChampionKills) &&
-                Objects.equals(totalDamageDealt, that.totalDamageDealt) &&
-                Objects.equals(totalDamageTaken, that.totalDamageTaken) &&
-                Objects.equals(totalDeathsPerSession, that.totalDeathsPerSession) &&
-                Objects.equals(totalDoubleKills, that.totalDoubleKills) &&
-                Objects.equals(totalFirstBlood, that.totalFirstBlood) &&
-                Objects.equals(totalGoldEarned, that.totalGoldEarned) &&
-                Objects.equals(totalHeal, that.totalHeal) &&
-                Objects.equals(totalMagicDamageDealt, that.totalMagicDamageDealt) &&
-                Objects.equals(totalMinionKills, that.totalMinionKills) &&
-                Objects.equals(totalNeutralMinionsKilled, that.totalNeutralMinionsKilled) &&
-                Objects.equals(totalNodeCapture, that.totalNodeCapture) &&
-                Objects.equals(totalNodeNeutralize, that.totalNodeNeutralize) &&
-                Objects.equals(totalPentaKills, that.totalPentaKills) &&
-                Objects.equals(totalPhysicalDamageDealt, that.totalPhysicalDamageDealt) &&
-                Objects.equals(totalQuadraKills, that.totalQuadraKills) &&
-                Objects.equals(totalSessionsLost, that.totalSessionsLost) &&
-                Objects.equals(totalSessionsPlayed, that.totalSessionsPlayed) &&
-                Objects.equals(totalSessionsWon, that.totalSessionsWon) &&
-                Objects.equals(totalTripleKills, that.totalTripleKills) &&
-                Objects.equals(totalTurretsKilled, that.totalTurretsKilled) &&
-                Objects.equals(totalUnrealKills, that.totalUnrealKills);
+            Objects.equals(averageChampionsKilled, that.averageChampionsKilled) &&
+            Objects.equals(averageCombatPlayerScore, that.averageCombatPlayerScore) &&
+            Objects.equals(averageNodeCapture, that.averageNodeCapture) &&
+            Objects.equals(averageNodeCaptureAssist, that.averageNodeCaptureAssist) &&
+            Objects.equals(averageNodeNeutralize, that.averageNodeNeutralize) &&
+            Objects.equals(averageNodeNeutralizeAssist, that.averageNodeNeutralizeAssist) &&
+            Objects.equals(averageNumDeaths, that.averageNumDeaths) &&
+            Objects.equals(averageObjectivePlayerScore, that.averageObjectivePlayerScore) &&
+            Objects.equals(averageTeamObjective, that.averageTeamObjective) &&
+            Objects.equals(averageTotalPlayerScore, that.averageTotalPlayerScore) &&
+            Objects.equals(botGamesPlayed, that.botGamesPlayed) &&
+            Objects.equals(killingSpree, that.killingSpree) &&
+            Objects.equals(maxAssists, that.maxAssists) &&
+            Objects.equals(maxChampionsKilled, that.maxChampionsKilled) &&
+            Objects.equals(maxCombatPlayerScore, that.maxCombatPlayerScore) &&
+            Objects.equals(maxLargestCriticalStrike, that.maxLargestCriticalStrike) &&
+            Objects.equals(maxLargestKillingSpree, that.maxLargestKillingSpree) &&
+            Objects.equals(maxNodeCapture, that.maxNodeCapture) &&
+            Objects.equals(maxNodeCaptureAssist, that.maxNodeCaptureAssist) &&
+            Objects.equals(maxNodeNeutralize, that.maxNodeNeutralize) &&
+            Objects.equals(maxNodeNeutralizeAssist, that.maxNodeNeutralizeAssist) &&
+            Objects.equals(maxNumDeaths, that.maxNumDeaths) &&
+            Objects.equals(maxObjectivePlayerScore, that.maxObjectivePlayerScore) &&
+            Objects.equals(maxTeamObjective, that.maxTeamObjective) &&
+            Objects.equals(maxTimePlayed, that.maxTimePlayed) &&
+            Objects.equals(maxTimeSpentLiving, that.maxTimeSpentLiving) &&
+            Objects.equals(maxTotalPlayerScore, that.maxTotalPlayerScore) &&
+            Objects.equals(mostChampionKillsPerSession, that.mostChampionKillsPerSession) &&
+            Objects.equals(mostSpellsCast, that.mostSpellsCast) &&
+            Objects.equals(normalGamesPlayed, that.normalGamesPlayed) &&
+            Objects.equals(rankedPremadeGamesPlayed, that.rankedPremadeGamesPlayed) &&
+            Objects.equals(rankedSoloGamesPlayed, that.rankedSoloGamesPlayed) &&
+            Objects.equals(totalAssists, that.totalAssists) &&
+            Objects.equals(totalChampionKills, that.totalChampionKills) &&
+            Objects.equals(totalDamageDealt, that.totalDamageDealt) &&
+            Objects.equals(totalDamageTaken, that.totalDamageTaken) &&
+            Objects.equals(totalDeathsPerSession, that.totalDeathsPerSession) &&
+            Objects.equals(totalDoubleKills, that.totalDoubleKills) &&
+            Objects.equals(totalFirstBlood, that.totalFirstBlood) &&
+            Objects.equals(totalGoldEarned, that.totalGoldEarned) &&
+            Objects.equals(totalHeal, that.totalHeal) &&
+            Objects.equals(totalMagicDamageDealt, that.totalMagicDamageDealt) &&
+            Objects.equals(totalMinionKills, that.totalMinionKills) &&
+            Objects.equals(totalNeutralMinionsKilled, that.totalNeutralMinionsKilled) &&
+            Objects.equals(totalNodeCapture, that.totalNodeCapture) &&
+            Objects.equals(totalNodeNeutralize, that.totalNodeNeutralize) &&
+            Objects.equals(totalPentaKills, that.totalPentaKills) &&
+            Objects.equals(totalPhysicalDamageDealt, that.totalPhysicalDamageDealt) &&
+            Objects.equals(totalQuadraKills, that.totalQuadraKills) &&
+            Objects.equals(totalSessionsLost, that.totalSessionsLost) &&
+            Objects.equals(totalSessionsPlayed, that.totalSessionsPlayed) &&
+            Objects.equals(totalSessionsWon, that.totalSessionsWon) &&
+            Objects.equals(totalTripleKills, that.totalTripleKills) &&
+            Objects.equals(totalTurretsKilled, that.totalTurretsKilled) &&
+            Objects.equals(totalUnrealKills, that.totalUnrealKills);
     }
 
     @Override
@@ -591,62 +592,62 @@ public class AggregatedStatsDto implements Serializable {
     @Override
     public String toString() {
         return "AggregatedStatsDto{" +
-                "averageAssists=" + averageAssists +
-                ", averageChampionsKilled=" + averageChampionsKilled +
-                ", averageCombatPlayerScore=" + averageCombatPlayerScore +
-                ", averageNodeCapture=" + averageNodeCapture +
-                ", averageNodeCaptureAssist=" + averageNodeCaptureAssist +
-                ", averageNodeNeutralize=" + averageNodeNeutralize +
-                ", averageNodeNeutralizeAssist=" + averageNodeNeutralizeAssist +
-                ", averageNumDeaths=" + averageNumDeaths +
-                ", averageObjectivePlayerScore=" + averageObjectivePlayerScore +
-                ", averageTeamObjective=" + averageTeamObjective +
-                ", averageTotalPlayerScore=" + averageTotalPlayerScore +
-                ", botGamesPlayed=" + botGamesPlayed +
-                ", killingSpree=" + killingSpree +
-                ", maxAssists=" + maxAssists +
-                ", maxChampionsKilled=" + maxChampionsKilled +
-                ", maxCombatPlayerScore=" + maxCombatPlayerScore +
-                ", maxLargestCriticalStrike=" + maxLargestCriticalStrike +
-                ", maxLargestKillingSpree=" + maxLargestKillingSpree +
-                ", maxNodeCapture=" + maxNodeCapture +
-                ", maxNodeCaptureAssist=" + maxNodeCaptureAssist +
-                ", maxNodeNeutralize=" + maxNodeNeutralize +
-                ", maxNodeNeutralizeAssist=" + maxNodeNeutralizeAssist +
-                ", maxNumDeaths=" + maxNumDeaths +
-                ", maxObjectivePlayerScore=" + maxObjectivePlayerScore +
-                ", maxTeamObjective=" + maxTeamObjective +
-                ", maxTimePlayed=" + maxTimePlayed +
-                ", maxTimeSpentLiving=" + maxTimeSpentLiving +
-                ", maxTotalPlayerScore=" + maxTotalPlayerScore +
-                ", mostChampionKillsPerSession=" + mostChampionKillsPerSession +
-                ", mostSpellsCast=" + mostSpellsCast +
-                ", normalGamesPlayed=" + normalGamesPlayed +
-                ", rankedPremadeGamesPlayed=" + rankedPremadeGamesPlayed +
-                ", rankedSoloGamesPlayed=" + rankedSoloGamesPlayed +
-                ", totalAssists=" + totalAssists +
-                ", totalChampionKills=" + totalChampionKills +
-                ", totalDamageDealt=" + totalDamageDealt +
-                ", totalDamageTaken=" + totalDamageTaken +
-                ", totalDeathsPerSession=" + totalDeathsPerSession +
-                ", totalDoubleKills=" + totalDoubleKills +
-                ", totalFirstBlood=" + totalFirstBlood +
-                ", totalGoldEarned=" + totalGoldEarned +
-                ", totalHeal=" + totalHeal +
-                ", totalMagicDamageDealt=" + totalMagicDamageDealt +
-                ", totalMinionKills=" + totalMinionKills +
-                ", totalNeutralMinionsKilled=" + totalNeutralMinionsKilled +
-                ", totalNodeCapture=" + totalNodeCapture +
-                ", totalNodeNeutralize=" + totalNodeNeutralize +
-                ", totalPentaKills=" + totalPentaKills +
-                ", totalPhysicalDamageDealt=" + totalPhysicalDamageDealt +
-                ", totalQuadraKills=" + totalQuadraKills +
-                ", totalSessionsLost=" + totalSessionsLost +
-                ", totalSessionsPlayed=" + totalSessionsPlayed +
-                ", totalSessionsWon=" + totalSessionsWon +
-                ", totalTripleKills=" + totalTripleKills +
-                ", totalTurretsKilled=" + totalTurretsKilled +
-                ", totalUnrealKills=" + totalUnrealKills +
-                '}';
+            "averageAssists=" + averageAssists +
+            ", averageChampionsKilled=" + averageChampionsKilled +
+            ", averageCombatPlayerScore=" + averageCombatPlayerScore +
+            ", averageNodeCapture=" + averageNodeCapture +
+            ", averageNodeCaptureAssist=" + averageNodeCaptureAssist +
+            ", averageNodeNeutralize=" + averageNodeNeutralize +
+            ", averageNodeNeutralizeAssist=" + averageNodeNeutralizeAssist +
+            ", averageNumDeaths=" + averageNumDeaths +
+            ", averageObjectivePlayerScore=" + averageObjectivePlayerScore +
+            ", averageTeamObjective=" + averageTeamObjective +
+            ", averageTotalPlayerScore=" + averageTotalPlayerScore +
+            ", botGamesPlayed=" + botGamesPlayed +
+            ", killingSpree=" + killingSpree +
+            ", maxAssists=" + maxAssists +
+            ", maxChampionsKilled=" + maxChampionsKilled +
+            ", maxCombatPlayerScore=" + maxCombatPlayerScore +
+            ", maxLargestCriticalStrike=" + maxLargestCriticalStrike +
+            ", maxLargestKillingSpree=" + maxLargestKillingSpree +
+            ", maxNodeCapture=" + maxNodeCapture +
+            ", maxNodeCaptureAssist=" + maxNodeCaptureAssist +
+            ", maxNodeNeutralize=" + maxNodeNeutralize +
+            ", maxNodeNeutralizeAssist=" + maxNodeNeutralizeAssist +
+            ", maxNumDeaths=" + maxNumDeaths +
+            ", maxObjectivePlayerScore=" + maxObjectivePlayerScore +
+            ", maxTeamObjective=" + maxTeamObjective +
+            ", maxTimePlayed=" + maxTimePlayed +
+            ", maxTimeSpentLiving=" + maxTimeSpentLiving +
+            ", maxTotalPlayerScore=" + maxTotalPlayerScore +
+            ", mostChampionKillsPerSession=" + mostChampionKillsPerSession +
+            ", mostSpellsCast=" + mostSpellsCast +
+            ", normalGamesPlayed=" + normalGamesPlayed +
+            ", rankedPremadeGamesPlayed=" + rankedPremadeGamesPlayed +
+            ", rankedSoloGamesPlayed=" + rankedSoloGamesPlayed +
+            ", totalAssists=" + totalAssists +
+            ", totalChampionKills=" + totalChampionKills +
+            ", totalDamageDealt=" + totalDamageDealt +
+            ", totalDamageTaken=" + totalDamageTaken +
+            ", totalDeathsPerSession=" + totalDeathsPerSession +
+            ", totalDoubleKills=" + totalDoubleKills +
+            ", totalFirstBlood=" + totalFirstBlood +
+            ", totalGoldEarned=" + totalGoldEarned +
+            ", totalHeal=" + totalHeal +
+            ", totalMagicDamageDealt=" + totalMagicDamageDealt +
+            ", totalMinionKills=" + totalMinionKills +
+            ", totalNeutralMinionsKilled=" + totalNeutralMinionsKilled +
+            ", totalNodeCapture=" + totalNodeCapture +
+            ", totalNodeNeutralize=" + totalNodeNeutralize +
+            ", totalPentaKills=" + totalPentaKills +
+            ", totalPhysicalDamageDealt=" + totalPhysicalDamageDealt +
+            ", totalQuadraKills=" + totalQuadraKills +
+            ", totalSessionsLost=" + totalSessionsLost +
+            ", totalSessionsPlayed=" + totalSessionsPlayed +
+            ", totalSessionsWon=" + totalSessionsWon +
+            ", totalTripleKills=" + totalTripleKills +
+            ", totalTurretsKilled=" + totalTurretsKilled +
+            ", totalUnrealKills=" + totalUnrealKills +
+            '}';
     }
 }

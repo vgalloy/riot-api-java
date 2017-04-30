@@ -7,8 +7,9 @@ import java.util.Objects;
 import vgalloy.riot.api.api.constant.Tier;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Participant implements Serializable {
 
@@ -115,15 +116,15 @@ public class Participant implements Serializable {
         }
         Participant that = (Participant) o;
         return Objects.equals(championId, that.championId) &&
-                highestAchievedSeasonTier == that.highestAchievedSeasonTier &&
-                Objects.equals(masteries, that.masteries) &&
-                Objects.equals(participantId, that.participantId) &&
-                Objects.equals(runes, that.runes) &&
-                Objects.equals(spell1Id, that.spell1Id) &&
-                Objects.equals(spell2Id, that.spell2Id) &&
-                Objects.equals(stats, that.stats) &&
-                Objects.equals(teamId, that.teamId) &&
-                Objects.equals(timeline, that.timeline);
+            highestAchievedSeasonTier == that.highestAchievedSeasonTier &&
+            Objects.equals(masteries, that.masteries) &&
+            Objects.equals(participantId, that.participantId) &&
+            Objects.equals(runes, that.runes) &&
+            Objects.equals(spell1Id, that.spell1Id) &&
+            Objects.equals(spell2Id, that.spell2Id) &&
+            Objects.equals(stats, that.stats) &&
+            Objects.equals(teamId, that.teamId) &&
+            Objects.equals(timeline, that.timeline);
     }
 
     @Override
@@ -134,16 +135,16 @@ public class Participant implements Serializable {
     @Override
     public String toString() {
         return "ParticipantDto{" +
-                "championId=" + championId +
-                ", highestAchievedSeasonTier='" + highestAchievedSeasonTier + '\'' +
-                ", masteries=" + masteries +
-                ", participantId=" + participantId +
-                ", runes=" + runes +
-                ", spell1Id=" + spell1Id +
-                ", spell2Id=" + spell2Id +
-                ", stats=" + stats +
-                ", teamId=" + teamId +
-                ", timeline=" + timeline +
-                '}';
+            "championId=" + championId +
+            ", highestAchievedSeasonTier='" + highestAchievedSeasonTier + '\'' +
+            ", masteries=" + masteries +
+            ", participantId=" + participantId +
+            ", runes=" + runes +
+            ", spell1Id=" + spell1Id +
+            ", spell2Id=" + spell2Id +
+            ", stats=" + stats +
+            ", teamId=" + teamId +
+            ", timeline=" + timeline +
+            '}';
     }
 }

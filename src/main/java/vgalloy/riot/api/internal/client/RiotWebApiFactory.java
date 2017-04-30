@@ -14,8 +14,9 @@ import vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import vgalloy.riot.api.internal.client.ratelimite.impl.RateLimitProxyImpl;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public final class RiotWebApiFactory {
 
@@ -35,7 +36,7 @@ public final class RiotWebApiFactory {
      */
     public static RiotWebApi getRiotWebApi(RateLimitManager rateLimitManager) {
         Client client = ClientBuilder.newClient()
-//            .register(new LoggingFeature())
+            //            .register(new LoggingFeature())
             .register(RateLimitFilter.class)
             .register(JacksonJsonProvider.class)
             .register(CustomJacksonFilter.class);

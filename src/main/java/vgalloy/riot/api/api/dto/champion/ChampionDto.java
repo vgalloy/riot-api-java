@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class ChampionDto implements Serializable {
 
@@ -76,11 +77,11 @@ public class ChampionDto implements Serializable {
         }
         ChampionDto that = (ChampionDto) o;
         return Objects.equals(id, that.id) &&
-                Objects.equals(active, that.active) &&
-                Objects.equals(freeToPlay, that.freeToPlay) &&
-                Objects.equals(botEnabled, that.botEnabled) &&
-                Objects.equals(botMmEnabled, that.botMmEnabled) &&
-                Objects.equals(rankedPlayEnabled, that.rankedPlayEnabled);
+            Objects.equals(active, that.active) &&
+            Objects.equals(freeToPlay, that.freeToPlay) &&
+            Objects.equals(botEnabled, that.botEnabled) &&
+            Objects.equals(botMmEnabled, that.botMmEnabled) &&
+            Objects.equals(rankedPlayEnabled, that.rankedPlayEnabled);
     }
 
     @Override
@@ -91,12 +92,12 @@ public class ChampionDto implements Serializable {
     @Override
     public String toString() {
         return "ChampionDto{" +
-                "id=" + id +
-                ", active=" + active +
-                ", freeToPlay=" + freeToPlay +
-                ", botEnabled=" + botEnabled +
-                ", botMmEnabled=" + botMmEnabled +
-                ", rankedPlayEnabled=" + rankedPlayEnabled +
-                '}';
+            "id=" + id +
+            ", active=" + active +
+            ", freeToPlay=" + freeToPlay +
+            ", botEnabled=" + botEnabled +
+            ", botMmEnabled=" + botMmEnabled +
+            ", rankedPlayEnabled=" + rankedPlayEnabled +
+            '}';
     }
 }

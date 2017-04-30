@@ -9,8 +9,9 @@ import vgalloy.riot.api.api.dto.matchlist.MatchList;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public interface MatchListApi {
 

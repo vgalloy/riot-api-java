@@ -12,23 +12,22 @@ import javax.ws.rs.ServiceUnavailableException;
 import vgalloy.riot.api.api.query.callback.Callback;
 import vgalloy.riot.api.internal.client.filter.RiotRateLimitExceededException;
 import vgalloy.riot.api.internal.query.impl.DefaultCallBack;
-import vgalloy.riot.api.internal.query.impl.ThrowingCallBack;
 
 /**
+ * Created by Vincent Galloy on 26/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 26/05/16.
  */
 public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO> implements Query<DTO> {
 
-    private Callback<DTO> successCallback = new DefaultCallBack<>();
-
-    private Callback<BadRequestException> badRequestExceptionCallback = new DefaultCallBack<>();
-    private Callback<NotAuthorizedException> notAuthorizedExceptionCallback = new DefaultCallBack<>();
-    private Callback<ForbiddenException> forbiddenExceptionCallback = new ThrowingCallBack<>();
-    private Callback<NotFoundException> notFoundExceptionCallback = new DefaultCallBack<>();
-    private Callback<InternalServerErrorException> internalServerErrorExceptionCallback = new DefaultCallBack<>();
-    private Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback = new DefaultCallBack<>();
-    private Callback<RiotRateLimitExceededException> riotRateLimitExceededExceptionCallback = new ThrowingCallBack<>();
+    private Callback<DTO> successCallback = DefaultCallBack.getInstance();
+    private Callback<BadRequestException> badRequestExceptionCallback = DefaultCallBack.getInstance();
+    private Callback<NotAuthorizedException> notAuthorizedExceptionCallback = DefaultCallBack.getInstance();
+    private Callback<ForbiddenException> forbiddenExceptionCallback = DefaultCallBack.getInstance();
+    private Callback<NotFoundException> notFoundExceptionCallback = DefaultCallBack.getInstance();
+    private Callback<InternalServerErrorException> internalServerErrorExceptionCallback = DefaultCallBack.getInstance();
+    private Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback = DefaultCallBack.getInstance();
+    private Callback<RiotRateLimitExceededException> riotRateLimitExceededExceptionCallback = DefaultCallBack.getInstance();
 
     @Override
     public DTO execute() {
@@ -67,6 +66,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param successCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onSuccess(Callback<DTO> successCallback) {
         this.successCallback = Objects.requireNonNull(successCallback, "successCallback can not be null");
         return (QUERY) this;
@@ -78,6 +78,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param badRequestExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onBadRequestExceptionCallback(Callback<BadRequestException> badRequestExceptionCallback) {
         this.badRequestExceptionCallback = Objects.requireNonNull(badRequestExceptionCallback, "badRequestExceptionCallback can not be null");
         return (QUERY) this;
@@ -89,6 +90,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param notAuthorizedExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onNotAuthorizedException(Callback<NotAuthorizedException> notAuthorizedExceptionCallback) {
         this.notAuthorizedExceptionCallback = Objects.requireNonNull(notAuthorizedExceptionCallback, "notAuthorizedExceptionCallback can not be null");
         return (QUERY) this;
@@ -100,6 +102,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param forbiddenExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onForbiddenException(Callback<ForbiddenException> forbiddenExceptionCallback) {
         this.forbiddenExceptionCallback = Objects.requireNonNull(forbiddenExceptionCallback, "forbiddenExceptionCallback can not be null");
         return (QUERY) this;
@@ -111,6 +114,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param notFoundExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onNotFoundException(Callback<NotFoundException> notFoundExceptionCallback) {
         this.notFoundExceptionCallback = Objects.requireNonNull(notFoundExceptionCallback, "notFoundExceptionCallback can not be null");
         return (QUERY) this;
@@ -122,6 +126,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param serviceUnavailableExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onServiceUnavailableException(Callback<ServiceUnavailableException> serviceUnavailableExceptionCallback) {
         this.serviceUnavailableExceptionCallback = Objects.requireNonNull(serviceUnavailableExceptionCallback, "serviceUnavailableExceptionCallback can not be null");
         return (QUERY) this;
@@ -133,6 +138,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param internalServerErrorExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onInternalServerErrorException(Callback<InternalServerErrorException> internalServerErrorExceptionCallback) {
         this.internalServerErrorExceptionCallback = Objects.requireNonNull(internalServerErrorExceptionCallback, "internalServerErrorExceptionCallback can not be null");
         return (QUERY) this;
@@ -144,6 +150,7 @@ public abstract class AbstractCallbackQuery<QUERY extends AbstractQuery<QUERY, D
      * @param riotRateLimitExceededExceptionCallback the callback
      * @return this
      */
+    @SuppressWarnings("unchecked")
     public QUERY onRiotRateLimitExceededException(Callback<RiotRateLimitExceededException> riotRateLimitExceededExceptionCallback) {
         this.riotRateLimitExceededExceptionCallback = Objects.requireNonNull(riotRateLimitExceededExceptionCallback, "riotRateLimitExceededExceptionCallback can not be null");
         return (QUERY) this;

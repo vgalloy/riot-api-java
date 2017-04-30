@@ -6,8 +6,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ItemListDto implements Serializable {
 
@@ -78,11 +79,11 @@ public class ItemListDto implements Serializable {
         }
         ItemListDto that = (ItemListDto) o;
         return Objects.equals(basic, that.basic) &&
-                Objects.equals(data, that.data) &&
-                Objects.equals(groups, that.groups) &&
-                Objects.equals(tree, that.tree) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(version, that.version);
+            Objects.equals(data, that.data) &&
+            Objects.equals(groups, that.groups) &&
+            Objects.equals(tree, that.tree) &&
+            Objects.equals(type, that.type) &&
+            Objects.equals(version, that.version);
     }
 
     @Override
@@ -93,12 +94,12 @@ public class ItemListDto implements Serializable {
     @Override
     public String toString() {
         return "ItemListDto{" +
-                "basic=" + basic +
-                ", data=" + data +
-                ", groups=" + groups +
-                ", tree=" + tree +
-                ", type='" + type + '\'' +
-                ", version='" + version + '\'' +
-                '}';
+            "basic=" + basic +
+            ", data=" + data +
+            ", groups=" + groups +
+            ", tree=" + tree +
+            ", type='" + type + '\'' +
+            ", version='" + version + '\'' +
+            '}';
     }
 }

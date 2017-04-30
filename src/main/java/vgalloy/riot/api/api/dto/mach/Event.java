@@ -15,8 +15,9 @@ import vgalloy.riot.api.api.constant.TowerType;
 import vgalloy.riot.api.api.constant.WardType;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Event implements Serializable {
 
@@ -231,27 +232,27 @@ public class Event implements Serializable {
         }
         Event event = (Event) o;
         return ascendedType == event.ascendedType &&
-                Objects.equals(assistingParticipantIds, event.assistingParticipantIds) &&
-                buildingType == event.buildingType &&
-                Objects.equals(creatorId, event.creatorId) &&
-                eventType == event.eventType &&
-                Objects.equals(itemAfter, event.itemAfter) &&
-                Objects.equals(itemBefore, event.itemBefore) &&
-                Objects.equals(itemId, event.itemId) &&
-                Objects.equals(killerId, event.killerId) &&
-                laneType == event.laneType &&
-                levelUpType == event.levelUpType &&
-                monsterType == event.monsterType &&
-                Objects.equals(monsterSubType, event.monsterSubType) &&
-                Objects.equals(participantId, event.participantId) &&
-                pointCaptured == event.pointCaptured &&
-                Objects.equals(position, event.position) &&
-                Objects.equals(skillSlot, event.skillSlot) &&
-                Objects.equals(teamId, event.teamId) &&
-                Objects.equals(timestamp, event.timestamp) &&
-                towerType == event.towerType &&
-                Objects.equals(victimId, event.victimId) &&
-                wardType == event.wardType;
+            Objects.equals(assistingParticipantIds, event.assistingParticipantIds) &&
+            buildingType == event.buildingType &&
+            Objects.equals(creatorId, event.creatorId) &&
+            eventType == event.eventType &&
+            Objects.equals(itemAfter, event.itemAfter) &&
+            Objects.equals(itemBefore, event.itemBefore) &&
+            Objects.equals(itemId, event.itemId) &&
+            Objects.equals(killerId, event.killerId) &&
+            laneType == event.laneType &&
+            levelUpType == event.levelUpType &&
+            monsterType == event.monsterType &&
+            Objects.equals(monsterSubType, event.monsterSubType) &&
+            Objects.equals(participantId, event.participantId) &&
+            pointCaptured == event.pointCaptured &&
+            Objects.equals(position, event.position) &&
+            Objects.equals(skillSlot, event.skillSlot) &&
+            Objects.equals(teamId, event.teamId) &&
+            Objects.equals(timestamp, event.timestamp) &&
+            towerType == event.towerType &&
+            Objects.equals(victimId, event.victimId) &&
+            wardType == event.wardType;
     }
 
     @Override
@@ -262,28 +263,28 @@ public class Event implements Serializable {
     @Override
     public String toString() {
         return "Event{" +
-                "ascendedType=" + ascendedType +
-                ", assistingParticipantIds=" + assistingParticipantIds +
-                ", buildingType=" + buildingType +
-                ", creatorId=" + creatorId +
-                ", eventType=" + eventType +
-                ", itemAfter=" + itemAfter +
-                ", itemBefore=" + itemBefore +
-                ", itemId=" + itemId +
-                ", killerId=" + killerId +
-                ", laneType=" + laneType +
-                ", levelUpType=" + levelUpType +
-                ", monsterType=" + monsterType +
-                ", monsterSubType='" + monsterSubType + '\'' +
-                ", participantId=" + participantId +
-                ", pointCaptured=" + pointCaptured +
-                ", position=" + position +
-                ", skillSlot=" + skillSlot +
-                ", teamId=" + teamId +
-                ", timestamp=" + timestamp +
-                ", towerType=" + towerType +
-                ", victimId=" + victimId +
-                ", wardType=" + wardType +
-                '}';
+            "ascendedType=" + ascendedType +
+            ", assistingParticipantIds=" + assistingParticipantIds +
+            ", buildingType=" + buildingType +
+            ", creatorId=" + creatorId +
+            ", eventType=" + eventType +
+            ", itemAfter=" + itemAfter +
+            ", itemBefore=" + itemBefore +
+            ", itemId=" + itemId +
+            ", killerId=" + killerId +
+            ", laneType=" + laneType +
+            ", levelUpType=" + levelUpType +
+            ", monsterType=" + monsterType +
+            ", monsterSubType='" + monsterSubType + '\'' +
+            ", participantId=" + participantId +
+            ", pointCaptured=" + pointCaptured +
+            ", position=" + position +
+            ", skillSlot=" + skillSlot +
+            ", teamId=" + teamId +
+            ", timestamp=" + timestamp +
+            ", towerType=" + towerType +
+            ", victimId=" + victimId +
+            ", wardType=" + wardType +
+            '}';
     }
 }

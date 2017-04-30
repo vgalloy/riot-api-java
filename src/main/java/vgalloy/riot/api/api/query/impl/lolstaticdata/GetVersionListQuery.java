@@ -8,8 +8,9 @@ import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent on 23/05/2016.
+ *
  * @author Vincent Galloy
- *         Created by Vincent on 23/05/2016.
  */
 public class GetVersionListQuery extends AbstractQuery<GetVersionListQuery, List<String>> {
 

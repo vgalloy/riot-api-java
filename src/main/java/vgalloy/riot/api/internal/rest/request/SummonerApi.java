@@ -13,8 +13,9 @@ import vgalloy.riot.api.api.dto.summoner.SummonerDto;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public interface SummonerApi {
 
@@ -31,7 +32,7 @@ public interface SummonerApi {
     Map<String, SummonerDto> getSummonersByNames(@PathParam("region") SmallCaseRegion region, @PathParam("summonerNames") String summonerNames, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get summoner objects mapped by summoner ID for a given list of summoner IDs.
+     * Get summoner objects mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the summoners region
      * @param summonerIds the summoners id
@@ -43,7 +44,7 @@ public interface SummonerApi {
     Map<String, SummonerDto> getSummonersByIds(@PathParam("region") SmallCaseRegion region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get mastery pages mapped by summoner ID for a given list of summoner IDs.
+     * Get mastery pages mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the summoners region
      * @param summonerIds the summoners ids
@@ -55,7 +56,7 @@ public interface SummonerApi {
     Map<String, MasteryPagesDto> getSummonersMasteriesByIds(@PathParam("region") SmallCaseRegion region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get summoner names mapped by summoner ID for a given list of summoner IDs.
+     * Get summoner names mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the summoners region
      * @param summonerIds the summoners ids
@@ -67,7 +68,7 @@ public interface SummonerApi {
     Map<String, String> getSummonersNameByIds(@PathParam("region") SmallCaseRegion region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get rune pages mapped by summoner ID for a given list of summoner IDs.
+     * Get rune pages mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the summoners region
      * @param summonerIds the summoners ids

@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class RosterDto implements Serializable {
 
@@ -41,7 +42,7 @@ public class RosterDto implements Serializable {
         }
         RosterDto rosterDto = (RosterDto) o;
         return Objects.equals(memberList, rosterDto.memberList) &&
-                Objects.equals(ownerId, rosterDto.ownerId);
+            Objects.equals(ownerId, rosterDto.ownerId);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class RosterDto implements Serializable {
     @Override
     public String toString() {
         return "RosterDto{" +
-                "memberList=" + memberList +
-                ", ownerId=" + ownerId +
-                '}';
+            "memberList=" + memberList +
+            ", ownerId=" + ownerId +
+            '}';
     }
 }

@@ -6,8 +6,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Position implements Serializable {
 
@@ -43,7 +44,7 @@ public class Position implements Serializable {
         }
         Position position = (Position) o;
         return Objects.equals(positionX, position.positionX) &&
-                Objects.equals(positionY, position.positionY);
+            Objects.equals(positionY, position.positionY);
     }
 
     @Override
@@ -54,8 +55,8 @@ public class Position implements Serializable {
     @Override
     public String toString() {
         return "Position{" +
-                "positionX=" + positionX +
-                ", positionY=" + positionY +
-                '}';
+            "positionX=" + positionX +
+            ", positionY=" + positionY +
+            '}';
     }
 }

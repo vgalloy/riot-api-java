@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class CurrentGameParticipant implements Serializable {
 
@@ -113,15 +114,15 @@ public class CurrentGameParticipant implements Serializable {
         }
         CurrentGameParticipant that = (CurrentGameParticipant) o;
         return Objects.equals(bot, that.bot) &&
-                Objects.equals(championId, that.championId) &&
-                Objects.equals(masteries, that.masteries) &&
-                Objects.equals(profileIconId, that.profileIconId) &&
-                Objects.equals(runes, that.runes) &&
-                Objects.equals(spell1Id, that.spell1Id) &&
-                Objects.equals(spell2Id, that.spell2Id) &&
-                Objects.equals(summonerId, that.summonerId) &&
-                Objects.equals(summonerName, that.summonerName) &&
-                Objects.equals(teamId, that.teamId);
+            Objects.equals(championId, that.championId) &&
+            Objects.equals(masteries, that.masteries) &&
+            Objects.equals(profileIconId, that.profileIconId) &&
+            Objects.equals(runes, that.runes) &&
+            Objects.equals(spell1Id, that.spell1Id) &&
+            Objects.equals(spell2Id, that.spell2Id) &&
+            Objects.equals(summonerId, that.summonerId) &&
+            Objects.equals(summonerName, that.summonerName) &&
+            Objects.equals(teamId, that.teamId);
     }
 
     @Override
@@ -132,16 +133,16 @@ public class CurrentGameParticipant implements Serializable {
     @Override
     public String toString() {
         return "CurrentGameParticipant{" +
-                "bot=" + bot +
-                ", championId=" + championId +
-                ", masteries=" + masteries +
-                ", profileIconId=" + profileIconId +
-                ", runes=" + runes +
-                ", spell1Id=" + spell1Id +
-                ", spell2Id=" + spell2Id +
-                ", summonerId=" + summonerId +
-                ", summonerName='" + summonerName + '\'' +
-                ", teamId=" + teamId +
-                '}';
+            "bot=" + bot +
+            ", championId=" + championId +
+            ", masteries=" + masteries +
+            ", profileIconId=" + profileIconId +
+            ", runes=" + runes +
+            ", spell1Id=" + spell1Id +
+            ", spell2Id=" + spell2Id +
+            ", summonerId=" + summonerId +
+            ", summonerName='" + summonerName + '\'' +
+            ", teamId=" + teamId +
+            '}';
     }
 }

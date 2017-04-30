@@ -20,7 +20,6 @@ public class Main {
                 .defaultRiotApiKey(new RiotApiKey("MY-API-KEY"))
                 .defaultRegion(Region.EUW)
                 .getChallenger(RankedQueueType.RANKED_SOLO_5x5)
-                .sorted(true)
                 .execute();
 
         System.out.println("The best euw player is " + leagueDto.getEntries().get(leagueDto.getEntries().size() - 1).getPlayerOrTeamName());

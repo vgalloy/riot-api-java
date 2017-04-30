@@ -9,8 +9,9 @@ import vgalloy.riot.api.api.constant.Season;
 import vgalloy.riot.api.api.constant.SimpleQueueType;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MatchReference implements Serializable {
 
@@ -108,14 +109,14 @@ public class MatchReference implements Serializable {
         }
         MatchReference that = (MatchReference) o;
         return Objects.equals(champion, that.champion) &&
-                lane == that.lane &&
-                Objects.equals(matchId, that.matchId) &&
-                Objects.equals(platformId, that.platformId) &&
-                queue == that.queue &&
-                Objects.equals(region, that.region) &&
-                role == that.role &&
-                season == that.season &&
-                Objects.equals(timestamp, that.timestamp);
+            lane == that.lane &&
+            Objects.equals(matchId, that.matchId) &&
+            Objects.equals(platformId, that.platformId) &&
+            queue == that.queue &&
+            Objects.equals(region, that.region) &&
+            role == that.role &&
+            season == that.season &&
+            Objects.equals(timestamp, that.timestamp);
     }
 
     @Override
@@ -126,15 +127,15 @@ public class MatchReference implements Serializable {
     @Override
     public String toString() {
         return "MatchReference{" +
-                "champion=" + champion +
-                ", lane=" + lane +
-                ", matchId=" + matchId +
-                ", platformId='" + platformId + '\'' +
-                ", queue=" + queue +
-                ", region='" + region + '\'' +
-                ", role=" + role +
-                ", season=" + season +
-                ", timestamp=" + timestamp +
-                '}';
+            "champion=" + champion +
+            ", lane=" + lane +
+            ", matchId=" + matchId +
+            ", platformId='" + platformId + '\'' +
+            ", queue=" + queue +
+            ", region='" + region + '\'' +
+            ", role=" + role +
+            ", season=" + season +
+            ", timestamp=" + timestamp +
+            '}';
     }
 }

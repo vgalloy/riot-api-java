@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class BlockItemDto implements Serializable {
 
@@ -40,7 +41,7 @@ public class BlockItemDto implements Serializable {
         }
         BlockItemDto that = (BlockItemDto) o;
         return Objects.equals(count, that.count) &&
-                Objects.equals(id, that.id);
+            Objects.equals(id, that.id);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class BlockItemDto implements Serializable {
     @Override
     public String toString() {
         return "BlockItemDto{" +
-                "count=" + count +
-                ", id=" + id +
-                '}';
+            "count=" + count +
+            ", id=" + id +
+            '}';
     }
 }

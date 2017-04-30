@@ -10,8 +10,9 @@ import vgalloy.riot.api.api.dto.stats.RankedStatsDto;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public interface StatsApi {
 

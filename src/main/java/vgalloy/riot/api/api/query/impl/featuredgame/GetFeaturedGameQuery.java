@@ -7,8 +7,9 @@ import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
  */
 public class GetFeaturedGameQuery extends AbstractQuery<GetFeaturedGameQuery, FeaturedGames> {
 

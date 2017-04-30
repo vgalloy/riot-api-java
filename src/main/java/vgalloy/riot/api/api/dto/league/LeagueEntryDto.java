@@ -6,8 +6,9 @@ import java.util.Objects;
 import vgalloy.riot.api.api.constant.PlayStyle;
 
 /**
+ * Created by Vincent Galloy on 20/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 20/05/16.
  */
 public class LeagueEntryDto implements Serializable {
 
@@ -132,17 +133,17 @@ public class LeagueEntryDto implements Serializable {
         }
         LeagueEntryDto that = (LeagueEntryDto) o;
         return Objects.equals(division, that.division) &&
-                Objects.equals(isFreshBlood, that.isFreshBlood) &&
-                Objects.equals(isHotStreak, that.isHotStreak) &&
-                Objects.equals(isInactive, that.isInactive) &&
-                Objects.equals(isVeteran, that.isVeteran) &&
-                Objects.equals(leaguePoints, that.leaguePoints) &&
-                Objects.equals(losses, that.losses) &&
-                Objects.equals(miniSeries, that.miniSeries) &&
-                Objects.equals(playerOrTeamId, that.playerOrTeamId) &&
-                Objects.equals(playerOrTeamName, that.playerOrTeamName) &&
-                playstyle == that.playstyle &&
-                Objects.equals(wins, that.wins);
+            Objects.equals(isFreshBlood, that.isFreshBlood) &&
+            Objects.equals(isHotStreak, that.isHotStreak) &&
+            Objects.equals(isInactive, that.isInactive) &&
+            Objects.equals(isVeteran, that.isVeteran) &&
+            Objects.equals(leaguePoints, that.leaguePoints) &&
+            Objects.equals(losses, that.losses) &&
+            Objects.equals(miniSeries, that.miniSeries) &&
+            Objects.equals(playerOrTeamId, that.playerOrTeamId) &&
+            Objects.equals(playerOrTeamName, that.playerOrTeamName) &&
+            playstyle == that.playstyle &&
+            Objects.equals(wins, that.wins);
     }
 
     @Override
@@ -153,18 +154,18 @@ public class LeagueEntryDto implements Serializable {
     @Override
     public String toString() {
         return "LeagueEntryDto{" +
-                "division='" + division + '\'' +
-                ", isFreshBlood=" + isFreshBlood +
-                ", isHotStreak=" + isHotStreak +
-                ", isInactive=" + isInactive +
-                ", isVeteran=" + isVeteran +
-                ", leaguePoints=" + leaguePoints +
-                ", losses=" + losses +
-                ", miniSeries=" + miniSeries +
-                ", playerOrTeamId='" + playerOrTeamId + '\'' +
-                ", playerOrTeamName='" + playerOrTeamName + '\'' +
-                ", playstyle=" + playstyle +
-                ", wins=" + wins +
-                '}';
+            "division='" + division + '\'' +
+            ", isFreshBlood=" + isFreshBlood +
+            ", isHotStreak=" + isHotStreak +
+            ", isInactive=" + isInactive +
+            ", isVeteran=" + isVeteran +
+            ", leaguePoints=" + leaguePoints +
+            ", losses=" + losses +
+            ", miniSeries=" + miniSeries +
+            ", playerOrTeamId='" + playerOrTeamId + '\'' +
+            ", playerOrTeamName='" + playerOrTeamName + '\'' +
+            ", playstyle=" + playstyle +
+            ", wins=" + wins +
+            '}';
     }
 }

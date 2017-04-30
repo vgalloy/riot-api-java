@@ -4,8 +4,9 @@ import vgalloy.riot.api.api.constant.PlatformId;
 import vgalloy.riot.api.api.constant.Region;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
  */
 public final class RegionMapper {
 
@@ -21,7 +22,7 @@ public final class RegionMapper {
      * Converter.
      *
      * @param region the region
-     * @return the platform Id
+     * @return the platform id
      */
     public static PlatformId fromRegion(Region region) {
         switch (region) {

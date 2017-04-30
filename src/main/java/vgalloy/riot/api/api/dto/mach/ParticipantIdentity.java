@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ParticipantIdentity implements Serializable {
 
@@ -40,7 +41,7 @@ public class ParticipantIdentity implements Serializable {
         }
         ParticipantIdentity that = (ParticipantIdentity) o;
         return Objects.equals(participantId, that.participantId) &&
-                Objects.equals(player, that.player);
+            Objects.equals(player, that.player);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class ParticipantIdentity implements Serializable {
     @Override
     public String toString() {
         return "ParticipantIdentity{" +
-                "participantId=" + participantId +
-                ", player=" + player +
-                '}';
+            "participantId=" + participantId +
+            ", player=" + player +
+            '}';
     }
 }

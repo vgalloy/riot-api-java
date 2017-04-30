@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ParticipantFrame implements Serializable {
 
@@ -112,15 +113,15 @@ public class ParticipantFrame implements Serializable {
         }
         ParticipantFrame that = (ParticipantFrame) o;
         return Objects.equals(currentGold, that.currentGold) &&
-                Objects.equals(dominionScore, that.dominionScore) &&
-                Objects.equals(jungleMinionsKilled, that.jungleMinionsKilled) &&
-                Objects.equals(level, that.level) &&
-                Objects.equals(minionsKilled, that.minionsKilled) &&
-                Objects.equals(participantId, that.participantId) &&
-                Objects.equals(position, that.position) &&
-                Objects.equals(teamScore, that.teamScore) &&
-                Objects.equals(totalGold, that.totalGold) &&
-                Objects.equals(xp, that.xp);
+            Objects.equals(dominionScore, that.dominionScore) &&
+            Objects.equals(jungleMinionsKilled, that.jungleMinionsKilled) &&
+            Objects.equals(level, that.level) &&
+            Objects.equals(minionsKilled, that.minionsKilled) &&
+            Objects.equals(participantId, that.participantId) &&
+            Objects.equals(position, that.position) &&
+            Objects.equals(teamScore, that.teamScore) &&
+            Objects.equals(totalGold, that.totalGold) &&
+            Objects.equals(xp, that.xp);
     }
 
     @Override
@@ -131,16 +132,16 @@ public class ParticipantFrame implements Serializable {
     @Override
     public String toString() {
         return "ParticipantFrame{" +
-                "currentGold=" + currentGold +
-                ", dominionScore=" + dominionScore +
-                ", jungleMinionsKilled=" + jungleMinionsKilled +
-                ", level=" + level +
-                ", minionsKilled=" + minionsKilled +
-                ", participantId=" + participantId +
-                ", position=" + position +
-                ", teamScore=" + teamScore +
-                ", totalGold=" + totalGold +
-                ", xp=" + xp +
-                '}';
+            "currentGold=" + currentGold +
+            ", dominionScore=" + dominionScore +
+            ", jungleMinionsKilled=" + jungleMinionsKilled +
+            ", level=" + level +
+            ", minionsKilled=" + minionsKilled +
+            ", participantId=" + participantId +
+            ", position=" + position +
+            ", teamScore=" + teamScore +
+            ", totalGold=" + totalGold +
+            ", xp=" + xp +
+            '}';
     }
 }

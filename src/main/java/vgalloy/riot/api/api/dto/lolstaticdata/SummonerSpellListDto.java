@@ -5,8 +5,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class SummonerSpellListDto implements Serializable {
 
@@ -50,8 +51,8 @@ public class SummonerSpellListDto implements Serializable {
         }
         SummonerSpellListDto that = (SummonerSpellListDto) o;
         return Objects.equals(data, that.data) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(version, that.version);
+            Objects.equals(type, that.type) &&
+            Objects.equals(version, that.version);
     }
 
     @Override
@@ -62,10 +63,10 @@ public class SummonerSpellListDto implements Serializable {
     @Override
     public String toString() {
         return "SummonerSpellListDto{" +
-                "data=" + data +
-                ", type='" + type + '\'' +
-                ", version='" + version + '\'' +
-                '}';
+            "data=" + data +
+            ", type='" + type + '\'' +
+            ", version='" + version + '\'' +
+            '}';
     }
 }
 

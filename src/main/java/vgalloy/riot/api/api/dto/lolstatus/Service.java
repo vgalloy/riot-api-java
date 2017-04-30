@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Service implements Serializable {
 
@@ -59,9 +60,9 @@ public class Service implements Serializable {
         }
         Service service = (Service) o;
         return Objects.equals(incidents, service.incidents) &&
-                Objects.equals(name, service.name) &&
-                Objects.equals(slug, service.slug) &&
-                Objects.equals(status, service.status);
+            Objects.equals(name, service.name) &&
+            Objects.equals(slug, service.slug) &&
+            Objects.equals(status, service.status);
     }
 
     @Override
@@ -72,10 +73,10 @@ public class Service implements Serializable {
     @Override
     public String toString() {
         return "Service{" +
-                "incidents=" + incidents +
-                ", name='" + name + '\'' +
-                ", slug='" + slug + '\'' +
-                ", status='" + status + '\'' +
-                '}';
+            "incidents=" + incidents +
+            ", name='" + name + '\'' +
+            ", slug='" + slug + '\'' +
+            ", status='" + status + '\'' +
+            '}';
     }
 }

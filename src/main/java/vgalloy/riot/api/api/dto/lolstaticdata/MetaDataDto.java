@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MetaDataDto implements Serializable {
 
@@ -49,8 +50,8 @@ public class MetaDataDto implements Serializable {
         }
         MetaDataDto that = (MetaDataDto) o;
         return Objects.equals(isRune, that.isRune) &&
-                Objects.equals(tier, that.tier) &&
-                Objects.equals(type, that.type);
+            Objects.equals(tier, that.tier) &&
+            Objects.equals(type, that.type);
     }
 
     @Override
@@ -61,9 +62,9 @@ public class MetaDataDto implements Serializable {
     @Override
     public String toString() {
         return "MetaDataDto{" +
-                "isRune=" + isRune +
-                ", tier='" + tier + '\'' +
-                ", type='" + type + '\'' +
-                '}';
+            "isRune=" + isRune +
+            ", tier='" + tier + '\'' +
+            ", type='" + type + '\'' +
+            '}';
     }
 }

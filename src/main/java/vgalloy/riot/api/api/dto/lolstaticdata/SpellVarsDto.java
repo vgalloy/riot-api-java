@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class SpellVarsDto implements Serializable {
 
@@ -68,10 +69,10 @@ public class SpellVarsDto implements Serializable {
         }
         SpellVarsDto that = (SpellVarsDto) o;
         return Objects.equals(coeff, that.coeff) &&
-                Objects.equals(dyn, that.dyn) &&
-                Objects.equals(key, that.key) &&
-                Objects.equals(link, that.link) &&
-                Objects.equals(ranksWith, that.ranksWith);
+            Objects.equals(dyn, that.dyn) &&
+            Objects.equals(key, that.key) &&
+            Objects.equals(link, that.link) &&
+            Objects.equals(ranksWith, that.ranksWith);
     }
 
     @Override
@@ -82,11 +83,11 @@ public class SpellVarsDto implements Serializable {
     @Override
     public String toString() {
         return "SpellVarsDto{" +
-                "coeff=" + coeff +
-                ", dyn='" + dyn + '\'' +
-                ", key='" + key + '\'' +
-                ", link='" + link + '\'' +
-                ", ranksWith='" + ranksWith + '\'' +
-                '}';
+            "coeff=" + coeff +
+            ", dyn='" + dyn + '\'' +
+            ", key='" + key + '\'' +
+            ", link='" + link + '\'' +
+            ", ranksWith='" + ranksWith + '\'' +
+            '}';
     }
 }

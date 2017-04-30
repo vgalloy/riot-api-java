@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class RecommendedDto implements Serializable {
 
@@ -86,12 +87,12 @@ public class RecommendedDto implements Serializable {
         }
         RecommendedDto that = (RecommendedDto) o;
         return Objects.equals(blocks, that.blocks) &&
-                Objects.equals(champion, that.champion) &&
-                Objects.equals(map, that.map) &&
-                Objects.equals(mode, that.mode) &&
-                Objects.equals(priority, that.priority) &&
-                Objects.equals(title, that.title) &&
-                Objects.equals(type, that.type);
+            Objects.equals(champion, that.champion) &&
+            Objects.equals(map, that.map) &&
+            Objects.equals(mode, that.mode) &&
+            Objects.equals(priority, that.priority) &&
+            Objects.equals(title, that.title) &&
+            Objects.equals(type, that.type);
     }
 
     @Override
@@ -102,13 +103,13 @@ public class RecommendedDto implements Serializable {
     @Override
     public String toString() {
         return "RecommendedDto{" +
-                "blocks=" + blocks +
-                ", champion='" + champion + '\'' +
-                ", map='" + map + '\'' +
-                ", mode='" + mode + '\'' +
-                ", priority=" + priority +
-                ", title='" + title + '\'' +
-                ", type='" + type + '\'' +
-                '}';
+            "blocks=" + blocks +
+            ", champion='" + champion + '\'' +
+            ", map='" + map + '\'' +
+            ", mode='" + mode + '\'' +
+            ", priority=" + priority +
+            ", title='" + title + '\'' +
+            ", type='" + type + '\'' +
+            '}';
     }
 }

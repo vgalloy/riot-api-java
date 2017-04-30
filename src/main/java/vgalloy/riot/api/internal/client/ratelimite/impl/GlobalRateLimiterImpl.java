@@ -9,8 +9,9 @@ import vgalloy.riot.api.internal.rest.annotation.RiotNoLimitRate;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 01/06/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 01/06/16.
  */
 public class GlobalRateLimiterImpl implements GlobalRateLimiter {
 

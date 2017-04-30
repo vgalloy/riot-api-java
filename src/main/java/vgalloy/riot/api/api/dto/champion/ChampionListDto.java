@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class ChampionListDto implements Serializable {
 
@@ -42,7 +43,7 @@ public class ChampionListDto implements Serializable {
     @Override
     public String toString() {
         return "ChampionListDto{" +
-                "champions=" + champions +
-                '}';
+            "champions=" + champions +
+            '}';
     }
 }

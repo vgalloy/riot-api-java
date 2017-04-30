@@ -4,8 +4,9 @@ import java.util.Objects;
 import java.util.Properties;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class RiotApiKey {
 

@@ -7,8 +7,9 @@ import java.util.Objects;
 import vgalloy.riot.api.api.constant.MasteryTree;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class MasteryDto implements Serializable {
 
@@ -97,13 +98,13 @@ public class MasteryDto implements Serializable {
         }
         MasteryDto that = (MasteryDto) o;
         return Objects.equals(description, that.description) &&
-                Objects.equals(id, that.id) &&
-                Objects.equals(image, that.image) &&
-                masteryTree == that.masteryTree &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(prereq, that.prereq) &&
-                Objects.equals(ranks, that.ranks) &&
-                Objects.equals(sanitizedDescription, that.sanitizedDescription);
+            Objects.equals(id, that.id) &&
+            Objects.equals(image, that.image) &&
+            masteryTree == that.masteryTree &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(prereq, that.prereq) &&
+            Objects.equals(ranks, that.ranks) &&
+            Objects.equals(sanitizedDescription, that.sanitizedDescription);
     }
 
     @Override
@@ -114,14 +115,14 @@ public class MasteryDto implements Serializable {
     @Override
     public String toString() {
         return "MasteryDto{" +
-                "description=" + description +
-                ", id=" + id +
-                ", image=" + image +
-                ", masteryTree=" + masteryTree +
-                ", name='" + name + '\'' +
-                ", prereq='" + prereq + '\'' +
-                ", ranks=" + ranks +
-                ", sanitizedDescription=" + sanitizedDescription +
-                '}';
+            "description=" + description +
+            ", id=" + id +
+            ", image=" + image +
+            ", masteryTree=" + masteryTree +
+            ", name='" + name + '\'' +
+            ", prereq='" + prereq + '\'' +
+            ", ranks=" + ranks +
+            ", sanitizedDescription=" + sanitizedDescription +
+            '}';
     }
 }

@@ -12,8 +12,9 @@ import vgalloy.riot.api.internal.query.DefaultParameter;
 import vgalloy.riot.api.internal.service.mapper.RegionMapper;
 
 /**
+ * Created by Vincent on 20/05/2016.
+ *
  * @author Vincent Galloy
- *         Created by Vincent on 20/05/2016.
  */
 public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO> extends AbstractCallbackQuery<QUERY, DTO> {
 
@@ -41,6 +42,7 @@ public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO
      * @param riotApiKey the riot rest key
      * @return the current query
      */
+    @SuppressWarnings("unchecked")
     public QUERY riotApiKey(RiotApiKey riotApiKey) {
         this.riotApiKey = riotApiKey;
         return (QUERY) this;
@@ -52,6 +54,7 @@ public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO
      * @param region the region
      * @return the current query
      */
+    @SuppressWarnings("unchecked")
     public QUERY region(Region region) {
         this.region = region;
         return (QUERY) this;
@@ -93,8 +96,8 @@ public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO
     protected String convert(Collection<?> list) {
         StringJoiner stringJoiner = new StringJoiner(",");
         list.stream()
-                .map(Object::toString)
-                .forEach(stringJoiner::add);
+            .map(Object::toString)
+            .forEach(stringJoiner::add);
         return stringJoiner.toString();
     }
 
@@ -108,7 +111,7 @@ public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO
      * @param <T>              the return type
      * @return the parameter
      */
-    protected <T> T getParameter(T currentParameter, T defaultParameter, String message) {
+    private <T> T getParameter(T currentParameter, T defaultParameter, String message) {
         if (currentParameter != null) {
             return currentParameter;
         }

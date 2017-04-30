@@ -19,7 +19,7 @@ import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 public interface LeagueApi {
 
     /**
-     * Get leagues mapped by summoner ID for a given list of summoner IDs.
+     * Get leagues mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the region
      * @param summonerIds the summoners id
@@ -31,7 +31,7 @@ public interface LeagueApi {
     Map<String, List<LeagueDto>> getLeaguesBySummonerIds(@PathParam("region") SmallCaseRegion region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get league entries mapped by summoner ID for a given list of summoner IDs.
+     * Get league entries mapped by summoner id for a given list of summoner ids.
      *
      * @param region      the region
      * @param summonerIds the summoners id
@@ -43,7 +43,7 @@ public interface LeagueApi {
     Map<String, List<LeagueDto>> getLeaguesEntryBySummonerIds(@PathParam("region") SmallCaseRegion region, @PathParam("summonerIds") String summonerIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get leagues mapped by team ID for a given list of team IDs.
+     * Get leagues mapped by team id for a given list of team ids.
      *
      * @param region  the region
      * @param teamIds the team id
@@ -55,7 +55,7 @@ public interface LeagueApi {
     Map<String, List<LeagueDto>> getLeaguesByTeamIds(@PathParam("region") SmallCaseRegion region, @PathParam("teamIds") String teamIds, @QueryParam("api_key") String apiKey);
 
     /**
-     * Get league entries mapped by team ID for a given list of team IDs.
+     * Get league entries mapped by team id for a given list of team ids.
      *
      * @param region  the region
      * @param teamIds the team id

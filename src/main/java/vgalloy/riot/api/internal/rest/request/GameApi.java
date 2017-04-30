@@ -9,13 +9,14 @@ import vgalloy.riot.api.api.dto.game.RecentGamesDto;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public interface GameApi {
 
     /**
-     * Get recent games by summoner ID.
+     * Get recent games by summoner id.
      *
      * @param region     the region
      * @param summonerId the summoner id

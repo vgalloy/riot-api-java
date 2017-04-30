@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class RawStatsDto implements Serializable {
 
@@ -832,95 +833,95 @@ public class RawStatsDto implements Serializable {
         }
         RawStatsDto that = (RawStatsDto) o;
         return Objects.equals(assists, that.assists) &&
-                Objects.equals(barracksKilled, that.barracksKilled) &&
-                Objects.equals(bountyLevel, that.bountyLevel) &&
-                Objects.equals(championsKilled, that.championsKilled) &&
-                Objects.equals(combatPlayerScore, that.combatPlayerScore) &&
-                Objects.equals(consumablesPurchased, that.consumablesPurchased) &&
-                Objects.equals(damageDealtPlayer, that.damageDealtPlayer) &&
-                Objects.equals(doubleKills, that.doubleKills) &&
-                Objects.equals(firstBlood, that.firstBlood) &&
-                Objects.equals(gold, that.gold) &&
-                Objects.equals(goldEarned, that.goldEarned) &&
-                Objects.equals(goldSpent, that.goldSpent) &&
-                Objects.equals(item0, that.item0) &&
-                Objects.equals(item1, that.item1) &&
-                Objects.equals(item2, that.item2) &&
-                Objects.equals(item3, that.item3) &&
-                Objects.equals(item4, that.item4) &&
-                Objects.equals(item5, that.item5) &&
-                Objects.equals(item6, that.item6) &&
-                Objects.equals(itemsPurchased, that.itemsPurchased) &&
-                Objects.equals(killingSprees, that.killingSprees) &&
-                Objects.equals(largestCriticalStrike, that.largestCriticalStrike) &&
-                Objects.equals(largestKillingSpree, that.largestKillingSpree) &&
-                Objects.equals(largestMultiKill, that.largestMultiKill) &&
-                Objects.equals(legendaryItemsCreated, that.legendaryItemsCreated) &&
-                Objects.equals(level, that.level) &&
-                Objects.equals(magicDamageDealtPlayer, that.magicDamageDealtPlayer) &&
-                Objects.equals(magicDamageDealtToChampions, that.magicDamageDealtToChampions) &&
-                Objects.equals(magicDamageTaken, that.magicDamageTaken) &&
-                Objects.equals(minionsDenied, that.minionsDenied) &&
-                Objects.equals(minionsKilled, that.minionsKilled) &&
-                Objects.equals(neutralMinionsKilled, that.neutralMinionsKilled) &&
-                Objects.equals(neutralMinionsKilledEnemyJungle, that.neutralMinionsKilledEnemyJungle) &&
-                Objects.equals(neutralMinionsKilledYourJungle, that.neutralMinionsKilledYourJungle) &&
-                Objects.equals(nexusKilled, that.nexusKilled) &&
-                Objects.equals(nodeCapture, that.nodeCapture) &&
-                Objects.equals(nodeCaptureAssist, that.nodeCaptureAssist) &&
-                Objects.equals(nodeNeutralize, that.nodeNeutralize) &&
-                Objects.equals(nodeNeutralizeAssist, that.nodeNeutralizeAssist) &&
-                Objects.equals(numDeaths, that.numDeaths) &&
-                Objects.equals(numItemsBought, that.numItemsBought) &&
-                Objects.equals(objectivePlayerScore, that.objectivePlayerScore) &&
-                Objects.equals(pentaKills, that.pentaKills) &&
-                Objects.equals(physicalDamageDealtPlayer, that.physicalDamageDealtPlayer) &&
-                Objects.equals(physicalDamageDealtToChampions, that.physicalDamageDealtToChampions) &&
-                Objects.equals(physicalDamageTaken, that.physicalDamageTaken) &&
-                Objects.equals(playerPosition, that.playerPosition) &&
-                Objects.equals(playerRole, that.playerRole) &&
-                Objects.equals(playerScore0, that.playerScore0) &&
-                Objects.equals(playerScore1, that.playerScore1) &&
-                Objects.equals(playerScore2, that.playerScore2) &&
-                Objects.equals(playerScore3, that.playerScore3) &&
-                Objects.equals(playerScore4, that.playerScore4) &&
-                Objects.equals(playerScore5, that.playerScore5) &&
-                Objects.equals(playerScore6, that.playerScore6) &&
-                Objects.equals(playerScore7, that.playerScore7) &&
-                Objects.equals(playerScore8, that.playerScore8) &&
-                Objects.equals(playerScore9, that.playerScore9) &&
-                Objects.equals(quadraKills, that.quadraKills) &&
-                Objects.equals(sightWardsBought, that.sightWardsBought) &&
-                Objects.equals(spell1Cast, that.spell1Cast) &&
-                Objects.equals(spell2Cast, that.spell2Cast) &&
-                Objects.equals(spell3Cast, that.spell3Cast) &&
-                Objects.equals(spell4Cast, that.spell4Cast) &&
-                Objects.equals(summonSpell1Cast, that.summonSpell1Cast) &&
-                Objects.equals(summonSpell2Cast, that.summonSpell2Cast) &&
-                Objects.equals(superMonsterKilled, that.superMonsterKilled) &&
-                Objects.equals(team, that.team) &&
-                Objects.equals(teamObjective, that.teamObjective) &&
-                Objects.equals(timePlayed, that.timePlayed) &&
-                Objects.equals(totalDamageDealt, that.totalDamageDealt) &&
-                Objects.equals(totalDamageDealtToBuildings, that.totalDamageDealtToBuildings) &&
-                Objects.equals(totalDamageDealtToChampions, that.totalDamageDealtToChampions) &&
-                Objects.equals(totalDamageTaken, that.totalDamageTaken) &&
-                Objects.equals(totalHeal, that.totalHeal) &&
-                Objects.equals(totalPlayerScore, that.totalPlayerScore) &&
-                Objects.equals(totalScoreRank, that.totalScoreRank) &&
-                Objects.equals(totalTimeCrowdControlDealt, that.totalTimeCrowdControlDealt) &&
-                Objects.equals(totalUnitsHealed, that.totalUnitsHealed) &&
-                Objects.equals(tripleKills, that.tripleKills) &&
-                Objects.equals(trueDamageDealtPlayer, that.trueDamageDealtPlayer) &&
-                Objects.equals(trueDamageDealtToChampions, that.trueDamageDealtToChampions) &&
-                Objects.equals(trueDamageTaken, that.trueDamageTaken) &&
-                Objects.equals(turretsKilled, that.turretsKilled) &&
-                Objects.equals(unrealKills, that.unrealKills) &&
-                Objects.equals(victoryPointTotal, that.victoryPointTotal) &&
-                Objects.equals(visionWardsBought, that.visionWardsBought) &&
-                Objects.equals(wardKilled, that.wardKilled) &&
-                Objects.equals(wardPlaced, that.wardPlaced) &&
-                Objects.equals(win, that.win);
+            Objects.equals(barracksKilled, that.barracksKilled) &&
+            Objects.equals(bountyLevel, that.bountyLevel) &&
+            Objects.equals(championsKilled, that.championsKilled) &&
+            Objects.equals(combatPlayerScore, that.combatPlayerScore) &&
+            Objects.equals(consumablesPurchased, that.consumablesPurchased) &&
+            Objects.equals(damageDealtPlayer, that.damageDealtPlayer) &&
+            Objects.equals(doubleKills, that.doubleKills) &&
+            Objects.equals(firstBlood, that.firstBlood) &&
+            Objects.equals(gold, that.gold) &&
+            Objects.equals(goldEarned, that.goldEarned) &&
+            Objects.equals(goldSpent, that.goldSpent) &&
+            Objects.equals(item0, that.item0) &&
+            Objects.equals(item1, that.item1) &&
+            Objects.equals(item2, that.item2) &&
+            Objects.equals(item3, that.item3) &&
+            Objects.equals(item4, that.item4) &&
+            Objects.equals(item5, that.item5) &&
+            Objects.equals(item6, that.item6) &&
+            Objects.equals(itemsPurchased, that.itemsPurchased) &&
+            Objects.equals(killingSprees, that.killingSprees) &&
+            Objects.equals(largestCriticalStrike, that.largestCriticalStrike) &&
+            Objects.equals(largestKillingSpree, that.largestKillingSpree) &&
+            Objects.equals(largestMultiKill, that.largestMultiKill) &&
+            Objects.equals(legendaryItemsCreated, that.legendaryItemsCreated) &&
+            Objects.equals(level, that.level) &&
+            Objects.equals(magicDamageDealtPlayer, that.magicDamageDealtPlayer) &&
+            Objects.equals(magicDamageDealtToChampions, that.magicDamageDealtToChampions) &&
+            Objects.equals(magicDamageTaken, that.magicDamageTaken) &&
+            Objects.equals(minionsDenied, that.minionsDenied) &&
+            Objects.equals(minionsKilled, that.minionsKilled) &&
+            Objects.equals(neutralMinionsKilled, that.neutralMinionsKilled) &&
+            Objects.equals(neutralMinionsKilledEnemyJungle, that.neutralMinionsKilledEnemyJungle) &&
+            Objects.equals(neutralMinionsKilledYourJungle, that.neutralMinionsKilledYourJungle) &&
+            Objects.equals(nexusKilled, that.nexusKilled) &&
+            Objects.equals(nodeCapture, that.nodeCapture) &&
+            Objects.equals(nodeCaptureAssist, that.nodeCaptureAssist) &&
+            Objects.equals(nodeNeutralize, that.nodeNeutralize) &&
+            Objects.equals(nodeNeutralizeAssist, that.nodeNeutralizeAssist) &&
+            Objects.equals(numDeaths, that.numDeaths) &&
+            Objects.equals(numItemsBought, that.numItemsBought) &&
+            Objects.equals(objectivePlayerScore, that.objectivePlayerScore) &&
+            Objects.equals(pentaKills, that.pentaKills) &&
+            Objects.equals(physicalDamageDealtPlayer, that.physicalDamageDealtPlayer) &&
+            Objects.equals(physicalDamageDealtToChampions, that.physicalDamageDealtToChampions) &&
+            Objects.equals(physicalDamageTaken, that.physicalDamageTaken) &&
+            Objects.equals(playerPosition, that.playerPosition) &&
+            Objects.equals(playerRole, that.playerRole) &&
+            Objects.equals(playerScore0, that.playerScore0) &&
+            Objects.equals(playerScore1, that.playerScore1) &&
+            Objects.equals(playerScore2, that.playerScore2) &&
+            Objects.equals(playerScore3, that.playerScore3) &&
+            Objects.equals(playerScore4, that.playerScore4) &&
+            Objects.equals(playerScore5, that.playerScore5) &&
+            Objects.equals(playerScore6, that.playerScore6) &&
+            Objects.equals(playerScore7, that.playerScore7) &&
+            Objects.equals(playerScore8, that.playerScore8) &&
+            Objects.equals(playerScore9, that.playerScore9) &&
+            Objects.equals(quadraKills, that.quadraKills) &&
+            Objects.equals(sightWardsBought, that.sightWardsBought) &&
+            Objects.equals(spell1Cast, that.spell1Cast) &&
+            Objects.equals(spell2Cast, that.spell2Cast) &&
+            Objects.equals(spell3Cast, that.spell3Cast) &&
+            Objects.equals(spell4Cast, that.spell4Cast) &&
+            Objects.equals(summonSpell1Cast, that.summonSpell1Cast) &&
+            Objects.equals(summonSpell2Cast, that.summonSpell2Cast) &&
+            Objects.equals(superMonsterKilled, that.superMonsterKilled) &&
+            Objects.equals(team, that.team) &&
+            Objects.equals(teamObjective, that.teamObjective) &&
+            Objects.equals(timePlayed, that.timePlayed) &&
+            Objects.equals(totalDamageDealt, that.totalDamageDealt) &&
+            Objects.equals(totalDamageDealtToBuildings, that.totalDamageDealtToBuildings) &&
+            Objects.equals(totalDamageDealtToChampions, that.totalDamageDealtToChampions) &&
+            Objects.equals(totalDamageTaken, that.totalDamageTaken) &&
+            Objects.equals(totalHeal, that.totalHeal) &&
+            Objects.equals(totalPlayerScore, that.totalPlayerScore) &&
+            Objects.equals(totalScoreRank, that.totalScoreRank) &&
+            Objects.equals(totalTimeCrowdControlDealt, that.totalTimeCrowdControlDealt) &&
+            Objects.equals(totalUnitsHealed, that.totalUnitsHealed) &&
+            Objects.equals(tripleKills, that.tripleKills) &&
+            Objects.equals(trueDamageDealtPlayer, that.trueDamageDealtPlayer) &&
+            Objects.equals(trueDamageDealtToChampions, that.trueDamageDealtToChampions) &&
+            Objects.equals(trueDamageTaken, that.trueDamageTaken) &&
+            Objects.equals(turretsKilled, that.turretsKilled) &&
+            Objects.equals(unrealKills, that.unrealKills) &&
+            Objects.equals(victoryPointTotal, that.victoryPointTotal) &&
+            Objects.equals(visionWardsBought, that.visionWardsBought) &&
+            Objects.equals(wardKilled, that.wardKilled) &&
+            Objects.equals(wardPlaced, that.wardPlaced) &&
+            Objects.equals(win, that.win);
     }
 
     @Override
@@ -931,96 +932,96 @@ public class RawStatsDto implements Serializable {
     @Override
     public String toString() {
         return "RawStatsDto{" +
-                "assists=" + assists +
-                ", barracksKilled=" + barracksKilled +
-                ", bountyLevel=" + bountyLevel +
-                ", championsKilled=" + championsKilled +
-                ", combatPlayerScore=" + combatPlayerScore +
-                ", consumablesPurchased=" + consumablesPurchased +
-                ", damageDealtPlayer=" + damageDealtPlayer +
-                ", doubleKills=" + doubleKills +
-                ", firstBlood=" + firstBlood +
-                ", gold=" + gold +
-                ", goldEarned=" + goldEarned +
-                ", goldSpent=" + goldSpent +
-                ", item0=" + item0 +
-                ", item1=" + item1 +
-                ", item2=" + item2 +
-                ", item3=" + item3 +
-                ", item4=" + item4 +
-                ", item5=" + item5 +
-                ", item6=" + item6 +
-                ", itemsPurchased=" + itemsPurchased +
-                ", killingSprees=" + killingSprees +
-                ", largestCriticalStrike=" + largestCriticalStrike +
-                ", largestKillingSpree=" + largestKillingSpree +
-                ", largestMultiKill=" + largestMultiKill +
-                ", legendaryItemsCreated=" + legendaryItemsCreated +
-                ", level=" + level +
-                ", magicDamageDealtPlayer=" + magicDamageDealtPlayer +
-                ", magicDamageDealtToChampions=" + magicDamageDealtToChampions +
-                ", magicDamageTaken=" + magicDamageTaken +
-                ", minionsDenied=" + minionsDenied +
-                ", minionsKilled=" + minionsKilled +
-                ", neutralMinionsKilled=" + neutralMinionsKilled +
-                ", neutralMinionsKilledEnemyJungle=" + neutralMinionsKilledEnemyJungle +
-                ", neutralMinionsKilledYourJungle=" + neutralMinionsKilledYourJungle +
-                ", nexusKilled=" + nexusKilled +
-                ", nodeCapture=" + nodeCapture +
-                ", nodeCaptureAssist=" + nodeCaptureAssist +
-                ", nodeNeutralize=" + nodeNeutralize +
-                ", nodeNeutralizeAssist=" + nodeNeutralizeAssist +
-                ", numDeaths=" + numDeaths +
-                ", numItemsBought=" + numItemsBought +
-                ", objectivePlayerScore=" + objectivePlayerScore +
-                ", pentaKills=" + pentaKills +
-                ", physicalDamageDealtPlayer=" + physicalDamageDealtPlayer +
-                ", physicalDamageDealtToChampions=" + physicalDamageDealtToChampions +
-                ", physicalDamageTaken=" + physicalDamageTaken +
-                ", playerPosition=" + playerPosition +
-                ", playerRole=" + playerRole +
-                ", playerScore0=" + playerScore0 +
-                ", playerScore1=" + playerScore1 +
-                ", playerScore2=" + playerScore2 +
-                ", playerScore3=" + playerScore3 +
-                ", playerScore4=" + playerScore4 +
-                ", playerScore5=" + playerScore5 +
-                ", playerScore6=" + playerScore6 +
-                ", playerScore7=" + playerScore7 +
-                ", playerScore8=" + playerScore8 +
-                ", playerScore9=" + playerScore9 +
-                ", quadraKills=" + quadraKills +
-                ", sightWardsBought=" + sightWardsBought +
-                ", spell1Cast=" + spell1Cast +
-                ", spell2Cast=" + spell2Cast +
-                ", spell3Cast=" + spell3Cast +
-                ", spell4Cast=" + spell4Cast +
-                ", summonSpell1Cast=" + summonSpell1Cast +
-                ", summonSpell2Cast=" + summonSpell2Cast +
-                ", superMonsterKilled=" + superMonsterKilled +
-                ", team=" + team +
-                ", teamObjective=" + teamObjective +
-                ", timePlayed=" + timePlayed +
-                ", totalDamageDealt=" + totalDamageDealt +
-                ", totalDamageDealtToBuildings=" + totalDamageDealtToBuildings +
-                ", totalDamageDealtToChampions=" + totalDamageDealtToChampions +
-                ", totalDamageTaken=" + totalDamageTaken +
-                ", totalHeal=" + totalHeal +
-                ", totalPlayerScore=" + totalPlayerScore +
-                ", totalScoreRank=" + totalScoreRank +
-                ", totalTimeCrowdControlDealt=" + totalTimeCrowdControlDealt +
-                ", totalUnitsHealed=" + totalUnitsHealed +
-                ", tripleKills=" + tripleKills +
-                ", trueDamageDealtPlayer=" + trueDamageDealtPlayer +
-                ", trueDamageDealtToChampions=" + trueDamageDealtToChampions +
-                ", trueDamageTaken=" + trueDamageTaken +
-                ", turretsKilled=" + turretsKilled +
-                ", unrealKills=" + unrealKills +
-                ", victoryPointTotal=" + victoryPointTotal +
-                ", visionWardsBought=" + visionWardsBought +
-                ", wardKilled=" + wardKilled +
-                ", wardPlaced=" + wardPlaced +
-                ", win=" + win +
-                '}';
+            "assists=" + assists +
+            ", barracksKilled=" + barracksKilled +
+            ", bountyLevel=" + bountyLevel +
+            ", championsKilled=" + championsKilled +
+            ", combatPlayerScore=" + combatPlayerScore +
+            ", consumablesPurchased=" + consumablesPurchased +
+            ", damageDealtPlayer=" + damageDealtPlayer +
+            ", doubleKills=" + doubleKills +
+            ", firstBlood=" + firstBlood +
+            ", gold=" + gold +
+            ", goldEarned=" + goldEarned +
+            ", goldSpent=" + goldSpent +
+            ", item0=" + item0 +
+            ", item1=" + item1 +
+            ", item2=" + item2 +
+            ", item3=" + item3 +
+            ", item4=" + item4 +
+            ", item5=" + item5 +
+            ", item6=" + item6 +
+            ", itemsPurchased=" + itemsPurchased +
+            ", killingSprees=" + killingSprees +
+            ", largestCriticalStrike=" + largestCriticalStrike +
+            ", largestKillingSpree=" + largestKillingSpree +
+            ", largestMultiKill=" + largestMultiKill +
+            ", legendaryItemsCreated=" + legendaryItemsCreated +
+            ", level=" + level +
+            ", magicDamageDealtPlayer=" + magicDamageDealtPlayer +
+            ", magicDamageDealtToChampions=" + magicDamageDealtToChampions +
+            ", magicDamageTaken=" + magicDamageTaken +
+            ", minionsDenied=" + minionsDenied +
+            ", minionsKilled=" + minionsKilled +
+            ", neutralMinionsKilled=" + neutralMinionsKilled +
+            ", neutralMinionsKilledEnemyJungle=" + neutralMinionsKilledEnemyJungle +
+            ", neutralMinionsKilledYourJungle=" + neutralMinionsKilledYourJungle +
+            ", nexusKilled=" + nexusKilled +
+            ", nodeCapture=" + nodeCapture +
+            ", nodeCaptureAssist=" + nodeCaptureAssist +
+            ", nodeNeutralize=" + nodeNeutralize +
+            ", nodeNeutralizeAssist=" + nodeNeutralizeAssist +
+            ", numDeaths=" + numDeaths +
+            ", numItemsBought=" + numItemsBought +
+            ", objectivePlayerScore=" + objectivePlayerScore +
+            ", pentaKills=" + pentaKills +
+            ", physicalDamageDealtPlayer=" + physicalDamageDealtPlayer +
+            ", physicalDamageDealtToChampions=" + physicalDamageDealtToChampions +
+            ", physicalDamageTaken=" + physicalDamageTaken +
+            ", playerPosition=" + playerPosition +
+            ", playerRole=" + playerRole +
+            ", playerScore0=" + playerScore0 +
+            ", playerScore1=" + playerScore1 +
+            ", playerScore2=" + playerScore2 +
+            ", playerScore3=" + playerScore3 +
+            ", playerScore4=" + playerScore4 +
+            ", playerScore5=" + playerScore5 +
+            ", playerScore6=" + playerScore6 +
+            ", playerScore7=" + playerScore7 +
+            ", playerScore8=" + playerScore8 +
+            ", playerScore9=" + playerScore9 +
+            ", quadraKills=" + quadraKills +
+            ", sightWardsBought=" + sightWardsBought +
+            ", spell1Cast=" + spell1Cast +
+            ", spell2Cast=" + spell2Cast +
+            ", spell3Cast=" + spell3Cast +
+            ", spell4Cast=" + spell4Cast +
+            ", summonSpell1Cast=" + summonSpell1Cast +
+            ", summonSpell2Cast=" + summonSpell2Cast +
+            ", superMonsterKilled=" + superMonsterKilled +
+            ", team=" + team +
+            ", teamObjective=" + teamObjective +
+            ", timePlayed=" + timePlayed +
+            ", totalDamageDealt=" + totalDamageDealt +
+            ", totalDamageDealtToBuildings=" + totalDamageDealtToBuildings +
+            ", totalDamageDealtToChampions=" + totalDamageDealtToChampions +
+            ", totalDamageTaken=" + totalDamageTaken +
+            ", totalHeal=" + totalHeal +
+            ", totalPlayerScore=" + totalPlayerScore +
+            ", totalScoreRank=" + totalScoreRank +
+            ", totalTimeCrowdControlDealt=" + totalTimeCrowdControlDealt +
+            ", totalUnitsHealed=" + totalUnitsHealed +
+            ", tripleKills=" + tripleKills +
+            ", trueDamageDealtPlayer=" + trueDamageDealtPlayer +
+            ", trueDamageDealtToChampions=" + trueDamageDealtToChampions +
+            ", trueDamageTaken=" + trueDamageTaken +
+            ", turretsKilled=" + turretsKilled +
+            ", unrealKills=" + unrealKills +
+            ", victoryPointTotal=" + victoryPointTotal +
+            ", visionWardsBought=" + visionWardsBought +
+            ", wardKilled=" + wardKilled +
+            ", wardPlaced=" + wardPlaced +
+            ", win=" + win +
+            '}';
     }
 }

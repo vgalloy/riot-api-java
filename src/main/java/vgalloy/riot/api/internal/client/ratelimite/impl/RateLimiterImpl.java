@@ -14,8 +14,9 @@ import vgalloy.riot.api.api.model.RateLimit;
 import vgalloy.riot.api.internal.client.ratelimite.RateLimiter;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
  */
 public class RateLimiterImpl implements RateLimiter {
 
@@ -56,9 +57,9 @@ public class RateLimiterImpl implements RateLimiter {
     private long getSleepingTime() {
         cleanList();
         return rateLimitList.stream()
-                .map(this::getSleepingTime)
-                .max(Long::compareTo)
-                .orElse(0L);
+            .map(this::getSleepingTime)
+            .max(Long::compareTo)
+            .orElse(0L);
     }
 
     /**
@@ -70,8 +71,8 @@ public class RateLimiterImpl implements RateLimiter {
     private long getSleepingTime(RateLimit rateLimit) {
         long currentTimer = System.currentTimeMillis();
         List<Long> listJobTimer = jobExecutionTimer.stream()
-                .filter(p -> currentTimer - rateLimit.getTimeInMillis() < p)
-                .collect(Collectors.toList());
+            .filter(p -> currentTimer - rateLimit.getTimeInMillis() < p)
+            .collect(Collectors.toList());
         if (listJobTimer.size() < rateLimit.getNumberOfRequest()) {
             return 0;
         } else {
@@ -95,8 +96,8 @@ public class RateLimiterImpl implements RateLimiter {
     private void cleanList() {
         long currentTimer = System.currentTimeMillis();
         jobExecutionTimer = jobExecutionTimer.stream()
-                .filter(p -> currentTimer - getTheLongestRateLimitDuration() < p)
-                .collect(Collectors.toList());
+            .filter(p -> currentTimer - getTheLongestRateLimitDuration() < p)
+            .collect(Collectors.toList());
     }
 
     /**
@@ -116,8 +117,8 @@ public class RateLimiterImpl implements RateLimiter {
     @Override
     public String toString() {
         return "RateLimiterImpl{" +
-                "jobExecutionTimer=" + jobExecutionTimer +
-                ", rateLimitList=" + rateLimitList +
-                '}';
+            "jobExecutionTimer=" + jobExecutionTimer +
+            ", rateLimitList=" + rateLimitList +
+            '}';
     }
 }

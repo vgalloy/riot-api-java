@@ -7,8 +7,9 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Created by Vincent Galloy on 21/06/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/06/16.
  */
 public class RiotRateLimitExceededException extends RuntimeException {
 
@@ -79,7 +80,7 @@ public class RiotRateLimitExceededException extends RuntimeException {
     @Override
     public String toString() {
         return "RiotRateLimitExceededException{" +
-                "headers=" + headers +
-                '}';
+            "headers=" + headers +
+            '}';
     }
 }

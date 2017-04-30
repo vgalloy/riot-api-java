@@ -10,10 +10,11 @@ import vgalloy.riot.api.api.query.Query;
 import vgalloy.riot.api.internal.service.executor.Executor;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
-public class ExecutorImpl implements Executor {
+public final class ExecutorImpl implements Executor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecutorImpl.class);
 

@@ -7,8 +7,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Shard implements Serializable {
 
@@ -71,10 +72,10 @@ public class Shard implements Serializable {
         }
         Shard shard = (Shard) o;
         return Objects.equals(hostname, shard.hostname) &&
-                Objects.equals(locales, shard.locales) &&
-                Objects.equals(name, shard.name) &&
-                Objects.equals(regionTag, shard.regionTag) &&
-                Objects.equals(slug, shard.slug);
+            Objects.equals(locales, shard.locales) &&
+            Objects.equals(name, shard.name) &&
+            Objects.equals(regionTag, shard.regionTag) &&
+            Objects.equals(slug, shard.slug);
     }
 
     @Override
@@ -85,11 +86,11 @@ public class Shard implements Serializable {
     @Override
     public String toString() {
         return "Shard{" +
-                "hostname='" + hostname + '\'' +
-                ", locales=" + locales +
-                ", name='" + name + '\'' +
-                ", regionTag='" + regionTag + '\'' +
-                ", slug='" + slug + '\'' +
-                '}';
+            "hostname='" + hostname + '\'' +
+            ", locales=" + locales +
+            ", name='" + name + '\'' +
+            ", regionTag='" + regionTag + '\'' +
+            ", slug='" + slug + '\'' +
+            '}';
     }
 }

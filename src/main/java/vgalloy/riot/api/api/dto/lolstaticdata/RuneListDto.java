@@ -5,8 +5,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class RuneListDto implements Serializable {
 
@@ -59,9 +60,9 @@ public class RuneListDto implements Serializable {
         }
         RuneListDto that = (RuneListDto) o;
         return Objects.equals(basic, that.basic) &&
-                Objects.equals(data, that.data) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(version, that.version);
+            Objects.equals(data, that.data) &&
+            Objects.equals(type, that.type) &&
+            Objects.equals(version, that.version);
     }
 
     @Override
@@ -72,10 +73,10 @@ public class RuneListDto implements Serializable {
     @Override
     public String toString() {
         return "RuneListDto{" +
-                "basic=" + basic +
-                ", data=" + data +
-                ", type='" + type + '\'' +
-                ", version='" + version + '\'' +
-                '}';
+            "basic=" + basic +
+            ", data=" + data +
+            ", type='" + type + '\'' +
+            ", version='" + version + '\'' +
+            '}';
     }
 }

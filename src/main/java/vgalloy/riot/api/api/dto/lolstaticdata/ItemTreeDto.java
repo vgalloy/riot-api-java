@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ItemTreeDto implements Serializable {
 
@@ -41,7 +42,7 @@ public class ItemTreeDto implements Serializable {
         }
         ItemTreeDto that = (ItemTreeDto) o;
         return Objects.equals(header, that.header) &&
-                Objects.equals(tags, that.tags);
+            Objects.equals(tags, that.tags);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class ItemTreeDto implements Serializable {
     @Override
     public String toString() {
         return "ItemTreeDto{" +
-                "header='" + header + '\'' +
-                ", tags=" + tags +
-                '}';
+            "header='" + header + '\'' +
+            ", tags=" + tags +
+            '}';
     }
 }

@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class Mastery implements Serializable {
 
@@ -40,7 +41,7 @@ public class Mastery implements Serializable {
         }
         Mastery mastery = (Mastery) o;
         return Objects.equals(masteryId, mastery.masteryId) &&
-                Objects.equals(rank, mastery.rank);
+            Objects.equals(rank, mastery.rank);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class Mastery implements Serializable {
     @Override
     public String toString() {
         return "Mastery{" +
-                "masteryId=" + masteryId +
-                ", rank=" + rank +
-                '}';
+            "masteryId=" + masteryId +
+            ", rank=" + rank +
+            '}';
     }
 }

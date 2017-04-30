@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MatchList implements Serializable {
 
@@ -59,9 +60,9 @@ public class MatchList implements Serializable {
         }
         MatchList matchList = (MatchList) o;
         return Objects.equals(endIndex, matchList.endIndex) &&
-                Objects.equals(matches, matchList.matches) &&
-                Objects.equals(startIndex, matchList.startIndex) &&
-                Objects.equals(totalGames, matchList.totalGames);
+            Objects.equals(matches, matchList.matches) &&
+            Objects.equals(startIndex, matchList.startIndex) &&
+            Objects.equals(totalGames, matchList.totalGames);
     }
 
     @Override
@@ -72,10 +73,10 @@ public class MatchList implements Serializable {
     @Override
     public String toString() {
         return "MatchList{" +
-                "endIndex=" + endIndex +
-                ", matches=" + matches +
-                ", startIndex=" + startIndex +
-                ", totalGames=" + totalGames +
-                '}';
+            "endIndex=" + endIndex +
+            ", matches=" + matches +
+            ", startIndex=" + startIndex +
+            ", totalGames=" + totalGames +
+            '}';
     }
 }

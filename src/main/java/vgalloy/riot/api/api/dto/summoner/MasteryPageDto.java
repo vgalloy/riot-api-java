@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 19/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 19/05/16.
  */
 public class MasteryPageDto implements Serializable {
 
@@ -59,9 +60,9 @@ public class MasteryPageDto implements Serializable {
         }
         MasteryPageDto that = (MasteryPageDto) o;
         return Objects.equals(current, that.current) &&
-                Objects.equals(id, that.id) &&
-                Objects.equals(masteries, that.masteries) &&
-                Objects.equals(name, that.name);
+            Objects.equals(id, that.id) &&
+            Objects.equals(masteries, that.masteries) &&
+            Objects.equals(name, that.name);
     }
 
     @Override
@@ -72,10 +73,10 @@ public class MasteryPageDto implements Serializable {
     @Override
     public String toString() {
         return "MasteryPageDto{" +
-                "current=" + current +
-                ", id=" + id +
-                ", masteries=" + masteries +
-                ", name='" + name + '\'' +
-                '}';
+            "current=" + current +
+            ", id=" + id +
+            ", masteries=" + masteries +
+            ", name='" + name + '\'' +
+            '}';
     }
 }

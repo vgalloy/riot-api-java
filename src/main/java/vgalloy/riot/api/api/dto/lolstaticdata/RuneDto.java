@@ -6,8 +6,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class RuneDto implements Serializable {
 
@@ -222,27 +223,27 @@ public class RuneDto implements Serializable {
         }
         RuneDto runeDto = (RuneDto) o;
         return Objects.equals(colloq, runeDto.colloq) &&
-                Objects.equals(consumeOnFull, runeDto.consumeOnFull) &&
-                Objects.equals(consumed, runeDto.consumed) &&
-                Objects.equals(depth, runeDto.depth) &&
-                Objects.equals(description, runeDto.description) &&
-                Objects.equals(from, runeDto.from) &&
-                Objects.equals(group, runeDto.group) &&
-                Objects.equals(hideFromAll, runeDto.hideFromAll) &&
-                Objects.equals(id, runeDto.id) &&
-                Objects.equals(image, runeDto.image) &&
-                Objects.equals(inStore, runeDto.inStore) &&
-                Objects.equals(into, runeDto.into) &&
-                Objects.equals(maps, runeDto.maps) &&
-                Objects.equals(name, runeDto.name) &&
-                Objects.equals(plaintext, runeDto.plaintext) &&
-                Objects.equals(requiredChampion, runeDto.requiredChampion) &&
-                Objects.equals(rune, runeDto.rune) &&
-                Objects.equals(sanitizedDescription, runeDto.sanitizedDescription) &&
-                Objects.equals(specialRecipe, runeDto.specialRecipe) &&
-                Objects.equals(stacks, runeDto.stacks) &&
-                Objects.equals(stats, runeDto.stats) &&
-                Objects.equals(tags, runeDto.tags);
+            Objects.equals(consumeOnFull, runeDto.consumeOnFull) &&
+            Objects.equals(consumed, runeDto.consumed) &&
+            Objects.equals(depth, runeDto.depth) &&
+            Objects.equals(description, runeDto.description) &&
+            Objects.equals(from, runeDto.from) &&
+            Objects.equals(group, runeDto.group) &&
+            Objects.equals(hideFromAll, runeDto.hideFromAll) &&
+            Objects.equals(id, runeDto.id) &&
+            Objects.equals(image, runeDto.image) &&
+            Objects.equals(inStore, runeDto.inStore) &&
+            Objects.equals(into, runeDto.into) &&
+            Objects.equals(maps, runeDto.maps) &&
+            Objects.equals(name, runeDto.name) &&
+            Objects.equals(plaintext, runeDto.plaintext) &&
+            Objects.equals(requiredChampion, runeDto.requiredChampion) &&
+            Objects.equals(rune, runeDto.rune) &&
+            Objects.equals(sanitizedDescription, runeDto.sanitizedDescription) &&
+            Objects.equals(specialRecipe, runeDto.specialRecipe) &&
+            Objects.equals(stacks, runeDto.stacks) &&
+            Objects.equals(stats, runeDto.stats) &&
+            Objects.equals(tags, runeDto.tags);
     }
 
     @Override
@@ -253,28 +254,28 @@ public class RuneDto implements Serializable {
     @Override
     public String toString() {
         return "RuneDto{" +
-                "colloq='" + colloq + '\'' +
-                ", consumeOnFull=" + consumeOnFull +
-                ", consumed=" + consumed +
-                ", depth=" + depth +
-                ", description='" + description + '\'' +
-                ", from=" + from +
-                ", group='" + group + '\'' +
-                ", hideFromAll=" + hideFromAll +
-                ", id=" + id +
-                ", image=" + image +
-                ", inStore=" + inStore +
-                ", into=" + into +
-                ", maps=" + maps +
-                ", name='" + name + '\'' +
-                ", plaintext='" + plaintext + '\'' +
-                ", requiredChampion='" + requiredChampion + '\'' +
-                ", rune=" + rune +
-                ", sanitizedDescription='" + sanitizedDescription + '\'' +
-                ", specialRecipe=" + specialRecipe +
-                ", stacks=" + stacks +
-                ", stats=" + stats +
-                ", tags=" + tags +
-                '}';
+            "colloq='" + colloq + '\'' +
+            ", consumeOnFull=" + consumeOnFull +
+            ", consumed=" + consumed +
+            ", depth=" + depth +
+            ", description='" + description + '\'' +
+            ", from=" + from +
+            ", group='" + group + '\'' +
+            ", hideFromAll=" + hideFromAll +
+            ", id=" + id +
+            ", image=" + image +
+            ", inStore=" + inStore +
+            ", into=" + into +
+            ", maps=" + maps +
+            ", name='" + name + '\'' +
+            ", plaintext='" + plaintext + '\'' +
+            ", requiredChampion='" + requiredChampion + '\'' +
+            ", rune=" + rune +
+            ", sanitizedDescription='" + sanitizedDescription + '\'' +
+            ", specialRecipe=" + specialRecipe +
+            ", stacks=" + stacks +
+            ", stats=" + stats +
+            ", tags=" + tags +
+            '}';
     }
 }

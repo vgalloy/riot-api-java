@@ -3,8 +3,9 @@ package vgalloy.riot.api.internal.rest.dto;
 import vgalloy.riot.api.api.constant.Region;
 
 /**
+ * Created by Vincent Galloy on 29/08/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 29/08/16.
  */
 public enum SmallCaseRegion {
     br, eune, euw, jp, kr, lan, las, na, oce, ru, tr;

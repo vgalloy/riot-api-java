@@ -1,8 +1,9 @@
 package vgalloy.riot.api.api.query.callback;
 
 /**
+ * Created by Vincent on 21/05/2016.
+ *
  * @author Vincent Galloy
- *         Created by Vincent on 21/05/2016.
  */
 public interface Callback<RESPONSE> {
 

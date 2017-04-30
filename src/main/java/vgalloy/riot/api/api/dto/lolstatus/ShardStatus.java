@@ -7,8 +7,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class ShardStatus implements Serializable {
 
@@ -80,11 +81,11 @@ public class ShardStatus implements Serializable {
         }
         ShardStatus that = (ShardStatus) o;
         return Objects.equals(hostname, that.hostname) &&
-                Objects.equals(locales, that.locales) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(regionTag, that.regionTag) &&
-                Objects.equals(services, that.services) &&
-                Objects.equals(slug, that.slug);
+            Objects.equals(locales, that.locales) &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(regionTag, that.regionTag) &&
+            Objects.equals(services, that.services) &&
+            Objects.equals(slug, that.slug);
     }
 
     @Override
@@ -95,12 +96,12 @@ public class ShardStatus implements Serializable {
     @Override
     public String toString() {
         return "ShardStatus{" +
-                "hostname='" + hostname + '\'' +
-                ", locales=" + locales +
-                ", name='" + name + '\'' +
-                ", regionTag='" + regionTag + '\'' +
-                ", services=" + services +
-                ", slug='" + slug + '\'' +
-                '}';
+            "hostname='" + hostname + '\'' +
+            ", locales=" + locales +
+            ", name='" + name + '\'' +
+            ", regionTag='" + regionTag + '\'' +
+            ", services=" + services +
+            ", slug='" + slug + '\'' +
+            '}';
     }
 }

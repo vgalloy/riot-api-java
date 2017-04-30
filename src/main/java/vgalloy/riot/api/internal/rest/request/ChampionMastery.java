@@ -12,8 +12,9 @@ import vgalloy.riot.api.api.dto.championmastery.ChampionMasteryDto;
 import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
+ * Created by Vincent Galloy on 20/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 20/05/16.
  */
 public interface ChampionMastery {
 

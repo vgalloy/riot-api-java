@@ -1,8 +1,9 @@
 package vgalloy.riot.api.internal.client.ratelimite;
 
 /**
+ * Created by Vincent Galloy on 22/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 22/05/16.
  */
 public interface RateLimiter {
 

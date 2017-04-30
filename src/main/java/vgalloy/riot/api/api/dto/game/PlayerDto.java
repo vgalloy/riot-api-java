@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 18/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 18/05/16.
  */
 public class PlayerDto implements Serializable {
 
@@ -49,8 +50,8 @@ public class PlayerDto implements Serializable {
         }
         PlayerDto playerDto = (PlayerDto) o;
         return Objects.equals(championId, playerDto.championId) &&
-                Objects.equals(summonerId, playerDto.summonerId) &&
-                Objects.equals(teamId, playerDto.teamId);
+            Objects.equals(summonerId, playerDto.summonerId) &&
+            Objects.equals(teamId, playerDto.teamId);
     }
 
     @Override
@@ -61,9 +62,9 @@ public class PlayerDto implements Serializable {
     @Override
     public String toString() {
         return "PlayerDto{" +
-                "championId=" + championId +
-                ", summonerId=" + summonerId +
-                ", teamId=" + teamId +
-                '}';
+            "championId=" + championId +
+            ", summonerId=" + summonerId +
+            ", teamId=" + teamId +
+            '}';
     }
 }

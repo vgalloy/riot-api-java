@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MasteryTreeListDto implements Serializable {
 
@@ -40,7 +41,7 @@ public class MasteryTreeListDto implements Serializable {
         }
         MasteryTreeListDto that = (MasteryTreeListDto) o;
         return Objects.equals(masteryId, that.masteryId) &&
-                Objects.equals(prereq, that.prereq);
+            Objects.equals(prereq, that.prereq);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class MasteryTreeListDto implements Serializable {
     @Override
     public String toString() {
         return "MasteryTreeListDto{" +
-                "masteryId=" + masteryId +
-                ", prereq='" + prereq + '\'' +
-                '}';
+            "masteryId=" + masteryId +
+            ", prereq='" + prereq + '\'' +
+            '}';
     }
 }

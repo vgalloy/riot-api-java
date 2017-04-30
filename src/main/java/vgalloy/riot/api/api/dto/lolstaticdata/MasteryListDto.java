@@ -5,8 +5,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class MasteryListDto implements Serializable {
 
@@ -59,9 +60,9 @@ public class MasteryListDto implements Serializable {
         }
         MasteryListDto that = (MasteryListDto) o;
         return Objects.equals(data, that.data) &&
-                Objects.equals(tree, that.tree) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(version, that.version);
+            Objects.equals(tree, that.tree) &&
+            Objects.equals(type, that.type) &&
+            Objects.equals(version, that.version);
     }
 
     @Override
@@ -72,10 +73,10 @@ public class MasteryListDto implements Serializable {
     @Override
     public String toString() {
         return "MasteryListDto{" +
-                "data=" + data +
-                ", tree=" + tree +
-                ", type='" + type + '\'' +
-                ", version='" + version + '\'' +
-                '}';
+            "data=" + data +
+            ", tree=" + tree +
+            ", type='" + type + '\'' +
+            ", version='" + version + '\'' +
+            '}';
     }
 }

@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class TeamMemberInfoDto implements Serializable {
 
@@ -58,9 +59,9 @@ public class TeamMemberInfoDto implements Serializable {
         }
         TeamMemberInfoDto that = (TeamMemberInfoDto) o;
         return Objects.equals(inviteDate, that.inviteDate) &&
-                Objects.equals(joinDate, that.joinDate) &&
-                Objects.equals(playerId, that.playerId) &&
-                Objects.equals(status, that.status);
+            Objects.equals(joinDate, that.joinDate) &&
+            Objects.equals(playerId, that.playerId) &&
+            Objects.equals(status, that.status);
     }
 
     @Override
@@ -71,10 +72,10 @@ public class TeamMemberInfoDto implements Serializable {
     @Override
     public String toString() {
         return "TeamMemberInfoDto{" +
-                "inviteDate=" + inviteDate +
-                ", joinDate=" + joinDate +
-                ", playerId=" + playerId +
-                ", status='" + status + '\'' +
-                '}';
+            "inviteDate=" + inviteDate +
+            ", joinDate=" + joinDate +
+            ", playerId=" + playerId +
+            ", status='" + status + '\'' +
+            '}';
     }
 }

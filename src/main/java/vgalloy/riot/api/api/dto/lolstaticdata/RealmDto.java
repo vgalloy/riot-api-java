@@ -7,8 +7,9 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class RealmDto implements Serializable {
 
@@ -110,14 +111,14 @@ public class RealmDto implements Serializable {
         }
         RealmDto realmDto = (RealmDto) o;
         return Objects.equals(cdn, realmDto.cdn) &&
-                Objects.equals(css, realmDto.css) &&
-                Objects.equals(dd, realmDto.dd) &&
-                Objects.equals(realmL, realmDto.realmL) &&
-                Objects.equals(lg, realmDto.lg) &&
-                Objects.equals(realmN, realmDto.realmN) &&
-                Objects.equals(profileIconMax, realmDto.profileIconMax) &&
-                Objects.equals(store, realmDto.store) &&
-                Objects.equals(realmV, realmDto.realmV);
+            Objects.equals(css, realmDto.css) &&
+            Objects.equals(dd, realmDto.dd) &&
+            Objects.equals(realmL, realmDto.realmL) &&
+            Objects.equals(lg, realmDto.lg) &&
+            Objects.equals(realmN, realmDto.realmN) &&
+            Objects.equals(profileIconMax, realmDto.profileIconMax) &&
+            Objects.equals(store, realmDto.store) &&
+            Objects.equals(realmV, realmDto.realmV);
     }
 
     @Override
@@ -128,15 +129,15 @@ public class RealmDto implements Serializable {
     @Override
     public String toString() {
         return "RealmDto{" +
-                "cdn='" + cdn + '\'' +
-                ", css='" + css + '\'' +
-                ", dd='" + dd + '\'' +
-                ", realmL='" + realmL + '\'' +
-                ", lg='" + lg + '\'' +
-                ", realmN=" + realmN +
-                ", profileIconMax=" + profileIconMax +
-                ", store='" + store + '\'' +
-                ", realmV='" + realmV + '\'' +
-                '}';
+            "cdn='" + cdn + '\'' +
+            ", css='" + css + '\'' +
+            ", dd='" + dd + '\'' +
+            ", realmL='" + realmL + '\'' +
+            ", lg='" + lg + '\'' +
+            ", realmN=" + realmN +
+            ", profileIconMax=" + profileIconMax +
+            ", store='" + store + '\'' +
+            ", realmV='" + realmV + '\'' +
+            '}';
     }
 }

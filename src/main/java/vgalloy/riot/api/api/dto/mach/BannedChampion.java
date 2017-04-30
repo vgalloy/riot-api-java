@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 23/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 23/05/16.
  */
 public class BannedChampion implements Serializable {
 
@@ -40,7 +41,7 @@ public class BannedChampion implements Serializable {
         }
         BannedChampion that = (BannedChampion) o;
         return Objects.equals(championId, that.championId) &&
-                Objects.equals(pickTurn, that.pickTurn);
+            Objects.equals(pickTurn, that.pickTurn);
     }
 
     @Override
@@ -51,8 +52,8 @@ public class BannedChampion implements Serializable {
     @Override
     public String toString() {
         return "BannedChampion{" +
-                "championId=" + championId +
-                ", pickTurn=" + pickTurn +
-                '}';
+            "championId=" + championId +
+            ", pickTurn=" + pickTurn +
+            '}';
     }
 }

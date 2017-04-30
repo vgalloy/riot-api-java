@@ -6,8 +6,9 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Frame implements Serializable {
 
@@ -51,8 +52,8 @@ public class Frame implements Serializable {
         }
         Frame frame = (Frame) o;
         return Objects.equals(events, frame.events) &&
-                Objects.equals(participantFrames, frame.participantFrames) &&
-                Objects.equals(timestamp, frame.timestamp);
+            Objects.equals(participantFrames, frame.participantFrames) &&
+            Objects.equals(timestamp, frame.timestamp);
     }
 
     @Override
@@ -63,9 +64,9 @@ public class Frame implements Serializable {
     @Override
     public String toString() {
         return "Frame{" +
-                "events=" + events +
-                ", participantFrames=" + participantFrames +
-                ", timestamp=" + timestamp +
-                '}';
+            "events=" + events +
+            ", participantFrames=" + participantFrames +
+            ", timestamp=" + timestamp +
+            '}';
     }
 }

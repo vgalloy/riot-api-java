@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class Team implements Serializable {
 
@@ -167,21 +168,21 @@ public class Team implements Serializable {
         }
         Team team = (Team) o;
         return Objects.equals(bans, team.bans) &&
-                Objects.equals(baronKills, team.baronKills) &&
-                Objects.equals(dominionVictoryScore, team.dominionVictoryScore) &&
-                Objects.equals(dragonKills, team.dragonKills) &&
-                Objects.equals(firstBaron, team.firstBaron) &&
-                Objects.equals(firstBlood, team.firstBlood) &&
-                Objects.equals(firstDragon, team.firstDragon) &&
-                Objects.equals(firstInhibitor, team.firstInhibitor) &&
-                Objects.equals(firstRiftHerald, team.firstRiftHerald) &&
-                Objects.equals(firstTower, team.firstTower) &&
-                Objects.equals(inhibitorKills, team.inhibitorKills) &&
-                Objects.equals(riftHeraldKills, team.riftHeraldKills) &&
-                Objects.equals(teamId, team.teamId) &&
-                Objects.equals(towerKills, team.towerKills) &&
-                Objects.equals(vilemawKills, team.vilemawKills) &&
-                Objects.equals(winner, team.winner);
+            Objects.equals(baronKills, team.baronKills) &&
+            Objects.equals(dominionVictoryScore, team.dominionVictoryScore) &&
+            Objects.equals(dragonKills, team.dragonKills) &&
+            Objects.equals(firstBaron, team.firstBaron) &&
+            Objects.equals(firstBlood, team.firstBlood) &&
+            Objects.equals(firstDragon, team.firstDragon) &&
+            Objects.equals(firstInhibitor, team.firstInhibitor) &&
+            Objects.equals(firstRiftHerald, team.firstRiftHerald) &&
+            Objects.equals(firstTower, team.firstTower) &&
+            Objects.equals(inhibitorKills, team.inhibitorKills) &&
+            Objects.equals(riftHeraldKills, team.riftHeraldKills) &&
+            Objects.equals(teamId, team.teamId) &&
+            Objects.equals(towerKills, team.towerKills) &&
+            Objects.equals(vilemawKills, team.vilemawKills) &&
+            Objects.equals(winner, team.winner);
     }
 
     @Override
@@ -192,22 +193,22 @@ public class Team implements Serializable {
     @Override
     public String toString() {
         return "Team{" +
-                "bans=" + bans +
-                ", baronKills=" + baronKills +
-                ", dominionVictoryScore=" + dominionVictoryScore +
-                ", dragonKills=" + dragonKills +
-                ", firstBaron=" + firstBaron +
-                ", firstBlood=" + firstBlood +
-                ", firstDragon=" + firstDragon +
-                ", firstInhibitor=" + firstInhibitor +
-                ", firstRiftHerald=" + firstRiftHerald +
-                ", firstTower=" + firstTower +
-                ", inhibitorKills=" + inhibitorKills +
-                ", riftHeraldKills=" + riftHeraldKills +
-                ", teamId=" + teamId +
-                ", towerKills=" + towerKills +
-                ", vilemawKills=" + vilemawKills +
-                ", winner=" + winner +
-                '}';
+            "bans=" + bans +
+            ", baronKills=" + baronKills +
+            ", dominionVictoryScore=" + dominionVictoryScore +
+            ", dragonKills=" + dragonKills +
+            ", firstBaron=" + firstBaron +
+            ", firstBlood=" + firstBlood +
+            ", firstDragon=" + firstDragon +
+            ", firstInhibitor=" + firstInhibitor +
+            ", firstRiftHerald=" + firstRiftHerald +
+            ", firstTower=" + firstTower +
+            ", inhibitorKills=" + inhibitorKills +
+            ", riftHeraldKills=" + riftHeraldKills +
+            ", teamId=" + teamId +
+            ", towerKills=" + towerKills +
+            ", vilemawKills=" + vilemawKills +
+            ", winner=" + winner +
+            '}';
     }
 }

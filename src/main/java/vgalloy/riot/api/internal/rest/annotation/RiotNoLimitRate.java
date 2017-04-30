@@ -6,9 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * Created by Vincent Galloy on 28/05/16.
+ * This annotation signify the request doesn't count in your rate limit.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 28/05/16.
- *         This annotation signify the request doesn't count in your rate limit
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

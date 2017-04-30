@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Created by Vincent Galloy on 21/05/16.
+ *
  * @author Vincent Galloy
- *         Created by Vincent Galloy on 21/05/16.
  */
 public class LevelTipDto implements Serializable {
 
@@ -41,7 +42,7 @@ public class LevelTipDto implements Serializable {
         }
         LevelTipDto that = (LevelTipDto) o;
         return Objects.equals(effect, that.effect) &&
-                Objects.equals(label, that.label);
+            Objects.equals(label, that.label);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class LevelTipDto implements Serializable {
     @Override
     public String toString() {
         return "LevelTipDto{" +
-                "effect=" + effect +
-                ", label=" + label +
-                '}';
+            "effect=" + effect +
+            ", label=" + label +
+            '}';
     }
 }

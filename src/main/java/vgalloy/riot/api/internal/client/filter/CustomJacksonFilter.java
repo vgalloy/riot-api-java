@@ -6,8 +6,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 
 /**
- * @author Vincent Galloy - 14/12/16
- *         Created by Vincent Galloy on 14/12/16.
+ * Created by Vincent Galloy on 14/12/16.
+ *
+ * @author Vincent Galloy
  */
 public class CustomJacksonFilter extends JacksonJaxbJsonProvider {
 

@@ -4,10 +4,11 @@ import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.api.model.RiotApiKey;
 
 /**
+ * Created by Vincent on 21/05/2016.
+ *
  * @author Vincent Galloy
- *         Created by Vincent on 21/05/2016.
  */
-public class DefaultParameter {
+public final class DefaultParameter {
 
     private RiotApiKey riotApiKey;
     private Region region;
