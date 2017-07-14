@@ -1,6 +1,6 @@
 package com.vgalloy.riot.library.api.query.impl.lolstaticdata;
 
-import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionStaticDataListDto;
 import com.vgalloy.riot.library.api.query.Query;
 
 /**
@@ -8,6 +8,6 @@ import com.vgalloy.riot.library.api.query.Query;
  *
  * @author Vincent Galloy
  */
-public interface GetChampionDataListQuery extends Query<ChampionListDto> {
+public interface GetChampionDataListQuery extends Query<ChampionStaticDataListDto> {
 
 }

@@ -8,7 +8,7 @@ import com.vgalloy.riot.library.api.constant.PlatformId;
 import com.vgalloy.riot.library.api.constant.Region;
 import com.vgalloy.riot.library.api.model.RiotApiKey;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
-import com.vgalloy.riot.api.internal.service.mapper.RegionMapper;
+import com.vgalloy.riot.api.internal.service.mapper.HelperMapper;
 
 /**
  * Created by Vincent on 20/05/2016.
@@ -83,7 +83,7 @@ public abstract class AbstractQuery<QUERY extends AbstractQuery<QUERY, DTO>, DTO
      * @return the platform id
      */
     protected PlatformId getPlatformId() {
-        return RegionMapper.fromRegion(getRegion());
+        return HelperMapper.toPlatformId(getRegion());
     }
 
     /**

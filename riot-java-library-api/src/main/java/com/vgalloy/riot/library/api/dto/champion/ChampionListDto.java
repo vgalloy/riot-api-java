@@ -42,7 +42,7 @@ public class ChampionListDto implements Serializable {
 
     @Override
     public String toString() {
-        return "ChampionListDto{" +
+        return "ChampionStaticDataListDto{" +
             "champions=" + champions +
             '}';
     }

@@ -9,7 +9,7 @@ import java.util.Objects;
  *
  * @author Vincent Galloy
  */
-public class ChampionDto implements Serializable {
+public class ChampionStaticDataDto implements Serializable {
 
     private static final long serialVersionUID = 6943226064286802800L;
 
@@ -172,10 +172,10 @@ public class ChampionDto implements Serializable {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof ChampionDto)) {
+        if (!(o instanceof ChampionStaticDataDto)) {
             return false;
         }
-        ChampionDto that = (ChampionDto) o;
+        ChampionStaticDataDto that = (ChampionStaticDataDto) o;
         return Objects.equals(allytips, that.allytips) &&
             Objects.equals(blurb, that.blurb) &&
             Objects.equals(enemytips, that.enemytips) &&
@@ -202,7 +202,7 @@ public class ChampionDto implements Serializable {
 
     @Override
     public String toString() {
-        return "ChampionDto{" +
+        return "ChampionStaticDataDto{" +
             "allytips=" + allytips +
             ", blurb='" + blurb + '\'' +
             ", enemytips=" + enemytips +

@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
-import com.vgalloy.riot.api.internal.service.mapper.RegionMapper;
+import com.vgalloy.riot.api.internal.service.mapper.HelperMapper;
 import com.vgalloy.riot.library.api.constant.Region;
 import com.vgalloy.riot.library.api.dto.championmastery.ChampionMasteryDto;
 import com.vgalloy.riot.library.api.model.RiotApiKey;
@@ -40,6 +40,6 @@ public class GetChampionMasteryByChampionQueryImpl implements GetChampionMastery
 
     @Override
     public ChampionMasteryDto execute() {
-        return riotWebApi.getChampionMasteryByChampion(SmallCaseRegion.of(region), RegionMapper.fromRegion(region), playerId, championId, riotApiKey.getApiKey());
+        return riotWebApi.getChampionMasteryByChampion(SmallCaseRegion.of(region), HelperMapper.toPlatformId(region), playerId, championId, riotApiKey.getApiKey());
     }
 }

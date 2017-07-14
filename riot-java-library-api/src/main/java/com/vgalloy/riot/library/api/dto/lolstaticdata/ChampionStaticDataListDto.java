@@ -9,21 +9,21 @@ import java.util.Objects;
  *
  * @author Vincent Galloy
  */
-public class ChampionListDto implements Serializable {
+public class ChampionStaticDataListDto implements Serializable {
 
     private static final long serialVersionUID = -3068669329756114722L;
 
-    private Map<String, ChampionDto> data;
+    private Map<String, ChampionStaticDataDto> data;
     private String format;
     private Map<String, String> keys;
     private String type;
     private String version;
 
-    public Map<String, ChampionDto> getData() {
+    public Map<String, ChampionStaticDataDto> getData() {
         return data;
     }
 
-    public void setData(Map<String, ChampionDto> data) {
+    public void setData(Map<String, ChampionStaticDataDto> data) {
         this.data = data;
     }
 
@@ -67,7 +67,7 @@ public class ChampionListDto implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ChampionListDto that = (ChampionListDto) o;
+        ChampionStaticDataListDto that = (ChampionStaticDataListDto) o;
         return Objects.equals(data, that.data) &&
             Objects.equals(format, that.format) &&
             Objects.equals(keys, that.keys) &&
@@ -82,7 +82,7 @@ public class ChampionListDto implements Serializable {
 
     @Override
     public String toString() {
-        return "ChampionListDto{" +
+        return "ChampionStaticDataListDto{" +
             "data=" + data +
             ", format='" + format + '\'' +
             ", keys=" + keys +

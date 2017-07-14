@@ -1,61 +1,50 @@
 package com.vgalloy.riot.api.internal.service;
 
-import com.vgalloy.riot.library.api.constant.LeagueQueueType;
-import com.vgalloy.riot.library.api.constant.Region;
-import com.vgalloy.riot.library.api.model.RiotRateLimit;
-import com.vgalloy.riot.library.api.model.RiotApi;
-import com.vgalloy.riot.library.api.model.RiotApiKey;
-import com.vgalloy.riot.library.api.query.impl.champion.GetChampionByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.champion.GetChampionListQuery;
-import com.vgalloy.riot.library.api.query.impl.championmastery.GetChampionMasteryByChampionQuery;
-import com.vgalloy.riot.library.api.query.impl.championmastery.GetChampionMasteryQuery;
-import com.vgalloy.riot.library.api.query.impl.championmastery.GetPlayerScore;
-import com.vgalloy.riot.library.api.query.impl.championmastery.GetTopChampion;
-import com.vgalloy.riot.library.api.query.impl.currentgame.GetCurrentGameInfoQuery;
-import com.vgalloy.riot.library.api.query.impl.featuredgame.GetFeaturedGameQuery;
-import com.vgalloy.riot.library.api.query.impl.game.GetRecentGameQuery;
-import com.vgalloy.riot.library.api.query.impl.league.GetChallengerQuery;
-import com.vgalloy.riot.library.api.query.impl.league.GetLeaguesBySummonerIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.league.GetLeaguesByTeamIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.league.GetLeaguesEntryBySummonerIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.league.GetLeaguesEntryByTeamIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.league.GetMasterQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetChampionDataByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetChampionDataListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetItemByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetItemListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetLanguageQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetLanguageStringQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetMapQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetMasteryByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetMasteryListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetRealmQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetRuneByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetRuneListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetSummonerSpellByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetSummonerSpellListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetVersionListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstatus.GetShardListQuery;
-import com.vgalloy.riot.library.api.query.impl.lolstatus.GetShardStatusQuery;
-import com.vgalloy.riot.library.api.query.impl.match.GetMatchDetailByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.match.GetMatchIdListByTournamentCodeQuery;
-import com.vgalloy.riot.library.api.query.impl.match.GetTournamentMatchDetailByIdQuery;
-import com.vgalloy.riot.library.api.query.impl.matchlist.GetMatchListBySummonerIdQuery;
-import com.vgalloy.riot.library.api.query.impl.stats.GetPlayerStatsSummaryQuery;
-import com.vgalloy.riot.library.api.query.impl.stats.GetRankedStatsQuery;
-import com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersByIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersByNamesQuery;
-import com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersMasteriesByIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersNameByIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersRunesByIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.team.GetTeamsBySummonerIdsQuery;
-import com.vgalloy.riot.library.api.query.impl.team.GetTeamsByTeamIdsQuery;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.client.RiotWebApiFactory;
 import com.vgalloy.riot.api.internal.client.ratelimite.RateLimitManager;
 import com.vgalloy.riot.api.internal.client.ratelimite.impl.RateLimitManagerImpl;
-import com.vgalloy.riot.api.internal.query.DefaultParameter;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
+import com.vgalloy.riot.api.internal.service.mapper.HelperMapper;
+import com.vgalloy.riot.library.api.constant.LeagueQueueType;
+import com.vgalloy.riot.library.api.constant.Region;
+import com.vgalloy.riot.library.api.dto.champion.ChampionDto;
+import com.vgalloy.riot.library.api.dto.champion.ChampionListDto;
+import com.vgalloy.riot.library.api.dto.championmastery.ChampionMasteryDto;
+import com.vgalloy.riot.library.api.dto.currentgame.CurrentGameInfo;
+import com.vgalloy.riot.library.api.dto.featuredgame.FeaturedGames;
+import com.vgalloy.riot.library.api.dto.game.RecentGamesDto;
+import com.vgalloy.riot.library.api.dto.league.LeagueDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionStaticDataDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionStaticDataListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ItemDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ItemListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.LanguageStringsDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.MapDataDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.MasteryDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.MasteryListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.RealmDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.RuneDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.RuneListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.SummonerSpellDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.SummonerSpellListDto;
+import com.vgalloy.riot.library.api.dto.lolstatus.Shard;
+import com.vgalloy.riot.library.api.dto.lolstatus.ShardStatus;
+import com.vgalloy.riot.library.api.dto.mach.MatchDetail;
+import com.vgalloy.riot.library.api.dto.matchlist.MatchList;
+import com.vgalloy.riot.library.api.dto.stats.PlayerStatsSummaryListDto;
+import com.vgalloy.riot.library.api.dto.stats.RankedStatsDto;
+import com.vgalloy.riot.library.api.dto.summoner.MasteryPagesDto;
+import com.vgalloy.riot.library.api.dto.summoner.RunePagesDto;
+import com.vgalloy.riot.library.api.dto.summoner.SummonerDto;
+import com.vgalloy.riot.library.api.dto.team.TeamDto;
+import com.vgalloy.riot.library.api.model.RiotApi;
+import com.vgalloy.riot.library.api.model.RiotApiKey;
+import com.vgalloy.riot.library.api.model.RiotRateLimit;
 
 /**
  * Created by Vincent on 20/05/2016.
@@ -64,264 +53,244 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  */
 public class RiotApiImpl implements RiotApi {
 
-    private final DefaultParameter defaultParameter = new DefaultParameter();
+    private final RiotApiKey riotApiKey;
     private final RiotWebApi riotWebApi;
-    private final RateLimitManager rateLimitManager;
 
     /**
      * Constructor.
      */
-    public RiotApiImpl() {
-        rateLimitManager = new RateLimitManagerImpl();
+    public RiotApiImpl(RiotApiKey riotApiKey, RiotRateLimit... riotRateLimits) {
+        this.riotApiKey = Objects.requireNonNull(riotApiKey);
+        Objects.requireNonNull(riotRateLimits);
+
+        RateLimitManager rateLimitManager = new RateLimitManagerImpl();
+        rateLimitManager.addRateLimit(riotRateLimits);
+
         riotWebApi = RiotWebApiFactory.getRiotWebApi(rateLimitManager);
     }
 
     @Override
-    public RiotApiImpl addGlobalRateLimit(RiotRateLimit... riotRateLimit) {
-        rateLimitManager.addRateLimit(riotRateLimit);
-        return this;
+    public ChampionListDto getChampionList(Region region, boolean freeToPlay) {
+        return riotWebApi.getChampionList(SmallCaseRegion.of(region), freeToPlay, riotApiKey.getApiKey());
     }
 
     @Override
-    public RiotApiImpl addRegionRateLimit(Region region, RiotRateLimit... riotRateLimit) {
-        rateLimitManager.addRateLimit(SmallCaseRegion.of(region), riotRateLimit);
-        return this;
+    public ChampionDto getChampionById(Region region, long championId) {
+        return riotWebApi.getChampionById(SmallCaseRegion.of(region), championId, riotApiKey.getApiKey());
     }
 
     @Override
-    public RiotApiImpl defaultRiotApiKey(RiotApiKey defaultRiotApiKey) {
-        defaultParameter.setRiotApiKey(defaultRiotApiKey);
-        return this;
+    public ChampionMasteryDto getChampionMasteryByChampion(Region region, long playerId, long championId) {
+        return riotWebApi.getChampionMasteryByChampion(SmallCaseRegion.of(region), HelperMapper.toPlatformId(region), playerId, championId, riotApiKey.getApiKey());
     }
 
     @Override
-    public RiotApiImpl defaultRegion(Region defaultRegion) {
-        defaultParameter.setRegion(defaultRegion);
-        return this;
+    public List<ChampionMasteryDto> getChampionMastery(Region region, long playerId) {
+        return riotWebApi.getChampionMastery(SmallCaseRegion.of(region), HelperMapper.toPlatformId(region), playerId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChampionListQuery getChampionList() {
-        return new GetChampionListQuery(riotWebApi, defaultParameter);
+    public Integer getPlayerScore(Region region, long playerId) {
+        return riotWebApi.getPlayerScore(SmallCaseRegion.of(region), HelperMapper.toPlatformId(region), playerId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChampionByIdQuery getChampionById(long championId) {
-        return new GetChampionByIdQuery(riotWebApi, defaultParameter, championId);
+    public List<ChampionMasteryDto> getTopChampion(Region region, long playerId, int count) {
+        return riotWebApi.getTopChampion(SmallCaseRegion.of(region), HelperMapper.toPlatformId(region), playerId, count, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChampionMasteryByChampionQuery getChampionMasteryByChampion(long playerId, long championId) {
-        return new GetChampionMasteryByChampionQuery(riotWebApi, defaultParameter, playerId, championId);
+    public CurrentGameInfo getCurrentGameInfo(Region region, long summonerId) {
+        return riotWebApi.getCurrentGameInfo(SmallCaseRegion.of(region), HelperMapper.toPlatformId(region), summonerId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChampionMasteryQuery getChampionMastery(long playerId) {
-        return new GetChampionMasteryQuery(riotWebApi, defaultParameter, playerId);
+    public FeaturedGames getFeaturedGame(Region region) {
+        return riotWebApi.getFeaturedGame(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetPlayerScore getPlayerScore(long playerId) {
-        return new GetPlayerScore(riotWebApi, defaultParameter, playerId);
+    public RecentGamesDto getRecentGame(Region region, long summonerId) {
+        return riotWebApi.getRecentGame(SmallCaseRegion.of(region), summonerId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetTopChampion getTopChampion(long playerId) {
-        return new GetTopChampion(riotWebApi, defaultParameter, playerId);
+    public Map<String, List<LeagueDto>> getLeaguesBySummonerIds(Region region, long... summonerIds) {
+        return riotWebApi.getLeaguesBySummonerIds(SmallCaseRegion.of(region), HelperMapper.convert(summonerIds), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetCurrentGameInfoQuery getCurrentGameInfo(long summonerId) {
-        return new GetCurrentGameInfoQuery(riotWebApi, defaultParameter, summonerId);
+    public Map<String, List<LeagueDto>> getLeaguesEntryBySummonerIds(Region region, long... summonerIds) {
+        return riotWebApi.getLeaguesBySummonerIds(SmallCaseRegion.of(region), HelperMapper.convert(summonerIds), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetFeaturedGameQuery getFeatureGame() {
-        return new GetFeaturedGameQuery(riotWebApi, defaultParameter);
+    public Map<String, List<LeagueDto>> getLeaguesByTeamIds(Region region, String... teamIds) {
+        return riotWebApi.getLeaguesByTeamIds(SmallCaseRegion.of(region), HelperMapper.convert(teamIds), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetRecentGameQuery getRecentGame(long summonerId) {
-        return new GetRecentGameQuery(riotWebApi, defaultParameter, summonerId);
+    public Map<String, List<LeagueDto>> getLeaguesEntryByTeamIds(Region region, String... teamIds) {
+        return riotWebApi.getLeaguesEntryByTeamIds(SmallCaseRegion.of(region), HelperMapper.convert(teamIds), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetLeaguesBySummonerIdsQuery getLeaguesBySummonerIds(long... summonerIds) {
-        return new GetLeaguesBySummonerIdsQuery(riotWebApi, defaultParameter, summonerIds);
+    public LeagueDto getChallenger(Region region, LeagueQueueType rankedQueueType) {
+        return riotWebApi.getChallenger(SmallCaseRegion.of(region), rankedQueueType, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetLeaguesEntryBySummonerIdsQuery getLeaguesEntryBySummonerIds(long... summonerIds) {
-        return new GetLeaguesEntryBySummonerIdsQuery(riotWebApi, defaultParameter, summonerIds);
+    public LeagueDto getMaster(Region region, LeagueQueueType rankedQueueType) {
+        return riotWebApi.getMaster(SmallCaseRegion.of(region), rankedQueueType, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds) {
-        return new GetLeaguesByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
+    public ChampionStaticDataListDto getChampionDataList(Region region) {
+        return riotWebApi.getChampionDataList(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds) {
-        return new GetLeaguesEntryByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
+    public ChampionStaticDataDto getChampionDataById(Region region, long championId) {
+        return riotWebApi.getChampionDataById(SmallCaseRegion.of(region), championId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChallengerQuery getChallenger(LeagueQueueType rankedQueueType) {
-        return new GetChallengerQuery(riotWebApi, defaultParameter, rankedQueueType);
+    public ItemListDto getItemList(Region region) {
+        return riotWebApi.getItemList(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetMasterQuery getMaster(LeagueQueueType rankedQueueType) {
-        return new GetMasterQuery(riotWebApi, defaultParameter, rankedQueueType);
+    public ItemDto getItemById(Region region, long itemId) {
+        return riotWebApi.getItemById(SmallCaseRegion.of(region), itemId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChampionDataListQuery getChampionDataList() {
-        return new GetChampionDataListQuery(riotWebApi, defaultParameter);
+    public LanguageStringsDto getLanguageString(Region region) {
+        return riotWebApi.getLanguageString(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetChampionDataByIdQuery getChampionDataById(long championId) {
-        return new GetChampionDataByIdQuery(riotWebApi, defaultParameter, championId);
+    public List<String> getLanguage(Region region) {
+        return riotWebApi.getLanguage(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetItemListQuery getItemList() {
-        return new GetItemListQuery(riotWebApi, defaultParameter);
+    public MapDataDto getMap(Region region) {
+        return riotWebApi.getMap(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetItemByIdQuery getItemById(long itemId) {
-        return new GetItemByIdQuery(riotWebApi, defaultParameter, itemId);
+    public MasteryListDto getMasteryList(Region region) {
+        return riotWebApi.getMasteryList(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetLanguageStringQuery getLanguageString() {
-        return new GetLanguageStringQuery(riotWebApi, defaultParameter);
+    public MasteryDto getMasteryById(Region region, long masteryId) {
+        return riotWebApi.getMasteryById(SmallCaseRegion.of(region), masteryId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetLanguageQuery getLanguage() {
-        return new GetLanguageQuery(riotWebApi, defaultParameter);
+    public RealmDto getRealm(Region region) {
+        return riotWebApi.getRealm(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetMapQuery getMap() {
-        return new GetMapQuery(riotWebApi, defaultParameter);
+    public RuneListDto getRuneList(Region region) {
+        return riotWebApi.getRuneList(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetMasteryListQuery getMasteryList() {
-        return new GetMasteryListQuery(riotWebApi, defaultParameter);
+    public RuneDto getRuneById(Region region, long runeId) {
+        return riotWebApi.getRuneById(SmallCaseRegion.of(region), runeId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetMasteryByIdQuery getMasteryById(long masteryId) {
-        return new GetMasteryByIdQuery(riotWebApi, defaultParameter, masteryId);
+    public SummonerSpellListDto getSummonerSpellList(Region region) {
+        return riotWebApi.getSummonerSpellList(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetRealmQuery getRealm() {
-        return new GetRealmQuery(riotWebApi, defaultParameter);
+    public SummonerSpellDto getSummonerSpellById(Region region, long summonerSpellId) {
+        return riotWebApi.getSummonerSpellById(SmallCaseRegion.of(region), summonerSpellId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetRuneListQuery getRuneList() {
-        return new GetRuneListQuery(riotWebApi, defaultParameter);
+    public List<String> getVersionList(Region region) {
+        return riotWebApi.getVersionList(SmallCaseRegion.of(region), riotApiKey.getApiKey());
     }
 
     @Override
-    public GetRuneByIdQuery getRuneById(long runeId) {
-        return new GetRuneByIdQuery(riotWebApi, defaultParameter, runeId);
+    public List<Shard> getShardList() {
+        return riotWebApi.getShardList();
     }
 
     @Override
-    public GetSummonerSpellListQuery getSummonerSpellList() {
-        return new GetSummonerSpellListQuery(riotWebApi, defaultParameter);
+    public ShardStatus getShardStatus(Region region) {
+        return riotWebApi.getShardStatus(SmallCaseRegion.of(region));
     }
 
     @Override
-    public GetSummonerSpellByIdQuery getSummonerSpellById(long summonerSpellId) {
-        return new GetSummonerSpellByIdQuery(riotWebApi, defaultParameter, summonerSpellId);
+    public List<Long> getMatchIdByTournamentCodeList(Region region, String tournamentCode) {
+        return riotWebApi.getMatchIdList(SmallCaseRegion.of(region), tournamentCode, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetVersionListQuery getVersionList() {
-        return new GetVersionListQuery(riotWebApi, defaultParameter);
+    public MatchDetail getTournamentMatchDetailById(Region region, long tournamentMatchId) {
+        return riotWebApi.getTournamentMatchDetailById(SmallCaseRegion.of(region), tournamentMatchId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetShardListQuery getShardList() {
-        return new GetShardListQuery(riotWebApi, defaultParameter);
+    public MatchDetail getMatchDetailById(Region region, long matchId) {
+        return riotWebApi.getMatchDetailById(SmallCaseRegion.of(region), matchId, riotApiKey.getApiKey());
     }
 
     @Override
-    public GetShardStatusQuery getShardStatus() {
-        return new GetShardStatusQuery(riotWebApi, defaultParameter);
+    public MatchList getMatchListBySummonerId(Region region, long summonerId) {
+        return null;
     }
 
     @Override
-    public GetMatchIdListByTournamentCodeQuery getMatchIdByTournamentCodeList(String tournamentCode) {
-        return new GetMatchIdListByTournamentCodeQuery(riotWebApi, defaultParameter, tournamentCode);
+    public RankedStatsDto getRankedStats(Region region, long summonerId) {
+        return null;
     }
 
     @Override
-    public GetTournamentMatchDetailByIdQuery getTournamentMatchDetailById(long tournamentMatchId) {
-        return new GetTournamentMatchDetailByIdQuery(riotWebApi, defaultParameter, tournamentMatchId);
+    public PlayerStatsSummaryListDto getPlayerStatsSummary(Region region, long playerId) {
+        return null;
     }
 
     @Override
-    public GetMatchDetailByIdQuery getMatchDetailById(long matchId) {
-        return new GetMatchDetailByIdQuery(riotWebApi, defaultParameter, matchId);
+    public Map<String, SummonerDto> getSummonerByNames(Region region, String... playerNames) {
+        return null;
     }
 
     @Override
-    public GetMatchListBySummonerIdQuery getMatchListBySummonerId(long summonerId) {
-        return new GetMatchListBySummonerIdQuery(riotWebApi, defaultParameter, summonerId);
+    public Map<String, SummonerDto> getSummonersByIds(Region region, long... playerIds) {
+        return null;
     }
 
     @Override
-    public GetRankedStatsQuery getRankedStats(long summonerId) {
-        return new GetRankedStatsQuery(riotWebApi, defaultParameter, summonerId);
+    public Map<String, MasteryPagesDto> getSummonersMasteriesByIds(Region region, long... playerIds) {
+        return null;
     }
 
     @Override
-    public GetPlayerStatsSummaryQuery getPlayerStatsSummary(long playerId) {
-        return new GetPlayerStatsSummaryQuery(riotWebApi, defaultParameter, playerId);
+    public Map<String, String> getSummonersNameByIds(Region region, long... playerIds) {
+        return null;
     }
 
     @Override
-    public GetSummonersByNamesQuery getSummonerByNames(String... playerNames) {
-        return new GetSummonersByNamesQuery(riotWebApi, defaultParameter, playerNames);
+    public Map<String, RunePagesDto> getSummonersRunesByIds(Region region, long... playerIds) {
+        return null;
     }
 
     @Override
-    public GetSummonersByIdsQuery getSummonersByIds(long... playerIds) {
-        return new GetSummonersByIdsQuery(riotWebApi, defaultParameter, playerIds);
+    public Map<String, List<TeamDto>> getTeamsBySummonerIds(Region region, long... playerIds) {
+        return null;
     }
 
     @Override
-    public GetSummonersMasteriesByIdsQuery getSummonersMasteriesByIds(long... playerIds) {
-        return new GetSummonersMasteriesByIdsQuery(riotWebApi, defaultParameter, playerIds);
-    }
-
-    @Override
-    public GetSummonersNameByIdsQuery getSummonersNameByIds(long... playerIds) {
-        return new GetSummonersNameByIdsQuery(riotWebApi, defaultParameter, playerIds);
-    }
-
-    @Override
-    public GetSummonersRunesByIdsQuery getSummonersRunesByIds(long... playerIds) {
-        return new GetSummonersRunesByIdsQuery(riotWebApi, defaultParameter, playerIds);
-    }
-
-    @Override
-    public GetTeamsBySummonerIdsQuery getTeamsBySummonerIds(long... playerIds) {
-        return new GetTeamsBySummonerIdsQuery(riotWebApi, defaultParameter, playerIds);
-    }
-
-    @Override
-    public GetTeamsByTeamIdsQuery getTeamsByTeamIds(String... playerIds) {
-        return new GetTeamsByTeamIdsQuery(riotWebApi, defaultParameter, playerIds);
+    public Map<String, TeamDto> getTeamsByTeamIds(Region region, String... playerIds) {
+        return null;
     }
 }

@@ -15,9 +15,9 @@ public final class FeaturedGameApiTest extends AbstractTest {
     @Test
     public void testGetFeaturedGame() {
         new QueryTester("FeaturedGame")
-            .test(RIOT_API.getFeatureGame().region(Region.EUW))
-            .test(RIOT_API.getFeatureGame().region(Region.NA))
-            .test(RIOT_API.getFeatureGame().region(Region.KR))
+            .test(RIOT_API.getFeaturedGame().region(Region.EUW))
+            .test(RIOT_API.getFeaturedGame().region(Region.NA))
+            .test(RIOT_API.getFeaturedGame().region(Region.KR))
             .end();
     }
 }

@@ -202,7 +202,7 @@ public class ChampionDto implements Serializable {
 
     @Override
     public String toString() {
-        return "ChampionDto{" +
+        return "ChampionStaticDataDto{" +
             "allytips=" + allytips +
             ", blurb='" + blurb + '\'' +
             ", enemytips=" + enemytips +

@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionDto;
-import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionStaticDataDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionStaticDataListDto;
 import com.vgalloy.riot.library.api.dto.lolstaticdata.ItemDto;
 import com.vgalloy.riot.library.api.dto.lolstaticdata.ItemListDto;
 import com.vgalloy.riot.library.api.dto.lolstaticdata.LanguageStringsDto;
@@ -40,7 +40,7 @@ public interface LolStaticDataApi {
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/champion")
     @RiotNoLimitRate
-    ChampionListDto getChampionDataList(@PathParam("region") SmallCaseRegion region, @QueryParam("api_key") String apiKey);
+    ChampionStaticDataListDto getChampionDataList(@PathParam("region") SmallCaseRegion region, @QueryParam("api_key") String apiKey);
 
     /**
      * Retrieves a champion by its id.
@@ -53,7 +53,7 @@ public interface LolStaticDataApi {
     @GET
     @Path("https://global.api.pvp.net/api/lol/static-data/{region}/v1.2/champion/{id}")
     @RiotNoLimitRate
-    ChampionDto getChampionDataById(@PathParam("region") SmallCaseRegion region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
+    ChampionStaticDataDto getChampionDataById(@PathParam("region") SmallCaseRegion region, @PathParam("id") Long id, @QueryParam("api_key") String apiKey);
 
     /**
      * Retrieves item list.

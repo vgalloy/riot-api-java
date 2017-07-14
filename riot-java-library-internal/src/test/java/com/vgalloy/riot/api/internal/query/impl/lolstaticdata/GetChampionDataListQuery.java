@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.lolstaticdata;
 
-import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionListDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionStaticDataListDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionDataListQuery extends AbstractQuery<GetChampionDataListQuery, ChampionListDto> {
+public class GetChampionDataListQuery extends AbstractQuery<GetChampionDataListQuery, ChampionStaticDataListDto> {
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ public class GetChampionDataListQuery extends AbstractQuery<GetChampionDataListQ
     }
 
     @Override
-    protected ChampionListDto executeWithError() {
+    protected ChampionStaticDataListDto executeWithError() {
         return riotWebApi.getChampionDataList(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

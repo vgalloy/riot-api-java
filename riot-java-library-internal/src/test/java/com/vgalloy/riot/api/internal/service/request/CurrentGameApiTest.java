@@ -16,7 +16,7 @@ public final class CurrentGameApiTest extends AbstractTest {
     @Test
     public void testGetCurrentGameInfo() {
         try {
-            FeaturedGameInfo featuredGameInfo = RIOT_API.getFeatureGame()
+            FeaturedGameInfo featuredGameInfo = RIOT_API.getFeaturedGame()
                 .region(Region.EUW)
                 .execute()
                 .getGameList()

@@ -1,5 +1,9 @@
 package com.vgalloy.riot.api.internal.service.mapper;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.StringJoiner;
+
 import com.vgalloy.riot.library.api.constant.PlatformId;
 import com.vgalloy.riot.library.api.constant.Region;
 
@@ -8,13 +12,13 @@ import com.vgalloy.riot.library.api.constant.Region;
  *
  * @author Vincent Galloy
  */
-public final class RegionMapper {
+public final class HelperMapper {
 
     /**
      * Constructor.
      * To prevent instantiation
      */
-    private RegionMapper() {
+    private HelperMapper() {
         throw new AssertionError();
     }
 
@@ -24,7 +28,7 @@ public final class RegionMapper {
      * @param region the region
      * @return the platform id
      */
-    public static PlatformId fromRegion(Region region) {
+    public static PlatformId toPlatformId(Region region) {
         switch (region) {
             case BR:
                 return PlatformId.BR1;
@@ -51,5 +55,29 @@ public final class RegionMapper {
             default:
                 throw new IllegalStateException("region can not be converted");
         }
+    }
+
+    /**
+     * Convert an array of item into a String separated by comma.
+     *
+     * @param objects the array of item
+     * @return a String
+     */
+    public static <T> String convert(T... objects) {
+        return convert(Arrays.asList(objects));
+    }
+
+    /**
+     * Convert a list of item into a String separated by comma.
+     *
+     * @param list the list of item
+     * @return a String
+     */
+    public static String convert(Collection<?> list) {
+        StringJoiner stringJoiner = new StringJoiner(",");
+        list.stream()
+            .map(Object::toString)
+            .forEach(stringJoiner::add);
+        return stringJoiner.toString();
     }
 }
