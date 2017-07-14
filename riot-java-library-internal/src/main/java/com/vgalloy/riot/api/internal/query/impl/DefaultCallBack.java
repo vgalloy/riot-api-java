@@ -1,0 +1,37 @@
+package com.vgalloy.riot.api.internal.query.impl;
+
+import com.vgalloy.riot.api.api.callback.Callback;
+
+/**
+ * Created by Vincent Galloy on 26/05/16.
+ *
+ * @author Vincent Galloy
+ */
+public final class DefaultCallBack<RESPONSE> implements Callback<RESPONSE> {
+
+    private static final DefaultCallBack<?> INSTANCE = new DefaultCallBack<>();
+
+    /**
+     * Constructor.
+     * To prevent instantiation
+     */
+    private DefaultCallBack() {
+        // Do nothing
+    }
+
+    @Override
+    public void process(RESPONSE response) {
+        // Do nothing
+    }
+
+    /**
+     * Get the Callback instance.
+     *
+     * @param <T> the parametric type
+     * @return the singleton instance
+     */
+    @SuppressWarnings("unchecked")
+    public static <T> DefaultCallBack<T> getInstance() {
+        return (DefaultCallBack<T>) INSTANCE;
+    }
+}
