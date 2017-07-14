@@ -27,7 +27,7 @@ public class GetSummonersMasteriesByIdsQuery extends AbstractQuery<com.vgalloy.r
      * @param summonerIds      the summoner ids
      */
     public GetSummonersMasteriesByIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         addSummonerIds(summonerIds);
     }
 
@@ -45,7 +45,7 @@ public class GetSummonersMasteriesByIdsQuery extends AbstractQuery<com.vgalloy.r
     }
 
     @Override
-    protected Map<String, MasteryPagesDto> executeWithError() {
+    public Map<String, MasteryPagesDto> execute() {
         return riotWebApi.getSummonersMasteriesByIds(SmallCaseRegion.of(getRegion()), convert(summonerIds), getRiotApiKeyValue());
     }
 }

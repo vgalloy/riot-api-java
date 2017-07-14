@@ -28,7 +28,7 @@ public class GetTeamsByTeamIdsQuery extends AbstractQuery<com.vgalloy.riot.libra
      * @param teamIds          the team ids
      */
     public GetTeamsByTeamIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String... teamIds) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         addTeamIds(teamIds);
     }
 
@@ -44,7 +44,7 @@ public class GetTeamsByTeamIdsQuery extends AbstractQuery<com.vgalloy.riot.libra
     }
 
     @Override
-    protected Map<String, TeamDto> executeWithError() {
+    public Map<String, TeamDto> execute() {
         return riotWebApi.getTeamsByTeamIds(SmallCaseRegion.of(getRegion()), convert(teamIds), getRiotApiKeyValue());
     }
 }

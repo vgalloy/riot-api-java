@@ -23,12 +23,12 @@ public class GetRuneByIdQuery extends AbstractQuery<com.vgalloy.riot.library.api
      * @param runeId           the rune id
      */
     public GetRuneByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long runeId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.runeId = runeId;
     }
 
     @Override
-    protected RuneDto executeWithError() {
+    public RuneDto execute() {
         return riotWebApi.getRuneById(SmallCaseRegion.of(getRegion()), runeId, getRiotApiKeyValue());
     }
 }

@@ -26,12 +26,12 @@ public class GetChallengerQuery extends AbstractQuery<com.vgalloy.riot.library.a
      * @param leagueQueueType  the queue type
      */
     public GetChallengerQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, LeagueQueueType leagueQueueType) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.leagueQueueType = Objects.requireNonNull(leagueQueueType, "leagueQueueType can not be null");
     }
 
     @Override
-    protected LeagueDto executeWithError() {
+    public LeagueDto execute() {
         return riotWebApi.getChallenger(SmallCaseRegion.of(getRegion()), leagueQueueType, getRiotApiKeyValue());
     }
 }

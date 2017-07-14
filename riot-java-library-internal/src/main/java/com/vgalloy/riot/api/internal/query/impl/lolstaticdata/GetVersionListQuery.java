@@ -21,11 +21,11 @@ public class GetVersionListQuery extends AbstractQuery<com.vgalloy.riot.library.
      * @param defaultParameter the default query parameter
      */
     public GetVersionListQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected List<String> executeWithError() {
+    public List<String> execute() {
         return riotWebApi.getVersionList(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

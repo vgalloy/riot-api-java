@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionListQuery extends AbstractQuery<GetChampionListQuery, ChampionListDto> {
+public class GetChampionListQuery extends AbstractQuery<GetChampionListQueryImpl, ChampionListDto> {
 
     private boolean freeToPlay;
 
@@ -36,7 +36,7 @@ public class GetChampionListQuery extends AbstractQuery<GetChampionListQuery, Ch
      * @param freeToPlay free to play
      * @return this
      */
-    public GetChampionListQuery freeToPlay(boolean freeToPlay) {
+    public GetChampionListQueryImpl freeToPlay(boolean freeToPlay) {
         this.freeToPlay = freeToPlay;
         return this;
     }

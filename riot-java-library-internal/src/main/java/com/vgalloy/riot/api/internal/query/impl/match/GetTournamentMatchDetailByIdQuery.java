@@ -24,12 +24,12 @@ public class GetTournamentMatchDetailByIdQuery extends AbstractQuery<GetMatchDet
      * @param tournamentMatchId the tournament match id
      */
     public GetTournamentMatchDetailByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long tournamentMatchId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.tournamentMatchId = tournamentMatchId;
     }
 
     @Override
-    protected MatchDetail executeWithError() {
+    public MatchDetail execute() {
         return riotWebApi.getTournamentMatchDetailById(SmallCaseRegion.of(getRegion()), tournamentMatchId, getRiotApiKeyValue());
     }
 }

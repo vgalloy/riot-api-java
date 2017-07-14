@@ -23,12 +23,12 @@ public class GetCurrentGameInfoQuery extends AbstractQuery<com.vgalloy.riot.libr
      * @param summonerId       the summoner id
      */
     public GetCurrentGameInfoQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.summonerId = summonerId;
     }
 
     @Override
-    protected CurrentGameInfo executeWithError() {
+    public CurrentGameInfo execute() {
         return riotWebApi.getCurrentGameInfo(SmallCaseRegion.of(getRegion()), getPlatformId(), summonerId, getRiotApiKeyValue());
     }
 }

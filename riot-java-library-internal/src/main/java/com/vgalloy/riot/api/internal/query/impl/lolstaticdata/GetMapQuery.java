@@ -20,11 +20,11 @@ public class GetMapQuery extends AbstractQuery<com.vgalloy.riot.library.api.quer
      * @param defaultParameter the default query parameter
      */
     public GetMapQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected MapDataDto executeWithError() {
+    public MapDataDto execute() {
         return riotWebApi.getMap(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

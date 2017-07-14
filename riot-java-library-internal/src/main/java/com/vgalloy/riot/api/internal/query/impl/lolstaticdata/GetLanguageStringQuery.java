@@ -20,11 +20,11 @@ public class GetLanguageStringQuery extends AbstractQuery<com.vgalloy.riot.libra
      * @param defaultParameter the default query parameter
      */
     public GetLanguageStringQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected LanguageStringsDto executeWithError() {
+    public LanguageStringsDto execute() {
         return riotWebApi.getLanguageString(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

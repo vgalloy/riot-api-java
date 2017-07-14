@@ -20,11 +20,11 @@ public class GetChampionDataListQuery extends AbstractQuery<com.vgalloy.riot.lib
      * @param defaultParameter the default query parameter
      */
     public GetChampionDataListQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected ChampionListDto executeWithError() {
+    public ChampionListDto execute() {
         return riotWebApi.getChampionDataList(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

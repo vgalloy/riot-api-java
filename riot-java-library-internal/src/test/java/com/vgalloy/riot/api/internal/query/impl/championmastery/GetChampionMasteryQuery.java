@@ -13,7 +13,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionMasteryQuery extends AbstractQuery<GetChampionMasteryQuery, List<ChampionMasteryDto>> {
+public class GetChampionMasteryQuery extends AbstractQuery<GetChampionMasteryQueryImpl, List<ChampionMasteryDto>> {
 
     private final long playerId;
 

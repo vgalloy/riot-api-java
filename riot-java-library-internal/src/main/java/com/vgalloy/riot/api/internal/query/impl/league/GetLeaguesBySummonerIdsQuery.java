@@ -28,7 +28,7 @@ public class GetLeaguesBySummonerIdsQuery extends AbstractQuery<com.vgalloy.riot
      * @param summonerIds      the summoner id
      */
     public GetLeaguesBySummonerIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         addSummonerIds(summonerIds);
     }
 
@@ -46,7 +46,7 @@ public class GetLeaguesBySummonerIdsQuery extends AbstractQuery<com.vgalloy.riot
     }
 
     @Override
-    protected Map<String, List<LeagueDto>> executeWithError() {
+    public Map<String, List<LeagueDto>> execute() {
         return riotWebApi.getLeaguesBySummonerIds(SmallCaseRegion.of(getRegion()), convert(summonerIds), getRiotApiKeyValue());
     }
 }

@@ -23,12 +23,12 @@ public class GetChampionDataByIdQuery extends AbstractQuery<com.vgalloy.riot.lib
      * @param championId       the champion Id
      */
     public GetChampionDataByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long championId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.championId = championId;
     }
 
     @Override
-    protected ChampionDto executeWithError() {
+    public ChampionDto execute() {
         return riotWebApi.getChampionDataById(SmallCaseRegion.of(getRegion()), championId, getRiotApiKeyValue());
     }
 }

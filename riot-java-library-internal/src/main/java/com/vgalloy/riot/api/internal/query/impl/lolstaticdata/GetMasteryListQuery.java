@@ -20,11 +20,11 @@ public class GetMasteryListQuery extends AbstractQuery<com.vgalloy.riot.library.
      * @param defaultParameter the default query parameter
      */
     public GetMasteryListQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected MasteryListDto executeWithError() {
+    public MasteryListDto execute() {
         return riotWebApi.getMasteryList(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

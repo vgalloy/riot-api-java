@@ -24,12 +24,12 @@ public class GetMatchIdListByTournamentCodeQuery extends AbstractQuery<com.vgall
      * @param tournamentCode   the tournament code
      */
     public GetMatchIdListByTournamentCodeQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, String tournamentCode) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.tournamentCode = tournamentCode;
     }
 
     @Override
-    protected List<Long> executeWithError() {
+    public List<Long> execute() {
         return riotWebApi.getMatchIdList(SmallCaseRegion.of(getRegion()), tournamentCode, getRiotApiKeyValue());
     }
 }

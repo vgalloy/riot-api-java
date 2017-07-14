@@ -11,11 +11,4 @@ import com.vgalloy.riot.library.api.query.Query;
  */
 public interface GetSummonersNameByIdsQuery extends Query<Map<String, String>> {
 
-    /**
-     * Add summoner ids.
-     *
-     * @param summonerIds the summoner ids
-     * @return this
-     */
-    GetSummonersNameByIdsQuery addSummonerIds(long... summonerIds);
 }

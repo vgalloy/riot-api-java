@@ -28,7 +28,7 @@ public class GetTeamsBySummonerIdsQuery extends AbstractQuery<com.vgalloy.riot.l
      * @param summonerIds      the summoner ids
      */
     public GetTeamsBySummonerIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         addSummonerIds(summonerIds);
     }
 
@@ -46,7 +46,7 @@ public class GetTeamsBySummonerIdsQuery extends AbstractQuery<com.vgalloy.riot.l
     }
 
     @Override
-    protected Map<String, List<TeamDto>> executeWithError() {
+    public Map<String, List<TeamDto>> execute() {
         return riotWebApi.getTeamsBySummonerIds(SmallCaseRegion.of(getRegion()), convert(summonerIds), getRiotApiKeyValue());
     }
 }

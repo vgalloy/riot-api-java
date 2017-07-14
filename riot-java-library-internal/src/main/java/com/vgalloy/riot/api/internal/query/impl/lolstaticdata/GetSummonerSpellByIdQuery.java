@@ -23,12 +23,12 @@ public class GetSummonerSpellByIdQuery extends AbstractQuery<com.vgalloy.riot.li
      * @param summonerSpellId  the summoner spell id
      */
     public GetSummonerSpellByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerSpellId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.summonerSpellId = summonerSpellId;
     }
 
     @Override
-    protected SummonerSpellDto executeWithError() {
+    public SummonerSpellDto execute() {
         return riotWebApi.getSummonerSpellById(SmallCaseRegion.of(getRegion()), summonerSpellId, getRiotApiKeyValue());
     }
 }

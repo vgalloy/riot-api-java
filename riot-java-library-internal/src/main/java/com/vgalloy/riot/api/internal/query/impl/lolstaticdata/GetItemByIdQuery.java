@@ -23,12 +23,12 @@ public class GetItemByIdQuery extends AbstractQuery<com.vgalloy.riot.library.api
      * @param itemId           the item Id
      */
     public GetItemByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long itemId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.itemId = itemId;
     }
 
     @Override
-    protected ItemDto executeWithError() {
+    public ItemDto execute() {
         return riotWebApi.getItemById(SmallCaseRegion.of(getRegion()), itemId, getRiotApiKeyValue());
     }
 }

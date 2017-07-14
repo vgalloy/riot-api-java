@@ -23,12 +23,12 @@ public class GetPlayerStatsSummaryQuery extends AbstractQuery<com.vgalloy.riot.l
      * @param summonerId       the summoner id
      */
     public GetPlayerStatsSummaryQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.summonerId = summonerId;
     }
 
     @Override
-    protected PlayerStatsSummaryListDto executeWithError() {
+    public PlayerStatsSummaryListDto execute() {
         return riotWebApi.getPlayerStatsSummary(SmallCaseRegion.of(getRegion()), summonerId, getRiotApiKeyValue());
     }
 }

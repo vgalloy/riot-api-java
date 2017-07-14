@@ -20,11 +20,11 @@ public class GetShardStatusQuery extends AbstractQuery<com.vgalloy.riot.library.
      * @param defaultParameter the default query parameter
      */
     public GetShardStatusQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected ShardStatus executeWithError() {
+    public ShardStatus execute() {
         return riotWebApi.getShardStatus(SmallCaseRegion.of(getRegion()));
     }
 }

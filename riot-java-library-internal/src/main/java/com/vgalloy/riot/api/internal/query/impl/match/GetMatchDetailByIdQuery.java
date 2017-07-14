@@ -24,12 +24,12 @@ public class GetMatchDetailByIdQuery extends AbstractQuery<com.vgalloy.riot.libr
      * @param matchId          the match id
      */
     public GetMatchDetailByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long matchId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.matchId = matchId;
     }
 
     @Override
-    protected MatchDetail executeWithError() {
+    public MatchDetail execute() {
         return riotWebApi.getMatchDetailById(SmallCaseRegion.of(getRegion()), matchId, includeTimeline, getRiotApiKeyValue());
     }
 

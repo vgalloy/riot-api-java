@@ -12,11 +12,4 @@ import com.vgalloy.riot.library.api.query.Query;
  */
 public interface GetTeamsByTeamIdsQuery extends Query<Map<String, TeamDto>> {
 
-    /**
-     * Add summoner ids.
-     *
-     * @param teamIds the team ids
-     * @return this
-     */
-    GetTeamsByTeamIdsQuery addTeamIds(String... teamIds);
 }

@@ -1,5 +1,7 @@
 package com.vgalloy.riot.api.internal.query.impl.championmastery;
 
+import java.util.Objects;
+
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -22,12 +24,12 @@ public class GetPlayerScore extends AbstractQuery<com.vgalloy.riot.library.api.q
      * @param playerId         the player id
      */
     public GetPlayerScore(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long playerId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.playerId = playerId;
     }
 
     @Override
-    protected Integer executeWithError() {
+    public Integer execute() {
         return riotWebApi.getPlayerScore(SmallCaseRegion.of(getRegion()), getPlatformId(), playerId, getRiotApiKeyValue());
     }
 }

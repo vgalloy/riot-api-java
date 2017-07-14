@@ -20,11 +20,11 @@ public class GetSummonerSpellListQuery extends AbstractQuery<com.vgalloy.riot.li
      * @param defaultParameter the default query parameter
      */
     public GetSummonerSpellListQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected SummonerSpellListDto executeWithError() {
+    public SummonerSpellListDto execute() {
         return riotWebApi.getSummonerSpellList(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

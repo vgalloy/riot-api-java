@@ -12,11 +12,4 @@ import com.vgalloy.riot.library.api.query.Query;
  */
 public interface GetSummonersRunesByIdsQuery extends Query<Map<String, RunePagesDto>> {
 
-    /**
-     * Add summoner ids.
-     *
-     * @param summonerIds the summoner ids
-     * @return this
-     */
-    GetSummonersRunesByIdsQuery addSummonerIds(long... summonerIds);
 }

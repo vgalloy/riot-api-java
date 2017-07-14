@@ -12,12 +12,4 @@ import com.vgalloy.riot.library.api.query.Query;
  * @author Vincent Galloy
  */
 public interface GetLeaguesEntryBySummonerIdsQuery extends Query<Map<String, List<LeagueDto>>> {
-
-    /**
-     * Add summoner ids.
-     *
-     * @param summonerIds the summoner ids
-     * @return this
-     */
-    GetLeaguesEntryBySummonerIdsQuery addSummonerIds(long... summonerIds);
 }

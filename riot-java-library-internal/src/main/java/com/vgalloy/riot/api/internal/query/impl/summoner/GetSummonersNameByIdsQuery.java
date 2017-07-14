@@ -26,7 +26,7 @@ public class GetSummonersNameByIdsQuery extends AbstractQuery<com.vgalloy.riot.l
      * @param summonerIds      the summoner ids
      */
     public GetSummonersNameByIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         addSummonerIds(summonerIds);
     }
 
@@ -44,7 +44,7 @@ public class GetSummonersNameByIdsQuery extends AbstractQuery<com.vgalloy.riot.l
     }
 
     @Override
-    protected Map<String, String> executeWithError() {
+    public Map<String, String> execute() {
         return riotWebApi.getSummonersNameByIds(SmallCaseRegion.of(getRegion()), convert(summonerIds), getRiotApiKeyValue());
     }
 }

@@ -1,6 +1,7 @@
 package com.vgalloy.riot.library.api.model;
 
 import com.vgalloy.riot.library.api.constant.LeagueQueueType;
+import com.vgalloy.riot.library.api.constant.Region;
 import com.vgalloy.riot.library.api.query.impl.champion.GetChampionByIdQuery;
 import com.vgalloy.riot.library.api.query.impl.champion.GetChampionListQuery;
 import com.vgalloy.riot.library.api.query.impl.championmastery.GetChampionMasteryByChampionQuery;
@@ -68,351 +69,396 @@ public interface RiotApi {
     /**
      * Create the query for champion list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetChampionListQuery getChampionList();
+    GetChampionListQuery getChampionList(Region region);
 
     /**
      * Create the query for champion by id.
      *
+     * @param region     the region of request execution
      * @param championId the champion id
      * @return the query
      */
-    GetChampionByIdQuery getChampionById(long championId);
+    GetChampionByIdQuery getChampionById(Region region, long championId);
 
     /**
      * Create the query for champion mastery by champion.
      *
+     * @param region     the region of request execution
      * @param playerId   the player id
      * @param championId the champion id
      * @return the query
      */
-    GetChampionMasteryByChampionQuery getChampionMasteryByChampion(long playerId, long championId);
+    GetChampionMasteryByChampionQuery getChampionMasteryByChampion(Region region, long playerId, long championId);
 
     /**
      * Create the query for champion mastery.
      *
+     * @param region   the region of request execution
      * @param playerId the player id
      * @return the query
      */
-    GetChampionMasteryQuery getChampionMastery(long playerId);
+    GetChampionMasteryQuery getChampionMastery(Region region, long playerId);
 
     /**
      * Create the query for player score.
      *
+     * @param region   the region of request execution
      * @param playerId the player id
      * @return the query
      */
-    GetPlayerScore getPlayerScore(long playerId);
+    GetPlayerScore getPlayerScore(Region region, long playerId);
 
     /**
      * Create the query for top champion.
      *
+     * @param region   the region of request execution
      * @param playerId the player id
      * @return the query
      */
-    GetTopChampion getTopChampion(long playerId);
+    GetTopChampion getTopChampion(Region region, long playerId);
 
     /**
      * Create the query for current game.
      *
+     * @param region     the region of request execution
      * @param summonerId the summoner id
      * @return the query
      */
-    GetCurrentGameInfoQuery getCurrentGameInfo(long summonerId);
+    GetCurrentGameInfoQuery getCurrentGameInfo(Region region, long summonerId);
 
     /**
      * Create the query for feature game.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetFeaturedGameQuery getFeatureGame();
+    GetFeaturedGameQuery getFeatureGame(Region region);
 
     /**
      * Create the query for recent game.
      *
+     * @param region     the region of request execution
      * @param summonerId the summoner id
      * @return the query
      */
-    GetRecentGameQuery getRecentGame(long summonerId);
+    GetRecentGameQuery getRecentGame(Region region, long summonerId);
 
     /**
      * Create the query for summoner leagues.
      *
+     * @param region      the region of request execution
      * @param summonerIds the summoner ids
      * @return the query
      */
-    GetLeaguesBySummonerIdsQuery getLeaguesBySummonerIds(long... summonerIds);
+    GetLeaguesBySummonerIdsQuery getLeaguesBySummonerIds(Region region, long... summonerIds);
 
     /**
      * Create the query for summoner league entries.
      *
+     * @param region      the region of request execution
      * @param summonerIds the summoner ids
      * @return the query
      */
-    GetLeaguesEntryBySummonerIdsQuery getLeaguesEntryBySummonerIds(long... summonerIds);
+    GetLeaguesEntryBySummonerIdsQuery getLeaguesEntryBySummonerIds(Region region, long... summonerIds);
 
     /**
      * Create the query for team leagues.
      *
+     * @param region  the region of request execution
      * @param teamIds the team ids
      * @return the query
      * @deprecated Riot seems not support this api any longer.
      */
     @Deprecated
-    GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds);
+    GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(Region region, String... teamIds);
 
     /**
      * Create the query for team league entries.
      *
+     * @param region  the region of request execution
      * @param teamIds the team ids
      * @return the query
      * @deprecated Riot seems not support this api any longer.
      */
     @Deprecated
-    GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds);
+    GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(Region region, String... teamIds);
 
     /**
      * Create the query for challenger.
      *
+     * @param region          the region of request execution
      * @param rankedQueueType queue type
      * @return the query
      */
-    GetChallengerQuery getChallenger(LeagueQueueType rankedQueueType);
+    GetChallengerQuery getChallenger(Region region, LeagueQueueType rankedQueueType);
 
     /**
      * Create the query for master.
      *
+     * @param region          the region of request execution
      * @param rankedQueueType queue type
      * @return the query
      */
-    GetMasterQuery getMaster(LeagueQueueType rankedQueueType);
+    GetMasterQuery getMaster(Region region, LeagueQueueType rankedQueueType);
 
     /**
      * Create the query for champion data list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetChampionDataListQuery getChampionDataList();
+    GetChampionDataListQuery getChampionDataList(Region region);
 
     /**
      * Create the query for champion data by id.
      *
+     * @param region     the region of request execution
      * @param championId the champion id
      * @return the query
      */
-    GetChampionDataByIdQuery getChampionDataById(long championId);
+    GetChampionDataByIdQuery getChampionDataById(Region region, long championId);
 
     /**
      * Create the query for item list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetItemListQuery getItemList();
+    GetItemListQuery getItemList(Region region);
 
     /**
      * Create the query for item by id.
      *
+     * @param region the region of request execution
      * @param itemId the item id
      * @return the query
      */
-    GetItemByIdQuery getItemById(long itemId);
+    GetItemByIdQuery getItemById(Region region, long itemId);
 
     /**
      * Create the query for language string.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetLanguageStringQuery getLanguageString();
+    GetLanguageStringQuery getLanguageString(Region region);
 
     /**
      * Create the query for language.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetLanguageQuery getLanguage();
+    GetLanguageQuery getLanguage(Region region);
 
     /**
      * Create the query for map.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetMapQuery getMap();
+    GetMapQuery getMap(Region region);
 
     /**
      * Create the query for mastery list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetMasteryListQuery getMasteryList();
+    GetMasteryListQuery getMasteryList(Region region);
 
     /**
      * Create the query for mastery by id.
      *
+     * @param region    the region of request execution
      * @param masteryId the mastery id
      * @return the query
      */
-    GetMasteryByIdQuery getMasteryById(long masteryId);
+    GetMasteryByIdQuery getMasteryById(Region region, long masteryId);
 
     /**
      * Create the query for realm.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetRealmQuery getRealm();
+    GetRealmQuery getRealm(Region region);
 
     /**
      * Create the query for rune list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetRuneListQuery getRuneList();
+    GetRuneListQuery getRuneList(Region region);
 
     /**
      * Create the query for rune by id.
      *
+     * @param region the region of request execution
      * @param runeId the rune id
      * @return the query
      */
-    GetRuneByIdQuery getRuneById(long runeId);
+    GetRuneByIdQuery getRuneById(Region region, long runeId);
 
     /**
      * Create the query for summoner spell list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetSummonerSpellListQuery getSummonerSpellList();
+    GetSummonerSpellListQuery getSummonerSpellList(Region region);
 
     /**
      * Create the query for summoner spell by id.
      *
+     * @param region          the region of request execution
      * @param summonerSpellId the summoner spell id
      * @return the query
      */
-    GetSummonerSpellByIdQuery getSummonerSpellById(long summonerSpellId);
+    GetSummonerSpellByIdQuery getSummonerSpellById(Region region, long summonerSpellId);
 
     /**
      * Create the query for version list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetVersionListQuery getVersionList();
+    GetVersionListQuery getVersionList(Region region);
 
     /**
      * Create the query for shard list.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetShardListQuery getShardList();
+    GetShardListQuery getShardList(Region region);
 
     /**
      * Create the query for shard status.
      *
+     * @param region the region of request execution
      * @return the query
      */
-    GetShardStatusQuery getShardStatus();
+    GetShardStatusQuery getShardStatus(Region region);
 
     /**
      * Create the query for match id list.
      *
+     * @param region         the region of request execution
      * @param tournamentCode the tournament code
      * @return the query
      */
-    GetMatchIdListByTournamentCodeQuery getMatchIdByTournamentCodeList(String tournamentCode);
+    GetMatchIdListByTournamentCodeQuery getMatchIdByTournamentCodeList(Region region, String tournamentCode);
 
     /**
      * Create the query for shard list.
      *
+     * @param region            the region of request execution
      * @param tournamentMatchId the tournament match id
      * @return the query
      */
-    GetTournamentMatchDetailByIdQuery getTournamentMatchDetailById(long tournamentMatchId);
+    GetTournamentMatchDetailByIdQuery getTournamentMatchDetailById(Region region, long tournamentMatchId);
 
     /**
      * Create the query for shard status.
      *
+     * @param region  the region of request execution
      * @param matchId the matchId
      * @return the query
      */
-    GetMatchDetailByIdQuery getMatchDetailById(long matchId);
+    GetMatchDetailByIdQuery getMatchDetailById(Region region, long matchId);
 
     /**
      * Create the query for match list by summoner.
      *
+     * @param region     the region of request execution
      * @param summonerId the summoner id
      * @return the query
      */
-    GetMatchListBySummonerIdQuery getMatchListBySummonerId(long summonerId);
+    GetMatchListBySummonerIdQuery getMatchListBySummonerId(Region region, long summonerId);
 
     /**
      * Create the query for summoner ranked stats.
      *
+     * @param region     the region of request execution
      * @param summonerId the summoner id
      * @return the query
      */
-    GetRankedStatsQuery getRankedStats(long summonerId);
+    GetRankedStatsQuery getRankedStats(Region region, long summonerId);
 
     /**
      * Create the query for player stats summary.
      *
+     * @param region   the region of request execution
      * @param playerId the player id
      * @return the query
      */
-    GetPlayerStatsSummaryQuery getPlayerStatsSummary(long playerId);
+    GetPlayerStatsSummaryQuery getPlayerStatsSummary(Region region, long playerId);
 
     /**
      * Create the query for summoner by name.
      *
+     * @param region      the region of request execution
      * @param playerNames the player names
      * @return the query
      */
-    GetSummonersByNamesQuery getSummonerByNames(String... playerNames);
+    GetSummonersByNamesQuery getSummonerByNames(Region region, String... playerNames);
 
     /**
      * Create the query for summoner by ids.
      *
+     * @param region    the region of request execution
      * @param playerIds the player ids
      * @return the query
      */
-    GetSummonersByIdsQuery getSummonersByIds(long... playerIds);
+    GetSummonersByIdsQuery getSummonersByIds(Region region, long... playerIds);
 
     /**
      * Create the query for summoner masteries by ids.
      *
+     * @param region    the region of request execution
      * @param playerIds the player ids
      * @return the query
      */
-    GetSummonersMasteriesByIdsQuery getSummonersMasteriesByIds(long... playerIds);
+    GetSummonersMasteriesByIdsQuery getSummonersMasteriesByIds(Region region, long... playerIds);
 
     /**
      * Create the query for player summoner name by ids.
      *
+     * @param region    the region of request execution
      * @param playerIds the player ids
      * @return the query
      */
-    GetSummonersNameByIdsQuery getSummonersNameByIds(long... playerIds);
+    GetSummonersNameByIdsQuery getSummonersNameByIds(Region region, long... playerIds);
 
     /**
      * Create the query for summoner runes by ids.
      *
+     * @param region    the region of request execution
      * @param playerIds the player ids
      * @return the query
      */
-    GetSummonersRunesByIdsQuery getSummonersRunesByIds(long... playerIds);
+    GetSummonersRunesByIdsQuery getSummonersRunesByIds(Region region, long... playerIds);
 
     /**
      * Create the query for teams by summoner ids.
      *
+     * @param region    the region of request execution
      * @param playerIds the player ids
      * @return the query
      */
-    GetTeamsBySummonerIdsQuery getTeamsBySummonerIds(long... playerIds);
+    GetTeamsBySummonerIdsQuery getTeamsBySummonerIds(Region region, long... playerIds);
 
     /**
      * Create the query for teams by team ids.
      *
+     * @param region    the region of request execution
      * @param playerIds the player ids
      * @return the query
      */
-    GetTeamsByTeamIdsQuery getTeamsByTeamIds(String... playerIds);
+    GetTeamsByTeamIdsQuery getTeamsByTeamIds(Region region, String... playerIds);
 }

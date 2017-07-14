@@ -27,7 +27,7 @@ public class GetSummonersRunesByIdsQuery extends AbstractQuery<com.vgalloy.riot.
      * @param summonerIds      the summoner ids
      */
     public GetSummonersRunesByIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         addSummonerIds(summonerIds);
     }
 
@@ -45,7 +45,7 @@ public class GetSummonersRunesByIdsQuery extends AbstractQuery<com.vgalloy.riot.
     }
 
     @Override
-    protected Map<String, RunePagesDto> executeWithError() {
+    public Map<String, RunePagesDto> execute() {
         return riotWebApi.getSummonersRunesByIds(SmallCaseRegion.of(getRegion()), convert(summonerIds), getRiotApiKeyValue());
     }
 }

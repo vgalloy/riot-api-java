@@ -12,12 +12,4 @@ import com.vgalloy.riot.library.api.query.Query;
  * @author Vincent Galloy
  */
 public interface GetLeaguesByTeamIdsQuery extends Query<Map<String, List<LeagueDto>>> {
-
-    /**
-     * Add team ids.
-     *
-     * @param teamIds the team ids
-     * @return this
-     */
-    GetLeaguesByTeamIdsQuery addTeamIds(String... teamIds);
 }

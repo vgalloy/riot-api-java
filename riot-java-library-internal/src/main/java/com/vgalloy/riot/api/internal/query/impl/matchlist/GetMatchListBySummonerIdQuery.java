@@ -23,12 +23,12 @@ public class GetMatchListBySummonerIdQuery extends AbstractQuery<com.vgalloy.rio
      * @param summonerId       the summoner id
      */
     public GetMatchListBySummonerIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.summonerId = summonerId;
     }
 
     @Override
-    protected MatchList executeWithError() {
+    public MatchList execute() {
         return riotWebApi.getMatchListBySummonerId(SmallCaseRegion.of(getRegion()), summonerId, getRiotApiKeyValue());
     }
 }

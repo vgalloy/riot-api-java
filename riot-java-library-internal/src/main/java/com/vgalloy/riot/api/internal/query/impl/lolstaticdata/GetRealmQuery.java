@@ -20,11 +20,11 @@ public class GetRealmQuery extends AbstractQuery<com.vgalloy.riot.library.api.qu
      * @param defaultParameter the default query parameter
      */
     public GetRealmQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected RealmDto executeWithError() {
+    public RealmDto execute() {
         return riotWebApi.getRealm(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }

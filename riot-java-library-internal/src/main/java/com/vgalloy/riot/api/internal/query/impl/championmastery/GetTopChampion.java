@@ -26,13 +26,13 @@ public class GetTopChampion extends AbstractQuery<com.vgalloy.riot.library.api.q
      * @param playerId         the player id
      */
     public GetTopChampion(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long playerId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.playerId = playerId;
         count = 3;
     }
 
     @Override
-    protected List<ChampionMasteryDto> executeWithError() {
+    public List<ChampionMasteryDto> execute() {
         return riotWebApi.getTopChampion(SmallCaseRegion.of(getRegion()), getPlatformId(), playerId, count, getRiotApiKeyValue());
     }
 

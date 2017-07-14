@@ -26,12 +26,12 @@ public class GetMasterQuery extends AbstractQuery<com.vgalloy.riot.library.api.q
      * @param rankedQueueType  the queue type
      */
     public GetMasterQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, LeagueQueueType rankedQueueType) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.rankedQueueType = Objects.requireNonNull(rankedQueueType, "rankedQueueType can not be null");
     }
 
     @Override
-    protected LeagueDto executeWithError() {
+    public LeagueDto execute() {
         return riotWebApi.getMaster(SmallCaseRegion.of(getRegion()), rankedQueueType, getRiotApiKeyValue());
     }
 }

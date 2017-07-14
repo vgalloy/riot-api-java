@@ -23,12 +23,12 @@ public class GetMasteryByIdQuery extends AbstractQuery<com.vgalloy.riot.library.
      * @param masteryId        the mastery Id
      */
     public GetMasteryByIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long masteryId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.masteryId = masteryId;
     }
 
     @Override
-    protected MasteryDto executeWithError() {
+    public MasteryDto execute() {
         return riotWebApi.getMasteryById(SmallCaseRegion.of(getRegion()), masteryId, getRiotApiKeyValue());
     }
 }

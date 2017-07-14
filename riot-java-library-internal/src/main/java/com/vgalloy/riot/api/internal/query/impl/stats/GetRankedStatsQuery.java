@@ -23,12 +23,12 @@ public class GetRankedStatsQuery extends AbstractQuery<com.vgalloy.riot.library.
      * @param summonerId       the summoner id
      */
     public GetRankedStatsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
         this.summonerId = summonerId;
     }
 
     @Override
-    protected RankedStatsDto executeWithError() {
+    public RankedStatsDto execute() {
         return riotWebApi.getRankedStats(SmallCaseRegion.of(getRegion()), summonerId, getRiotApiKeyValue());
     }
 }

@@ -9,12 +9,4 @@ import com.vgalloy.riot.library.api.query.Query;
  * @author Vincent Galloy
  */
 public interface GetChampionListQuery extends Query<ChampionListDto> {
-
-    /**
-     * Only display free to play champions.
-     *
-     * @param freeToPlay free to play
-     * @return this
-     */
-    GetChampionListQuery freeToPlay(boolean freeToPlay);
 }

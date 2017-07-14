@@ -20,11 +20,11 @@ public class GetRuneListQuery extends AbstractQuery<com.vgalloy.riot.library.api
      * @param defaultParameter the default query parameter
      */
     public GetRuneListQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter) {
-        super(riotWebApi, defaultParameter);
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);        this.riotApiKey = Objects.requireNonNull(riotApiKey);        this.region = Objects.requireNonNull(region);
     }
 
     @Override
-    protected RuneListDto executeWithError() {
+    public RuneListDto execute() {
         return riotWebApi.getRuneList(SmallCaseRegion.of(getRegion()), getRiotApiKeyValue());
     }
 }
