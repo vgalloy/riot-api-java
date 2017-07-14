@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.stats;
 
-import com.vgalloy.riot.api.api.dto.stats.RankedStatsDto;
+import com.vgalloy.riot.library.api.dto.stats.RankedStatsDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetRankedStatsQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.stats.GetRankedStatsQuery, RankedStatsDto> {
+public class GetRankedStatsQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.stats.GetRankedStatsQuery, RankedStatsDto> {
 
     private final long summonerId;
 

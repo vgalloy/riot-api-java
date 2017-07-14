@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.matchlist;
 
-import com.vgalloy.riot.api.api.dto.matchlist.MatchList;
+import com.vgalloy.riot.library.api.dto.matchlist.MatchList;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetMatchListBySummonerIdQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.matchlist.GetMatchListBySummonerIdQuery, MatchList> {
+public class GetMatchListBySummonerIdQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.matchlist.GetMatchListBySummonerIdQuery, MatchList> {
 
     private final long summonerId;
 

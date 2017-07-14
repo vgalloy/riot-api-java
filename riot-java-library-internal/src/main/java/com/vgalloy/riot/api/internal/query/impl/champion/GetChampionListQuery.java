@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.champion;
 
-import com.vgalloy.riot.api.api.dto.champion.ChampionListDto;
+import com.vgalloy.riot.library.api.dto.champion.ChampionListDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionListQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.champion.GetChampionListQuery, ChampionListDto> {
+public class GetChampionListQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.champion.GetChampionListQuery, ChampionListDto> {
 
     private boolean freeToPlay;
 
@@ -36,7 +36,7 @@ public class GetChampionListQuery extends AbstractQuery<com.vgalloy.riot.api.api
      * @param freeToPlay free to play
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.champion.GetChampionListQuery freeToPlay(boolean freeToPlay) {
+    public com.vgalloy.riot.library.api.query.impl.champion.GetChampionListQuery freeToPlay(boolean freeToPlay) {
         this.freeToPlay = freeToPlay;
         return this;
     }

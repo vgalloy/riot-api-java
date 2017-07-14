@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.match;
 
-import com.vgalloy.riot.api.api.dto.mach.MatchDetail;
+import com.vgalloy.riot.library.api.dto.mach.MatchDetail;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetMatchDetailByIdQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.match.GetMatchDetailByIdQuery, MatchDetail> {
+public class GetMatchDetailByIdQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.match.GetMatchDetailByIdQuery, MatchDetail> {
 
     private final long matchId;
     private boolean includeTimeline;
@@ -39,7 +39,7 @@ public class GetMatchDetailByIdQuery extends AbstractQuery<com.vgalloy.riot.api.
      * @param includeTimeline include Timeline
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.match.GetMatchDetailByIdQuery includeTimeline(boolean includeTimeline) {
+    public com.vgalloy.riot.library.api.query.impl.match.GetMatchDetailByIdQuery includeTimeline(boolean includeTimeline) {
         this.includeTimeline = includeTimeline;
         return this;
     }

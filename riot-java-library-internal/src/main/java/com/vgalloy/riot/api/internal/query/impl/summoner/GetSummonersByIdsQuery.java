@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.vgalloy.riot.api.api.dto.summoner.SummonerDto;
+import com.vgalloy.riot.library.api.dto.summoner.SummonerDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -15,7 +15,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetSummonersByIdsQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.summoner.GetSummonersByIdsQuery, Map<String, SummonerDto>> {
+public class GetSummonersByIdsQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersByIdsQuery, Map<String, SummonerDto>> {
 
     private final List<Long> summonerIds = new ArrayList<>();
 
@@ -37,7 +37,7 @@ public class GetSummonersByIdsQuery extends AbstractQuery<com.vgalloy.riot.api.a
      * @param summonerIds the summoner ids
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.summoner.GetSummonersByIdsQuery addSummonerIds(long... summonerIds) {
+    public com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersByIdsQuery addSummonerIds(long... summonerIds) {
         for (long id : summonerIds) {
             this.summonerIds.add(id);
         }

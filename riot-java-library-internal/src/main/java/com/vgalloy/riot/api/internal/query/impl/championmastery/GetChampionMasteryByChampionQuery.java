@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.championmastery;
 
-import com.vgalloy.riot.api.api.dto.championmastery.ChampionMasteryDto;
+import com.vgalloy.riot.library.api.dto.championmastery.ChampionMasteryDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionMasteryByChampionQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.championmastery.GetChampionMasteryByChampionQuery, ChampionMasteryDto> {
+public class GetChampionMasteryByChampionQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.championmastery.GetChampionMasteryByChampionQuery, ChampionMasteryDto> {
 
     private final long playerId;
     private final long championId;

@@ -10,14 +10,11 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
  *
  * @author Vincent Galloy
  */
-public class CustomJacksonFilter extends JacksonJaxbJsonProvider {
+public final class CustomJacksonFilter extends JacksonJaxbJsonProvider {
 
-    private static final ObjectMapper MAPPER = new ObjectMapper();
-
-    static {
-        MAPPER.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        MAPPER.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-    }
+    private static final ObjectMapper MAPPER = new ObjectMapper()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+        .setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
     /**
      * Constructor.

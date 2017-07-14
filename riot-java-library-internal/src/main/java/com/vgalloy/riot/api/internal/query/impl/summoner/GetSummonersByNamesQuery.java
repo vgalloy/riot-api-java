@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import com.vgalloy.riot.api.api.dto.summoner.SummonerDto;
+import com.vgalloy.riot.library.api.dto.summoner.SummonerDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -16,7 +16,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetSummonersByNamesQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.summoner.GetSummonersByNamesQuery, Map<String, SummonerDto>> {
+public class GetSummonersByNamesQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersByNamesQuery, Map<String, SummonerDto>> {
 
     private final List<String> summonerNames = new ArrayList<>();
 
@@ -38,7 +38,7 @@ public class GetSummonersByNamesQuery extends AbstractQuery<com.vgalloy.riot.api
      * @param summonerNames the summoner names
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.summoner.GetSummonersByNamesQuery addSummonerNames(String... summonerNames) {
+    public com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersByNamesQuery addSummonerNames(String... summonerNames) {
         Collections.addAll(this.summonerNames, summonerNames);
         return this;
     }

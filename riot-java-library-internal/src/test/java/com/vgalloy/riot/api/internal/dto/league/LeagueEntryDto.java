@@ -3,7 +3,7 @@ package com.vgalloy.riot.api.internal.dto.league;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.PlayStyle;
+import com.vgalloy.riot.library.api.constant.PlayStyle;
 
 /**
  * Created by Vincent Galloy on 20/05/16.

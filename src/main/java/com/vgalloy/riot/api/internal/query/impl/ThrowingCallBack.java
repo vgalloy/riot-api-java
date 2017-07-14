@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl;
 
-import com.vgalloy.riot.api.api.callback.Callback;
+import com.vgalloy.riot.library.api.callback.Callback;
 
 /**
  * Created by Vincent Galloy on 26/05/16.

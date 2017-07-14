@@ -5,8 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import com.vgalloy.riot.api.api.dto.champion.ChampionDto;
-import com.vgalloy.riot.api.api.dto.champion.ChampionListDto;
+import com.vgalloy.riot.library.api.dto.champion.ChampionDto;
+import com.vgalloy.riot.library.api.dto.champion.ChampionListDto;
 import com.vgalloy.riot.api.internal.rest.annotation.RiotNoLimitRate;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 

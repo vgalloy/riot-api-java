@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.client.ratelimite;
 
-import com.vgalloy.riot.api.api.model.RateLimit;
+import com.vgalloy.riot.library.api.model.RateLimit;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

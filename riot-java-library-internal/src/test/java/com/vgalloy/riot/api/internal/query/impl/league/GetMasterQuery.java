@@ -2,8 +2,8 @@ package com.vgalloy.riot.api.internal.query.impl.league;
 
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.LeagueQueueType;
-import com.vgalloy.riot.api.api.dto.league.LeagueDto;
+import com.vgalloy.riot.library.api.constant.LeagueQueueType;
+import com.vgalloy.riot.library.api.dto.league.LeagueDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;

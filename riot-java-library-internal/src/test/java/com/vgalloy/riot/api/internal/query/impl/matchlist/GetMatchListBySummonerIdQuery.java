@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.matchlist;
 
-import com.vgalloy.riot.api.api.dto.matchlist.MatchList;
+import com.vgalloy.riot.library.api.dto.matchlist.MatchList;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;

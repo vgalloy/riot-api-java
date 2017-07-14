@@ -6,8 +6,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-import com.vgalloy.riot.api.api.dto.lolstatus.Shard;
-import com.vgalloy.riot.api.api.dto.lolstatus.ShardStatus;
+import com.vgalloy.riot.library.api.dto.lolstatus.Shard;
+import com.vgalloy.riot.library.api.dto.lolstatus.ShardStatus;
 import com.vgalloy.riot.api.internal.rest.annotation.RiotNoLimitRate;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 

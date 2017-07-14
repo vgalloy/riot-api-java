@@ -5,8 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import com.vgalloy.riot.api.api.dto.stats.PlayerStatsSummaryListDto;
-import com.vgalloy.riot.api.api.dto.stats.RankedStatsDto;
+import com.vgalloy.riot.library.api.dto.stats.PlayerStatsSummaryListDto;
+import com.vgalloy.riot.library.api.dto.stats.RankedStatsDto;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

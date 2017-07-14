@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.lolstaticdata;
 
-import com.vgalloy.riot.api.api.dto.lolstaticdata.SummonerSpellDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.SummonerSpellDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;

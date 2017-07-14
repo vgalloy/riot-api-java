@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import com.vgalloy.riot.api.api.dto.team.TeamDto;
+import com.vgalloy.riot.library.api.dto.team.TeamDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -16,7 +16,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetTeamsByTeamIdsQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.team.GetTeamsByTeamIdsQuery, Map<String, TeamDto>> {
+public class GetTeamsByTeamIdsQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.team.GetTeamsByTeamIdsQuery, Map<String, TeamDto>> {
 
     private final List<String> teamIds = new ArrayList<>();
 
@@ -38,7 +38,7 @@ public class GetTeamsByTeamIdsQuery extends AbstractQuery<com.vgalloy.riot.api.a
      * @param teamIds the team ids
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.team.GetTeamsByTeamIdsQuery addTeamIds(String... teamIds) {
+    public com.vgalloy.riot.library.api.query.impl.team.GetTeamsByTeamIdsQuery addTeamIds(String... teamIds) {
         Collections.addAll(this.teamIds, teamIds);
         return this;
     }

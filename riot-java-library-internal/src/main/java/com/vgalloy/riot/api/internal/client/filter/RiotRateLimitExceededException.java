@@ -15,6 +15,9 @@ public class RiotRateLimitExceededException extends RuntimeException {
 
     private static final long serialVersionUID = 5227065410577259768L;
 
+    public static final String X_RATE_LIMIT_TYPE = "X-Rate-Limit-Type";
+    public static final String RETRY_AFTER = "Retry-After";
+
     private final Map<String, List<String>> headers;
 
     /**
@@ -22,7 +25,7 @@ public class RiotRateLimitExceededException extends RuntimeException {
      *
      * @param headers the response header of the wrong request
      */
-    public RiotRateLimitExceededException(Map<String, List<String>> headers) {
+    RiotRateLimitExceededException(Map<String, List<String>> headers) {
         super("Riot api rate limit exceeded");
         this.headers = Optional.ofNullable(headers).orElse(new HashMap<>());
     }
@@ -33,7 +36,7 @@ public class RiotRateLimitExceededException extends RuntimeException {
      * @return the rate limit type
      */
     public Optional<List<String>> getRateLimitType() {
-        return Optional.ofNullable(headers.get("X-Rate-Limit-Type"));
+        return Optional.ofNullable(headers.get(X_RATE_LIMIT_TYPE));
     }
 
     /**
@@ -42,8 +45,8 @@ public class RiotRateLimitExceededException extends RuntimeException {
      * @return the time before the next request
      */
     public Optional<Long> getRetryAfter() {
-        if (headers.get("Retry-After") != null) {
-            String value = headers.get("Retry-After").get(0);
+        if (headers.get(RETRY_AFTER) != null) {
+            String value = headers.get(RETRY_AFTER).get(0);
             if (value != null) {
                 return Optional.of(Long.valueOf(value));
             }

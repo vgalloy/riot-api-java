@@ -4,11 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.GameMode;
-import com.vgalloy.riot.api.api.constant.GameType;
-import com.vgalloy.riot.api.api.constant.QueueType;
-import com.vgalloy.riot.api.api.constant.Region;
-import com.vgalloy.riot.api.api.constant.Season;
+import com.vgalloy.riot.library.api.constant.GameMode;
+import com.vgalloy.riot.library.api.constant.GameType;
+import com.vgalloy.riot.library.api.constant.QueueType;
+import com.vgalloy.riot.library.api.constant.Region;
+import com.vgalloy.riot.library.api.constant.Season;
 
 /**
  * Created by Vincent Galloy on 21/05/16.

@@ -10,7 +10,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetPlayerScore extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.championmastery.GetPlayerScore, Integer> {
+public class GetPlayerScore extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.championmastery.GetPlayerScore, Integer> {
 
     private final long playerId;
 

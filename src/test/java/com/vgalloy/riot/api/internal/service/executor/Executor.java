@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.service.executor;
 
-import com.vgalloy.riot.api.api.query.Query;
+import com.vgalloy.riot.library.api.query.Query;
 
 /**
  * @author Vincent Galloy

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.Tier;
+import com.vgalloy.riot.library.api.constant.Tier;
 
 /**
  * Created by Vincent Galloy on 21/05/16.

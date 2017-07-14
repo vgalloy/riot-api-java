@@ -14,7 +14,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetSummonersNameByIdsQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.summoner.GetSummonersNameByIdsQuery, Map<String, String>> {
+public class GetSummonersNameByIdsQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersNameByIdsQuery, Map<String, String>> {
 
     private final Collection<Long> summonerIds = new ArrayList<>();
 
@@ -36,7 +36,7 @@ public class GetSummonersNameByIdsQuery extends AbstractQuery<com.vgalloy.riot.a
      * @param summonerIds the summoner ids
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.summoner.GetSummonersNameByIdsQuery addSummonerIds(long... summonerIds) {
+    public com.vgalloy.riot.library.api.query.impl.summoner.GetSummonersNameByIdsQuery addSummonerIds(long... summonerIds) {
         for (long id : summonerIds) {
             this.summonerIds.add(id);
         }

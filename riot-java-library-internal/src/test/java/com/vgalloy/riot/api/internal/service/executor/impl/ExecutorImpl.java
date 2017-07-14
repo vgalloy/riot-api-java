@@ -6,7 +6,7 @@ import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vgalloy.riot.api.api.query.Query;
+import com.vgalloy.riot.library.api.query.Query;
 import com.vgalloy.riot.api.internal.service.executor.Executor;
 
 /**

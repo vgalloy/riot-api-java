@@ -1,7 +1,7 @@
 package com.vgalloy.riot.api.internal.query;
 
-import com.vgalloy.riot.api.api.constant.Region;
-import com.vgalloy.riot.api.api.model.RiotApiKey;
+import com.vgalloy.riot.library.api.constant.Region;
+import com.vgalloy.riot.library.api.model.RiotApiKey;
 
 /**
  * Created by Vincent on 21/05/2016.

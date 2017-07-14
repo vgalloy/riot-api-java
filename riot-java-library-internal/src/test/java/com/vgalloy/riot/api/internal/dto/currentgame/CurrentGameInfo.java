@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.GameMode;
-import com.vgalloy.riot.api.api.constant.PlatformId;
+import com.vgalloy.riot.library.api.constant.GameMode;
+import com.vgalloy.riot.library.api.constant.PlatformId;
 
 /**
  * Created by Vincent Galloy on 19/05/16.

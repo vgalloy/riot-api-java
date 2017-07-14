@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.currentgame;
 
-import com.vgalloy.riot.api.api.dto.currentgame.CurrentGameInfo;
+import com.vgalloy.riot.library.api.dto.currentgame.CurrentGameInfo;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetCurrentGameInfoQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.currentgame.GetCurrentGameInfoQuery, CurrentGameInfo> {
+public class GetCurrentGameInfoQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.currentgame.GetCurrentGameInfoQuery, CurrentGameInfo> {
 
     private final long summonerId;
 

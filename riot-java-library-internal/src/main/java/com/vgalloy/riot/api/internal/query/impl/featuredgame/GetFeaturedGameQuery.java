@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.featuredgame;
 
-import com.vgalloy.riot.api.api.dto.featuredgame.FeaturedGames;
+import com.vgalloy.riot.library.api.dto.featuredgame.FeaturedGames;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetFeaturedGameQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.featuredgame.GetFeaturedGameQuery, FeaturedGames> {
+public class GetFeaturedGameQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.featuredgame.GetFeaturedGameQuery, FeaturedGames> {
 
     /**
      * Constructor.

@@ -4,15 +4,15 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.AscendedType;
-import com.vgalloy.riot.api.api.constant.BuildingType;
-import com.vgalloy.riot.api.api.constant.EventType;
-import com.vgalloy.riot.api.api.constant.LaneType;
-import com.vgalloy.riot.api.api.constant.LevelUpType;
-import com.vgalloy.riot.api.api.constant.MonsterType;
-import com.vgalloy.riot.api.api.constant.PointCaptured;
-import com.vgalloy.riot.api.api.constant.TowerType;
-import com.vgalloy.riot.api.api.constant.WardType;
+import com.vgalloy.riot.library.api.constant.AscendedType;
+import com.vgalloy.riot.library.api.constant.BuildingType;
+import com.vgalloy.riot.library.api.constant.EventType;
+import com.vgalloy.riot.library.api.constant.LaneType;
+import com.vgalloy.riot.library.api.constant.LevelUpType;
+import com.vgalloy.riot.library.api.constant.MonsterType;
+import com.vgalloy.riot.library.api.constant.PointCaptured;
+import com.vgalloy.riot.library.api.constant.TowerType;
+import com.vgalloy.riot.library.api.constant.WardType;
 
 /**
  * Created by Vincent Galloy on 21/05/16.

@@ -8,12 +8,12 @@ import java.util.stream.IntStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vgalloy.riot.api.api.factory.RiotApiFactory;
-import com.vgalloy.riot.api.api.model.RateLimit;
-import com.vgalloy.riot.api.api.model.RiotApi;
-import com.vgalloy.riot.api.api.model.RiotApiKey;
-import com.vgalloy.riot.api.api.query.AbstractCallbackQuery;
-import com.vgalloy.riot.api.api.query.Query;
+import com.vgalloy.riot.library.api.factory.RiotApiFactory;
+import com.vgalloy.riot.library.api.model.RateLimit;
+import com.vgalloy.riot.library.api.model.RiotApi;
+import com.vgalloy.riot.library.api.model.RiotApiKey;
+import com.vgalloy.riot.library.api.query.AbstractCallbackQuery;
+import com.vgalloy.riot.library.api.query.Query;
 import com.vgalloy.riot.api.internal.service.request.ChampionApiTest;
 
 /**

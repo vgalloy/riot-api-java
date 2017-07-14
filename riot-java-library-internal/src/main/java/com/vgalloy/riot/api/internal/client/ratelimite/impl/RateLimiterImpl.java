@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vgalloy.riot.api.api.model.RiotRateLimit;
+import com.vgalloy.riot.library.api.model.RiotRateLimit;
 import com.vgalloy.riot.api.internal.client.ratelimite.RateLimiter;
 
 /**

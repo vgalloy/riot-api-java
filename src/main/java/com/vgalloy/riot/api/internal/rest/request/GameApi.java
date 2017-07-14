@@ -5,7 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import com.vgalloy.riot.api.api.dto.game.RecentGamesDto;
+import com.vgalloy.riot.library.api.dto.game.RecentGamesDto;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

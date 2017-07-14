@@ -7,9 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import com.vgalloy.riot.api.api.dto.summoner.MasteryPagesDto;
-import com.vgalloy.riot.api.api.dto.summoner.RunePagesDto;
-import com.vgalloy.riot.api.api.dto.summoner.SummonerDto;
+import com.vgalloy.riot.library.api.dto.summoner.MasteryPagesDto;
+import com.vgalloy.riot.library.api.dto.summoner.RunePagesDto;
+import com.vgalloy.riot.library.api.dto.summoner.SummonerDto;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

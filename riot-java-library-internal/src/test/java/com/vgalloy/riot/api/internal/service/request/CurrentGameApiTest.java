@@ -2,8 +2,8 @@ package com.vgalloy.riot.api.internal.service.request;
 
 import org.junit.Test;
 
-import com.vgalloy.riot.api.api.constant.Region;
-import com.vgalloy.riot.api.api.dto.featuredgame.FeaturedGameInfo;
+import com.vgalloy.riot.library.api.constant.Region;
+import com.vgalloy.riot.library.api.dto.featuredgame.FeaturedGameInfo;
 import com.vgalloy.riot.api.internal.service.AbstractTest;
 
 /**

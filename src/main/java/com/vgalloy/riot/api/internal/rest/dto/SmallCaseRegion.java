@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.rest.dto;
 
-import com.vgalloy.riot.api.api.constant.Region;
+import com.vgalloy.riot.library.api.constant.Region;
 
 /**
  * Created by Vincent Galloy on 29/08/16.

@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.lolstaticdata;
 
-import com.vgalloy.riot.api.api.dto.lolstaticdata.ChampionDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.ChampionDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionDataByIdQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.lolstaticdata.GetChampionDataByIdQuery, ChampionDto> {
+public class GetChampionDataByIdQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetChampionDataByIdQuery, ChampionDto> {
 
     private final long championId;
 

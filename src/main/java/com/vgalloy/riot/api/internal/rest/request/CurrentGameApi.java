@@ -5,8 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import com.vgalloy.riot.api.api.constant.PlatformId;
-import com.vgalloy.riot.api.api.dto.currentgame.CurrentGameInfo;
+import com.vgalloy.riot.library.api.constant.PlatformId;
+import com.vgalloy.riot.library.api.dto.currentgame.CurrentGameInfo;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**

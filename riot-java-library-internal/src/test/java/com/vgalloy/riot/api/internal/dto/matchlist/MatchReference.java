@@ -3,10 +3,10 @@ package com.vgalloy.riot.api.internal.dto.matchlist;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.Lane;
-import com.vgalloy.riot.api.api.constant.Role;
-import com.vgalloy.riot.api.api.constant.Season;
-import com.vgalloy.riot.api.api.constant.SimpleQueueType;
+import com.vgalloy.riot.library.api.constant.Lane;
+import com.vgalloy.riot.library.api.constant.Role;
+import com.vgalloy.riot.library.api.constant.Season;
+import com.vgalloy.riot.library.api.constant.SimpleQueueType;
 
 /**
  * Created by Vincent Galloy on 21/05/16.

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.MasteryTree;
+import com.vgalloy.riot.library.api.constant.MasteryTree;
 
 /**
  * Created by Vincent Galloy on 19/05/16.

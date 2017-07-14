@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-import com.vgalloy.riot.api.api.constant.GameMode;
-import com.vgalloy.riot.api.api.constant.GameType;
-import com.vgalloy.riot.api.api.constant.SupType;
+import com.vgalloy.riot.library.api.constant.GameMode;
+import com.vgalloy.riot.library.api.constant.GameType;
+import com.vgalloy.riot.library.api.constant.SupType;
 
 /**
  * Created by Vincent Galloy on 18/05/16.

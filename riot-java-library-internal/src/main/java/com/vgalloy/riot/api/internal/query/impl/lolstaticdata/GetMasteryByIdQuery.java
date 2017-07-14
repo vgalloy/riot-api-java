@@ -1,6 +1,6 @@
 package com.vgalloy.riot.api.internal.query.impl.lolstaticdata;
 
-import com.vgalloy.riot.api.api.dto.lolstaticdata.MasteryDto;
+import com.vgalloy.riot.library.api.dto.lolstaticdata.MasteryDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -11,7 +11,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetMasteryByIdQuery extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.lolstaticdata.GetMasteryByIdQuery, MasteryDto> {
+public class GetMasteryByIdQuery extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.lolstaticdata.GetMasteryByIdQuery, MasteryDto> {
 
     private final long masteryId;
 

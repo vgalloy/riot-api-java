@@ -2,7 +2,7 @@ package com.vgalloy.riot.api.internal.query.impl.championmastery;
 
 import java.util.List;
 
-import com.vgalloy.riot.api.api.dto.championmastery.ChampionMasteryDto;
+import com.vgalloy.riot.library.api.dto.championmastery.ChampionMasteryDto;
 import com.vgalloy.riot.api.api.query.AbstractQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
 import com.vgalloy.riot.api.internal.query.DefaultParameter;
@@ -13,7 +13,7 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetTopChampion extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.championmastery.GetTopChampion, List<ChampionMasteryDto>> {
+public class GetTopChampion extends AbstractQuery<com.vgalloy.riot.library.api.query.impl.championmastery.GetTopChampion, List<ChampionMasteryDto>> {
 
     private final long playerId;
     private int count;
@@ -42,7 +42,7 @@ public class GetTopChampion extends AbstractQuery<com.vgalloy.riot.api.api.query
      * @param count count
      * @return this
      */
-    public com.vgalloy.riot.api.api.query.impl.championmastery.GetTopChampion count(int count) {
+    public com.vgalloy.riot.library.api.query.impl.championmastery.GetTopChampion count(int count) {
         this.count = count;
         return this;
     }

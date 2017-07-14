@@ -1,9 +1,12 @@
 package com.vgalloy.riot.api.internal.query.impl.champion;
 
-import com.vgalloy.riot.api.api.dto.champion.ChampionDto;
-import com.vgalloy.riot.api.api.query.AbstractQuery;
+import java.util.Objects;
+
+import com.vgalloy.riot.library.api.constant.Region;
+import com.vgalloy.riot.library.api.dto.champion.ChampionDto;
+import com.vgalloy.riot.library.api.model.RiotApiKey;
+import com.vgalloy.riot.library.api.query.impl.champion.GetChampionByIdQuery;
 import com.vgalloy.riot.api.internal.client.RiotWebApi;
-import com.vgalloy.riot.api.internal.query.DefaultParameter;
 import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
 
 /**
@@ -11,24 +14,30 @@ import com.vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetChampionByIdQueryImpl extends AbstractQuery<com.vgalloy.riot.api.api.query.impl.champion.GetChampionByIdQuery, ChampionDto> {
+public class GetChampionByIdQueryImpl implements GetChampionByIdQuery {
 
+    private final RiotWebApi riotWebApi;
+    private final RiotApiKey riotApiKey;
+    private final Region region;
     private final long championId;
 
     /**
      * Constructor.
      *
-     * @param riotWebApi       the riot web rest for execute query
-     * @param defaultParameter the default query parameter
-     * @param championId       the champion id
+     * @param riotWebApi the riot web rest for execute query
+     * @param riotApiKey the riot api key
+     * @param region     the region of query execution
+     * @param championId the champion id
      */
-    public GetChampionByIdQueryImpl(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long championId) {
-        super(riotWebApi, defaultParameter);
+    public GetChampionByIdQueryImpl(RiotWebApi riotWebApi, RiotApiKey riotApiKey, Region region, long championId) {
+        this.riotWebApi = Objects.requireNonNull(riotWebApi);
+        this.riotApiKey = Objects.requireNonNull(riotApiKey);
+        this.region = Objects.requireNonNull(region);
         this.championId = championId;
     }
 
     @Override
-    protected ChampionDto executeWithError() {
-        return riotWebApi.getChampionById(SmallCaseRegion.of(getRegion()), championId, getRiotApiKeyValue());
+    public ChampionDto execute() {
+        return riotWebApi.getChampionById(SmallCaseRegion.of(region), championId, riotApiKey.getApiKey());
     }
 }
