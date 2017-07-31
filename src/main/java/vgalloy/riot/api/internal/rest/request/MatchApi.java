@@ -26,7 +26,7 @@ public interface MatchApi {
      * @return the match id list
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/by-tournament/{tournamentCode}/ids")
+    @Path("https://{region}.api.riotgames.com/lol/{region}/v2.2/match/by-tournament/{tournamentCode}/ids")
     List<Long> getMatchIdList(@PathParam("region") SmallCaseRegion region, @PathParam("tournamentCode") String tournamentCode, @QueryParam("api_key") String apiKey);
 
     /**
@@ -38,7 +38,7 @@ public interface MatchApi {
      * @return the tournament match detail
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/for-tournament/{matchId}")
+    @Path("https://{region}.api.riotgames.com/lol/{region}/v2.2/match/for-tournament/{matchId}")
     MatchDetail getTournamentMatchDetailById(@PathParam("region") SmallCaseRegion region, @PathParam("matchId") long matchId, @QueryParam("api_key") String apiKey);
 
     /**
@@ -51,6 +51,6 @@ public interface MatchApi {
      * @return the match detail
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/match/{matchId}")
+    @Path("https://{region}.api.riotgames.com/lol/{region}/v2.2/match/{matchId}")
     MatchDetail getMatchDetailById(@PathParam("region") SmallCaseRegion region, @PathParam("matchId") long matchId, @QueryParam("includeTimeline") boolean includeTimeline, @QueryParam("api_key") String apiKey);
 }

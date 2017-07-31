@@ -1,11 +1,8 @@
 package vgalloy.riot.api.api.query.impl.league;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
-import vgalloy.riot.api.api.dto.league.LeagueDto;
+import vgalloy.riot.api.api.dto.league.LeaguePositionDto;
 import vgalloy.riot.api.api.query.AbstractQuery;
 import vgalloy.riot.api.internal.client.RiotWebApi;
 import vgalloy.riot.api.internal.query.DefaultParameter;
@@ -16,37 +13,24 @@ import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetLeaguesBySummonerIdsQuery extends AbstractQuery<GetLeaguesBySummonerIdsQuery, Map<String, List<LeagueDto>>> {
+public class GetLeaguesBySummonerIdsQuery extends AbstractQuery<GetLeaguesBySummonerIdsQuery, Set<LeaguePositionDto>> {
 
-    private final Collection<Long> summonerIds = new ArrayList<>();
+    private final long summonerId;
 
     /**
      * Constructor.
      *
      * @param riotWebApi       the riot web rest for execute query
      * @param defaultParameter the default query parameter
-     * @param summonerIds      the summoner id
+     * @param summonerId       the summoner id
      */
-    public GetLeaguesBySummonerIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long... summonerIds) {
+    public GetLeaguesBySummonerIdsQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
         super(riotWebApi, defaultParameter);
-        addSummonerIds(summonerIds);
-    }
-
-    /**
-     * Add summoner ids.
-     *
-     * @param summonerIds the summoner ids
-     * @return this
-     */
-    public GetLeaguesBySummonerIdsQuery addSummonerIds(long... summonerIds) {
-        for (long id : summonerIds) {
-            this.summonerIds.add(id);
-        }
-        return this;
+        this.summonerId = summonerId;
     }
 
     @Override
-    protected Map<String, List<LeagueDto>> executeWithError() {
-        return riotWebApi.getLeaguesBySummonerIds(SmallCaseRegion.of(getRegion()), convert(summonerIds), getRiotApiKeyValue());
+    protected Set<LeaguePositionDto> executeWithError() {
+        return riotWebApi.getLeaguesPositionBySummonerId(SmallCaseRegion.of(getRegion()), summonerId, getRiotApiKeyValue());
     }
 }

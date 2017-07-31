@@ -24,6 +24,6 @@ public interface MatchListApi {
      * @return the match list
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/lol/{region}/v2.2/matchlist/by-summoner/{summonerId}")
+    @Path("https://{region}.api.riotgames.com/lol/{region}/v2.2/matchlist/by-summoner/{summonerId}")
     MatchList getMatchListBySummonerId(@PathParam("region") SmallCaseRegion region, @PathParam("summonerId") long summonerId, @QueryParam("api_key") String apiKey);
 }

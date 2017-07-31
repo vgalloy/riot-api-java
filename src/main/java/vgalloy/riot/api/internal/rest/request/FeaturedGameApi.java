@@ -23,6 +23,6 @@ public interface FeaturedGameApi {
      * @return the featured game
      */
     @GET
-    @Path("https://{region}.api.pvp.net/observer-mode/rest/featured")
+    @Path("https://{region}.api.riotgames.com/observer-mode/rest/featured")
     FeaturedGames getFeaturedGame(@PathParam("region") SmallCaseRegion region, @QueryParam("api_key") String apiKey);
 }

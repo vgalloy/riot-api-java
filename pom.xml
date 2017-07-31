@@ -16,6 +16,9 @@
         <!-- Maven -->
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
 
+        <!-- Mojo version checker -->
+        <versions-maven-plugin.version>2.4</versions-maven-plugin.version>
+
         <!-- Checkstyle -->
         <checkstyle.version>2.17</checkstyle.version>
         <checkstyle.checkstyle.location>config/checkstyle/checkstyle.xml</checkstyle.checkstyle.location>
@@ -26,7 +29,7 @@
         <logback-classic.version>1.2.3</logback-classic.version>
 
         <!-- Jersey -->
-        <jersey.version>2.23.2</jersey.version>
+        <jersey.version>2.25.1</jersey.version>
 
         <!-- Test -->
         <junit.version>4.12</junit.version>
@@ -104,6 +107,18 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Mojo Version Checker : mvn versions:display-dependency-updates -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions-maven-plugin.version}</version>
+                <inherited>false</inherited>
+                <configuration>
+                    <outputEncoding>${project.build.sourceEncoding}</outputEncoding>
+                    <outputFile>target/outdated-dependencies.txt</outputFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>

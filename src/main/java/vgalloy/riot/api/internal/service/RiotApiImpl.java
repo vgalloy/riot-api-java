@@ -9,16 +9,13 @@ import vgalloy.riot.api.api.query.impl.champion.GetChampionByIdQuery;
 import vgalloy.riot.api.api.query.impl.champion.GetChampionListQuery;
 import vgalloy.riot.api.api.query.impl.championmastery.GetChampionMasteryByChampionQuery;
 import vgalloy.riot.api.api.query.impl.championmastery.GetChampionMasteryQuery;
-import vgalloy.riot.api.api.query.impl.championmastery.GetPlayerScore;
-import vgalloy.riot.api.api.query.impl.championmastery.GetTopChampion;
+import vgalloy.riot.api.api.query.impl.championmastery.GetPlayerScoreQuery;
 import vgalloy.riot.api.api.query.impl.currentgame.GetCurrentGameInfoQuery;
 import vgalloy.riot.api.api.query.impl.featuredgame.GetFeaturedGameQuery;
 import vgalloy.riot.api.api.query.impl.game.GetRecentGameQuery;
 import vgalloy.riot.api.api.query.impl.league.GetChallengerQuery;
 import vgalloy.riot.api.api.query.impl.league.GetLeaguesBySummonerIdsQuery;
-import vgalloy.riot.api.api.query.impl.league.GetLeaguesByTeamIdsQuery;
-import vgalloy.riot.api.api.query.impl.league.GetLeaguesEntryBySummonerIdsQuery;
-import vgalloy.riot.api.api.query.impl.league.GetLeaguesEntryByTeamIdsQuery;
+import vgalloy.riot.api.api.query.impl.league.GetLeaguesPositionBySummonerIdQuery;
 import vgalloy.riot.api.api.query.impl.league.GetMasterQuery;
 import vgalloy.riot.api.api.query.impl.lolstaticdata.GetChampionDataByIdQuery;
 import vgalloy.riot.api.api.query.impl.lolstaticdata.GetChampionDataListQuery;
@@ -121,13 +118,8 @@ public class RiotApiImpl implements RiotApi {
     }
 
     @Override
-    public GetPlayerScore getPlayerScore(long playerId) {
-        return new GetPlayerScore(riotWebApi, defaultParameter, playerId);
-    }
-
-    @Override
-    public GetTopChampion getTopChampion(long playerId) {
-        return new GetTopChampion(riotWebApi, defaultParameter, playerId);
+    public GetPlayerScoreQuery getPlayerScore(long playerId) {
+        return new GetPlayerScoreQuery(riotWebApi, defaultParameter, playerId);
     }
 
     @Override
@@ -146,23 +138,13 @@ public class RiotApiImpl implements RiotApi {
     }
 
     @Override
-    public GetLeaguesBySummonerIdsQuery getLeaguesBySummonerIds(long... summonerIds) {
-        return new GetLeaguesBySummonerIdsQuery(riotWebApi, defaultParameter, summonerIds);
+    public GetLeaguesBySummonerIdsQuery getLeaguesBySummonerId(long summonerId) {
+        return new GetLeaguesBySummonerIdsQuery(riotWebApi, defaultParameter, summonerId);
     }
 
     @Override
-    public GetLeaguesEntryBySummonerIdsQuery getLeaguesEntryBySummonerIds(long... summonerIds) {
-        return new GetLeaguesEntryBySummonerIdsQuery(riotWebApi, defaultParameter, summonerIds);
-    }
-
-    @Override
-    public GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds) {
-        return new GetLeaguesByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
-    }
-
-    @Override
-    public GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds) {
-        return new GetLeaguesEntryByTeamIdsQuery(riotWebApi, defaultParameter, teamIds);
+    public GetLeaguesPositionBySummonerIdQuery getLeaguesPositionBySummonerId(long summonerId) {
+        return new GetLeaguesPositionBySummonerIdQuery(riotWebApi, defaultParameter, summonerId);
     }
 
     @Override

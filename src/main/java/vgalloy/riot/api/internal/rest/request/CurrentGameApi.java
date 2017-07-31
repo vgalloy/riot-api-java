@@ -26,6 +26,6 @@ public interface CurrentGameApi {
      * @return the current game information
      */
     @GET
-    @Path("https://{region}.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/{platformId}/{summonerId}")
+    @Path("https://{region}.api.riotgames.com/observer-mode/rest/consumer/getSpectatorGameInfo/{platformId}/{summonerId}")
     CurrentGameInfo getCurrentGameInfo(@PathParam("region") SmallCaseRegion region, @PathParam("platformId") PlatformId platformId, @PathParam("summonerId") long summonerId, @QueryParam("api_key") String apiKey);
 }

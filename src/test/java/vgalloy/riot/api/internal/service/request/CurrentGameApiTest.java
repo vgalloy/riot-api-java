@@ -1,16 +1,19 @@
 package vgalloy.riot.api.internal.service.request;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import vgalloy.riot.api.api.constant.Region;
 import vgalloy.riot.api.api.dto.featuredgame.FeaturedGameInfo;
 import vgalloy.riot.api.internal.service.AbstractTest;
+import vgalloy.riot.api.internal.service.QueryTester;
 
 /**
  * Created by Vincent Galloy on 22/05/16.
  *
  * @author Vincent Galloy
  */
+@Ignore
 public final class CurrentGameApiTest extends AbstractTest {
 
     @Test
@@ -26,11 +29,11 @@ public final class CurrentGameApiTest extends AbstractTest {
                 .region(Region.EUW)
                 .execute()
                 .get(summonerName.toLowerCase().replaceAll("\\s+", "")).getId();
-            new QueryTester("CurrentGameInfo")
+            QueryTester.of(this.getClass().getSimpleName() + "::CurrentGameInfo")
                 .test(RIOT_API.getCurrentGameInfo(summonerId).region(Region.EUW))
                 .end();
         } catch (Exception ignored) {
-            new QueryTester("CurrentGameInfo").end(400);
+            QueryTester.of(this.getClass().getSimpleName() + "::CurrentGameInfo").end(400);
         }
     }
 }

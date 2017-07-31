@@ -35,67 +35,7 @@ public abstract class AbstractTest {
             LOGGER.error("Can not load properties");
         }
         RIOT_API = RiotApiFactory.newRiotApi()
-            .addGlobalRateLimit(new RateLimit(4, 10_000), new RateLimit(400, 10 * 60 * 1_000))
-            .defaultRiotApiKey(new RiotApiKey(properties));
-    }
-
-    protected class QueryTester {
-
-        private final String queryName;
-        private String code = "200";
-
-        /**
-         * Constructor.
-         *
-         * @param queryName the query name
-         */
-        public QueryTester(String queryName) {
-            this.queryName = Objects.requireNonNull(queryName, "queryName can not be null");
-        }
-
-        /**
-         * Assert the query is correct.
-         *
-         * @return this
-         */
-        public QueryTester test(AbstractCallbackQuery<? extends Query<?>, ?> query) {
-            query.onBadRequestExceptionCallback(e -> code = "400")
-                .onNotAuthorizedException(e -> code = "401")
-                .onForbiddenException(e -> code = "403")
-                .onNotFoundException(e -> code = "404")
-                .onInternalServerErrorException(e -> code = "500")
-                .onServiceUnavailableException(e -> code = "503")
-                .execute();
-            return this;
-        }
-
-        /**
-         * End the assertion.
-         */
-        public void end() {
-            print(code);
-        }
-
-        public void end(int code) {
-            print(String.valueOf(code));
-        }
-
-        /**
-         * Print the result as a formatted String.
-         *
-         * @param code the code
-         */
-        private void print(String code) {
-            StringBuilder stringBuilder = new StringBuilder(queryName + " ");
-            IntStream.range(queryName.length(), 30).asLongStream().forEach(e -> stringBuilder.append("."));
-            String message = stringBuilder.append(" [ ").append(code).append(" ]").toString();
-            if ("200".equals(code)) {
-                LOGGER.info("{}", message);
-            } else if ("403".equals(code)) {
-                LOGGER.error("{}", message);
-            } else {
-                LOGGER.warn("{}", message);
-            }
-        }
+                .addGlobalRateLimit(new RateLimit(4, 10_000), new RateLimit(400, 10 * 60 * 1_000))
+                .defaultRiotApiKey(new RiotApiKey(properties));
     }
 }

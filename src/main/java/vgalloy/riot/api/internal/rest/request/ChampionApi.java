@@ -26,11 +26,11 @@ public interface ChampionApi {
      * @return the champions information
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion")
+    @Path("https://{region}.api.riotgames.com/lol/platform/v3/champions")
     ChampionListDto getChampionList(@PathParam("region") SmallCaseRegion region, @QueryParam("freeToPlay") boolean freeToPlay, @QueryParam("api_key") String apiKey);
 
     /**
-     * Retrieve champion by ID.
+     * Retrieve champion by id.
      *
      * @param region the region
      * @param id     the champion id
@@ -38,7 +38,7 @@ public interface ChampionApi {
      * @return the champion information
      */
     @GET
-    @Path("https://{region}.api.pvp.net/api/lol/{region}/v1.2/champion/{id}")
+    @Path("https://{region}.api.riotgames.com/lol/platform/v3/champions/{id}")
     @RiotNoLimitRate
     ChampionDto getChampionById(@PathParam("region") SmallCaseRegion region, @PathParam("id") long id, @QueryParam("api_key") String apiKey);
 }

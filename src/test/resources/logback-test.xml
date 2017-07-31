@@ -9,7 +9,7 @@
 
     <logger name="vgalloy" level="info"/>
 
-    <root level="info">
+    <root level="trace">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

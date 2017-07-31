@@ -36,7 +36,7 @@ public final class RiotWebApiFactory {
      */
     public static RiotWebApi getRiotWebApi(RateLimitManager rateLimitManager) {
         Client client = ClientBuilder.newClient()
-            //            .register(new LoggingFeature())
+//                        .register(new LoggingFeature())
             .register(RateLimitFilter.class)
             .register(JacksonJsonProvider.class)
             .register(CustomJacksonFilter.class);

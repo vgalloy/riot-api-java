@@ -32,6 +32,6 @@ public class GetChampionMasteryByChampionQuery extends AbstractQuery<GetChampion
 
     @Override
     protected ChampionMasteryDto executeWithError() {
-        return riotWebApi.getChampionMasteryByChampion(SmallCaseRegion.of(getRegion()), getPlatformId(), playerId, championId, getRiotApiKeyValue());
+        return riotWebApi.getChampionMasteryByChampion(SmallCaseRegion.of(getRegion()), playerId, championId, getRiotApiKeyValue());
     }
 }

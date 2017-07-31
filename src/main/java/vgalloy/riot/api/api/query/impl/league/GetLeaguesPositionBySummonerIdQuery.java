@@ -1,8 +1,7 @@
 package vgalloy.riot.api.api.query.impl.league;
 
-import java.util.Objects;
+import java.util.Set;
 
-import vgalloy.riot.api.api.constant.LeagueQueueType;
 import vgalloy.riot.api.api.dto.league.LeagueListDto;
 import vgalloy.riot.api.api.query.AbstractQuery;
 import vgalloy.riot.api.internal.client.RiotWebApi;
@@ -14,24 +13,24 @@ import vgalloy.riot.api.internal.rest.dto.SmallCaseRegion;
  *
  * @author Vincent Galloy
  */
-public class GetMasterQuery extends AbstractQuery<GetMasterQuery, LeagueListDto> {
+public class GetLeaguesPositionBySummonerIdQuery extends AbstractQuery<GetLeaguesPositionBySummonerIdQuery, Set<LeagueListDto>> {
 
-    private final LeagueQueueType rankedQueueType;
+    private final long summonerId;
 
     /**
      * Constructor.
      *
      * @param riotWebApi       the riot web rest for execute query
      * @param defaultParameter the default query parameter
-     * @param rankedQueueType  the queue type
+     * @param summonerId       the summoner id
      */
-    public GetMasterQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, LeagueQueueType rankedQueueType) {
+    public GetLeaguesPositionBySummonerIdQuery(RiotWebApi riotWebApi, DefaultParameter defaultParameter, long summonerId) {
         super(riotWebApi, defaultParameter);
-        this.rankedQueueType = Objects.requireNonNull(rankedQueueType, "rankedQueueType can not be null");
+        this.summonerId = summonerId;
     }
 
     @Override
-    protected LeagueListDto executeWithError() {
-        return riotWebApi.getMaster(SmallCaseRegion.of(getRegion()), rankedQueueType, getRiotApiKeyValue());
+    protected Set<LeagueListDto> executeWithError() {
+        return riotWebApi.getLeaguesBySummonerId(SmallCaseRegion.of(getRegion()), summonerId, getRiotApiKeyValue());
     }
 }

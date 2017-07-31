@@ -6,16 +6,13 @@ import vgalloy.riot.api.api.query.impl.champion.GetChampionByIdQuery;
 import vgalloy.riot.api.api.query.impl.champion.GetChampionListQuery;
 import vgalloy.riot.api.api.query.impl.championmastery.GetChampionMasteryByChampionQuery;
 import vgalloy.riot.api.api.query.impl.championmastery.GetChampionMasteryQuery;
-import vgalloy.riot.api.api.query.impl.championmastery.GetPlayerScore;
-import vgalloy.riot.api.api.query.impl.championmastery.GetTopChampion;
+import vgalloy.riot.api.api.query.impl.championmastery.GetPlayerScoreQuery;
 import vgalloy.riot.api.api.query.impl.currentgame.GetCurrentGameInfoQuery;
 import vgalloy.riot.api.api.query.impl.featuredgame.GetFeaturedGameQuery;
 import vgalloy.riot.api.api.query.impl.game.GetRecentGameQuery;
 import vgalloy.riot.api.api.query.impl.league.GetChallengerQuery;
 import vgalloy.riot.api.api.query.impl.league.GetLeaguesBySummonerIdsQuery;
-import vgalloy.riot.api.api.query.impl.league.GetLeaguesByTeamIdsQuery;
-import vgalloy.riot.api.api.query.impl.league.GetLeaguesEntryBySummonerIdsQuery;
-import vgalloy.riot.api.api.query.impl.league.GetLeaguesEntryByTeamIdsQuery;
+import vgalloy.riot.api.api.query.impl.league.GetLeaguesPositionBySummonerIdQuery;
 import vgalloy.riot.api.api.query.impl.league.GetMasterQuery;
 import vgalloy.riot.api.api.query.impl.lolstaticdata.GetChampionDataByIdQuery;
 import vgalloy.riot.api.api.query.impl.lolstaticdata.GetChampionDataListQuery;
@@ -127,15 +124,7 @@ public interface RiotApi {
      * @param playerId the player id
      * @return the query
      */
-    GetPlayerScore getPlayerScore(long playerId);
-
-    /**
-     * Create the query for top champion.
-     *
-     * @param playerId the player id
-     * @return the query
-     */
-    GetTopChampion getTopChampion(long playerId);
+    GetPlayerScoreQuery getPlayerScore(long playerId);
 
     /**
      * Create the query for current game.
@@ -163,38 +152,18 @@ public interface RiotApi {
     /**
      * Create the query for summoner leagues.
      *
-     * @param summonerIds the summoner ids
+     * @param summonerId the summoner id
      * @return the query
      */
-    GetLeaguesBySummonerIdsQuery getLeaguesBySummonerIds(long... summonerIds);
+    GetLeaguesBySummonerIdsQuery getLeaguesBySummonerId(long summonerId);
 
     /**
      * Create the query for summoner league entries.
      *
-     * @param summonerIds the summoner ids
+     * @param summonerId the summoner id
      * @return the query
      */
-    GetLeaguesEntryBySummonerIdsQuery getLeaguesEntryBySummonerIds(long... summonerIds);
-
-    /**
-     * Create the query for team leagues.
-     *
-     * @param teamIds the team ids
-     * @return the query
-     * @deprecated Riot seems not support this api any longer.
-     */
-    @Deprecated
-    GetLeaguesByTeamIdsQuery getLeaguesByTeamIds(String... teamIds);
-
-    /**
-     * Create the query for team league entries.
-     *
-     * @param teamIds the team ids
-     * @return the query
-     * @deprecated Riot seems not support this api any longer.
-     */
-    @Deprecated
-    GetLeaguesEntryByTeamIdsQuery getLeaguesEntryByTeamIds(String... teamIds);
+    GetLeaguesPositionBySummonerIdQuery getLeaguesPositionBySummonerId(long summonerId);
 
     /**
      * Create the query for challenger.
